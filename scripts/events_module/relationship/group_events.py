@@ -9,6 +9,7 @@ from scripts.cat.cats import Cat
 from scripts.event_class import Single_Event
 from scripts.cat_relations.interaction import create_group_interaction, Group_Interaction, rel_fulfill_rel_constraints
 from scripts.game_structure.game_essentials import game
+from scripts.cat_relations.relationship import Relationship
 
 class Group_Events():
 

@@ -4,6 +4,7 @@ from random import choice
 import random
 
 import ujson
+from scripts.game_structure.windows import MateScreen
 
 from scripts.cat.history import History
 from scripts.utility import (
@@ -318,7 +319,7 @@ class Romantic_Events():
                 return
             
             # Move on from dead mates
-            if cat_mate and "grief stricken" not in cat.illnesses and ((cat_mate.dead and cat_mate.dead_for >= 4) or cat_mate.outside):
+            if cat_mate and "grief stricken" not in cat.illnesses and (cat_mate.dead and cat_mate.dead_for >= 4):
                 # randint is a slow function, don't call it unless we have to.
                 if not cat_mate.no_mates and random.random() > 0.5:
                     text = f'{cat.name} will always love {cat_mate.name} but has decided to move on.'
@@ -333,10 +334,17 @@ class Romantic_Events():
         become_mates, mate_string = Romantic_Events.check_if_new_mate(cat_from, cat_to)
 
         if become_mates and mate_string:
-            cat_from.set_mate(cat_to)
-            game.cur_events_list.append(Single_Event(mate_string, ["relation", "misc"], [cat_from.ID, cat_to.ID]))
-            return True
-        
+            if cat_from.ID == game.clan.your_cat.ID or cat_to.ID == game.clan.your_cat.ID:
+                if not game.switches['window_open']:
+                    if cat_from.ID == game.clan.your_cat.ID:
+                        game.switches['new_mate'] = cat_to
+                    else:
+                        game.switches['new_mate'] = cat_from
+                    MateScreen("events screen")
+            else:
+                cat_from.set_mate(cat_to)
+                game.cur_events_list.append(Single_Event(mate_string, ["relation", "misc"], [cat_from.ID, cat_to.ID]))
+                return True
         return False
 
     @staticmethod
@@ -444,11 +452,18 @@ class Romantic_Events():
             cat_from.relationships[cat_to.ID].romantic_love -= 10
             cat_to.relationships[cat_from.ID].comfortable -= 10
 
-        mate_string = Romantic_Events.prepare_relationship_string(mate_string, cat_from, cat_to)
-        game.cur_events_list.append(Single_Event(mate_string, ["relation", "misc"], [cat_from.ID, cat_to.ID]))
-
         if become_mate:
-            cat_from.set_mate(cat_to)
+            if cat_from.ID == game.clan.your_cat.ID or cat_to.ID == game.clan.your_cat.ID:
+                if not game.switches['window_open']:
+                    if cat_from.ID == game.clan.your_cat.ID:
+                        game.switches['new_mate'] = cat_to
+                    else:
+                        game.switches['new_mate'] = cat_from
+                    MateScreen("events screen")
+            else:
+                cat_from.set_mate(cat_to)
+                mate_string = Romantic_Events.prepare_relationship_string(mate_string, cat_from, cat_to)
+                game.cur_events_list.append(Single_Event(mate_string, ["relation", "misc"], [cat_from.ID, cat_to.ID]))
 
         return True
 
@@ -484,7 +499,7 @@ class Romantic_Events():
             return False
         
         # Moving on, not breakups, occur when one mate is dead or outside. 
-        if cat_from.dead or cat_from.outside or cat_to.dead or cat_to.outside:
+        if cat_from.dead or (cat_from.outside and cat_from.status not in ['loner', 'kittypet', 'rogue']) or cat_to.dead or (cat_to.outside and cat_to.status not in ['loner', 'kittypet', 'rogue']):
             return False
 
         chance_number = Romantic_Events.get_breakup_chance(cat_from, cat_to)
@@ -496,6 +511,9 @@ class Romantic_Events():
     @staticmethod
     def check_if_new_mate(cat_from, cat_to):
         """Checks if the two cats can become mates, or not. Returns: boolean and event_string"""
+        if not cat_from or not cat_to:
+            return False, None
+
         become_mates = False
         young_age = ['newborn', 'kitten', 'adolescent']
         if not cat_from.is_potential_mate(cat_to):
@@ -546,10 +564,12 @@ class Romantic_Events():
         if not become_mates:
             return False, None
 
-        if poly:
-            print("----- POLY-POLY-POLY", cat_from.name, cat_to.name)
-            print(cat_from.mate)
-            print(cat_to.mate)
+        # if poly:
+        #     print("----- POLY-POLY-POLY", cat_from.name, cat_to.name)
+        #     print(cat_from.mate)
+        #     print(cat_to.mate)
+        # else:
+        #     print("BECOME MATES")
 
         mate_string = Romantic_Events.prepare_relationship_string(mate_string, cat_from, cat_to)
 

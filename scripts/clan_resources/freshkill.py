@@ -76,7 +76,7 @@ class Freshkill_Pile():
                 "expires_in_4": game.prey_config["start_amount"],
                 "expires_in_3": 0,
                 "expires_in_2": 0,
-                "expires_in_1": 0,
+                "expires_in_1": 0
             }
             self.total_amount = game.prey_config["start_amount"]
         self.nutrition_info = {}
@@ -94,7 +94,6 @@ class Freshkill_Pile():
         """
         self.pile["expires_in_4"] += amount
         self.total_amount += amount
-        self.total_amount = round(self.total_amount, 2)
 
     def remove_freshkill(self, amount, take_random: bool = False) -> None:
         """
@@ -429,8 +428,6 @@ class Freshkill_Pile():
             ----------
             group : list
                 the list of cats which should be feed
-            not_moon_feeding: boolean
-				defines if this is an additional feeding round
         """
         if len(group) == 0:
             return
@@ -533,7 +530,6 @@ class Freshkill_Pile():
             remaining_amount = given_amount - self.pile[pile_group]
             self.total_amount -= self.pile[pile_group]
             self.pile[pile_group] = 0
-        self.total_amount = round(self.total_amount, 2)
 
         return remaining_amount
 

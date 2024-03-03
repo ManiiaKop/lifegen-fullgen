@@ -1,5 +1,6 @@
 from scripts.cat.names import names
 from scripts.cat_relations.relationship import Relationship
+from scripts.cat.genotype import Genotype
 
 import random
 
@@ -106,6 +107,60 @@ class NewCatEvents:
         elif "new_med" in new_cat_event.tags:
             status = "medicine cat"
 
+        cat_type = ""
+        blood_parent = None
+        blood_parent2 = None
+        par2geno = None
+        if new_cat_event.litter or new_cat_event.kit:
+            # If we have a litter joining, assign them a blood parent for
+            # relation-tracking purposes
+            thought = "Is happy their kits are safe"
+            ages = [random.randint(15,120), 0]
+            ages[1] = ages[0] + random.randint(0, 24) - 12
+            
+            if('rogue' in new_cat_event.event_text):
+                cat_type = 'rogue'
+            elif('loner' in new_cat_event.event_text):
+                cat_type = 'loner'
+            elif('kittypet' in new_cat_event.event_text):
+                cat_type = 'kittypet'
+            else:
+                cat_type = 'del'
+            
+            blood_parent = create_new_cat(Cat, Relationship,
+                                          status=random.choice(["loner", "rogue", "kittypet"]),
+                                          alive=True,
+                                          thought=thought,
+                                          age=ages[0],
+                                          gender='masc',
+                                          outside=True)[0]
+            while 'infertility' in blood_parent.permanent_condition:
+                blood_parent = create_new_cat(Cat, Relationship,
+                                          status=random.choice(["loner", "rogue", "kittypet"]),
+                                          alive=True,
+                                          thought=thought,
+                                          age=ages[0],
+                                          gender='masc',
+                                          outside=True)[0]
+            if cat_type != 'del':
+                blood_parent2 = create_new_cat(Cat, Relationship,
+                                          status=cat_type if cat_type != 'del' else 'rogue',
+                                          alive=True,
+                                          thought=thought,
+                                          age=ages[1] if ages[1] > 14 else 15,
+                                          gender='fem',
+                                          outside=True)[0]
+                while 'infertility' in blood_parent2.permanent_condition:
+                    blood_parent = create_new_cat(Cat, Relationship,
+                                            status=random.choice(["loner", "rogue", "kittypet"]),
+                                            alive=True,
+                                            thought=thought,
+                                            age=ages[0],
+                                            gender='masc',
+                                            outside=True)[0]
+            else:
+                par2geno = Genotype(game.config['genetic_chances'])
+                par2geno.Generator('fem')
 
         created_cats = create_new_cat(Cat,
                                       Relationship,
@@ -116,20 +171,11 @@ class NewCatEvents:
                                       new_cat_event.litter,
                                       new_cat_event.other_clan,
                                       new_cat_event.backstory,
-                                      status
+                                      status,
+                                      parent1=blood_parent2.ID if blood_parent2 else None,
+                                      parent2=blood_parent.ID if blood_parent else None,
+                                      extrapar = par2geno
                                       )
-        
-        blood_parent = None
-        if new_cat_event.litter:
-            # If we have a litter joining, assign them a blood parent for
-            # relation-tracking purposes
-            thought = "Is happy their kits are safe"
-            blood_parent = create_new_cat(Cat, Relationship,
-                                          status=random.choice(["loner", "kittypet"]),
-                                          alive=False,
-                                          thought=thought,
-                                          age=random.randint(15,120),
-                                          outside=True)[0]
             
             
         for new_cat in created_cats:
@@ -138,7 +184,6 @@ class NewCatEvents:
             
             # Set the blood parent, if one was created.
             # Also set adoptive parents if needed. 
-            new_cat.parent1 = blood_parent.ID if blood_parent else None
             if "adoption" in new_cat_event.tags and cat.ID not in new_cat.adoptive_parents:
                 new_cat.adoptive_parents.append(cat.ID)
                 if len(cat.mate) > 0:
@@ -264,11 +309,10 @@ class NewCatEvents:
 
     @staticmethod
     def update_cat_properties(cat):
-        if cat.backstory in BACKSTORIES["backstory_categories"]['healer_backstories']:
+        if cat.moons < 6:
+            cat.status = 'kitten'
+        elif cat.backstory in BACKSTORIES["backstory_categories"]['healer_backstories']:
             cat.status = 'medicine cat'
-        elif cat.age == 'adolescent':
-            cat.status = "apprentice"
-            cat.update_mentor()
         else:
             cat.status = "warrior"
         cat.outside = False

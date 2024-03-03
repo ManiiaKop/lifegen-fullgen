@@ -11,6 +11,8 @@ from scripts.utility import event_text_adjust, get_med_cats, change_relationship
 from scripts.game_structure.game_essentials import game
 from scripts.events_module.scar_events import Scar_Events
 from scripts.events_module.generate_events import GenerateEvents
+from scripts.game_structure.windows import RetireScreen
+
 from scripts.event_class import Single_Event
 
 
@@ -152,6 +154,7 @@ class Condition_Events():
         has_other_clan = False
         triggered = False
         text = None
+        leaddead = False
         random_number = int(random.random() * game.get_config_value("condition_related", f"{game.clan.game_mode}_injury_chance"))
 
         if cat.dead:
@@ -163,11 +166,7 @@ class Condition_Events():
         # handle if the current cat is already injured
         if cat.is_injured() and game.clan.game_mode != 'classic':
             for injury in cat.injuries:
-                if injury == "pregnant" and cat.ID not in game.clan.pregnancy_data:
-                    print(f"INFO: deleted pregnancy condition of {cat.ID} due no pregnancy data in the clan.")
-                    del cat.injuries[injury]
-                    return triggered
-                elif injury == 'pregnant':
+                if injury == 'pregnant':
                     return triggered
             triggered, event_string = Condition_Events.handle_already_injured(cat)
             text = event_string
@@ -247,6 +246,7 @@ class Condition_Events():
                                 possible_scar = history_text_adjust(injury_event.history_text['scar'],
                                                                    other_clan_name, game.clan, other_cat_rc = other_cat)
                             if cat.status == 'leader' and 'lead_death' in injury_event.history_text:
+                                leaddead = True
                                 possible_death = history_text_adjust(injury_event.history_text['lead_death'],
                                                                     other_clan_name, game.clan, other_cat_rc = other_cat)
                             elif cat.status != 'leader' and 'reg_death' in injury_event.history_text:
@@ -269,7 +269,7 @@ class Condition_Events():
 
         if text is not None:
             types = ["health"]
-            if cat.dead:
+            if cat.dead or leaddead:
                 types.append("birth_death")
             if has_other_clan:
                 types.append("other_clans")
@@ -384,11 +384,11 @@ class Condition_Events():
             "BOTHBLIND": ["blind"],
             "RATBITE": ["weak leg"]
         }
-
+        
         scarless_conditions = [
             "weak leg", "paralyzed", "raspy lungs", "wasting disease", "blind", "failing eyesight", "one bad eye",
             "partial hearing loss", "deaf", "constant joint pain", "constantly dizzy", "recurring shock",
-            "lasting grief", "persistent headaches"
+            "lasting grief", "infertility", "persistent headaches"
         ]
 
         got_condition = False
@@ -413,8 +413,8 @@ class Condition_Events():
                 except KeyError:
                     print(f"WARNING: {injury_name} couldn't be found in injury dict! no permanent condition was given")
                     return perm_condition
-            else:
-                print(f"WARNING: {scar} for {injury_name} is either None or is not in scar_to_condition dict.")
+            # else:
+            #     print(f"WARNING: {scar} for {injury_name} is either None or is not in scar_to_condition dict.")
 
         elif condition is not None:
             perm_condition = condition
@@ -486,7 +486,10 @@ class Condition_Events():
                 History.remove_possible_history(cat, illness)
                 game.switches['skip_conditions'].append(illness)
                 # gather potential event strings for healed illness
-                possible_string_list = Condition_Events.ILLNESS_HEALED_STRINGS[illness]
+                try:
+                    possible_string_list = Condition_Events.ILLNESS_HEALED_STRINGS[illness]
+                except:
+                    print("couldn't find illness")
 
                 # choose event string
                 random_index = int(random.random() * len(possible_string_list))
@@ -681,7 +684,7 @@ class Condition_Events():
                 continue
 
             # revealing perm condition
-            if status == 'reveal':
+            if status == 'reveal' and condition != 'infertility':
                 # gather potential event strings for gotten risk
                 possible_string_list = Condition_Events.CONGENITAL_CONDITION_GOT_STRINGS[condition]
 
@@ -754,7 +757,7 @@ class Condition_Events():
 
         if not triggered and not cat.dead and cat.status not in \
                 ['leader', 'medicine cat', 'kitten', 'newborn', 'medicine cat apprentice', 'mediator',
-                 'mediator apprentice', 'elder']:
+                 'mediator apprentice', "queen", "queen's apprentice", 'elder']:
             for condition in cat.permanent_condition:
                 if cat.permanent_condition[condition]['severity'] not in ['major', 'severe']:
                     continue
@@ -805,12 +808,15 @@ class Condition_Events():
                     if cat.age == 'adolescent':
                         event += f" They are given the name {cat.name.prefix}{cat.name.suffix} in honor " \
                                     f"of their contributions to {game.clan.name}Clan."
-
-                    cat.retire_cat()
-                    # Don't add this to the condition event list: instead make it it's own event, a ceremony. 
-                    game.cur_events_list.append(
-                            Single_Event(event, "ceremony", retire_involved))
-
+                    if cat.ID != game.clan.your_cat.ID:
+                        
+                        cat.retire_cat()
+                        # Don't add this to the condition event list: instead make it it's own event, a ceremony. 
+                        game.cur_events_list.append(
+                                Single_Event(event, "ceremony", retire_involved))
+                    elif game.clan.age % 5 == 0 and not game.switches['window_open']:
+                        RetireScreen('events screen')
+                            
     @staticmethod
     def give_risks(cat, event_list, condition, progression, conditions, dictionary):
         event_triggered = False

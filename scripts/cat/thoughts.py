@@ -3,6 +3,7 @@ import traceback
 from random import choice
 
 import ujson
+from scripts.game_structure.game_essentials import game
 
 class Thoughts():
     @staticmethod
@@ -10,6 +11,9 @@ class Thoughts():
         """Check if the relationship fulfills the interaction relationship constraints."""
         # if the constraints are not existing, they are considered to be fulfilled
         if not random_cat:
+            return False
+        
+        if random_cat.moons < 0:
             return False
         
         # No current relationship-value bases tags, so this is commented out.
@@ -102,6 +106,10 @@ class Thoughts():
             if main_cat.personality.trait not in thought['main_trait_constraint']:
                 return False
             
+        if 'not_main_trait_constraint' in thought:
+            if main_cat.personality.trait in thought['not_main_trait_constraint']:
+                return False
+            
         if 'random_trait_constraint' in thought and random_cat:
             if random_cat.personality.trait not in thought['random_trait_constraint']:
                 return False
@@ -169,7 +177,9 @@ class Thoughts():
                 living_status = "living"
             if living_status and living_status != "living":
                 return False
-        
+        if random_cat:
+            if random_cat.moons < 0:
+                return False
         if random_cat and 'random_outside_status' in thought:
             outside_status = None
             if random_cat and random_cat.outside and random_cat.status not in ["kittypet", "loner", "rogue", "former Clancat", "exiled"]:
@@ -269,6 +279,8 @@ class Thoughts():
             status = "medicine_cat_apprentice"
         elif status == "mediator apprentice":
             status = "mediator_apprentice"
+        elif status == "queen's apprentice":
+            status == "queen's_apprentice"
         elif status == "medicine cat":
             status = "medicine_cat"
         elif status == 'former Clancat':
@@ -302,8 +314,16 @@ class Thoughts():
             GENTHOUGHTS = []
             with open(f"{base_path}{life_dir}{spec_dir}/general.json", 'r') as read_file:
                 GENTHOUGHTS = ujson.loads(read_file.read())
+            SHUNNEDTHOUGHTS = []
+            try:
+                if not main_cat.dead and not main_cat.outside and  main_cat.revealed != 0 and game.clan.age - 3 <= main_cat.revealed:
+                    with open(f"{base_path}{life_dir}{spec_dir}/shunned.json", 'r') as read_file:
+                        SHUNNEDTHOUGHTS = ujson.loads(read_file.read())
+            except:
+                pass
             loaded_thoughts = THOUGHTS 
             loaded_thoughts += GENTHOUGHTS
+            loaded_thoughts += SHUNNEDTHOUGHTS
         final_thoughts = Thoughts.create_thoughts(loaded_thoughts, main_cat, other_cat, game_mode, biome, season, camp)
 
         return final_thoughts
