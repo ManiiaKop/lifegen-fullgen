@@ -1,0 +1,2405 @@
+{
+    "sweetchoice_1": {
+        "tags": [
+            "no_kit",
+            "sweet"
+        ],
+        "intro": [
+            "Oh, y_c! It's so good to see you. I hope you've been having a good evening!",
+            "Mm.. actually- do you think you could help me with something?",
+            "I've been trying to decorate the camp and I wanted to know which you prefer, purple flowers or golden flowers?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Purple flowers.",
+                "next_scene": "purple"
+            },
+            "choice2": {
+                "text": "Golden flowers.",
+                "next_scene": "golden"
+            }
+        },
+        "purple": [
+            "Oh, really? Let me put them up here and see how they look...",
+            "Oh, wow, they look fantastic! They make the Leader's Den look quite regal!",
+            "Thanks y_c, it means a lot!"
+        ],
+        "golden": [
+            "Oh, really? Let me put them up here and see how they look...",
+            "Oh, I see now! These golden flowers on the Medicine Cat's den really give it this bright but comforting look.",
+            "Thanks y_c, it means a lot!"
+        ]
+    },
+    "leader_inquiry": {
+        "tags": [
+            "no_kit",
+            "brooding",
+            "introspective"
+        ],
+        "intro": [
+            "l_n... What do you think of them?",
+            "Their leadership style, the choices they've made ... Would you have done it differently, if you were in that position?",
+            "I'm just curious. What you think of who's in charge could reveal a lot about your character."
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Support l_n",
+                "next_scene": "support"
+            },
+            "choice2": {
+                "text": "Diss l_n",
+                "next_scene": "diss"
+            },
+            "choice3": {
+                "text": "Refuse to answer",
+                "next_scene": "refuse"
+            }
+        },
+        "support": [
+            "Hm ... Interesting.",
+            "But do you really mean that?",
+            "Or are you just worried about what would happen if you answered differently?"
+        ],
+        "diss": [
+            "Hm. It takes a lot of guts to admit that. Respect to you, y_c.",
+            "Though, maybe not the smartest to admit while l_n is standing right behind you ...",
+            "Heh. I made you look."
+        ],
+        "refuse": [
+            "Oh, come on. It's all just in the spirit of inquiry.",
+            "Do you really consider your opinion so important that it needs protecting ...?"
+        ]
+    },
+    "you_pregnant20": {
+        "tags": [
+            "no_kit",
+            "you_pregnant",
+            "silly",
+            "random_cat"
+        ],
+        "intro": [
+            "I bet the first pick of the freshkill pile that you'll have three kits!",
+            "r_c thinks there'll be five though. Hehe, what do you think?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Agree with t_c",
+                "next_scene": "agree_tc"
+            },
+            "choice2": {
+                "text": "Agree with r_c",
+                "next_scene": "agree_rc"
+            },
+            "choice3": {
+                "text": "Disagree with both",
+                "next_scene": "disagree"
+            }
+        },
+        "agree_tc": [
+            "Ha, I knew you would agree!",
+            "Say, what do you think of t_c -kit for a name? It has a great ring to it!"
+        ],
+        "agree_rc": [
+            "Aw, really? Well, I guess some cats want a bigger family ...",
+            "Say, what do you think of t_c -kit for a name? It has a great ring to it!"
+        ],
+        "disagree": [
+            "Really? How many were you thinking, then?"
+        ],
+        "disagree_choices": {
+            "choice1": {
+                "text": "One",
+                "next_scene": "small"
+            },
+            "choice2": {
+                "text": "Four",
+                "next_scene": "mid"
+            },
+            "choice3": {
+                "text": "Ten!",
+                "next_scene": "big"
+            }
+        },
+        "small": [
+            "One? Hm ... Seems a little lonely, no?",
+            "Still, I guess if that's what you want."
+        ],
+        "mid": [
+            "Four! Now that's a good, round, even number.",
+            "You'd have one for each role! A warrior, a mediator, a medicine cat, and a queen.",
+            "That way, you'd really always be taken care of. Hehe!"
+        ],
+        "big": [
+            "TEN?!?",
+            "Is ... Is that even possible?",
+            "With ten kits, you could have, like, a whole Clan to yourself ... A whole army, even!",
+            "I'm not sure if r_q would be too happy about it though ..."
+        ]
+    },
+    "introspective_leafbare5": {
+        "tags": [
+            "no_kit",
+            "introspective",
+            "leafbare"
+        ],
+        "intro": [
+            "[t_c is pawing at the snow covered ground, thoughtfully.]",
+            "Oh, y_c. Good morning. It seems like that snowstorm last night left us a gift.",
+            "You know, it's utterly shocking that all of those tiny little snowflakes come together to cover the earth around us. I suppose snowflakes prove there's power in numbers.",
+            "They're... much like Clans in that regard. On our own, we're not that strong; we can be wiped away easily. Together, however, when we work together, we're a force of nature.",
+            "What do you think, y_c?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "'So profound!'",
+                "next_scene": "profound"
+            },
+            "choice2": {
+                "text": "'It's not that serious ...'",
+                "next_scene": "notserious"
+            }
+        },
+        "profound": [
+            "You ... You really think so?",
+            "Not many cats have the patience to listen to my pontificating ... Let alone sincerely appreciate it.",
+            "You're one of a kind, y_c."
+        ],
+        "notserious": [
+            "Hm. I suppose you're right.",
+            "But, isn't that all life is? A search for meaning in the otherwise meaningless?",
+            "Far be it from me to stop you from interpreting the snow however you wish.",
+            "You do you, y_c, and I'll do me. Freedom of thought. That's what life's really all about."
+        ]
+    },
+
+    "rumor": {
+        "tags": [
+            "no_kit",
+            "silly",
+            "cool",
+            "unlawful",
+            "unabashed",
+            "random_cat"
+        ],
+        "intro": [
+             "Psst, y_c. I heard a rumor that n_r1 totally has a crush on n_r2. Isn't that crazy?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Where'd you hear that from?",
+                "next_scene": "where"
+            },
+            "choice2": {
+                "text": "I knew it!",
+                "next_scene": "knewit"
+            },
+            "choice3": {
+                "text": "You just made that up.",
+                "next_scene": "madeup"
+            }
+        },
+        "where": [
+            "Um, well, you see, ah ...",
+            "Hmph. You're no fun at all."
+        ],
+        "knewit": [
+            "Oh, really? Because I totally just made that up just now.",
+            "But if you have actual gossip, then by all means, spill!",
+            "I swear, your secrets are safe with me ... hehehe."
+        ],
+        "madeup": [
+            "Hmph. And so what if I did? Is it such a crime for me to want to add some entertainment to my Clanmates' lives?",
+            "C'mon, you can't deny you love a little gossip now and then!"
+        ]
+    },
+    "caught_intheact": {
+        "tags": [
+            "murder",
+            "dislike",
+            "no_kit"
+        ],
+        "intro": [
+            "You killed them, didn't you?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Inquire]",
+                "next_scene": "inquire"
+            },
+            "choice2": {
+                "text": "[Play dumb]",
+                "next_scene": "play_dumb"
+            },
+            "choice3": {
+                "text": "[Threaten]",
+                "next_scene": "threaten"
+            }
+        },
+        "inquire": [
+            "[You ask t_c what could have given them that idea.]",
+            "I don't know ... Call it a hunch.",
+            "You certainly didn't seem too torn up when they died, that's for sure."
+        ],
+        "inquire_choices": {
+            "choice11": {
+                "text": "I was mourning secretly.",
+                "next_scene": "mourning_secretly"
+            },
+            "choice12": {
+                "text": "That doesn't prove anything.",
+                "next_scene": "no_proof"
+            }
+        },
+        "play_dumb": [
+            "['What are you talking about?']",
+            "Come on, don't be coy. I think we both know what I'm referring to, here."
+        ],
+        "play_dumb_choices": {
+            "choice21": {
+                "text": "[Play dumber]",
+                "next_scene": "play_dumber"
+            },
+            "choice22": {
+                "text": "[Inquire]",
+                "next_scene": "inquire"
+            },
+            "choice23": {
+                "text": "[Threaten]",
+                "next_scene": "threaten"
+            }
+        },
+        "threaten": [
+            "[You subtly unsheath your claws and bare your teeth at t_c, hoping they'll get the message.]",
+            "... Is that supposed to intimidate me, or something?"
+        ],
+        "threaten_choices": {
+            "choice31": {
+                "text": "[Back off]",
+                "next_scene": "back_off"
+            },
+            "choice32": {
+                "text": "[Overt threat]",
+                "next_scene": "overt_threat"
+            }
+        },
+        "mourning_secretly": [
+            "Oh ... Oh, y_c, I'm so sorry. I didn't realize ...",
+            "They say we all process grief differently, but I guess I never really believed it.",
+            "I can't believe I accused you of something so horrible ...",
+            "I guess I'm just still not over their death myself, yet.",
+            "If you ever want to talk about it with someone, I'm here. They really were a special cat.",
+            "[t_c head-bumps you gently before walking off. That was way too close, but it seems they're none the wiser.]"
+        ],
+        "no_proof": [
+            "Maybe not ... But, still, I don't know any cat to not at least be shaken by the loss of their own Clanmate.",
+            "I might not be able to prove anything yet, but I've got my eye on you, y_c. Mark my words, soon enough, you will get what's coming to you.",
+            "[t_c stalks off, tail lashing. Better make sure your tracks are well covered ...]"
+        ],
+        "play_dumber": [
+            "['Still don't know what you're talking about ...']",
+            "Really? But - uh ... Ah ...",
+            "This was supposed to be a big 'gotcha' moment ... But, if you really don't know what I'm talking about, then ...",
+            "My apologies, y_c. I think I've gotten the wrong cat.",
+            "[t_c turns around and slinks away, embarrassed. Still, they must be on your trail.]",
+            "[Best keep an eye on them, lest they ever come back with more proof.]"
+        ],
+        "back_off": [
+            "['Intimidating? No ...']",
+            "Good, because it isn't working. If anything, you've only now further cemented your guilt in my mind.",
+            "I might not be able to prove anything yet, but I've got my eye on you, y_c. Mark my words, soon enough, you will get what's coming to you.",
+            "[t_c stalks off, tail lashing. Better make sure your tracks are well covered ...]"
+        ],
+        "overt_threat": [
+            "['You better drop this, now, or you'll be next.']",
+            "Ehm ...",
+            "[t_c looks away and swallows hard.]",
+            "Right ... Just forget I said anything, then.",
+            "[t_c trips over their paws a bit as they stumble out of the den. Best keep an eye on them to make sure they don't squeal ...]"
+        ]
+    },
+    "stable_4": {
+        "tags": [
+            "no_kit",
+            "stable",
+            "random_cat"
+        ],
+        "intro": [
+            "Why are kits so difficult...",
+            "y_c, I didn't see you there.",
+            "Oh, please, don't worry about me. Though, I wish I had an extra set of paws."
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Help]",
+                "next_scene": "help"
+            },
+            "choice2": {
+                "text": "[Don't Help]",
+                "next_scene": "dont_help"
+            }
+        },
+        "help": [
+            "Wait, you'll help? Really? Hehe, thank you! It really means a lot-",
+            "HEY! r_k, NO! Don't touch that!",
+            "[Seems the two of you have your paws full ...]"
+        ],
+        "dont_help": [
+            "[You leave to go take care of your own business right as t_c is tackled by a horde of kittens.]",
+            "Ack - it's fine! Totally holding it together!"
+        ]
+    },
+    "app_292": {
+        "tags": [
+            "no_kit",
+            "random_cat",
+            "upstanding",
+            "neurotic",
+            "sweet",
+            "assertive",
+            "stable",
+            "cool",
+            "random_cat"
+        ],
+        "intro": [
+            "Hey, I need an opinion, if you're up for it.",
+            "Do you think that t_p_positive would like this flower? I saw it the other day and it reminded me of them, but I'm worried they won't like it..."
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "They'd love it!",
+                "next_scene": "they_love_it"
+            },
+            "choice2": {
+                "text": "I don't think they'd like it.",
+                "next_scene": "they_dont_like_it"
+            }
+        },
+        "they_love_it": [
+            "Really? Thanks for the help! I appreciate it."
+        ],
+        "they_dont_like_it": [
+            "Really? Yeesh, good thing I didn't end up going through with it.",
+            "Thanks for the help, y_c!"
+        ]
+    },
+    "brooding_jealous": {
+        "tags": [
+            "no_kit",
+            "jealousy",
+            "they_clanborn",
+            "they_clanfounder",
+            "you_outsiderroots",
+            "you_halfclan",
+            "you_orphaned",
+            "you_abandoned",
+            "random_cat",
+            "they_sameage"
+        ],
+        "intro": [
+            "[t_c walks up to you, tail lashing wildly.]",
+            "y_c, I don't know how you manage it, but I'm not surprised you have to cheat in our training sessions.",
+            "It makes sense you can't naturally compare to a clanborn cat, but it doesn't mean you can show me up in front of d_n, and especially not l_n!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Defend yourself]",
+                "next_scene": "defend_yourself"
+            },
+            "choice2": {
+                "text": "[Say nothing]",
+                "next_scene": "say_nothing"
+            }
+        },
+        "defend_yourself": [
+            "[You hurl every insult you can imagine at t_c. You even make up some that didn't exist previously.]",
+            "Oh yeah? Well you're a - uh ... Gah! You're not even worth the mental energy!",
+            "[t_c runs off, tail between their legs. What a mouse-brain!]"
+        ],
+        "say_nothing": [
+            "[t_c sneers at you one last time before stalking off without giving you a chance to reply.]",
+            "[You feel weirdly proud of yourself for not having stooped down to their level.]"
+        ]
+    },
+    "gen_mate1": {
+        "tags": [
+            "no_kit"
+        ],
+        "intro": [
+            "[t_c is sharing tongues with t_m in the clearing.]",
+            "[Who would have the heart to interrupt such a display of coupley bliss?]"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Interrupt them]",
+                "next_scene": "interrupt_them"
+            },
+            "choice2": {
+                "text": "[Leave them alone]",
+                "next_scene": "leave_them_alone"
+            }
+        },
+        "interrupt_them": [
+            "[You prod t_c with the side of your paw, demanding that they pay attention to you.]",
+            "Tch, y_c, can't you take a hint? I'm in the middle of something here!",
+            "t_m and I barely get any time together ... Is what you have to say really so important?"
+        ],
+        "leave_them_alone": [
+            "[Certainly not you. You leave the cats alone.]"
+        ]
+    },
+    "upstanding_kit10": {
+        "tags": [
+            "upstanding",
+            "they_kitten"
+        ],
+        "intro": [
+            "[t_c is sitting outside the nursery, their expression shifting between a look of awe and determination as they watch l_n move about the camp.]"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Ask why]",
+                "next_scene": "ask_why"
+            },
+            "choice2": {
+                "text": "[Leave them alone]",
+                "next_scene": "leave_them_alone"
+            }
+        },
+        "ask_why": [
+            "[You ask the kit why they're so fascinated with l_n.]",
+            "Oh ... Well, I wanna be just like them someday!",
+            "Smart ... Powerful ... The boss of everyone ....",
+            "[Yeesh. Kit's already plotting to take over the Clan!]"
+        ],
+        "leave_them_alone": [
+            "[You decide to leave the young cat to their own devices.]"
+        ]
+    },
+    "upstanding_warrior6": {
+        "tags": [
+            "upstanding",
+            "no_kit",
+            "random_cat",
+            "they_warrior",
+            "they_younger"
+        ],
+        "intro": [
+            "Listen, I'm not the type of cat who likes to rake up old bones, but r_w totally cheated on their warrior assessment!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "How do you know?",
+                "next_scene": "how_do_you_know"
+            },
+            "choice2": {
+                "text": "No way!",
+                "next_scene": "no_way"
+            },
+            "choice3": {
+                "text": "I totally agree.",
+                "next_scene": "i_agree"
+            }
+        },
+        "how_do_you_know": [
+            "Just call it a hunch. That assessment isn't easy, there's no way they could've passed legitimately.",
+            "Even six-moon-old apprentices are more qualified than they are!"
+        ],
+        "no_way": [
+            "Fine, whatever, keep living in ignorance. I'm just trying to state the facts."
+        ],
+        "i_agree": [
+            "Right?! How do you think they did it, because I have a few theories.",
+            "I think they somehow convinced d_n to give them a way easier assessment than usual. Or, maybe they stole a bunch of prey from the freshkill pile and pretended it was theirs.",
+            "Whatever the case, I know what they are ... Glad to know you do, too."
+        ]
+    },
+    "assertive_gen3": {
+        "tags": [
+            "no_kit",
+            "assertive",
+            "platonic_like",
+            "random_cat"
+        ],
+        "intro": [
+            "Hey, y_c, dare me to jump off the warrior's den!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Dare]",
+                "next_scene": "dare"
+            },
+            "choice2": {
+                "text": "[Refuse]",
+                "next_scene": "refuse"
+            }
+        },
+        "dare": [
+            "Hehehe! Alright!",
+            "[With a devilish grin, t_c scrabbles up the warrior's den and careens off with a flying leap, tail helicoptering.]",
+            "[They land right on top of a pile of moss r_c had been meticulously gathering, sparking an argument.]",
+            "[Yeesh ... Better leave the scene before you get roped into this!]"
+        ],
+        "refuse": [
+            "What? Why in StarClan's name not?",
+            "Because it's dangerous ...?",
+            "But that's what's fun about it!"
+        ]
+    },
+    "assertive_gen5": {
+        "tags": [
+            "assertive",
+            "unlawful",
+            "random_cat",
+            "platonic_like",
+            "they_adult"
+        ],
+        "intro": [
+            "I found this super cool cave network just outside the territory ... Wanna come explore it with me later?",
+            "What was I doing outside the territory ...?",
+            "Psh, do you seriously expect me to spend my entire life on c_nClan territory? How could any cat be happy being trapped like that?",
+            "That's basically just like being a kittypet, but with extra steps.",
+            "Now, are you coming with me, or not?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Go with]",
+                "next_scene": "go_with"
+            },
+            "choice2": {
+                "text": "[Refuse]",
+                "next_scene": "refuse"
+            }
+        },
+        "go_with": [
+            "Hehehe. Glad I could help open up your mind!",
+            "I swear, y_c, this is actually going to blow c_nClan territory out of the water.",
+            "[The journey is short. t_c leads you to a dazzling network of caves just outside the twolegplace.]",
+            "[t_c was right. The caves' beauty really is breathtaking ...]",
+            "[You return to camp with your heart racing, thrilled by the experience.]"
+        ],
+        "refuse": [
+            "Tsh. Fine, whatever.",
+            "I thought you were cooler than this, but if you want to live out the rest of your life on c_nClan territory, that's good with me.",
+            "[t_c stalks away, tail lashing.]",
+            "[Later that night, you see them slip out of the camp with r_c, apparently having replaced you as a travel companion.]",
+            "[Stupid cave system probably isn't even that cool anyways ...]"
+        ]
+    },
+    "assertivekit_1": {
+        "tags": [
+            "no_kit",
+            "assertive",
+            "platonic_like",
+            "random_cat",
+            "they_kitten"
+        ],
+        "intro": [
+            "y_c! y_c! Gimme a badger ride, c'mon, pleeease?",
+            "r_q is too busy! I need you to play with me!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Accept]",
+                "next_scene": "accept"
+            },
+            "choice2": {
+                "text": "[Decline]",
+                "next_scene": "decline"
+            }
+        },
+        "accept": [
+            "You will? YAYAYAYAYAY!!!",
+            "[Before you even get a chance to prepare, t_c tackles you from behind, squealing with delight as they clamber onto your shoulders.]"
+        ],
+        "decline": [
+            "What? You don't want to?!",
+            "Hmph! Meanie! I'll go find someone else to play with, then!",
+            "[t_c sticks their tongue out at you for good measure before bounding off to go bother r_c for a ride.]",
+            "[For such a small cat, they're certainly not lacking in attitude.]"
+        ]
+    },
+    "assertivekit_7": {
+        "tags": [
+            "kitten",
+            "assertive",
+            "unlawful",
+            "cool",
+            "random_cat",
+            "they_kitten"
+        ],
+        "intro": [
+            "Hmph. When are they gonna let us out of this stuffy old nursery?",
+            "I want to explore! And I just know, if they let us battle, I could be the best warrior this clan has ever seen!!! I could probably take down two or three o_cClan cats, all by myself.",
+            "Hey ... maybe we could sneak out!",
+            "Yeah, I know it's against the rules! What are you, a scaredy-cat?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Let's do it!",
+                "next_scene": "lets_do_it"
+            },
+            "choice2": {
+                "text": "I don't know ...",
+                "next_scene": "i_dont_know"
+            }
+        },
+        "lets_do_it": [
+            "Hehehe, alright! I knew you weren't really a scaredy-cat!",
+            "[You and t_c devise an epic plan for how you're going to escape the nursery.]",
+            "[You spin tales of the amazing adventures you two will go on, the sights you'll see, the enemies you'll defeat.]",
+            "[It's incredible! ... Or, it would be, if r_q didn't overhear the entire thing.]",
+            "[You earn a scolding from the queen, but it was worth it to use your imagination with t_c for a little while.]"
+        ],
+        "i_dont_know": [
+            "Hmph. I should've known you'd be a chickenheart.",
+            "How are you ever gonna be a brave warrior if you can't even do this with me?"
+        ],
+        "i_dont_know_choices": {
+            "choice21": {
+                "text": "Well ... Okay.",
+                "next_scene": "lets_do_it"
+            },
+            "choice22": {
+                "text": "Maybe I don't wanna be a warrior!",
+                "next_scene": "dont_wanna_be_warrior"
+            }
+        },
+        "dont_wanna_be_warrior": [
+            "Don't wanna be a warrior? Like ... You wanna be a meddy cat, or something?",
+            "Why in StarClan's name would you want that?! Do you just wanna be trapped inside of camp forever?",
+            "Fine, then. I'll go find someone else to help me, if that's how you feel!",
+            "[t_c scampers off. They probably won't try to involve you in any more of their schemes any time soon.]"
+        ]
+    },
+    "assertivekit_9": {
+        "tags": [
+            "apprentice",
+            "warrior",
+            "medicine cat apprentice",
+            "medicine cat",
+            "mediator apprentice",
+            "mediator",
+            "queen's apprentice",
+            "queen",
+            "leader",
+            "deputy",
+            "assertive",
+            "random_cat",
+            "they_kitten"
+        ],
+        "intro": [
+            "Hey, y_c! Wanna hear about all the things I like?",
+            "I like fresh-kill and leaves and puddles and rain and rainclouds and normal clouds and my friends and c_nClan and fighting and playing and sleeping and ...",
+            "[Oh, StarClan, t_c is going on forever, and you really have some stuff you need to get to today.]"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Stay and listen]",
+                "next_scene": "stay_and_listen"
+            },
+            "choice2": {
+                "text": "[Walk away]",
+                "next_scene": "walk_away"
+            }
+        },
+        "stay_and_listen": [
+            "[You plaster on a brave smile as t_c continues on their tirade.]",
+            "Plus, I like fishes, even though r_k thinks fishes are yucky, and I like snowflakes, and clouds, and flowers, and -- OOH, you wanna know what I REALLY like?"
+        ],
+        "stay_and_listen_choices": {
+            "choice11": {
+                "text": "What?",
+                "next_scene": "what"
+            }
+        },
+        "what": [
+            "You, silly!",
+            "[t_c headbutts your leg with a sweet purr.]",
+            "I'm just having so much fun talking to you!"
+        ],
+        "walk_away": [
+            "Wait, where are you going? I wasn't finished yet!",
+            "y_c! Come back!!!",
+            "Awh ...",
+            "[You end up getting your task done, but out of the corner of your eye, you can see little t_c slinking back into the nursery, tail drooping.]"
+        ]
+    },
+    "assertivekit_13": {
+        "tags": [
+            "kitten",
+            "assertive",
+            "platonic_love",
+            "they_kitten"
+        ],
+        "intro": [
+            "y_c, we're always gonna be best friends, aren't we?",
+            "Promise me that, no matter what happens, we'll stay friends forever and ever and ever and ever and ever until the end of time!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "I promise!",
+                "next_scene": "i_promise"
+            },
+            "choice2": {
+                "text": "Forever sounds like a long time ...",
+                "next_scene": "forever_sounds_long"
+            }
+        },
+        "i_promise": [
+            "Heehee! I knew it! Nothing's ever gonna tear us apart!",
+            "And if anything ever does, I'll drive it away with my killer battle moves! Rawr!",
+            "[t_c pounces on you, and the two of you play fight, breathless and giggling.]"
+        ],
+        "forever_sounds_long": [
+            "W-What? Well, yeah, I know it is, but ...",
+            "That's how long I want us to stay together!",
+            "Do you not think we can stay friends that long?",
+            "Hm ...",
+            "[t_c tucks their tail over their paws and stares apprehensively.]"
+        ]
+    },
+    "assertivekit_10": {
+        "tags": [
+            "kitten",
+            "assertive",
+            "unlawful",
+            "random_cat",
+            "they_kitten"
+        ],
+        "intro": [
+            "I dare you to go up to r_c and call them a huge stinky dung-face!",
+            "You don't want to? Too bad! I already dared it!",
+            "And if you don't, I'll tell everyone in the nursery that you're the huge stinky dung-face!",
+            "The choice is yours ... Hehehe!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Okay ...",
+                "next_scene": "okay"
+            },
+            "choice2": {
+                "text": "No way!",
+                "next_scene": "no_way"
+            }
+        },
+        "okay": [
+            "[You find r_c and repeat the words to them, somewhat half-heartedly.]",
+            "[They seem confused, like you genuinely hurt their feelings ...]",
+            "[ ... But, when you report back to t_c, they're downright thrilled.]",
+            "Hehehe, alright, y_c!",
+            "I wonder what else I can get you to do ..."
+        ],
+        "no_way": [
+            "Okay! If that's what you choose, stinky dung-face! Ahahahhaa!",
+            "[They're not really gonna call you that forever ... right?]",
+            "Stinky dung-face! Stinky dung-face! Hehehehe!"
+        ]
+    },
+    "assertivekit_14": {
+        "tags": [
+            "Any",
+            "assertive",
+            "platonic_like",
+            "comfort",
+            "trust",
+            "they_kitten"
+        ],
+        "intro": [
+            "y_c, do you ever get scared?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Yes",
+                "next_scene": "yes"
+            },
+            "choice2": {
+                "text": "No",
+                "next_scene": "no"
+            }
+        },
+        "yes": [
+            "Hmph. Don't you worry! You don't have to be scared when I'm around!",
+            "As soon as I'm big enough, I'm gonna get really strong and chase all the bad guys away!",
+            "I can be brave. I can keep you safe!"
+        ],
+        "no": [
+            "Really? Like, not ever? Not even once?",
+            "Not even during a loud thunderstorm, or when you're found out for doing something naughty?",
+            "Wow ... You must be really brave, y_c.",
+            "I wanna be just like that one day!"
+        ]
+    },
+    "assertivekit_17": {
+        "tags": [
+            "kitten",
+            "assertive",
+            "unlawful",
+            "upstanding",
+            "platonic_like",
+            "cool",
+            "they_kitten"
+        ],
+        "intro": [
+            "What do you think our warrior names are gonna be?",
+            "I hope my name ends in '-claw'!!! That's a super tough name, isn't it?",
+            "A name to strike fear into the hearts of all my enemies! Rrraahhh!",
+            "What do you want your name to end in?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "-flame",
+                "next_scene": "flame"
+            },
+            "choice2": {
+                "text": "-claw",
+                "next_scene": "claw"
+            },
+            "choice3": {
+                "text": "-flower",
+                "next_scene": "flower"
+            }
+        },
+        "flame": [
+            "-flame? Hey, that's a pretty good one! I forgot about that one!",
+            "Is it too late for me to change my answer?"
+        ],
+        "claw": [
+            "Hey, you just copied me!",
+            "It could be kind of cool, though. Us, having matching names! Could you imagine?",
+            "We could be, like, a super-scary battling duo! Rawrr!"
+        ],
+        "flower": [
+            "-flower? Who do you think you're gonna be scaring off with a name like that?",
+            "Maybe someone with allergies?"
+        ]
+    },
+    "assertivekit_24": {
+        "tags": [
+            "kitten",
+            "platonic_like",
+            "sibling",
+            "adopted sibling",
+            "they_kitten"
+        ],
+        "intro": [
+            "y_c, family means forever, right? We're always gonna be together?",
+            "We're not gonna turn out like those siblings that fight all the time and stop liking each other, are we?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Of course not!",
+                "next_scene": "of_course_not"
+            },
+            "choice2": {
+                "text": "Well, anything is possible.",
+                "next_scene": "anything_possible"
+            }
+        },
+        "of_course_not": [
+            "Heh. Of course not. It was silly of me to even ask.",
+            "Why would I ever stop liking you?"
+        ],
+        "anything_possible": [
+            "W-What? You don't really mean that, do you?",
+            "What would ever happen to make me stop liking you?"
+        ]
+    },
+    "assertiveapp_medapp3": {
+        "tags": [
+            "medicine cat apprentice",
+            "medicine cat",
+            "assertive",
+            "silly",
+            "upstanding",
+            "they_younger",
+            "they_apprentice",
+            "they_warrior"
+        ],
+        "intro": [
+            "Hey, y_c ... is it really true that you can talk to StarClan?",
+            "Whoa! That's so cool! What does StarClan say that I'm gonna do? Am I gonna be strong? Am I destined for greatness?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Yes!",
+                "next_scene": "yes"
+            },
+            "choice2": {
+                "text": "No.",
+                "next_scene": "no"
+            },
+            "choice3": {
+                "text": "It doesn't work like that.",
+                "next_scene": "doesnt_work_like_that"
+            }
+        },
+        "yes": [
+            "Really?! StarClan said that about me?",
+            "So, what does this mean? Am I a prophecy cat? Am I gonna save the Clan?!",
+            "I can't wait to tell l_n about this!",
+            "[t_c dashes out of the den with an excited squeal.]",
+            "[You better tell them the truth, before they land themself in a whole world of disappointment.]"
+        ],
+        "no": [
+            "What? Seriously? StarClan said that about me?",
+            "Hmph. Well, what does StarClan know anyways?",
+            "I'll show them ... I'll become the strongest warrior this Clan has ever seen! Then, StarClan will be begging to make prophecies about me!",
+            "[t_c stalks out of the medicine den with a huff. They probably won't be asking about StarClan again any time soon.]"
+        ],
+        "doesnt_work_like_that": [
+            "... It doesn't work like that? Awh. That's no fun.",
+            "Well, if StarClan ever mentions me, you'll let me know, won't you?"
+        ]
+    },
+    "assertive_app1": {
+        "tags": [
+            "no_kit",
+            "assertive",
+            "cool",
+            "random_cat"
+        ],
+        "intro": [
+            "Did you see r_c earlier today, y_c? Oh, StarClan, it was the funniest thing ever!",
+            "They mistook a twig for a snake and flew, like, five fox-lengths into the air! Hahahaha!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Hilarious!",
+                "next_scene": "hilarious"
+            },
+            "choice2": {
+                "text": "That's not very funny ...",
+                "next_scene": "not_very_funny"
+            }
+        },
+        "hilarious": [
+            "Hahaha, I knew you'd appreciate it!",
+            "Say, I know this place out on the territory with some huge sticks ... Think we can make them do it again?",
+            "Maybe they'll go six fox-lengths this time!"
+        ],
+        "not_very_funny": [
+            "No? Since when were you above that type of humor?",
+            "You gotta lighten up, y_c. You don't have to take everything so seriously all the time! It'll give you gray hairs."
+        ]
+    },
+    "assertiveapp_deputy": {
+        "tags": [
+            "deputy",
+            "assertive",
+            "unlawful",
+            "they_warrior",
+            "they_apprentice"
+        ],
+        "intro": [
+            "Do me a favor and put me on the border patrol, y_c? I need to feel the wind in my fur. I've been going crazy, cooped up in camp."
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Accept their request",
+                "next_scene": "accept_request"
+            },
+            "choice2": {
+                "text": "Deny their request",
+                "next_scene": "deny_request"
+            }
+        },
+        "accept_request": [
+            "Heh, thanks! Knew I could count on you.",
+            "[t_c leads the border patrol out of camp, impressing everyone with their initiative and vigor.]",
+            "[Might have to remember them as a good candidate for an apprentice later ...]"
+        ],
+        "deny_request": [
+            "[You tell t_c that you don't appreciate being ordered around like an apprentice.]",
+            "Are you serious right now? I thought I was talking to my deputy, not my dictator!",
+            "Whatever ... Guess I'll just keep rotting in camp, then, if that's what makes you happy.",
+            "[t_c slinks away muttering curses. You'll have to remember their insolence for later.]"
+        ]
+    },
+    "assertive_apprentice3": {
+        "tags": [
+            "apprentice",
+            "assertive",
+            "upstanding",
+            "they_apprentice",
+            "random_cat"
+        ],
+        "intro": [
+            "y_c, when do you think we'll get to fight in a real warrior battle?",
+            "I know we've been practicing our fighting moves, but practice is nothing compared to the real thing.",
+            "I'm just itching to tear into some o_cClan fur! That'll show them how a real c_nClan cat does it!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "I hope we get to battle right away!",
+                "next_scene": "hope_battle_right_away"
+            },
+            "choice2": {
+                "text": "I hope we never have to battle ...",
+                "next_scene": "hope_never_battle"
+            }
+        },
+        "hope_battle_right_away": [
+            "Say, maybe there's a way we can both get what we want!",
+            "You can be an o_cClan warrior, and I'll be the c_nClan warrior.",
+            "Ready? I'll give you a running start!"
+        ],
+        "hope_never_battle": [
+            "Huh? Really? How do you ever expect to be a decent warrior with that attitude?",
+            "I dunno what type of stuff m_n's been teaching you, but maybe you should come and train with me and t_mn sometime.",
+            "Then, you'll learn just how fun fighting can be!"
+        ]
+    },
+    "assertive_apprentice5": {
+        "tags": [
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice",
+            "platonic_like",
+            "assertive",
+            "they_apprentice",
+            "random_cat"
+        ],
+        "intro": [
+            "[t_c tackles you from behind.]",
+            "Rahhh! o_cClan warrior, feel my wrath!",
+            "Hehe, don't worry! It's just me, y_c. Did I scare you?",
+            "That's a move tm_n just taught me. Cool, huh? I can't wait to try it out for real!",
+            "Has m_n taught you anything cool yet?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Yes!",
+                "next_scene": "yes"
+            },
+            "choice2": {
+                "text": "Not really ...",
+                "next_scene": "not_really"
+            }
+        },
+        "yes": [
+            "Hehe, alright! You'll have to show me sometime!",
+            "Hey, maybe we can organize some kind of awesome joint-training session with all of the apprentices! That way, we can make sure all our bases are covered.",
+            "I bet I could get r_a on board, at least!"
+        ],
+        "not_really": [
+            "Really? Wow, I never realized that m_n was such a crappy mentor!",
+            "If you ever wanna learn some moves, I could always teach you!",
+            "We could have our own little training sessions. It'd be like tm_n was your mentor-by-proxy!",
+            "Just let me know!"
+        ]
+    },
+    "assertive_kit31": {
+        "tags": [
+            "any",
+            "from_your_kit",
+            "assertive",
+            "silly",
+            "unlawful",
+            "upstanding",
+            "platonic_like",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        "intro": [
+            "y_c, t_l won't play with me! Will you go tell them that they have to?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Yes",
+                "next_scene": "yes"
+            },
+            "choice2": {
+                "text": "No",
+                "next_scene": "no"
+            },
+            "choice3": {
+                "text": "Why won't they play with you?",
+                "next_scene": "why_wont_they_play"
+            }
+        },
+        "yes": [
+            "[You chide t_c's sibling for excluding them and tell them that they have to let t_c participate in the game.]",
+            "Ha! Take that! Now, you can't get mad at me for cheating anymore!",
+            "And you're never getting that moss-ball back, either!",
+            "[Yeesh ... Seems like t_c was actually the bully all along!]",
+            "[You'll really need to have a talk with them about how to be a good playmate.]"
+        ],
+        "no": [
+            "What? You won't? But that's not fairrrr!",
+            "[t_c stalks across the nursery to go have a pout.]",
+            "[But, as soon as r_q suggests a game of moss-ball, their troubles are suddenly forgotten.]"
+        ],
+        "why_wont_they_play": [
+            "Hmph. Because they're a big baby, is why!",
+            "All I did was hide their moss-ball, and now they think I'm a cheater and refuse to play!",
+            "[Yeesh ... Seems like t_c was actually the bully all along!]",
+            "[You scold them for their actions and demand that they return the moss-ball to t_l.]",
+            "What? But that's not fairrrr!",
+            "[t_c stalks across the nursery to go have a pout.]",
+            "[But, later, you see them shyly return the moss-ball to their littermate with a timid apology.]",
+            "[By the end of the day, the two siblings are playing together like normal again.]"
+        ]
+    },
+    "assertive_apprentice15": {
+        "tags": [
+            "any",
+            "dislike",
+            "assertive",
+            "cool",
+            "brooding",
+            "unlawful",
+            "upstanding",
+            "unabashed",
+            "sibling",
+            "adopted_sibling",
+            "they_apprentice"
+        ],
+        "intro": [
+            "... Who are you?",
+            "[Is your own sibling seriously pretending not to know you?!]"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Confront them]",
+                "next_scene": "confront"
+            },
+            "choice2": {
+                "text": "[Insult them]",
+                "next_scene": "insult"
+            },
+            "choice3": {
+                "text": "[Walk away]",
+                "next_scene": "walk_away"
+            }
+        },
+        "confront": [
+            "[You tell them to cut it out, as everyone knows the two of you are family.]",
+            "Psh ... Alright, alright. But could you stop hanging around so much? You're harshing my vibe!",
+            "Just because we're siblings, doesn't mean we have to hang out all the time. We're not in the nursery anymore."
+        ],
+        "insult": [
+            "[You call t_c a mean nickname that you invented when both of you were kits.]",
+            "[They look a little taken aback.]",
+            "... Psh. Whatever! I don't even care!",
+            "Go find some other friends to hang out with!",
+            "[t_c looks away, eyes swimming with hurt and regret.]"
+        ],
+        "walk_away": [
+            "[You walk away as coldly as possible. If t_c doesn't want anything to do with you today, then fine. So be it.]",
+            "[But, when you look back over your shoulder, you catch them watching you go, eyes swimming with hurt and regret ...]",
+            "[It seems your sibling might actually care more about you than you anticipated.]"
+        ]
+    },
+    "assertive_apprentice26": {
+        "tags": [
+            "any",
+            "assertive",
+            "sweet",
+            "silly",
+            "platonic_like",
+            "they_apprentice"
+        ],
+        "intro": [
+            "[You notice that t_c isn't asking like their usual, energetic self. You ask them what's wrong.]",
+            "*Sigh* Oh, it's nothing really ...",
+            "It's just that ... Sometimes, I feel so behind my denmates. Not just in training, but in everything!",
+            "Everybody else seems to already have everything figured out. What they want to do with their lives, their places in the clan, who they're going to become mates with ... I just don't know any of that stuff!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Assure t_c]",
+                "next_scene": "assure"
+            },
+            "choice2": {
+                "text": "[Comfort t_c]",
+                "next_scene": "comfort"
+            },
+            "choice3": {
+                "text": "[Reality check t_c]",
+                "next_scene": "reality_check"
+            }
+        },
+        "assure": [
+            "[You tell t_c to keep their chin up, as cats their age have less figured out than it seems.]",
+            "... You really think so?",
+            "I guess I never even considered that other apprentices could feel the same way that I do.",
+            "Thanks for the pep talk, y_c!",
+            "[t_c trots off with a new pep in their step and a big smile on their face, clearly pleased with the results of the conversation.]"
+        ],
+        "comfort": [
+            "[You wrap your tail around t_c's shoulders and purr that they are an amazing young cat who you're sure has a bright future ahead.]",
+            "[They smile at you, seeming to appreciate the gesture, but something in their gaze tells you that you still haven't fully assuaged their worries ...]"
+        ],
+        "reality_check": [
+            "[You tell t_c that they can't run away from the important decisions forever, especially at their age when those decisions are so critical.]",
+            "[With every word out of your mouth, their eyes seem to widen more with worry.]",
+            "Man ... I guess I really am behind!",
+            "Thanks for helping me realize that, y_c ... Even though it multiplied my stress by, like, a thousand."
+        ]
+    },
+    "apprentice_0982": {
+        "tags": [
+            "any",
+            "from_your_apprentice",
+            "platonic_love",
+            "random_cat"
+        ],
+        "intro": [
+            "[t_c approaches you shyly.]",
+            "Uhm, hey, y_c. I just had this idea ... Let me know if you think it's stupid, or something, but, well ...",
+            "I was thinking, since being your apprentice has been so great, maybe once I graduate, I could request my full name to be ... after you?",
+            "Sorry if it's kind of a weird idea. You don't have to say yes!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "I'd love that!",
+                "next_scene": "love_that"
+            },
+            "choice2": {
+                "text": "Uhm, maybe not ...",
+                "next_scene": "maybe_not"
+            }
+        },
+        "love_that": [
+            "R-Really? Great! I'll go and tell l_n about it right now!",
+            "Thanks for being such a great mentor, y_c. I wouldn't trade you for any other cat in the world."
+        ],
+        "maybe_not": [
+            "N-No, you're right. Forget it. It was a stupid idea, I don't know why I even asked.",
+            "[t_c slinks away, ears drooping.]"
+        ]
+    },
+    "assertive_mentor7": {
+        "tags": [
+            "apprentice",
+            "assertive",
+            "from_mentor",
+            "silly",
+            "cool"
+        ],
+        "intro": [
+            "Surprise assessment, y_c! What's the best way to catch a squirrel?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Race it up a tree!",
+                "next_scene": "race_up_tree"
+            },
+            "choice2": {
+                "text": "With the hunting crouch ...?",
+                "next_scene": "hunting_crouch"
+            },
+            "choice3": {
+                "text": "With your claws! Duh!",
+                "next_scene": "with_claws"
+            }
+        },
+        "race_up_tree": [
+            "Whoa! Bold answer, y_c! But I sort of respect that about you.",
+            "Yes, the squirrel race is a historic c_nClan tactic. It's super advanced, and dangerous, too.",
+            "But the thrill of chasing that squirrel down the trunk of a tree ... StarClan, there's nothing like it.",
+            "Maybe I'll teach you sometime! But, ah ... don't tell l_n. Or I'd never hear the end of it! Hehe!"
+        ],
+        "hunting_crouch": [
+            "Yep! Trick question, hehe!",
+            "I thought I could get you confused, but clearly you're too smart for that, y_c."
+        ],
+        "with_claws": [
+            "Hehehe, okay then, smarty-pelt! I'll admit, that was a good one.",
+            "But, if you don't actually know the answer, it might be time to start taking your training more seriously ..."
+        ]
+    },
+    "assertive_mentor700": {
+        "tags": [
+            "apprentice",
+            "assertive",
+            "from_mentor",
+            "silly",
+            "cool"
+        ],
+        "intro": [
+            "Hey, kid! Figured I'd let you take the lead on training today. So, what do you want to learn?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Hunting!",
+                "next_scene": "hunting"
+            },
+            "choice2": {
+                "text": "Battling!",
+                "next_scene": "battling"
+            },
+            "choice3": {
+                "text": "Anything advanced.",
+                "next_scene": "anything_advanced"
+            }
+        },
+        "hunting": [
+            "Wanna catch some food for the Clan, huh? Heh, look at you, being all selfless.",
+            "I heard from the hunting patrol that the rivers are running well today ... Whaddaya say to some fishing? Sound great, or sound great?",
+            "C'mon, I'll lead the way!"
+        ],
+        "battling": [
+            "Ah, now we're talking! You got a warrior's spirit -- I like that about you! It'll serve you well, when you're full grown.",
+            "Just make sure to keep your claws sheathed! Hehe!"
+        ],
+        "anything_advanced": [
+            "Oh, so it's a challenge you're after, huh? Alright! I'll teach you one of the most complicated moves in the book: the bird leap.",
+            "Don't get too down on yourself if you don't get it, though! Remember, you asked for this!",
+            "C'mon, let's go!"
+        ]
+    },
+    "about_parent2": {
+        "tags": [
+            "no_kit",
+            "random_cat",
+            "they_younger",
+            "unabashed",
+            "silly",
+            "unlawful",
+            "cool",
+            "assertive"
+        ],
+        "intro": [
+            "Ugh, StarClan, I wish t_p would get off my back all the time!",
+            "It's always 't_c, you have to start taking things more seriously', 't_c, listen to the warrior code', 't_c, don't put that in your mouth' -- Like, leave me alone! StarClan!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Sounds tough!",
+                "next_scene": "sounds_tough"
+            },
+            "choice2": {
+                "text": "That's no way to talk about your parent.",
+                "next_scene": "no_way_to_talk"
+            },
+            "choice3": {
+                "text": "t_p is just worried about you!",
+                "next_scene": "just_worried"
+            }
+        },
+        "sounds_tough": [
+            "I know, right?!",
+            "*Sigh* I know they're my parent, and all, and they're just trying to look out for me, but sometimes I just wish they would let me be my own cat.",
+            "I'm not a kit anymore, they have no right to criticize my choices!",
+            "Anyways ... Thanks for listening to me rant, y_c.",
+            "Family is always tough, but having a cat like you to talk to always helps."
+        ],
+        "no_way_to_talk": [
+            "I don't remember asking for another lecture!"
+        ],
+        "just_worried": [
+            "Hmph. If I wanted another lecture, I would've just talked to t_p!"
+        ]
+    },
+    "assertive_6": {
+        "tags": [
+            "no_kit",
+            "assertive",
+            "random_cat"
+        ],
+        "intro": [
+            "Hehehehe ...",
+            "[t_c is laughing to themself.]",
+            "[They must be remembering a funny joke from earlier.]"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Ask about the joke]",
+                "next_scene": "ask_about_joke"
+            },
+            "choice2": {
+                "text": "[Leave them alone]",
+                "next_scene": "leave_alone"
+            }
+        },
+        "ask_about_joke": [
+            "Oh, hey, y_c!",
+            "You wanna know what I was laughing at? Oh, StarClan, was I being that obvious? I didn't think anyone was gonna notice!",
+            "r_c told me this hilarious joke earlier, it was like - *snrk* - 'What type of plant sneaks up on you?'",
+            "An AMBUSH! AHAHAHAHA!",
+            "What, you don't think that's funny? Psh, you're no fun!"
+        ],
+        "leave_alone": [
+            "[You decide to leave them alone.]"
+        ]
+    },
+    "assertive_9": {
+        "tags": [
+            "warrior",
+            "apprentice",
+            "assertive",
+            "random_cat",
+            "they_warrior",
+            "they_apprentice",
+            "they_sameage"
+        ],
+        "intro": [
+            "Hey, who d'ya think's gonna be deputy once d_n is leader?",
+            "I guess probably r_w ... they'd probably be good for the job."
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "I agree with you!",
+                "next_scene": "agree_with_you"
+            },
+            "choice2": {
+                "text": "I think you'd make a good deputy!",
+                "next_scene": "you_good_deputy"
+            },
+            "choice3": {
+                "text": "I think I'd make a good deputy!",
+                "next_scene": "i_good_deputy"
+            }
+        },
+        "agree_with_you": [
+            "Right? They're just such a great fit.",
+            "Kinda crazy to think that d_n's gonna be leader one day, though ... I'm not sure if I'm ready for that yet."
+        ],
+        "you_good_deputy": [
+            "Psh - me? Hardly! I'd probably find some way to start a war somehow on the first day.",
+            "Besides, I'd hate that job. So much responsibility, so much organization - not really my style.",
+            "I appreciate the thought, though!"
+        ],
+        "i_good_deputy": [
+            "You?! I mean, I guess I could see it ...",
+            "Certainly not lacking in confidence, are you, y_c?"
+        ]
+    },
+    "assertivewarrior_leader3": {
+        "tags": [
+            "leader",
+            "assertive",
+            "silly",
+            "unabashed",
+            "they_warrior",
+            "non-related"
+        ],
+        "intro": [
+            "Hey, boss! Come down to mingle with us common folk? Hehe.",
+            "Everything's going just fine around camp, as far as I can tell. There's a leak in the warrior's den that someone should probably get on ... wanna lend a paw?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "I'd love to!",
+                "next_scene": "love_to_help"
+            },
+            "choice2": {
+                "text": "I can't ...",
+                "next_scene": "cant_help"
+            }
+        },
+        "love_to_help": [
+            "... Really? You'd take time out of your big, important day, just to ... help us warriors?",
+            "Respect to you, y_c! I'll go grab the brambles."
+        ],
+        "cant_help": [
+            "Ah, it's okay, I understand. You have more important things to do than help us lowly warriors.",
+            "I'll go grab the brambles by myself, then ..."
+        ]
+    },
+    "assertivemedcat_queen": {
+        "tags": [
+            "queen's apprentice",
+            "queen",
+            "assertive",
+            "cool",
+            "silly",
+            "they_medicine_cat",
+            "they_medicine_cat_apprentice"
+        ],
+        "intro": [
+            "y_c! Just the cat I was looking for.",
+            "You'll be happy to know that I just gathered up some more borage this morning. Which, pop quiz, should help the queens with ... what?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Labor pains",
+                "next_scene": "labor_pains"
+            },
+            "choice2": {
+                "text": "Milk production",
+                "next_scene": "milk_production"
+            },
+            "choice3": {
+                "text": "Nausea",
+                "next_scene": "nausea"
+            }
+        },
+        "labor_pains": [
+            "Er ... no, that's not right. Like, at all.",
+            "Hm ... maybe now'd be a good time to start your herbal training again ..."
+        ],
+        "milk_production": [
+            "Hehe, you got it! I should've known you'dve studied up.",
+            "If you ever need anything, don't hesitate! I'll be here in the den for ya any time."
+        ],
+        "nausea": [
+            "Er ... no, that's not right. Like, at all.",
+            "Hm ... maybe now'd be a good time to start your herbal training again ..."
+        ]
+    },
+    "assertivemedapp_4": {
+        "tags": [
+            "any",
+            "assertive",
+            "romantic_like",
+            "they_medicine_cat",
+            "they_medicine_cat_apprentice",
+            "non-mates"
+        ],
+        "intro": [
+            "*Shudder* So many sick cats ... I gotta get out of this den, y_c. Come gather herbs with me later? We can make it into a contest!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "I'd love to!",
+                "next_scene": "love_to"
+            },
+            "choice2": {
+                "text": "I can't ...",
+                "next_scene": "cant"
+            }
+        },
+        "love_to": [
+            "Sweet! It's a date! Hehe!",
+            "[t_c's eyes flash a little too intently for it to just be a joke.]"
+        ],
+        "cant": [
+            "Ah, mouse-dung. That's alright. I understand. You got your own duties to attend to.",
+            "[t_c's words are kind, but their eyes betray a disappointment that's a bit too deep to just be friendly.]"
+        ]
+    },
+    "assertive_mentor8": {
+        "tags": [
+            "medicine cat apprentice",
+            "assertive",
+            "from_mentor",
+            "silly",
+            "cool"
+        ],
+        "intro": [
+            "Surprise assessment, y_c! What's the best way to dress a wound?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Cobwebs and chervil",
+                "next_scene": "cobwebs_chervil"
+            },
+            "choice2": {
+                "text": "Yarrow",
+                "next_scene": "yarrow"
+            },
+            "choice3": {
+                "text": "Cobwebs and comfrey",
+                "next_scene": "cobwebs_comfrey"
+            }
+        },
+        "cobwebs_chervil": [
+            "That's close! But a bit too early. Chervil is only to be used AFTER a wound gets infected, not before.",
+            "It won't kill your patient, but still, not good to use valuable herbs on cats who don't need them!",
+            "Don't beat yourself up about it, though. You're doing a great job!"
+        ],
+        "yarrow": [
+            "Whoa, are you crazy?! You want a wounded patient puking all over the medicine den? Because that's just what you're asking for!",
+            "*Sigh* Maybe it's time to go over the fundamentals again ..."
+        ],
+        "cobwebs_comfrey": [
+            "Ding ding ding, you got it right! Hehe, I knew you would.",
+            "c_nClan is lucky to have an apprentice as smart as you on our medical staff."
+        ]
+    },
+    "neurotic_gen2": {
+        "tags": [
+            "no_kit",
+            "neurotic",
+            "random_cat"
+        ],
+        "intro": [
+            "[t_c watches r_w1 and r_w2 laugh together a little ways away, apparently too nervous to join in the conversation.]"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Help them socialize!]",
+                "next_scene": "help_socialize"
+            },
+            "choice2": {
+                "text": "[Leave them alone]",
+                "next_scene": "leave_alone"
+            }
+        },
+        "help_socialize": [
+            "[You ask t_c why they don't just go up and talk to the warriors.]",
+            "What? And interrupt their conversation?! Are you crazy?",
+            "I'd rather die than be subjected to that kind of humiliation ...",
+            "Ah, you wouldn't understand, y_c. I'm not confident, like you are. I can't just go chatting with every member of the Clan every moon."
+        ],
+        "help_socialize_choices": {
+            "choice11": {
+                "text": "They'd love to talk with you!",
+                "next_scene": "sure_love_to_talk"
+            },
+            "choice2": {
+                "text": "Maybe you're right...",
+                "next_scene": "right"
+            }
+        },
+        "sure_love_to_talk": [
+            "You really think so ...?",
+            "Ah, StarClan. I guess I got nothing to lose.",
+            "Well ... Aside from my dignity. But, that's not really worth a ton.",
+            "Here goes nothing, y_c!",
+            "[t_c crosses the camp and awkwardly stands near the warriors until they notice enough to include them in their conversation.]",
+            "[Though talk is stilted, t_c looks a lot less lonely than before!]"
+        ],
+        "right": [
+            "[t_c nods dejectedly and you leave them to continue sitting alone.]"
+        ],
+        "leave_alone": [
+            "[You decide to leave the poor cat alone.]"
+        ]
+    },
+    "neurotic_gen4": {
+        "tags": [
+            "no_kit",
+            "neurotic",
+            "random_cat",
+            "platonic_like"
+        ],
+        "intro": [
+            "Hey, do you think r_w is mad at me?",
+            "[You ask t_c why they think the warrior could possibly have a problem with them.]",
+            "Well, when they greeted me this morning, they said 'Hello' instead of 'Hi', like they usually do!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "They obviously hate you!",
+                "next_scene": "obviously_hate_you"
+            },
+            "choice2": {
+                "text": "Of course they don't hate you.",
+                "next_scene": "dont_hate_you"
+            }
+        },
+        "obviously_hate_you": [
+            "Eep! You really think so?"
+        ],
+        "obviously_hate_you_choices": {
+            "choice11": {
+                "text": "Yes!",
+                "next_scene": "yes"
+            },
+            "choice12": {
+                "text": "No, silly.",
+                "next_scene": "no_silly"
+            }
+        },
+        "yes": [
+            "Ack! Oh, StarClan, I gotta go apologize!",
+            "[t_c rushes off to go apologize to the warrior for ... what, exactly?]",
+            "[You're not totally sure if t_c even knows.]"
+        ],
+        "no_silly": [
+            "Phew ... Well, that's a relief.",
+            "So, you don't think they hate me?"
+        ],
+        "no_silly_choices": {
+            "choice121": {
+                "text": "Of course not.",
+                "next_scene": "dont_hate_you"
+            }
+        },
+        "dont_hate_you": [
+            "You really don't think so ...?",
+            "Guess I'm probably freaking out over nothing again, huh?",
+            "I just can't help it. My whole life, I've tried so hard to please others, to be the type of cat that folks want to be around ...",
+            "The idea of someone not liking me is, like, worse than anything in the world!",
+            "Well, maybe not worse than spiders ... But still, you know what I mean!"
+        ],
+        "dont_hate_you_choices": {
+            "choice21": {
+                "text": "I get it.",
+                "next_scene": "i_get_it"
+            },
+            "choice22": {
+                "text": "You sound crazy.",
+                "next_scene": "sound_crazy"
+            }
+        },
+        "i_get_it": [
+            "Do you really ...?",
+            "*Sigh* Thanks for listening to me, y_c.",
+            "It's not often that someone lends a listening ear ... Let alone actually understands what I'm saying.",
+            "You're a really special cat."
+        ],
+        "sound_crazy": [
+            "Oh no ... You're not mad at me too, now, are you?!"
+        ]
+    },
+    "neurotic_gen7": {
+        "tags": [
+            "no_kit",
+            "neurotic",
+            "non-mates"
+        ],
+        "intro": [
+            "[t_c avoids stepping around every puddle in camp after a rain.]",
+            "[Confused by this ritual, you ask them why.]",
+            "Ah ... If I'm being honest, I can't stand the look of my own reflection, heh.",
+            "Plus, it's no good getting my paws wet, either."
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "That's sad ...",
+                "next_scene": "thats_sad"
+            },
+            "choice2": {
+                "text": "But you're beautiful!",
+                "next_scene": "youre_beautiful"
+            }
+        },
+        "thats_sad": [
+            "Oh - Really? You think so?",
+            "Ah ... I probably overshared again, didn't I?",
+            "*Sigh* Really gotta get better about doing that ..."
+        ],
+        "youre_beautiful": [
+            "Huh? Beautiful? Me? Y-You really mean that?",
+            "I, um ... I don't know what to say.",
+            "Thank you, y_c."
+        ]
+    },
+    "neurotic_gen5": {
+        "tags": [
+            "no_kit",
+            "neurotic",
+            "random_cat"
+        ],
+        "intro": [
+            "r_c told me earlier that 'no other cat in the Clan could do what I do' ... What do you think they meant by that?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "It was a compliment!",
+                "next_scene": "compliment"
+            },
+            "choice2": {
+                "text": "How could it not be a compliment?",
+                "next_scene": "not_compliment"
+            }
+        },
+        "compliment": [
+            "Ohh ... You really think so?",
+            "*Sigh* I guess I should probably go apologize to them for how I reacted, then ...",
+            "If I gave a cat a compliment and they ran away crying, I'd probably be a little confused."
+        ],
+        "not_compliment": [
+            "Ohh ... You really think so?",
+            "*Sigh* I guess I should probably go apologize to them for how I reacted, then ...",
+            "If I gave a cat a compliment and they ran away crying, I'd probably be a little confused."
+        ]
+    },
+    "neurotic_app": {
+        "tags": [
+            "no_kit",
+            "neurotic",
+            "random_cat",
+            "they_apprentice"
+        ],
+        "intro": [
+            "[t_c comes in from the hunting patrol, staring at their paws self-consciously as the rest of the patrol adds their catches to the freshkill pile.]",
+            "[tm_n gently reassures them that they tried their best, but t_c just glances away, clearly upset.]",
+            "How am I ever gonna be a real warrior if I can't even catch my own prey ...?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Comfort]",
+                "next_scene": "comfort"
+            },
+            "choice2": {
+                "text": "[Leave Alone]",
+                "next_scene": "leave_alone"
+            }
+        },
+        "comfort": [
+            "[You tell t_c that everyone struggles with hunting sometimes and they'll get the hang of it eventually.]",
+            "You're telling me you noticed I did bad on my patrol?",
+            "[They look at you for a second, eyes wide and impressionable, then look away.]",
+            "[Seems they didn't respond well to your sympathy.]"
+        ],
+        "leave_alone": [
+            "[You decide to not embarrass t_c any further.]"
+        ]
+    },
+    "neurotic_app2": {
+        "tags": [
+            "no_kit",
+            "neurotic",
+            "random_cat",
+            "trust",
+            "they_app"
+        ],
+        "intro": [
+            "[t_c watches tm_n apprehensively from across camp.]",
+            "Do you think tm_n even likes me?",
+            "It seems like, every new skill they try and teach me, I always seem to mess it up somehow ...",
+            "I just hope I'm not making them look like a bad mentor."
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Comfort]",
+                "next_scene": "comfort"
+            },
+            "choice2": {
+                "text": "[Confidently reassure]",
+                "next_scene": "confidently_reassure"
+            },
+            "choice3": {
+                "text": "[Criticize]",
+                "next_scene": "criticize"
+            }
+        },
+        "comfort": [
+            "[You purr to t_c that, even if their mentor doesn't like them, it doesn't change the fact that they're trying their best, which is all that matters.]",
+            "Well ... I guess that's true.",
+            "Still, I just hope they won't flunk my warrior's assessment!",
+            "[They look back at tm_n with a fearful gaze.]"
+        ],
+        "confidently_reassure": [
+            "[You assure t_c that of course their mentor likes them.]",
+            "Ah, I don't know, y_c ... No offense, but you haven't been to one of our training sessions.",
+            "They just get so frustrated with me ... I don't know how any cat could still like me after all that.",
+            "[They look back at tm_n with a somber gaze.]"
+        ],
+        "criticize": [
+            "[You tell t_c that maybe they wouldn't have to stress so much if they put the time in to master the skills tm_n taught them.]",
+            "Ah ... You think that's really true?",
+            "It already feels like I have to work a million times harder than any other apprentice, just to get by. Why does everyone else get to have it so easy?",
+            "[They look back at tm_n with a resentful gaze.]"
+        ]
+    },
+   "neurotic_kit_": {
+        "tags": [
+            "any",
+            "random_cat",
+            "neurotic",
+            "they_kitten"
+        ],
+        "intro": [
+            "Hey... y_c? W- What if l_n doesn't make me a warrior because I'm too much of a fraidy cat, like r_c said?",
+            "[t_c starts to tear up, trembling in place.]"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "They really said that to you?!",
+                "next_scene": "comfort"
+            },
+            "choice2": {
+                "text": "Of course you'll get to be a warrior!",
+                "next_scene": "confident_reassurance"
+            },
+            "choice3": {
+                "text": "Maybe it'd help if you were braver.",
+                "next_scene": "criticize"
+            }
+        },
+        "comfort": [
+            "Well ... Maybe it's not exactly what they said, but I know that they meant it!",
+            "I don't know how all the other kits are so excited to become warriors.",
+            "I guess, even if I didn't end up a warrior, it wouldn't be so bad."
+        ],
+        "confident_reassurance": [
+            "You really think so?",
+            "Oh ... But what if I don't even wanna be a warrior? What if I mess everything up?",
+            "I don't know how the other kits find all of this so easy ...",
+            "Even the thought of becoming an apprentice makes me feel all dizzy!"
+        ],
+        "criticize": [
+            "Eep! Do you really think so?",
+            "[t_c starts to sob.]",
+            "I'm never gonna become a warrior at this rate!"
+        ]
+    },
+    "broodingapp_toapp4": {
+        "tags": [
+            "any",
+            "brooding",
+            "platonic_like",
+            "from_your_apprentice",
+            "they_apprentice"
+        ],
+        "intro": [
+            "[t_c coldly drops a bird at your paws.]",
+            "Before you ask, yes, I did go onto the territory without your permission.",
+            "It was early morning. This bird was perching in camp and I chased after it. There was no time to wake you.",
+            "If you have a problem with it, I'd recommend taking it up with d_n.",
+            "But I'm not gonna apologize, because I'm not sorry."
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Praise your apprentice]",
+                "next_scene": "praise_apprentice"
+            },
+            "choice2": {
+                "text": "[Scold your apprentice]",
+                "next_scene": "scold_apprentice"
+            }
+        },
+        "praise_apprentice": [
+            "[You compliment t_c on their initiative. They blink, surprised, then break into a rare smile.]",
+            "Guess I'll just put this on the freshkill pile, then. Hehe."
+        ],
+        "scold_apprentice": [
+            "[You chastise t_c on their flippant attitude.]",
+            "Tch. I already told you, I don't care.",
+            "I got the bird, just like you taught me! It was an advanced catch! Shouldn't you be proud of me?",
+            "I can guarantee you, whoever eats this bird is gonna be grateful. But if you'd rather grab it out of their mouth because it was caught 'illegally', be my guest.",
+            "[t_c stalks off, coldly dropping the bird on the freshkill pile. Seems like you'll have to find another way to discipline them.]"
+        ]
+    },
+    "cool_you_kit_3": {
+        "tags": [
+            "kitten",
+            "cool",
+            "unlawful",
+            "assertive",
+            "unabashed",
+            "random_cat",
+            "they_adult"
+        ],
+        "intro": [
+            "Hey, y_c, I'll give you a badger ride if you go up to r_w and call them a huge piece of fox dung."
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Okay!",
+                "next_scene": "okay"
+            },
+            "choice2": {
+                "text": "Why?",
+                "next_scene": "why"
+            }
+        },
+        "okay": [
+            "Great! Remember, it's 'Huge piece of fox-dung.' Sound it out. Perfect! Now, go!",
+            "[You do as you're told, repeating the words to r_w as t_c dies of laughter on the other end of camp.]",
+            "Ahh, that is just too good! Hehehehe!"
+        ],
+        "why": [
+            "Uhm, because it's hilarious? I thought you kits weren't supposed to ask questions.",
+            "Now, c'mon, squirt, are you gonna do it or not?"
+        ],
+        "why_choices": {
+            "choice21": {
+                "text": "Okay!",
+                "next_scene": "okay"
+            },
+            "choice22": {
+                "text": "No way!",
+                "next_scene": "no_way"
+            }
+        },
+        "no_way": [
+            "What? Are you serious?",
+            "Man, kits these days are way harder to trick than I remember ..."
+        ]
+    },
+    "silly_leafbare_game": {
+        "tags": [
+            "no_kit",
+            "silly",
+            "leafbare"
+        ],
+        "intro": [
+            "[t_c is narrating a grand tale as they chase snowflakes around camp. Instead of interrupting them, you decide to eavesdrop and figure out exactly what adventures they're on today.]",
+            "And t_c gets one!",
+            "And another!",
+            "And they're dropping like flies! The hunt is on, everybody!",
+            "With t_c in the lead with a whopping 147 catches, we're looking at the most exciting mouse-hunt game of the season!",
+            "[Then, t_c stops, looking you directly in the eye. You can't tell if they're embarrassed or waiting for a response.]"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Give them a yelp of encouragement!",
+                "next_scene": "yelp_of_encouragement"
+            },
+            "choice2": {
+                "text": "Accept the challenge and bite a snowflake yourself.",
+                "next_scene": "accept_challenge"
+            },
+            "choice3": {
+                "text": "Roll your eyes and walk away.",
+                "next_scene": "walk_away"
+            }
+        },
+        "yelp_of_encouragement": [
+            "Yeaah!! And the crowd goes WILD!"
+        ],
+        "accept_challenge": [
+            "Oh? A challenger approaches!",
+            "Well, brace yourself, y_c, for I am the unbeaten snowflake CHAMPION!",
+            "[You and t_c have an all-out snowflake battle, chasing each others' tails with your scores the entire time. At the end, you narrowly come out on top!]",
+            "Awh man! The best has been bested, after all.",
+            "Well, congrats, you've done the impossible!"
+        ],
+        "walk_away": [
+            "Oh.",
+            "[t_c almost seems to wilt for a moment, before shaking their head and looking back up at all the falling snowflakes.]",
+            "Well, heroes aren't always congratulated, are they?",
+            "[t_c goes back to what they were doing, but you notice they aren't narrating it anymore.]"
+        ]
+    },
+    "silly_platoniclike_5": {
+        "tags": [
+            "any",
+            "silly",
+            "platonic_like",
+            "no_kit"
+        ],
+        "intro": [
+            "Hm... y_c, you know what?",
+            "I don't think I know enough about you. And I can't tolerate that!",
+            "See, I have lists of a buncha stuff about all the cats I like, and I only have a couple things in my mind list for you.",
+            "[t_c makes a little \"click-click\" sound with their tongue, but you don't know what it's trying to emulate.]",
+            "So, whaddaya do in your free time?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "I don't really get a lot of that.",
+                "next_scene": "not_much_free_time"
+            },
+            "choice2": {
+                "text": "Well, I like to...",
+                "next_scene": "like_to"
+            },
+            "choice3": {
+                "text": "It's a secret.",
+                "next_scene": "its_secret"
+            }
+        },
+        "not_much_free_time": [
+            "My goodness! I mean, I kinda figured, but we gotta change that!",
+            "Come on. We can collect rocks and play Clans with them!",
+            "And I'll help you make your character. You can be, uh... a rogue. And your name can be something rogues would name themselves.",
+            "Like... Snuffles. Or Rouge. Or the Dragonborn."
+        ],
+        "its_secret": [
+            "Ohhhh... I get it now. Forbidden romance?",
+            "[A staggering silence then follows; you have absolutely no idea what you're even supposed to say to this accusation.]",
+            "...What? I thought everyone was doing that nowadays. It's like the hot new thing when you don't know what to do with your life.",
+            "Or maybe I'm telling on myself.",
+            "Oops."
+        ],
+        "like_to": [
+            "Mhm?"
+        ],
+        "like_to_choices": {
+            "choice1": {
+                "text": "I love to collect stuff.",
+                "next_scene": "collecting"
+            },
+            "choice2": {
+                "text": "I like to help cats with other roles.",
+                "next_scene": "helping"
+            },
+            "choice3": {
+                "text": "Bathe in the blood of those who've wronged me?",
+                "next_scene": "murder"
+            }
+        },
+        "collecting": [
+            "Woah! Actually, I have a small collection myself...",
+            "I like to collect rocks and give them names. And then I play Clans with them!",
+            "You should meet Pebblestar. He killed his mate Brightstream because he started to catch onto the fact that Pebblestar was immorally spying on cats. Hehe."
+        ],
+        "helping": [
+            "Woah! See, y_c, this is why you're a cool cat.",
+            "You're always going around and helping cats. That's, like, really admirable!",
+            "Last time I tried to help r_c I fell on my face."
+        ],
+        "murder": [
+            "Hehe. You've gotta teach me how to be so convincing sometime, y_c. I'm really glad you're kidding, though!",
+            "[t_c giggles, eventually sighing when they're done.]",
+            "We really are the best of buds, you and me."
+        ]
+    },
+    "silly_parent_8": {
+        "tags": [
+            "kit",
+            "from_parent",
+            "silly"
+        ],
+        "intro": [
+            "y_c! y_c! I wanna play a game with you!",
+            "So, I'm thinking of a blue thing right now. And if you guess what the blue thing is, I'll give it to you."
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "A blue stone?",
+                "next_scene": "incorrect"
+            },
+            "choice2": {
+                "text": "A peacock feather?",
+                "next_scene": "correct"
+            },
+            "choice3": {
+                "text": "A butterfly wing?",
+                "next_scene": "incorrect"
+            },
+            "choice4": {
+                "text": "I don't want to play this!",
+                "next_scene": "cancel"
+            }
+        },
+        "correct": [
+            "There's my smart little kit!",
+            "Yep. I found a peacock feather, and I want you to have it.",
+            "[t_c leads you to their den, where they pluck a peacock feather from their nest and nestle it into the fur of your flank. Considering your size, it's almost bigger than you!]",
+            "Those guys are one of my favorites because they do pretty dances.",
+            "And they kind of remind me of you because you sure do love to squirm! Hehe."
+        ],
+        "incorrect": [
+            "Sadly, no... Good guess, though!",
+            "Wanna guess again?"
+        ],
+        "incorrect_choices": {
+            "choice1": {
+                "text": "A blue stone?",
+                "next_scene": "incorrect"
+            },
+            "choice2": {
+                "text": "A peacock feather?",
+                "next_scene": "correct"
+            },
+            "choice3": {
+                "text": "A butterfly wing?",
+                "next_scene": "incorrect"
+            },
+            "choice4": {
+                "text": "No...",
+                "next_scene": "cancel"
+            }
+        },
+        "cancel": [
+            "Awh, okay...",
+            "Well, it was a peacock feather! I found it earlier when I was out strolling and I thought you would like it.",
+            "I guess your parent's gotta get better games to impress their kit, huh?"
+        ]
+    },
+    "upstanding_choice1": {
+        "tags": [
+            "upstanding",
+            "from_mentor",
+            "random_cat",
+            "they_no_kit"
+        ],
+        "intro": [
+            "Hey y_c, before you head out, you did remember to clean out the den you were assigned, right?",
+            "[With a sinking feeling in your stomach, you realize that you forgot to clean out the nursery earlier that day. What should you say?]"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Make up a lie.",
+                "next_scene": "lie"
+            },
+            "choice2": {
+                "text": "Admit that you forgot.",
+                "next_scene": "admit"
+            }
+        },
+        "lie": [
+            "[You make up an elaborate lie about how you and r_a had tried to clean it earlier that day.]",
+            "Is that so? Because last I checked, r_a has been out on a hunting patrol since dawn.",
+            "[t_c proceeds to give you a long and stern lecture about the importance of honesty and owning up to one's mistakes. Afterward, you are sent off to clean the entire den alone.]"
+        ],
+        "admit": [
+            "[Although t_c isn't exactly happy, they appreciate your honesty.]",
+            "I'll tell you what. Go get some moss from the medicine den and meet me by the nursery. I'll lend you a paw and replace the nests, while you fix up the walls and clear any debris.",
+            "Afterward, we'll go out and catch some prey for the clan. Sound like a plan?"
+        ]
+    },
+    "upstanding_choice2": {
+        "tags": [
+            "upstanding",
+            "no_kit",
+            "they_no_kit",
+            "dislike",
+            "hate"
+        ],
+        "intro": [
+            "Look, I'd rather be eating a toad right now than speaking to you, but... we're still clanmates, and clanmates should at least try and tolerate one another, right?",
+            "So... here.",
+            "[t_c tosses a mouse at your paws and watches you expectantly. It seems like they're waiting for a response.]"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Thank them.]",
+                "next_scene": "thank"
+            },
+            "choice2": {
+                "text": "[Ignore them.]",
+                "next_scene": "ignore"
+            },
+            "choice3": {
+                "text": "[Insult them.]",
+                "next_scene": "insult"
+            }
+        },
+        "thank": [
+            "[t_c gives you a curt nod and, although they don't say it to you directly, you swear you can hear a soft 'welcome.' as they pad away.]"
+        ],
+        "ignore": [
+            "Real mature, aren't you.",
+            "[t_c lashes their tail and stalks off without another word.]"
+        ],
+        "insult": [
+            "[t_c growls and snatches the mouse straight out of your paws.]",
+            "I don't know what your deal is, but c_nClan can't afford to have its clanmates at each other's throats. Pull yourself together and stop acting like a kit.",
+            "I'd hate to see you drive more of your clanmates away."
+        ]
+    },
+    "upstanding_choice3": {
+        "tags": [
+            "upstanding",
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice",
+            "they_kitten"
+        ],
+        "intro": [
+            "[You're dragging a large pile of moss across the camp, intent on delivering it to the medicine den. t_c spots you in the middle of your task and perks up, racing over.]",
+            "y_c! y_c! Need a helping paw? I'm super good at carrying moss, I swear!",
+            "[t_c stares up at you with wide eyes, eagerly awaiting your response.]"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "[Send t_c back to the nursery.]",
+                "next_scene": "away"
+            },
+            "choice2": {
+                "text": "[Accept t_c's offer.]",
+                "next_scene": "accept"
+            }
+        },
+        "away": [
+            "[You shrug t_c off and tell them to go back to the nursery. t_c looks hurt but doesn't protest as they slowly pad away with their head hung low.]"
+        ],
+        "accept": [
+            "[You graciously accept t_c's offer and slide them a portion of your moss. With their head held high and an extra spring in their step, the two of you successfully deliver the moss to the medicine den.]"
+        ]
+    },
+    "upstanding_choice4": {
+        "tags": [
+            "upstanding",
+            "kitten",
+            "they_apprentice",
+            "random_cat"
+        ],
+        "intro": [
+            "Hey there y_c, what's up? Do you need anything?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Teach me some battle moves!",
+                "next_scene": "battle"
+            },
+            "choice2": {
+                "text": "Can you give me a badger ride!",
+                "next_scene": "badger"
+            }
+        },
+        "battle": [
+            "Oh, sorry y_c, I'm in a bit of a time crunch right now. I have to gather some moss for r_m and help r_a patch up the apprentice den, all before sunset!",
+            "But first, I have to go join r_w's patrol."
+        ],
+        "battle_choices": {
+            "choice1": {
+                "text": "Can I come with you?",
+                "next_scene": "patrol"
+            },
+            "choice2": {
+                "text": "What about a badger ride?",
+                "next_scene": "badger"
+            }
+        },
+        "patrol": [
+            "Haha, no."
+        ],
+        "patrol_choices": {
+            "choice1": {
+                "text": "Pleeeease?",
+                "next_scene": "beg"
+            }
+        },
+        "beg": [
+            "No way! You know the rules, and I am not putting my tail on the line so you can frolic around outside of camp.",
+            "What if you got lost? What if you ran into a big, hungry fox? These rules are here for a reason, t_c. I don't want you to get hurt."
+        ],
+        "badger": [
+            "But r_w's patrol...",
+            "[t_c shakes their head, sighing as they crouch low enough for you to climb onto their back.]",
+            "...Fine. Here, climb onto my shoulder and- hey! Careful with those claws!",
+            "[You hook your claws into their fur, squealing with delight as they lumber around the clearing.]"
+        ]
+    },
+    "upstanding_choice5": {
+        "tags": [
+            "upstanding",
+            "no_kit",
+            "they_kitten"
+        ],
+        "intro": [
+            "Ughhh, when can I get out of this boring old camp already? I want to go out and catch all of the mouses and defend our territory from stinky o_cClan cats!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "It's 'mice'.",
+                "next_scene": "mice"
+            },
+            "choice2": {
+                "text": "Are you ready for your apprenticeship?",
+                "next_scene": "apprentice"
+            }
+        },
+        "mice": [
+            "Ohhhh, okay! Mices!"
+        ],
+        "apprentice": [
+            "You bet!! I'm gonna be the best apprentice in the entire clan; just you wait!"
+        ]
+    },
+    "sweetchoice_2": {
+        "tags": [
+            "no_kit",
+            "from_mate",
+            "random_cat",
+            "sweet"
+        ],
+        "intro": [
+            "Oh, my love! Good morning! How are you feeling today? Hopefully well?",
+            "I actually have a question, if you wouldn't mind?",
+            "Do you think I'm a little too... nice sometimes? I- I know I don't need to worry about it but...",
+            "r_w has been saying I'm a total pushover and... I suppose it got to me."
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "You are too nice.",
+                "next_scene": "toonice"
+            },
+            "choice2": {
+                "text": "You're perfect the way you are!",
+                "next_scene": "youreperfect"
+            }
+        },
+        "toonice": [
+            "Oh... I see. Thank you for being honest with me.",
+            "[They seem... really upset. However, they give you the same smile they always do.]"
+        ],
+        "youreperfect": [
+            "Oh love! You're so sweet! ... Thank you, I really needed that.",
+            "I love you so much!"
+        ]
+    }
+}

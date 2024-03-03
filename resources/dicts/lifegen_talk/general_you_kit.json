@@ -1,0 +1,2072 @@
+{
+    "you_kitten_1": [
+        [
+            "newborn",
+            "sweet",
+            "stable",
+            "introspective",
+            "brooding"
+        ],
+        [
+            "Rest now, little one. Dream of the great warrior you'll become one day."
+        ]
+    ],
+    "introspective_to_NB": [
+        [
+            "newborn",
+            "introspective"
+        ],
+        [
+            "Aw. hello there, little one.",
+            "How did you get so far away from the nursery? Where's your parent?",
+            "Hm... You need to go back there, they'll be worrying about you."
+        ]
+    ],
+    "sweet_6": [
+        [
+            "newborn",
+            "sweet"
+        ],
+        [
+            "Ohh, look at you! You're so tiny!! Ah- that's so precious.",
+            "Oh my, and you have a ferocious mew too! Ah, you'll make a wonderful warrior someday, I just know it.",
+            "You're so little, yet I know you're going to make everyone proud.. Just by being yourself."
+        ]
+    ],
+    "assertive_parent11": [
+        [
+            "kitten",
+            "assertive",
+            "from_parent"
+        ],
+        [
+            "Hey, y_c, play nice! Be careful with your playmates!",
+            "*Whisper* Even though, between you and me, we both know you could totally destroy them. Hehehe!"
+        ]
+    ],
+    "assertive_parent21": [
+        [
+            "kitten",
+            "assertive",
+            "silly",
+            "stable",
+            "sweet",
+            "unabashed",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "Ready for a badger ride, y_c? Hurry up and climb on!",
+            "[You clamber onto t_c's shoulders, laughing and squealing with glee.]",
+            "Rrragh, I'm the big scary badger! Hahaha!"
+        ]
+    ],
+    "assertive_insult": [
+        [
+            "kitten",
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice",
+            "assertive",
+            "unlawful",
+            "unabashed",
+            "silly",
+            "insult",
+            "random_cat",
+            "platonic_like"
+        ],
+        [
+            "Hehehe! Little guy's got a mouth on 'em! That's hilarious!",
+            "Wait, stay right there!",
+            "r_c! Guess what y_c just called me! Ahahaha!"
+        ]
+    ],
+    "sweetgrieving_5": [
+        [
+            "dead_close",
+            "they_grieving",
+            "kitten",
+            "sweet",
+            "stable"
+        ],
+        [
+            "O- Oh! Oh, you want a story, little one? A... About d_c...",
+            "Okay.. I'm.. I'm sorry if I get a little... teary... but I don't want them to be forgotten. Let me tell you about one of the most wonderful cats in the Clans."
+        ]
+    ],
+    "assertive_insult1": [
+        [
+            "kitten",
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice",
+            "assertive",
+            "insult",
+            "unlawful",
+            "dislike"
+        ],
+        [
+            "Try that again, and see what happens, pipsqueak.",
+            "I could chew you up and spit you out again without thinking twice about it."
+        ]
+    ],
+    "assertive_murder4_2": [
+        [
+            "murder",
+            "kitten",
+            "assertive",
+            "from_parent"
+        ],
+        [
+            "y_c, I ... why wouldn't you tell me?",
+            "To send another cat to StarClan ... and then lie about it ...",
+            "I know I taught you to take risks, but this isn't what I meant!"
+        ]
+    ],
+    "you_starving_3": [
+        [
+            "any",
+            "you_starving"
+        ],
+        [
+            "Oh, y_c. I'm so sorry...",
+            "[t_c scanned over the fresh kill pile, it appearing to be barren.]",
+            "There's still no fresh kill. Nothing's been found.",
+            "[Their voice hitched and they sniffed quietly to themself.]",
+            "This... why would StarClan do this to us...?"
+        ]
+    ],
+    "assertive_parent13": [
+        [
+            "kitten",
+            "assertive",
+            "platonic_like",
+            "from_parent",
+            "silly",
+            "sweet",
+            "stable",
+            "unabashed"
+        ],
+        [
+            "What's that, y_c? You wanna play? Sure! You can be the leader, and I'll be the rogue.",
+            "Ahem ...",
+            "Stop right there, clan cat! Where do you think you're going? I, leader of the rogues, will stop you! Muahahaha!",
+            "Wait, stop! What are you doing? AHHH!!!!",
+            "Too ... powerful ... bleeegh!",
+            "[t_c flops over on the ground dramatically. You clamber up onto their body and tug on their ears, giggling hysterically.]"
+        ]
+    ],
+    "upstanding_general1": [
+        [
+            "upstanding",
+            "newborn",
+            "you_outsiderroots",
+            "you_abandoned",
+            "you_orphaned"
+        ],
+        [
+            "Is this little scrap of fur the new addition to the clan?",
+            "Hmph. Let's just hope they stay out of trouble, that seems to be an issue for a lot of the kits around here."
+        ]
+    ],
+    "sweet_7": [
+        [
+            "newborn",
+            "sweet",
+            "stable"
+        ],
+        [
+            "Oh my- you're so precious!",
+            "Hello, little one! Welcome to c_nClan! What a cute lil fella, you are.",
+            "Here we go, let me take you back to your nest. Little ones like you need plenty of rest to become big strong warriors!"
+        ]
+    ],
+    "sweet_8": [
+        [
+            "newborn",
+            "sweet",
+            "stable"
+        ],
+        [
+            "Why hello there, little flower!",
+            "Now now, you've gotta stay near your nest. Those big stinky cats might not see you there!",
+            "There we are! Ah- I've been meaning to bring this to you anyway. It's a little bundle of moss you can cuddle with!"
+        ]
+    ],
+    "introspective_to_NB_1": [
+        [
+            "Newborn",
+            "Introspective"
+        ],
+        [
+            "[You, while stumbling around outside the nursery, trip over t_c's tail, and faceplant at their feet.]",
+            "...",
+            "[They don't seem to notice you, so you blindly stumble off.]",
+            "... Did a bird just land on my tail?"
+        ]
+    ],
+    "introspective_to_NB_2": [
+        [
+            "Newborn",
+            "Introspective",
+            "non-related"
+        ],
+        [
+            "Hi, little one. You must be y_c.",
+            "Aren't you a cute little thing?",
+            "Aw, coming to the nursery just makes me want to have kits of my own. I doubt if that'll ever happen though."
+        ]
+    ],
+    "assertive_1": [
+        [
+            "newborn",
+            "assertive",
+            "from_parent"
+        ],
+        [
+            "*Sigh* My perfect little y_c ...",
+            "You're gonna do great things someday, kiddo, I just know it."
+        ]
+    ],
+    "unlawful_newborn": [
+        [
+            "newborn",
+            "unlawful"
+        ],
+        [
+            "How... small."
+        ]
+    ],
+    "stable_8": [
+        [
+            "newborn",
+            "stable",
+            "silly",
+            "sweet"
+        ],
+        [
+            "So small and cute, aww!",
+            "Your little button nose and beady eyes, your fluffy tail and ears.",
+            "I could just gobble you up- No! No, no, no, no, no... That was a joke, I didn't mean to make you cry..."
+        ]
+    ],
+    "stable_9": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "Look at you, young one. Soon it won't be long before your running around camp, stirring up a storm.",
+            "I remember when I was that age, goodness, that was so long ago. Well, not that I remember, what I could see nor hear- but I remember my parent's voice.",
+            "Their calm whispers of support, their promises of love and the way they said my name- I don't remember much, but just a sense of protection. A sense of love.",
+            "Little kit, you may not remember this when you're older, but I hope you remember this feeling of warmth.",
+            "So I'll say this, you are loved y_c, loved by c_nClan and all the cats here. We can't wait to see what you do next."
+        ]
+    ],
+    "stable_9_2": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "...",
+            "...",
+            "Why do you look like that?"
+        ]
+    ],
+    "you_kitten_2": [
+        [
+            "kitten",
+            "unlawful",
+            "assertive",
+            "unabashed"
+        ],
+        [
+            "Hey, kit! Let's practice the hunting crouch.",
+            "[t_c inspects you as you get into position.]",
+            "Hmm, not bad! You'll be a great hunter one day."
+        ]
+    ],
+    "you_kitten_3": [
+        [
+            "kitten",
+            "unabashed",
+            "silly",
+            "unlawful",
+            "cool"
+        ],
+        [
+            "Boo! Gotcha!",
+            "Heh, you didn't see me coming, did you, little one?",
+            "One day you'll be as sneaky as me."
+        ]
+    ],
+    "you_kitten_4": [
+        [
+            "kitten",
+            "stable",
+            "upstanding"
+        ],
+        [
+            "It's important to listen and learn, little y_c. This clan relies on each of us doing our part."
+        ]
+    ],
+    "you_kitten_5": [
+        [
+            "kitten",
+            "neurotic",
+            "stable",
+            "sweet",
+            "upstanding"
+        ],
+        [
+            "Oh! Be careful near the brambles, dear kit. It's easy to get hurt."
+        ]
+    ],
+    "you_kitten_6": [
+        [
+            "kitten",
+            "neurotic",
+            "stable",
+            "sweet",
+            "upstanding"
+        ],
+        [
+            "Stay close to your mentor, once you're an apprentice.",
+            "c_nClan's territory spans thousands of tail-lengths. It's easy to get lost if you wander too far."
+        ]
+    ],
+    "introspective_leafbare": [
+        [
+            "any",
+            "introspective",
+            "leafbare"
+        ],
+        [
+            "...",
+            "[t_c is sat in the corner, with a clump of snow on their head.]",
+            "[They... haven't noticed?]",
+            "[You decide to leave them to it...?]"
+        ]
+    ],
+    "assertive_yougrief1": [
+        [
+            "kitten",
+            "assertive",
+            "cool",
+            "brooding",
+            "you_grieving",
+            "dead_close"
+        ],
+        [
+            "[When you ask t_c what happened to d_c, and if you'll ever see them again, something on their face breaks.]",
+            "Ah ... Ah, kid, I'm so sorry ...",
+            "It ain't right, what happened to d_c ...",
+            "But, mark my words, you haven't seen the last of them. Though, it may be a while. They're up in StarClan now, with our warrior ancestors.",
+            "One day, you'll reunite again. But until then, just know they're up there watching over you, helping you grow strong and healthy.",
+            "Can you try to grow up strong and healthy for them?"
+        ]
+    ],
+    "assertive_parent1_1": [
+        [
+            "kitten",
+            "assertive",
+            "from_parent"
+        ],
+        [
+            "Hey, y_c, play nice! Be careful with your playmates!",
+            "*Whisper* Even though, between you and me, we both know you could totally destroy them. Hehehe!"
+        ]
+    ],
+    "assertive_parent2_1": [
+        [
+            "kitten",
+            "assertive",
+            "silly",
+            "stable",
+            "sweet",
+            "unabashed",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "Ready for a badger ride, y_c? Hurry up and climb on!",
+            "[You clamber onto t_c's shoulders, laughing and squealing with glee.]",
+            "Rrragh, I'm the big scary badger! Hahaha!"
+        ]
+    ],
+    "assertive_parent3": [
+        [
+            "kitten",
+            "assertive",
+            "platonic_like",
+            "from_parent",
+            "silly",
+            "sweet",
+            "stable",
+            "unabashed"
+        ],
+        [
+            "What's that, y_c? You wanna play? Sure! You can be the leader, and I'll be the rogue.",
+            "Ahem ...",
+            "Stop right there, clan cat! Where do you think you're going? I, leader of the rogues, will stop you! Muahahaha!",
+            "Wait, stop! What are you doing? AHHH!!!!",
+            "Too ... powerful ... bleeegh!",
+            "[t_c flops over on the ground dramatically. You clamber up onto their body and tug on their ears, giggling hysterically.]"
+        ]
+    ],
+    "assertive_parent4": [
+        [
+            "newborn",
+            "assertive",
+            "cool",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "*Sigh* My perfect little y_c ...",
+            "You're gonna do great things someday, kiddo, I just know it."
+        ]
+    ],
+    "assertive_parent41": [
+        [
+            "newborn",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "*Gasp* Oh, look, t_m! y_c has your nose!",
+            "Heh ... Our perfect little family."
+        ]
+    ],
+    "assertive_parent5": [
+        [
+            "kitten",
+            "assertive",
+            "cool",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "y_c? What's going on?",
+            "Wait a second, I know that face. You're ready for your nap, aren't you?",
+            "Alright, c'mere little guy. Off to dreamland.",
+            "[You snuggle into t_c's fur and doze off, comforted by their scent.]"
+        ]
+    ],
+    "assertive_parent6": [
+        [
+            "kitten",
+            "assertive",
+            "cool",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "Alright, kiddo, time for your bath.",
+            "Nope, I don't wanna hear any 'ifs', 'ands', or 'buts' about it. Even the strongest of warriors have to keep their pelts shiny!",
+            "[t_c spends several minutes grooming your fur before you can wriggle away and get back to playing!"
+        ]
+    ],
+    "assertive_parent7": [
+        [
+            "kitten",
+            "assertive",
+            "cool",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "Hm? You wanna play moss-ball?",
+            "I dunno, kiddo, I'm real busy today ...",
+            "Ahh, but how can I say no to that little face?",
+            "Alright, you drive a hard bargain. You have me for a game!"
+        ]
+    ],
+    "you_newborn": [
+        [
+            "newborn",
+            "from_parent",
+            "adopted_parent"
+        ],
+        [
+            "Oh, my precious kit.",
+            "I love you so much."
+        ]
+    ],
+    "you_newborn2": [
+        [
+            "newborn",
+            "silly",
+            "random_cat"
+        ],
+        [
+            "Peek-a-boo!",
+            "Oh! Oh! Look, r_c. y_c is purring!"
+        ]
+    ],
+    "you_kitten_7": [
+        [
+            "kitten",
+            "cool",
+            "unabashed",
+            "unlawful"
+        ],
+        [
+            "Hey there, little y_c. You've got quite the spark in those eyes.",
+            "You remind me of me when I was your age. Destined for greatness, I can tell."
+        ]
+    ],
+    "you_kitten_8": [
+        [
+            "kitten",
+            "brooding",
+            "unlawful"
+        ],
+        [
+            "The forest hides many secrets, y_c.",
+            "You might think it's all fun and games now, but there's a darkness out there.",
+            "Just... be careful. Not everything is as it seems."
+        ]
+    ],
+    "you_kitten_brooding": [
+        [
+            "kitten",
+            "brooding",
+            "unlawful"
+        ],
+        [
+            "Never take things at face value, little kit. That's a lesson I'd had to learn."
+        ]
+    ],
+    "you_kitten_brooding2": [
+        [
+            "kitten",
+            "brooding",
+            "unlawful",
+            "neutral",
+            "non-related"
+        ],
+        [
+            "Hmph... I have no time to speak with you, kit. Go back to the nursery."
+        ]
+    ],
+    "you_kitten_brooding3": [
+        [
+            "kitten",
+            "brooding",
+            "unlawful"
+        ],
+        [
+            "When you grow up, y_c, you'll see that sometimes breaking the rules can lead you to greater truths.",
+            "The Warrior Code isn't everything. Keep an open mind, okay?"
+        ]
+    ],
+    "you_kitten_9": [
+        [
+            "kitten",
+            "silly",
+            "unabashed"
+        ],
+        [
+            "Wanna see me sneak past the elders' den without them noticing?",
+            "It's all in the paws, watch and learn!",
+            "Haha, did you see that? They didn't even blink!"
+        ]
+    ],
+    "you_kitten_10": [
+        [
+            "kitten",
+            "introspective"
+        ],
+        [
+            "The stars seem so distant, yet I feel like our ancestors are right here, watching over us.",
+            "Do you ever wonder, y_c, about our purpose in this vast clan?",
+            "Ah... you're too young to be thinking of this."
+        ]
+    ],
+    "you_kitten_11": [
+        [
+            "kitten",
+            "neurotic",
+            "unlawful"
+        ],
+        [
+            "Rules are there for a reason, y_c.",
+            "But sometimes, I can't help but wonder if they're truly for our own good.",
+            "Still, we must respect them. That's what being a part of c_nClan means."
+        ]
+    ],
+    "you_kitten_12": [
+        [
+            "kitten",
+            "unabashed",
+            "cool",
+            "stable"
+        ],
+        [
+            "You worried about your first hunt, y_c?",
+            "Ah, don't sweat it. Just be yourself and trust your instincts.",
+            "Remember, every cat started somewhere. You got this."
+        ]
+    ],
+    "you_kitten_13": [
+        [
+            "kitten",
+            "silly"
+        ],
+        [
+            "Hey y_c, bet I can catch that butterfly before you!",
+            "Ready... set... go!"
+        ]
+    ],
+    "assertive_parent1": [
+        [
+            "kitten",
+            "assertive",
+            "from_parent"
+        ],
+        [
+            "Hey, y_c, play nice! Be careful with your playmates!",
+            "*Whisper* Even though, between you and me, we both know you could totally destroy them. Hehehe!"
+        ]
+    ],
+    "assertive_parent2": [
+        [
+            "kitten",
+            "assertive",
+            "silly",
+            "stable",
+            "sweet",
+            "unabashed",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "Ready for a badger ride, y_c? Hurry up and climb on!",
+            "[You clamber onto t_c's shoulders, laughing and squealing with glee.]",
+            "Rrragh, I'm the big scary badger! Hahaha!"
+        ]
+    ],
+    "cool_you_kit": [
+        [
+            "newborn",
+            "cool",
+            "platonic_like"
+        ],
+        [
+            "Heh. Always nice to see a new little addition to the Clan."
+        ]
+    ],
+    "cool_you_kit_1": [
+        [
+            "newborn",
+            "cool",
+            "platonic_like",
+            "random_cat"
+        ],
+        [
+            "Ah, StarClan, look at those little ears. So stinkin' adorable.",
+            "y_p should be proud."
+        ]
+    ],
+    "cool_you_kit_2": [
+        [
+            "newborn",
+            "cool",
+            "platonic_like",
+            "random_cat"
+        ],
+        [
+            "What a cute little guy!",
+            "Is it too late for me to steal them away from y_p?"
+        ]
+    ],
+    "cool_you_kit_4": [
+        [
+            "kitten",
+            "cool",
+            "platonic_like"
+        ],
+        [
+            "Hey, y_c. Watch this.",
+            "[t_c places their paw over a small pebble and blows on it. When they take their paw off, it's gone!]",
+            "[Amazed, you beg t_c to reveal their secrets.]",
+            "Just a little slight of paw. Heh."
+        ]
+    ],
+    "cool_you_kit_5": [
+        [
+            "kitten",
+            "cool",
+            "unlawful",
+            "you_upstanding",
+            "you_stable",
+            "you_assertive"
+        ],
+        [
+            "Hm? You ... want me to give your tips on your hunting crouch?",
+            "Tch, you're too young for all that. Try not to take life so seriously. You'll have plenty of time to worry about hunting when you're an apprentice.",
+            "Until then, just try to enjoy your kithood."
+        ]
+    ],
+    "assertive_parent3_2": [
+        [
+            "kitten",
+            "assertive",
+            "platonic_like",
+            "from_parent",
+            "silly",
+            "sweet",
+            "stable",
+            "unabashed"
+        ],
+        [
+            "What's that, y_c? You wanna play? Sure! You can be the leader, and I'll be the rogue.",
+            "Ahem ...",
+            "Stop right there, clan cat! Where do you think you're going? I, leader of the rogues, will stop you! Muahahaha!",
+            "Wait, stop! What are you doing? AHHH!!!!",
+            "Too ... powerful ... bleeegh!",
+            "[t_c flops over on the ground dramatically. You clamber up onto their body and tug on their ears, giggling hysterically.]"
+        ]
+    ],
+    "assertive_parent4_2": [
+        [
+            "newborn",
+            "assertive",
+            "cool",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "*Sigh* My perfect little y_c ...",
+            "You're gonna do great things someday, kiddo, I just know it."
+        ]
+    ],
+    "assertive_parent5_2": [
+        [
+            "kitten",
+            "assertive",
+            "cool",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "y_c? What's going on?",
+            "Wait a second, I know that face. You're ready for your nap, aren't you?",
+            "Alright, c'mere little guy. Off to dreamland.",
+            "[You snuggle into t_c's fur and doze off, comforted by their scent.]"
+        ]
+    ],
+    "assertive_parent6_2": [
+        [
+            "kitten",
+            "assertive",
+            "cool",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "Alright, kiddo, time for your bath.",
+            "Nope, I don't wanna hear any 'ifs', 'ands', or 'buts' about it. Even the strongest of warriors have to keep their pelts shiny!",
+            "[t_c spends several minutes grooming your fur before you can wriggle away and get back to playing!"
+        ]
+    ],
+    "assertive_parent7_2": [
+        [
+            "kitten",
+            "assertive",
+            "cool",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "Hm? You wanna play moss-ball?",
+            "I dunno, kiddo, I'm real busy today ...",
+            "Ahh, but how can I say no to that little face?",
+            "Alright, you drive a hard bargain. You have me for a game!"
+        ]
+    ],
+    "brooding_newborn": [
+        [
+            "newborn",
+            "brooding",
+            "random_cat"
+        ],
+        [
+            "Who is that ...?",
+            "Hmph. Nice-looking kit, I suppose ...",
+            "It takes after y_p."
+        ]
+    ],
+    "brooding_newborn1": [
+        [
+            "newborn",
+            "brooding"
+        ],
+        [
+            "... Uh. Hello.",
+            "Can it even hear what I'm saying right now?"
+        ]
+    ],
+    "brooding_newborn2": [
+        [
+            "newborn",
+            "brooding",
+            "neutral"
+        ],
+        [
+            "Not interested."
+        ]
+    ],
+    "brooding_newborn3": [
+        [
+            "newborn",
+            "brooding",
+            "from_parent"
+        ],
+        [
+            "...",
+            "You're so ... perfect."
+        ]
+    ],
+    "brooding_kitten": [
+        [
+            "kitten",
+            "brooding",
+            "neutral",
+            "dislike"
+        ],
+        [
+            "Not interested."
+        ]
+    ],
+    "brooding_kitten1": [
+        [
+            "kitten",
+            "brooding"
+        ],
+        [
+            "Uh. I don't really know how to talk to kits ...",
+            "Hi, I guess?"
+        ]
+    ],
+    "brooding_kitten2": [
+        [
+            "kitten",
+            "brooding",
+            "dislike"
+        ],
+        [
+            "Don't you have something better to be doing?",
+            "Stop bothering me, and go find someone else to annoy."
+        ]
+    ],
+    "brooding_kitten3": [
+        [
+            "kitten",
+            "brooding",
+            "random_cat",
+            "non-related"
+        ],
+        [
+            "What is it? Can't you see that I'm busy?",
+            "You want to ... play a game with me?",
+            "Hmph. I haven't 'played' since I was in the nursery. Do yourself a favor and find someone who has nothing better to do.",
+            "Like r_c."
+        ]
+    ],
+    "brooding_kitten4": [
+        [
+            "kitten",
+            "brooding",
+            "random_cat",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "y_c. I have something for you.",
+            "[t_c drops a smooth pebble at your paws.]",
+            "I ... saw it on patrol, and thought you might like it to play with.",
+            "Do you like it?"
+        ]
+    ],
+    "brooding_kitten5": [
+        [
+            "kitten",
+            "brooding",
+            "platonic_like"
+        ],
+        [
+            "Hm? Why are you crying, y_c?",
+            "One of the other kits called you ugly?",
+            "[t_c's gaze suddenly darkens.]",
+            "... Where are they?"
+        ]
+    ],
+    "brooding_kitten5_2": [
+        [
+            "kitten",
+            "brooding",
+            "introspective",
+            "platonic_like"
+        ],
+        [
+            "Hey, y_c. Look up there.",
+            "[t_c points out a bird perching on a tree in camp.]",
+            "That's called a robin. Pretty, huh?",
+            "[t_c spends the rest of the morning quietly pointing out all the birds around camp, and telling you their names.]"
+        ]
+    ],
+    "brooding_kitten6": [
+        [
+            "kitten",
+            "brooding"
+        ],
+        [
+            "Please, y_c, not now ...",
+            "StarClan, I have the worst headache ..."
+        ]
+    ],
+    "brooding_kitten7": [
+        [
+            "kitten",
+            "brooding",
+            "neutral"
+        ],
+        [
+            "What is it? What do you need?",
+            "You just want to talk?",
+            "...",
+            "How about, for the future, we set up a policy where you only come and find me if you really, really need something. Okay?"
+        ]
+    ],
+    "brooding_kitten8": [
+        [
+            "kitten",
+            "brooding",
+            "platonic_like"
+        ],
+        [
+            "Tch. Not now, y_c. I'm not interested in kit games.",
+            "Wait ... is that a moss-ball?",
+            "Heh. I used to love that game.",
+            "Hmm ...",
+            "Okay. I'll play one round.",
+            "And you speak of this to anyone, I'll never play with you again. Got it?"
+        ]
+    ],
+    "brooding_parent": [
+        [
+            "kitten",
+            "brooding",
+            "from_parent",
+            "platonic_like",
+            "you_neurotic",
+            "you_brooding",
+            "you_introspective"
+        ],
+        [
+            "y_c, why don't you go out and play with the other kits?",
+            "...",
+            "Heh. That's okay. I was never that outgoing at your age, either.",
+            "You can just stay here with me until you're ready to make some new friends."
+        ]
+    ],
+    "brooding_parent1": [
+        [
+            "kitten",
+            "brooding",
+            "assertive",
+            "unlawful",
+            "silly",
+            "from_parent",
+            "platonic_like",
+            "random_cat",
+            "you_assertive",
+            "you_brooding",
+            "you_unlawful",
+            "you_silly"
+        ],
+        [
+            "[r_q caught you being naughty and demanded to meet with your parent, t_c, about it.]",
+            "Alright ... what'd you do this time, y_c?",
+            "You ... called r_c a mange-face because they were ignoring you?",
+            "*Snrk*",
+            "I mean, uh -- That was very bad of you, y_c! Never do it again!",
+            "[t_c leads you away giggling uncontrollably]",
+            "Mange-face ... Hehehe!"
+        ]
+    ],
+    "brooding_parent2": [
+        [
+            "kitten",
+            "brooding",
+            "introspective",
+            "from_parent",
+            "platonic_like"
+        ],
+        [
+            "Ah. Good morning, little one.",
+            "How did you sleep?",
+            "[You tell t_c all about the dream you had last night, and they listen patiently.]"
+        ]
+    ],
+    "brooding_parent3": [
+        [
+            "kitten",
+            "brooding",
+            "introspective",
+            "from_parent",
+            "platonic_like"
+        ],
+        [
+            "Look, y_c.",
+            "[t_c points out the shining water drops that clings to the blades of grass along the nursery.]",
+            "That's called dew. It forms in the morning because of the sudden warmth after the cold of the night.",
+            "Isn't it pretty?"
+        ]
+    ],
+    "brooding_parent4": [
+        [
+            "kitten",
+            "brooding",
+            "introspective",
+            "from_parent",
+            "platonic_like"
+        ],
+        [
+            "y_c, you want a badger ride?",
+            "C'mere.",
+            "[You clamber onto t_c's back and they parade you around camp, laughing and giggling.]",
+            "[The rest of your clanmates seem awestruck. t_c must not act like this very often.]",
+            "[But, with you, they're always soft and gentle.]"
+        ]
+    ],
+    "brooding_parent5": [
+        [
+            "kitten",
+            "brooding",
+            "from_parent",
+            "platonic_like"
+        ],
+        [
+            "y_c, you want a badger ride?",
+            "C'mon, then.",
+            "[You clamber onto t_c's back and they parade you around camp, laughing and giggling.]",
+            "[The rest of your clanmates seem awestruck. t_c must not act like this very often.]",
+            "[But, with you, they're always fun and gentle!]"
+        ]
+    ],
+    "brooding_parent6": [
+        [
+            "kitten",
+            "brooding",
+            "neurotic",
+            "from_parent",
+            "platonic_like"
+        ],
+        [
+            "Don't wander too far, y_c!",
+            "Come back to the nursery, where it's safe."
+        ]
+    ],
+    "brooding_parent7": [
+        [
+            "kitten",
+            "brooding",
+            "introspective",
+            "from_parent",
+            "platonic_like",
+            "random_cat"
+        ],
+        [
+            "Hm? You and r_k wanna play outside?",
+            "Okay ... I suppose you can.",
+            "But make sure you look out for each other, and don't stray too far!"
+        ]
+    ],
+    "they_grieving": [
+        [
+            "any",
+            "they_grieving"
+        ],
+        [
+            "[t_c doesn't seem like they want to talk right now.]"
+        ]
+    ],
+    "general_1": [
+        [
+            "any",
+            "insult",
+            "platonic_like"
+        ],
+        [
+            "Hey! What gives?"
+        ]
+    ],
+    "general_2": [
+        [
+            "any",
+            "insult",
+            "dislike"
+        ],
+        [
+            "As if I couldn't like you any less ..."
+        ]
+    ],
+    "parent_you_ill": [
+        [
+            "any",
+            "you_ill",
+            "from_parent"
+        ],
+        [
+            "[You wake up in the middle of the night to a warmth against your pelt and soft humming.]",
+            "[Looking up, you see t_c pressed against your side, humming a lullaby they used to sing to you].",
+            "[You close your eyes and drift off to sleep again, comforted by their presence.]"
+        ]
+    ],
+    "brooding_insult_1": [
+        [
+            "any",
+            "insult",
+            "brooding"
+        ],
+        [
+            "What did you just say to me ... ?"
+        ]
+    ],
+    "brooding_insult_02": [
+        [
+            "any",
+            "insult",
+            "brooding"
+        ],
+        [
+            "Um. Okay."
+        ]
+    ],
+    "brooding_insult_2": [
+        [
+            "any",
+            "insult",
+            "brooding",
+            "platonic_like"
+        ],
+        [
+            "Haha. Good one."
+        ]
+    ],
+    "brooding_insult_3": [
+        [
+            "any",
+            "insult",
+            "brooding",
+            "cool",
+            "platonic_like"
+        ],
+        [
+            "[t_c curls their lip at you and stalks away.]"
+        ]
+    ],
+    "neurotic_insult_1": [
+        [
+            "any",
+            "insult",
+            "neurotic"
+        ],
+        [
+            "Oh yeah? Well you're a - a ... uhm ... uh ...",
+            "Ugh! I can't think of a comeback!"
+        ]
+    ],
+    "neurotic_insult_2": [
+        [
+            "any",
+            "insult",
+            "neurotic",
+            "platonic_like"
+        ],
+        [
+            "W-What? You're just joking, right?",
+            "Is that really how you think of me?"
+        ]
+    ],
+    "cool_insult_1": [
+        [
+            "any",
+            "insult",
+            "cool"
+        ],
+        [
+            "Tch ..."
+        ]
+    ],
+    "cool_insult_2": [
+        [
+            "any",
+            "cool",
+            "insult",
+            "dislike"
+        ],
+        [
+            "Aw, look! It thinks it's clever."
+        ]
+    ],
+    "sweet_insult_1": [
+        [
+            "any",
+            "insult",
+            "sweet"
+        ],
+        [
+            "That's not very nice of you to say..."
+        ]
+    ],
+    "insult1": [
+        [
+            "insult",
+            "any"
+        ],
+        [
+            "Hey! Where'd you learn those words from?"
+        ]
+    ],
+    "sweet_insult_3": [
+        [
+            "any",
+            "insult",
+            "sweet",
+            "neurotic",
+            "platonic_like",
+            "romantic_like"
+        ],
+        [
+            "You... you don't really mean that... do you, y_c...?"
+        ]
+    ],
+    "silly_insult_4": [
+        [
+            "any",
+            "insult",
+            "silly",
+            "dislike"
+        ],
+        [
+            "Oh, like I'd take anything you say seriously."
+        ]
+    ],
+    "silly_insult_7": [
+        [
+            "any",
+            "insult",
+            "silly",
+            "platonic_like",
+            "romantic_like"
+        ],
+        [
+            "Haha...ha... I'll... um, keep that in mind next time we talk."
+        ]
+    ],
+    "silly_insult_8": [
+        [
+            "any",
+            "insult",
+            "silly",
+            "platonic_like",
+            "comfort"
+        ],
+        [
+            "Is someone hungry? Because you're really not acting like yourself. Have a snack, y_c."
+        ]
+    ],
+    "unlawful_insult_1": [
+        [
+            "any",
+            "insult",
+            "unlawful"
+        ],
+        [
+            "...you should take that back. Before someone gets hurt."
+        ]
+    ],
+    "unlawful_insult_2": [
+        [
+            "any",
+            "insult",
+            "unlawful",
+            "random_cat"
+        ],
+        [
+            "...You're lucky that r_c is here. Otherwise, I don't think you'd want to know what I would do to you."
+        ]
+    ],
+    "unlawful_insult_3": [
+        [
+            "any",
+            "insult",
+            "unlawful",
+            "dislike"
+        ],
+        [
+            "...you're so damn lucky I haven't shredded you to pieces yet."
+        ]
+    ],
+    "unlawful_insult_4": [
+        [
+            "any",
+            "insult",
+            "unlawful"
+        ],
+        [
+            "Watch yourself, y_c."
+        ]
+    ],
+    "unabashed_insult_1": [
+        [
+            "any",
+            "insult",
+            "unabashed"
+        ],
+        [
+            "Well, you suck."
+        ]
+    ],
+    "unabashed_insult_2": [
+        [
+            "any",
+            "insult",
+            "unabashed",
+            "you_cool"
+        ],
+        [
+            "I may not be cool, but you're mean. And personally, I think that's worse."
+        ]
+    ],
+    "unabashed_insult_3": [
+        [
+            "any",
+            "insult",
+            "unabashed"
+        ],
+        [
+            "Okay, grumpy."
+        ]
+    ],
+    "unabashed_insult_4": [
+        [
+            "any",
+            "insult",
+            "unabashed"
+        ],
+        [
+            "Okay. So what?"
+        ]
+    ],
+    "brooding_nice_tokit": [
+        [
+            "kitten",
+            "brooding",
+            "platonic_like",
+            "random_cat"
+        ],
+        [
+            "What do you need?",
+            "You ... want to know if I wanna play with you and r_k?",
+            "Er, sorry. I don't really care for kits.",
+            "... Yes, I suppose that you are a kit.",
+            "I guess you're the only exception."
+        ]
+    ],
+    "brooding_nice_tokit1": [
+        [
+            "kitten",
+            "brooding",
+            "sibling",
+            "random_cat"
+        ],
+        [
+            "Oh- Uhh, hey there, y_c.",
+            "Uhmm- I mean, I haven't seen you around so often.",
+            "...",
+            "You've grown up quite a lot, haven't you?",
+            "...",
+            "Sorry, I'm not good at being around with kits. Just- Just get back to the nursery. I think that r_q is waiting for you there.",
+            "[t_c lowers their gaze to you sadly, then looks at the nursery before stalking off.]"
+        ]
+    ],
+    "brooding_nice_tokit01": [
+        [
+            "kitten",
+            "brooding",
+            "platonic_like"
+        ],
+        [
+            "[You see t_c sitting alone near the clearing and decide to approach them.]",
+            "Hm?",
+            "[They look up surprised as you slowly slide a little flower over to them.]",
+            "Oh...thanks, kid.",
+            "[They don't say much, but they seem happy about the small gift.]"
+        ]
+    ],
+    "brooding_fromparent1": [
+        [
+            "any",
+            "brooding",
+            "from_parent",
+            "platonic_love"
+        ],
+        [
+            "Hehe. That's my little y_c."
+        ]
+    ],
+    "brooding_fromparent2": [
+        [
+            "any",
+            "brooding",
+            "from_parent",
+            "platonic_love"
+        ],
+        [
+            "y_c, what happened to your fur?",
+            "It's full of thistles, you didn't notice?",
+            "Come here ...",
+            "[Purring all the while, t_c carefully picks all of the thistles out of your fur.]"
+        ]
+    ],
+    "brooding_fromparent4": [
+        [
+            "any",
+            "brooding",
+            "from_parent",
+            "neutral"
+        ],
+        [
+            "Um. Hello ...",
+            "What do you need?",
+            "[Even though they're your own parent, t_c clearly has no idea how to talk to you."
+        ]
+    ],
+    "unabashed_general": [
+        [
+            "unabashed",
+            "kitten",
+            "random_cat",
+            "non-related"
+        ],
+        [
+            "Hi there, little one! Have your parents taught you about how kittens are born yet?",
+            "No? Oh, you poor thing.",
+            "So, you see... When one cat loves another very much...",
+            "H-Hey, r_c what are you doing?! I'm just trying to educate the clan's kits!"
+        ]
+    ],
+    "unabashed_murder": [
+        [
+            "Unabashed",
+            "Murder",
+            "any"
+        ],
+        [
+            "How could you, you little, fox-hearted piece of dung?",
+            "I'll gouge your eyes out the first occasion I get!"
+        ]
+    ],
+    "unabashed_murder1": [
+        [
+            "Unabashed",
+            "Murder",
+            "any"
+        ],
+        [
+            "Stay away from me, you murderer! I don't want anything to do with you!"
+        ]
+    ],
+    "stable_14": [
+        [
+            "Any",
+            "stable",
+            "kitten",
+            "they_grieving"
+        ],
+        [
+            "What are you doing here, y_c? You shouldn't be here... I just need time alone, please.",
+            "What's it like? It feels like it's eating me up from the inside, tearing me apart, ripping me open, swallowing me whole. This hole, this pit, it's agonising. But- that's the cost to lose someone you love.",
+            "With love, comes loss, that's the price we pay. And it's so worth it. Because if we could do it again, we would, and wouldn't change a thing. To love is both a blessing and a curse. Don't let the fear of losing someone stop you from loving them, ever.",
+            "Cherish every moment, every fight, every breath.",
+            "Thank you for visiting me, y_c. You remind me so much of them, thank you... Now run off and play, and please, y_c, never stop loving those around you. Kin or clanmate."
+        ]
+    ],
+    "stable_12": [
+        [
+            "Any",
+            "stable",
+            "kitten",
+            "you_grieving"
+        ],
+        [
+            "Little kit... It's okay, it's okay y_c.",
+            "I know this isn't easy, you didn't deserve it- you don't deserve this grief. You're okay, little kit, you're okay. If you need a shoulder to cry on, I'm here. It's okay. It's okay.",
+            "Let it out, I'm here for you. It's okay. You're okay, y_c."
+        ]
+    ],
+    "unabashed_you_ill": [
+        [
+            "any",
+            "Unabashed",
+            "you_ill",
+            "you_injured"
+        ],
+        [
+            "Hey, y_c!",
+            "...Wow. You look terrible.",
+            "Is there anything I can do to help...?",
+            "Even if it's just, I dunno, grabbing some moss for you.",
+            "...I'm worried about you, y_c."
+        ]
+    ],
+    "stable_7": [
+        [
+            "kitten",
+            "stable"
+        ],
+        [
+            "Really, you want to hear the song again? Ok, fine... Remember, you asked for this.",
+            "There's no place like c_nClan, because here we are wild and free! And nobody can disagree! Look at the stars, the way they shine! StarClan has given us bountiful time.",
+            "And prey and rocks and leaves of gold- may StarClan continue to sing the songs of old. From once before and now onwards, as a clan we strive forward. We push on. And this is the c_nClan cats' song!"
+        ]
+    ],
+    "insult_1": [
+        [
+            "kitten",
+            "insult",
+            "they_grieving"
+        ],
+        [
+            "[You feel too guilty to insult this cat.]"
+        ]
+    ],
+    "insult_2": [
+        [
+            "kitten",
+            "insult",
+            "they_grieving"
+        ],
+        [
+            "[You approach, an insult on your tongue, but realize t_c is curled in a ball, soft sobs coming from them.]",
+            "[Maybe now is not a good time.]"
+        ]
+    ],
+    "neurotic_tokit": [
+        [
+            "kitten",
+            "neurotic",
+            "random_cat"
+        ],
+        [
+            "Oh! Uh, hi, y_c!",
+            "Sorry, I can't play right now ... I'm a bit busy. Maybe r_c can help you out?"
+        ]
+    ],
+    "neurotic_tokit1": [
+        [
+            "kitten",
+            "neurotic",
+            "non-related",
+            "random_cat"
+        ],
+        [
+            "Hey, y_c! What's going on?",
+            "You wanna play a game? Er, are you sure y_p is okay with that?",
+            "I really don't want them getting mad at me ..."
+        ]
+    ],
+    "neurotic_tokit2": [
+        [
+            "kitten",
+            "neurotic",
+            "platonic_like",
+            "random_cat"
+        ],
+        [
+            "[You're playing a game of chase with t_c!]",
+            "[You dash across the camp, when you accidentally slip and fall in a puddle of mud.]",
+            "[t_c descends upon you in an instant, frantic.]",
+            "y_c! y_c, speak to me! Are you okay?",
+            "Oh, StarClan, oh, StarClan, oh StarClan ... r_m! Come quick! Hurry!",
+            "[You're checked over by the medicine cat, who confirms that there's not a scratch on you. t_c breathes a sigh of relief.]",
+            "Thank StarClan ... Still, no more games for you today, y_c.",
+            "Let's get you back to the nursery, where you'll be safe."
+        ]
+    ],
+    "neurotic_tokit3": [
+        [
+            "kitten",
+            "neurotic"
+        ],
+        [
+            "AAH!",
+            "Oh, y_c ... Don't sneak up on me like that! You really scared me!"
+        ]
+    ],
+    "neurotic_tokit4": [
+        [
+            "neurotic",
+            "kitten"
+        ],
+        [
+            "Are you worried about your apprentice's ceremony, y_c?",
+            "Oh, don't worry. It's not so bad. You just have to worry about pleasing your mentor, that's all.",
+            "Well, I guess there's the training to consider, too. All those battle moves to memorize, and hunting positions ... Plus, there's apprentices' den politics, too. Making friends isn't always easy.",
+            "Not to mention the assessments, the huge territory, the crushing loneliness, the massive weight of your clanmates' expectations on your shoulders ...",
+            "... I'm sorry, what was I talking about? Oh, yeah. You'll be fine, don't worry."
+        ]
+    ],
+    "neurotic_tokit5": [
+        [
+            "neurotic",
+            "kitten",
+            "platonic_love"
+        ],
+        [
+            "Careful, y_c! Don't play near those thorns!",
+            "[t_c snatches you away, fast as a falcon on the wing.]",
+            "Are you okay? Did they stick you?",
+            "No? Phew ...",
+            "Great StarClan, if anything happened to you ...",
+            "[t_c shakes their head, seemingly terrified by the thought.]"
+        ]
+    ],
+    "neurotic_tokit6": [
+        [
+            "neurotic",
+            "kitten",
+            "from_parent",
+            "from_adopted_parent"
+        ],
+        [
+            "StarClan, y_c, are you almost an apprentice already?",
+            "I wish I could just keep you little forever, so you could stay in the nursery with me.",
+            "Hm ... Maybe I should talk to l_n about delaying your apprenticeship!",
+            "Only kidding, of course. Hahaha!",
+            "Ha ..."
+        ]
+    ],
+    "assertive_youkit": [
+        [
+            "kitten",
+            "assertive",
+            "cool",
+            "non-related"
+        ],
+        [
+            "Hey, pipsqueak! Sure, I'll play a game!",
+            "What do you want? Moss-ball? Feather toss? Hunt the pebble? Leader of the hill?",
+            "Why do I know so many kit games?",
+            "Heh. You think you're the only little tike who's ever wanted a game with ol' t_c?",
+            "Guess I'm more popular around the nursery than you might've thought.",
+            "Say, there's this fun game you might not've heard of yet ... I can teach it to you, if you want!",
+            "[t_c spends the rest of the morning explaining the rules of the game, but another cat calls them off to do their duties before the game can actually begin.]"
+        ]
+    ],
+    "assertive_youkit1": [
+        [
+            "kitten",
+            "assertive",
+            "cool",
+            "silly"
+        ],
+        [
+            "[t_c notices you sneaking up on a feather and drops down beside you, waggling their haunches.]",
+            "And y_c creeps forward with an impeccable hunter's crouch on what appears to be a raven feather, truly remarkable ...",
+            "Oh, a slight swish of the tail, the sign of a confident warrior ...",
+            "y_c steadies their haunches, could this be the moment of truth ...?",
+            "Aaaand ... THEY POUNCE!",
+            "An incredible catch from y_c, the mightiest hunter in c_nClan!",
+            "[t_c hoists you onto their shoulders and parades you around camp as you giggle uncontrollably.]"
+        ]
+    ],
+    "assertive_youkit2": [
+        [
+            "kitten",
+            "assertive",
+            "silly",
+            "platonic_like"
+        ],
+        [
+            "y_c, do you know how to strike fear into the hearts of your enemies?",
+            "Let me hear your warrior's roar!",
+            "[You try to roar, like you've heard the older cats do, but all you can muster is a pitiful squeak.]",
+            "Hehe ... You'll work on it."
+        ]
+    ],
+    "sweet_9": [
+        [
+            "newborn",
+            "sweet"
+        ],
+        [
+            "Welcome to the world, y_c. You've got lots of growing up to do, but I know you'll be just fine."
+        ]
+    ],
+    "sweet_10": [
+        [
+            "newborn",
+            "sweet"
+        ],
+        [
+            "[t_c spots you trying to wiggle your way to freedom, and moves you back into the nursery with a purr.]",
+            "[It seems like newborn escapes will not be happening.]"
+        ]
+    ],
+    "sweet_11": [
+        [
+            "newborn",
+            "they_formerlykittypet",
+            "sweet"
+        ],
+        [
+            "Aw, you're so adorable! My old housefolk were right, newborn kittens really are like potatoes...",
+            "Let's get you back to the nursery, little one!"
+        ]
+    ],
+    "cool_elder": [
+        [
+            "cool",
+            "silly",
+            "unabashed",
+            "newborn"
+        ],
+        [
+            "[t_c accidentally steps on you after you have managed to wriggle your way out of the nursery.]",
+            "Oh, StarClan! I'm sorry, y_c, didn't see ya there.",
+            "[They gently pick you up by the scruff and move you back to your den.]"
+        ]
+    ],
+    "grieving": [
+        [
+            "grieving",
+            "newborn"
+        ],
+        [
+            "[t_c can't help but smile looking at your antics in the nursery.]"
+        ]
+    ],
+    "newborn_fromupstanding": [
+        [
+            "newborn",
+            "upstanding",
+            "non-related"
+        ],
+        [
+            "A new kit?",
+            "Hmm ... How will this factor into my twenty-moon plan?",
+            "I suppose they'll be grown in six moons ... I could take them on as my apprentice ... raise them into a strong and capable member of c_nClan ...",
+            "Then, l_n would have to recognize my greatness!",
+            "Just you wait, y_c. You and I are gonna do big things together!"
+        ]
+    ],
+    "newborn_fromcool": [
+        [
+            "newborn",
+            "cool",
+            "non-related"
+        ],
+        [
+            "Wow, is that the most beautiful little kit you've ever seen, or what?",
+            "Sort of reminds me of myself, at that age ... Hah!"
+        ]
+    ],
+    "newborn_fromunabahsed": [
+        [
+            "newborn",
+            "unabashed",
+            "non-related"
+        ],
+        [
+            "Oh, I'm great with kits! Outta the way! Let me see!",
+            "... Haha! Yep, that's a little warrior if I've ever seen one!",
+            "Hello there, little y_c! I can already tell you and me are gonna be fast friends."
+        ]
+    ],
+    "newborn_frombrooding": [
+        [
+            "newborn",
+            "non-related",
+            "dislike"
+        ],
+        [
+            "Hmph. Great. Yet another mouth to feed.",
+            "Whatever ... Not my business, not getting involved."
+        ]
+    ],
+    "newborn_dislike": [
+        [
+            "newborn",
+            "non-related",
+            "dislike",
+            "you_outsiderroots",
+            "you_half-Clan",
+            "you_orphaned",
+            "you_abandoned"
+        ],
+        [
+            "... So, are we just letting anyone into the Clan now, or ...?"
+        ]
+    ],
+    "newborn_introspective": [
+        [
+            "newborn",
+            "introspective"
+        ],
+        [
+            "The miracle of life never ceases to amaze me ...",
+            "So many forces, so many variables, all culminating in perfect harmony to produce one beautiful living, breathing thing.",
+            "Ah, I guess all this is to say ... Welcome to the world, y_c.",
+            "c_nClan's newest little miracle."
+        ]
+    ],
+    "newborn_brooding": [
+        [
+            "newborn",
+            "brooding",
+            "non-related"
+        ],
+        [
+            "Hmph. Anyone who thinks these things are cute must be delusional."
+        ]
+    ],
+    "stable_kit_younewborn_1": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "Wowza, look at y_c! Aww, they're so tiny, like a miniature version of you, y_p!",
+            "I hope they grow up big and strong.",
+            "Big and strong like me! Maybe strongerer than me... maybe??? No nevermind, I want to be the strongerest!"
+        ]
+    ],
+    "stable_kit_younewborn_2": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "Little tiny baby! Little tiny baby! Every kitty in the clan look at this little tiny baby!!!",
+            "[You look up and slowly nod your head along to the strange tune t_c sings.]",
+            "Yippee! See, I can sing! Y_c thinks so! Hey t_s did you see that? HEY! Don't shake your head at me! If y_c thinks I can sing then they must be right!"
+        ]
+    ],
+    "stable_kit_younewborn_3": [
+        [
+            "newborn",
+            "random_cat",
+            "stable"
+        ],
+        [
+            "[t_c trots into the nursery and drops a mossball into the nest.]",
+            "See this, y_c? This is called a mossball and you should remember that! You bat it around with your paws like this, see? And you use it to play really fun games! You're going to love it!",
+            "[r_c snickers and reminds t_c that you're a newborn, far younger than they are and that you probably don't understand a word they said. t_c puffs out their little chest.]",
+            "Well, yeah, I know that! But I thought that maybe they'd like to see one for the first time because then that way they'll like playing games with me!",
+            "[r_c states that it's a nice gesture and lovely thought but maybe y_p wouldn't want their kittens playing with such a big toy until you're a little older.]",
+            "[y_p laughs it off and pushes the ball towards t_c and asks if they want to play.]",
+            "Really? YES!",
+            "[You squint as you watch your loving parent paw the ball back and forth, your whiskers twitch eagerly, maybe when you're older this will be a fun game! You will remember this.]"
+        ]
+    ],
+    "stable_kit_younewborn_4": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "... Y'know... I think...",
+            "I think the nursery is going to get a little crowded here with more of us... It will be very noisy when you get a little older and I don't really want that...",
+            "[t_c looks up at r_q and with a blunt expression asks,]",
+            "Can we get rid of it? I don't want it.",
+            "[The queen scolds the kitten for their behaviour and escorts them out of the den to find their parents to tell them. You don't understand what's going on but judging by the glare of the queen- it can't be good...]"
+        ]
+    ],
+    "warrior_to_newborn": [
+        [
+            "newborn",
+            "sweet",
+            "cool",
+            "stable"
+        ],
+        [
+            "Look how tiny they are, r_c!",
+            "Give them a few moons, and they'll be exploring the territory with wide-eyed wonder, just like we did when we were young."
+        ]
+    ],
+    "unlawful_newborn1": [
+        [
+            "newborn",
+            "unlawful"
+        ],
+        [
+            "Hmph. So tiny and fragile.",
+            "In the chaos of this Clan, they'll have to toughen up fast. Survival doesn't favor the weak."
+        ]
+    ],
+    "unlawful_newborn2": [
+        [
+            "newborn",
+            "unlawful"
+        ],
+        [
+            "[t_c scoffs.]",
+            "Look at them, all snug and secure in their nest. They have no idea what the world outside the nursery is like. It's not all soft moss out here."
+        ]
+    ],
+    "unlawful_newborn3": [
+        [
+            "newborn",
+            "unlawful"
+        ],
+        [
+            "Cute little thing, aren't they? But cuteness won't help in a fight.",
+            "They better learn to be sharp and cunning if they want to last."
+        ]
+    ],
+    "unlawful_newborn4": [
+        [
+            "newborn",
+            "unlawful",
+            "they_formerlyrogue"
+        ],
+        [
+            "They're born into rules and codes. Pity. In the wild rogue life, it's every cat for themselves. That's the real way of life, not these Clan fairy tales."
+        ]
+    ],
+    "unlawful_newborn5": [
+        [
+            "newborn",
+            "unlawful",
+            "brooding"
+        ],
+        [
+            "They say it's a blessing to be born in a Clan. Ha! Let's see how long it takes before they see the hypocrisy, the lies. I did, and look where I am now."
+        ]
+    ],
+    "unlawful_newborn6": [
+        [
+            "newborn",
+            "unlawful",
+            "brooding"
+        ],
+        [
+            "[r_q beckons t_c into the nursery to visit you. t_c walks past without a glance.]"
+        ]
+    ],
+    "unlawful_newborn7": [
+        [
+            "newborn",
+            "unlawful"
+        ],
+        [
+            "Another soul chained by the Clan's traditions... and Warrior Code.",
+            "Maybe, just maybe, they'll be the one to break free, to see the world for what it really is."
+        ]
+    ],
+    "unlawful_newborn8": [
+        [
+            "newborn",
+            "unlawful",
+            "brooding"
+        ],
+        [
+            "That little one doesn't know the harshness of the world yet.",
+            "Maybe they'll be lucky, maybe they'll find happiness. I hope they do, even if I couldn't."
+        ]
+    ],
+    "upstanding_newborn": [
+        [
+            "newborn",
+            "upstanding"
+        ],
+        [
+            "This kit is a precious new leaf in the Clan's history.",
+            "We must nurture them with the wisdom of our ancestors and the strength of our code."
+        ]
+    ],
+    "upstanding_newborn2": [
+        [
+            "newborn",
+            "upstanding"
+        ],
+        [
+            "Look at those tiny paws! A future warrior of the Clan, no doubt.",
+            "With the right guidance, they will grow to uphold our values and honor. Unlike some of the cats here.",
+            "[t_c glares at some other cat outside of the nursery.]"
+        ]
+    ],
+    "upstanding_newborn3": [
+        [
+            "newborn",
+            "upstanding"
+        ],
+        [
+            "[t_c looks solemn as they stand over you.]",
+            "I vow to protect and guide this young one, to help them understand the importance of loyalty and courage in the life of a Clan cat.",
+            "[Behind them, r_w can't help but snicker at their dramatic oath.]"
+        ]
+    ],
+    "upstanding_newborn4": [
+        [
+            "newborn",
+            "upstanding",
+            "unlawful",
+            "brooding"
+        ],
+        [
+            "y_c's the future of the Clan, huh?",
+            "[t_c looks at you with disdain.]"
+        ]
+    ],
+    "silly_newborn1": [
+        [
+            "newborn",
+            "silly"
+        ],
+        [
+            "That mew is so squeaky! It's like a tiny mouse trying to roar. Don't worry, you'll find your big cat voice soon... or just keep squeaking, it's adorable!"
+        ]
+    ],
+    "silly_newborn2": [
+        [
+            "newborn",
+            "silly"
+        ],
+        [
+            "Oh, you've got your eyes open! Wait until you see the world outside - it's full of big warriors who pretend to be serious but really just want to play mossball and nap in the sun, just like you."
+        ]
+    ],
+    "silly_newborn3": [
+        [
+            "newborn",
+            "silly",
+            "non-related"
+        ],
+        [
+            "[t_c prances into the nursery, tail high.]",
+            "[They coo at you, a smile on their face.]",
+            "Oh! Aren't you just the cutest thing?"
+        ]
+    ],
+    "newborn_prey": [
+        [
+            "newborn",
+            "non-related",
+            "unlawful"
+        ],
+        [
+            "[t_c scoffs at you.]",
+            "... What a waste of prey."
+        ]
+    ]
+}
