@@ -11,7 +11,7 @@
             "border"
         ],
         "tags": [],
-        "patrol_art": "bord_general_intro",
+        "patrol_art": "gen_bord_largedog",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -186,7 +186,7 @@
             "patrol_rel",
             "pos_fail"
         ],
-        "patrol_art": "bord_general_intro",
+        "patrol_art": "gen_bord_largedog",
         "min_cats": 2,
         "max_cats": 3,
         "min_max_status": {},
@@ -429,7 +429,7 @@
             "patrol_rel",
             "pos_fail"
         ],
-        "patrol_art": "bord_general_intro",
+        "patrol_art": "gen_bord_largedog",
         "min_cats": 4,
         "max_cats": 6,
         "min_max_status": {},
@@ -669,7 +669,7 @@
             "border"
         ],
         "tags": [],
-        "patrol_art": "bord_general_intro",
+        "patrol_art": "Gen_bord_smalldog1",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -849,7 +849,7 @@
             "border"
         ],
         "tags": [],
-        "patrol_art": "bord_general_intro",
+        "patrol_art": "Gen_bord_smalldog2",
         "min_cats": 2,
         "max_cats": 3,
         "min_max_status": {},
@@ -969,7 +969,7 @@
             "border"
         ],
         "tags": [],
-        "patrol_art": "bord_general_intro",
+        "patrol_art": "Gen_bord_smalldog3",
         "min_cats": 4,
         "max_cats": 6,
         "min_max_status": {},
