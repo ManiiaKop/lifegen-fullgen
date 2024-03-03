@@ -1768,7 +1768,7 @@ class Events:
 
         for kit in cats:
             if kit.moons < 2 and not kit.dead:
-		if kit.ID == game.clan.your_cat.ID:
+                if kit.ID == game.clan.your_cat.ID:
                     continue
                 if random.random() < death_chances[str(kit.moons)]:
                     fading_kits.append(kit.ID)
