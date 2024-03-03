@@ -1,0 +1,935 @@
+[
+    {
+        "patrol_id": "life_df_og1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+            "border"
+        ],
+        "patrol_art": "df_default",
+        "min_cats": 1,
+        "max_cats": 3,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You wake up in a forest. Shadowy trees hang overhead, and you feel eyes on you despite not seeing anyone around.",
+        "decline_text": "With a shake of your head, you manage to wake yourself up, sitting up in your nest with a gasp.",
+        "chance_of_success": 45,
+        "success_outcomes": [
+            {
+                "text": "You swerve around, just as a cat lunges from the shadows and aims their claws at your pelt. Ducking at just the right moment, you manage to avoid their swipe.",
+                "exp": 20,
+                "weight": 20
+            },
+        {
+            "text": "s_c swerves around, just as a cat lunges from the shadows and aims their claws at their pelt. They react faster than the attacker can, ducking the blow, before retailiating with a rake to their belly. s_c watches as they tumble to the ground from the attack. It seems they've learned a thing or two here.",
+            "exp": 30,
+            "weight": 20,
+            "stat_trait": [
+                "ambitious",
+                "bloodthirsty",
+                "bold",
+                "confident",
+                "daring",
+                "fierce",
+                "vengeful",
+                "flexible",
+                "careful"
+            ],
+            "stat_skill": ["FIGHTER,1", "GUARDIAN,1", "INSIGHTFUL,1", "SENSE,1"]
+        }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You swerve around, just as a cat lunges from the shadows. You don't react quickly enough and they pin you down, hissing that you have a lot more training to do.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [ 
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["battle_injury"],
+                        "scars": ["ONE"]
+                    }
+                ],
+                "history_text": {
+                    "scar": "m_c was scarred by a Dark Forest warrior.",
+                    "reg_death": "m_c was killed by a Dark Forest warrior.",
+                    "lead_death": "{VERB/m_c/were/was} killed by a Dark Forest warrior"
+                }
+            },
+            {
+                "text": "You swerve around, just as a cat lunges from the shadows. You don't react quickly enough and they pin you down, hissing that you have a lot more training to do.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [
+                    {
+                        "cats": ["y_c"], 
+                        "injuries": ["minor_injury"],
+                        "scars": []
+                    }
+                ]
+            }
+        ],
+        "antag_fail_outcomes": [
+            {
+                "text": "You're not going to let someone sneak up on you. Stalking under the shadowy trees, you look for the source. You never see your attacker coming as they drop from the branches above and hiss that you need more training.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["battle_injury"],
+                        "scars": ["ONE"]
+                    }
+                ],
+                "history_text": {
+                    "scar": "m_c was scarred by a Dark Forest warrior.",
+                    "reg_death": "m_c was killed by a Dark Forest warrior.",
+                    "lead_death": "{VERB/m_c/were/was} killed by a Dark Forest warrior"
+                }
+            },
+            {
+                "text":"You're not going to let someone sneak up on you. Stalking under the shadowy trees, you look for the source. Your search leads to nothing however.",
+                "exp": 0,
+                "weight": 20
+            }
+        ],
+        "antag_success_outcomes": [
+            {
+                "text": "You're not going to let someone sneak up on you. The source is coming from the trees, so you silently make your way up into the brances. Before long you come across your mentor watching the ground. With a snarl and a swipe, you chase them out of the tree, smirking as they land on the muck of the forest floor. You win this round.",
+                "exp": 40,
+                "weight": 15
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_og2",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+            "training"
+        ],
+        "patrol_art": "df_mentor",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "A skilled warrior of the past offers to train you in a dream. However, their methods seem harsh and cruel and their pelt drips with an unknown muck.",
+        "decline_text": "You decline the training, deciding not to submit to such harsh methods.",
+        "chance_of_success": 45,
+        "success_outcomes": [
+            {
+                "text": "You accept the training and, despite the harsh methods, manage to learn some valuable skills. You bear the brunt of the training into wakefulness however.",
+                "exp": 25,
+                "weight": 10,
+                "injury": [
+                    {
+                        "cats": ["y_c"], 
+                        "injuries": ["minor_injury"],
+                        "scars": []
+                    }
+                ]
+            },
+            {
+                "text": "You accept the training and, despite the harsh methods, manage to learn some valuable skills.",
+                "exp": 15,
+                "weight": 20
+            }
+        
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You accept the training, but after a while of sparring, the warrior growls that you aren't strong enough.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "You accept the training, but after a while of sparring, the warrior growls that you aren't strong enough. They leave you with an injury to bring with you to the waking world.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["battle_injury"],
+                        "scars": ["TWO"]
+                    }
+                ],
+                "history_text": {
+                    "scar": "m_c was scarred by a Dark Forest warrior.",
+                    "reg_death": "m_c was killed by a Dark Forest warrior.",
+                    "lead_death": "{VERB/m_c/were/was} killed by a Dark Forest warrior"
+                }
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_og3",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+            "encounter"
+        ],
+        "patrol_art": "df_default",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "A group of ghostly cats approach you with an offer to learn a forgotten prophecy, but at the price of bringing a message back to the living.",
+        "decline_text": "Unsure of their intentions, you decline their offer and quickly leave.",
+        "chance_of_success": 55,
+        "success_outcomes": [
+            {
+                "text": "You agree to their terms and upon waking, you relay the message to your Clan's medicine cat. The prophecy, however, you keep to yourself. The ancient words could give away your training...",
+                "exp": 30,
+                "weight": 20,
+                "stat_trait": [
+                    "faithful",
+                    "charismatic",
+                    "ambitious",
+                    "cunning",
+                    "sneaky",
+                    "confident",
+                    "careful",
+                    "righteous",
+                    "rebellious"
+                ],
+                "stat_skill": ["CLAIRVOYANT,1", "CLEVER,1", "GHOST,1", "LORE,1","PROPHET,1", "OMEN,1", "SCHOLAR,1", "STAR,1"]
+            },
+            {
+                "text": "You agree to their terms and upon waking, you relay the message to your Clan's medicine cat along with the prophecy.",
+                "exp": 15,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You agree to their terms, but upon waking, you find that you can't remember the message they asked you to deliver.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "You refuse their terms, demanding the prophecy be told regardless. The ghostly cats sneer at you before disappearing into nothing. Not even pawprints remain left behind.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_og4",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+            "border"
+        ],
+        "patrol_art": "df_echoes",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You discover a hidden section of the Dark Forest, filled with echoes of old battles.",
+        "decline_text": "Feeling it might bring unnecessary trouble, you decide to leave the hidden area untouched.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You decide to explore the area and manage to uncover hidden wisdom from past battles that might help your clan in the future.",
+                "exp": 15,
+                "weight": 20
+            },
+            {
+                "text": "You decide to explore the area and manage to uncover hidden wisdom from past battles that might help your clan in the future. What luck!",
+                "exp": 30,
+                "weight": 20,
+                "stat_trait": [
+                    "ambitious",
+                    "cunning",
+                    "sneaky",
+                    "confident",
+                    "careful",
+                    "wise",
+                    "adventurous",
+                    "loyal",
+                    "bold",
+                    "obsessive"
+                ],
+                "stat_skill": ["CLEVER, 1", "STORY,1", "GHOST,1", "SCHOLAR,1", "LORE,1", "FIGHTER,1"]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You venture into the area, but it only leads to disturbing visions of past battles that leave you disoriented upon waking.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "You venture into the area, but the scene dissipates quickly with your presence.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_og5",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+            "border"
+        ],
+        "patrol_art": "df_starcat",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You find a cat trapped in the Dark Forest during a dream. Stars glitter in their pelt, shimmering against the muck of the shadows. They're scared and don't know the way out.",
+        "decline_text": "You reassure the cat that this is only a dream and they'll wake up soon, leaving them to find their own way.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You guide the cat through the eerie forest, successfully leading them out. They wake up grateful for your help.",
+                "exp": 20,
+                "weight": 20,
+                "stat_skill": ["COMFORTER,1", "DREAM,1", "GUARDIAN,1", "NAVIGATOR,1", "STAR, 1", "TRACKER,1"]
+            },
+            {
+                "text": "There's no need for them to be afraid. You coax them into joining you and your mentor. Although they are hesitant at first, you soon meet them on more and more nights, now confident with a pelt of muck.",
+                "exp": 20,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Despite your best efforts, you lead them in circles. You wake up, trying to rid the memory of the starry cat's terrified expression from your mind.",
+                "exp": 0,
+                "weight": 20
+            }
+        ],
+        "antag_fail_outcomes": [
+            {
+                "text": "An opportunity you can't pass up... You launch at the cat with a snarl and your claws outstretched. They flee as you catch only fur, and before long, you lose them in the shadows.",
+                "exp": 0,
+                "weight": 20
+            }
+        ],
+        "antag_success_outcomes": [
+            {
+                "text": "An opportunity you can't pass up... You launch at the cat with a snarl and your claws outstretched. They stand no chance after your deadly training. You leave their bleeding body to fade into stars.",
+                "exp": 40,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_og6",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+            "border",
+            "death"
+        ],
+        "patrol_art": "df_default",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 30,
+        "intro_text": "While walking through the Dark Forest, you slip, falling into a river of inky black water.",
+        "decline_text": "You gasp, waking up in your nest. That was a horrible dream.",
+        "chance_of_success": 60,
+        "success_outcomes": [
+            {
+                "text": "You stay calm, holding your breath and treading water until you reach the surface again.",
+                "exp": 20,
+                "weight": 20,
+                "stat_trait": [
+                    "calm",
+                    "wise",
+                    "daring",
+                    "confident",
+                    "faithful",
+                    "thoughtful",
+                    "bold",
+                    "cunning",
+                    "adventurous"
+                ],
+                "stat_skill": ["SWIMMER,1", "THINKER,1", "SENSE,1", "NAVIGATOR,1", "CLEVER,1"]
+            },
+            {
+                "text": "You stay calm, holding your breath and treading water until you reach the surface again. Some of the water was swallowed, however, and by morning your Clanmates find you ill without clear cause.",
+                "exp": 30,
+                "weight": 20,
+                "injury": [
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["poisoned"]
+                    }
+                ],
+                "history_text": {
+                    "reg_death": "m_c died after ingesting too much Dark Forest water",
+                    "lead_death": "ingested too much Dark Forest water"
+                }
+            },
+            {
+                "text": "You stay calm, holding your breath and treading water until you reach the surface again. Some of the water was swallowed, however, and by morning your Clanmates find you ill without clear cause.",
+                "exp": 30,
+                "weight": 20,
+                "injury": [
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["water in their lungs"]
+                    }
+                ],
+                "history_text": {
+                    "reg_death": "m_c died after ingesting too much Dark Forest water",
+                    "lead_death": "ingested too much Dark Forest water"
+                }
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "It's no use. You can't tell which way is up or down, and fall deeper into the depths. You wake up in your nest with a startle.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["water in their lungs", "poisoned"]
+                    }
+                ],
+                "history_text": {
+                    "reg_death": "m_c died after ingesting too much Dark Forest water",
+                    "lead_death": "ingested too much Dark Forest water"
+                }
+            },
+            {
+                "text": "It's no use. You can't tell which way is up or down, and fall deeper into the depths. Your body is cold in your nest when your Clanmates go to wake you, pelt soaked in black liquid.",
+                "exp": 0,
+                "weight": 10,
+                "dead_cats": ["y_c"],
+                "history_text": {
+                    "reg_death": "m_c died after ingesting too much Dark Forest water",
+                    "lead_death": "ingested too much Dark Forest water"
+                }
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_og7",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+            "border",
+            "convince_rc"
+        ],
+        "patrol_art": "df_clanmate",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "There's a familiar scent in the air. You track it down and find yourself face to face with... one of your clanmates? They look lost.",
+        "decline_text": "You gasp, waking up in your nest.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You convince them that this is no place for a cat like them.",
+                "exp": 10,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Another Dark Forest cat leaps between you two, hissing at you not to involve yourself with the new apprentices.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_og8",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+            "border",
+            "non_lethal"
+        ],
+        "patrol_art": "df_friendly",
+        "min_cats": 2,
+        "max_cats": 2,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "Soon after you fall asleep, you wake up in the Dark Forest. r_c bounds out of the gloom, asking if you would like to train with them.",
+        "decline_text": "You politely decline and wander off to train on your own.",
+        "chance_of_success": 60,
+        "success_outcomes": [
+            {
+                "text": "You and r_c make good progress on some advanced battle moves.",
+                "exp": 15,
+                "weight": 10,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": true,
+                        "values": ["respect", "trust"],
+                        "amount": 2
+                    }
+                ]
+            },
+            {
+                "text": "You and r_c make good progress on some advanced battle moves. You take the time to teach them a few new ones as well, and r_c is thrilled to learn from you.",
+                "exp": 30,
+                "weight": 20,
+                "stat_trait": ["cunning", "wise","ambitious","bold","daring","calm","careful","loyal","compassionate","thoughtful","flexible","trusting"],
+                "stat_skill": ["FIGHTER,1", "TEACHER,1", "INSIGHTFUL,1","SCHOLAR,1"],
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": true,
+                        "values": ["respect", "trust"],
+                        "amount": 5
+                    }
+                ]
+            },
+            {
+                "text": "You and r_c make good progress on some advanced battle moves. Surprisingly, your mentors congratulate you both for your efforts. Rare praise has confidence surging within you and your clanmate.",
+                "exp": 30,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": true,
+                        "values": ["respect", "trust"],
+                        "amount": 5
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "The training session doesn't go as planned, as a Dark Forest warrior interrupts and demands that you spar with your claws unsheathed. You and r_c hesitantly agree and both of you wake up with several scratches.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [
+                    {
+                        "cats": [
+                            "patrol"
+                        ],
+                        "injuries": [
+                            "claw-wound"
+                        ],
+                        "scars": [
+                            "SNOUT",
+                            "ONE"
+                        ]
+                    }
+                ],
+                "history_text": {
+                    "scar": "This cat is scarred from training in the Dark Forest"
+                }
+            },
+            {
+                "text": "You make good progress on some advanced battle moves, but r_c is looking worse for wear. The next morning, r_c refuses to train with you, leaving your clanmates concerned.",
+                "exp": 10,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": false,
+                        "values": ["dislike"],
+                        "amount": 5
+                    }
+                ]
+            },
+            {
+                "text": "You make good progress on some advanced battle moves, but r_c is looking worse for wear. Their mentor snarls at them that they should work as hard as you. Jealousy glints in r_c's eyes as they face you in daylight the next morning.",
+                "exp": 10,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": false,
+                        "values": ["dislike", "jealousy"],
+                        "amount": 5
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_og9",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+            "border",
+            "convince_rc"
+        ],
+        "patrol_art": "df_friendly",
+        "min_cats": 2,
+        "max_cats": 2,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "As you go for a stroll around the Dark Forest, just enjoying the gloomy forest before training begins, you stumble upon a confused r_c. They look up at you, panicked, as they ask where they are.",
+        "decline_text": "Meh. Not your business. You walk away, leaving them startled, confused and sputtering out your name.",
+        "chance_of_success": 10,
+        "success_outcomes": [
+            {
+                "text": "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring them to the training area, if they'd like to join you. r_c agrees hesitantly, following your lead.",
+                "exp": 10,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": false,
+                        "values": ["comfort", "trust"],
+                        "amount": 2
+                    }
+                ]
+            },
+            {
+                "text": "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring them to the training area if they'd like to join you. r_c trusts you, so they eagerly follow your lead.",
+                "exp": 25,
+                "weight": 20,
+                "stat_trait":["cunning", "sincere", "confident","responsible", "loving","loyal", "charismatic", "trusting", "playful", "compassionate","thoughtful"],
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": true,
+                        "values": ["comfort", "trust"],
+                        "amount": 5
+                    }
+                ]
+            },
+            {
+                "text": "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring them to the training area, if they'd like to join you. r_c hesitates before shaking their head in refusal. Their loss, you suppose. You let them find their own way out as you proceed to the training grounds.",
+                "exp": 10,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": true,
+                        "values": ["dislike"],
+                        "amount": 5
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring them to the training area, if they wish to become stronger. Their eyes are wide with horror as they scream out a loud 'no'. r_c calls you a traitor, swinging their claws at you though missing as you gracefully dodge their attack. Sobbing, they run away, deeper into the forest as you can only watch with pity. Your Dark Forest mentor will have a field day with them, that's for sure.",
+                "exp": 0,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": false,
+                        "values": ["dislike"],
+                        "amount": 2
+                    }
+                ]
+            },
+            {
+                "text": "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring them to the training area, if they wish to become stronger. r_c is startled before anger bubbles up in them. They call you a traitor, swinging their claws at you to rip your pelt. Snarling, they run away, deeper into the forest as you can only watch with pity. Your Dark Forest mentor will have a field day with them, that's for sure.",
+                "exp": 0,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": true,
+                        "values": ["dislike"],
+                        "amount": 5
+                    }
+                ],
+                "injury": [
+                    {
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "claw-wound"
+                        ],
+                        "scars": [
+                            "HINDLEG"
+                        ]
+                    }
+                ],
+                "history_text": {
+                    "scar": "This cat was scarred by a Clanmate in the Dark Forest"}
+            },
+            {
+                "text": "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring them to the training area, if they wish to become stronger. r_c calls you a traitor as they refuse, swinging their claws at you though missing as you gracefully dodge their attack. You can't let r_c expose your training like this. Your claws open r_c's throat, and you leave them to fade into the muck. The clan discovers the horrifying scene in the morning.",
+                "exp": 20,
+                "weight": 10,
+                "dead_cats": ["r_c"],
+                "history_text": {
+                    "reg_death": "m_c was murdered by in the Dark Forest.",
+                    "lead_death": "murdered in the Dark Forest"
+                }
+                
+            }
+        ]    
+    },
+
+    {
+        "patrol_id": "life_df_og10",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+            "border",
+            "convince_rc"
+        ],
+        "patrol_art": "df_friendly",
+        "min_cats": 2,
+        "max_cats": 2,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You're wandering beneath the shadowy treetops when... Is that r_c?",
+        "decline_text": "You dart out of sight, not wanting to confront the possibility of seeing your clanmate.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "It is r_c! They bound towards you, purring that they didn't know anyone else in c_n who trained in the Dark Forest! The two of you walk side by side, discussing training plans, hopes and dreams, and planning your future together as training mates.",
+                "exp": 15,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": true,
+                        "values": ["respect","trust", "platonic_love"],
+                        "amount": 2
+                    }
+                ]
+            },
+            {
+                "text": "r_c greets you with a respectful nod, and the two of you go your separate ways.",
+                "exp": 15,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": false,
+                        "values": ["respect"],
+                        "amount": 2
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You call out to r_c, but as soon as they see you they dart into the brush. When you wake up the next morning, they carefully avoid eye contact.",
+                "exp": 0,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": false,
+                        "values": ["dislike"],
+                        "amount": 5
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_og11",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+            "border",
+            "convince_rc"
+        ],
+        "patrol_art": "df_default",
+        "min_cats": 2,
+        "max_cats": 2,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "As you wade deeper into the sticky mud of the Dark Forest's domain, you can't help but feel glistering eyes on your pelt, filling it with prickles and uncertainty. The pitiful rustling of leaves makes you anxious and fearful, and you ponder who or what could be watching you at this time...",
+        "decline_text": "You wake up, horrified. Maybe your little stay at the Dark Forest didn't go unnoticed.",
+        "chance_of_success": 60,
+        "success_outcomes": [
+            {
+                "text": "You quickly turn around, only to come eyes to eyes with r_c! They don't seem bothered by your presence, bounding over to you with a welcoming sparkle in their eyes. They seem.. Happy? They explain to you that they've been needing a place to gossip, and when they stumbled over the shadows of the Dark Forest, they couldn't help themselves! Apparently the Clan hasn't been very accepting of their rumors.. But here you are! When you return home from the ever-lasting darkness, you have more secrets than you can carry.",
+                "exp": 15,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": false,
+                        "values": ["trust"],
+                        "amount": 2
+                    }
+                ]
+            },
+            {
+                "text": "You quickly turn around, only to come eyes to eyes with r_c! They don't seem bothered by your presence, bounding over to you with a welcoming sparkle in their eyes. They seem.. Happy? They're thrilled to know that you train here as well and ask to spar. You agree, and when you see them next in camp, it's clear your friendship has grown.",
+                "exp": 20,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": false,
+                        "values": ["trust", "respect", "comfort", "platonic_love"],
+                        "amount": 2
+                    }
+                ]
+            },
+            {
+                "text": "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c. They grab your scruff, dragging you out of the mud. You turn to thank them, and they are relieved to know you're okay. r_c suggests that's enough for you today and you can't help but to agree as you cough up vile mud.",
+                "exp": 30,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": false,
+                        "values": ["trust", "respect", "comfort"],
+                        "amount": 5
+                    }
+                ],
+                "injury": [
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["poisoned"]
+                    }
+                ],
+                "history_text": {
+                    "reg_death": "m_c died after ingesting Dark Forest mud.",
+                    "lead_death": "ingested Dark Forest mud"
+                }
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c. They grab your scruff, dragging you out of the mud. When you turn to thank them, their eyes are wide with horror as they escape your gaze, running away with their tail between their legs and the darkness slowly swallowing them.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["shock"]
+                    }
+                ]
+            },
+            {
+                "text": "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c. They are merely standing there watching as the mud starts to swallow you. Keeping calm, you slowly wade your way out despite swallowing a few mouthfuls of mud, only to see r_c disappearing into the darkness.",
+                "exp": 0,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": true,
+                        "values": ["dislike"],
+                        "amount": 5
+                    }
+                ],
+                "injury": [
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["poisoned"]
+                    }
+                ],
+                "history_text": {
+                    "reg_death": "m_c died after ingesting Dark Forest mud.",
+                    "lead_death": "ingested Dark Forest mud"
+                }
+            },
+            {
+                "text": "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c. They are merely standing there watching as the mud starts to swallow you. There's nothing you can do as you sink down and see r_c disappearing into the darkness. Mud cakes your pelt when the clan makes the horrifying discovery in the morning.",
+                "exp": 0,
+                "weight": 30,
+                "dead_cats": ["y_c"],
+                "history_text": {
+                    "reg_death": "m_c died after being left for dead in the Dark Forest.",
+                    "lead_death": "{VERB/m_c/were/was} left for dead in the Dark Forest "
+                }
+            }
+        ]
+    }
+]

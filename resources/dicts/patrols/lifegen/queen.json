@@ -1,0 +1,334 @@
+[
+    {
+        "patrol_id": "gen_queen_event101",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "camp"
+        ],
+        "patrol_art": "lg_queen_default",
+        "min_cats": 1,
+        "max_cats": 3,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "During a fierce storm, water starts to seep into the nursery. You need to find a way to keep the kits dry and warm.",
+        "decline_text": "You call upon the warriors to help relocate the kits to a temporary shelter. Their combined effort ensures that the kits remain safe and comfortable.",
+        "chance_of_success": 65,
+        "success_outcomes": [
+            {
+                "text": "You quickly move the kits to a drier part of the nursery and gather extra moss to insulate them. Thanks to your quick thinking, the kits stay warm and safe.",
+                "exp": 10,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Despite your best efforts, some kits still end up cold and wet.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "gen_queen_event102",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "camp"
+        ],
+        "patrol_art": "lg_queen_default",
+        "min_cats": 1,
+        "max_cats": 3,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "A kit has gone missing from the nursery. You need to organize a search.",
+        "decline_text": "You alert the Clan leader, trusting their experience in such matters. The leader's strategy ensures the kit is found safe and sound.",
+        "chance_of_success": 70,
+        "success_outcomes": [
+            {
+                "text": "You promptly organize a search party, and with combined efforts, the kit is found playing near the elders' den, unaware of the panic. Your decisiveness ensures the kit's safety.",
+                "exp": 15,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Despite the frantic search, it's an elder who eventually finds the kit.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "gen_queen_event103",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "camp"
+        ],
+        "patrol_art": "lg_queen_default",
+        "min_cats": 1,
+        "max_cats": 3,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "One of the kits has developed a cough. You need to decide on the best course of action.",
+        "decline_text": "Unsure of the best approach, you seek advice from the senior queens. They suggest bringing the kit to the medicine cat, ensuring its wellbeing.",
+        "chance_of_success": 75,
+        "success_outcomes": [
+            {
+                "text": "Recognizing the symptoms, you immediately consult the medicine cat. Under their care, the kit quickly recovers. Your prompt action is commended.",
+                "exp": 10,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "While you try some traditional remedies, the kit's condition doesn't improve.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "gen_queen_event104",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "camp"
+        ],
+        "patrol_art": "lg_queen_default",
+        "min_cats": 1,
+        "max_cats": 3,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "Kits are getting curious and start wandering too close to the warrior's training area. You need to ensure their safety.",
+        "decline_text": "Feeling the situation might be too much for you alone, you enlist the help of the Clan's deputy.",
+        "chance_of_success": 70,
+        "success_outcomes": [
+            {
+                "text": "You organize a barrier with the help of other queens and apprentices, keeping the kits safely away from the training ground. The warriors appreciate your efforts.",
+                "exp": 10,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Though you caution the kits, one still ends up wandering into the training area, getting a minor scratch. The experience stresses the need for constant vigilance.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "gen_queen_event105",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "camp"
+        ],
+        "patrol_art": "lg_queen_default",
+        "min_cats": 1,
+        "max_cats": 3,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You see a pair of kits fighting in the clearing, and debate whether to intervene or not.",
+        "decline_text": "You decide they can work out their own squabble, leaving them to talk.",
+        "chance_of_success": 65,
+        "success_outcomes": [
+            {
+                "text": "When you come over and talk to them, you find that their disagreement is easily smoothed over with a little bit of compromise. The kits are happy again, and have learned a valuable lesson in how to settle an argument.",
+                "exp": 10,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Your calm demeanor only seems to irritate the kits more, and they begin sulking, refusing to talk with your presence. You are forced to give up for now, but you at least ensure they don't start fighting again.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "gen_queen_event106",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "camp"
+        ],
+        "patrol_art": "lg_queen_default",
+        "min_cats": 1,
+        "max_cats": 3,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "The nursery is quiet as nighttime falls, but as you do a headcount, you notice a kitten is missing. You see their faint figure outside the den, but they won't respond to your hushed calls.",
+        "decline_text": "You decide to leave them be for now. They seem to want to be alone.",
+        "chance_of_success": 65,
+        "success_outcomes": [
+            {
+                "text": "You quietly sit down next to the kit, and they're silent for a moment, before asking you what it's like being a grown-up. They admit they're scared of growing up. You comfort them, and tell them that the future isn't as scary as it seems. You promise you'll protect them. The kit goes to sleep next to you, reassured by your words.",
+                "exp": 10,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You quietly sit down next to the kit, and try to talk to them, but they turn away, bristling. You turn back to see some of the other kits awake and staring, and decide that it might be best to leave them be until tomorrow.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "gen_queen_event107",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "camp"
+        ],
+        "patrol_art": "lg_queen_default",
+        "min_cats": 1,
+        "max_cats": 3,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "The nursery is empty aside from you, but a queen approaches you anxiously, sitting down next to you. They ask for advice on what they should do when they eventually start giving birth.",
+        "decline_text": "You shake your head, advising them to ask the medicine cat instead. The queen seems further unnerved by this, but takes your word for it, quickly retreating to the medicine cat's den.",
+        "chance_of_success": 75,
+        "success_outcomes": [
+            {
+                "text": "You give them advice on how to make sure everything goes well, as well as telling them how they'll know when they start kitting. The queen is reassured by your advice, and thanks you for your help.",
+                "exp": 10,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Try as you might, you can't seem to reassure the new queen's fears, and your advice only seems to scare them more. Fortunately, another more experienced cat helps you answer the concerns the queen has and reassure them.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "gen_queen_event107",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "camp"
+        ],
+        "patrol_art": "lg_queen_default",
+        "min_cats": 1,
+        "max_cats": 3,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "The nursery empties out as the kits leave to go play in the clearing, but much to your surprise, you are approached by the leader, who asks you about your opinions on what roles they should assign to some of the kits.",
+        "decline_text": "You tell the leader that you trust their judgment better than your own, and tell them that you trust they'll make the correct decision.",
+        "chance_of_success": 65,
+        "success_outcomes": [
+            {
+                "text": "You tell the leader about the skills of each of the kits, and tell the leader about what each kit wants to do in their future, and the leader listens, nodding. They thank you for your insight, before leaving for the day. You feel reassured that the kits will be given roles that they will excel in.",
+                "exp": 10,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You begin to advise the leader on what roles to give the kits, but one of the kits overhears you, and loudly disagrees with you. The other kits clamor to see what's going on, and all you can do is shoot the leader an apologetic look as they stumble away from the cluster of scuttling children.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },{
+        "patrol_id": "gen_queen_event108",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "camp"
+        ],
+        "patrol_art": "lg_queen_default",
+        "min_cats": 1,
+        "max_cats": 3,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "One of the kits won't stop crying, and you can't figure out why. You're currently the only one who they'll talk to, so it's up to you to figure out what's wrong.",
+        "decline_text": "Sometimes kits just need to cry sometimes, so you just sit by the kit's side until they stop.",
+        "chance_of_success": 70,
+        "success_outcomes": [
+            {
+                "text": "You figure out that the kit simply needed a nap, and you manage to coax them into falling asleep. The parents thank you graciously, and get their own well-deserved rest.",
+                "exp": 10,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "No matter what you try or what you say, the kit just keeps on bawling. It's hopeless; all you can do is try to wait it out.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    }
+]
