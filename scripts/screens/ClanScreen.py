@@ -117,7 +117,7 @@ class ClanScreen(Screens):
         # This should be a temp solution. We should change the code that determines positions.
         i = 0
         for x in game.clan.clan_cats:
-            if not Cat.all_cats[x].dead and Cat.all_cats[x].in_camp and \
+            if Cat.all_cats[x].moons != -1 and not Cat.all_cats[x].dead and Cat.all_cats[x].in_camp and \
                     not (Cat.all_cats[x].exiled or Cat.all_cats[x].outside) and (Cat.all_cats[x].status != 'newborn' or game.config['fun']['all_cats_are_newborn'] or game.config['fun']['newborns_can_roam']):
 
                 i += 1
@@ -333,7 +333,7 @@ class ClanScreen(Screens):
             first_choices[x].extend(first_choices[x])
 
         for x in game.clan.clan_cats:
-            if Cat.all_cats[x].dead or Cat.all_cats[x].outside:
+            if Cat.all_cats[x].dead or Cat.all_cats[x].outside or Cat.all_cats[x].moons <= 0:
                 continue
 
             # Newborns are not meant to be placed. They are hiding. 
@@ -345,7 +345,7 @@ class ClanScreen(Screens):
                 else:
                     continue
  
-            if Cat.all_cats[x].status in ['apprentice', 'mediator apprentice']:
+            if Cat.all_cats[x].status in ['apprentice', 'mediator apprentice', "queen's apprentice"]:
                 Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(first_choices, all_dens,
                                                                                  [1, 50, 1, 1, 100, 100, 1])
             elif Cat.all_cats[x].status == 'deputy':
@@ -358,6 +358,12 @@ class ClanScreen(Screens):
             elif Cat.all_cats[x].status == 'kitten':
                 Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(first_choices, all_dens,
                                                                                  [60, 8, 1, 1, 1, 1, 1])
+            elif Cat.all_cats[x].status == 'queen':
+                Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(first_choices, all_dens,
+                                                                                 [60, 8, 1, 1, 1, 1, 1])
+            elif Cat.all_cats[x].status == "queen's apprentice":
+                Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(first_choices, all_dens,
+                                                                                 [60, 8, 1, 1, 1, 1, 1])                                                                     
             elif Cat.all_cats[x].status in [
                 'medicine cat apprentice', 'medicine cat'
             ]:

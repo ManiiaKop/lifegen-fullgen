@@ -84,6 +84,9 @@ class ClanSettingsScreen(Screens):
             elif event.ui_element == self.clan_stats_button:
                 self.open_clan_stats()
                 return
+            elif "achievements" in self.checkboxes_text:
+                if event.ui_element == self.checkboxes_text["achievements"]:
+                    self.change_screen("achievement screen")
             self.handle_checkbox_events(event)
             self.menu_button_pressed(event)
 
@@ -307,6 +310,8 @@ class ClanSettingsScreen(Screens):
         med_cat_apprentices = 0
         mediator_apprentices = 0
         mediators = 0
+        queens_apprentices = 0
+        queens = 0
         elders = 0
         kits = 0
         cats_outside = 0
@@ -344,6 +349,10 @@ class ClanSettingsScreen(Screens):
                 mediator_apprentices += 1
             elif cat.status == "mediator":
                 mediators += 1
+            elif cat.status == "queen's apprentice":
+                queens_apprentices += 1
+            elif cat.status == "queen":
+                queens += 1
             elif cat.status == "elder":
                 elders += 1
             elif cat.status in ("newborn", "kitten"):
@@ -359,6 +368,8 @@ class ClanSettingsScreen(Screens):
         f"Warrior Apprentices: {warrior_apprentices}\n" \
         f"Mediators: {mediators}\n" \
         f"Mediators Apprentices: {mediator_apprentices}\n" \
+        f"Queens: {queens}\n" \
+        f"Queens Apprentices: {queens_apprentices}\n" \
         f"Elders: {elders}\n" \
         f"Kittens and Newborns: {kits}\n" \
         f"Faded Cats: {faded_cats}"
@@ -366,6 +377,12 @@ class ClanSettingsScreen(Screens):
         self.checkboxes_text["stat_box"] = pygame_gui.elements.UITextBox(text,
                                                                          scale(pygame.Rect((300, 400, 1060, 690))),
                                                                          object_id=get_text_box_theme("#text_box_30_horizcenter"))
+        
+        self.checkboxes_text["achievements"] = UIImageButton(
+            scale(pygame.Rect((670, 1290), (240, 60))),
+            "",
+            object_id="#achivements_button",
+            manager=MANAGER)
 
     def refresh_checkboxes(self):
         """

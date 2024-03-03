@@ -16,6 +16,7 @@ import os
 import platform
 import subprocess
 import traceback
+import random
 from html import escape
 
 import pygame
@@ -45,9 +46,11 @@ class StartScreen(Screens):
     def __init__(self, name=None):
         super().__init__(name)
         self.warning_label = None
-        self.bg = pygame.image.load("resources/images/menu.png").convert()
+        bg = random.randint(1, 114)
+        self.bg = pygame.image.load("resources/menus/menu" + str(bg) + ".png").convert()
         self.bg = pygame.transform.scale(self.bg, (screen_x, screen_y))
         self.social_buttons = {}
+        self.warning_label_background = None
 
     def handle_event(self, event):
         """This is where events that occur on this page are handled.
@@ -64,7 +67,7 @@ class StartScreen(Screens):
                 self.continue_button: 'camp screen',
                 self.switch_clan_button: 'switch clan screen',
                 self.new_clan_button: 'make clan screen',
-                self.settings_button: 'settings screen',
+                self.settings_button: 'settings screen'
             }
             if event.ui_element in screens:
                 self.change_screen(screens[event.ui_element])
@@ -142,6 +145,7 @@ class StartScreen(Screens):
         self.update_button.kill()
         self.quit.kill()
         self.closebtn.kill()
+        self.warning_label_background.kill()
         for btn in self.social_buttons:
             self.social_buttons[btn].kill()
 
@@ -178,18 +182,18 @@ class StartScreen(Screens):
                                   object_id="#quit_button",
                                   manager=MANAGER)
 
-        self.social_buttons["twitter_button"] = UIImageButton(scale(pygame.Rect((25, 1295), (80, 80))),
+        self.social_buttons["twitter_button"] = UIImageButton(scale(pygame.Rect((25, 1310), (80, 80))),
                                                               "",
                                                               object_id="#twitter_button",
                                                               manager=MANAGER,
                                                               tool_tip_text='Check out our Twitter!')
-        self.social_buttons["tumblr_button"] = UIImageButton(scale(pygame.Rect((115, 1295), (80, 80))),
+        self.social_buttons["tumblr_button"] = UIImageButton(scale(pygame.Rect((115, 1310), (80, 80))),
                                                              "",
                                                              object_id="#tumblr_button",
                                                              manager=MANAGER,
                                                              tool_tip_text='Check out our Tumblr!')
 
-        self.social_buttons["discord_button"] = UIImageButton(scale(pygame.Rect((205, 1295), (80, 80))),
+        self.social_buttons["discord_button"] = UIImageButton(scale(pygame.Rect((205, 1310), (80, 80))),
                                                               "",
                                                               object_id="#discord_button",
                                                               manager=MANAGER,
@@ -208,8 +212,8 @@ class StartScreen(Screens):
             "",
             scale(pygame.Rect((275, 370), (770, 720))),
             object_id="#text_box_22_horizleft",
-            starting_height=1,
-            manager=MANAGER)
+            manager=MANAGER,
+            starting_height=3)
 
         self.error_gethelp = pygame_gui.elements.UITextBox(
             "Please join the Discord server and ask for technical support. "
@@ -222,11 +226,11 @@ class StartScreen(Screens):
         )
 
         self.open_data_directory_button = UIImageButton(
-            scale(pygame.Rect((1054, 1023), (356, 60))),
+            scale(pygame.Rect((1040, 1020), (356, 60))),
             "",
             object_id="#open_data_directory_button",
             manager=MANAGER,
-            starting_height=2,  # Layer 2 and repositioned so hover affect works.
+            starting_height=0,  # Layer 0 so it's behind the error box
             tool_tip_text="Opens the data directory. "
                           "This is where save files "
                           "and logs are stored.")
@@ -234,7 +238,6 @@ class StartScreen(Screens):
         self.closebtn = UIImageButton(
             scale(pygame.Rect((1386, 430), (44, 44))),
             "",
-            starting_height=2, #Hover affect works, and now allows it to be clicked more easily.
             object_id="#exit_window_button",
             manager=MANAGER)
 
@@ -243,6 +246,8 @@ class StartScreen(Screens):
         self.error_gethelp.hide()
         self.open_data_directory_button.hide()
         self.closebtn.hide()
+        # self.continue_button.hide()
+        # self.switch_clan_button.hide()
 
         self.update_button = UIImageButton(scale(pygame.Rect((1154, 50), (382.5, 75))), "",
                                            object_id="#update_button", manager=MANAGER)
@@ -251,7 +256,7 @@ class StartScreen(Screens):
         try:
             global has_checked_for_update
             global update_available
-            if not get_version_info().is_source_build and not get_version_info().is_itch and get_version_info().upstream.lower() == "ClanGenOfficial/clangen".lower() and \
+            if not get_version_info().is_source_build and not get_version_info().is_itch and get_version_info().upstream.lower() == "Thlumyn/clangen".lower() and \
                     game.settings['check_for_updates'] and not has_checked_for_update:
                 if has_update(UpdateChannel(get_version_info().release_channel)):
                     update_available = True
@@ -286,9 +291,10 @@ class StartScreen(Screens):
                 ChangelogPopup(game.switches['last_screen'])
                 with open(f"{get_cache_dir()}/changelog_popup_shown", 'w') as write_file:
                     write_file.write(get_version_info().version_number)
-
+        self.warning_label_background = UIImageButton(scale(pygame.Rect((100, 1244), (1400, 55))), "", object_id="blank_button", manager=MANAGER)
+        self.warning_label_background.disable()
         self.warning_label = pygame_gui.elements.UITextBox(
-            "Warning: this game includes some mild descriptions of gore, violence, and animal abuse",
+            "Warning: this game includes descriptions of gore, violence, murder, kit death, and animal abuse",
             scale(pygame.Rect((100, 1244), (1400, 60))),
             object_id="#default_dark",
             manager=MANAGER)

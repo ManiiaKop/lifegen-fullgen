@@ -218,6 +218,8 @@ class PatrolOutcome():
             return True
         if "r_c" in allowed_specfic and kitty == patrol.patrol_random_cat:
             return True
+        if "y_c" in allowed_specfic and kitty == game.clan.your_cat:
+            return True
         if "app1" in allowed_specfic and len(patrol.patrol_apprentices) >= 1 and \
                 kitty == patrol.patrol_apprentices[0]:
             return True
@@ -357,6 +359,8 @@ class PatrolOutcome():
                     out_set.add(patrol.patrol_random_cat)
                 elif _cat == "p_l":
                     out_set.add(patrol.patrol_leader)
+                elif _cat == "y_c":
+                    out_set.add(game.clan.your_cat) 
                 elif _cat == "s_c":
                     out_set.add(self.stat_cat)
                 elif _cat == "app1" and len(patrol.patrol_apprentices) >= 1:
@@ -422,6 +426,8 @@ class PatrolOutcome():
                     out_set.add(patrol.patrol_leader)
                 elif _cat == "s_c":
                     out_set.add(self.stat_cat)
+                elif _cat == "y_c":
+                    out_set.add(game.clan.your_cat)
                 elif _cat == "app1" and len(patrol.patrol_apprentices) >= 1:
                     out_set.add(patrol.patrol_apprentices[0])
                 elif _cat == "app2" and len(patrol.patrol_apprentices) >= 2:
@@ -464,6 +470,8 @@ class PatrolOutcome():
                     out_set.add(patrol.patrol_leader)
                 elif _cat == "s_c":
                     out_set.add(self.stat_cat)
+                elif _cat == "y_c":
+                    out_set.add(game.clan.your_cat)
                 elif _cat == "app1" and len(patrol.patrol_apprentices) >= 1:
                     out_set.add(patrol.patrol_apprentices[0])
                 elif _cat == "app2" and len(patrol.patrol_apprentices) >= 2:
@@ -576,6 +584,8 @@ class PatrolOutcome():
                     out_set.add(patrol.patrol_leader)
                 elif _cat == "s_c":
                     out_set.add(self.stat_cat)
+                elif _cat == "y_c":
+                    out_set.add(game.clan.your_cat)
                 elif _cat == "app1" and len(patrol.patrol_apprentices) >= 1:
                     out_set.add(patrol.patrol_apprentices[0])
                 elif _cat == "app2" and len(patrol.patrol_apprentices) >= 2:
@@ -854,7 +864,7 @@ class PatrolOutcome():
                 elif cat.outside:
                     results.append(f"The patrol met {cat.name}.")
                 else:
-                    results.append(f"{cat.name} joined the Clan.")
+                    results.append(f"{cat.name} joined the clan.")
             
         # Check to see if any young litters joined with alive parents.
         # If so, see if recovering from birth condition is needed
@@ -903,6 +913,7 @@ class PatrolOutcome():
         in_patrol_cats = {
             "p_l": patrol.patrol_leader,
             "r_c": patrol.patrol_random_cat,
+            "y_c": game.clan.your_cat,
         }
         if self.stat_cat:
             in_patrol_cats["s_c"] = self.stat_cat

@@ -135,7 +135,7 @@ What's in a patrol?
         :: Including anything in either of these makes this a stat outcome ::
         "stat_trait": [list, of, traits] 
         "stat_skill": [list, of, skill, strings]
-        "can_have_stat": ["p_l", "r_c", "app1" ]
+        "can_have_stat": ["p_l", "r_c", "app1", "y_c]
         
         :: Including any of these makes this a death or injury outcome
         :: A outcome can be both. If either death or injury is given, 
@@ -267,6 +267,7 @@ OLD
     Random cat 3 - r_c3
     Random cat 4 - r_c4
     Random cat 5 - r_c5
+    Your cat - y_c
 
 -- PATROL ID GUIDELINES --
     ID format: biome_type_descriptor 

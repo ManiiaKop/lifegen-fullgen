@@ -153,7 +153,10 @@ class Screens():
 
         if not isinstance(work_thread, PropagatingThread):
             return
-
+        
+        if self.loading_window is None:
+            self.loading_window = {}
+        
         # Handled the loading animation, both creating and killing it. 
         if not self.loading_window.get(work_thread.name) and work_thread.is_alive() \
                 and work_thread.get_time_from_start() > delay:

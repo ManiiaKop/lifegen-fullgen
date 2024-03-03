@@ -3,7 +3,7 @@ import pygame_gui.elements
 
 from .Screens import Screens
 
-from scripts.utility import get_text_box_theme, scale, shorten_text_to_fit
+from scripts.utility import get_text_box_theme, scale
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 from scripts.game_structure.image_button import UIImageButton, UISpriteButton
@@ -237,11 +237,13 @@ class ChooseMentorScreen(Screens):
             object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
             manager=MANAGER)
 
-        name = str(self.the_cat.name)
-        short_name = shorten_text_to_fit(name, 239, 34)
+        name = str(self.the_cat.name)  # get name
+        if 11 <= len(name):  # check name length
+            short_name = str(name)[0:9]
+            name = short_name + '...'
         self.apprentice_details["apprentice_name"] = pygame_gui.elements.ui_label.UILabel(
-            scale(pygame.Rect((1240, 230), (235, 65))),
-            short_name,
+            scale(pygame.Rect((1240, 230), (220, 60))),
+            name,
             object_id="#text_box_34_horizcenter", manager=MANAGER)
 
         self.find_next_previous_cats()  # Determine where the next and previous cat buttons lead
@@ -359,10 +361,12 @@ class ChooseMentorScreen(Screens):
                                                                                    manager=MANAGER)
 
             name = str(self.selected_mentor.name)  # get name
-            short_name = shorten_text_to_fit(name, 239, 34)
+            if 11 <= len(name):  # check name length
+                short_name = str(name)[0:9]
+                name = short_name + '...'
             self.selected_details["mentor_name"] = pygame_gui.elements.ui_label.UILabel(
-                scale(pygame.Rect((130, 230), (235, 65))),
-                short_name,
+                scale(pygame.Rect((130, 230), (220, 60))),
+                name,
                 object_id="#text_box_34_horizcenter", manager=MANAGER)
 
     def update_cat_list(self):
@@ -440,16 +444,20 @@ class ChooseMentorScreen(Screens):
             for cat in Cat.all_cats_list:
                 if not cat.dead and not cat.outside and cat.status in [
                     'warrior', 'deputy', 'leader'
-                ]:
+                ] and cat.moons != -1:
                     valid_mentors.append(cat)
         elif self.the_cat.status == "medicine cat apprentice":
             for cat in Cat.all_cats_list:
-                if not cat.dead and not cat.outside and cat.status == 'medicine cat':
+                if not cat.dead and not cat.outside and cat.status == 'medicine cat' and cat.moons != -1:
                     valid_mentors.append(cat)
         elif self.the_cat.status == 'mediator apprentice':
             for cat in Cat.all_cats_list:
-                if not cat.dead and not cat.outside and cat.status == 'mediator':
+                if not cat.dead and not cat.outside and cat.status == 'mediator' and cat.moons != -1:
                     valid_mentors.append(cat)
+        elif self.the_cat.status == "queen's apprentice":
+            for cat in Cat.all_cats_list:
+                    if not cat.dead and not cat.outside and cat.status == 'queen' and cat.moons != -1:
+                        valid_mentors.append(cat)
 
         return valid_mentors
 

@@ -284,7 +284,10 @@ class SpriteInspectScreen(Screens):
         self.make_one_checkbox((600, 1150), "scars_shown", self.scars_shown, self.the_cat.pelt.scars)
         
         # "Show accessories"
-        self.make_one_checkbox((1000, 1150), "acc_shown", self.acc_shown, self.the_cat.pelt.accessory)
+        if self.the_cat.pelt.accessories or self.the_cat.pelt.accessory:
+            self.make_one_checkbox((1000, 1150), "acc_shown", self.acc_shown, "has acc")
+        else:
+            self.make_one_checkbox((1000, 1150), "acc_shown", self.acc_shown, None)
         
         # "Show as living"
         self.make_one_checkbox((400, 1250), "override_dead_lineart", self.override_dead_lineart, self.the_cat.dead,
