@@ -213,33 +213,28 @@
     "carrionplace disease": {
         "severity": "severe",
         "mortality": {
-            "newborn": 1,
-            "kitten": 1,
-            "adolescent": 2,
-            "young adult": 2,
-            "adult": 2,
-            "senior adult": 2,
-            "senior": 1
-        },
-        "medicine_mortality": {
             "newborn": 2,
             "kitten": 2,
-            "adolescent": 3,
-            "young adult": 3,
-            "adult": 3,
-            "senior adult": 3,
-            "senior": 2
+            "adolescent": 5,
+            "young adult": 8,
+            "adult": 10,
+            "senior adult": 8,
+            "senior": 5
+        },
+        "medicine_mortality": {
+            "newborn": 4,
+            "kitten": 4,
+            "adolescent": 10,
+            "young adult": 13,
+            "adult": 17,
+            "senior adult": 13,
+            "senior": 10
         },
         "duration": 3,
         "medicine_duration": 2,
         "infectiousness": 0,
         "risks": [],
-        "herbs": [
-            "marigold",
-            "burdock",
-            "wild_garlic",
-            "poppy"
-        ]
+        "herbs": []
     },
     "redcough": {
         "severity": "severe",
@@ -643,6 +638,37 @@
         "risks": [],
         "herbs": [
             "thyme"
+        ]
+    },
+    "heartbroken": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 5,
+        "medicine_duration": 3,
+        "infectiousness": 0,
+        "risks": [
+        ],
+        "herbs": [
+            "juniper",
+            "thyme",
+            "poppy"
         ]
     }
 }
