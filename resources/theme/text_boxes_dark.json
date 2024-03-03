@@ -147,6 +147,12 @@
             "text_horiz_alignment": "center"
         }
     },
+    "#text_box_26_horizcenter_dark": {
+        "prototype": "#text_box_26_dark",
+        "misc": {
+            "text_horiz_alignment": "center"
+        }
+    },
     "#text_box_34_horizleft_dark": {
         "prototype": "#text_box_34_dark",
         "misc": {
