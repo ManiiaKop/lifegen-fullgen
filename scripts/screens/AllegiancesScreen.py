@@ -99,7 +99,7 @@ class AllegiancesScreen(Screens):
                     output += "\n      APPRENTICES: "     
                 output += ", ".join([str(Cat.fetch_cat(i).name).upper() for i in cat.apprentice if Cat.fetch_cat(i)])
 
-            return [str(cat.name).upper(), cat.ID, output]
+            return ["", cat.ID, output]
 
     def get_allegiances_text(self):
         """Determine Text. Ouputs list of tuples. """
