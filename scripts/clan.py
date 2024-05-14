@@ -107,19 +107,19 @@ class Clan():
         self.leader = leader
         if self.leader:
             self.leader.status_change('leader')
-            self.clan_cats.append(self.leader.ID)
+            # self.clan_cats.append(self.leader.ID)
         self.leader_lives = 9
         self.leader_predecessors = 0
         self.deputy = deputy
         if deputy is not None:
             self.deputy.status_change('deputy')
-            self.clan_cats.append(self.deputy.ID)
+            # self.clan_cats.append(self.deputy.ID)
         self.deputy_predecessors = 0
         self.medicine_cat = medicine_cat
         self.med_cat_list = []
         self.med_cat_predecessors = 0
         if medicine_cat is not None:
-            self.clan_cats.append(self.medicine_cat.ID)
+            # self.clan_cats.append(self.medicine_cat.ID)
             self.med_cat_list.append(self.medicine_cat.ID)
             if medicine_cat.status != 'medicine cat':
                 Cat.all_cats[medicine_cat.ID].status_change('medicine cat')
@@ -249,6 +249,7 @@ class Clan():
                 if Cat.all_cats[i] == x:
                     self.add_cat(Cat.all_cats[i])
                     not_found = False
+                    print(Cat.all_cats[i].ID)
             if Cat.all_cats[i] != self.leader and Cat.all_cats[i] != \
                     self.medicine_cat and Cat.all_cats[i] != \
                     self.deputy and Cat.all_cats[i] != \
