@@ -2845,66 +2845,6 @@ class Cat():
             return False
         
         return True
-    
-    def is_dateable(self,
-                    other_cat: Cat,
-                    age_restriction: bool = True,
-                    ignore_no_mates: bool = False
-                    ):
-
-        """
-            LifeGen-specific function to see if a cat can be dated/flirted with.
-            Heavily based on is_potential_mate with some key differences.
-            The age limit is 12 moons instead of 14 since the player is allowed to make that choice.
-            Adolescents are allowed to flirt with each other.
-            This function should not be used in place of is_potential_mate.
-        """
-        
-        # check to make sure it's not the same cat
-
-        if self.ID == other_cat.ID:
-            return False
-        
-        # no mates check - can be commented out if it's desired to allow MCs to flirt with/date cats regardless of their romantic interactions being limited
-
-        if not ignore_no_mates and (self.no_mates or other_cat.no_mates):
-            if self.ID not in other_cat.mate:
-                return False
-        
-        # make sure the cat isn't too closely related
-
-        if self.is_related(other_cat, game.clan.clan_settings["first cousin mates"]):
-            return False
-        
-        # make sure they're not outside the clan or dead
-
-        if self.dead or other_cat.dead or self.outside or other_cat.outside:
-            return False
-        
-        # check age. allow adolescents to flirt with each other. prevent kittens and newborns from flirting
-
-        if age_restriction:
-            if (self.moons < 12 or other_cat.moons < 12):
-                if self.age in ["adolescent"] or other_cat.age in ["adolescent"]:
-                    if self.age != other_cat.age:
-                        return False
-            if self.age in ["newborn", "kitten"] or other_cat.age in ["newborn", "kitten"]:
-                return False
-            
-            if game.config["mates"].get("override_same_age_group", False) or self.age != other_cat.age:
-                if abs(self.moons - other_cat.moons)> game.config["mates"]["age_range"] + 1:
-                    if self.ID not in other_cat.mate:
-                        return False
-        
-        # check for mentor
-
-        is_former_mentor = (other_cat.ID in self.former_apprentices or self.ID in other_cat.former_apprentices)
-        if is_former_mentor and not game.clan.clan_settings['romantic with former mentor']:
-            return False
-        if other_cat.ID in self.apprentice or self.ID in other_cat.apprentice:
-            return False
-        
-        return True
 
     def unset_mate(self, other_cat: Cat, breakup: bool = False, fight: bool = False):
         """Unset the mate from both self and other_cat"""

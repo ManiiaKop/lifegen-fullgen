@@ -1343,6 +1343,7 @@ class TalkScreen(Screens):
                 alive_apps = get_alive_apps(Cat)
                 if len(alive_apps) <= 1:
                     return ""
+                alive_app = choice(alive_apps)
                 counter = 0
                 while alive_app.ID == you.ID or alive_app.ID == cat.ID:
                     counter+=1

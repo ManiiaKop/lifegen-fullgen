@@ -195,6 +195,22 @@ class Clan():
         self.disaster_moon = 0
         self.second_disaster_moon = 0
 
+
+    def post_initialization_functions(self):
+        if self.deputy is not None:
+            self.deputy.status_change('deputy')
+            self.clan_cats.append(self.deputy.ID)
+
+        if self.leader:
+            self.leader.status_change('leader')
+            self.clan_cats.append(self.leader.ID)
+
+        if self.medicine_cat is not None:
+            self.clan_cats.append(self.medicine_cat.ID)
+            self.med_cat_list.append(self.medicine_cat.ID)
+            if self.medicine_cat.status != 'medicine cat':
+                Cat.all_cats[self.medicine_cat.ID].status_change('medicine cat')
+
     def create_clan(self):
         """
         This function is only called once a new clan is
@@ -647,6 +663,7 @@ class Clan():
                              biome=general[2],
                              camp_bg=general[3],
                              game_mode=general[7])
+            game.clan.post_initialization_functions()
             game.clan.reputation = general[8]
         elif len(general) == 8:
             if general[3] == 'None':
@@ -664,6 +681,7 @@ class Clan():
                 camp_bg=general[3],
                 game_mode=general[7],
             )
+            game.clan.post_initialization_functions()
         elif len(general) == 7:
             if general[4] == 'None':
                 general[4] = 0
@@ -677,15 +695,18 @@ class Clan():
                 biome=general[2],
                 camp_bg=general[3],
             )
+            game.clan.post_initialization_functions()
         elif len(general) == 3:
             game.clan = Clan(general[0], Cat.all_cats[leader_info[0]],
                              Cat.all_cats.get(deputy_info[0], None),
                              Cat.all_cats.get(med_cat_info[0], None),
                              general[2])
+            game.clan.post_initialization_functions()
         else:
             game.clan = Clan(general[0], Cat.all_cats[leader_info[0]],
                              Cat.all_cats.get(deputy_info[0], None),
                              Cat.all_cats.get(med_cat_info[0], None))
+            game.clan.post_initialization_functions()
         game.clan.age = int(general[1])
         if not game.config['lock_season']:
             game.clan.current_season = game.clan.seasons[game.clan.age % 12]
@@ -790,6 +811,7 @@ class Clan():
                          biome=clan_data["biome"],
                          camp_bg=clan_data["camp_bg"],
                          game_mode=clan_data["gamemode"])
+        game.clan.post_initialization_functions()
 
         if "following_starclan" in clan_data:
             game.clan.followingsc = clan_data['following_starclan']
