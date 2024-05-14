@@ -1326,16 +1326,13 @@ class ProfileScreen(Screens):
         previous_cat = 0
         next_cat = 0
         current_cat_found = 0
+
         if self.the_cat.dead and not is_instructor and not self.the_cat.df and \
                 not (self.the_cat.outside or self.the_cat.exiled):
             previous_cat = game.clan.instructor.ID
 
         if is_instructor:
             current_cat_found = 1
-            
-        if self.the_cat.dead and not is_demon and self.the_cat.df and \
-                not (self.the_cat.outside or self.the_cat.exiled):
-            previous_cat = game.clan.demon.ID
 
         if self.the_cat.dead and not is_demon and self.the_cat.df and \
                 not (self.the_cat.outside or self.the_cat.exiled):

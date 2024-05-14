@@ -96,18 +96,41 @@ class RelationshipScreen(Screens):
             elif event.ui_element == self.log_icon:
                 if self.inspect_cat.ID not in self.the_cat.relationships:
                     return
-                RelationshipLog(
-                    self.the_cat.relationships[self.inspect_cat.ID],
-                    [self.view_profile_button, self.switch_focus_button,\
-                        self.next_cat_button,self.previous_cat_button,self.next_page_button],
-                    [self.back_button, self.log_icon, self.checkboxes["show_dead"], self.checkboxes["show_empty"],\
-                     self.show_dead_text, self.show_empty_text]
-                )
+                if self.next_cat == 0 and self.previous_cat == 0:
+                    RelationshipLog(
+                        self.the_cat.relationships[self.inspect_cat.ID],
+                        [self.view_profile_button, self.switch_focus_button, self.next_page_button, self.previous_cat_button,
+                         self.next_page_button],
+                        [self.back_button, self.log_icon, self.checkboxes["show_dead"], self.checkboxes["show_empty"], \
+                         self.show_dead_text, self.show_empty_text]
+                    )
+                elif self.next_cat == 0:
+                    RelationshipLog(
+                        self.the_cat.relationships[self.inspect_cat.ID],
+                        [self.view_profile_button, self.switch_focus_button, self.previous_cat_button, self.next_page_button],
+                        [self.back_button, self.log_icon, self.checkboxes["show_dead"], self.checkboxes["show_empty"],\
+                         self.show_dead_text, self.show_empty_text]
+                    )
+                elif self.previous_cat == 0:
+                    RelationshipLog(
+                        self.the_cat.relationships[self.inspect_cat.ID],
+                        [self.view_profile_button, self.switch_focus_button, self.next_cat_button,
+                         self.next_page_button],
+                        [self.back_button, self.log_icon, self.checkboxes["show_dead"], self.checkboxes["show_empty"], \
+                         self.show_dead_text, self.show_empty_text]
+                    )
+                else:
+                    RelationshipLog(
+                        self.the_cat.relationships[self.inspect_cat.ID],
+                        [self.view_profile_button, self.switch_focus_button, self.next_page_button, self.next_cat_button, self.previous_cat_button, 
+                         self.next_page_button],
+                        [self.back_button, self.log_icon, self.checkboxes["show_dead"],
+                         self.checkboxes["show_empty"], self.show_dead_text, self.show_empty_text]
+                    )
             elif event.ui_element == self.checkboxes["show_dead"]:
                 game.clan.clan_settings['show dead relation'] = not game.clan.clan_settings['show dead relation']
                 self.update_checkboxes()
                 self.apply_cat_filter()
-                self.update_cat_page()
             elif event.ui_element == self.checkboxes["show_empty"]:
                 game.clan.clan_settings['show empty relation'] = not game.clan.clan_settings['show empty relation'] 
                 self.update_checkboxes()
@@ -359,13 +382,13 @@ class RelationshipScreen(Screens):
                             (36, 36)))
 
             # Gender
-            if self.inspect_cat.genderalign == 'molly':
-                gender_icon = image_cache.load_image("resources/images/molly_big.png").convert_alpha()
-            elif self.inspect_cat.genderalign == 'tom':
-                gender_icon = image_cache.load_image("resources/images/tom_big.png").convert_alpha()
-            elif self.inspect_cat.genderalign == 'trans molly':
+            if self.inspect_cat.genderalign == 'female':
+                gender_icon = image_cache.load_image("resources/images/female_big.png").convert_alpha()
+            elif self.inspect_cat.genderalign == 'male':
+                gender_icon = image_cache.load_image("resources/images/male_big.png").convert_alpha()
+            elif self.inspect_cat.genderalign == 'trans female':
                 gender_icon = image_cache.load_image("resources/images/transfem_big.png").convert_alpha()
-            elif self.inspect_cat.genderalign == 'trans tom':
+            elif self.inspect_cat.genderalign == 'trans male':
                 gender_icon = image_cache.load_image("resources/images/transmasc_big.png").convert_alpha()
             else:
                 # Everyone else gets the nonbinary icon
@@ -405,16 +428,16 @@ class RelationshipScreen(Screens):
             # Relation info:
             if related:
                 if self.the_cat.is_uncle_aunt(self.inspect_cat):
-                    if self.inspect_cat.genderalign in ['molly', 'trans molly']:
+                    if self.inspect_cat.genderalign in ['female', 'trans female']:
                         col2 += "related: niece"
-                    elif self.inspect_cat.genderalign in ['tom', 'trans tom']:
+                    elif self.inspect_cat.genderalign in ['male', 'trans male']:
                         col2 += "related: nephew"
                     else:
                         col2 += "related: sibling's child\n"
                 elif self.inspect_cat.is_uncle_aunt(self.the_cat):
-                    if self.inspect_cat.genderalign in ['molly', 'trans molly']:
+                    if self.inspect_cat.genderalign in ['female', 'trans female']:
                         col2 += "related: aunt"
-                    elif self.inspect_cat.genderalign in ['tom', 'trans tom']:
+                    elif self.inspect_cat.genderalign in ['male', 'trans male']:
                         col2 += "related: uncle"
                     else:
                         col2 += "related: parent's sibling"
@@ -442,7 +465,7 @@ class RelationshipScreen(Screens):
             if self.inspect_cat.dead:
                 self.view_profile_button.enable()
                 self.switch_focus_button.disable()
-                self.log_icon.enable()
+                self.log_icon.disable()
             else:
                 self.view_profile_button.enable()
                 self.switch_focus_button.enable()
@@ -494,11 +517,7 @@ class RelationshipScreen(Screens):
 
         all_pages = self.chunks(self.filtered_cats, 8)
 
-        if self.current_page > len(all_pages):
-            self.current_page = len(all_pages)
-
-        if self.current_page == 0:
-            self.current_page = 1
+        self.current_page = max(1, min(self.current_page, len(all_pages)))
 
         if all_pages:
             display_rel = all_pages[self.current_page - 1]
@@ -553,13 +572,13 @@ class RelationshipScreen(Screens):
                                                                                      object_id="#text_box_26_horizcenter")
 
         # Gender alignment
-        if the_relationship.cat_to.genderalign == 'molly':
-            gender_icon = image_cache.load_image("resources/images/molly_big.png").convert_alpha()
-        elif the_relationship.cat_to.genderalign == 'tom':
-            gender_icon = image_cache.load_image("resources/images/tom_big.png").convert_alpha()
-        elif the_relationship.cat_to.genderalign == 'trans molly':
+        if the_relationship.cat_to.genderalign == 'female':
+            gender_icon = image_cache.load_image("resources/images/female_big.png").convert_alpha()
+        elif the_relationship.cat_to.genderalign == 'male':
+            gender_icon = image_cache.load_image("resources/images/male_big.png").convert_alpha()
+        elif the_relationship.cat_to.genderalign == 'trans female':
             gender_icon = image_cache.load_image("resources/images/transfem_big.png").convert_alpha()
-        elif the_relationship.cat_to.genderalign == 'trans tom':
+        elif the_relationship.cat_to.genderalign == 'trans male':
             gender_icon = image_cache.load_image("resources/images/transmasc_big.png").convert_alpha()
         else:
             # Everyone else gets the nonbinary icon
