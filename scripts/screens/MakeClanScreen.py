@@ -1142,7 +1142,7 @@ class MakeClanScreen(Screens):
         self.elements['next_step'].disable()
 
         # self.elements['customize'] = UIImageButton(scale(pygame.Rect((100,200),(236,60))), "", object_id="#customize_button", manager=MANAGER,  tool_tip_text = "Customize your own cat")
-        self.elements['customize'].hide()
+        # self.elements['customize'].hide()
         # draw cats to choose from
         self.refresh_cat_images_and_info()
     
