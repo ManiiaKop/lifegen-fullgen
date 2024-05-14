@@ -308,19 +308,23 @@ class Inheritance():
         """Initial the class, with the focus of the grand parent relation."""
         for parent_id, value in self.parents.items():
             parent_cat = self.cat.fetch_cat(parent_id)
-            grandparents = self.get_parents(parent_cat)
-            for grand_id in grandparents:
-                if grand_id in self.parents.keys():
-                    continue
-                grand_type = RelationType.BLOOD if value["type"] == RelationType.BLOOD else RelationType.NOT_BLOOD
-                if grand_id not in self.grand_parents:
-                    self.grand_parents[grand_id] = {
-                        "type": grand_type,
-                        "additional": []
-                    }
-                    self.all_involved.append(grand_id)
-                    self.all_but_cousins.append(grand_id)
-                self.grand_parents[grand_id]["additional"].append(f"parent of {str(parent_cat.name)}")
+            if parent_cat:
+                grandparents = self.get_parents(parent_cat)
+                for grand_id in grandparents:
+                    if grand_id in self.parents.keys():
+                        parent_relation = self.parents[grand_id]
+                        if parent_relation["type"] == RelationType.BLOOD:
+                            print("WARNING - How did this happen? A grandparent is also the blood parent? Please report this!")
+                        continue # even it is not blood related, it is confusing
+                    grand_type = RelationType.BLOOD if value["type"] == RelationType.BLOOD else RelationType.NOT_BLOOD
+                    if grand_id not in self.grand_parents:
+                        self.grand_parents[grand_id] = {
+                            "type": grand_type,
+                            "additional": []
+                        }
+                        self.all_involved.append(grand_id)
+                        self.all_but_cousins.append(grand_id)
+                    self.grand_parents[grand_id]["additional"].append(f"parent of {str(parent_cat.name)}")
 
     def init_kits(self, inter_id, inter_cat):
         """Initial the class, with the focus of the kits relation."""
@@ -339,7 +343,8 @@ class Inheritance():
                 inter_blood_parents.remove(self.cat.ID)
                 other_id = inter_blood_parents.pop()
                 other_cat = self.cat.fetch_cat(other_id)
-                self.kits[inter_id]["additional"].append(f"second parent: {str(other_cat.name)}")
+                if other_cat:
+                    self.kits[inter_id]["additional"].append(f"second parent: {str(other_cat.name)}")
 
         # kit - adoptive
         if self.cat.ID in inter_cat.adoptive_parents:
@@ -442,7 +447,7 @@ class Inheritance():
                 _c_adoptive = self.get_no_blood_parents(_c)
                 if inter_id in _c_parents:
                     parents_cats = [self.cat.fetch_cat(c_id) for c_id in _c_parents]
-                    parent_cats_names = [str(c.name) for c in parents_cats]
+                    parent_cats_names = [str(c.name) for c in parents_cats if c is not None]
                     kit_rel_type = RelationType.BLOOD if rel_type in BLOOD_RELATIVE_TYPES else RelationType.NOT_BLOOD
                     if inter_id in _c_adoptive:
                         kit_rel_type = RelationType.ADOPTIVE
@@ -494,8 +499,8 @@ class Inheritance():
             return
         inter_parent_ids = self.get_parents(inter_cat)
         parents_cats = [self.cat.fetch_cat(c_id) for c_id in inter_parent_ids]
-        parent_cats_names = [str(c.name) for c in parents_cats]
-
+        parent_cats_names = [str(c.name) for c in parents_cats if c is not None]
+        
         for inter_parent_id in inter_parent_ids:
             if inter_parent_id in self.parents_siblings.keys():
                 rel_type = RelationType.BLOOD 
@@ -519,7 +524,7 @@ class Inheritance():
             return
         inter_parent_ids = self.get_parents(inter_cat)
         parents_cats = [self.cat.fetch_cat(c_id) for c_id in inter_parent_ids]
-        parent_cats_names = [str(c.name) for c in parents_cats if c]
+        parent_cats_names = [str(c.name) for c in parents_cats if c is not None]
 
         add_info = ""
         if len(parent_cats_names) > 0:

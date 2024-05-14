@@ -314,6 +314,7 @@ class PatrolScreen(Screens):
                 self.elements['herb'].enable() 
                 self.elements['cat_icon'].disable()
                 self.elements['your_cat'].enable()
+                
                 if game.clan.your_cat.joined_df:
                     self.elements['df_icon'].enable()
                 if game.clan.your_cat.moons >= 12:
@@ -325,7 +326,6 @@ class PatrolScreen(Screens):
                     self.elements['herb'].disable()
                     if self.patrol_type == 'med':
                         self.patrol_type = 'general'
-
                 if self.patrol_type == 'general':
                     text = 'random patrol type'
                 elif self.patrol_type == 'training':
@@ -335,7 +335,9 @@ class PatrolScreen(Screens):
                 elif self.patrol_type == 'hunting':
                     text = 'hunting'
                 elif self.patrol_type == 'med':
+                    
                     if self.current_patrol:
+                    
                         text = 'herb gathering'
                         self.elements['mouse'].disable()
                         self.elements['claws'].disable()
@@ -349,11 +351,6 @@ class PatrolScreen(Screens):
                     text, scale(pygame.Rect((500, 1050), (600, 800))),
                     object_id=get_text_box_theme("#text_box_30_horizcenter"), manager=MANAGER
                 )
-            else:
-                self.elements['paw'].hide()
-                self.elements['mouse'].hide()
-                self.elements['claws'].hide()
-                self.elements['herb'].hide()
 
             able_no_med = [cat for cat in self.able_cats if
                            cat.status not in ['medicine cat', 'medicine cat apprentice']]
@@ -535,14 +532,17 @@ class PatrolScreen(Screens):
         # add prey information
         current_amount =  round(game.clan.freshkill_pile.total_amount,2)
         self.elements['current_prey'] = pygame_gui.elements.UITextBox(
-            f"current prey: {current_amount}", scale(pygame.Rect((640, 180), (400, 100))),
+            f"current prey: {current_amount}", scale(pygame.Rect((600, 180), (400, 100))),
             object_id=get_text_box_theme("#text_box_30_horizcenter"), manager=MANAGER
         )
         needed_amount = round(game.clan.freshkill_pile.amount_food_needed(),2)
         self.elements['needed_prey'] = pygame_gui.elements.UITextBox(
-            f"needed prey: {needed_amount}", scale(pygame.Rect((640, 215), (400, 100))),
+            f"needed prey: {needed_amount}", scale(pygame.Rect((600, 215), (400, 100))),
             object_id=get_text_box_theme("#text_box_30_horizcenter"), manager=MANAGER
         )
+
+        if self.elements['current_prey']:
+            self.elements['info'].kill()
 
         self.update_cat_images_buttons()
         self.update_button()
@@ -721,7 +721,8 @@ class PatrolScreen(Screens):
         for the_cat in Cat.all_cats_list:
             if the_cat.ID == game.clan.your_cat.ID and the_cat.status not in [
                 'elder', 'kitten', 'mediator', 'mediator apprentice', "queen", "queen's apprentice", "newborn"
-            ] and not the_cat.outside and the_cat not in self.current_patrol and not the_cat.not_working():
+            ] and not the_cat.outside and the_cat not in self.current_patrol and not the_cat.not_working() \
+              and not the_cat.dead and not the_cat.shunned:
                 if "patrolled" not in game.switches:
                     game.switches['patrolled'] = []
                 if "1" not in game.switches['patrolled']:
@@ -729,7 +730,7 @@ class PatrolScreen(Screens):
             
             elif not the_cat.dead and the_cat.in_camp and the_cat.ID not in game.patrolled and the_cat.status not in [
                 'elder', 'kitten', 'mediator', 'mediator apprentice', "queen", "queen's apprentice", "newborn"
-            ] and not the_cat.outside and the_cat not in self.current_patrol and not the_cat.not_working():
+            ] and not the_cat.outside and the_cat not in self.current_patrol and not the_cat.not_working() and not the_cat.shunned:
                 if the_cat.status == 'newborn' or game.config['fun']['all_cats_are_newborn']:
                     if game.config['fun']['newborns_can_patrol']:
                         self.able_cats.append(the_cat)

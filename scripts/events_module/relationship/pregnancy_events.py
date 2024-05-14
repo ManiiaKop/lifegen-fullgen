@@ -547,7 +547,8 @@ class Pregnancy_Events():
             involved_cats.append(kit.ID)
 
         # display event
-        game.cur_events_list.append(Single_Event(print_event, ["health", "birth_death"], involved_cats))
+        if kits_amount != 0:
+            game.cur_events_list.append(Single_Event(print_event, ["health", "birth_death"], involved_cats))
 
     # ---------------------------------------------------------------------------- #
     #                          check if event is triggered                         #
@@ -790,7 +791,6 @@ class Pregnancy_Events():
         
         #### GENERATE THE KITS ######
         for kit in range(kits_amount):
-            
             kit = None
             if not cat: 
                 
@@ -905,6 +905,19 @@ class Pregnancy_Events():
                     kitten.relationships[second_kitten.ID].trust = 10 + y
             
             kitten.create_inheritance_new_cat() # Calculate inheritance. 
+
+        # check if the possible adoptive cat is not already in the family tree and
+        # add them as adoptive parents if not
+        final_adoptive_parents = []
+        for adoptive_p in all_adoptive_parents:
+            if adoptive_p not in all_kitten[0].inheritance.all_involved:
+                final_adoptive_parents.append(adoptive_p)
+
+        # Add the adoptive parents.
+        for kit in all_kitten:
+            kit.adoptive_parents = final_adoptive_parents
+            kit.inheritance.update_inheritance()
+            kit.inheritance.update_all_related_inheritance()
 
         if blood_parent:
             blood_parent.outside = True

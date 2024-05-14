@@ -260,6 +260,8 @@ class AllegiancesScreen(Screens):
         
          # Queens and Kits Box:
         if queen_dict or living_kits or living_queens:
+            _box = ["", ""]
+            _box[0] = '<b><u>QUEENS AND KITS</u></b>'
             
             # This one is a bit different.  First all the queens, and the kits they are caring for. 
             all_entries = []

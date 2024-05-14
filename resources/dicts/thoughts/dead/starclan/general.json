@@ -35,7 +35,14 @@
             "Is hunting mice in StarClan",
             "Is chattering at the birds in StarClan",
             "Is chasing rabbits in StarClan",
-            "Can feel some cat forgetting {PRONOUN/m_c/object}..."
+            "Can feel some cat forgetting {PRONOUN/m_c/object}...",
+            "Is planning to visit a loved one in their dreams",
+            "Purring at {PRONOUN/m_c/poss} deserved peace",
+            "While a bit forlorn at the separation, {PRONOUN/m_c/subject} watches over {PRONOUN/m_c/poss} Clan",
+            "Prays that {PRONOUN/m_c/poss} loved ones' path leads them here",
+            "Is warming {PRONOUN/m_c/poss} belly on a cooling rock, overlooking the starry landscape",
+            "Eyeing down the roaming souls trapped in the Dark Forest, scrowling at them",
+            "Peers down at the roaming souls trapped in the Dark Forest with pity"
         ],
         "random_living_status":[
             "living",
@@ -59,7 +66,9 @@
             "Is thinking about future prophecies with r_c",
             "Is watching over the Clan with r_c",
             "Is listening to long-forgotten stories about the Clan",
-            "Is gossiping with r_c"
+            "Is gossiping with r_c",
+            "Is envisioning with r_c on their lives if they took a different path",
+            "Is galloping beside r_c, racing through starry fields"
         ],
         "random_living_status": [
             "starclan"
@@ -69,7 +78,9 @@
         "id": "founder_dead_to_dead_other",
         "thoughts": [
             "Is speaking with r_c about how c_n came to be",
-            "Is telling other StarClan cats stories of c_n's beginning"
+            "Is telling other StarClan cats stories of c_n's beginning",
+            "Feeling reminiscent of the past, spent the day giving r_c a tale about {PRONOUN/m_c/poss} life before c_n",
+            "Is listening to r_c the chronicle the events that led to c_n's current era"
         ],
         "main_age_constraint": [
             "adolescent",
@@ -87,7 +98,9 @@
         "id": "founder_dead_to_dead_other_founder",
         "thoughts": [
             "Is reminiscing with r_c about how c_n came to be",
-            "Is speaking with r_c about how the Clan they founded had changed"
+            "Is speaking with r_c about how the Clan they founded had changed",
+            "Ponders a thought with r_c -- was {PRONOUN/m_c/poss} Warrior Code, at the time, for the best?",
+            "Was feeling reminiscent, and joined r_c by thinking about their old Clan"
         ],
         "main_age_constraint": [
             "adolescent",
@@ -196,7 +209,8 @@
         "id": "dead_med_cat_to_dead_other",
         "thoughts": [
             "Shares {PRONOUN/m_c/poss} knowledge with r_c",
-            "Is discussing Clan matters with r_c"
+            "Is discussing Clan matters with r_c",
+            "Is debating with r_c about {PRONOUN/m_c/poss} visions for a certain cat"
         ],
         "main_status_constraint": [
             "medicine cat",
@@ -210,7 +224,8 @@
         "id": "dead_med_cat_to_dead_newborn",
         "thoughts": [
             "Softly describes the stars to r_c",
-            "Hums calming melodies to soothe r_c"
+            "Hums calming melodies to soothe r_c",
+            "Is trying to find solace to see r_c in StarClan despite being so young"
         ],
         "main_status_constraint": [
             "medicine cat",
@@ -228,7 +243,10 @@
         "thoughts":[
             "Wants to let r_c know {PRONOUN/m_c/subject} {VERB/m_c/are/is} okay",
             "Wishes {PRONOUN/m_c/subject} could play with r_c",
-            "Is watching r_c play"
+            "Is watching r_c play",
+            "Can't wait to see who r_c would become!",
+            "Imagines if {PRONOUN/m_c/subject} and r_c would've shared the same warrior name",
+            "Squeaking gleefully that {PRONOUN/m_c/subject} {VERB/m_c/can/could} still tussle with r_c in {PRONOUN/r_c/poss} dreams"
         ],
         "main_age_constraint": [
             "newborn",
@@ -279,7 +297,9 @@
         "id": "dead_app_to_alive_app_sibling",
         "thoughts":[
             "Can't wait to find out r_c's new name",
-            "Wishes {PRONOUN/m_c/subject} could train with r_c"
+            "Wishes {PRONOUN/m_c/subject} could train with r_c",
+            "Cheering on to r_c to continue {PRONOUN/r_c/poss} training for the both of them",
+            "Althought a bit envious, {PRONOUN/m_c/subject} {VERB/m_c/is/are} proud of r_c"
         ],
         "main_status_constraint": [
             "apprentice",
@@ -301,7 +321,8 @@
     {
         "id": "dead_app_to_alive_mentor",
         "thoughts": [
-            "Hopes {PRONOUN/m_c/subject} made r_c proud"
+            "Hopes {PRONOUN/m_c/subject} made r_c proud",
+            "Promises to keep r_c's teaching with {PRONOUN/m_c/object} to protect StarClan"
         ],
         "main_status_constraint": [
             "apprentice",
@@ -320,7 +341,8 @@
         "thoughts": [
             "Hopes {PRONOUN/m_c/subject} {VERB/m_c/have/has} been a good mentor to r_c",
             "Wishes {PRONOUN/m_c/subject} could have finished training r_c",
-            "Hopes r_c is training well under {PRONOUN/r_c/poss} new mentor"
+            "Hopes r_c is training well under {PRONOUN/r_c/poss} new mentor",
+            "Is overjoyed r_c continues to use {PRONOUN/m_c/poss} training, even under a new mentor"
         ],
         "relationship_constraint": [
             "mentor/app"

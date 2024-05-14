@@ -23,10 +23,10 @@ use_proxy = False  # Set this to True if you want to use a proxy for the update 
 
 
 class UpdateChannel(StrEnum):
-    STABLE = "stable"
-    STABLE_TEST = "stable-test"
-    DEVELOPMENT = "development"
-    DEVELOPMENT_TEST = "development-test"
+    STABLE = "lifegen-stable"
+    STABLE_TEST = ""
+    DEVELOPMENT = "lifegen-development"
+    DEVELOPMENT_TEST = ""
 
 
 if use_proxy:
@@ -124,7 +124,7 @@ def self_update(
         update_channel: UpdateChannel = UpdateChannel.DEVELOPMENT_TEST,
         progress_bar: UIUpdateProgressBar = None,
         announce_restart_callback: callable = None):
-    print("Updating Clangen...")
+    print("Updating Lifegen...")
 
     platform_name = determine_platform_name()
 
@@ -155,7 +155,7 @@ def self_update(
     better_signature = better_signature.replace("-----END+PGP+SIGNATURE-----", "-----END PGP SIGNATURE-----")
     progress_bar.advance()
 
-    download_file("https://raw.githubusercontent.com/Thlumyn/clangen/development/verification/update_pubkey.asc")
+    download_file("https://raw.githubusercontent.com/sedgestripe/clangen/LifeGen-dev/verification/update_pubkey.asc")
     progress_bar.advance()
 
     key, _ = pgpy.PGPKey.from_file("./Downloads/update_pubkey.asc")
@@ -184,7 +184,7 @@ def self_update(
         with zipfile.ZipFile("download.tmp") as zip_ref:
             zip_ref.extractall('Downloads')
         os.remove("download.tmp")
-        shutil.copy("./Downloads/Clangen/resources/self_updater.exe", "./Downloads/self_updater.exe")
+        shutil.copy("./Downloads/Lifegen/resources/self_updater.exe", "./Downloads/self_updater.exe")
         announce_restart_callback()
         time.sleep(3)
         subprocess.Popen(
@@ -208,17 +208,17 @@ def self_update(
         with tempfile.TemporaryDirectory() as mountdir:
             progress_bar.advance()
 
-            os.system(f'hdiutil attach -nobrowse -mountpoint {mountdir} Downloads/Clangen_macOS64.dmg')
+            os.system(f'hdiutil attach -nobrowse -mountpoint {mountdir} Downloads/Lifegen_macOS64.dmg')
             progress_bar.advance()
 
-            shutil.rmtree('/Applications/Clangen.app.old', ignore_errors=True)
+            shutil.rmtree('/Applications/Lifegen.app.old', ignore_errors=True)
             progress_bar.advance()
 
-            if os.path.exists("/Applications/Clangen.app"):
-                shutil.move('/Applications/Clangen.app', '/Applications/Clangen.app.old')
+            if os.path.exists("/Applications/Lifegen.app"):
+                shutil.move('/Applications/Lifegen.app', '/Applications/Lifegen.app.old')
             progress_bar.advance()
 
-            shutil.copytree(f'{mountdir}/Clangen.app', '/Applications/Clangen.app')
+            shutil.copytree(f'{mountdir}/Lifegen.app', '/Applications/Lifegen.app')
             progress_bar.advance()
 
             shutil.rmtree('Downloads', ignore_errors=True)
@@ -231,7 +231,7 @@ def self_update(
             progress_bar.advance()
         announce_restart_callback()
         time.sleep(3)
-        os.execv('/Applications/Clangen.app/Contents/MacOS/Clangen', sys.argv)
+        os.execv('/Applications/Lifegen.app/Contents/MacOS/Lifegen', sys.argv)
         quit()
 
     elif platform.system() == 'Linux':
@@ -239,9 +239,9 @@ def self_update(
         with tarfile.open("download.tmp", 'r') as tar_ref:
             tar_ref.extractall('Downloads')
         os.remove("download.tmp")
-        shutil.move("Downloads/Clangen", "../clangen_update")
+        shutil.move("Downloads/Lifegen", "../lifegen_update")
         shutil.rmtree(current_folder, ignore_errors=True)
-        shutil.move("../clangen_update", current_folder)
-        os.chmod(current_folder + "/Clangen", 0o755)
-        os.execv(current_folder + "/Clangen", sys.argv)
+        shutil.move("../lifegen_update", current_folder)
+        os.chmod(current_folder + "/Lifegen", 0o755)
+        os.execv(current_folder + "/Lifegen", sys.argv)
         quit()

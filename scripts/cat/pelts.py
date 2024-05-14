@@ -121,7 +121,7 @@ class Pelt():
     
     fruit_accessories = ["RASPBERRY", "BLACKBERRY", "GOLDEN RASPBERRY", "CHERRY", "YEW"]
 
-    crafted_accessories = ["WILLOWBARK BAG", "CLAY DAISY POT", "CLAY AMANITA POT", "CLAY BROWNCAP POT", "BIRD SKULL", "LEAF BOW", "RAINCOAT", "POPTABS", "FAZBEAR", "WHITEBEAR", "PANDA", "BEAR", "BROWNBEAR", "TIDE"]
+    crafted_accessories = ["WILLOWBARK BAG", "CLAY DAISY POT", "CLAY AMANITA POT", "CLAY BROWNCAP POT", "BIRD SKULL", "LEAF BOW", "RAINCOAT", "POPTABS", "FAZBEAR", "WHITEBEAR", "PANDA", "BEAR", "BROWNBEAR", "TIDE", "CELESTIALCHIMES", "LUNARCHIMES", "STARCHIMES", "SILVERLUNARCHIMES", "FIDDLEHEADS", "LANTERNS", "HEARTCHARMS", "CHIMES"]
 
     tail2_accessories = ["SEAWEED", "DAISY CORSAGE"]
 
@@ -270,18 +270,50 @@ class Pelt():
         self.scars = scars if isinstance(scars, list) else []
         self.tint = tint
         self.white_patches_tint = white_patches_tint
+
+        # self.cat_sprites =  {
+        #     "kitten": kitten_sprite if kitten_sprite is not None else random.randint(0, 2),
+        #     "adolescent": adol_sprite if adol_sprite is not None else random.randint(3,5),
+        #     "young adult": adult_sprite if adult_sprite is not None else 0,
+        #     "adult": adult_sprite if adult_sprite is not None else 0,
+        #     "senior adult": adult_sprite if adult_sprite is not None else 0,
+        #     "senior": senior_sprite if senior_sprite is not None else random.randint(12,14),
+        #     "para_adult": para_adult_sprite if para_adult_sprite is not None else 0,
+        # }
+        # if self.cat_sprites['young adult'] == 0 and self.length == 'long':
+        #     adult_sprite = random.randint(9, 11)
+        #     self.cat_sprites['young adult'] = adult_sprite
+        #     self.cat_sprites['adult'] = adult_sprite
+        #     self.cat_sprites['senior adult'] = adult_sprite
+        #     self.cat_sprites['para_adult'] = 16
+        # elif self.cat_sprites['young adult'] == 0:
+        #     adult_sprite = random.randint(6, 8)
+        #     self.cat_sprites['young adult'] = adult_sprite
+        #     self.cat_sprites['adult'] = adult_sprite
+        #     self.cat_sprites['senior adult'] = adult_sprite
+        #     self.cat_sprites['para_adult'] = 15
+
+        # self.cat_sprites['newborn'] = 20
+        # self.cat_sprites['para_young'] = 17
+        # self.cat_sprites["sick_adult"] = 18
+        # self.cat_sprites["sick_young"] = 19
         
         self.reverse = reverse
         self.skin = skin
 
+        if inventory is None:
+            self.inventory = []
+        else:
+            self.inventory = inventory
+
     @staticmethod
-    def generate_new_pelt(genotype, phenotype, gender:str, parents:tuple=(), age:str="adult"):
+    def generate_new_pelt(genotype, phenotype, gender:str, parents:tuple=(), age:str="adult", dead_for=0):
         new_pelt = Pelt(genotype, phenotype)
         
         pelt_white = new_pelt.init_pattern_color(parents, gender)
         new_pelt.init_white_patches(pelt_white, parents)
         new_pelt.init_sprite()
-        new_pelt.init_scars(age)
+        new_pelt.init_scars(age, dead_for)
         new_pelt.init_accessories(age)
         new_pelt.init_eyes(parents)
         new_pelt.init_pattern()
@@ -709,17 +741,20 @@ class Pelt():
         self.cat_sprites['young adult'] = self.cat_sprites['adult']
         self.cat_sprites['senior adult'] = self.cat_sprites['adult']
 
-    def init_scars(self, age):
+    def init_scars(self, age, dead_for):
         if age == "newborn":
             return
-        
-        if age in ['kitten', 'adolescent']:
-            scar_choice = random.randint(0, 50)
-        elif age in ['young adult', 'adult']:
-            scar_choice = random.randint(0, 20)
+        if dead_for > 10:
+            scar_choice = 1
         else:
-            scar_choice = random.randint(0, 15)
-            
+           
+            if age in ['kitten', 'adolescent']:
+                scar_choice = random.randint(0, 50)
+            elif age in ['young adult', 'adult']:
+                scar_choice = random.randint(0, 20)
+            else:
+                scar_choice = random.randint(0, 15)
+
         if scar_choice == 1:
             self.scars.append(choice([
                 choice(Pelt.scars1),

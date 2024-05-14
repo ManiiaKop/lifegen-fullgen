@@ -284,6 +284,7 @@ def create_new_cat(Cat,
                    gender:str=None,
                    thought:str='Is looking around the camp with wonder',
                    alive:bool=True,
+                   df:bool=False,
                    outside:bool=False,
                    parent1:str=None,
                    parent2:str=None,
@@ -364,7 +365,7 @@ def create_new_cat(Cat,
             _gender = choice(['fem', 'masc'])
         else:
             _gender = gender
-
+    
         # other Clan cats, apps, and kittens (kittens and apps get indoctrinated lmao no old names for them)
         if other_clan or kit or litter or age < 12:
             new_cat = Cat(moons=age,
@@ -390,6 +391,7 @@ def create_new_cat(Cat,
 
             # now we make the cats
             if new_name:  # these cats get new names
+                    
                 if choice([1, 2]) == 1:  # adding suffix to OG name
                     spaces = name.count(" ")
                     if spaces > 0:
@@ -402,6 +404,7 @@ def create_new_cat(Cat,
                                   prefix=name,
                                   status=status,
                                   gender=_gender,
+                                  df=df,
                                   backstory=backstory,
                                   parent1=parent1,
                                   parent2=parent2,
@@ -410,6 +413,7 @@ def create_new_cat(Cat,
                     new_cat = Cat(moons=age,
                                   status=status,
                                   gender=_gender,
+                                  df=df,
                                   backstory=backstory,
                                   parent1=parent1,
                                   parent2=parent2,
@@ -421,25 +425,54 @@ def create_new_cat(Cat,
                               suffix="",
                               status=status,
                               gender=_gender,
+                              df=df,
                               backstory=backstory,
                               parent1=parent1,
                               parent2=parent2,
                               kittypet=kittypet)
 
-        # give em a collar if they got one
-        if accessory:
-            new_cat.pelt.accessory = accessory
+            # give em a collar if they got one
+            if accessory:
+                new_cat.pelt.accessories.append(accessory)
 
-        # give apprentice aged cat a mentor
-        if new_cat.age == 'adolescent':
-            new_cat.update_mentor()
+        if df:
+            if status != "kitten":
+                scarchance = randint(1,5)
+                if scarchance == 1 or 2 or 3:
+                    scar = choice(Pelt.scars1)
+                    new_cat.pelt.scars.append(scar)
+                    if new_cat.status in ["warrior", "deputy", "leader"]:
+                        scarchance = randint(1,2)
+                        if scarchance == 1:
+                            scar = choice(Pelt.scars3)
+                            new_cat.pelt.scars.append(scar)
+                    elif new_cat.status in ["medicine cat", "apprentice", 
+                    "elder", "medicine cat apprentice", "queen", "mediator", 
+                    "queen's apprentice", "mediator apprentice"]:
+                        scarchance = randint(1,8)
+                        if scarchance == 1:
+                            scar = choice(Pelt.scars3)
+                            new_cat.pelt.scars.append(scar)
+                    scar2chance = randint(1,50)
+                    if scar2chance == 1:
+                        scar = choice(Pelt.scars2)
+                        new_cat.pelt.scars.append(scar)
+            else:
+                scarchance = randint(1,2)
+                if scarchance == 1:
+                    scar = choice(Pelt.scars1)
+                    new_cat.pelt.scars.append(scar)
+            
+                
+                
 
-        # Remove disabling scars, if they generated.
-        not_allowed = ['NOPAW', 'NOTAIL', 'HALFTAIL', 'NOEAR', 'BOTHBLIND', 'RIGHTBLIND', 
-                       'LEFTBLIND', 'BRIGHTHEART', 'NOLEFTEAR', 'NORIGHTEAR', 'MANLEG']
-        for scar in new_cat.pelt.scars:
-            if scar in not_allowed:
-                new_cat.pelt.scars.remove(scar)
+        # Remove disabling scars on living cats, if they generated.
+        if not df: 
+            not_allowed = ['NOPAW', 'NOTAIL', 'HALFTAIL', 'NOEAR', 'BOTHBLIND', 'RIGHTBLIND', 
+                        'LEFTBLIND', 'BRIGHTHEART', 'NOLEFTEAR', 'NORIGHTEAR', 'MANLEG']
+            for scar in new_cat.pelt.scars:
+                if scar in not_allowed:
+                    new_cat.pelt.scars.remove(scar)
 
         # chance to give the new cat a permanent condition, higher chance for found kits and litters
         if game.clan.game_mode != 'classic':
@@ -470,15 +503,23 @@ def create_new_cat(Cat,
                         new_cat.permanent_condition[chosen_condition]["moons_until"] = -2
 
                     # assign scars
-                    if chosen_condition in ['lost a leg', 'born without a leg']:
+                    if chosen_condition in ['lost a leg', 'born without a leg'] and ('NOPAW') not in new_cat.pelt.scars:
                         new_cat.pelt.scars.append('NOPAW')
-                    elif chosen_condition in ['lost their tail', 'born without a tail']:
+                    elif chosen_condition in ['lost their tail', 'born without a tail'] and ('NOTAIL') not in new_cat.pelt.scars:
                         new_cat.pelt.scars.append("NOTAIL")
 
         if outside:
             new_cat.outside = True
         if not alive:
             new_cat.die()
+
+        if not alive and df:
+            new_cat.df = True
+        else:
+        # give apprentice aged cat a mentor
+        # this is in a weird spot but DF cats were getting clancat mentors otherwise
+            if new_cat.age == 'adolescent':
+                new_cat.update_mentor()
 
         # newbie thought
         new_cat.thought = thought
@@ -489,11 +530,21 @@ def create_new_cat(Cat,
         history = History()
         history.add_beginning(new_cat)
 
+        if new_cat.df:
+            new_cat.dead_for = randint(90,190)
+            new_cat.dead = True
+            new_cat.status = status
+
+        if new_cat.dead and not new_cat.df and not new_cat.outside:
+            new_cat.dead_for = randint(90,190)
+            new_cat.status = status
+     
+
         # create relationships
         new_cat.create_relationships_new_cat()
         # Note - we always update inheritance after the cats are generated, to
-        # allow us to add parents. 
-        #new_cat.create_inheritance_new_cat() 
+        # allow us to add parents.
+        #new_cat.create_inheritance_new_cat()
 
     return created_cats
 
@@ -511,7 +562,7 @@ def create_outside_cat(Cat, status, backstory, age=None, alive=True, thought=Non
         name = choice(names.names_dict["loner_names"])
     elif status in ['loner', 'rogue']:
         name = choice(names.names_dict["loner_names"] +
-                      names.names_dict["normal_prefixes"])
+                    names.names_dict["normal_prefixes"])
     elif status == 'former Clancat':
         name = choice(names.names_dict["normal_prefixes"])
         suffix = choice(names.names_dict["normal_suffixes"])
@@ -524,7 +575,7 @@ def create_outside_cat(Cat, status, backstory, age=None, alive=True, thought=Non
                   backstory=backstory,
                   kittypet=True if status == 'kittypet' else False)
     if status == 'kittypet':
-        new_cat.pelt.accessory = choice(Pelt.collars)
+        new_cat.pelt.accessories.append(choice(Pelt.collars))
     new_cat.outside = True
 
     if(age):
@@ -541,11 +592,11 @@ def create_outside_cat(Cat, status, backstory, age=None, alive=True, thought=Non
     new_cat.create_relationships_new_cat()
     new_cat.create_inheritance_new_cat()
 
+
     game.clan.add_cat(new_cat)
     game.clan.add_to_outside(new_cat)
     name = str(name + suffix)
 
-    #return new_cat
     return new_cat
 
 
@@ -782,15 +833,15 @@ def get_cluster(trait):
         # Mapping traits to their respective clusters
         trait_to_clusters = {
             "assertive": ["troublesome", "fierce", "bold", "daring", "confident", "adventurous", "arrogant", "competitive", "smug", "impulsive", "noisy"],
-            "brooding": ["bloodthirsty", "cold", "strict", "vengeful", "grumpy", "bullying", "secretive", "aloof", "stoic"],
-            "cool": ["charismatic", "sneaky", "cunning", "arrogant", "charming", "manipulative", "leader-like", "passionate", "witty", "flexible"],
-            "upstanding": ["righteous", "ambitious", "strict", "competitive", "responsible", "bossy", "know-it-all", "leader-like", "smug", "loyal"],
-            "introspective": ["lonesome", "righteous", "calm", "gloomy", "wise", "thoughtful", "quiet", "daydreamer", "flexible"],
-            "neurotic": ["nervous", "insecure", "lonesome", "quiet", "secretive", "careful", "meek", "mellow"],
-            "silly": ["troublesome", "childish", "playful", "strange", "noisy", "attention-seeker", "rebellious"],
+            "brooding": ["bloodthirsty", "cold", "strict", "vengeful", "grumpy", "bullying", "secretive", "aloof", "stoic", "reserved"],
+            "cool": ["charismatic", "sneaky", "cunning", "arrogant", "charming", "manipulative", "leader-like", "passionate", "witty", "flexible", "mellow"],
+            "upstanding": ["righteous", "ambitious", "strict", "competitive", "responsible", "bossy", "know-it-all", "leader-like", "smug", "loyal", "justified", "methodical"],
+            "introspective": ["lonesome", "righteous", "calm", "gloomy", "wise", "thoughtful", "quiet", "daydreamer", "flexible", "mellow"],
+            "neurotic": ["nervous", "insecure", "lonesome", "quiet", "secretive", "careful", "meek", "cowardly", "reserved", "emotional"],
+            "silly": ["troublesome", "childish", "playful", "strange", "noisy", "attention-seeker", "rebellious", "bouncy", "energetic", "spontaneous"],
             "stable": ["loyal", "responsible", "wise", "faithful", "polite", "disciplined", "patient", "passionate", "witty", "trusting"],
-            "sweet": ["compassionate", "faithful", "loving", "oblivious", "sincere", "sweet", "polite", "daydreamer", "trusting", "humble"],
-            "unabashed": ["childish", "confident", "bold", "shameless", "strange", "oblivious", "flamboyant", "impulsive", "noisy", "honest"],
+            "sweet": ["compassionate", "faithful", "loving", "oblivious", "sincere", "sweet", "polite", "daydreamer", "trusting", "humble", "emotional"],
+            "unabashed": ["childish", "confident", "bold", "shameless", "strange", "oblivious", "flamboyant", "impulsive", "noisy", "honest", "spontaneous"],
             "unlawful": ["bloodthirsty", "sneaky", "rebellious", "manipulative", "obsessive", "aloof", "stoic"]
         }
         clusters = [key for key, values in trait_to_clusters.items() if trait in values]
@@ -864,6 +915,8 @@ def adjust_list_text(list_of_items):
     :param list_of_items: the list of items you want converted
     :return: the new string
     """
+    if len(list_of_items) == 0:
+        return ""
     if len(list_of_items) == 1:
         insert = f"{list_of_items[0]}"
     elif len(list_of_items) == 2:
@@ -1035,13 +1088,17 @@ def ongoing_event_text_adjust(Cat, text, clan=None, other_clan_name=None):
     cat_dict = {}
     if "lead_name" in text:
         kitty = Cat.fetch_cat(game.clan.leader)
-        cat_dict["lead_name"] = (str(kitty.name), choice(kitty.pronouns))
+        if kitty:
+            cat_dict["lead_name"] = (str(kitty.name), choice(kitty.pronouns))
     if "dep_name" in text:
         kitty = Cat.fetch_cat(game.clan.deputy)
-        cat_dict["dep_name"] = (str(kitty.name), choice(kitty.pronouns))
+        if kitty:
+            cat_dict["dep_name"] = (str(kitty.name), choice(kitty.pronouns))
     if "med_name" in text:
-        kitty = choice(get_med_cats(Cat, working=False))
-        cat_dict["med_name"] = (str(kitty.name), choice(kitty.pronouns))
+        kitty_list = get_med_cats(Cat, working=False)
+        kitty = choice(kitty_list) if kitty_list else None 
+        if kitty:
+            cat_dict["med_name"] = (str(kitty.name), choice(kitty.pronouns))
 
     if cat_dict:
         text = process_text(text, cat_dict)
@@ -1089,14 +1146,24 @@ def event_text_adjust(Cat,
         cat_dict["m_c"] = (str(cat.name), choice(cat.pronouns))
         cat_dict["p_l"] = cat_dict["m_c"]
     if "acc_plural" in text:
-        text = text.replace("acc_plural", str(ACC_DISPLAY[cat.pelt.accessory]["plural"]))
+        if cat.pelt.accessory and cat.pelt.accessory not in cat.pelt.accessories:
+            cat.pelt.accessories.append(cat.pelt.accessory)
+        acc = cat.pelt.accessories[-1]
+        text = text.replace("acc_plural", str(ACC_DISPLAY[acc]["plural"]))
     if "acc_singular" in text:
-        text = text.replace("acc_singular", str(ACC_DISPLAY[cat.pelt.accessory]["singular"]))
+        if cat.pelt.accessory and cat.pelt.accessory not in cat.pelt.accessories:
+            cat.pelt.accessories.append(cat.pelt.accessory)
+        acc = cat.pelt.accessories[-1]
+        text = text.replace("acc_singular", str(ACC_DISPLAY[acc]["singular"]))
 
-    if murder_reveal:
-        victim_cat = Cat.fetch_cat(victim)
-        if victim_cat:
-            text = text.replace("mur_c", str(victim_cat.name))
+    # if murder_reveal:
+        
+    # I would like to keep an "if murder_reveal" type statement,
+    # but with this one, mur_c wont work on murder reveals where the Clan doesnt find out.
+        
+    victim_cat = Cat.fetch_cat(victim)
+    if victim_cat and "mur_c" in text:
+        text = text.replace("mur_c", str(victim_cat.name))
     
     if other_cat:
         if other_cat.pronouns:

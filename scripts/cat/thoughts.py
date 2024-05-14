@@ -280,7 +280,7 @@ class Thoughts():
         elif status == "mediator apprentice":
             status = "mediator_apprentice"
         elif status == "queen's apprentice":
-            status == "queen's_apprentice"
+            status = "queen_apprentice"
         elif status == "medicine cat":
             status = "medicine_cat"
         elif status == 'former Clancat':
@@ -295,16 +295,43 @@ class Thoughts():
             spec_dir = "/alive_outside"
         elif main_cat.dead and not main_cat.outside and not main_cat.df:
             spec_dir = "/starclan"
-        elif main_cat.dead and not main_cat.outside and main_cat.df:
+        elif main_cat.dead and main_cat.df:
             spec_dir = "/darkforest"
-        elif main_cat.dead and main_cat.outside:
+        elif main_cat.dead and main_cat.outside and not main_cat.df:
             spec_dir = "/unknownresidence"
         else:
             spec_dir = ""
 
+        if main_cat.dead and main_cat.df and status == "warrior":
+            status = 'warrior'
+        elif status == "apprentice":
+            status = "apprentice"
+        elif status == "medicine cat":
+            status = "medicine_cat"
+        elif status == "medicine cat apprentice":
+            status = "medicine_cat_apprentice"
+        elif status == "elder":
+            status = "elder"
+        elif status == "mediator":
+            status = "mediator"
+        elif status == "mediator apprentice":
+            status = "mediator_apprentice"
+        elif status == "queen":
+            status = "queen"
+        elif status == "queen's apprentice":
+            status = "queen_apprentice"
+        elif status == "deputy":
+            status = "deputy"
+        elif status == "leader":
+            status = "leader"
+        elif status == "kitten":
+            status = "kitten"
+       
+
+
         THOUGHTS = []
         # newborns only pull from their status thoughts. this is done for convenience
-        if main_cat.age == 'newborn':
+        if main_cat.age == 'newborn' or main_cat.moons <= 0:
             with open(f"{base_path}{life_dir}{spec_dir}/newborn.json", 'r') as read_file:
                 THOUGHTS = ujson.loads(read_file.read())
             loaded_thoughts = THOUGHTS
@@ -316,14 +343,18 @@ class Thoughts():
                 GENTHOUGHTS = ujson.loads(read_file.read())
             SHUNNEDTHOUGHTS = []
             try:
-                if not main_cat.dead and not main_cat.outside and  main_cat.revealed != 0 and game.clan.age - 3 <= main_cat.revealed:
+                if main_cat.shunned > 0 and not main_cat.dead and not main_cat.outside:
                     with open(f"{base_path}{life_dir}{spec_dir}/shunned.json", 'r') as read_file:
                         SHUNNEDTHOUGHTS = ujson.loads(read_file.read())
             except:
-                pass
-            loaded_thoughts = THOUGHTS 
-            loaded_thoughts += GENTHOUGHTS
-            loaded_thoughts += SHUNNEDTHOUGHTS
+                print ('Shunned thoughts could not be loaded.')
+            
+            if main_cat.shunned > 0 and not main_cat.outside:
+                loaded_thoughts = SHUNNEDTHOUGHTS
+            else:
+                loaded_thoughts = THOUGHTS
+                loaded_thoughts += GENTHOUGHTS
+                loaded_thoughts += SHUNNEDTHOUGHTS
         final_thoughts = Thoughts.create_thoughts(loaded_thoughts, main_cat, other_cat, game_mode, biome, season, camp)
 
         return final_thoughts
@@ -335,7 +366,6 @@ class Thoughts():
             chosen_thought_group = choice(Thoughts.load_thoughts(main_cat, other_cat, game_mode, biome, season, camp))
             chosen_thought = choice(chosen_thought_group["thoughts"])
         except Exception:
-            traceback.print_exc()
             chosen_thought = "Prrrp! You shouldn't see this! Report as a bug."
 
         return chosen_thought

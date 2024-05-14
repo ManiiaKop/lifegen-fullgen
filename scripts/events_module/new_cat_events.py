@@ -12,6 +12,7 @@ from scripts.event_class import Single_Event
 from scripts.cat.names import Name
 from scripts.cat.history import History
 
+# pylint: disable=f-string-without-interpolation
 
 # ---------------------------------------------------------------------------- #
 #                               New Cat Event Class                              #
@@ -35,27 +36,42 @@ class NewCatEvents:
             other_clan = game.clan.all_clans[0]
             other_clan_name = f'{other_clan.name}Clan'
 
-        
         #Determine
         if NewCatEvents.has_outside_cat():
             if random.randint(1, 3) == 1:
                 outside_cat = NewCatEvents.select_outside_cat()
                 backstory = outside_cat.status
                 outside_cat = NewCatEvents.update_cat_properties(outside_cat)
-                event_text = f"A {backstory} named {outside_cat.name} waits on the border, asking to join the Clan."
+
+                if outside_cat.shunned >= 1:
+                    event_text = f"A patrol finds {outside_cat.name} on the border, where they ask to be let into the Clan."
+                    allowchance = random.randint(1,2)
+                    if allowchance == 1:
+                        event_text = event_text + f" After some deliberation, they are accepted."
+                    else:
+                        event_text = event_text + f" The patrol sends them off with a reminder of why they had to leave to begin with."
+                        return
+                else:
+                    event_text = f"A {backstory} named {outside_cat.name} waits on the border, asking to join the Clan."
                 name_change = random.choice([1, 2])
-                if name_change == 1 or backstory == 'former Clancat':
-                    event_text = event_text + f" They decide to keep their name."
-                elif name_change == 2 and backstory != 'former Clancat':
-                    outside_cat.name = Name(outside_cat.status, 
-                                            colour=outside_cat.pelt.colour,
-                                            eyes=outside_cat.pelt.eye_colour,
-                                            pelt=outside_cat.pelt.name,
-                                            tortiepattern=outside_cat.pelt.tortiepattern,
-                                            biome=game.clan.biome)
-                    
-                    event_text = event_text + f" They decide to take a new name, {outside_cat.name}."
-                outside_cat.thought = "Is looking around the camp with wonder"
+
+                if outside_cat.shunned == 0:
+                    if name_change == 1 or backstory == 'former Clancat':
+                        event_text = event_text + f" They decide to keep their name."
+                    elif name_change == 2 and backstory != 'former Clancat':
+                        outside_cat.name = Name(outside_cat.status,
+                                                colour=outside_cat.pelt.colour,
+                                                eyes=outside_cat.pelt.eye_colour,
+                                                pelt=outside_cat.pelt.name,
+                                                tortiepattern=outside_cat.pelt.tortiepattern,
+                                                biome=game.clan.biome)
+                        
+                        event_text = event_text + f" They decide to take a new name, {outside_cat.name}."
+                if outside_cat.shunned == 0:
+                    outside_cat.thought = "Is looking around the camp with wonder"
+                else:
+                    outside_cat.thought = "Is glad to be back, despite everything"
+                    outside_cat.shunned = 0
                 involved_cats = [outside_cat.ID]
                 game.cur_events_list.append(Single_Event(event_text, ["misc"], involved_cats))
 
@@ -303,6 +319,19 @@ class NewCatEvents:
         outside_cats = [i for i in Cat.all_cats.values() if i.status in ["kittypet", "loner", "rogue", "former Clancat"] and not i.dead and i.outside]
         if outside_cats:
             return random.choice(outside_cats)
+        else:
+            return None
+        
+    @staticmethod
+    def has_exiled_cat():
+        exiled_cats = [i for i in Cat.all_cats.values() if i.status == "exiled" and not i.dead]
+        return any(exiled_cats)
+
+    @staticmethod
+    def select_exiled_cat():
+        exiled_cats = [i for i in Cat.all_cats.values() if i.status == "exiled" and not i.dead]
+        if exiled_cats:
+            return random.choice(exiled_cats)
         else:
             return None
         

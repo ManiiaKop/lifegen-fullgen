@@ -725,7 +725,7 @@
             "unabashed"
         ],
         [
-            "Frankly, I'd rather eat all our clan's dirt left in the dirtplace."
+            "Frankly, I'd rather eat all our Clan's dirt left in the dirtplace."
         ]
     ],
     "d5f4xs4": [
@@ -783,7 +783,7 @@
         ],
         [
             "Hehe. Thanks, cutie. But I just don't like you like that.",
-            "Hey, keep your chin up, though. Plenty of other cats in the clan who might catch your interest."
+            "Hey, keep your chin up, though. Plenty of other cats in the Clan who might catch your interest."
         ]
     ],
     "j7g8df9": [
@@ -2005,6 +2005,549 @@
         ],
         [
             "I'm... taking things slow right now."
+        ]
+    ],
+    "flirt_sh_J25": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "Ew. Why would you say that to anycat, given your situation?",
+            "Murderers don't get love, y_c. Stop trying."
+        ]
+    ],
+    "flirt_sh_J26": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "Please don't say that to me right now."
+        ]
+    ],
+    "flirt_sh_J27": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "flirt",
+            "they_deaf"
+        ],
+        [
+            "[t_c just blinks at you, trying not to react.]"
+        ]
+    ],
+    "flirt_sh_J28": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "flirt",
+            "from_mate"
+        ],
+        [
+            "Oh, darling. Not now."
+        ]
+    ],
+    "flirt_sh_J29": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "flirt",
+            "from_mate",
+            "they_deaf",
+            "you_deaf"
+        ],
+        [
+            "[t_c playfully taps you with their tail before pulling it away before anyone cat see.]"
+        ]
+    ],
+    "flirt_sh_J30": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "You're very cruel, y_c."
+        ]
+    ],
+    "flirt_sh_J31": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "No, no, don't do that. Not now."
+        ]
+    ],
+    "flirt_sh_J32": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "Maybe I could have liked you if you weren't so evil."
+        ]
+    ],
+    "flirt_sh_J33": [
+        [
+            "Any",
+            "they_shunned",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "Oh, um... thank you..."
+        ]
+    ],
+    "flirt_sh_J34": [
+        [
+            "Any",
+            "they_shunned",
+            "grievingyou",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "What's going on..?"
+        ]
+    ],
+    "flirt_sh_J35": [
+        [
+            "Any",
+            "grievingyou",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "What's going on..?"
+        ]
+    ],
+    "flirt_sh_J36": [
+        [
+            "Any",
+            "they_shunned",
+            "they_grieving",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "What's going on..?"
+        ]
+    ],
+    "flirt_sh_J37": [
+        [
+            "Any",
+            "they_grieving",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "What's going on..?"
+        ]
+    ],
+    "flirting_shunned_CM1": [
+        [
+            "any",
+            "they_shunned"
+        ],
+        [
+            "...... What?",
+            "y_c, oh, y-c. You know what I've done. You can't - we can't... oh no..",
+            "[t_c curls up on the ground, burying their face into their pelt as their muzzle turns red.]"
+        ]
+    ],
+    "flirting_shunned_CM2": [
+        [
+            "any",
+            "they_shunned",
+            "reject"
+        ],
+        [
+            "[t_c frowns at you, their claws pressing out.]",
+            "You're not supposed to be talking to me, nevermind saying stupid things like that."
+        ]
+    ],
+    "flirting_shunned_CM3": [
+        [
+            "any",
+            "they_shunned",
+            "reject"
+        ],
+        [
+            "No.",
+            "Now get lost before I tell l_n all about what you just said to me.",
+            "I'm sure their face would be hilarious."
+        ]
+    ],
+    "flirting_shunned_Ren1": [
+        [
+            "any",
+            "they_shunned"
+        ],
+        [
+            "[You approached t_c, quietly starting to flirt with them.]",
+            "y_c. I murdered our Clanmate. Why are you talking to me, let alone like this?",
+            "[You tell t_c that you never liked that Clanmate anyway, and maybe you like a little danger too.]"
+        ]
+    ],
+    "flirting_shunned_Ren2": [
+        [
+            "any",
+            "they_shunned",
+            "reject"
+        ],
+        [
+            "[You decide to start flirting with t_c in an attempt to see where it leads. They do not seem amused.]",
+            "y_c. I murdered our Clanmate. I'm not afraid to go after you too if you keep at it.",
+            "[You try one more time, but t_c lashes out at you, not afraid to get more blood on their claws. It seems they aren't too fond of you.]"
+        ]
+    ],
+    "flirting_shunned_SQ3": [
+        [
+            "Any",
+            "you_shunned",
+            "reject"
+        ],
+        [
+            "[t_c backs away, their fur bristling.]",
+            "You aren't allowed to <i>talk</i> to me, let alone say something like that.",
+            "I might not be a murderer, but I still know how to use these claws.",
+            "Remember that next time you even <i>think</i> about opening your mouth."
+        ]
+    ],
+    "flirting_shunned_SQ4": [
+        [
+            "Any",
+            "you_shunned"
+        ],
+        [
+            "[You call softly to t_c as they pass, and they stop in their tracks.]",
+            "I... y_c?",
+            "[Across the camp, l_n pulls away from a discussion with r_w and strides towards you, their eyes narrowed.]",
+            "[t_c hastily backs away as they also notice l_n, though you see them trying to hide their smile.]"
+        ]
+    ],
+    "flirting_shunned_CM4": [
+        [
+            "any",
+            "both_shunned"
+        ],
+        [
+            ".. That gives me an idea, y_c.",
+            "c_nClan will never see us the same. We'll always be the dirt on their paws because we have blood on our own.",
+            "We should leave, y_c, make something for us - maybe an entire Clan. But I won't leave until you're ready to come with me.",
+            "I couldn't do it alone."
+        ]
+    ],
+    "flirting_shunned_SQ1": [
+        [
+            "Any",
+            "both_shunned",
+            "reject"
+        ],
+        [
+            "[t_c stares as you for a second, their tail lashing.]",
+            "What is wrong with you? Do you think this is some kind of opportunity? Just because the Clan hates us doesn't mean I have to... <i>like</i> you.",
+            "[They turn away, hissing over their shoulder.]",
+            "I have other things to worry about, y_c. You should probably get your priorities straight, too."
+        ]
+    ],
+    "flirting_shunned_SQ2": [
+        [
+            "Any",
+            "both_shunned"
+        ],
+        [
+            "[Long after sundown, you and t_c are curled up in your makeshift nests at the edge of camp, but from their constant shifting, it's clear they're having trouble sleeping.]",
+            "[You lean over and rest your head on t_c, whispering to them. For a moment, they seem frozen, but then they press closer.]",
+            "You... mean that? Even now?",
+            "[They curl their tail around you, and you do the same. You stay like that for a while, listening to t_c's breathing and sounds from the camp where neither of you are welcome.]"
+        ]
+    ],
+    "grieving_flirt_CM1": [
+        [
+            "Any",
+            "they_grieving",
+            "reject",
+            "dead_close"
+        ],
+        [
+            "[t_c barely looks up at you, choking out a sob as they tremble.]",
+            "y_c, y_c I'm sorry. I- <i>hic</i> I can't...",
+            "I can't love anyone like I did d_c.",
+            "It.. if I lost you... it would destroy me if I did."
+        ]
+    ],
+    "grieving_flirt_reuse1": [
+        [
+            "Any",
+            "they_grieving",
+            "brooding",
+            "introspective",
+            "reject"
+        ],
+        [
+            "Right now, my emotions are too raw for anything more."
+        ]
+    ],
+    "grieving_flirt_reuse2": [
+        [
+            "Any",
+            "they_grieving",
+            "upstanding",
+            "stable",
+            "sweet",
+            "reject"
+        ],
+        [
+            "I need some time to heal. Please understand."
+        ]
+    ],
+    "grieving_flirt_reuse3": [
+        [
+            "Any",
+            "they_grieving",
+            "assertive",
+            "upstanding",
+            "introspective",
+            "stable",
+            "reject"
+        ],
+        [
+            "Now's not a good time for me. I hope you get that."
+        ]
+    ],
+    "grieving_flirt_reuse4": [
+        [
+            "Any",
+            "they_grieving"
+        ],
+        [
+            "Um, thank you... but I'm... I'm still processing things."
+        ]
+    ],
+    "grieving_flirt_reuse5": [
+        [
+            "Any",
+            "they_grieving",
+            "assertive",
+            "unlawful",
+            "reject"
+        ],
+        [
+            "Not the time or the place. Move along."
+        ]
+    ],
+    "grieving_flirt_reuse6": [
+        [
+            "Any",
+            "they_grieving",
+            "cool",
+            "silly",
+            "unabashed",
+            "reject"
+        ],
+        [
+            "Well, that's just what I needed. More complicated feelings!"
+        ]
+    ],
+    "grieving_flirt_reuse7": [
+        [
+            "Any",
+            "they_grieving",
+            "assertive",
+            "upstanding",
+            "brooding",
+            "reject"
+        ],
+        [
+            "Why now? Why me?"
+        ]
+    ],
+    "grieving_flirt_Guy1": [
+        [
+            "Any",
+            "they_grieving",
+            "dead_close",
+            "reject"
+        ],
+        [
+            "[t_c opens their maws and snarls at you]",
+            "How <b>dare</b> you y_c. How dare you think you can replace d_c!"
+        ]
+    ],
+    "grieving_flirt_reuse11": [
+        [
+            "Any",
+            "they_grieving",
+            "you_grieving",
+            "brooding",
+            "introspective",
+            "reject"
+        ],
+        [
+            "Right now, my emotions are too raw for anything more."
+        ]
+    ],
+    "grieving_flirt_reuse22": [
+        [
+            "Any",
+            "they_grieving",
+            "you_grieving",
+            "upstanding",
+            "stable",
+            "sweet",
+            "reject"
+        ],
+        [
+            "I need some time to heal. Please understand."
+        ]
+    ],
+    "grieving_flirt_reuse31": [
+        [
+            "Any",
+            "they_grieving",
+            "you_grieving",
+            "assertive",
+            "upstanding",
+            "introspective",
+            "stable",
+            "reject"
+        ],
+        [
+            "Now's not a good time for me. I hope you get that."
+        ]
+    ],
+    "grieving_flirt_reuse42": [
+        [
+            "Any",
+            "they_grieving",
+            "you_grieving"
+        ],
+        [
+            "Um, thank you... but I'm... I'm still processing things."
+        ]
+    ],
+    "grieving_flirt_reuse51": [
+        [
+            "Any",
+            "they_grieving",
+            "you_grieving",
+            "assertive",
+            "unlawful",
+            "reject"
+        ],
+        [
+            "Not the time or the place. Move along."
+        ]
+    ],
+    "grieving_flirt_reuse62": [
+        [
+            "Any",
+            "they_grieving",
+            "you_grieving",
+            "cool",
+            "silly",
+            "unabashed",
+            "reject"
+        ],
+        [
+            "Well, that's just what I needed. More complicated feelings!"
+        ]
+    ],
+    "grieving_flirt_reuse71": [
+        [
+            "Any",
+            "they_grieving",
+            "you_grieving",
+            "assertive",
+            "upstanding",
+            "brooding",
+            "reject"
+        ],
+        [
+            "Why now? Why me?"
+        ]
+    ],
+    "grieving_flirt_Guy21": [
+        [
+            "Any",
+            "they_grieving",
+            "you_grieving",
+            "dead_close",
+            "reject"
+        ],
+        [
+            "[t_c opens their maws and snarls at you]",
+            "How <b>dare</b> you y_c. How dare you think you can replace d_c!"
+        ]
+    ],
+    "grieving_flirt_reuse432": [
+        [
+            "Any",
+            "they_grieving",
+            "you_shunned"
+        ],
+        [
+            "Um, thank you... but I'm... I'm still processing things."
+        ]
+    ],
+    "grieving_flirt_reuse5121": [
+        [
+            "Any",
+            "they_grieving",
+            "you_shunned",
+            "reject"
+        ],
+        [
+            "Not the time or the place. Move along."
+        ]
+    ],
+    "grieving_flirt_reuse41": [
+        [
+            "Any",
+            "they_shunned",
+            "you_grieving"
+        ],
+        [
+            "Um, thank you... but I'm... I'm still processing things."
+        ]
+    ],
+    "grieving_flirt_reuse511": [
+        [
+            "Any",
+            "they_shunned",
+            "you_grieving",
+            "reject"
+        ],
+        [
+            "Not the time or the place. Move along."
         ]
     ]
 }

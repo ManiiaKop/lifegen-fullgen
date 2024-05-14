@@ -127,7 +127,7 @@ class QueenScreen(Screens):
                                                      manager=MANAGER)
         self.activities = pygame_gui.elements.UIDropDownMenu(["mossball", "playfight", "lecture", "clean", "tell story", "scavenger hunt"], "mossball", scale(pygame.Rect((200, 300), (300, 70))), manager=MANAGER)
         self.confirm_mentor = UIImageButton(scale(pygame.Rect((580, 300), (208, 52))), "",
-                                            object_id="#patrol_select_button")
+                                            object_id="#play_select")
         if self.the_cat.did_activity:
             self.confirm_mentor.disable()
         self.activity_box = pygame_gui.elements.UITextBox("",

@@ -180,7 +180,7 @@ class Relation_Events():
 
         if chosen_type != "all":
             possible_interaction_cats = Relation_Events.cats_with_relationship_constraints(cat,
-                                                                                           Relation_Events.GROUP_TYPES[chosen_type]["constraint"])
+                                                                        Relation_Events.GROUP_TYPES[chosen_type]["constraint"])
 
         interacted_cat_ids = Group_Events.start_interaction(cat, possible_interaction_cats)
         for id in interacted_cat_ids:
@@ -253,7 +253,9 @@ class Relation_Events():
                 (not cat.dead and not cat.outside and not cat.exiled),
                 Cat.all_cats.values())
         )
-        cat_list.remove(main_cat)
+        if main_cat in cat_list:
+            cat_list.remove(main_cat)
+        
         filtered_cat_list = []
         
         for inter_cat in cat_list:

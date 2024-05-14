@@ -951,6 +951,8 @@
                 "weight": 10,
                 "dead_cats": ["multi", "some_lives"],
                 "history_text": {
+                    "reg_death": "m_c died from {PRONOUN/m_c/poss} wounds after battling a Rat King.",
+                    "lead_death": "fought a Rat King"
                     "reg_death": "m_c died from {PRONOUN/m_c/poss} wounds after battling the rat king."
                 },
                 "relationships": [
@@ -970,6 +972,8 @@
                 "stat_skill": ["HUNTER,2"],
                 "dead_cats": ["s_c"],
                 "history_text": {
+                    "reg_death": "m_c died from {PRONOUN/m_c/poss} wounds after battling a Rat King.",
+                    "lead_death": "fought a Rat King"
                     "reg_death": "m_c died from {PRONOUN/m_c/poss} wounds after battling the rat king."
                 },
                 "relationships": [
@@ -3731,7 +3735,7 @@
                 "history_text": {
                     "scar": "m_c will always carry the scars from falling from the treetops while nest raiding alone.",
                     "reg_death": "m_c died falling from the treetops, out on a solo nest raid.",
-                    "lead_death": "falling from the treetops"
+                    "lead_death": "fell from the treetops"
                 }
             },
             {
@@ -3810,7 +3814,7 @@
                 "history_text": {
                     "scar": "m_c will always carry the scars from falling from the treetops while nest raiding alone.",
                     "reg_death": "m_c died falling from the treetops, out on a solo nest raid.",
-                    "lead_death": "falling from the treetops"
+                    "lead_death": "fell from the treetops"
                 }
             },
             {
@@ -3839,7 +3843,7 @@
                 "history_text": {
                     "scar": "m_c will always carry the scars from falling from the treetops while nest raiding alone.",
                     "reg_death": "m_c died falling from the treetops, out on a solo nest raid.",
-                    "lead_death": "falling from the treetops"
+                    "lead_death": "fell from the treetops"
                 }
             },
             {

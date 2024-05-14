@@ -1,8 +1,4 @@
 {
-    "python.formatting.provider": "yapf",
-    "editor.formatOnSave": false,
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
     "python.testing.unittestArgs": [
         "-v",
         "-s",
@@ -35,5 +31,7 @@
         "Twolegs",
         "ujson",
         "verdana"
-    ]
+    ],
+
+    "python.formatting.provider": "autopep8"
 }

@@ -145,7 +145,7 @@
         ],
         [
             "You talk in your sleep, y'know, y_c? It woke me up last night",
-            "It sounded like you were saying 'your_crush, oh, your_crush' over and over. You kept on calling out for them ...",
+            "It sounded like you were mumbling about your_crush ...",
             "... Something you wanna announce to the Clan, y_c? *snrk*"
         ]
     ],
@@ -284,7 +284,7 @@
         ],
         [
             "What's wrong, y_c? Romantic troubles? Is your_crush getting you down?",
-            "Ah, don't let it worry you, even for one second. You're so amazing, y_c ... any cat in this clan would be lucky to have you.",
+            "Ah, don't let it worry you, even for one second. You're so amazing, y_c ... any cat in this Clan would be lucky to have you.",
             "And if your_crush can't see that, they must be the most mouse-brained cat on this entire planet!",
             "In fact, I'm sure there's plenty of cats who would do just about anything to be with you, but are too afraid to say it ...",
             "Ahem. [t_c blushes and glances away.]"
@@ -434,6 +434,17 @@
             "What? I'm just saying! I've seen the way they look at you!",
             "Not like they're exactly bad looking either... You could certainly do much worse!",
             "Okay, okay, I'll stop now. Hehe!"
+        ]
+    ],
+    "yourcrush_youshunned_J1": [
+        [
+            "you_shunned",
+            "any"
+        ],
+        [
+            "[t_c catches you watching your_crush sharing tongues across camp.]",
+            "Aw, buddy.",
+            "Never gonna happen. Not now."
         ]
     ]
 }

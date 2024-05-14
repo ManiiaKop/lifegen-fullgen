@@ -5,7 +5,7 @@ TODO: Docs
 
 
 """
-
+# testt
 # pylint: enable=line-too-long
 
 import random
@@ -24,12 +24,13 @@ import statistics
 from scripts.game_structure.game_essentials import game
 from scripts.housekeeping.version import get_version_info, SAVE_VERSION_NUMBER
 from scripts.utility import update_sprite, get_current_season, quit  # pylint: disable=redefined-builtin
-from scripts.cat.cats import Cat, cat_class
+from scripts.cat.cats import Cat, cat_class, BACKSTORIES
 from scripts.cat.pelts import Pelt
 from scripts.cat.names import names
 from scripts.clan_resources.freshkill import Freshkill_Pile, Nutrition
 from scripts.cat.sprites import sprites
 from sys import exit  # pylint: disable=redefined-builtin
+from scripts.cat.names import Name
 
 
 class Clan():
@@ -52,6 +53,8 @@ class Clan():
         "mediator",
         "queen",
         "general",
+        "exiled",
+        "former Clancat"
     ]
     
 
@@ -92,8 +95,9 @@ class Clan():
                  game_mode='classic',
                  starting_members=[],
                  starting_season='Newleaf',
-                 followingsc=None,
-                 your_cat=None):
+                 followingsc=True,
+                 your_cat=None,
+                 self_run_init_functions = False):
         self.history = History()
         self.your_cat = your_cat
         if name == "":
@@ -127,16 +131,18 @@ class Clan():
         self.current_season = 'Newleaf'
         self.starting_season = starting_season
         self.instructor = None
-        # ^^ starclan guide 
+        # ^^ starclan guide
         self.demon = None
-        # ^^ dark forest guide 
-        self.followingsc = True
+        # ^^ dark forest guide
+        self.followingsc = followingsc
         self.biome = biome
         self.camp_bg = camp_bg
         self.game_mode = game_mode
         self.pregnancy_data = {}
         self.inheritance = {}
         self.murdered = False
+        self.exile_return = False
+        self.affair = False
         self.achievements = []
         self.talks = []
         
@@ -182,6 +188,12 @@ class Clan():
 
         self.faded_ids = [
         ]  # Stores ID's of faded cats, to ensure these IDs aren't reused.
+        if (self_run_init_functions):
+            self.post_initialization_functions()
+        self.disaster = ""
+        self.second_disaster = ""
+        self.disaster_moon = 0
+        self.second_disaster_moon = 0
 
     def create_clan(self):
         """
@@ -194,6 +206,7 @@ class Clan():
                               )
         self.instructor.dead = True
         self.instructor.dead_for = randint(20, 200)
+        self.instructor.backstory = choice(BACKSTORIES["backstory_categories"]["dead_cat_backstories"])
         self.add_cat(self.instructor)
         self.add_to_starclan(self.instructor)
         self.all_clans = []
@@ -204,15 +217,19 @@ class Clan():
         self.demon.df = True
         self.demon.dead = True
         self.demon.dead_for = randint(20, 200)
+        self.demon.backstory = choice(BACKSTORIES["backstory_categories"]["df_backstories"])
         self.add_cat(self.demon)
         self.add_to_darkforest(self.demon)
         self.all_clans = []
+ 
+        if self.leader.status != "leader":
+            self.leader.status_change('leader')
 
         key_copy = tuple(Cat.all_cats.keys())
         for i in key_copy:  # Going through all currently existing cats
             # cat_class is a Cat-object
             not_found = True
-            for x in self.starting_members:
+            for x in [self.leader, self.deputy, self.medicine_cat] + self.starting_members:
                 if Cat.all_cats[i] == x:
                     self.add_cat(Cat.all_cats[i])
                     not_found = False
@@ -242,6 +259,8 @@ class Clan():
         number_other_clans = randint(3, 5)
         for _ in range(number_other_clans):
             self.all_clans.append(OtherClan())
+        if 'other_med' in game.switches:
+            del game.switches['other_med']
         self.save_clan()
         game.save_clanlist(self.name)
         game.switches['clan_list'] = game.read_clans()
@@ -440,6 +459,7 @@ class Clan():
             "instructor": self.instructor.ID,
             "demon": self.demon.ID,
             "reputation": self.reputation,
+            "following_starclan": self.followingsc, 
             "mediated": game.mediated,
             "starting_season": self.starting_season,
             "temperament": self.temperament,
@@ -447,7 +467,9 @@ class Clan():
             "version_commit": get_version_info().version_number,
             "source_build": get_version_info().is_source_build,
             "your_cat": self.your_cat.ID,
-            "murdered": self.murdered
+            "murdered": self.murdered,
+            "exile_return": self.exile_return,
+            "affair": self.affair
         }
 
         # LEADER DATA
@@ -494,6 +516,17 @@ class Clan():
         clan_data["war"] = self.war
         clan_data['achievements'] = self.achievements
         clan_data['talks'] = self.talks
+        clan_data["disaster"] = self.disaster
+        clan_data["disaster_moon"] = self.disaster_moon
+
+        if "other_med" in game.switches:
+            other_med = []
+            for other_clan in game.switches["other_med"]:
+                cats = []
+                for c in other_clan:
+                    cats.append(c.prefix + "," + c.suffix + "," + c.status)
+                other_med.append(cats)
+            clan_data["other_med"] = other_med
 
         self.save_herbs(game.clan)
         self.save_disaster(game.clan)
@@ -758,19 +791,16 @@ class Clan():
                          camp_bg=clan_data["camp_bg"],
                          game_mode=clan_data["gamemode"])
 
+        if "following_starclan" in clan_data:
+            game.clan.followingsc = clan_data['following_starclan']
+        else:
+            game.clan.followingsc = True
         game.clan.reputation = int(clan_data["reputation"])
 
         game.clan.age = clan_data["clanage"]
         game.clan.starting_season = clan_data[
             "starting_season"] if "starting_season" in clan_data else 'Newleaf'
         get_current_season()
-
-        game.clan.leader_lives = leader_lives
-        game.clan.leader_predecessors = clan_data["leader_predecessors"]
-
-        game.clan.deputy_predecessors = clan_data["deputy_predecessors"]
-        game.clan.med_cat_predecessors = clan_data["med_cat_predecessors"]
-        game.clan.med_cat_number = clan_data["med_cat_number"]
 
         # Instructor Info
         if clan_data["instructor"] in Cat.all_cats:
@@ -794,6 +824,13 @@ class Clan():
             game.clan.demon.dead = True
             game.clan.add_cat(game.clan.demon)
             game.clan.demon.df = True
+   
+        game.clan.leader_lives = leader_lives
+        game.clan.leader_predecessors = clan_data["leader_predecessors"]
+
+        game.clan.deputy_predecessors = clan_data["deputy_predecessors"]
+        game.clan.med_cat_predecessors = clan_data["med_cat_predecessors"]
+        game.clan.med_cat_number = clan_data["med_cat_number"]
 
         for name, relation, temper in zip(
                 clan_data["other_clans_names"].split(","),
@@ -844,6 +881,23 @@ class Clan():
         
         if "talks" in clan_data:
             game.clan.talks = clan_data["talks"]
+
+        if "disaster" in clan_data:
+            game.clan.disaster = clan_data["disaster"]
+        
+        if "disaster_moon" in clan_data:
+            game.clan.disaster_moon = clan_data["disaster_moon"]
+
+        if "other_med" in clan_data:
+            other_med = []
+            for c in clan_data["other_med"]:
+                other_clan_meds = []
+                for other_clan_med in c:
+                    other_clan_med = other_clan_med.split(",")
+                    n = Name(status = other_clan_med[2], prefix = other_clan_med[0], suffix = other_clan_med[1])
+                    other_clan_meds.append(n)
+                other_med.append(other_clan_meds)
+            game.switches["other_med"] = other_med
 
         # Return Version Info. 
         return {
@@ -1213,6 +1267,7 @@ class Clan():
 
 
 class OtherClan():
+
     """
     TODO: DOCS
     """

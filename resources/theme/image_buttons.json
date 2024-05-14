@@ -1091,6 +1091,29 @@
             }
         }
     },
+    "#half_moon_button":
+    {
+        "prototype": "#image_button",
+        "images":
+        {
+            "normal_image":
+            {
+                "path": "resources/images/buttons/halfmoon_meeting.png"
+            },
+            "hovered_image":
+            {
+                "path": "resources/images/buttons/halfmoon_meeting_hover.png"
+            },
+            "selected_image":
+            {
+                "path": "resources/images/buttons/halfmoon_meeting_hover.png"
+            },
+            "disabled_image":
+            {
+                "path":"resources/images/buttons/halfmoon_meeting_unavaliable.png"
+            }
+        }
+    },
     "#leader_ceremony_button": {
         "prototype": "#image_button",
         "images": {
@@ -1720,6 +1743,57 @@
             }
         }
     },
+    "#alive_tab": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/alive_select.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/alive_select_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/alive_select_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/alive_select_unavaliable.png"
+            }
+        }
+    },
+    "#dead_tab": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/dead_select.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/dead_select_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/dead_select_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/dead_select_unavaliable.png"
+            }
+        }
+    },
+    "#play_select": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/play_select.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/play_select.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/play_select.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/play_select.png"
+            }
+        }
+    },
     "#remove_cat_button": {
         "prototype": "#image_button",
         "images": {
@@ -2111,6 +2185,23 @@
             }
         }
     },
+    "#continue_main_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/continue_main.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/continue_main_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/continue_main_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/continue_main_unavailable.png"
+            }
+        }
+    },
     "#continue_button": {
         "prototype": "#image_button",
         "images": {
@@ -2374,6 +2465,29 @@
             "disabled_image": {
                 "path": "resources/images/buttons/customize_hover.png"
             }
+        }
+    },
+    "#achivements_button":
+    {
+        "prototype": "#image_button",
+		"images":
+        {
+            "normal_image":
+            {
+                "path": "resources/images/buttons/achivements.png"
+            },
+			"hovered_image":
+            {
+                "path": "resources/images/buttons/achievements_hover.png"
+            },
+			"selected_image":
+            {
+                "path": "resources/images/buttons/achievements_hover.png"
+            },
+            "disabled_image":
+            {
+				"path": "resources/images/buttons/achievements_hover.png"
+			}
         }
     },
     "#allegiances_button": {
@@ -4128,6 +4242,23 @@
             }
         }
     },
+    "#desert_tab": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/desert.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/desert_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/desert_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/desert_unavaliable.png"
+            }
+        }
+    },
     "#birch_camp_tab": {
         "prototype": "#image_button",
         "images": {
@@ -4142,6 +4273,23 @@
             },
             "disabled_image": {
                 "path": "resources/images/buttons/birch_camp_unavailable.png"
+            }
+        }
+    },
+    "#tropical_island_tab": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/tropical_island.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/tropical_island_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/tropical_island_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/tropical_island_unavaliable.png"
             }
         }
     },
@@ -4601,6 +4749,40 @@
             },
             "disabled_image": {
                 "path": "resources/images/buttons/view_your_clan_unavailable.png"
+            }
+        }
+    },
+    "#dead_select_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/dead_select.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/dead_select_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/dead_select.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/dead_select_unavaliable.png"
+            }
+        }
+    },
+    "#alive_select_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/alive_select.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/alive_select_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/alive_select.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/alive_select_unavaliable.png"
             }
         }
     }

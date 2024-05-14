@@ -98,7 +98,7 @@
             "y_c. We have something to discuss.",
             "You've been avoiding patrols lately. Don't even try to deny it.",
             "I know you don't like to take things seriously, but this is reality. We are warriors. Face it. Or don't.",
-            "But just know that your lack of initiative could cost your clanmates shelter, food, warmth and safety. Are you willing to risk it?",
+            "But just know that your lack of initiative could cost your Clanmates shelter, food, warmth and safety. Are you willing to risk it?",
             "[t_c glowers at you, their expression unnervingly cold. StarClan, you forgot how scary they can be when they need to ...]"
         ]
     ],
@@ -157,7 +157,7 @@
         [
             "Get up, y_c! We gotta go on a special patrol to check the o_cClan border!",
             "Of course I'm serious, mouse-brain! Are you really gonna make me break it down for you?",
-            "The leader gave me this assignment, and told me to pick the cat in the clan I trust the most to accompany me on it. Lo and behold, that's you!",
+            "The leader gave me this assignment, and told me to pick the cat in the Clan I trust the most to accompany me on it. Lo and behold, that's you!",
             "Now, c'mon, lazybones! We've got a long walk ahead of us!"
         ]
     ],
@@ -181,8 +181,8 @@
     ],
     "dep_32": [
         [
-            "murder",
-            "Any"
+            "Any",
+            "you_shunned"
         ],
         [
             "Stay far from me, murderer."
@@ -190,8 +190,8 @@
     ],
     "dep_1": [
         [
-            "murder",
-            "Any"
+            "Any",
+            "you_shunned"
         ],
         [
             "I can't look at you the same way anymore."
@@ -199,8 +199,8 @@
     ],
     "dep_2": [
         [
-            "murder",
-            "Any"
+            "Any",
+            "you_shunned"
         ],
         [
             "How do you live with yourself after what you've done?"
@@ -208,8 +208,8 @@
     ],
     "dep_3": [
         [
-            "murder",
-            "Any"
+            "Any",
+            "you_shunned"
         ],
         [
             "Every time I see your face, I'm reminded of the life you took."
@@ -217,8 +217,8 @@
     ],
     "dep_4": [
         [
-            "murder",
-            "Any"
+            "Any",
+            "you_shunned"
         ],
         [
             "You may think you got away with it, but I'll never forget."
@@ -226,8 +226,8 @@
     ],
     "dep_5": [
         [
-            "murder",
-            "Any"
+            "Any",
+            "you_shunned"
         ],
         [
             "I hope one day your conscience catches up with you."
@@ -235,8 +235,8 @@
     ],
     "dep_6": [
         [
-            "murder",
-            "Any"
+            "Any",
+            "you_shunned"
         ],
         [
             "The guilt must eat at you every single day."
@@ -244,8 +244,8 @@
     ],
     "dep_7": [
         [
-            "murder",
-            "Any"
+            "Any",
+            "you_shunned"
         ],
         [
             "You may have fooled everyone else, but not me."
@@ -253,8 +253,8 @@
     ],
     "dep_8": [
         [
-            "murder",
-            "Any"
+            "Any",
+            "you_shunned"
         ],
         [
             "I can't trust someone capable of such an act."
@@ -262,8 +262,8 @@
     ],
     "dep_9": [
         [
-            "murder",
-            "Any"
+            "Any",
+            "you_shunned"
         ],
         [
             "You're a walking reminder of the darkness that exists."
@@ -271,8 +271,8 @@
     ],
     "dep_10": [
         [
-            "murder",
-            "Any"
+            "Any",
+            "you_shunned"
         ],
         [
             "Your secret is safe with me, but don't expect my forgiveness."
@@ -501,8 +501,8 @@
         ],
         [
             "Hey there, y_c! Not bad weather today, hm?",
-            "Sun on my pelt, wind in my fur ... Could you imagine being a kittypet and having to be cooped up in a twoleg nest all day? I think I would go crazy!",
-            "Just another reason why it's great to be a clan cat."
+            "Sun on my pelt, wind in my fur ... Could you imagine being a kittypet and having to be cooped up in a Twoleg nest all day? I think I would go crazy!",
+            "Just another reason why it's great to be a Clan cat."
         ]
     ],
     "assertive_elder_2": [
@@ -609,8 +609,8 @@
             "leader"
         ],
         [
-            "Thought I should let you know, my patrol ran into a bit of trouble today. A rowdy gang of kittypets near twolegplace.",
-            "We made quick work of 'em, though! And didn't even have to unsheath a claw ... One cold glare and they went scampering right back to their twolegs! Haha!",
+            "Thought I should let you know, my patrol ran into a bit of trouble today. A rowdy gang of kittypets near Twolegplace.",
+            "We made quick work of 'em, though! And didn't even have to unsheath a claw ... One cold glare and they went scampering right back to their Twolegs! Haha!",
             "I gotta admit, it made me feel pretty powerful ... Guess c_nClan's reputation is starting to precede us!"
         ]
     ],
@@ -700,7 +700,7 @@
         [
             "Hehe. Of course you'd never leave the nursery, y_c.",
             "You don't have what it takes to be a real warrior. Not in a million moons!",
-            "But, uh, this is ... okay too, I guess! If you think becoming a full-time kitsitter is comparable to, y'know ... finding food and protecting the clan from danger.",
+            "But, uh, this is ... okay too, I guess! If you think becoming a full-time kitsitter is comparable to, y'know ... finding food and protecting the Clan from danger.",
             "Have fun hanging out with the queens, y_c. *Snrk*"
         ]
     ],
@@ -714,7 +714,7 @@
         ],
         [
             "Hmph. You may fight for peace, y_c, but I know it by another word - cowardice.",
-            "I know compromise has its place, but you'd say you'd really forsake your values - the values of this clan - just so all of us can just laze around on our haunches and never have to risk anything real?",
+            "I know compromise has its place, but you'd say you'd really forsake your values - the values of this Clan - just so all of us can just laze around on our haunches and never have to risk anything real?",
             "I don't think so. I fight for what I believe in. No matter what it costs.",
             "Maybe think about that the next time you try to make a compromise with the enemy."
         ]
@@ -727,7 +727,7 @@
         [
             "Man, you're insightful for an apprentice, y_c!",
             "When I was your age, all I thought about was smashing stuff and chasing after my crushes. But now, here you are! Sorting out problems with cats who've been around ten times longer than you!",
-            "That must take a lot of discipline. The whole clan is proud of you!"
+            "That must take a lot of discipline. The whole Clan is proud of you!"
         ]
     ],
     "assertivewarrior_mediatorapp_2": [
@@ -754,7 +754,7 @@
         ],
         [
             "y_c, I think that peace is a noble pursuit, and all, but don't you think that there's some cases where conflict is necessary?",
-            "What about standing up for what's right? What about fighting for justice and fairness? You're still just an apprentice. You have a lot to learn about clan life.",
+            "What about standing up for what's right? What about fighting for justice and fairness? You're still just an apprentice. You have a lot to learn about Clan life.",
             "And, from what I've learned, sometimes the true only way to settle a dispute is with teeth and claws.",
             "No matter what your mentor might tell you."
         ]
@@ -769,8 +769,8 @@
         ],
         [
             "*Huff**Huff* Hey, y_c! What's happening? I was just doing some sparring.",
-            "I heard that you aren't allowed to fight for the clan, 'cause it'd make you biased in your mediation - man, that must take some restraint.",
-            "If it were me, I'd want to claw the ears off of half the mouse-brains in this clan! Haha!"
+            "I heard that you aren't allowed to fight for the Clan, 'cause it'd make you biased in your mediation - man, that must take some restraint.",
+            "If it were me, I'd want to claw the ears off of half the mouse-brains in this Clan! Haha!"
         ]
     ],
     "assertivewarrior_med7": [
@@ -821,7 +821,7 @@
         [
             "Doesn't it drive you insane, being cooped up inside camp all day?",
             "What about the thrill of adventure? The wind in your fur? The satisfaction of killing a hard-earned piece of prey?",
-            "Respect to you, y_c. I could never do what you do. Though, I suppose the clan needs all types of cats to function."
+            "Respect to you, y_c. I could never do what you do. Though, I suppose the Clan needs all types of cats to function."
         ]
     ],
     "assertiveapp_medapp1": [
@@ -903,7 +903,7 @@
         ],
         [
             "Working hard, y_c? Or, is it more like hardly working? Hehe.",
-            "Y'know, it's good to contribute to the clan, but make sure you take some time to grow up, too. Working isn't everything. Now's the time for you to get out and explore!",
+            "Y'know, it's good to contribute to the Clan, but make sure you take some time to grow up, too. Working isn't everything. Now's the time for you to get out and explore!",
             "*Sigh* I sorta miss those days myself ..."
         ]
     ],
@@ -939,7 +939,7 @@
         ],
         [
             "*Sigh* Y'know, y_c, sometimes I wonder if I'm really cut out for this ...",
-            "I'm supposed to be out on the battlefield fighting alongside my clanmates! Not ... organizing patrols and negotiating territory!",
+            "I'm supposed to be out on the battlefield fighting alongside my Clanmates! Not ... organizing patrols and negotiating territory!",
             "On the worst nights, I wonder why l_n even chose me to succeed them ... This responsibility was never something I signed up for!",
             "If I could do it all over again, would I even have accepted the position at all?"
         ]
@@ -957,7 +957,7 @@
             "platonic_like"
         ],
         [
-            "Everyone in the whole clan is counting on me ... Do they know I have no idea what I'm doing?",
+            "Everyone in the whole Clan is counting on me ... Do they know I have no idea what I'm doing?",
             "Never in a million moons did I ever dream I'd be deputy...",
             "I know I'm strong, but this position takes a whole new type of strength. I'm just not sure if I can ...",
             "[You assure t_c that l_n chose them for a reason and there's no better cat in the Clan for the job. They seem to relax a little, but their gaze is still tinged with uncertainty ...]"
@@ -975,9 +975,9 @@
             "Hey there, little guy!",
             "Hehe, no need to look so scared. I don't bite!",
             "... Aren't I important?",
-            "Well, sure, I'm important, but never too important to spend time with my clan's great future warriors!",
+            "Well, sure, I'm important, but never too important to spend time with my Clan's great future warriors!",
             "Now, tell me, how are you liking life in c_nClan? You growing up okay? Everybody treating you well?",
-            "If anything's ever bothering you, or there's something on your mind, never hesitate to speak up. This clan is full of cats who want to help you grow up to be the best version of yourself you can be, myself included. Okay?",
+            "If anything's ever bothering you, or there's something on your mind, never hesitate to speak up. This Clan is full of cats who want to help you grow up to be the best version of yourself you can be, myself included. Okay?",
             "Now, go play! And make sure you save a game for me later! Hehe!"
         ]
     ],
@@ -1059,7 +1059,7 @@
             "What's going on, y_c? I feel like you've been avoiding me lately.",
             "You're ... worried I'm too busy for you?",
             "Psh. Crazy talk!",
-            "Even though I'm deputy, I'll always make time for you. You're important to me! The rest of the clan can wait.",
+            "Even though I'm deputy, I'll always make time for you. You're important to me! The rest of the Clan can wait.",
             "You don't know if StarClan would approve of that?",
             "Ah, who cares what those old, dead cats think? This is the land of the living!",
             "And if I'm not allowed to spend time with you, then may they strike me down where I stand."
@@ -1093,7 +1093,7 @@
         ],
         [
             "Some cats criticize me for being too reckless in my decision making ... fox-dung, I say!",
-            "Of course I value the lives of all my clanmates, but if there's one thing I value more, it's the principles and virtues that make this clan what it is.",
+            "Of course I value the lives of all my Clanmates, but if there's one thing I value more, it's the principles and virtues that make this Clan what it is.",
             "Strength, courage, honor, skill ... These are all things that are too precious to forsake. And if something comes by to threaten those things, you bet I'm gonna fight back with everything I've got to protect them!",
             "That's what being a warrior is all about. Not cowering like a kittypet and letting others take what's rightfully ours, just to save a few drops of blood from being spilled."
         ]
@@ -1212,7 +1212,7 @@
             "... Hm. That sounds difficult. I cannot speak on your behalf, obviously, you have your own choices to make in life. I cannot fight your battles for you.",
             "But I do feel everything happens for a reason, you know. StarClan wills it all, the swell of the wind and the run of the river.",
             "So I believe that everything will turn out okay. Everything has a reason, even if that reason is fate.",
-            "I suppose that's how I became the deputy of this clan.",
+            "I suppose that's how I became the deputy of this Clan.",
             "I'd just take a deep breath and try to take your mind off of it, at least for now. There's plenty to do around camp, I believe the Apprentices' den's walls have broken again."
         ]
     ],
@@ -1345,7 +1345,7 @@
         ],
         [
             "Hey, y_c! I just finished visiting the kits in the nursery. StarClan, they're cute!",
-            "I wouldn't mind being a parent ... having a few mini-me's running around, terrorizing the clan.",
+            "I wouldn't mind being a parent ... having a few mini-me's running around, terrorizing the Clan.",
             "How about you? Do you ever see yourself having kits someday? Not in, like, a weird way, of course! Just curious, hehe.",
             "[t_c swishes their tail nervously.]"
         ]
@@ -1407,7 +1407,7 @@
             "Just ... had a bad day, is all ...",
             "*Sigh* y_c, have you ever felt like you're not enough for anyone?",
             "Usually, when it comes to making a decision, I never hesitate. Whatever the obstacle, I'll run headfirst into it, no questions asked.",
-            "But, today, on patrol, I didn't listen to the leader, and accidentally ran straight into an enemy trap. Luckily, r_w was there to keep everyone safe, but because of me, my clanmates could've been hurt, or worse.",
+            "But, today, on patrol, I didn't listen to the leader, and accidentally ran straight into an enemy trap. Luckily, r_w was there to keep everyone safe, but because of me, my Clanmates could've been hurt, or worse.",
             "I just feel like such a failure. A liability. I can't help the way I am, but what if everyone's better off without me?",
             "[You offer t_c words of reassurance, but they seem troubled beyond comforting.]",
             "[Still, you sit with them through the night, hoping to stabilize them through whatever storm they might be weathering right now.]"
@@ -1432,7 +1432,7 @@
             "leader"
         ],
         [
-            "y_c, are you worried at all about the size of the clan?",
+            "y_c, are you worried at all about the size of the Clan?",
             "I just hope we can keep everyone fed through leafbare ..."
         ]
     ],
@@ -1507,7 +1507,7 @@
             "Hey, y_c. You want to see this scar I got? It's new.",
             "It happened during a training session. I was practicing my battle moves, and I guess I got carried away ...",
             "Everyone tells me I take things too far. In reality, I don't think I take things far enough.",
-            "I'm going to be the strongest warrior this clan has ever seen. Stronger than the strongest. I just have to figure out what I'm really capable of ..."
+            "I'm going to be the strongest warrior this Clan has ever seen. Stronger than the strongest. I just have to figure out what I'm really capable of ..."
         ]
     ],
     "bloodthirsty_pos1": [
@@ -1559,7 +1559,7 @@
         ],
         [
             "Hmph. You think my battle moves are too violent? Come on, y_c.",
-            "Violence is what makes the clans what they are! Without it, we'd be no better than kittypets!",
+            "Violence is what makes the Clans what they are! Without it, we'd be no better than kittypets!",
             "Don't tell me you're afraid of your own kit!"
         ]
     ],
@@ -1616,7 +1616,7 @@
             "cool"
         ],
         [
-            "[The border patrol came back with news of twolegs on the territory, so t_c personally guards the camp entrance, casting paranoid glances.]",
+            "[The border patrol came back with news of Twolegs on the territory, so t_c personally guards the camp entrance, casting paranoid glances.]",
             "[It's clear they take their job as deputy very seriously.]"
         ]
     ],
@@ -1868,7 +1868,8 @@
         [
             "Ah, good evening y_c! How have you been, how's the Nursery doing? If the roof is leaking again, I can come and help out.",
             "Oh, you want to go on patrol? Ah... sorry, y_c! You're a bit too young for that... actually- hm... I have an idea.",
-            "If you wanna gather a couple others up, why don't you go on a mini hunting patrol? You need to stay in the camp, but I can set up a couple of things for you to practice your hunting skills on. I can take some free time to teach you some of the best techniques, if you wish!"
+            "If you wanna gather a couple others up, why don't you go on a mini hunting patrol?",
+            "You need to stay in the camp, but I can set up a couple of things for you to practice your hunting skills on. I can take some free time to teach you some of the best techniques, if you wish!"
         ]
     ],
     "sweet_deputy_5": [
@@ -1883,7 +1884,7 @@
         [
             "Howdy y_c!! Is that weird to say- howdy-?",
             "Anyway!",
-            "Would you mind going on a patrol with m_c and r_w later today? m_c spotted something pretty interesting over by the west side of the territory, and I figured you'd wanna go along too."
+            "Would you mind going on a patrol with r_w1 and r_w2 later today? r_w1 spotted something pretty interesting over by the west side of the territory, and I figured you'd wanna go along too."
         ]
     ],
     "sweet_deputy_6": [
@@ -1897,7 +1898,7 @@
         [
             "Oh, y_c! Why are you crying? What happened? Is everything alright?",
             "Stressed out, huh? I understand that... sit down, let me tell you a little story.",
-            "When I was an apprentice, I used to be stressed just like you. I was constantly worried about being good enough for the clan, worried that I might be too soft to be a warrior, all of these things.",
+            "When I was an apprentice, I used to be stressed just like you. I was constantly worried about being good enough for the Clan, worried that I might be too soft to be a warrior, all of these things.",
             "It gets better, I promise you. If a soft cat like me can become deputy, then an apprentice like you will surely get past apprenticeship."
         ]
     ],
@@ -1941,7 +1942,7 @@
         ],
         [
             "Ah... you look pretty stressed. I'd imagine so, mediation isn't easy.",
-            "I sometimes have to mediate between warriors and even the leaders of other clans with ours.",
+            "I sometimes have to mediate between warriors and even the leaders of other Clans with ours.",
             "[t_c pats you on the top of the head, giving you a smile.]",
             "You're doing great, just know that. You're doing something so impossibly hard at such a young age, we're all proud of you."
         ]
@@ -1972,11 +1973,11 @@
         [
             "Hey, how are you doing? I hope everything's been well for you.",
             "[t_c sits down beside you, giving you a warm smile. Such a smile is quite typical from t_c, though.]",
-            "I've just been seeing the whole clan working very hard, and I wanted to know if there was anything I could do to improve, too.",
+            "I've just been seeing the whole Clan working very hard, and I wanted to know if there was anything I could do to improve, too.",
             "I am your deputy, and I want to make sure I'm doing my best for all of you."
         ]
     ],
-    "sweet_deputy_12": [
+    "sweet_deputy_22": [
         [
             "warrior",
             "random_cat",
@@ -2093,12 +2094,66 @@
         [
             "elder",
             "random_cat",
-            "sweet"
+            "sweet",
+            "they_deaf",
+            "you_deaf"
         ],
         [
             "[You've lived many moons, but never have you seen a deputy quite like t_c.]",
             "[You watch them as they lay down, sending out patrols whilst letting r_k play with their tail.]",
             "[They've even planned to come and see you later for a story!]"
+        ]
+    ],
+    "stable_shunned_you_Apprentice_MedicineCat_04": [
+        [
+            "medicine cat apprentice",
+            "you_shunned",
+            "stable",
+            "they_deputy"
+        ],
+        [
+            "[t_c escorts you to pick up a piece of freshkill from the pile. Their gaze is full of silent hate. They walk with you back to the medicine den, just as r_c is leaving it.]",
+            "[You sit down and look over the den, something smells... off. You notice an odd smell coming from your nest and cautiously peel back the moss.]",
+            "[Under your bedding is a pile of deathberries, but they've been crushed, the juice seeping into your bed.]",
+            "What is that?",
+            "[d_n looks horrified, they immediately jump out of the den to track r_c down. You swallow the lump in your throat.]",
+            "[You feel like you're going to be sick.]"
+        ]
+    ],
+    "deputyshunned_J2": [
+        [
+            "they_shunned",
+            "any"
+        ],
+        [
+            "I'm not your deputy anymore.",
+            "You have no reason to talk to me."
+        ]
+    ],
+    "stable_Deputy_Gen_01": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "[d_n watches over the nursery next to the queens. They sigh heavily then lift their chin proudly. Some day, those kittens may look up to them as leader.]",
+            "[You couldn't imagine how that pressure would feel, a crushing weight on your shoulders. The fear of failure and mistakes, how that could lead to one, if not all the lives of those kits.]",
+            "[You smile confidently as the light bounces off their fur. You know that it won't happen, you know d_n is a good leader, a true spirit, and a just warrior. They'll be fine in whatever happens next.]",
+            "[You look to l_n, who couldn't look more prouder.]"
+        ]
+    ],
+    "grieving_sh_J1": [
+        [
+            "Any",
+            "they_shunned",
+            "they_grieving",
+            "you_leader",
+            "leader"
+        ],
+        [
+            "I'm sorry, y_c. I didn't do very well as your deputy, did I?",
+            "[t_c's voice is hardly more than a whisper. You've never seen them so sad. You force yourself not to sympathise-- they've earned this punishment.]",
+            "That's fine, you don't have to respond."
         ]
     ]
 }

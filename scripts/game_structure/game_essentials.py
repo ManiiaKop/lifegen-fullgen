@@ -137,7 +137,9 @@ class Game():
         'window_open': False,
         'skip_conditions': [],
         'show_history_moons': False,
-        'fps': 30
+        'fps': 30,
+        'windows_dict': [],
+        'continue_after_death': False
     }
     all_screens = {}
     cur_events = {}
@@ -445,6 +447,8 @@ class Game():
 
         copy_of_info = ""
         for cat in game.cat_to_fade:
+            if cat not in self.cat_class.all_cats:
+                continue
 
             inter_cat = self.cat_class.all_cats[cat]
 

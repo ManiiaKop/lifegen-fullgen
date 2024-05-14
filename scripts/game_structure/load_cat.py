@@ -53,6 +53,7 @@ def json_load():
     for i, cat in enumerate(cat_data):
         try:
             
+            
             try:
 
                 new_cat = Cat(ID=cat["ID"],
@@ -79,6 +80,11 @@ def json_load():
                         parent2=cat["parent2"],
                         moons=cat["moons"],
                         loading_cat=True)
+                
+            if "shunned" not in cat:
+                cat["shunned"] = False
+            if "revealed" in cat:
+                cat["forgiven"] = cat["revealed"]
             
             new_cat.pelt = Pelt(
                 new_cat.genotype,
@@ -133,6 +139,7 @@ def json_load():
             new_cat.no_mates = cat["no_mates"] if "no_mates" in cat else False
             new_cat.no_retire = cat["no_retire"] if "no_retire" in cat else False
             new_cat.exiled = cat["exiled"]
+            new_cat.shunned = cat["shunned"]
 
             if "skill_dict" in cat:
                 new_cat.skills = CatSkills(cat["skill_dict"])
@@ -158,7 +165,7 @@ def json_load():
             new_cat.apprentice = cat["current_apprentice"]
             new_cat.former_apprentices = cat["former_apprentices"]
             new_cat.df = cat["df"] if "df" in cat else False
-
+            new_cat.shunned = cat["shunned"] if "shunned" in cat else False
             new_cat.outside = cat["outside"] if "outside" in cat else False
             new_cat.faded_offspring = cat["faded_offspring"] if "faded_offspring" in cat else []
             new_cat.prevent_fading = cat["prevent_fading"] if "prevent_fading" in cat else False
@@ -167,14 +174,17 @@ def json_load():
             new_cat.talked_to = cat["talked_to"] if "talked_to" in cat else False
             new_cat.insulted = cat["insulted"] if "insulted" in cat else False
             new_cat.flirted = cat['flirted'] if "flirted" in cat else False
+            new_cat.backstory_str = cat["backstory_str"] if "backstory_str" in cat else ""
             new_cat.joined_df = cat["joined_df"] if "joined_df" in cat else False
-            new_cat.revealed = cat["revealed"] if "revealed" in cat else 0
+            new_cat.forgiven = cat["forgiven"] if "forgiven" in cat else 0
             new_cat.revives = cat["revives"] if "revives" in cat else 0
             new_cat.courage = cat["courage"] if "courage" in cat else 0
             new_cat.intelligence = cat["intelligence"] if "intelligence" in cat else 0
             new_cat.empathy = cat["empathy"] if "empathy" in cat else 0
             new_cat.compassion = cat["compassion"] if "compassion" in cat else 0
             new_cat.did_activity = cat["did_activity"] if "did_activity" in cat else False
+            new_cat.df_mentor = cat["df_mentor"] if "df_mentor" in cat else None
+            new_cat.df_apprentices = cat["df_apprentices"] if "df_apprentices" in cat else []
             if "died_by" in cat or "scar_event" in cat or "mentor_influence" in cat:
                 new_cat.convert_history(
                     cat["died_by"] if "died_by" in cat else [],
@@ -233,6 +243,207 @@ def json_load():
         # Save integrety checks
         if game.config["save_load"]["load_integrity_checks"]:
             save_check()
+
+
+def csv_load(all_cats):
+    if game.switches['clan_list'][0].strip() == '':
+        cat_data = ''
+    else:
+        if os.path.exists(get_save_dir() + '/' + game.switches['clan_list'][0] +
+                          'cats.csv'):
+            with open(get_save_dir() + '/' + game.switches['clan_list'][0] + 'cats.csv',
+                      'r') as read_file:
+                cat_data = read_file.read()
+        else:
+            with open(get_save_dir() + '/' + game.switches['clan_list'][0] + 'cats.txt',
+                      'r') as read_file:
+                cat_data = read_file.read()
+    if len(cat_data) > 0:
+        cat_data = cat_data.replace('\t', ',')
+        for i in cat_data.split('\n'):
+            # CAT: ID(0) - prefix:suffix(1) - gender(2) - status(3) - age(4) - trait(5) - parent1(6) - parent2(7) - mentor(8)
+            # PELT: pelt(9) - colour(10) - white(11) - length(12)
+            # SPRITE: kitten(13) - apprentice(14) - warrior(15) - elder(16) - eye colour(17) - reverse(18)
+            # - white patches(19) - pattern(20) - tortiebase(21) - tortiepattern(22) - tortiecolour(23) - skin(24) - skill(25) - NONE(26) - spec(27) - accessory(28) -
+            # spec2(29) - moons(30) - mate(31)
+            # dead(32) - SPRITE:dead(33) - exp(34) - dead for _ moons(35) - shunned moons (36) current apprentice(37)
+            # (BOOLS, either TRUE OR FALSE) paralyzed(38) - no kits(39) - exiled(40)
+            # genderalign(41) - former apprentices list (42)[FORMER APPS SHOULD ALWAYS BE MOVED TO THE END]
+            if i.strip() != '':
+                attr = i.split(',')
+                for x in range(len(attr)):
+                    attr[x] = attr[x].strip()
+                    if attr[x] in ['None', 'None ']:
+                        attr[x] = None
+                    elif attr[x].upper() == 'TRUE':
+                        attr[x] = True
+                    elif attr[x].upper() == 'FALSE':
+                        attr[x] = False
+                game.switches[
+                    'error_message'] = '1There was an error loading cat # ' + str(
+                        attr[0])
+                the_pelt = Pelt(
+                    colour=attr[2],
+                    name = attr[11],
+                    length=attr[9],
+                    eye_color=attr[17]
+                )
+                game.switches[
+                    'error_message'] = '2There was an error loading cat # ' + str(
+                    attr[0])
+                the_cat = Cat(ID=attr[0],
+                              prefix=attr[1].split(':')[0],
+                              suffix=attr[1].split(':')[1],
+                              gender=attr[2],
+                              status=attr[3],
+                              pelt=the_pelt,
+                              parent1=attr[6],
+                              parent2=attr[7],
+                            )
+                
+                
+                game.switches[
+                    'error_message'] = '3There was an error loading cat # ' + str(
+                    attr[0])
+                the_cat.age, the_cat.mentor = attr[4], attr[8]
+                game.switches[
+                    'error_message'] = '4There was an error loading cat # ' + str(
+                        attr[0])
+                the_cat.pelt.cat_sprites['kitten'], the_cat.pelt.cat_sprites[
+                    'adolescent'] = int(attr[13]), int(attr[14])
+                game.switches[
+                    'error_message'] = '5There was an error loading cat # ' + str(
+                        attr[0])
+                the_cat.pelt.cat_sprites['adult'], the_cat.pelt.cat_sprites[
+                    'elder'] = int(attr[15]), int(attr[16])
+                game.switches[
+                    'error_message'] = '6There was an error loading cat # ' + str(
+                        attr[0])
+                the_cat.pelt.cat_sprites['young adult'], the_cat.pelt.cat_sprites[
+                    'senior adult'] = int(attr[15]), int(attr[15])
+                game.switches[
+                    'error_message'] = '7There was an error loading cat # ' + str(
+                        attr[0])
+                the_cat.pelt.reverse, the_cat.pelt.white_patches, the_cat.pelt.pattern = attr[
+                    18], attr[19], attr[20]
+                game.switches[
+                    'error_message'] = '8There was an error loading cat # ' + str(
+                        attr[0])
+                the_cat.pelt.tortiebase, the_cat.pelt.tortiepattern, the_cat.pelt.tortiecolour = attr[
+                    21], attr[22], attr[23]
+                game.switches[
+                    'error_message'] = '9There was an error loading cat # ' + str(
+                        attr[0])
+                the_cat.trait, the_cat.pelt.skin, the_cat.specialty = attr[5], attr[
+                    24], attr[27]
+                game.switches[
+                    'error_message'] = '10There was an error loading cat # ' + str(
+                    attr[0])
+                the_cat.skill = attr[25]
+                if len(attr) > 28:
+                    the_cat.pelt.accessory = attr[28]
+                if len(attr) > 29:
+                    the_cat.specialty2 = attr[29]
+                else:
+                    the_cat.specialty2 = None
+                game.switches[
+                    'error_message'] = '11There was an error loading cat # ' + str(
+                    attr[0])
+                if len(attr) > 34:
+                    the_cat.experience = int(attr[34])
+                    experiencelevels = [
+                        'very low', 'low', 'slightly low', 'average',
+                        'somewhat high', 'high', 'very high', 'master', 'max'
+                    ]
+                    the_cat.experience_level = experiencelevels[floor(
+                        int(the_cat.experience) / 10)]
+                else:
+                    the_cat.experience = 0
+                game.switches[
+                    'error_message'] = '12There was an error loading cat # ' + str(
+                    attr[0])
+                if len(attr) > 30:
+                    # Attributes that are to be added after the update
+                    the_cat.moons = int(attr[30])
+                    if len(attr) >= 31:
+                        # assigning mate to cat, if any
+                        the_cat.mate = [attr[31]]
+                    if len(attr) >= 32:
+                        # Is the cat dead
+                        the_cat.dead = attr[32]
+                        the_cat.pelt.cat_sprites['dead'] = attr[33]
+                game.switches[
+                    'error_message'] = '13There was an error loading cat # ' + str(
+                    attr[0])
+                if len(attr) > 35:
+                    the_cat.dead_for = int(attr[35])
+                game.switches[
+                    'error_message'] = '14There was an error loading cat # ' + str(
+                    attr[0])
+                if len(attr) > 36:
+                    the_cat.dead_for = int(attr[36])
+                game.switches[
+                    'error_message'] = '15There was an error loading cat # ' + str(
+                    attr[0])
+                if len(attr) > 37 and attr[37] is not None:
+                    the_cat.apprentice = attr[37].split(';')
+                game.switches[
+                    'error_message'] = '15There was an error loading cat # ' + str(
+                    attr[0])
+                if len(attr) > 38:
+                    the_cat.pelt.paralyzed = bool(attr[38])
+                if len(attr) > 39:
+                    the_cat.no_kits = bool(attr[39])
+                if len(attr) > 40:
+                    the_cat.exiled = bool(attr[40])
+                if len(attr) > 41:
+                    the_cat.genderalign = attr[41]
+                if len(attr
+                       ) > 42 and attr[42] is not None:  # KEEP THIS AT THE END
+                    the_cat.former_apprentices = attr[42].split(';')
+        game.switches[
+            'error_message'] = 'There was an error loading this clan\'s mentors, apprentices, relationships, or sprite info.'
+        for inter_cat in all_cats.values():
+            # Load the mentors and apprentices after all cats have been loaded
+            game.switches[
+                'error_message'] = 'There was an error loading this clan\'s mentors/apprentices. Last cat read was ' + str(
+                inter_cat)
+            inter_cat.mentor = Cat.all_cats.get(inter_cat.mentor)
+            apps = []
+            former_apps = []
+            for app_id in inter_cat.apprentice:
+                app = Cat.all_cats.get(app_id)
+                # Make sure if cat isn't an apprentice, they're a former apprentice
+                if 'apprentice' in app.status:
+                    apps.append(app)
+                else:
+                    former_apps.append(app)
+            for f_app_id in inter_cat.former_apprentices:
+                f_app = Cat.all_cats.get(f_app_id)
+                former_apps.append(f_app)
+            inter_cat.apprentice = [a.ID for a in apps]  # Switch back to IDs. I don't want to risk breaking everything.
+            inter_cat.former_apprentices = [a.ID for a in former_apps]
+            if not inter_cat.dead:
+                game.switches[
+                    'error_message'] = 'There was an error loading this clan\'s relationships. Last cat read was ' + str(
+                    inter_cat)
+                inter_cat.load_relationship_of_cat()
+            game.switches[
+                'error_message'] = 'There was an error loading a cat\'s sprite info. Last cat read was ' + str(
+                inter_cat)
+            # update_sprite(inter_cat)
+        # generate the relationship if some is missing
+        if not the_cat.dead:
+            game.switches[
+                'error_message'] = 'There was an error when relationships where created.'
+            for id in all_cats.keys():
+                the_cat = all_cats.get(id)
+                game.switches[
+                    'error_message'] = f'There was an error when relationships for cat #{the_cat} are created.'
+                if the_cat.relationships is not None and len(the_cat.relationships) < 1:
+                    the_cat.create_all_relationships()
+        game.switches['error_message'] = ''
+
 
 def save_check():
     """Checks through loaded cats, checks and attempts to fix issues 

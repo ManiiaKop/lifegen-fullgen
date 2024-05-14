@@ -6,7 +6,7 @@ from scripts.game_structure.game_essentials import game, screen, screen_x, scree
 from scripts.game_structure import image_cache
 from scripts.game_structure.image_button import UIImageButton
 import pygame_gui
-from scripts.game_structure.windows import SaveCheck, EventLoading
+from scripts.game_structure.windows import SaveCheck, EventLoading, RetireScreen, DeputyScreen, NameKitsWindow, MateScreen
 from scripts.game_structure.propagating_thread import PropagatingThread
 from threading import current_thread
 
@@ -177,7 +177,20 @@ class Screens():
 
             final_actions()
             game.switches['window_open'] = False
-
+        
+        if len(game.switches['windows_dict']) > 0:
+            if 'name kits' in game.switches['windows_dict'] and not game.switches['window_open']:
+                NameKitsWindow('events screen')
+                game.switches['windows_dict'].remove('name kits')
+            elif 'retire' in game.switches['windows_dict'] and not game.switches['window_open']:
+                RetireScreen('events screen')
+                game.switches['windows_dict'].remove('retire')
+            elif 'deputy' in game.switches['windows_dict'] and not game.switches['window_open']:
+                DeputyScreen('events screen')
+                game.switches['windows_dict'].remove('deputy')
+            elif 'mate' in game.switches['windows_dict'] and not game.switches['window_open']:
+                MateScreen('events screen')
+                game.switches['windows_dict'].remove('mate')
         return
 
     def fill(self, tuple):
@@ -231,6 +244,8 @@ class Screens():
         for button_id in disabled_buttons:
             if button_id in self.menu_buttons:
                 self.menu_buttons[button_id].disable()
+        
+        
 
     def menu_button_pressed(self, event):
         """This is a short-up to deal with menu button presses.

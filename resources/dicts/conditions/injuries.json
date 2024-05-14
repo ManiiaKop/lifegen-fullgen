@@ -1381,7 +1381,6 @@
             "juniper"
         ]
     },
-    
     "pregnant": {
         "duration": 2,
         "severity": "major",
@@ -1404,6 +1403,32 @@
         ],
         "herbs": [
         ]
+    },
+    "guilt":{
+        "duration": 6,
+        "severity": "minor",
+        "medicine_duration": 1,
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "illness_infectiousness": [],
+        "risks": [
+            {
+                "name": "shock",
+                "chance": 25
+            }
+        ],
+        "also_got": [],
+        "cause_permanent": [
+        ],
+        "herbs": [
+            
+        ]
     }
 }
-

@@ -183,10 +183,9 @@ class DFScreen(Screens):
 
     def get_dead_cats(self):
         self.dead_cats = [game.clan.demon]
-        
         for the_cat in Cat.all_cats_list:
-            if the_cat.dead and the_cat.df and the_cat.ID != game.clan.demon.ID and the_cat.ID != game.clan.instructor.ID and not the_cat.outside and\
-                    not the_cat.faded:
+            if the_cat.dead and the_cat.df and the_cat.ID != (game.clan.demon.ID or game.clan.instructor.ID) \
+                and not the_cat.outside and not the_cat.faded:
                 self.dead_cats.append(the_cat) 
 
     def screen_switches(self):

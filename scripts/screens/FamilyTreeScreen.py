@@ -444,6 +444,8 @@ class FamilyTreeScreen(Screens):
         i = 0
         for kitty in display_cats:
             _kitty = Cat.fetch_cat(kitty)
+            if not _kitty:
+                continue
             info_text = f"{str(_kitty.name)}"
             additional_info = self.the_cat.inheritance.get_cat_info(kitty)
             if len(additional_info["type"]) > 0: # types is always real

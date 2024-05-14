@@ -46,11 +46,22 @@ class StartScreen(Screens):
     def __init__(self, name=None):
         super().__init__(name)
         self.warning_label = None
-        bg = random.randint(1, 114)
-        self.bg = pygame.image.load("resources/menus/menu" + str(bg) + ".png").convert()
+        bg = self.choose_random_menu("resources/menus")
+        self.bg = pygame.image.load(bg).convert()
         self.bg = pygame.transform.scale(self.bg, (screen_x, screen_y))
         self.social_buttons = {}
         self.warning_label_background = None
+
+    def choose_random_menu(self, folder_path):
+        """This will choose a random menu to display from the menus folder."""
+        files = os.listdir(folder_path)
+        png_files = [file for file in files if file.endswith('.png')]
+
+        if png_files:
+            chosen_file = random.choice(png_files)
+            return "resources/menus/" + chosen_file
+        else:
+            return "resources/images/menu.png"
 
     def handle_event(self, event):
         """This is where events that occur on this page are handled.
@@ -160,7 +171,7 @@ class StartScreen(Screens):
         self.continue_button = UIImageButton(scale(
             pygame.Rect((140, 620), (384, 70))),
             "",
-            object_id="#continue_button",
+            object_id="#continue_main_button",
             manager=MANAGER)
         self.switch_clan_button = UIImageButton(
             scale(pygame.Rect((140, 710), (384, 70))),
@@ -256,7 +267,7 @@ class StartScreen(Screens):
         try:
             global has_checked_for_update
             global update_available
-            if not get_version_info().is_source_build and not get_version_info().is_itch and get_version_info().upstream.lower() == "Thlumyn/clangen".lower() and \
+            if not get_version_info().is_source_build and not get_version_info().is_itch and get_version_info().upstream.lower() == "sedgestripe/clangen".lower() and \
                     game.settings['check_for_updates'] and not has_checked_for_update:
                 if has_update(UpdateChannel(get_version_info().release_channel)):
                     update_available = True
@@ -327,7 +338,7 @@ class StartScreen(Screens):
                 self.open_data_directory_button.hide()
 
             self.closebtn.show()
-
+            
         if game.clan is not None:
             key_copy = tuple(Cat.all_cats.keys())
             for x in key_copy:

@@ -8,7 +8,7 @@
             "leaf-bare"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -45,7 +45,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -82,7 +82,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -119,7 +119,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -156,7 +156,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -193,12 +193,12 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
         ],
-        "patrol_art": "date_default",
+        "patrol_art": "Patrol_beachdate",
         "min_cats": 2,
         "max_cats": 2,
         "min_max_status": {},
@@ -230,7 +230,7 @@
             "leaf-bare"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -247,7 +247,13 @@
             {
                 "text": "You tell r_c to stop for a moment as you carefully lift the flowers. r_c looks confused, but lights up in a smile as you drop the flowers in front of them. They decide to wear the flowers on their pelt, and you feel all warm and fuzzy as you continue the patrol.",
                 "exp": 0,
-                "weight": 20
+                "weight": 20,
+                "accessory": [
+                    {
+                        "cats": ["p_l"],
+                        "accessory": ["FLOWER"]
+                    }
+                ]
             }
         ],
         "fail_outcomes": [
@@ -267,7 +273,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -304,7 +310,7 @@
             "leaf-fall"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -341,7 +347,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -378,7 +384,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -415,7 +421,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -452,7 +458,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date",
@@ -490,7 +496,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -527,7 +533,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -564,7 +570,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -581,7 +587,13 @@
             {
                 "text": "r_c runs alongside you with a happy yowl, the two of you running through the flowers and sending petals and grasshoppers flying everywhere. Eventually, you stop near the edge of the field, laughing happily and admiring the excited twinkle in r_c's eyes.",
                 "exp": 0,
-                "weight": 20
+                "weight": 20,
+                "accessory": [
+                    {
+                        "cats": ["p_l"],
+                        "accessory": ["PETALS"]
+                    }
+                ]
             }
         ],
         "fail_outcomes": [
@@ -601,7 +613,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -638,7 +650,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -675,7 +687,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -712,7 +724,7 @@
             "leaf-fall"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -729,7 +741,13 @@
             {
                 "text": "You stood up and collected the prettiest of maple leaves, and after gathering a good load of them, you stepped over and showed r_c the leaves. They look joyous and gracefully receive the maple leaves from your paw, putting them on their ear.",
                 "exp": 0,
-                "weight": 20
+                "weight": 20,
+                "accessory": [
+                    {
+                        "cats": ["r_c"],
+                        "accessory": ["MAPLE LEAF"]
+                    }
+                ]
             }
         ],
         "fail_outcomes": [
@@ -749,7 +767,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -786,13 +804,13 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date",
             "df"
         ],
-        "patrol_art": "date_default",
+        "patrol_art": "df_training",
         "min_cats": 2,
         "max_cats": 2,
         "min_max_status": {},
@@ -824,7 +842,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date",
@@ -862,7 +880,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date",
@@ -900,7 +918,7 @@
             "newleaf"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -937,7 +955,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -974,7 +992,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"
@@ -1011,7 +1029,7 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "border"
         ],
         "tags": [
             "date"

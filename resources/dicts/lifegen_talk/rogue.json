@@ -1,0 +1,371 @@
+{
+    "dead_rogue_J1": [
+        [
+            "they_dead",
+            "you_dead",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "This isn't what I expected from the afterlife."
+        ]
+    ],
+    "dead_rogue_J2": [
+        [
+            "they_dead",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "This isn't what I expected from the afterlife."
+        ]
+    ],
+    "sc_ur_rogue_Guy1": [
+        [
+            "they_ur",
+            "they_rogue",
+            "you_sc",
+            "they_blind",
+            "any"
+        ],
+        [
+            "[You aren't surprised to see t_c at the border. Again.]",
+            "Your kind can't just claim all of the territory!",
+            "[You explain, once again, to the rogue that they have more territory and freedom than StarClan cats.]",
+            "Yeah, well you better stay over there!",
+            "[Somethings never change, even when you're dead.]"
+        ]
+    ],
+    "sc_urrogue_ps_1": [
+        [
+            "they_ur",
+            "they_rogue",
+            "you_sc",
+            "you_deaf",
+            "they_deaf",
+            "any"
+        ],
+        [
+            "[You feel eyes peering at you from the fog, wandering near the border of stars and mist.]",
+            "[Briefly, you spot the ghost of a rogue, looking at your star-sewn pelt in awe.]",
+            "[Though, once they see you've spotted them, they turn tail and run.]"
+        ]
+    ],
+    "sc_urrogue_ps_2": [
+        [
+            "they_ur",
+            "they_rogue",
+            "you_sc",
+            "they_blind",
+            "any"
+        ],
+        [
+            "Hello?",
+            "[You turn to see an unfamiliar cat, standing half-in and half-out of the fog.]",
+            "I used to know one of you... though, I can't seem to remember who.",
+            "Would you mind asking your StarClan friends if they used to know me?"
+        ]
+    ],
+    "sc_urrogue_ps_3": [
+        [
+            "they_ur",
+            "they_rogue",
+            "you_sc",
+            "any"
+        ],
+        [
+            "[You find yourself a little lost, stumbling around the mist trying to find your way out.]",
+            "This way.",
+            "[You whirl around, spotting a cat who somehow seemed to sneak up on you.]",
+            "[They guide you out, but they seem to disappear when you go to thank them.]"
+        ]
+    ],
+    "sc_urrogue_ps_4": [
+        [
+            "they_ur",
+            "they_rogue",
+            "you_sc",
+            "you_blind",
+            "they_blind",
+            "any"
+        ],
+        [
+            "What was my name?",
+            "t_c. It meant a lot to me, even though it wasn't as grand as a Clancat's.",
+            "I take careful steps to ensure I never forget it."
+        ]
+   ],
+    "live_df_ps_1": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "How curious... a creature, roaming these rooted confinements.",
+            "Do not be afraid, your fear will not aid you. I had to learn that the hard way, alone."
+        ]
+    ],
+    "live_df_ps_2": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "It seems you are lost in more ways than one.",
+            "As am I, I suppose we have that much in common. Lucky you."
+        ]
+    ],
+    "live_df_ps_3": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "You can run as much as you'd like.",
+            "In time, the trees will start to whisper misguidance to you.",
+            "Then, you will never find your way home."
+        ]
+    ],
+    "live_df_ps_4": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "I've seen wondrous lands, even whilst alone and afraid.",
+            "It makes me bitter, you know. Knowing all that is out there...",
+            "Yet, the place I was supposed to call home is the same that drags me here."
+        ]
+    ],
+    "live_df_ps_5": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "You can't trust anyone, I learnt that out there.",
+            "You shouldn't even trust me.."
+        ]
+    ],
+    "dead_outsider_J7": [
+        [
+            "they_df",
+            "any",
+            "no_kit"
+        ],
+        [
+            "How awful must I have been, to end up in the hell for a belief that I didn't even hold?",
+            "[t_c chuckles.]",
+            "Guess I'd better start learning some of this 'Clan' stuff. Hey, wanna teach me?"
+        ]
+    ],
+    "living_ur_rogue_Guy1": [
+        [
+            "they_ur",
+            "no_kit",
+            "they_rogue"
+        ],
+        [
+            "[You had left the camp to stretch your legs, and run into a strange spirit.]",
+            "Hey you! This is my territory!",
+            "[You explain that they are dead and have no claims to it.]",
+            "Thats- thats not true! I'm as alive as you are!",
+            "[You hope they find peace.]"
+        ]
+    ],
+    "living_ur_rogue_Guy2": [
+        [
+            "they_ur",
+            "no_kit",
+            "they_rogue"
+        ],
+        [
+            "I fought you. I fought you and your <i>Clan</i>. You took our food, our shelter...",
+            "Why would I want to talk to you after that?"
+        ]
+    ],
+    "ur_parent_newborn_CM2": [
+        [
+            "newborn",
+            "kitten",
+            "they_ur",
+            "they_rogue",
+            "from_parent",
+            "you_abandoned"
+        ],
+        [
+            "Hpf.",
+            "Look at you unfortunate morsel.",
+            "Taken in by those sly-hearted, mouse dung-eating 'Clan' cats.",
+            "I hope you have enough sense not to listen to them."
+        ]
+    ],
+    "You_living_they_ur_CM1": [
+        [
+            "newborn",
+            "kitten",
+            "they_ur",
+            "they_rogue"
+        ],
+        [
+            "Well, well. Look who we have here!",
+            "It's a little Clan cat, being all brave.",
+            "Come closer, little friend. I want to show you something.",
+            "[You shake your head, and they let out an amused purr.]",
+            "Smart one, aren't you?"
+        ]
+    ],
+    "living_ur_kit_Guy1": [
+        [
+            "they_ur",
+            "they_kittypet",
+            "kitten",
+            "newborn"
+        ],
+        [
+            "Do you have a family, little one?",
+            "Oh... you're one of them. I'm glad you have someone to look out for you."
+        ]
+    ],
+    "living_ur_Guy2": [
+        [
+            "they_ur",
+            "they_kittypet",
+            "any"
+        ],
+        [
+            "[t_c visibly flinches when they see you, their wispy, otherworldly pelt shaking.]",
+            "Oh- a Clancat! I didn't know I was on your territory... or that you could see me.",
+            "[The kittypet seems to disappear into mist in front of you. You can't help but wonder where they go.]"
+        ]
+    ],
+    "ur_parent_newborn_CM1": [
+        [
+            "newborn",
+            "kitten",
+            "they_ur",
+            "any",
+            "from_parent"
+        ],
+        [
+            "Look, look! t_m!",
+            "I told you that they were safe, even when they're so far away...",
+            "Now what did those nice cats name you again? y_c? Strange... but beautiful.",
+            "Just like you, my kit."
+        ]
+    ],
+    "living_to_ur_kittypet_CM1": [
+        [
+            "they_ur",
+            "they_kittypet",
+            "any"
+        ],
+        [
+            "Eep!",
+            "[t_c startles when you approach, the cat crouching a bit as they cower away from you.]",
+            "[You assure the kittypet that you won't hurt them.]",
+            "Really? Isn't that what you 'Clan' cats do? I thought you all hated housecats...",
+            "[You bring up the fact it doesn't make much sense to chase off a cat that's already dead.]",
+            "You're right, I suppose. Sometimes I swear others can see me, too, though. Not everycat is so kind... thank you, but I should leave.",
+            "[You give t_c a light wave of your tail as they disappear into the horizon beyond, their wispy shape fading into nothing but a pale glow.]"
+        ]
+    ],
+    "living_to_ur_kittypet_CM2": [
+        [
+            "they_ur",
+            "they_kittypet",
+            "no_kit"
+        ],
+        [
+            "[You go out for a hunting trip, and upon a rock, basking in the early morning sunlight, sits a spirit, purring contently.]",
+            "[You move closer, and they tilt their head just enough to catch a glimpse of you, yawning.]",
+            "Isn't this weather wonderful?",
+            "You wouldn't believe how hard it is to feel warm like this anymore.",
+            "You should join me, while you can still enjoy it to its fullest.",
+            "[After a moment, you clamber up onto the rock, pressing yourself close to the ghostly cat. They purr, shifting themself aside to give you the full ray of sun.]",
+            "[It really is wonderful.]"
+        ]
+    ],
+    "dead_kittypet_J3": [
+        [
+            "they_ur",
+            "any",
+            "no_kit",
+            "they_kittypet"
+        ],
+        [
+            "You know, the way you Clan cats live your lives is... interesting.",
+            "Why not just find some housefolk? They're very nice, and you can enjoy all sorts of things, like warm blankets, free food, and all the cuddles you want.",
+            "Why are you making that face?"
+        ]
+    ],
+    "dead_kittypet_J4": [
+        [
+            "they_ur",
+            "any",
+            "they_kitten",
+            "they_kittypet"
+        ],
+        [
+            "Hi! Um, I think I lost my housefolk. You wouldn't know where they are, would you?",
+            "Oh, housefolk are, like, these big cats with no fur, and they walk on their back paws, and they have these big warm dens full of lots of stuff!",
+            "Mine are very nice. They were very happy to have me, I just don't know where they went...",
+            "[You tell the kit that you're sorry, but you don't think you can help them.]",
+            "Oh, okay, that's fine. I'll keep looking."
+        ]
+    ],
+    "dead_kittypet_J5": [
+        [
+            "they_ur",
+            "any",
+            "they_kittypet"
+        ],
+        [
+            "[You find t_c near the Clan border, staring off into the trees.]",
+            "Oh! Hi, y_c. I'm just... looking.",
+            "I lost my housefolk forever ago, and I feel like I'll never find them, when I look at how big the world is.",
+            "Do you think they're around here, somewhere? They must be so sad without me..."
+        ]
+    ],
+    "dead_kittypet_J6": [
+        [
+            "they_ur",
+            "any",
+            "they_kittypet",
+            "they_kitten",
+            "you_not_kit"
+        ],
+        [
+            "y_c! y_c! Look, look, look!",
+            "[As soon as they catch sight of you, t_c turns and sprints away. You run to catch up, almost losing their translucent pelt in the scenery.]",
+            "[They stop short of a weird hole in the ground and point to it.]",
+            "Here! Look! It's a pawprint from some housefolk! There's a bunch of them! They came from this way!",
+            "They don't smell familiar, but, maybe they're from my housefolk, and they've finally come looking for me!",
+            "[You ensure t_c that, yes, maybe that's true, and at the same time, make a mental note to inform the rest of the Clan about Twolegs on the territory.]"
+        ]
+    ],
+    "ur_ur_rogue_Guy1": [
+        [
+            "they_ur",
+            "they_rogue",
+            "you_ur",
+            "any"
+        ],
+        [
+            "We may be dead, but I still expect you to respect my territory."
+        ]
+    ],
+    "ur_ur_rogue_Guy2": [
+        [
+            "they_ur",
+            "they_rogue",
+            "you_ur",
+            "any"
+        ],
+        [
+            "Cross that line, and you cross <i>me</i>."
+        ]
+    ]
+}

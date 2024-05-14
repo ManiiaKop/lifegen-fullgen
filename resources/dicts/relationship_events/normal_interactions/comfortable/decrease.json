@@ -54,7 +54,8 @@
 		"id": "comfort_de_med3",
 		"interactions": [
 			"r_c is following m_c around.",
-			"r_c tells m_c that {PRONOUN/m_c/poss} pelt looks like a different color today."
+			"r_c tells m_c that {PRONOUN/m_c/poss} pelt looks like a different color today.",
+            "Whether it's a vision or not, every time m_c comes into {PRONOUN/r_c/poss} view, r_c notices {PRONOUN/m_c/poss} coat seemingly drenched in ink and smoke."
 		],
 		"random_trait_constraint": [
 			"strange"
@@ -65,7 +66,11 @@
 		"interactions": [
 			"r_c talks to m_c a bit too enthusiastically about how best to kill prey.",
 			"r_c started a fight with m_c.",
-			"m_c was startled after r_c snarled viciously during a trivial disagreement."
+			"m_c was startled after r_c snarled viciously during a trivial disagreement.",
+            "Although it was supposed to be a harmless training session, it was cut short when r_c got a little too carried away, enjoying the grip of {PRONOUN/r_c/poss} fangs on m_c's throat.",
+"During a tense and heated border patrol, m_c had to drag r_c away to prevent {PRONOUN/r_c/poss} fangs from sinking further into a rival Clan cat.",
+"As m_c tried to enjoy a peaceful break, {PRONOUN/m_c/subject} quivered, noticing r_c glaring at {PRONOUN/m_c/object} and licking {PRONOUN/r_c/poss} jaws, as blood drooled from {PRONOUN/r_c/poss} lips while chewing on prey.",
+"Peering through formerly blissful, sleeping eyes, m_c woke up with a yelp, shivering as {PRONOUN/m_c/subject} saw r_c looming above {PRONOUN/m_c/object}, with the glint of {PRONOUN/r_c/poss} fangs poking through."
 		],
 		"random_trait_constraint": [
 			"bloodthirsty"

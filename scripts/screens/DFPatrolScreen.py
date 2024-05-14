@@ -117,7 +117,7 @@ class DFPatrolScreen(Screens):
             self.update_cat_images_buttons()
             self.update_button()
         elif event.ui_element == self.elements['add_one']:
-            if len(self.current_patrol) < 6:
+            if len(self.current_patrol) < 3:
                 if not game.clan.clan_settings['random med cat']:
                     able_no_med = [cat for cat in self.able_cats if
                                 cat.status not in ['medicine cat', 'medicine cat apprentice']]
@@ -243,7 +243,7 @@ class DFPatrolScreen(Screens):
             if self.selected_cat in self.current_patrol:
                 self.elements["add_remove_cat"] = UIImageButton(scale(pygame.Rect((672, 920), (254, 60))), "",
                                                                 object_id="#remove_cat_button", manager=MANAGER)
-            elif self.selected_cat is None or len(self.current_patrol) >= 2:
+            elif self.selected_cat is None or len(self.current_patrol) > 2:
                 self.elements["add_remove_cat"] = UIImageButton(scale(pygame.Rect((700, 920), (196, 60))), "",
                                                                 object_id="#add_cat_button", manager=MANAGER)
                 self.elements["add_remove_cat"].disable()
@@ -260,8 +260,8 @@ class DFPatrolScreen(Screens):
             # Update add random cat buttons
             # Enable all the buttons, to reset them
             self.elements['add_one'].enable()
-            self.elements['add_three'].enable()
-            self.elements['add_six'].enable()
+            self.elements['add_three'].disable()
+            self.elements['add_six'].disable()
             self.elements["random"].enable()
 
             # making sure meds don't get the option for other patrols
@@ -321,7 +321,7 @@ class DFPatrolScreen(Screens):
                 able_no_med = self.able_cats
             if len(able_no_med) == 0:
                 able_no_med = self.able_cats
-            if len(self.current_patrol) >= 6 or len(able_no_med) < 1:
+            if len(self.current_patrol) >= 3 or len(able_no_med) < 1:
                 self.elements['add_one'].disable()
                 self.elements["random"].disable()
             if len(self.current_patrol) > 3 or len(able_no_med) < 3:
@@ -426,6 +426,8 @@ class DFPatrolScreen(Screens):
         self.elements["add_six"] = UIImageButton(scale(pygame.Rect((886, 990), (68, 68))), "",
                                                  object_id="#add_six_button"
                                                  , manager=MANAGER)
+        self.elements["add_three"].disable()
+        self.elements["add_six"].disable()
 
         # patrol type buttons - disabled for now
         
@@ -638,13 +640,13 @@ class DFPatrolScreen(Screens):
         the_cat = game.clan.your_cat
         if "patrolled" not in game.switches:
             game.switches['patrolled'] = []
-        if not the_cat.dead and not the_cat.outside and the_cat not in self.current_patrol and not the_cat.not_working():
+        if not the_cat.dead and not the_cat.outside and not the_cat.not_working():
             if "3" not in game.switches['patrolled']:
-                self.current_patrol.append(game.clan.your_cat)
-        if "3" not in game.switches['patrolled']:
-            for c in Cat.all_cats_list:
-                if c.moons >= 6 and not c.dead and c.in_camp and c.ID != game.clan.your_cat.ID and c.ID not in game.patrolled and not c.outside and c not in self.current_patrol and not c.not_working():
-                    self.able_cats.append(c)
+                if the_cat not in self.current_patrol:
+                    self.current_patrol.append(game.clan.your_cat)
+                for c in Cat.all_cats_list:
+                    if c.moons >= 6 and not c.dead and c.in_camp and c.ID != game.clan.your_cat.ID and c.ID not in game.patrolled and not c.outside and c not in self.current_patrol and not c.not_working():
+                        self.able_cats.append(c)
                 
         if not self.able_cats:
             all_pages = []

@@ -577,6 +577,7 @@
             "Leaf-bare",
             "Leaf-fall",
             "murder_reveal",
+            "notreveal",
             "other_cat"
         ],
         "event_text": "m_c laughs menacingly as r_c accuses {PRONOUN/m_c/object} of murdering mur_c. So what if {PRONOUN/m_c/subject} did? What is r_c going to do about it?",
@@ -592,6 +593,7 @@
             "Leaf-bare",
             "Leaf-fall",
             "murder_reveal",
+            "notreveal",
             "other_cat"
         ],
         "event_text": "r_c gathers all the courage {PRONOUN/r_c/subject} {VERB/r_c/have/has} and quietly tells m_c {PRONOUN/r_c/subject} {VERB/r_c/know/knows} what {PRONOUN/m_c/subject} did to mur_c. m_c glares menacingly and threatens r_c with the same fate if {PRONOUN/r_c/subject} {VERB/r_c/don't/doesn't} keep {PRONOUN/r_c/poss} mouth shut.",
@@ -607,9 +609,10 @@
             "Leaf-bare",
             "Leaf-fall",
             "murder_reveal",
+            "notreveal",
             "other_cat"
         ],
-        "event_text": "r_c avoids m_c at all costs after accidentally witnessing mur_c's murder. r_c knows {PRONOUN/r_c/subject} can't keep it a secret but is terrified of what m_c might do.",
+        "event_text": "r_c avoids m_c at all costs after accidentally witnessing mur_c's murder. r_c knows {PRONOUN/r_c/subject} shouldn't keep it a secret but is terrified of what m_c might do.",
         "cat_trait": [
             "bloodthirsty"
         ]
@@ -652,6 +655,7 @@
             "Leaf-bare",
             "Leaf-fall",
             "murder_reveal",
+            "definite_shun",
             "other_cat"
         ],
         "event_text": "m_c boldly confesses to the entire Clan that {PRONOUN/m_c/subject} killed mur_c. m_c claims that mur_c deserved to pay for what they did.",
@@ -669,7 +673,7 @@
             "murder_reveal",
             "other_cat"
         ],
-        "event_text": "m_c is truthful when r_c questions {PRONOUN/m_c/object} about mur_c's strange death. m_c claims that mur_c deserved to die after what {PRONOUN/mur_c/subject} did to m_c.",
+        "event_text": "m_c is truthful when r_c questions {PRONOUN/m_c/object} about mur_c's strange death. m_c claims that mur_c deserved to die after what they did to m_c.",
         "cat_trait": [
             "vengeful"
         ]
@@ -697,6 +701,7 @@
             "Leaf-bare",
             "Leaf-fall",
             "murder_reveal",
+            "definite_shun",
             "other_cat"
         ],
         "event_text": "m_c can't keep this secret anymore. {PRONOUN/m_c/subject/CAP} {VERB/m_c/request/requests} a Clan meeting, where {PRONOUN/m_c/subject} {VERB/m_c/reveal/reveals} the terrible secret {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} kept.",

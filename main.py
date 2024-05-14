@@ -42,18 +42,10 @@ if not getattr(sys, 'frozen', False):
             break
 
     if isMissing:
-        if find_spec("thonny") is not None:
-            print("""You are missing some requirements to run clangen!
-                  Please press "Tools" -> "Manage Packages"
-                  Once the menu opens, click the link below "Install from requirements file".
-                  Then, select the file "requirements.txt" in the clangen folder.
-                  """)
-        else:
-            print("""You are missing some requirements to run clangen!
-                  Please run the following command in your terminal to install them:
-                  
-                  python3 -m pip install -r requirements.txt
-                  """)
+        print("""You are missing some requirements to run clangen!
+                
+                Please look at the "README.md" file for instructions on how to install them.
+                """)
         
         print("If you are still having issues, please ask for help in the clangen discord server: https://discord.gg/clangen")
         sys.exit(1)
@@ -284,7 +276,7 @@ else:
 if get_version_info().is_source_build or get_version_info().is_dev():
     dev_watermark = pygame_gui.elements.UILabel(
         scale(pygame.Rect((1050, 1321), (600, 100))),
-        "Dev Build:",
+        "LifeGen: ",
         object_id="#dev_watermark"
     )
 
@@ -293,17 +285,37 @@ cursor_img = pygame.image.load('resources/images/cursor.png').convert_alpha()
 cursor = pygame.cursors.Cursor((9,0), cursor_img)
 disabled_cursor = pygame.cursors.Cursor(pygame.SYSTEM_CURSOR_ARROW)
 
-
-
-
-
 while True:
     time_delta = clock.tick(game.switches['fps']) / 1000.0
     if game.switches['cur_screen'] not in ['start screen']:
         if game.settings['dark mode']:
-            screen.fill(game.config["theme"]["dark_mode_background"])
+            b = 50
+            if game.settings['red_bg']:
+                if game.clan:
+                    if game.clan.your_cat:
+                        if not game.clan.your_cat.history:
+                            game.clan.your_cat.load_history()
+                        if game.clan.your_cat.history:
+                            if game.clan.your_cat.history.murder:
+                                if "is_murderer" in game.clan.your_cat.history.murder:
+                                    if len(game.clan.your_cat.history.murder["is_murderer"]) > 0:
+                                        for i in range(len(game.clan.your_cat.history.murder["is_murderer"])):
+                                            b -= 3
+            screen.fill((57, max(36,b), 36))
         else:
-            screen.fill(game.config["theme"]["light_mode_background"])
+            b = 194
+            if game.settings['red_bg']:
+                if game.clan:
+                    if game.clan.your_cat:
+                        if not game.clan.your_cat.history:
+                            game.clan.your_cat.load_history()
+                        if game.clan.your_cat.history:
+                            if game.clan.your_cat.history.murder:
+                                if "is_murderer" in game.clan.your_cat.history.murder:
+                                    if len(game.clan.your_cat.history.murder["is_murderer"]) > 0:
+                                        for i in range(len(game.clan.your_cat.history.murder["is_murderer"])):
+                                            b -= 1
+            screen.fill((206, max(b, 167), 168))
 
     if game.settings['custom cursor']:
         if pygame.mouse.get_cursor() == disabled_cursor:

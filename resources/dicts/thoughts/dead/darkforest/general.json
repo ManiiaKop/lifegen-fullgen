@@ -51,7 +51,11 @@
             "Feels the shadows watching {PRONOUN/m_c/object}",
             "Wishes to be alone",
             "Misses the feeling of a warm nest",
-            "Feels a sharp pang of hunger"
+            "Feels a sharp pang of hunger",
+            "Can still feel {PRONOUN/m_c/poss} wounds that killed {PRONOUN/m_c/object}",
+            "Is discussing future plans with the other Dark Forest cats",
+            "Is eerily staring at the black abyss",
+            "Is yowling into the ebony void that {PRONOUN/m_c/subject} don't belong here"
         ]
     },
     {
@@ -60,10 +64,39 @@
             "Is thinking about walking in the dreams of r_c",
             "Watches r_c with malice in {PRONOUN/m_c/poss} eyes",
             "Is whispering in the ear of r_c",
-            "Is watching r_c with a sly smile"
+            "Is watching r_c with a sly smile",
+            "Is currently walking inside r_c's dreams, whispering of promises and lies",
+            "Is taking over r_c's body in order to finish what {PRONOUN/m_c/subject} started",
+            "Pulls r_c into the Dark Forest in {PRONOUN/r_c/poss} dreams",
+            "Is secretly training r_c",
+            "Is begging r_c to vouch for {PRONOUN/m_c/object} to join StarClan",
+            "Is explaing to r_c about {PRONOUN/m_c/poss} backstory and why {PRONOUN/m_c/subject} {VERB/m_c/are/is} here"
         ],
         "random_living_status": [
             "living"
+        ]
+    },
+    {
+        "id": "dark_forest_founder_dead_to_dead_other",
+        "thoughts": [
+            "Is speaking with r_c how c_n came to be",
+            "Is telling the other Dark Forest cats stories of c_n's beginning",
+            "Proposed to {PRONOUN/m_c/self} that {PRONOUN/m_c/poss} era was the most powerful and pure",
+            "Is trying to take control over r_c with promises of protection",
+            "Is hosting another battle to the death to boost {PRONOUN/m_c/poss} power over the forgotten souls",
+            "Glares down at the battling trainees, rtaunting r_c to improve",
+            "Lifts a claw at a quivering, pitiful soul, then orders r_c to dispose of it"
+        ],
+        "main_age_constraint": [
+            "adolescent",
+            "young adult",
+            "adult",
+            "senior adult",
+            "senior"
+        ],
+        "main_backstory_constraint": ["clan_founder"],
+        "random_living_status": [
+            "darkforest"
         ]
     }
 ]

@@ -3,12 +3,18 @@
 		"id": "group_3_negative_gossip",
 		"cat_amount": 3,
 		"intensity": "low",
-		"interactions": ["m_c is gossiping with r_c1 about r_c2"],
+		"interactions": [
+			"m_c is gossiping with r_c1 about r_c2"
+		],
 		"relationship_constraint": {
-			"m_c_to_r_c2": ["dislike_15"],
-			"r_c1_to_r_c2": ["dislike_15"]
+			"m_c_to_r_c2": [
+				"dislike_15"
+			],
+			"r_c1_to_r_c2": [
+				"dislike_15"
+			]
 		},
-		"specific_reaction":{
+		"specific_reaction": {
 			"m_c_to_r_c1": {
 				"comfortable": "increase"
 			},
@@ -20,14 +26,14 @@
 				"platonic": "decrease",
 				"dislike": "increase"
 			},
-			"r_c2_to_m_c":{
+			"r_c2_to_m_c": {
 				"dislike": "increase"
 			},
-			"r_c2_to_r_c1":{
+			"r_c2_to_r_c1": {
 				"dislike": "increase"
 			}
 		}
-	},	
+	},
 	{
 		"id": "group_3_negative_argument",
 		"cat_amount": 3,
@@ -35,7 +41,9 @@
 			"m_c started a huge argument between r_c1 and r_c2."
 		],
 		"trait_constraint": {
-			"m_c": ["troublesome"]
+			"m_c": [
+				"troublesome"
+			]
 		},
 		"general_reaction": {
 			"comfortable": "decrease"
@@ -44,22 +52,31 @@
 	{
 		"id": "group_3_leader_neg1",
 		"cat_amount": 3,
-		"interactions": ["After having r_c2 challenge {PRONOUN/m_c/object}, m_c commands r_c1 to help {PRONOUN/m_c/object} punish r_c2. Everyone ends up hurt, though m_c feels {PRONOUN/m_c/subject} can trust r_c1 more."],
+		"interactions": [
+			"After having r_c2 challenge {PRONOUN/m_c/object}, m_c commands r_c1 to help {PRONOUN/m_c/object} punish r_c2. Everyone ends up hurt, though m_c feels {PRONOUN/m_c/subject} can trust r_c1 more."
+		],
 		"get_injuries": {
 			"m_c": {
-				"injury_names": ["claw-wound"],
+				"injury_names": [
+					"claw-wound"
+				],
 				"scar_text": "m_c got a scar after r_c2 challenged {PRONOUN/m_c/object}.",
 				"death_text": "Died after r_c2 challenged {PRONOUN/m_c/object}.",
 				"death_leader_text": "were challenged by r_c2"
 			},
 			"r_c1": {
-				"injury_names": ["claw-wound"],
+				"injury_names": [
+					"claw-wound"
+				],
 				"scar_text": "Got a scar while punishing r_c2 in the name of m_c.",
 				"death_text": "Died after punishing r_c2 in the name of m_c.",
 				"death_leader_text": "while punishing r_c2"
 			},
 			"r_c2": {
-				"injury_names": ["claw-wound", "bite-wound"],
+				"injury_names": [
+					"claw-wound",
+					"bite-wound"
+				],
 				"scar_text": "r_c2 challenged m_c, was punished by r_c1 for this, and got a scar as a reminder of {PRONOUN/r_c2/poss} actions.",
 				"death_text": "{PRONOUN/r_c2/subject/CAP} challenged m_c, {VERB/r_c2/were/was} punished by r_c1, and died as a result.",
 				"death_leader_text": "after {PRONOUN/r_c2/subject} challenged m_c and got punished by r_c1"
@@ -80,7 +97,7 @@
 		"trait_constraint": {
 			"m_c": [
 				"bloodthirsty",
-				"vengeful", 
+				"vengeful",
 				"fierce"
 			]
 		},
@@ -118,7 +135,11 @@
 	{
 		"id": "group_3_leader_neg2",
 		"cat_amount": 3,
-		"interactions": ["m_c and r_c1 discuss where they should be marking the border. r_c2 overhears, and disagrees with their decision, causing m_c and r_c1 to sneer at them in distaste."],
+		"interactions": [
+			"m_c and r_c1 discuss where they should be marking the border. r_c2 overhears, and disagrees with their decision, causing m_c and r_c1 to sneer at them in distaste.",
+			"Ensuring that {PRONOUN/m_c/poss} warriors meet {PRONOUN/m_c/poss} high standards, m_c directs r_c1 and r_c2 to combat a rival Clan cat. As r_c1 savagely tears the suffering cat apart, r_c2 is struck by a sudden surge of conscience. Ignoring the potential consequences-or perhaps despite them-r_c2 throws {PRONOUN/r_c2/self} against the stunned warrior, yowling for the victim to escape. After prying r_c2 from {PRONOUN/m_c/poss} loyal cat, m_c scowls silently at the trembling traitor.",
+			"m_c sets a despicable ambush for a loner found lounging uninvited in the territories. With a vicious grin etched on {PRONOUN/m_c/poss} muzzle, m_c commands r_c1 and r_c2 to 'teach a lesson' to the quivering loner. r_c1, with a cruel pleasure, treats the weeping loner like prey, mercilessly using {PRONOUN/r_c1/poss} claws to dissect them. However, r_c2, who hangs back, watches the horrifying scene unfold with growing dismay. Without fully realizing what {PRONOUN/r_c2/subject} is doing, r_c2 slams into {PRONOUN/r_c2/poss} Clanmate, knocking the startled cat away from the loner and yowling for the loner to flee. Pinned under the seething claws of a furious m_c, r_c2 knows {PRONOUN/r_c2/subject} will be the next target..."
+		],
 		"status_constraint": {
 			"m_c": [
 				"leader"
@@ -132,7 +153,12 @@
 			]
 		},
 		"trait_constraint": {
-			"m_c": ["bloodthirsty", "vengeful", "fierce", "bold"]
+			"m_c": [
+				"bloodthirsty",
+				"vengeful",
+				"fierce",
+				"bold"
+			]
 		},
 		"specific_reaction": {
 			"m_c_to_r_c1": {

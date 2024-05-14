@@ -5,6 +5,7 @@ import random
 from .Screens import Screens
 
 from scripts.utility import get_text_box_theme, scale, generate_sprite
+from scripts.housekeeping.version import get_version_info
 from scripts.clan import Clan
 from scripts.cat.cats import create_example_cats, Cat, Personality
 from scripts.cat.pelts import Pelt
@@ -37,9 +38,13 @@ class MakeClanScreen(Screens):
         pygame.image.load("resources/images/bg_preview_border.png").convert_alpha(), (466, 416))
     
     your_name_img = pygame.transform.scale(pygame.image.load(
-        'resources/images/pick_clan_screen/your name.png').convert_alpha(), (1600, 1400))
+        'resources/images/pick_clan_screen/Your name screen.png').convert_alpha(), (1600, 1400))
     your_name_img_dark = pygame.transform.scale(pygame.image.load(
-        'resources/images/pick_clan_screen/your name dark.png').convert_alpha(), (1600, 1400))
+        'resources/images/pick_clan_screen/Your name screen darkmode.png').convert_alpha(), (1600, 1400))
+    your_name_txt1 = pygame.transform.scale(pygame.image.load(
+        'resources/images/pick_clan_screen/your name text1.png').convert_alpha(), (796, 52))
+    your_name_txt2 = pygame.transform.scale(pygame.image.load(
+        'resources/images/pick_clan_screen/your name text2.png').convert_alpha(), (536, 52))
     
     #images for the customizing screen
     sprite_preview_bg = pygame.transform.scale(pygame.image.load(
@@ -379,7 +384,8 @@ class MakeClanScreen(Screens):
     
     def handle_choose_background_event(self, event):
         if event.ui_element == self.elements['previous_step']:
-            self.open_choose_leader()
+            # self.open_choose_leader()
+            self.open_name_cat()
         elif event.ui_element == self.elements['forest_biome']:
             self.biome_selected = "Forest"
             self.selected_camp_tab = 1
@@ -439,9 +445,9 @@ class MakeClanScreen(Screens):
             elif self.biome_selected == "Mountainous":
                 self.selected_camp_tab = randrange(1, 6)
             elif self.biome_selected == "Plains":
-                self.selected_camp_tab = randrange(1, 5)
+                self.selected_camp_tab = randrange(1, 6)
             else:
-                self.selected_camp_tab = randrange(1, 4)
+                self.selected_camp_tab = randrange(1, 5)
             self.refresh_selected_camp()
             self.refresh_text_and_buttons()
         elif event.ui_element == self.elements['done_button']:
@@ -723,12 +729,16 @@ class MakeClanScreen(Screens):
                                               , manager=MANAGER)
             self.tabs["tab4"] = UIImageButton(scale(pygame.Rect((128, 570), (308, 60))), "", object_id="#taiga_camp_tab"
                                               , manager=MANAGER)
+            self.tabs["tab5"] = UIImageButton(scale(pygame.Rect((118, 640), (308, 60))), "", object_id="#desert_tab"
+                                              , manager=MANAGER)
         elif self.biome_selected == 'Beach':
             self.tabs["tab1"] = UIImageButton(scale(pygame.Rect((152, 360), (308, 60))), "", object_id="#tidepool_tab"
                                               , manager=MANAGER)
             self.tabs["tab2"] = UIImageButton(scale(pygame.Rect((130, 430), (308, 60))), "", object_id="#tidal_cave_tab"
                                               , manager=MANAGER)
             self.tabs["tab3"] = UIImageButton(scale(pygame.Rect((140, 500), (308, 60))), "", object_id="#shipwreck_tab"
+                                              , manager=MANAGER)
+            self.tabs["tab4"] = UIImageButton(scale(pygame.Rect((95, 570), (308, 60))), "", object_id="#tropical_island_tab"
                                               , manager=MANAGER)
 
         if self.selected_camp_tab == 1:
@@ -896,36 +906,64 @@ class MakeClanScreen(Screens):
         """Opens the name clan screen"""
         
         self.clear_all_page()
-        self.elements["leader_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((700, 400), (200, 200))),
+        
+        self.elements["leader_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((580, 300), (400, 400))),
                                                                     pygame.transform.scale(
                                                                         self.your_cat.sprite,
                                                                         (200, 200)), manager=MANAGER)
-        if game.settings['dark mode']:
-            self.elements['background'] = pygame_gui.elements.UIImage(scale(pygame.Rect((500, 800), (600, 70))),
-                                                                  MakeClanScreen.your_name_img_dark, manager=MANAGER)
+        if game.settings["dark mode"]:
+            self.elements['background'] = pygame_gui.elements.UIImage(scale(pygame.Rect((0, 0), (1600, 1400))),
+                                                                    MakeClanScreen.your_name_img_dark, manager=MANAGER)
         else:
-            self.elements['background'] = pygame_gui.elements.UIImage(scale(pygame.Rect((500, 800), (600, 70))),
-                                                                  MakeClanScreen.your_name_img, manager=MANAGER)
+            self.elements['background'] = pygame_gui.elements.UIImage(scale(pygame.Rect((0, 0), (1600, 1400))),
+                                                                    MakeClanScreen.your_name_img, manager=MANAGER)
 
+        self.elements['text1'] = pygame_gui.elements.UIImage(scale(pygame.Rect((520, 730), (796, 52))),
+                                                                  MakeClanScreen.your_name_txt1, manager=MANAGER)
+        self.elements['text2'] = pygame_gui.elements.UIImage(scale(pygame.Rect((520, 790), (536, 52))),
+                                                                  MakeClanScreen.your_name_txt2, manager=MANAGER)
         self.elements['background'].disable()
-        
+
+        self.elements["version_background"] = UIImageButton(scale(pygame.Rect((1450, 1344), (1400, 55))), "", object_id="blank_button", manager=MANAGER)
+        self.elements["version_background"].disable()
+
+        if game.settings['fullscreen']:
+            version_number = pygame_gui.elements.UILabel(
+                pygame.Rect((1500, 1350), (-1, -1)), get_version_info().version_number[0:8],
+                object_id=get_text_box_theme())
+            # Adjust position
+            version_number.set_position(
+                (1600 - version_number.get_relative_rect()[2] - 8,
+                1400 - version_number.get_relative_rect()[3]))
+        else:
+            version_number = pygame_gui.elements.UILabel(
+                pygame.Rect((700, 650), (-1, -1)), get_version_info().version_number[0:8],
+                object_id=get_text_box_theme())
+            # Adjust position
+            version_number.set_position(
+                (800 - version_number.get_relative_rect()[2] - 8,
+                700 - version_number.get_relative_rect()[3]))
+
         self.refresh_cat_images_and_info2()
         
         self.sub_screen = 'choose name'
         
-        self.elements["random"] = UIImageButton(scale(pygame.Rect((520, 995), (68, 68))), "",
+        self.elements["random"] = UIImageButton(scale(pygame.Rect((570, 895), (68, 68))), "",
                                                 object_id="#random_dice_button"
                                                 , manager=MANAGER)
 
         self.elements["error"] = pygame_gui.elements.UITextBox("", scale(pygame.Rect((506, 1310), (596, -1))),
                                                                manager=MANAGER,
                                                                object_id="#default_dark", visible=False)
+        self.main_menu.kill()
+        self.main_menu = UIImageButton(scale(pygame.Rect((100, 100), (306, 60))), "", object_id="#main_menu_button"
+                                       , manager=MANAGER)
 
-        self.elements['previous_step'] = UIImageButton(scale(pygame.Rect((506, 1270), (294, 60))), "",
+        self.elements['previous_step'] = UIImageButton(scale(pygame.Rect((506, 1290), (294, 60))), "",
                                                        object_id="#previous_step_button", manager=MANAGER)
-        self.elements['next_step'] = UIImageButton(scale(pygame.Rect((800, 1270), (294, 60))), "",
+        self.elements['next_step'] = UIImageButton(scale(pygame.Rect((800, 1290), (294, 60))), "",
                                                    object_id="#next_step_button", manager=MANAGER)
-        self.elements["name_entry"] = pygame_gui.elements.UITextEntryLine(scale(pygame.Rect((600, 1000), (280, 58)))
+        self.elements["name_entry"] = pygame_gui.elements.UITextEntryLine(scale(pygame.Rect((650, 900), (280, 58)))
                                                                           , manager=MANAGER, initial_text=self.your_cat.name.prefix)
         self.elements["name_entry"].set_allowed_characters(
             list("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_- "))
@@ -933,13 +971,13 @@ class MakeClanScreen(Screens):
 
         if game.settings['dark mode']:
             self.elements["clan"] = pygame_gui.elements.UITextBox("-kit",
-                                                              scale(pygame.Rect((820, 1005), (200, 50))),
+                                                              scale(pygame.Rect((870, 905), (200, 50))),
                                                               object_id="#text_box_30_horizcenter_light",
                                                               manager=MANAGER)
         
         else:
             self.elements["clan"] = pygame_gui.elements.UITextBox("-kit",
-                                                              scale(pygame.Rect((820, 1005), (200, 50))),
+                                                              scale(pygame.Rect((870, 905), (200, 50))),
                                                               object_id="#text_box_30_horizcenter",
                                                               manager=MANAGER)
         
@@ -955,13 +993,13 @@ class MakeClanScreen(Screens):
                                                 object_id="#random_dice_button"
                                                 , manager=MANAGER)
 
-        self.elements["error"] = pygame_gui.elements.UITextBox("", scale(pygame.Rect((506, 1310), (596, -1))),
+        self.elements["error"] = pygame_gui.elements.UITextBox("", scale(pygame.Rect((506, 1340), (596, -1))),
                                                                manager=MANAGER,
                                                                object_id="#default_dark", visible=False)
 
-        self.elements['previous_step'] = UIImageButton(scale(pygame.Rect((506, 1270), (294, 60))), "",
+        self.elements['previous_step'] = UIImageButton(scale(pygame.Rect((506, 1290), (294, 60))), "",
                                                        object_id="#previous_step_button", manager=MANAGER)
-        self.elements['next_step'] = UIImageButton(scale(pygame.Rect((800, 1270), (294, 60))), "",
+        self.elements['next_step'] = UIImageButton(scale(pygame.Rect((800, 1290), (294, 60))), "",
                                                    object_id="#next_step_button", manager=MANAGER)
         self.elements['next_step'].disable()
         self.elements["name_entry"] = pygame_gui.elements.UITextEntryLine(scale(pygame.Rect((530, 1195), (280, 58)))
@@ -999,12 +1037,15 @@ class MakeClanScreen(Screens):
                                                               manager=MANAGER)
         
         self.elements["small"] = UIImageButton(scale(pygame.Rect((600,100), (192, 60))), "Small", object_id="#clan_size_small", manager=MANAGER)
-        self.elements["medium"] = pygame_gui.elements.UIButton(scale(pygame.Rect((850,100), (192, 60))), "Medium", object_id="#clan_size_medium", manager=MANAGER)
-        self.elements["large"] = pygame_gui.elements.UIButton(scale(pygame.Rect((1100,100), (192, 60))), "Large", object_id="#clan_size_large", manager=MANAGER)
+
+        self.elements["medium"] = UIImageButton(scale(pygame.Rect((850,100), (192, 60))), "Medium", object_id="#clan_size_medium", manager=MANAGER)
+        
+        self.elements["large"] = UIImageButton(scale(pygame.Rect((1100,100), (192, 60))), "Large", object_id="#clan_size_large", manager=MANAGER)
+
         self.elements["medium"].disable()
 
         self.elements["established"] = UIImageButton(scale(pygame.Rect((600,200), (192, 60))), "Old", object_id="#clan_age_old", tool_tip_text="The Clan has existed for many moons and cats' backstories will reflect this.",manager=MANAGER)
-        self.elements["new"] = pygame_gui.elements.UIButton(scale(pygame.Rect((850,200), (192, 60))), "New", object_id="#clan_age_new", tool_tip_text="The Clan is newly established and cats' backstories will reflect this.", manager=MANAGER)
+        self.elements["new"] = UIImageButton(scale(pygame.Rect((850,200), (192, 60))), "New", object_id="#clan_age_new", tool_tip_text="The Clan is newly established and cats' backstories will reflect this.", manager=MANAGER)
         self.elements["established"].disable()
 
     def clan_name_header(self):
@@ -1094,9 +1135,9 @@ class MakeClanScreen(Screens):
         
 
         # Next and previous buttons
-        self.elements['previous_step'] = UIImageButton(scale(pygame.Rect((506, 800), (294, 60))), "",
+        self.elements['previous_step'] = UIImageButton(scale(pygame.Rect((506, 1290), (294, 60))), "",
                                                        object_id="#previous_step_button", manager=MANAGER)
-        self.elements['next_step'] = UIImageButton(scale(pygame.Rect((800, 800), (294, 60))), "",
+        self.elements['next_step'] = UIImageButton(scale(pygame.Rect((800, 1290), (294, 60))), "",
                                                    object_id="#next_step_button", manager=MANAGER)
         self.elements['next_step'].disable()
 
@@ -1132,12 +1173,14 @@ class MakeClanScreen(Screens):
         self.tint=choice(["pink", "gray", "red", "orange", "black", "yellow", "purple", "blue"]) if random.randint(1,5) == 1 else None
         self.skin=choice(Pelt.skin_sprites)
         self.white_patches_tint=choice(["offwhite", "cream", "darkcream", "gray", "pink"]) if random.randint(1,5) == 1 else None
-        self.kitten_sprite=random.randint(0,2)
         self.reverse=False if random.randint(1,2) == 1 else True
         self.sex = random.choice(["male", "female"])
         self.personality = choice(['troublesome', 'lonesome', 'impulsive', 'bullying', 'attention-seeker', 'charming', 'daring', 'noisy', 'nervous', 'quiet', 'insecure', 'daydreamer', 'sweet', 'polite', 'know-it-all', 'bossy', 'disciplined', 'patient', 'manipulative', 'secretive', 'rebellious', 'grumpy', 'passionate', 'honest', 'leader-like', 'smug'])
         self.accessory = choice(Pelt.plant_accessories + Pelt.wild_accessories + Pelt.collars + Pelt.flower_accessories + Pelt.plant2_accessories + Pelt.snake_accessories + Pelt.smallAnimal_accessories + Pelt.deadInsect_accessories + Pelt.aliveInsect_accessories + Pelt.fruit_accessories + Pelt.crafted_accessories + Pelt.tail2_accessories) if random.randint(1,5) == 1 else None
         self.permanent_condition = choice(permanent_conditions) if random.randint(1,30) == 1 else None
+
+
+        self.kitten_sprite=random.randint(0,2)
         self.adolescent_pose = random.randint(0,2)
         self.adult_pose = random.randint(0,2)
         self.elder_pose = random.randint(0,2)
@@ -1211,7 +1254,7 @@ class MakeClanScreen(Screens):
         pelts.remove("Calico")
         
         pelts_tortie = pelts.copy()
-        pelts_tortie.remove("SingleColour")
+        # pelts_tortie.remove("SingleColour")
         pelts_tortie.remove("TwoColour")
         
         permanent_conditions = ['born without a leg', 'weak leg', 'twisted leg', 'born without a tail', 'paralyzed', 'raspy lungs', 'wasting disease', 'blind', 'one bad eye', 'failing eyesight', 'partial hearing loss', 'deaf', 'constant joint pain', 'seizure prone', 'allergies', 'persistent headaches']
@@ -1437,7 +1480,7 @@ class MakeClanScreen(Screens):
             if self.tortiepattern:
                 self.elements['tortiepattern'] = pygame_gui.elements.UIDropDownMenu(pelts_tortie, str(self.tortiepattern), scale(pygame.Rect((column4_x, y_pos[6]), (250, 70))), manager=MANAGER)
             else:
-                self.elements['tortiepattern'] = pygame_gui.elements.UIDropDownMenu(pelts_tortie, "Bengal", scale(pygame.Rect((column4_x, y_pos[6]), (250, 70))), manager=MANAGER)
+                self.elements['tortiepattern'] = pygame_gui.elements.UIDropDownMenu(pelts_tortie, "SingleColour", scale(pygame.Rect((column4_x, y_pos[6]), (250, 70))), manager=MANAGER)
 
             if self.pname != "Tortie":
                 self.elements['pattern'].disable()
@@ -1675,7 +1718,7 @@ class MakeClanScreen(Screens):
                 
                 if event.ui_element == self.elements['scars']:
                     if event.text == "None":
-                        self.scars = None
+                        self.scars = []
                     else:
                         self.scars = []
                         self.scars.append(event.text)
@@ -1702,10 +1745,10 @@ class MakeClanScreen(Screens):
                             self.scars.remove("NOPAW")
                         self.update_sprite()
                     else:
-                        chosen_condition = event.text
                         self.permanent_condition = event.text
                         if event.text == 'paralyzed':
                             self.paralyzed = True
+                            self.update_sprite()
                         else:
                             self.paralyzed = False
                         if event.text == 'born without a leg' and 'NOPAW' not in self.custom_cat.pelt.scars:
@@ -1769,7 +1812,7 @@ class MakeClanScreen(Screens):
                     self.your_cat.permanent_condition[self.permanent_condition]["moons_with"] = -1
                     self.your_cat.permanent_condition[self.permanent_condition]['born_with'] = True
                 if self.paralyzed and 'paralyzed' not in self.your_cat.permanent_condition:
-                    self.your_cat.get_permanent_condition("paralyzed")
+                    self.your_cat.get_permanent_condition('paralyzed')
                     self.your_cat.permanent_condition['paralyzed']["moons_until"] = 1
                     self.your_cat.permanent_condition['paralyzed']["moons_with"] = -1
                     self.your_cat.permanent_condition['paralyzed']['born_with'] = True

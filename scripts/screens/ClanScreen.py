@@ -373,7 +373,7 @@ class ClanScreen(Screens):
                 Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(first_choices, all_dens,
                                                                                  [1, 1, 1, 1, 1, 60, 60])
             elif Cat.all_cats[x].status == "leader":
-                game.clan.leader.placement = self.choose_nonoverlapping_positions(first_choices, all_dens,
+                Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(first_choices, all_dens,
                                                                                   [1, 200, 1, 1, 1, 1, 1])
                                                                                   
 

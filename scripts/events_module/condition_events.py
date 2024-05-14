@@ -162,7 +162,7 @@ class Condition_Events():
             return triggered
 
         involved_cats = [cat.ID]
-
+        injury_event = None
         # handle if the current cat is already injured
         if cat.is_injured() and game.clan.game_mode != 'classic':
             for injury in cat.injuries:
@@ -278,10 +278,11 @@ class Condition_Events():
                 pos_rel_event = ["romantic", "platonic", "neg_dislike", "respect", "comfort", "neg_jealousy", "trust"]
                 neg_rel_event = ["neg_romantic", "neg_platonic", "dislike", "neg_respect", "neg_comfort", "jealousy", "neg_trust"]
                 effect = ""
-                if any(tag in injury_event.tags for tag in pos_rel_event):
-                    effect = " (positive effect)"
-                elif any(tag in injury_event.tags for tag in neg_rel_event):
-                    effect = " (negative effect)"
+                if injury_event:
+                    if any(tag in injury_event.tags for tag in pos_rel_event):
+                        effect = " (positive effect)"
+                    elif any(tag in injury_event.tags for tag in neg_rel_event):
+                        effect = " (negative effect)"
 
                 log_text = text + effect
 
@@ -497,8 +498,10 @@ class Condition_Events():
                 event = event_text_adjust(Cat, event, cat, other_cat=None)
                 event_list.append(event)
                 game.herb_events_list.append(event)
-
-                cat.illnesses.pop(illness)
+                try:
+                    cat.illnesses.pop(illness)
+                except:
+                    print("ERROR: removing illness")
                 # make sure complications get reset if infection or fester were healed
                 if illness in ['an infected wound', 'a festering wound']:
                     for injury in cat.injuries:
@@ -814,14 +817,19 @@ class Condition_Events():
                         # Don't add this to the condition event list: instead make it it's own event, a ceremony. 
                         game.cur_events_list.append(
                                 Single_Event(event, "ceremony", retire_involved))
-                    elif game.clan.age % 5 == 0 and not game.switches['window_open']:
+                    elif not game.switches['window_open']:
                         RetireScreen('events screen')
+                    elif game.switches['window_open'] and 'retire' not in game.switches['windows_dict']:
+                        game.switches['windows_dict'].append('retire')
+
                             
     @staticmethod
     def give_risks(cat, event_list, condition, progression, conditions, dictionary):
         event_triggered = False
         if dictionary == cat.permanent_condition:
             event_triggered = True
+        if "risks" not in conditions[condition]:
+            return
         for risk in conditions[condition]["risks"]:
             if risk["name"] in (cat.injuries or cat.illnesses):
                 continue

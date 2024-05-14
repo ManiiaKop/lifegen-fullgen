@@ -45,6 +45,7 @@ class EventsScreen(Screens):
         self.events_list_box = None
         self.toggle_borders_button = None
         self.timeskip_button = None
+        self.death_button = None
         self.freshkill_pile_button = None
         self.events_frame = None
         self.clan_age = None
@@ -68,7 +69,7 @@ class EventsScreen(Screens):
 
     def handle_event(self, event):
         if game.switches['window_open']:
-            pass
+            return
         elif event.type == pygame_gui.UI_BUTTON_ON_HOVERED:
             try:
                 if event.ui_element == self.ceremonies_events_button and self.ceremony_alert:
@@ -85,14 +86,15 @@ class EventsScreen(Screens):
                     self.misc_alert.kill()
             except:
                 print("too much button pressing!")
-        if game.switches['window_open']:
-            pass
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
-            if event.ui_element == self.timeskip_button and game.clan.your_cat.moons == 5 and game.clan.your_cat.status == 'kitten':
-                    PickPath('events screen')
-            elif event.ui_element == self.timeskip_button and (game.clan.your_cat.dead_for == 1 or game.clan.your_cat.exiled):
-                    DeathScreen('events screen')
-                    return
+            if event.ui_element == self.timeskip_button and game.clan.your_cat.dead_for >= 1 and not game.switches['continue_after_death']:
+                DeathScreen('events screen')
+                return
+            elif self.death_button and event.ui_element == self.death_button:
+                DeathScreen('events screen')
+                return
+            if event.ui_element == self.timeskip_button and game.clan.your_cat.moons == 5 and game.clan.your_cat.status == 'kitten' and not game.clan.your_cat.outside and not game.clan.your_cat.dead:
+                PickPath('events screen')
             elif event.ui_element == self.you or ("you" in self.display_events_elements and event.ui_element == self.display_events_elements["you"]):
                 game.switches['cat'] = game.clan.your_cat.ID
                 self.change_screen("profile screen")
@@ -281,7 +283,7 @@ class EventsScreen(Screens):
                     self.display_events = self.misc_events
                     self.update_events_display()
             elif event.key == pygame.K_SPACE:
-                if game.clan.your_cat.moons == 5 and game.clan.your_cat.status == 'kitten':
+                if game.clan.your_cat.moons == 5 and game.clan.your_cat.status == 'kitten' and not game.clan.your_cat.outside and not game.clan.your_cat.dead:
                     PickPath('events screen')
                 elif (game.clan.your_cat.dead_for == 1 or game.clan.your_cat.exiled):
                     DeathScreen('events screen')
@@ -296,7 +298,7 @@ class EventsScreen(Screens):
             self.freshkill_pile_button =  UIImageButton(scale(pygame.Rect((1270, 210), (282, 60))), "", object_id="#freshkill_pile_button"
                                              , manager=MANAGER)
 
-        self.season = pygame_gui.elements.UITextBox(f'Current season: {game.clan.current_season}',
+        self.season = pygame_gui.elements.UITextBox(f'Season: {game.clan.current_season} - Clan Age: {game.clan.age} moons',
                                                     scale(pygame.Rect((600, 220), (400, 80))),
                                                     object_id=get_text_box_theme("#text_box_30_horizcenter"),
                                                     manager=MANAGER)
@@ -305,7 +307,7 @@ class EventsScreen(Screens):
                                                       object_id=get_text_box_theme("#text_box_30_horizcenter"),
                                                       manager=MANAGER)
         self.leaf = pygame_gui.elements.UITextBox("leafbare",
-                                                      scale(pygame.Rect((600, 340), (400, 80))),
+                                                      scale(pygame.Rect((400, 340), (800, 80))),
                                                       object_id=get_text_box_theme("#text_box_30_horizcenter"),
                                                       manager=MANAGER)
  
@@ -338,6 +340,13 @@ class EventsScreen(Screens):
 
         self.timeskip_button = UIImageButton(scale(pygame.Rect((620, 436), (360, 60))), "", object_id="#timeskip_button"
                                              , manager=MANAGER)
+
+        self.death_button = UIImageButton(scale(pygame.Rect((1020, 430), (68, 68))), "", object_id="#warrior", tool_tip_text="Revive"
+                                             , manager=MANAGER)
+        self.death_button.hide()
+
+        if game.switches['continue_after_death']:
+            self.death_button.show()
 
         # Sets up the buttons to switch between the event types.
         self.all_events_button = UIImageButton(
@@ -416,6 +425,8 @@ class EventsScreen(Screens):
 
         self.timeskip_button.kill()
         del self.timeskip_button
+        if self.death_button:
+            self.death_button.kill()
         if game.clan.game_mode != "classic":
             self.freshkill_pile_button.kill()
             del self.freshkill_pile_button
@@ -602,7 +613,7 @@ class EventsScreen(Screens):
 
     def update_events_display(self):
         
-        self.leaf.set_text(f'Current season: {game.clan.current_season}')
+        self.leaf.set_text(f'Season: {game.clan.current_season} - Clan Age: {game.clan.age}')
         self.season.set_text(str(game.clan.your_cat.name))
         if game.clan.your_cat.moons == -1:
             self.clan_age.set_text(f'Your age: Unborn')
@@ -623,6 +634,11 @@ class EventsScreen(Screens):
         for ele in self.cat_profile_buttons:
             ele.kill()
         self.cat_profile_buttons = []
+
+        if game.switches['continue_after_death'] and game.clan.your_cat.moons >= 0:
+            self.death_button.show()
+        else:
+            self.death_button.hide()
 
         # In order to set-set the scroll-bar postion, we have to remake the scrolling container
         self.event_container.kill()
