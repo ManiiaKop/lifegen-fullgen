@@ -37,10 +37,11 @@ class AllegiancesScreen(Screens):
         self.update_heading_text(f'{game.clan.name}Clan')
         allegiance_list = self.get_allegiances_text()
 
+        self.scroll_container = pygame_gui.elements.UIScrollingContainer(scale(pygame.Rect(
+            (100, 330), (1430, 1000))),
+            allow_scroll_x=False,
+            manager=MANAGER)
 
-        self.scroll_container = pygame_gui.elements.UIScrollingContainer(scale(pygame.Rect((100, 330), (1430, 1000)))
-                                                                         , manager=MANAGER)
-        
         self.ranks_boxes = []
         self.names_boxes = []
         self.names_buttons = []
@@ -69,7 +70,8 @@ class AllegiancesScreen(Screens):
             
             y_pos += 1400 * self.names_boxes[-1].get_relative_rect()[3] / screen_y 
 
-        
+            y_pos += 1400 * self.names_boxes[-1].get_relative_rect()[3] / screen_y
+
         self.scroll_container.set_scrollable_area_dimensions((1360 / 1600 * screen_x, y_pos / 1400 * screen_y))
 
     def exit_screen(self):
@@ -86,10 +88,6 @@ class AllegiancesScreen(Screens):
         del self.scroll_container
         self.heading.kill()
         del self.heading
-    
-    def generate_one_entry(self, cat, extra_details = ""):
-            """ Extra Details will be placed after the cat description, but before the apprentice (if they have one. )"""
-            output = f"{str(cat.name).upper()} - {cat.describe_cat()} {extra_details}"
 
             apps = ""
             if len(cat.apprentice) > 0:
@@ -140,8 +138,8 @@ class AllegiancesScreen(Screens):
                 living_warriors.remove(queen)
             elif queen in living_elders:
                 living_elders.remove(queen)
-            
-        #Clan Leader Box:
+
+        # Clan Leader Box:
         # Pull the Clan leaders
         outputs = []
         if game.clan.leader and not (game.clan.leader.dead or game.clan.leader.outside):
@@ -162,7 +160,7 @@ class AllegiancesScreen(Screens):
                 x[1],
                 x[2]
             ])
-        
+
         # Medicine Cat Box:
         if living_meds:
             if len(living_meds) == 1:
@@ -213,7 +211,7 @@ class AllegiancesScreen(Screens):
             #_box[1] = "\n".join([self.generate_one_entry(i) for i in living_mediators])
                     outputs.append(_box)
 
-         # Warrior Box:
+        # Warrior Box:
         if living_warriors:
             if len(living_warriors) == 1:
                 box = ["", "", "", ""]
@@ -258,11 +256,11 @@ class AllegiancesScreen(Screens):
                     _box[3] = x[2]
                     outputs.append(_box)
         
-         # Queens and Kits Box:
+        # Queens and Kits Box:
         if queen_dict or living_kits or living_queens:
             _box = ["", ""]
             _box[0] = '<b><u>QUEENS AND KITS</u></b>'
-            
+
             # This one is a bit different.  First all the queens, and the kits they are caring for. 
             all_entries = []
             for q in queen_dict:
@@ -324,7 +322,7 @@ class AllegiancesScreen(Screens):
 
         return outputs
 
-            
+
 class MedDenScreen(Screens):
     cat_buttons = {}
     conditions_hover = {}
@@ -513,7 +511,8 @@ class MedDenScreen(Screens):
             for cat in self.injured_and_sick_cats:
                 if cat.injuries:
                     for injury in cat.injuries:
-                        if cat.injuries[injury]["severity"] != 'minor' and injury not in ["pregnant", 'recovering from birth',
+                        if cat.injuries[injury]["severity"] != 'minor' and injury not in ["pregnant",
+                                                                                          'recovering from birth',
                                                                                           "sprain", "lingering shock"]:
                             if cat not in self.in_den_cats:
                                 self.in_den_cats.append(cat)
@@ -522,7 +521,8 @@ class MedDenScreen(Screens):
                             elif cat in self.minor_cats:
                                 self.minor_cats.remove(cat)
                             break
-                        elif injury in ['recovering from birth', "sprain", "lingering shock", "pregnant"] and cat not in self.in_den_cats:
+                        elif injury in ['recovering from birth', "sprain", "lingering shock",
+                                        "pregnant"] and cat not in self.in_den_cats:
                             if cat not in self.out_den_cats:
                                 self.out_den_cats.append(cat)
                             if cat in self.minor_cats:
@@ -702,7 +702,8 @@ class MedDenScreen(Screens):
             self.med_name = pygame_gui.elements.ui_label.UILabel(scale(pygame.Rect
                                                                        ((1050, 310), (450, 60))),
                                                                  short_name,
-                                                                 object_id=get_text_box_theme("#text_box_30_horizcenter"), manager=MANAGER
+                                                                 object_id=get_text_box_theme(
+                                                                     "#text_box_30_horizcenter"), manager=MANAGER
                                                                  )
             self.med_info = UITextBoxTweaked(
                 "",
@@ -736,11 +737,7 @@ class MedDenScreen(Screens):
         else:
             all_pages = self.chunks(tab_list, 10)
 
-        if self.current_page > len(all_pages):
-            if len(all_pages) == 0:
-                self.current_page = 1
-            else:
-                self.current_page = len(all_pages)
+        self.current_page = max(1, min(self.current_page, len(all_pages)))
 
         # Check for empty list (no cats)
         if all_pages:
@@ -785,7 +782,6 @@ class MedDenScreen(Screens):
                                                                    manager=MANAGER,
                                                                    tool_tip_text=conditions,
                                                                    starting_height=2)
-
 
             name = str(cat.name)
             short_name = shorten_text_to_fit(name, 185, 30)

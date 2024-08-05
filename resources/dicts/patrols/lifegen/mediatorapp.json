@@ -1,6 +1,6 @@
 [
     {
-        "patrol_id": "gen_your_cat55",
+        "patrol_id": "life_mediapp_og1",
         "biome": [
             "Any"
         ],
@@ -8,11 +8,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_mediatorapp_default",
         "min_cats": 1,
         "max_cats": 2,
@@ -24,7 +22,7 @@
         "success_outcomes": [
             {
                 "text": "You listen to both sides and propose a fair solution. Both apprentices agree and thank you for your help. Your skills as a mediator are improving.",
-                "exp": 25,
+                "exp": 15,
                 "weight": 20
             }
         ],
@@ -37,7 +35,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat56",
+        "patrol_id": "life_mediapp_og2",
         "biome": [
             "Any"
         ],
@@ -45,11 +43,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_mediatorapp_default",
         "min_cats": 1,
         "max_cats": 2,
@@ -61,7 +57,7 @@
         "success_outcomes": [
             {
                 "text": "You step in and help defuse the argument. The warriors appreciate your diplomatic approach, and the camp atmosphere returns to normal.",
-                "exp": 30,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -74,7 +70,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat57",
+        "patrol_id": "life_mediapp_og3",
         "biome": [
             "Any"
         ],
@@ -82,11 +78,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_mediatorapp_default",
         "min_cats": 1,
         "max_cats": 2,
@@ -98,7 +92,7 @@
         "success_outcomes": [
             {
                 "text": "You talk to both the apprentice and the warrior separately. You help the warrior understand the apprentice's perspective, and the training becomes more balanced.",
-                "exp": 35,
+                "exp": 15,
                 "weight": 20
             }
         ],
@@ -111,7 +105,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat58",
+        "patrol_id": "life_mediapp_og4",
         "biome": [
             "Any"
         ],
@@ -119,11 +113,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_mediatorapp_default",
         "min_cats": 1,
         "max_cats": 2,
@@ -135,7 +127,7 @@
         "success_outcomes": [
             {
                 "text": "You organise a story session where the elder shares their tales, and the younger cats listen intently. The elder feels appreciated, and the younger cats learn valuable lessons.",
-                "exp": 40,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -148,7 +140,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat59",
+        "patrol_id": "life_mediapp_og5",
         "biome": [
             "Any"
         ],
@@ -156,11 +148,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_mediatorapp_default",
         "min_cats": 1,
         "max_cats": 2,
@@ -185,7 +175,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_X",
+        "patrol_id": "life_mediapp_og6",
         "biome": [
             "Any"
         ],
@@ -193,11 +183,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_mediatorapp_default",
         "min_cats": 1,
         "max_cats": 1,
@@ -222,7 +210,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_X",
+        "patrol_id": "life_mediapp_og7",
         "biome": [
             "Any"
         ],
@@ -230,11 +218,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_mediatorapp_default",
         "min_cats": 1,
         "max_cats": 1,
@@ -259,7 +245,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat515",
+        "patrol_id": "life_mediapp_og8",
         "biome": [
             "Any"
         ],
@@ -267,11 +253,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_mediatorapp_default",
         "min_cats": 1,
         "max_cats": 2,
@@ -290,6 +274,43 @@
         "fail_outcomes": [
             {
                 "text": "You step in to try and calm the leader down, but you just escalate the situation further, leading them to leave. Your mentor thanks you for the attempt, and tells you the leader would calm down eventually.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "lg_mediatorapp_shunned_J1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "shunned"
+        ],
+        "patrol_art": "lg_mediatorapp_default",
+        "min_cats": 1,
+        "max_cats": 6,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "Two Clanmates are having an argument in the clearing, and though you're not allowed to train as a mediator during your punishment, you can't help but listen in, trying to think about how you might solve their problem given the chance.",
+        "decline_text": "You turn away, deciding to mind your business.",
+        "chance_of_success": 40,
+        "success_outcomes": [
+            {
+                "text": "A skilled mediator steps in, and you watch them work. While you can't actually train, you take note of their techniques, excited to apply them someplace in the future.",
+                "exp": 15,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "One of the arguing cats notices you watching and lashes their tail, snapping at you and telling you to mind your own business. You flatten your ears to your head and turn away, embarrassed.",
                 "exp": 0,
                 "weight": 20
             }

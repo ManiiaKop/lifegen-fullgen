@@ -1,6 +1,6 @@
 [
     {
-        "patrol_id": "gen_your_cat70",
+        "patrol_id": "life_lead_og1",
         "biome": [
             "Any"
         ],
@@ -8,11 +8,9 @@
             "leaf-bare"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_leader_default",
         "min_cats": 1,
         "max_cats": 6,
@@ -37,7 +35,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_X",
+        "patrol_id": "life_lead_og2",
         "biome": [
             "Any"
         ],
@@ -45,36 +43,34 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_leader_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "As you ponder over a tough decision to make for the clan, you wonder if it would be wise to confide some of your clan members and ask for their opinions and advice.",
-        "decline_text": "You decide not to confide in your clanmates, confident in your ability to make decisions on your own.",
+        "intro_text": "As you ponder over a tough decision to make for the Clan, you wonder if it would be wise to confide some of your Clan members and ask for their opinions and advice.",
+        "decline_text": "You decide not to confide in your Clanmates, confident in your ability to make decisions on your own.",
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "You cave in and decide to ask the senior warriors what they think about your decision. You and your clanmates are able to have a serious conversation, going over the advantages and disadvantages of your plan and how it could affect the clan's future. You are able to walk away confident in both your decision and the opinions of your clanmates.",
+                "text": "You cave in and decide to ask the senior warriors what they think about your decision. You and your Clanmates are able to have a serious conversation, going over the advantages and disadvantages of your plan and how it could affect the Clan's future. You are able to walk away confident in both your decision and the opinions of your Clanmates.",
                 "exp": 10,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You cave in and decide to ask the senior warriors what they think about your decision. Unfortunately, each of your clanmates seem to have a different opinion from one another and are unable to see each other eye to eye. You break up the conversation and stalk back to your den, your time wasted and your mind split with indecision.",
+                "text": "You cave in and decide to ask the senior warriors what they think about your decision. Unfortunately, each of your Clanmates seem to have a different opinion from one another and are unable to see each other eye to eye. You break up the conversation and stalk back to your den, your time wasted and your mind split with indecision.",
                 "exp": 0,
                 "weight": 20
             }
         ]
     },
     {
-        "patrol_id": "gen_your_cat71",
+        "patrol_id": "life_lead_og3",
         "biome": [
             "Any"
         ],
@@ -82,11 +78,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_leader_default",
         "min_cats": 1,
         "max_cats": 6,
@@ -111,7 +105,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_X",
+        "patrol_id": "life_lead_og4",
         "biome": [
             "Any"
         ],
@@ -119,36 +113,34 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_leader_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "During a moment of downtime, a clan member approaches you. They inform you that they have a few concerns regarding a decision that you recently made for the clan, and they would like to give their input",
-        "decline_text": "You tell your clanmate that they can voice their concerns in a private conversation later.",
+        "intro_text": "During a moment of downtime, a Clan member approaches you. They inform you that they have a few concerns regarding a decision that you recently made for the Clan, and they would like to give their input",
+        "decline_text": "You tell your Clanmate that they can voice their concerns in a private conversation later.",
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "You make sure to listen fully to your clanmate's concerns, allowing them to voice out their full opinion and give their own insight on how this decision may affect the clan in the future. You thank them for their decision to confide in you and promise to have a word with the clan's senior warriors and elders to see what they think.",
+                "text": "You make sure to listen fully to your Clanmate's concerns, allowing them to voice out their full opinion and give their own insight on how this decision may affect the Clan in the future. You thank them for their decision to confide in you and promise to have a word with the Clan's senior warriors and elders to see what they think.",
                 "exp": 10,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You lash out at your clanmate with your teeth bared, harshly telling them that they do not have the right to question your orders and defy you so openly. Your clanmate scrambles away, their expression unreadable and their claws tugging at the ground.",
+                "text": "You lash out at your Clanmate with your teeth bared, harshly telling them that they do not have the right to question your orders and defy you so openly. Your Clanmate scrambles away, their expression unreadable and their claws tugging at the ground.",
                 "exp": 0,
                 "weight": 20
             }
         ]
     },
     {
-        "patrol_id": "gen_your_cat72",
+        "patrol_id": "life_lead_og5",
         "biome": [
             "Any"
         ],
@@ -156,11 +148,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_leader_default",
         "min_cats": 1,
         "max_cats": 6,
@@ -185,7 +175,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat73",
+        "patrol_id": "life_lead_og6",
         "biome": [
             "Any"
         ],
@@ -193,11 +183,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_leader_default",
         "min_cats": 1,
         "max_cats": 6,
@@ -222,7 +210,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat74",
+        "patrol_id": "life_lead_og7",
         "biome": [
             "Any"
         ],
@@ -230,11 +218,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_leader_default",
         "min_cats": 1,
         "max_cats": 6,
@@ -253,6 +239,88 @@
         "fail_outcomes": [
             {
                 "text": "Despite your efforts, the epidemic continues to spread and the medicine cats have to work overtime. This crisis tests your leadership in a way nothing else has.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "lg_leader_shunned_J1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "shunned"
+        ],
+        "patrol_art": "lg_leader_default",
+        "min_cats": 1,
+        "max_cats": 6,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "The Clan leader-- your replacement-- is giving an announcement to the Clan about a recent gathering. They share a decision that you don't really agree with, but wonder if anycat would listen to your opinion anymore.",
+        "decline_text": "Womp womp.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "Ready to get shot down, you raise your voice above the crowd and express your disagreement with the leader's plan. The entire Clan looks to them to see whether or not they'll shoot you down. To your surprise, though, they do not, and instead acknowledge your opinion with a curt nod, and a mutter about how they'll consider it. It's not much, but it's better than nothing.",
+                "exp": 15,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You can barely finish your sentence before the leader silences you with a hiss. They let you know very clearly that your opinion is of the least concern to the Clan right now, and you can't help but feel offended that your Clanmate would treat you this way.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_lead_CZ1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "lg_leader_default",
+        "min_cats": 1,
+        "max_cats": 6,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "The constant management of leading the Clan has left you exhausted, but you've promised the kits that you would visit them in the nursery and share a meal days ago, and you feel somewhat guilty for having waited so long.",
+        "decline_text": "You decide that resting in your den is more important. You won't be of any use to your Clan if you're too tired to think; you spend the evening relaxing in solitude, promising to yourself that you would visit the kits tomorrow.",
+        "chance_of_success": 70,
+        "success_outcomes": [
+            {
+                "text": "It wouldn't hurt to do one last errand. You slip into the nursery with a mouse held in your jaws, only to find that all of the kits are asleep. So, you instead share the mouse with one of the queens and have a lovely and insightful conversation with them.",
+                "exp": 10,
+                "weight": 20
+            },
+            {
+                "text": "The kits are energetic, but not overwhelming. As you share a thrush with them, you answer all of their questions and delight in their bright-eyed curiosity. You leave feeling happy and reinvigorated for your work to continue tomorrow.",
+                "exp": 10,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "As soon as you enter the nursery, you're swarmed by hyperactive kits and a constant stream of questions. You do your best to hold conversation with them, but the queens recognize your fatigue and usher the kits aside, allowing you to escape to the peace and quiet of your den.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "You do your best to concentrate on your conversation with the Clan's young ones, but even the kits can tell that you're beginning to nod off halfway through the conversation. None of your Clanmates blame you for excusing yourself early, but you feel guilt begin to writhe in your chest as you make your way out.",
                 "exp": 0,
                 "weight": 20
             }

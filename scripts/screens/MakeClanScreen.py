@@ -8,6 +8,7 @@ from scripts.utility import get_text_box_theme, scale, generate_sprite
 from scripts.housekeeping.version import get_version_info
 from scripts.clan import Clan
 from scripts.cat.cats import create_example_cats, Cat, Personality
+from scripts.cat.skills import Skill, SkillPath
 from scripts.cat.pelts import Pelt
 from scripts.cat.names import names
 from scripts.cat.genotype import Genotype
@@ -17,6 +18,7 @@ from scripts.game_structure import image_cache
 from scripts.game_structure.image_button import UIImageButton, UISpriteButton, UITextBoxTweaked
 from scripts.game_structure.game_essentials import game, screen, screen_x, screen_y, MANAGER
 from scripts.patrol.patrol import Patrol
+from scripts.cat.skills import SkillPath
 
 class MakeClanScreen(Screens):
     # UI images
@@ -135,6 +137,7 @@ class MakeClanScreen(Screens):
         self.white_patches_tint="None"
         self.kitten_sprite=0
         self.reverse=False
+        self.skill = "Random"
         self.accessories=[]
         self.sex = "male"
         self.personality = "troublesome"
@@ -146,7 +149,10 @@ class MakeClanScreen(Screens):
         self.adult_pose = 0
         self.elder_pose = 0
         game.choose_cats = {}
-
+        self.skills = []
+        for skillpath in SkillPath:
+            for skill in skillpath.value:
+                self.skills.append(skill)
         # Buttons that appear on every screen.
         self.menu_warning = pygame_gui.elements.UITextBox(
             '',
@@ -1173,7 +1179,8 @@ class MakeClanScreen(Screens):
         self.tint=choice(["pink", "gray", "red", "orange", "black", "yellow", "purple", "blue"]) if random.randint(1,5) == 1 else None
         self.skin=choice(Pelt.skin_sprites)
         self.white_patches_tint=choice(["offwhite", "cream", "darkcream", "gray", "pink"]) if random.randint(1,5) == 1 else None
-        self.reverse=False if random.randint(1,2) == 1 else True
+        self.reverse= False if random.randint(1,2) == 1 else True
+        self.skill = random.choice(self.skills)
         self.sex = random.choice(["male", "female"])
         self.personality = choice(['troublesome', 'lonesome', 'impulsive', 'bullying', 'attention-seeker', 'charming', 'daring', 'noisy', 'nervous', 'quiet', 'insecure', 'daydreamer', 'sweet', 'polite', 'know-it-all', 'bossy', 'disciplined', 'patient', 'manipulative', 'secretive', 'rebellious', 'grumpy', 'passionate', 'honest', 'leader-like', 'smug'])
         self.accessory = choice(Pelt.plant_accessories + Pelt.wild_accessories + Pelt.collars + Pelt.flower_accessories + Pelt.plant2_accessories + Pelt.snake_accessories + Pelt.smallAnimal_accessories + Pelt.deadInsect_accessories + Pelt.aliveInsect_accessories + Pelt.fruit_accessories + Pelt.crafted_accessories + Pelt.tail2_accessories) if random.randint(1,5) == 1 else None
@@ -1185,6 +1192,10 @@ class MakeClanScreen(Screens):
         self.adult_pose = random.randint(0,2)
         self.elder_pose = random.randint(0,2)
 
+    # CUSTOMISATION
+    # its borked, so im keeping it commented out so auto-merging doesnt add it back
+
+    
     # def open_customize_cat(self):
     #     self.clear_all_page()
     #     self.sub_screen = "customize cat"
@@ -1548,10 +1559,15 @@ class MakeClanScreen(Screens):
     #             object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
     #         )
 
-    #         self.elements['reverse text'] = pygame_gui.elements.UITextBox(
-    #             'Reverse',
-    #             scale(pygame.Rect((1050, y_pos[7] ),(1200,-1))),
-    #             object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER)
+            # self.elements['reverse text'] = pygame_gui.elements.UITextBox(
+            #     'Reverse',
+            #     scale(pygame.Rect((column3_x, y_pos[7] ),(1200,-1))),
+            #     object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER)
+            
+            # self.elements['skills text'] = pygame_gui.elements.UITextBox(
+            #     'Skill',
+            #     scale(pygame.Rect((column4_x, y_pos[7] ),(1200,-1))),
+            #     object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER)
             
     #         # page 2 dropdowns
             
@@ -1581,6 +1597,10 @@ class MakeClanScreen(Screens):
     #         else:
     #             self.elements['reverse'] = pygame_gui.elements.UIDropDownMenu(["Yes", "No"], "No", scale(pygame.Rect((1050, y_pos[8]), (250, 70))), manager=MANAGER)
 
+    # if self.skill:
+    #     self.elements['skills'] = pygame_gui.elements.UIDropDownMenu(["Random"] + self.skills, self.skill, scale(pygame.Rect((1150, y_pos[8]), (250, 70))), manager=MANAGER)
+    # else:
+    #     self.elements['skills'] = pygame_gui.elements.UIDropDownMenu(["Random"] + self.skills, "Random", scale(pygame.Rect((1150, y_pos[8]), (300, 70))), manager=MANAGER)
         
     #     self.elements['previous_step'] = UIImageButton(scale(pygame.Rect((506, 1250), (294, 60))), "",
     #                                                    object_id="#previous_step_button", manager=MANAGER)

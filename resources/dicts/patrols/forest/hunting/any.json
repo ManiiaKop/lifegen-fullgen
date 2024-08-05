@@ -2,7 +2,7 @@
     {
         "patrol_id": "fst_hunt_porcupine1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_porcupine",
@@ -83,7 +83,7 @@
     {
         "patrol_id": "fst_hunt_porcupine2",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_porcupine",
@@ -158,7 +158,7 @@
     {
         "patrol_id": "fst_hunt_rabbitburrow1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "hunt_general_intro",
@@ -188,10 +188,10 @@
     {
         "patrol_id": "fst_hunt_twolegplace1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
-        "patrol_art": "fst_hunt_twolegplacekittens1",
+        "patrol_art": "fst_hunt_twolegplace",
         "min_cats": 1,
         "max_cats": 3,
         "min_max_status": {},
@@ -207,7 +207,7 @@
                 "prey": ["medium"]
             },
             {
-                "text": "The patrol finds some astonishingly fat chickens running around the Twoleg nest, and helps themselves to one.",
+                "text": "The patrol finds some astonishingly fat chickens running around the Twoleg nest and helps themselves to one.",
                 "exp": 10,
                 "weight": 5,
                 "prey": ["large"]
@@ -239,10 +239,10 @@
     {
         "patrol_id": "fst_hunt_twolegplace2",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
-        "patrol_art": "fst_hunt_twolegplacekittens1",
+        "patrol_art": "fst_hunt_twolegplace",
         "min_cats": 4,
         "max_cats": 6,
         "min_max_status": {},
@@ -258,7 +258,7 @@
                 "prey": ["medium"]
             },
             {
-                "text": "The patrol finds some astonishingly fat chickens running around the Twoleg nest, and helps themselves to as many as they can carry.",
+                "text": "The patrol finds some astonishingly fat chickens running around the Twoleg nest and helps themselves to as many as they can carry.",
                 "exp": 10,
                 "weight": 5,
                 "prey": ["large"]
@@ -290,7 +290,7 @@
     {
         "patrol_id": "fst_hunt_squirrelchase1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_squirrelchase",
@@ -357,7 +357,7 @@
     {
         "patrol_id": "fst_hunt_burrow1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "gen_hunt_burrow",
@@ -417,7 +417,7 @@
     {
         "patrol_id": "fst_hunt_burrow2",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "gen_hunt_burrow",
@@ -469,7 +469,7 @@
     {
         "patrol_id": "fst_hunt_howl1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_howl",
@@ -562,7 +562,7 @@
     {
         "patrol_id": "fst_hunt_howl2",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_howl",
@@ -655,7 +655,7 @@
     {
         "patrol_id": "fst_hunt_howl3",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_howl",
@@ -730,7 +730,7 @@
     {
         "patrol_id": "fst_hunt_howl4",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_howl",
@@ -823,7 +823,7 @@
     {
         "patrol_id": "fst_hunt_howl5",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_howl",
@@ -898,7 +898,7 @@
     {
         "patrol_id": "fst_hunt_howl6",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_howl",
@@ -973,7 +973,7 @@
     {
         "patrol_id": "fst_hunt_strange1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "gen_hunt_strange",
@@ -992,7 +992,7 @@
                 "prey": ["medium"]
             },
             {
-                "text": "A stinky bush will do! The plan works and their hunt goes well.",
+                "text": "A stinky bush will do! The plan works, and their hunt goes well.",
                 "exp": 20,
                 "weight": 5,
                 "prey": ["medium"]
@@ -1028,7 +1028,7 @@
     {
         "patrol_id": "fst_hunt_strange2",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "gen_hunt_strange",
@@ -1077,7 +1077,7 @@
     {
         "patrol_id": "fst_hunt_huntassessment1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "gen_hunt_huntassessment",
@@ -1126,7 +1126,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "Hunting is poor, and while r_c's mentor is disappointed, they don't expect r_c to be able to catch what isn't there.",
+                "text": "Hunting is poor, and while r_c's mentor is disappointed, they don't expect r_c to catch what isn't there.",
                 "exp": 0,
                 "weight": 20
             },
@@ -1164,7 +1164,7 @@
     {
         "patrol_id": "fst_hunt_solo2",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "hunt_general_intro",
@@ -1232,7 +1232,7 @@
     {
         "patrol_id": "fst_hunt_solo3",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "hunt_general_intro",
@@ -1302,7 +1302,7 @@
     {
         "patrol_id": "fst_hunt_solo4",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "hunt_general_intro",
@@ -1372,7 +1372,7 @@
     {
         "patrol_id": "fst_hunt_noise1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "hunt_general_intro",
@@ -1385,13 +1385,13 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "r_c drops down into a hunting crouch, certain that a mouse must be the source of the noise. {PRONOUN/r_c/subject/CAP} find {PRONOUN/r_c/self} to be correct when {PRONOUN/r_c/subject} pounce into the bush and return to the patrol with the tasty morsel dangling from {PRONOUN/r_c/poss} mouth. One more for the fresh-kill pile!",
+                "text": "r_c drops down into a hunting crouch, certain that a mouse must be the source of the noise. {PRONOUN/r_c/subject/CAP} find {PRONOUN/r_c/self} to be correct when {PRONOUN/r_c/subject} pounce into the bush and return to the patrol with the tasty morsel dangling from {PRONOUN/r_c/poss} jaws. One more for the fresh-kill pile!",
                 "exp": 10,
                 "weight": 20,
                 "prey": ["medium"]
             },
             {
-                "text": "p_l pads towards the bush to check on the noise when a rabbit suddenly bursts out! s_c is quick to react and manages to snag the rabbit before it can disappear.",
+                "text": "p_l pads towards the bush to check on the noise when a rabbit bursts out! s_c is quick to react and snags the rabbit before it can disappear.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["HUNTER,1"],
@@ -1431,7 +1431,7 @@
     {
         "patrol_id": "fst_hunt_noise2",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "hunt_general_intro",
@@ -1450,7 +1450,7 @@
                 "prey": ["small"]
             },
             {
-                "text": "p_l pads towards the bush to check on the noise when a rabbit suddenly bursts out! s_c is quick to react and manages to snag the rabbit before it can disappear.",
+                "text": "p_l pads towards the bush to check on the noise when a rabbit bursts out! s_c is quick to react and snags the rabbit before it can disappear.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["HUNTER,1"],
@@ -1504,7 +1504,7 @@
     {
         "patrol_id": "fst_hunt_gonetnr1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_gonetnr",
@@ -1529,7 +1529,7 @@
                 "prey": ["medium"]
             },
             {
-                "text": "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
+                "text": "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol they need to leave. Now.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["CLEVER,3"]
@@ -1562,7 +1562,6 @@
                 "exp": 0,
                 "weight": 10,
                 "stat_trait": [
-                    "altruistic",
                     "compassionate",
                     "empathetic",
                     "faithful",
@@ -1579,7 +1578,7 @@
     {
         "patrol_id": "fst_hunt_gonetnr2",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_gonetnr",
@@ -1604,7 +1603,7 @@
                 "prey": ["large"]
             },
             {
-                "text": "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
+                "text": "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol they need to leave. Now.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["CLEVER,3"]
@@ -1637,7 +1636,6 @@
                 "exp": 0,
                 "weight": 10,
                 "stat_trait": [
-                    "altruistic",
                     "compassionate",
                     "empathetic",
                     "faithful",
@@ -1654,7 +1652,7 @@
     {
         "patrol_id": "fst_hunt_gonetnr3",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_gonetnr",
@@ -1679,7 +1677,7 @@
                 "prey": ["small"]
             },
             {
-                "text": "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
+                "text": "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol they need to leave. Now.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["CLEVER,3"]
@@ -1712,7 +1710,6 @@
                 "exp": 0,
                 "weight": 10,
                 "stat_trait": [
-                    "altruistic",
                     "compassionate",
                     "empathetic",
                     "faithful",
@@ -1729,7 +1726,7 @@
     {
         "patrol_id": "fst_hunt_gonetwolegden1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "hunt_general_intro",
@@ -1778,11 +1775,10 @@
         ],
         "fail_outcomes": [
             {
-                "text": "The Twolegs here are friendly, and a little carelessly, s_c goes to hunt in their garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
+                "text": "The Twolegs here are friendly, and a little carelessly, s_c goes to hunt in their garden. But there's a new thing there: a strange, suspicious box. Wisely, s_c avoids it, and returns to c_n territory.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": [
-                    "altruistic",
                     "compassionate",
                     "empathetic",
                     "faithful",
@@ -1817,7 +1813,7 @@
     {
         "patrol_id": "fst_hunt_gonetwolegden2",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "hunt_general_intro",
@@ -1863,11 +1859,10 @@
         ],
         "fail_outcomes": [
             {
-                "text": "A little carelessly, s_c jumps a fence to hunt in a den's garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
+                "text": "A little carelessly, s_c jumps a fence to hunt in a den's garden. But there's a new thing there: a strange, suspicious box. Wisely, s_c avoids it, and returns to c_n territory.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": [
-                    "altruistic",
                     "compassionate",
                     "empathetic",
                     "faithful",
@@ -1890,7 +1885,7 @@
     {
         "patrol_id": "fst_hunt_twolegdencatdare1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": ["romantic"],
         "patrol_art": "gen_hunt_twolegdencatdare",
@@ -1900,7 +1895,7 @@
             "all apprentices": [-1, -1]
         },
         "weight": 20,
-        "intro_text": "Boldly, eyes daring p_l to say no, r_c suggests hunting by the Twoleg dens.",
+        "intro_text": "{PRONOUN/r_c/poss} eyes daring p_l to say no, r_c suggests hunting by the Twoleg dens.",
         "decline_text": "On second thought, they decide to reline their nests today instead.",
         "chance_of_success": 40,
         "success_outcomes": [
@@ -1992,11 +1987,10 @@
                 ]
             },
             {
-                "text": "The Twolegs here are friendly, and a little carelessly, s_c goes to hunt in their garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
+                "text": "The Twolegs here are friendly, and a little carelessly, s_c goes to hunt in their garden. But there's a new thing there: a strange, suspicious box. Wisely, s_c avoids it, and returns to c_n territory.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": [
-                    "altruistic",
                     "compassionate",
                     "empathetic",
                     "faithful",
@@ -2037,7 +2031,7 @@
     {
         "patrol_id": "fst_hunt_twolegdenappdare1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": ["rom_two_apps", "romantic"],
         "patrol_art": "gen_hunt_twolegdenappdare",
@@ -2048,7 +2042,7 @@
             "all apprentices": [2, 2]
         },
         "weight": 20,
-        "intro_text": "Boldly, eyes daring app1 to say no, app2 suggests hunting by the Twoleg dens. Where apprentices are definitely not allowed.",
+        "intro_text": "{PRONOUN/app2/poss/CAP} eyes daring app1 to say no, app2 suggests hunting by the Twoleg dens. Where apprentices are definitely not allowed.",
         "decline_text": "On second thought, they decide to reline their nests today instead.",
         "chance_of_success": 30,
         "success_outcomes": [
@@ -2125,11 +2119,10 @@
                 ]
             },
             {
-                "text": "A little carelessly, s_c jumps a fence to hunt in a den's garden. But there's a new thing there, a box, suspicious and strange. Wisely, s_c avoids it, and returns to c_n territory.",
+                "text": "A little carelessly, s_c jumps a fence to hunt in a den's garden. But there's a new thing there: a strange, suspicious box. Wisely, s_c avoids it, and returns to c_n territory.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": [
-                    "altruistic",
                     "compassionate",
                     "empathetic",
                     "faithful",
@@ -2170,7 +2163,7 @@
     {
         "patrol_id": "fst_hunt_gonetwolegtrap1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_gonetwolegtrap",
@@ -2232,7 +2225,7 @@
     {
         "patrol_id": "fst_hunt_gonetwolegtrap2",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_gonetwolegtrap",
@@ -2294,7 +2287,7 @@
     {
         "patrol_id": "fst_hunt_thunderpath1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": ["retirement"],
         "patrol_art": "gen_hunt_thunderpath",
@@ -2326,7 +2319,7 @@
                 "prey": ["large"]
             },
             {
-                "text": "s_c is patient enough to wait until the Thunderpath is completely clear, then trots across calmly to hunt on the other side.",
+                "text": "s_c is patient enough to wait until the Thunderpath is completely clear, then trots across to hunt on the other side.",
                 "exp": 10,
                 "weight": 20,
                 "stat_trait": [
@@ -2383,7 +2376,7 @@
     {
         "patrol_id": "fst_hunt_thunderpath2",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": ["retirement", "cruel_season"],
         "patrol_art": "gen_hunt_thunderpath",
@@ -2415,7 +2408,7 @@
                 "prey": ["large"]
             },
             {
-                "text": "s_c is patient enough to wait until the Thunderpath is completely clear, then trots across calmly to hunt on the other side.",
+                "text": "s_c is patient enough to wait until the Thunderpath is completely clear, then trots across to hunt on the other side.",
                 "exp": 10,
                 "weight": 20,
                 "stat_trait": [
@@ -2472,7 +2465,7 @@
     {
         "patrol_id": "fst_hunt_thunderpath3",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": ["retirement"],
         "patrol_art": "gen_hunt_thunderpath",
@@ -2504,7 +2497,7 @@
                 "prey": ["large"]
             },
             {
-                "text": "s_c is patient enough to wait until the Thunderpath is completely clear, then trots across calmly with the patrol to hunt on the other side.",
+                "text": "s_c is patient enough to wait until the Thunderpath is completely clear, then trots across with the patrol to hunt on the other side.",
                 "exp": 10,
                 "weight": 20,
                 "stat_trait": [
@@ -2556,7 +2549,7 @@
     {
         "patrol_id": "fst_hunt_thunderpath4",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": ["retirement", "cruel_season"],
         "patrol_art": "gen_hunt_thunderpath",
@@ -2588,7 +2581,7 @@
                 "prey": ["large"]
             },
             {
-                "text": "s_c is patient enough to wait until the Thunderpath is completely clear, then trots across calmly with the patrol to hunt on the other side.",
+                "text": "s_c is patient enough to wait until the Thunderpath is completely clear, then trots across with the patrol to hunt on the other side.",
                 "exp": 10,
                 "weight": 20,
                 "stat_trait": [
@@ -2645,7 +2638,7 @@
     {
         "patrol_id": "fst_hunt_fun1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_fun1",
@@ -2689,7 +2682,7 @@
     {
         "patrol_id": "fst_hunt_fun2",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_fun2",
@@ -2728,7 +2721,7 @@
     {
         "patrol_id": "fst_hunt_fun3",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": ["romantic"],
         "patrol_art": "fst_hunt_fun3",
@@ -2811,7 +2804,7 @@
     {
         "patrol_id": "fst_hunt_fun4",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": ["romantic"],
         "patrol_art": "fst_hunt_fun4",
@@ -2878,7 +2871,7 @@
     {
         "patrol_id": "fst_hunt_lillizard1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "gen_hunt_lillizard",
@@ -2973,7 +2966,7 @@
     {
         "patrol_id": "fst_hunt_lillizard2",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": ["rom_two_apps", "romantic"],
         "patrol_art": "gen_hunt_lillizard",
@@ -3040,7 +3033,7 @@
     {
         "patrol_id": "fst_hunt_vole1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": [],
         "patrol_art": "fst_hunt_vole",
@@ -3084,7 +3077,7 @@
     {
         "patrol_id": "fst_hunt_flatwoods1",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": ["halloween"],
         "patrol_art": "flatwoods_INTRO",
@@ -3119,7 +3112,7 @@
     {
         "patrol_id": "fst_hunt_doverdemon",
         "biome": ["forest"],
-        "season": ["Any"],
+        "season": ["any"],
         "types": ["hunting"],
         "tags": ["halloween"],
         "patrol_art": "doverdemon_INTRO",

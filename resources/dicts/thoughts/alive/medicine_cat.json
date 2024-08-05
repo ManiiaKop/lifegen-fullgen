@@ -4,9 +4,8 @@
         "thoughts": [
             "Heads out of Clan territories to look for new herbs",
             "Purposefully planted herbs in hard-to-reach areas",
-            "Purposefully planted herbs in hard-to-reach areas",
             "Is exploring unclaimed lands while searching for herbs",
-            "Climbed a tree to gather alder bark instead of clawing the trunk",
+            "Climbs a tree to gather alder bark instead of just clawing the trunk",
             "Thinks about visiting StarClan, just to explore their hunting grounds",
             "Asks the deputy to go on patrol",
             "Begs the leader to give {PRONOUN/m_c/object} the bounciest kit as {PRONOUN/m_c/poss} apprentice",
@@ -174,7 +173,6 @@
     {
         "id": "lonesome_medicine_cat",
         "thoughts": [
-            "Is wishing {PRONOUN/m_c/subject} could have a mate and kits",
             "Wishes {PRONOUN/m_c/poss} Clanmates could understand {PRONOUN/m_c/poss} struggles",
             "Wishes there were more medicine cats in the Clan",
             "Wonders why the warriors won't share prey with {PRONOUN/m_c/object}",
@@ -272,7 +270,8 @@
             "Insists everyone eat chamomile leaves at moonhigh",
             "Sleeps in the middle of the clearing",
             "Looks dazed",
-            "Hisses at the kits randomly"
+            "Hisses at the kits randomly",
+            "Is insisting that {PRONOUN/m_c/subject}'d be an even better medicine cat as a worm"
         ],
         "main_trait_constraint": [
             "strange"

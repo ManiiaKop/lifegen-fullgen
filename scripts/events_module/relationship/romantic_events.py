@@ -319,7 +319,7 @@ class Romantic_Events():
                 return
             
             # Move on from dead mates
-            if cat_mate and "grief stricken" not in cat.illnesses and (cat_mate.dead and cat_mate.dead_for >= 4):
+            if cat_mate and "grief stricken" not in cat.illnesses and ((cat_mate.dead and cat_mate.dead_for >= 4) or cat_mate.outside) and not (cat.joined_df and cat_mate.df):
                 # randint is a slow function, don't call it unless we have to.
                 if not cat_mate.no_mates and random.random() > 0.5:
                     text = f'{cat.name} will always love {cat_mate.name} but has decided to move on.'

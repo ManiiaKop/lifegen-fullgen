@@ -89,11 +89,13 @@ class ChooseRebornScreen(Screens):
                     print("invalid previous cat", self.previous_cat)
             elif event.ui_element == self.dead_tab:
                 self.current_list = "dead"
+                self.current_page = 1
                 self.alive_tab.enable()
                 self.dead_tab.disable()
                 self.update_cat_list()
             elif event.ui_element == self.alive_tab:
                 self.current_list = "alive"
+                self.current_page = 1
                 self.alive_tab.disable()
                 self.dead_tab.enable()
                 self.update_cat_list()
@@ -107,6 +109,7 @@ class ChooseRebornScreen(Screens):
 
     def screen_switches(self):
         self.the_cat = game.clan.your_cat
+        self.current_page = 1
         self.mentor = Cat.fetch_cat(self.the_cat.mentor)
 
         self.heading = pygame_gui.elements.UITextBox("",
@@ -310,7 +313,7 @@ class ChooseRebornScreen(Screens):
                     valid_mentors.append(cat)
             else:
               
-                if cat.dead and not cat.ID == game.clan.your_cat.ID and not cat.ID == game.clan.instructor.ID and not cat.ID == game.clan.demon.ID and not cat.outside:
+                if cat.dead and not cat.ID == game.clan.your_cat.ID and not cat.ID == game.clan.instructor.ID and not cat.ID == game.clan.demon.ID and not cat.outside and cat.status not in ["loner", "kittypet", "rogue", "former Clancat"]:
 
 
                     valid_mentors.append(cat)

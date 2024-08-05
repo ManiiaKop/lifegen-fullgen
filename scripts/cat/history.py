@@ -683,6 +683,7 @@ class History:
         if cat.shunned == 0:
             cat.shunned = 1
             cat.thought = "Is upset that they have been shunned"
+            cat.faith -= 0.5
 
             if random.randint(1,4) == 1:
                 cat.get_injured("guilt")
@@ -705,6 +706,10 @@ class History:
                 victim_history["revealed_by"] = other_cat.ID
                 victim_history["revelation_text"] = "The truth of {PRONOUN/m_c/poss} murder was discovered by [discoverer]."
 
+                discoverer = str(other_cat.name)
+                if "clan_discovery" in murder_history:
+                    discoverer = game.clan.name + "Clan"       
+
                 murder_history["revelation_text"] = murder_history["revelation_text"].replace('[victim]', str(victim.name))
-                murder_history["revelation_text"] = murder_history["revelation_text"].replace('[discoverer]', str(other_cat.name))
-                victim_history["revelation_text"] = victim_history["revelation_text"].replace('[discoverer]', str(other_cat.name))
+                murder_history["revelation_text"] = murder_history["revelation_text"].replace('[discoverer]', discoverer)
+                victim_history["revelation_text"] = victim_history["revelation_text"].replace('[discoverer]', discoverer)

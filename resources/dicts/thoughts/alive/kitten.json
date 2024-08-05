@@ -3,7 +3,7 @@
         "id": "kit_dead_kit",
         "thoughts": [
             "Is wondering if r_c would have been {PRONOUN/m_c/poss} friend",
-            "Is playing with r_c, not minding that {PRONOUN/r_c/subject}{VERB/r_c/'s/'re} hard to be grab, being clear"
+            "Is playing with r_c, not minding that {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} hard to grab, being clear"
         ],
         "random_status_constraint": [
             "kitten"
@@ -68,7 +68,7 @@
             "Wants to have fun",
             "Is playing pretend",
             "Is showing off {PRONOUN/m_c/poss} toe beans",
-            "Was teasingly compared to a mossball"
+            "Had {PRONOUN/m_c/poss} shape teasingly compared to a mossball"
         ]
     },
     {
@@ -93,22 +93,22 @@
     {
         "id": "kit_other_kit",
         "thoughts": [
-            "Bolted after squawking birds with r_c",
-            "Getting payback for a previous prank by hiding a stinkbug in r_c's nest",
-            "Tries to quiet a sobbing r_c with {PRONOUN/m_c/poss} paw after roughhousing too much",
+            "With r_c, bolting after squawking birds",
+            "Getting payback from a previous prank by storing a stinkbug in r_c's nest",
+            "Tries to shove {PRONOUN/m_c/poss} paw on a sobbing r_c's mouth after roughhousing too much",
             "Is hiding in the shadows to ambush r_c for a fright",
             "Is leading today's exploration around the camp",
             "Trying to scare r_c with a spooky story {PRONOUN/m_c/subject} heard",
-            "Told r_c that {PRONOUN/m_c/subject} will get {PRONOUN/m_c/poss} warrior name before {PRONOUN/r_c/object}",
-            "Splashing in a muddy puddle with r_c after a rainstorm",
+            "Told r_c {PRONOUN/m_c/subject} will get {PRONOUN/m_c/poss} warrior name before {PRONOUN/r_c/object}",
+            "Splashing in a muddy puddle with r_c after a showerstorm",
             "Is blowing raspberries at r_c",
-            "Was dared by r_c to step a paw into the warriors' den",
-            "Is telling r_c all the things {PRONOUN/m_c/subject} will do when {PRONOUN/m_c/subject} earns {PRONOUN/m_c/poss} warrior name"
+            "Was dared by r_c to take a paw into the warriors' den",
+            "Is telling r_c all of the things {PRONOUN/m_c/subject}'ll do when {PRONOUN/m_c/subject} earn {PRONOUN/m_c/poss} warrior name"
         ],
         "random_status_constraint": [
             "kitten"
-        ]
-    },    
+        ]    
+    },
     {
         "id": "kit_alive_med_cat",
         "thoughts": [
@@ -170,7 +170,7 @@
             "Made a kit weep when {PRONOUN/m_c/subject} told them the Clan is giving them away for being weak",
             "Called another kit a tattletail",
             "Is glaring daggers at others",
-            "Is purposely play fighting too rough",
+            "Is purposely play-fighting too rough",
             "Was put in timeout",
             "Told another kit to watch their back for getting {PRONOUN/m_c/object} in trouble"
         ],
@@ -221,13 +221,13 @@
             "Sticks {PRONOUN/m_c/poss} paw into an old snake hole",
             "Isn't afraid of the dark",
             "Is planning to escape bathtime",
-            "Was caught before taking a step outside of camp",
+            "Was caught before taking a paw outside of camp",
             "Pretending r_c is the latest mountain {PRONOUN/m_c/subject} must climb",
             "Wants to be proud as an eagle's cry",
-            "Is the first to scout out scary things {PRONOUN/m_c/subject} heard",
-            "No hidden secrets are left untouched under {PRONOUN/m_c/poss} watch",
-            "The vast horizon beckons {PRONOUN/m_c/object} to explore",
-            "Another failed attempt trying to escape the camp"
+            "Is the first to search for the scary things {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} heard about",
+            "Is making sure that no secrets are left untouched under {PRONOUN/m_c/poss} watch",
+            "Is beckoned by the vast horizon to explore",
+            "Makes another failed attempt at trying to escape the camp"
         ],
         "main_trait_constraint": [
             "daring"
@@ -259,9 +259,9 @@
             "Has starry eyes",
             "Wants to reach out and touch the sky",
             "Has {PRONOUN/m_c/poss} head in the clouds",
-            "Staring off into space, captured in {PRONOUN/m_c/poss} imagination",
+            "Is staring off into space, captured in {PRONOUN/m_c/poss} imagination",
             "Can come up with the best lore to {PRONOUN/m_c/poss} stories",
-            "Didn't hear the another cats, too occupied in {PRONOUN/m_c/poss} imaginations"
+            "Didn't hear the other cats, too occupied in {PRONOUN/m_c/poss} imagination"
         ],
         "main_trait_constraint": [
             "daydreamer"
@@ -271,15 +271,15 @@
         "id": "honest_kit",
         "thoughts": [
             "Told r_c {PRONOUN/m_c/subject} can never lie",
-            "Doesn't want to hurt {PRONOUN/m_c/poss} Clanmates' feelings lying to them",
+            "Doesn't want to hurt {PRONOUN/m_c/poss} Clanmates' feelings by lying to them",
             "Is open and direct to everyone",
             "Is spilling out personal information about {PRONOUN/m_c/poss} trip to the dirtplace",
             "Doesn't like to have secrets",
-            "Told the medicine cat the truth about {PRONOUN/m_c/poss} tummyache from eating bugs",
-            "Will call out the other kits cheating in games",
+            "Told the healer the truth about {PRONOUN/m_c/poss} tummyache from eating bugs",
+            "Will callout the other kits cheating in games",
             "Wants to grow up to be a trustworthy warrior",
-            "Returns a kit's lost mossball, despite it looking so colorful and squishy to play with",
-            "Told r_c that {PRONOUN/r_c/subject} needs a bath"
+            "Returns a kit's lost mossball, despite it looking so colorful and squashy to play with",
+            "Told r_c that {PRONOUN/r_c/subject} need a bath"
         ],
         "main_trait_constraint": [
             "honest"
@@ -304,10 +304,10 @@
             "Ate a bug",
             "Has SO much energy",
             "Is zooming around",
-            "Is shouting out whatever flies out of {PRONOUN/m_c/poss} mouth",
-            "Race whiskers first into anything",
+            "Is shouting out whatever pops into {PRONOUN/m_c/poss} head",
+            "Races whiskers-first into anything",
             "Is flustered after a heated arugment",
-            "Is talking talking too fast, twisting {PRONOUN/m_c/poss} words"
+            "Is talking too fast, twisting {PRONOUN/m_c/poss} words"
         ],
         "main_trait_constraint": [
             "impulsive"
@@ -323,10 +323,10 @@
             "Is mimicking older cats to appear mature",
             "Is like the older sibling to the other kits",
             "Will take the blame for mischief",
-            "Is a bit clingy following the older cats",
-            "Is creating new games, but making sure {PRONOUN/m_c/subject} oversee it",
-            "Set on becoming a legendary warrior to the Clan",
-            "Is wanting to grow up",
+            "Is a bit clingy, following the older cats",
+            "Is creating games, but makes it apparent that {PRONOUN/m_c/subject} oversee it",
+            "Is set on becoming a legendary warrior to the Clan",
+            "Is too quick to grow up",
             "Jokingly told r_c {PRONOUN/r_c/subject} have to do what {PRONOUN/m_c/subject} say for the entire day",
             "Is a bit bossy"
         ],
@@ -391,11 +391,11 @@
             "Is very sleepy",
             "Doesn't like to yowl",
             "Finds somewhere comfy to nap",
-            "Startles others after appearing out of thin air",
+            "Startle others appearing out of thin air",
             "Had the camp in chaos trying to look for {PRONOUN/m_c/object}",
             "Likes to be secluded in {PRONOUN/m_c/poss} mind",
             "Even {PRONOUN/m_c/poss} yowls are whispers",
-            "Would rather whisper in someone's ear then speak out loud"
+            "Would rather whisper in someone's ear then speak outloud"
         ],
         "main_trait_constraint": [
             "quiet"
@@ -441,7 +441,7 @@
             "Loves to be helpful",
             "Is giving r_c {PRONOUN/m_c/poss} favorite mossball to feel better",
             "Is laughing at every joke, even terrible ones",
-            "Is planting petals in r_c's coat",
+            "Is planting r_c's coat with petals",
             "Got {PRONOUN/m_c/self} in the middle of a fray trying to settle things",
             "Is too adorable!"
         ],
@@ -478,7 +478,7 @@
             "Is stealing other kits' toys",
             "Tries to intimidate the other kits",
             "Tracking muddy pawprints into {PRONOUN/m_c/poss} nest",
-            "Is puffing {PRONOUN/m_c/self} up to appear bigger",
+            "Puffing {PRONOUN/m_c/self} up to appear bigger",
             "Is spitting and being spicy"
         ],
         "main_trait_constraint": [
@@ -499,8 +499,8 @@
             "Wonders what it's like to be a loner",
             "Wants to stay in {PRONOUN/m_c/poss} nest today",
             "Thought about talking to r_c but changed {PRONOUN/m_c/poss} mind",
-            "Prefers sitting by {PRONOUN/m_c/self} from {PRONOUN/m_c/poss} rambunctious Clanmates",
-            "Shakes {PRONOUN/m_c/poss} head when the other kits offered {PRONOUN/m_c/object} to join their games",
+            "Prefers sitting by {PRONOUN/m_c/self}, away from {PRONOUN/m_c/poss} rambunctious Clanmates",
+            "Shakes {PRONOUN/m_c/poss} head when the other kits offer {PRONOUN/m_c/object} a chance to join their games",
             "Feels like having one friend is enough for {PRONOUN/m_c/poss} energy",
             "Can create solo games for {PRONOUN/m_c/self}",
             "Enjoys watching other cats stroll by"
@@ -546,18 +546,17 @@
             "Doesn't know why everycat wants to be quiet all the time. No fun!",
             "Wakes up early to sing with the birds",
             "Is practicing bird calls",
+            "Is waltzing around camp, mimicing every sound {PRONOUN/m_c/subject} hear",
             "MROOOOOOOOOOOOOOOOWAHJWKLHJKSLAJNFLSAJDSKADNJSKALNDJSBHDJLS",
             "GRAAAAAAAAAAAAAAAAAAAAAHHHHHH",
-            "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
-            "Meow? Meow meow. Meow meow meow. Meow? Meow? Meow? Meow? Meow? Meow? Meow?",
             "Mimics the croak of a frog",
             "Is convinced that the louder {PRONOUN/m_c/subject} are, the faster {PRONOUN/m_c/subject} will grow",
             "Is repeating everything that r_c says back to them mockingly",
             "Is asking every cat in earshot to play with them",
             "Is practicing being a howling wolf. At night.",
             "Trying to see how loudly {PRONOUN/m_c/subject} can scream",
-            "Doesn't even breathe when talking nonstop",
-            "Is yapping across the entire camp"
+            "Can hold in {PRONOUN/m_c/poss} breath talking nonstop",
+            "Is yipping across the entire camp"
         ],
         "main_trait_constraint": [
             "noisy"
@@ -575,14 +574,14 @@
             "Hates making mistakes",
             "Is afraid of being in the way",
             "Was shadowing r_c all day",
-            "Feels as if {PRONOUN/m_c/subject} {VERB/m_c/don't/does} not have much talent",
+            "Feels as if {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} have much talent",
             "Prefers others taking the lead",
             "Cowering from the loud, towering birds",
             "Is fearful {PRONOUN/m_c/poss} mistakes will harm {PRONOUN/m_c/poss} Clanmates",
             "Is cowering from the rest of the Clan",
             "Is feeling isolated from others, even if {PRONOUN/m_c/subject} tries {PRONOUN/m_c/poss} best to fit in",
             "Is trying to put on a brave face today",
-            "Feels as if {PRONOUN/m_c/subject}{VERB/m_c/'s/'re} not growing big and strong to become an apprentice"
+            "Feels as if {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not growing big and strong enough to become an apprentice"
         ],
         "main_trait_constraint": [
             "insecure"
@@ -622,8 +621,8 @@
             "Is practicing identifying different types of leaves",
             "Thinks {PRONOUN/m_c/subject} {VERB/m_c/are/is} smarter than r_c",
             "Is convinced that {PRONOUN/m_c/subject} will become an apprentice early",
-            "Butt into a coversation to correct someone",
-            "Is showing off, in great details, about the history of c_n",
+            "Butts into a coversation to correct someone",
+            "Is going off, in great detail, about the history of c_n",
             "Rubbing in r_c's muzzle about a subject {PRONOUN/m_c/subject} greatly excel at",
             "Is trying to retell a story {PRONOUN/m_c/subject} know IS the absolute truth"
         ],
@@ -645,7 +644,7 @@
             "Is rushing r_c",
             "Tells r_c to hurry up already",
             "Is rolling {PRONOUN/m_c/poss} eyes after r_c told {PRONOUN/m_c/object} to to stop nagging",
-            "Repeatedly demanded to be leader in games",
+            "Repeatedly demands to be leader in games",
             "Pouting after being told no"
         ],
         "main_trait_constraint": [
@@ -655,14 +654,14 @@
     {
         "id": "manipulative_kit",
         "thoughts": [
-            "Can easily switch {PRONOUN/m_c/poss} expressions around certain cats",
+            "Can easily swap {PRONOUN/m_c/poss} expressions around certain cats",
             "Has an angelic demeanour but r_c knows better",
-            "Knows cruel words to poke at r_c's doubts and insecurities",
-            "Had lied that {PRONOUN/m_c/subject} {VERB/m_c/was/were} hungry to get another piece of prey",
+            "Knows cruel words to sting at r_c's doubts and insecurities",
+            "Has lied that {PRONOUN/m_c/subject} {VERB/m_c/was/were} hungry to get another piece of prey",
             "Can play as the sly fox in games very well",
-            "Caused chaos around the camp and blamed r_c",
+            "Caused a <i>tiny</i> bit of chaos around the camp and blamed r_c",
             "Is trying to act innocent",
-            "Bumped and tumbled a stacked prey pile, then meowed that it was already like that",
+            "Bumped into and tumbled a stacked prey pile, then meowed that it was already liked that",
             "Cried fake tears while roughhousing"
         ],
         "main_trait_constraint": [

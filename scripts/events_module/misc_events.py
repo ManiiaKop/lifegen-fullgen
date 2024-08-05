@@ -151,9 +151,14 @@ class MiscEvents():
 
 
         game.cur_events_list.append(Single_Event(event_text, types, involved_cats))
-        if reveal and victim:
-            History.reveal_murder(cat, other_cat, Cat, victim, murder_index)
 
+        if reveal and victim:
+            # Check if whole clan should replace murder witness
+            if "clan_discovery" in misc_event.tags:
+                History.get_murders(cat)["is_murderer"][murder_index]["clan_discovery"] = True
+            # Reveal murder
+            History.reveal_murder(cat, other_cat, Cat, victim, murder_index)
+            
     @staticmethod
     def handle_relationship_changes(cat, misc_event, other_cat):
 

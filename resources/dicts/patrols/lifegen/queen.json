@@ -1,6 +1,6 @@
 [
     {
-        "patrol_id": "gen_queen_event101",
+        "patrol_id": "life_queen_og1",
         "biome": [
             "Any"
         ],
@@ -8,11 +8,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_queen_default",
         "min_cats": 1,
         "max_cats": 3,
@@ -24,7 +22,7 @@
         "success_outcomes": [
             {
                 "text": "You quickly move the kits to a drier part of the nursery and gather extra moss to insulate them. Thanks to your quick thinking, the kits stay warm and safe.",
-                "exp": 10,
+                "exp": 5,
                 "weight": 20
             }
         ],
@@ -37,7 +35,7 @@
         ]
     },
     {
-        "patrol_id": "gen_queen_event102",
+        "patrol_id": "life_queen_og2",
         "biome": [
             "Any"
         ],
@@ -45,11 +43,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_queen_default",
         "min_cats": 1,
         "max_cats": 3,
@@ -61,7 +57,7 @@
         "success_outcomes": [
             {
                 "text": "You promptly organize a search party, and with combined efforts, the kit is found playing near the elders' den, unaware of the panic. Your decisiveness ensures the kit's safety.",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -74,7 +70,7 @@
         ]
     },
     {
-        "patrol_id": "gen_queen_event103",
+        "patrol_id": "life_queen_og3",
         "biome": [
             "Any"
         ],
@@ -82,11 +78,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_queen_default",
         "min_cats": 1,
         "max_cats": 3,
@@ -111,7 +105,7 @@
         ]
     },
     {
-        "patrol_id": "gen_queen_event104",
+        "patrol_id": "life_queen_og5",
         "biome": [
             "Any"
         ],
@@ -119,11 +113,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_queen_default",
         "min_cats": 1,
         "max_cats": 3,
@@ -135,7 +127,7 @@
         "success_outcomes": [
             {
                 "text": "You organize a barrier with the help of other queens and apprentices, keeping the kits safely away from the training ground. The warriors appreciate your efforts.",
-                "exp": 10,
+                "exp": 5,
                 "weight": 20
             }
         ],
@@ -148,7 +140,7 @@
         ]
     },
     {
-        "patrol_id": "gen_queen_event105",
+        "patrol_id": "life_queen_R1",
         "biome": [
             "Any"
         ],
@@ -156,11 +148,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_queen_default",
         "min_cats": 1,
         "max_cats": 3,
@@ -185,7 +175,7 @@
         ]
     },
     {
-        "patrol_id": "gen_queen_event106",
+        "patrol_id": "life_queen_R2",
         "biome": [
             "Any"
         ],
@@ -193,11 +183,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_queen_default",
         "min_cats": 1,
         "max_cats": 3,
@@ -222,7 +210,7 @@
         ]
     },
     {
-        "patrol_id": "gen_queen_event107",
+        "patrol_id": "life_queen_R3",
         "biome": [
             "Any"
         ],
@@ -230,11 +218,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_queen_default",
         "min_cats": 1,
         "max_cats": 3,
@@ -259,7 +245,7 @@
         ]
     },
     {
-        "patrol_id": "gen_queen_event107",
+        "patrol_id": "life_queen_R4",
         "biome": [
             "Any"
         ],
@@ -267,11 +253,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_queen_default",
         "min_cats": 1,
         "max_cats": 3,
@@ -294,8 +278,9 @@
                 "weight": 20
             }
         ]
-    },{
-        "patrol_id": "gen_queen_event108",
+    },
+    {
+        "patrol_id": "life_queen_R5",
         "biome": [
             "Any"
         ],
@@ -303,11 +288,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
+        "tags": [],
         "patrol_art": "lg_queen_default",
         "min_cats": 1,
         "max_cats": 3,
@@ -326,6 +309,77 @@
         "fail_outcomes": [
             {
                 "text": "No matter what you try or what you say, the kit just keeps on bawling. It's hopeless; all you can do is try to wait it out.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_queen_R6",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "patrol_art": "lg_queen_default",
+        "min_cats": 1,
+        "max_cats": 3,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "Sniffling awakens you. It takes a moment before you find the cause - one of the kits appears to have had a nightmare.",
+        "decline_text": "Their parent is already on it, soothing them with soft words. You curl back up in your nest to drift back to sleep.",
+        "chance_of_success": 70,
+        "success_outcomes": [
+            {
+                "text": "You move to their nest, murmuring soft comforts as you lick their head soothingly. You quietly talk to the kit about their nightmare. It calms them immensely, and they soon are curled back up at their parent's side. You return to your own nest with a smile.",
+                "exp": 10,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "No matter what you try or what you say, the kit just keeps on bawling. It's hopeless; all you can do is try to wait it out.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "lg_queen_shunned_J1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "shunned"
+        ],
+        "patrol_art": "lg_queen_default",
+        "min_cats": 1,
+        "max_cats": 6,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "A kit runs up to you in tears, asking you to fix their favourite leaf, which has now ripped. They don't seem to know that the kits aren't supposed to talk to you right now. You don't know if you should help them.",
+        "decline_text": "You uncomfortably turn the upset kit away, knowing the Clan won't want you influencing the kits during your punishment.",
+        "chance_of_success": 40,
+        "success_outcomes": [
+            {
+                "text": "You tell the kit that you're sorry about their leaf, and, managing to avoid being spotted by anycat, you search alongside them for a new one along the edges of camp. Their new leaf is much bigger and more colourful, and they thank you for helping them find it.",
+                "exp": 15,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You stand up to go help the kit find a new leaf, but another queen catches your eye with an angry stare. Awkwardly, you tell the kit to go ask the other queen for help instead.",
                 "exp": 0,
                 "weight": 20
             }

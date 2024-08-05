@@ -1,6 +1,6 @@
 [
     {
-        "patrol_id": "lifegen_warrior1",
+        "patrol_id": "life_warrior_og1",
         "biome": [
             "Any"
         ],
@@ -8,12 +8,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "hunting",
-            "small_prey"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior1",
         "min_cats": 1,
         "max_cats": 3,
@@ -38,7 +35,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior2",
+        "patrol_id": "life_warrior_og2",
         "biome": [
             "Any"
         ],
@@ -46,12 +43,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border",
-            "small_prey"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior2",
         "min_cats": 1,
         "max_cats": 3,
@@ -76,7 +70,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior3",
+        "patrol_id": "life_warrior_og3",
         "biome": [
             "Any"
         ],
@@ -84,12 +78,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "hunting",
-            "small_prey"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 3,
@@ -114,7 +105,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior4",
+        "patrol_id": "life_warrior_og4",
         "biome": [
             "Any"
         ],
@@ -122,11 +113,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 5,
@@ -137,7 +126,7 @@
         "chance_of_success": 60,
         "success_outcomes": [
             {
-                "text": "You join the patrol and do an excellent job securing the clan's borders. Your vigilance is noted.",
+                "text": "You join the patrol and do an excellent job securing the Clan's borders. Your vigilance is noted.",
                 "exp": 25,
                 "weight": 20
             }
@@ -151,7 +140,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior5",
+        "patrol_id": "life_warrior_og5",
         "biome": [
             "Any"
         ],
@@ -159,11 +148,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 2,
@@ -188,7 +175,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior6",
+        "patrol_id": "life_warrior_og6",
         "biome": [
             "Any"
         ],
@@ -196,11 +183,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 1,
@@ -225,7 +210,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior7",
+        "patrol_id": "life_warrior_og7",
         "biome": [
             "Any"
         ],
@@ -233,11 +218,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "hunting"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 1,
@@ -262,7 +245,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior8",
+        "patrol_id": "life_warrior_og8",
         "biome": [
             "Any"
         ],
@@ -270,22 +253,20 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "patrol"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 5,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "The clan leader assigns you to lead a hunting patrol. It's your chance to prove your leadership skills and help provide for the clan.",
+        "intro_text": "The Clan leader assigns you to lead a hunting patrol. It's your chance to prove your leadership skills and help provide for the Clan.",
         "decline_text": "Feeling uncertain, you suggest another warrior lead the patrol instead. The leader respects your decision, promising future opportunities.",
         "chance_of_success": 65,
         "success_outcomes": [
             {
-                "text": "You successfully lead the patrol, coordinating your team to bring down various prey. Your leadership is praised and the clan appreciates the fresh-kill.",
+                "text": "You successfully lead the patrol, coordinating your team to bring down various prey. Your leadership is praised and the Clan appreciates the fresh-kill.",
                 "exp": 30,
                 "weight": 20
             }
@@ -299,7 +280,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior9",
+        "patrol_id": "life_warrior_og9",
         "biome": [
             "Any"
         ],
@@ -307,12 +288,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "lg_warrior_default",
+        "tags": [],
+        "patrol_art": "life_warrior9",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -336,7 +315,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior10",
+        "patrol_id": "life_warrior_og10",
         "biome": [
             "Any"
         ],
@@ -344,17 +323,15 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 3,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "You notice an unfamiliar scent on your clan's borders. It's your responsibility to investigate and ensure the clan's safety.",
+        "intro_text": "You notice an unfamiliar scent on your Clan's borders. It's your responsibility to investigate and ensure the Clan's safety.",
         "decline_text": "Feeling unsure, you decide to report the scent to your leader and let them handle the situation. You trust their judgement in these matters.",
         "chance_of_success": 70,
         "success_outcomes": [
@@ -373,7 +350,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior11",
+        "patrol_id": "life_warrior_og11",
         "biome": [
             "Any"
         ],
@@ -381,11 +358,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 1,
@@ -396,7 +371,7 @@
         "chance_of_success": 55,
         "success_outcomes": [
             {
-                "text": "You captivate the clan with your tale, filling their eyes with wonder. They appreciate your storytelling and the kits beg for more stories in the future.",
+                "text": "You captivate the Clan with your tale, filling their eyes with wonder. They appreciate your storytelling and the kits beg for more stories in the future.",
                 "exp": 20,
                 "weight": 20
             }
@@ -410,7 +385,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior12",
+        "patrol_id": "life_warrior_og12",
         "biome": [
             "Any"
         ],
@@ -418,17 +393,15 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "The medicine cat runs out of marigold and asks for your help to find some. It's a chance to help the clan and learn more about herbs.",
+        "intro_text": "The medicine cat runs out of marigold and asks for your help to find some. It's a chance to help the Clan and learn more about herbs.",
         "decline_text": "You respectfully decline, not feeling confident in your knowledge of herbs. The medicine cat understands and decides to search themselves.",
         "chance_of_success": 65,
         "success_outcomes": [
@@ -447,7 +420,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior13",
+        "patrol_id": "life_warrior_og13",
         "biome": [
             "Any"
         ],
@@ -455,11 +428,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 2,
@@ -484,7 +455,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior14",
+        "patrol_id": "life_warrior_og14",
         "biome": [
             "Any"
         ],
@@ -492,11 +463,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior14",
         "min_cats": 1,
         "max_cats": 2,
@@ -521,7 +490,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior15",
+        "patrol_id": "life_warrior_og15",
         "biome": [
             "Any"
         ],
@@ -529,11 +498,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 2,
@@ -558,7 +525,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior16",
+        "patrol_id": "life_warrior_og16",
         "biome": [
             "Any"
         ],
@@ -566,11 +533,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 2,
@@ -595,7 +560,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior17",
+        "patrol_id": "life_warrior_og17",
         "biome": [
             "Any"
         ],
@@ -603,11 +568,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior14",
         "min_cats": 1,
         "max_cats": 2,
@@ -632,7 +595,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_warrior_18",
+        "patrol_id": "life_warrior_og18",
         "biome": [
             "Any"
         ],
@@ -640,11 +603,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 1,
@@ -655,21 +616,21 @@
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "You leap onto the path, snagging a bird with your claws- your clanmates are impressed with your catch.",
+                "text": "You leap onto the path, snagging a bird with your claws- your Clanmates are impressed with your catch.",
                 "exp": 15,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You leap towards the path, but miss the landing slamming into one of the boards- scaring all the birds away. Your clanmates are happy you're okay but are unimpressed by your fall.",
+                "text": "You leap towards the path, but miss the landing slamming into one of the boards- scaring all the birds away. Your Clanmates are happy you're okay but are unimpressed by your fall.",
                 "exp": 0,
                 "weight": 20
             }
         ]
     },
-	{
-		"patrol_id": "lifegen_warrior_19",
+    {
+        "patrol_id": "life_warrior_og19",
         "biome": [
             "Beach"
         ],
@@ -677,11 +638,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 1,
@@ -691,7 +650,7 @@
         "decline_text": "Curiosity killed the cat, and you don't want to be an example of that. You quickly turn around and walk away.",
         "chance_of_success": 50,
         "success_outcomes": [
-		    {
+            {
                 "text": "How fun! Seaweed has no actual use, but popping the bubbles on it is fun!",
                 "exp": 15,
                 "weight": 20
@@ -700,7 +659,10 @@
                 "text": "Seaweed! You decide to gather some of the pieces to take it to the medicine cat den. Wash it out to remove the salt and it could be beneficial as makeshift cobwebs to dress wounds.",
                 "exp": 15,
                 "weight": 20,
-				"stat_skill": ["HEALER,1", "INNOVATOR,1"]
+                "stat_skill": [
+                    "HEALER,1",
+                    "INNOVATOR,1"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -708,11 +670,11 @@
                 "text": "Seaweed. You are unimpressed by the long tendrils and turn away. Nothing useful there.",
                 "exp": 0,
                 "weight": 20
-			}
-		]
-	},
-	{
-		"patrol_id": "lifegen_warrior_20",
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_warrior_og20",
         "biome": [
             "Beach"
         ],
@@ -720,22 +682,19 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "hunting",
-			"small_prey"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
         "intro_text": "As you walk across the shore, you notice a few twolegs clustered around. They are all holding long, brown rods. Next to them is a blue-and-white box with a tantalizing scent wafting from it.",
-        "decline_text": "Twolegs are bad news. You quickly and quietly leave the area, making a mental note to warn the clan of their presence.",
+        "decline_text": "Twolegs are bad news. You quickly and quietly leave the area, making a mental note to warn the Clan of their presence.",
         "chance_of_success": 50,
         "success_outcomes": [
-		    {
+            {
                 "text": "You sneak towards the twolegs and their box. As you get closer, you realize the scent is of fish. You reach into the box while no one is looking and hook a fish with your claws, running away before anyone could spot you.",
                 "exp": 15,
                 "weight": 20
@@ -746,11 +705,11 @@
                 "text": "Upon getting closer to the box, you realize it's filled with fish. Excited, you rush towards it before a twoleg picks you up. You hiss as the twoleg tries to subdue you. Raking your claws against its arm, it yowls and lets you go. You run away without a second thought.",
                 "exp": 0,
                 "weight": 20
-			}
-		]
-	},
-	{
-		"patrol_id": "lifegen_warrior_21",
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_warrior_og21",
         "biome": [
             "Beach"
         ],
@@ -758,11 +717,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 1,
@@ -772,7 +729,7 @@
         "decline_text": "You have better things to focus on than a seashell. You continue your way, ignoring it.",
         "chance_of_success": 50,
         "success_outcomes": [
-		    {
+            {
                 "text": "You dash towards it, hoping to grab it before the waves do. Luckily, you're able to swipe it just in time! You trot back to camp happily, glistening seashell in tow.",
                 "exp": 15,
                 "weight": 20
@@ -783,11 +740,11 @@
                 "text": "Unfortunately, the waves are faster than you are and the seashell is sucked back into the ocean. Maybe another day you'll find a similar one to take home- but not today.",
                 "exp": 0,
                 "weight": 20
-			}
-		]
-	},
-	{
-		"patrol_id": "lifegen_warrior_22",
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_warrior_og22",
         "biome": [
             "Beach"
         ],
@@ -795,11 +752,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 1,
@@ -809,7 +764,7 @@
         "decline_text": "No way you'll go near that. Would be best to report it back to the others before anyone else comes across it.",
         "chance_of_success": 50,
         "success_outcomes": [
-		    {
+            {
                 "text": "As you get closer, you begin to realize what it is- a jellyfish! It seemed to have drifted onto shore. While you don't touch it due to fear of stings, you can appreciate how cool it looks. Not often do you seen a transparent creature.",
                 "exp": 15,
                 "weight": 20
@@ -820,11 +775,11 @@
                 "text": "You pad closer, curious as to what it is. You realize its a jellyfish, and you begin poking it. Suddenly, a sharp, stinging pain immediately hit you, causing you to draw back your paw in pain. You quickly rush back to camp, where you're told that it isn't poisonous- but scolded for touching a potentially deadly jellyfish.",
                 "exp": 0,
                 "weight": 20
-			}
-		]
-	},
-	{
-		"patrol_id": "lifegen_shunned_warrior_1",
+            }
+        ]
+    },
+    {
+        "patrol_id": "lg_shunned_warrior_J1",
         "biome": [
             "Any"
         ],
@@ -832,10 +787,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
         "tags": [
-            "border",
             "shunned"
         ],
         "patrol_art": "lg_warrior_default",
@@ -847,7 +801,7 @@
         "decline_text": "No, it's far too risky. Not wanting to risk extending your punishment, you go to sleep with an empty stomach.",
         "chance_of_success": 50,
         "success_outcomes": [
-		    {
+            {
                 "text": "Thankfully, your nest is already at the edge of camp. It's no challenge to slip out, and when you do, you have to stop yourself from yelping with joy at the sight of live prey. The sleeping squirrel doesn't awaken until far too late, and it's the most delicious meal you've had since your punishment began.",
                 "exp": 20,
                 "weight": 20
@@ -858,7 +812,7 @@
                 "text": "You stand from your nest to attempt to slip out of camp, but the night guard senses the movement and snaps their head towards you. They shoot you a warning glance and you settle back into your nest, not wanting to extend your punishment further.",
                 "exp": 0,
                 "weight": 20
-			}
-		]
-	}
+            }
+        ]
+    }
 ]

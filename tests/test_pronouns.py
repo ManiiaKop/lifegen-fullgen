@@ -53,9 +53,119 @@ def test():
         "p2": _r,
         "(deadmentor)": _r,
         "(previous_mentor)": _r,
-        "mur_c": _r
+        "mur_c": _r,
+        "t_c": _r,
+        "y_c": _r,
+        "d_c": _r,
+        "d_n": _r,
+        "r_a": _r, 
+        "r_m": _r,
+        "y_p": _r,
+        "tm_n": _r,
+        "t_l": _r, 
+        "t_m": _r, 
+        "t_p": _r,
+        "t_a": _r,
+        "parent": _r,
+        "parent1": _r,
+        "parent2": _r,
+        "sibling": _r,
+        "t_s": _r,
+        "t_k": _r,
+        "t_ka": _r,
+        "t_kk": _r,
+        "y_m": _r,
+        "t_p_positive": _r,
+        "t_p_pos": _r,
+        "t_p_negative": _r,
+        "m_n": _r,
+        "t_mn": _r,
+        "r_q": _r,
+        "r_k": _r,
+        "r_e": _r,
+        "crush1": _r,
+        "their_crush": _r,
+        "your_crush": _r,
+        "mate1": _r,
+        "t_cc": _r,
+        "r_w": _r,
+        "y_a": _r,
+        "r_s": _r,
+        "r_i": _r,
+        "y_s": _r,
+        "y_l": _r,
+        "r_d": _r,
+        "df_y_a": _r,
+        "r_c_sc": _r,
+        "a_n": _r,
+        "t_q": _r,
+        "brooding_t_l": _r,
+        "y_k": _r,
+        "dislike_r_c": _r,
+        "trust_r_c": _r,
+        "neutral_r_c": _r,
+        "r_c_brooding": _r,
+        "r_c_sweet": _r,
+        "plike_r_w": _r,
+        "r_c_upstanding": _r,
+        "r_a_silly": _r,
+        "r_c_unabashed": _r,
+        "plike_r_a": _r,
+        "r_w_upstanding": _r,
+        "r_a_cool": _r,
+        "r_w_neurotic": _r,
+        "dislike_r_w": _r,
+        "plove_t_s": _r,
+        "r_c_neurotic": _r,
+        "y_kk": _r,
+        "trust_r_w": _r,
+        "rdf_c": _r,
+        "plike_r_c": _r,
+        "r_c_stable": _r,
+        "r_w_assertive": _r,
+        "r_c_assertive": _r
     }
     
+    cluster_addons = [
+        "_upstanding",
+        "_brooding",
+        "_sweet",
+        "_cool",
+        "_unlawful",
+        "_silly",
+        "_neurotic",
+        "_introspective",
+        "_unabashed",
+        "_assertive",
+        "_stable"
+    ]
+
+    rel_addons = [
+        "plike_",
+        "plove_",
+        "rlike_",
+        "rlove_",
+        "dislike_",
+        "hate_",
+        "neutral_",
+        "trust_",
+        "comfort_",
+        "respect_",
+        "jealous_"
+    ]
+
+    # addons = {}
+    
+    # for abbrev in list(replacement_dict.keys()):
+    #     for r in rel_addons:
+    #         addons[f"{r}{abbrev}"] = _r
+    #     for x in cluster_addons:
+    #         addons[f"{abbrev}{x}"] = _r
+    #         for r in rel_addons:
+    #             addons[f"{r}{abbrev}{x}"] = _r
+
+    # replacement_dict.update(addons)
+
     for x in range(0, 11):
         replacement_dict[f"n_c:{x}"] = _r
     

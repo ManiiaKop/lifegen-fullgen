@@ -26,6 +26,8 @@ from scripts.patrol.patrol_event import PatrolEvent
 from scripts.patrol.patrol_outcome import PatrolOutcome
 from scripts.cat.cats import Cat
 from scripts.special_dates import get_special_date, contains_special_date_tag
+from scripts.utility import change_clan_relations, change_clan_reputation, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors, get_med_cats, ceremony_text_adjust, \
+    get_current_season, adjust_list_text, ongoing_event_text_adjust, event_text_adjust, create_new_cat, create_outside_cat
 
 # ---------------------------------------------------------------------------- #
 #                              PATROL CLASS START                              #
@@ -65,10 +67,10 @@ class Patrol():
         final_patrols, final_romance_patrols = self.get_possible_patrols(
             str(game.clan.current_season).casefold(),
             str(game.clan.biome).casefold(),
+            str(game.clan.camp_bg).casefold(),
             patrol_type,
             game.clan.clan_settings['disasters']
         )
-        
         print(f'Total Number of Possible Patrols | normal: {len(final_patrols)}, romantic: {len(final_romance_patrols)} ')
         
         if final_patrols:
@@ -229,7 +231,7 @@ class Patrol():
         print("Patrol Leader:", str(self.patrol_leader.name))
         print("Random Cat:", str(self.patrol_random_cat.name))
 
-    def get_possible_patrols(self, current_season:str, biome:str, patrol_type:str,
+    def get_possible_patrols(self, current_season:str, biome:str, camp:str, patrol_type:str,
                              game_setting_disaster=None) -> Tuple[List[PatrolEvent]]:
         # ---------------------------------------------------------------------------- #
         #                                LOAD RESOURCES                                #
@@ -239,6 +241,7 @@ class Patrol():
                                 game.clan.clan_settings['disasters']
         season = current_season.lower()
         biome_dir = f"{biome}/"
+        camp = camp.lower()
         leaf = f"{season}"
         self.update_resources(biome_dir, leaf)
 
@@ -356,9 +359,9 @@ class Patrol():
             elif clan_hostile:
                 possible_patrols.extend(self.generate_patrol_events(self.OTHER_CLAN_HOSTILE))
 
-        if game.current_screen == 'patrol screen' or game.current_screen == 'patrol screen2' or game.current_screen =='patrol screen3' or game.current_screen =='patrol screen4':
-            final_patrols, final_romance_patrols = self.get_filtered_patrols(possible_patrols, biome, current_season,
+        final_patrols, final_romance_patrols = self.get_filtered_patrols(possible_patrols, biome, camp, current_season,
                                                                             patrol_type)
+            
 
         # This is a debug option. If the patrol_id set isn "debug_ensure_patrol" is possible, 
         # make it the *only* possible patrol
@@ -389,10 +392,8 @@ class Patrol():
                       f'"{game.config["patrol_generation"]["debug_ensure_patrol_id"]}" '
                       "is not a possible romantic patrol.")
             
-        if game.current_screen == 'patrol screen2' or game.current_screen =='patrol screen3' or game.current_screen =='patrol screen4':
-            return final_patrols, final_romance_patrols
+        return final_patrols, final_romance_patrols
             
-        return possible_patrols, []
 
     def _check_constraints(self, patrol: PatrolEvent) -> bool:
         if not self._filter_relationship(patrol):
@@ -604,7 +605,7 @@ class Patrol():
         print("final romance chance:", chance_of_romance_patrol)
         return not int(random.random() * chance_of_romance_patrol)
 
-    def _filter_patrols(self, possible_patrols: List[PatrolEvent], biome:str, current_season:str, patrol_type:str):
+    def _filter_patrols(self, possible_patrols: List[PatrolEvent], biome:str, camp:str, current_season:str, patrol_type:str):
         filtered_patrols = []
         romantic_patrols = []
         special_date = get_special_date()
@@ -645,25 +646,13 @@ class Patrol():
             if flag:
                 continue
             
-            if biome not in patrol.biome and "Any" not in patrol.biome:
+            if biome not in patrol.biome and "any" not in patrol.biome and "Any" not in patrol.biome:
                 continue
-            if current_season not in patrol.season and "Any" not in patrol.season:
+            if camp not in patrol.camp and "any" not in patrol.camp and "Any" not in patrol.camp:
+                continue
+            if current_season not in patrol.season and "any" not in patrol.season and "Any" not in patrol.season:
                 continue
             if game.current_screen == 'patrol screen':
-                if game.clan.your_cat.status == "kitten" and "kit_only" not in patrol.tags:
-                    continue
-                elif game.clan.your_cat.status != "kitten" and "kit_only" in patrol.tags:
-                    continue
-
-                if game.clan.your_cat.shunned == 0:
-                    if "shunned" in patrol.tags:
-                        continue
-                elif game.clan.your_cat.shunned > 0:
-                    if "shunned" not in patrol.tags:
-                        print('not shunned patrol')
-                        continue
-                    else:
-                        print('shunned patrol')
 
                 if "bloodthirsty_only" in patrol.tags:
                     if Cat.all_cats.get(game.clan.your_cat.mentor).personality.trait != "bloodthirsty":
@@ -674,7 +663,9 @@ class Patrol():
                     if game.clan.your_cat.status != 'medicine cat':
                         continue
                 if "df" in patrol.tags:
-                    if not game.clan.your_cat.joined_df:
+                    other_cat = self.patrol_cats[1]
+                    if not game.clan.your_cat.joined_df and not other_cat.joined_df:
+                        # need both cats to be trainees for goop romance
                         continue
                     
             #  correct button check
@@ -706,6 +697,19 @@ class Patrol():
                         if "fellowtrainee" not in patrol.tags:
                             continue
 
+                    if "shunned" in patrol.tags:
+                        if game.clan.your_cat.shunned == 0:
+                            continue
+
+            if "lifegen" in patrol.types and "df" not in patrol.types:
+                if "shunned" in patrol.tags:
+                    if game.clan.your_cat.shunned == 0:
+                        continue
+                
+                if "shunned" not in patrol.tags and "df" not in patrol.tags: # shunned cats can still get regular goop romance patrols
+                    if game.clan.your_cat.shunned > 0:
+                        continue
+
 
             # cruel season tag check
             if "cruel_season" in patrol.tags:
@@ -723,16 +727,16 @@ class Patrol():
 
         return filtered_patrols, romantic_patrols
 
-    def get_filtered_patrols(self, possible_patrols, biome, current_season, patrol_type):
+    def get_filtered_patrols(self, possible_patrols, biome, camp, current_season, patrol_type):
         
-        filtered_patrols, romantic_patrols = self._filter_patrols(possible_patrols, biome, current_season,
+        filtered_patrols, romantic_patrols = self._filter_patrols(possible_patrols, biome, camp, current_season,
                                                                   patrol_type)
         
         if not filtered_patrols:
             print('No normal patrols possible. Repeating filter with used patrols cleared.')
             self.used_patrols.clear()
             print('used patrols cleared', self.used_patrols)
-            filtered_patrols, romantic_patrols = self._filter_patrols(possible_patrols, biome,
+            filtered_patrols, romantic_patrols = self._filter_patrols(possible_patrols, biome, camp,
                                                                       current_season, patrol_type)    
         
         return filtered_patrols, romantic_patrols
@@ -744,6 +748,7 @@ class Patrol():
                 patrol_id=patrol.get("patrol_id"),
                 biome=patrol.get("biome"),
                 season=patrol.get("season"),
+                camp=patrol.get("camp"),
                 tags=patrol.get("tags"),
                 weight=patrol.get("weight", 20),
                 types=patrol.get("types"),
@@ -1126,7 +1131,9 @@ class Patrol():
             "y_c": (str(game.clan.your_cat.name), choice(game.clan.your_cat.pronouns)),
         }
 
-        other_cats = [i for i in self.patrol_cats if i not in [self.patrol_leader, self.patrol_random_cat]]
+        other_cats = [i for i in self.patrol_cats if i not in [self.patrol_leader, self.patrol_random_cat, game.clan.your_cat]]
+        if game.current_screen == "patrol screen4":
+            other_cats = [i for i in self.patrol_cats if i not in [self.patrol_random_cat, game.clan.your_cat]]
         if len(other_cats) >= 1:
             replace_dict['o_c1'] = (str(other_cats[0].name),
                                     choice(other_cats[0].pronouns))
@@ -1242,12 +1249,190 @@ class Patrol():
                             'red squirrels', 'gray squirrels', 'rats', ]
         text = text.replace('f_mp_p', str(fst_midprey_plural))
 
+        text2 = self.adjust_txt(text)
+        if text2:
+            text = text2
+
         text, senses, list_type = find_special_list_types(text)
         if list_type:
             sign_list = get_special_snippet_list(list_type, amount=randint(1, 3), sense_groups=senses)
             text = text.replace(list_type, str(sign_list))
 
         return text
+    
+    def adjust_txt(self, text):
+        try:
+            if "r_c_sc" in text:
+                alive_app = Cat.all_cats.get(random.choice(game.clan.starclan_cats))
+                counter = 0
+                while alive_app.ID == game.clan.your_cat.ID:
+                    if counter == 15:
+                        return ""
+                    alive_app = Cat.all_cats.get(random.choice(game.clan.starclan_cats))
+                    counter+=1
+                text = text.replace("r_c_sc", str(alive_app.name))
+            if "r_k" in text:
+                alive_kits = get_alive_kits(Cat)
+                if len(alive_kits) <= 1:
+                    return ""
+                alive_kit = random.choice(alive_kits)
+                while alive_kit.ID == game.clan.your_cat.ID:
+                    alive_kit = random.choice(alive_kits)
+                text = text.replace("r_k", str(alive_kit.name))
+            if "r_a" in text:
+                alive_apps = get_alive_apps(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
+                alive_app = random.choice(alive_apps)
+                while alive_app.ID == game.clan.your_cat.ID:
+                    alive_app = random.choice(alive_apps)
+                text = text.replace("r_a", str(alive_app.name))
+            if "r_w1" in text:
+                alive_apps = get_alive_warriors(Cat)
+                if len(alive_apps) <= 2:
+                    return ""
+                alive_app = random.choice(alive_apps)
+                while alive_app.ID == game.clan.your_cat.ID:
+                    alive_app = random.choice(alive_apps)
+                alive_apps.remove(alive_app)
+                text = text.replace("r_w1", str(alive_app.name))
+                if "r_w2" in text:
+                    alive_app2 = random.choice(alive_apps)
+                    while alive_app2.ID == game.clan.your_cat.ID:
+                        alive_app2 = random.choice(alive_apps)
+                    text = text.replace("r_w2", str(alive_app2.name))
+                if "r_w3" in text:
+                    alive_app3 = random.choice(alive_apps)
+                    while alive_app3.ID == game.clan.your_cat.ID:
+                        alive_app3 = random.choice(alive_apps)
+                    text = text.replace("r_w3", str(alive_app3.name))
+            if "r_w" in text:
+                alive_apps = get_alive_warriors(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
+                alive_app = random.choice(alive_apps)
+                while alive_app.ID == game.clan.your_cat.ID:
+                    alive_app = random.choice(alive_apps)
+                text = text.replace("r_w", str(alive_app.name))
+            if "r_m" in text:
+                alive_apps = get_alive_meds(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
+                alive_app = random.choice(alive_apps)
+                while alive_app.ID == game.clan.your_cat.ID:
+                    alive_app = random.choice(alive_apps)
+                text = text.replace("r_m", str(alive_app.name))
+            if "r_d" in text:
+                alive_apps = get_alive_mediators(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
+                alive_app = random.choice(alive_apps)
+                while alive_app.ID == game.clan.your_cat.ID:
+                    alive_app = random.choice(alive_apps)
+                text = text.replace("r_d", str(alive_app.name))
+            if "r_q" in text:
+                alive_apps = get_alive_queens(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
+                alive_app = random.choice(alive_apps)
+                while alive_app.ID == game.clan.your_cat.ID:
+                    alive_app = random.choice(alive_apps)
+                text = text.replace("r_q", str(alive_app.name))
+            if "r_e" in text:
+                alive_apps = get_alive_elders(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
+                alive_app = random.choice(alive_apps)
+                while alive_app.ID == game.clan.your_cat.ID:
+                    alive_app = random.choice(alive_apps)
+                text = text.replace("r_e", str(alive_app.name))
+            if "r_s" in text:
+                alive_apps = get_alive_cats(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
+                alive_app = random.choice(alive_apps)
+                while alive_app.ID == game.clan.your_cat.ID or not alive_app.is_ill():
+                    alive_app = random.choice(alive_apps)
+                text = text.replace("r_s", str(alive_app.name))
+            if "r_i" in text:
+                alive_apps = get_alive_cats(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
+                alive_app = random.choice(alive_apps)
+                while alive_app.ID == game.clan.your_cat.ID or not alive_app.is_injured():
+                    alive_app = random.choice(alive_apps)
+                text = text.replace("r_i", str(alive_app.name))
+            if "r_t" in text:
+                alive_apps = get_alive_cats(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
+                alive_app = random.choice(alive_apps)
+                while alive_app.ID == game.clan.your_cat.ID or not "starving" in alive_app.illnesses:
+                    alive_app = random.choice(alive_apps)
+                text = text.replace("r_t", str(alive_app.name))
+            if "l_n" in text:
+                if game.clan.leader is None:
+                    return ""
+                if game.clan.leader.dead or game.clan.leader.outside or game.clan.leader.shunned > 0:
+                    return ""
+                text = text.replace("l_n", str(game.clan.leader.name))
+            if "d_n" in text:
+                if game.clan.deputy is None:
+                    return ""
+                if game.clan.deputy.dead or game.clan.deputy.outside:
+                    return ""
+                text = text.replace("d_n", str(game.clan.deputy.name))
+            if "y_s" in text:
+                if len(game.clan.your_cat.inheritance.get_siblings()) == 0:
+                    return ""
+                sibling = Cat.fetch_cat(random.choice(game.clan.your_cat.inheritance.get_siblings()))
+                if sibling.outside or sibling.dead:
+                    return ""
+                text = text.replace("y_s", str(sibling.name))
+            if "y_l" in text:
+                if len(game.clan.your_cat.inheritance.get_siblings()) == 0:
+                    return ""
+                sibling = Cat.fetch_cat(random.choice(game.clan.your_cat.inheritance.get_siblings()))
+                if sibling.outside or sibling.dead or sibling.moons != game.clan.your_cat.moons:
+                    return ""
+                text = text.replace("y_l", str(sibling.name))
+            if "y_p" in text:
+                if len(game.clan.your_cat.inheritance.get_parents()) == 0:
+                    return ""
+                parent = Cat.fetch_cat(random.choice(game.clan.your_cat.inheritance.get_parents()))
+                if parent.outside or parent.dead:
+                    return ""
+                text = text.replace("y_p", str(parent.name))
+            if "y_m" in text:
+                if game.clan.your_cat.mate is None:
+                    return ""
+                text = text.replace("y_m", str(Cat.fetch_cat(random.choice(game.clan.your_cat.mate)).name))
+            if "df_y_a" in text:
+                if not game.clan.your_cat.dead or not game.clan.your_cat.df or len(game.clan.your_cat.df_apprentices) == 0:
+                    return ""
+                text = text.replace("df_y_a", str(Cat.fetch_cat(random.choice(game.clan.your_cat.df_apprentices)).name))
+            if "y_a" in text:
+                if len(game.clan.your_cat.apprentice) == 0 or game.clan.your_cat.apprentice is None:
+                    return ""
+                text = text.replace("y_a", str(Cat.fetch_cat(random.choice(game.clan.your_cat.apprentice)).name))
+            if "df_m_n" in text:
+                if game.clan.your_cat.joined_df and not game.clan.your_cat.dead and game.clan.your_cat.df_mentor:
+                    text = text.replace("df_m_n", str(Cat.all_cats.get(game.clan.your_cat.df_mentor).name))
+                else:
+                    return ""
+            if "m_n" in text or "mentor1" in text:
+                if game.clan.your_cat.mentor is None:
+                    return ""
+                text = text.replace("mentor1", str(Cat.fetch_cat(game.clan.your_cat.mentor).name))
+                text = text.replace("m_n", str(Cat.fetch_cat(game.clan.your_cat.mentor).name))
+            if "w_c" in text:
+                if game.clan.war.get("at_war", False):
+                    return ""
+                text = text.replace("w_c", str(game.clan.war["enemy"]))
+            return text
+        except:
+            return ""
+          
     # ---------------------------------------------------------------------------- #
     #                                   Handlers                                   #
     # ---------------------------------------------------------------------------- #
@@ -1266,6 +1451,7 @@ class Patrol():
                 f"WARNING: No history found for {self.patrol_event.patrol_id}, it may not need one but double check please!")
         if scar and "scar" in self.patrol_event.history_text:
             adjust_text = self.patrol_event.history_text['scar']
+            adjust_text = adjust_text.replace("o_c_n", f"{str(self.other_clan.name)}Clan")
             adjust_text = adjust_text.replace("o_c_n", str(self.other_clan.name))
             adjust_text = process_text(adjust_text, {"r_c": (str(cat.name), choice(cat.pronouns))})
             if possible:

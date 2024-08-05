@@ -46,7 +46,7 @@
             "Wonders if the newborns in StarClan will ever get to play and run across open fields",
             "Prays to StarClan that the passed newborn kits get to feel the wind across their pelt"
         ],
-        "biome": [
+        "biome":[
             "Plains"
         ],
         "random_living_status": [
@@ -90,8 +90,8 @@
             "Is neatly stacking bundles of herbs after drying",
             "Helps apply a poultice to a small wound",
             "Is counting the numbers of herbs left",
-            "Is rounding out rowdy kits from the medicine den",
-            "Is patching up a Clanmate's wounds",
+            "Rounding out rowdy kits from the medicine den",
+            "Patching up a Clanmate's wounds",
             "Having a debate with r_c about {PRONOUN/r_c/poss} latest dreams"
         ]
     },
@@ -155,7 +155,7 @@
             "Hopes to learn from r_c's expertise",
             "Asks r_c how to tell the difference between a sprain and a dislocated joint",
             "Enjoys trekking through the territory for herbs with r_c",
-            "Is learning how to bind a pouch to carry {PRONOUN/m_c/poss} herbs in by watching r_c"
+            "Is learning how to bind a pouch to carry {PRONOUN/m_c/poss} herbs by watching r_c"
         ],
         "random_status_constraint": [
             "medicine cat"
@@ -172,13 +172,13 @@
             "Is holding back tears after using the wrong herbs",
             "Is upset after {PRONOUN/m_c/subject} froze at the sight of blood from a minor wound",
             "Flattens {PRONOUN/m_c/poss} ears hearing the other apprentices having more fun than {PRONOUN/m_c/object}",
-            "Is too frightened for {PRONOUN/m_c/poss} role, but even more so if they switched to be a warrior",
+            "Is frightened about {PRONOUN/m_c/poss} role, but even more frightened about ever switching to a warrior",
             "Feels like StarClan made a mistake picking {PRONOUN/m_c/object} for this role",
-            "Scurries out of the medicine den at the fight sight of blood",
-            "Worries about misinterpretating a sign that might endanger the Clan",
-            "Is frighten at the constant ghostly voices",
-            "Was hoarding too many herbs for a hypothetical crisis",
-            "Was startle awake being in a frightening dream of an unfamilair landscape"
+            "Scurries out of the medicine den at the sight of blood",
+            "Is worrying about misinterpretating a sign that might endanger the Clan",
+            "Is frightened by the constant ghostly voices",
+            "Was overthinking hoarding herbs for a hypothetical crisis",
+            "Was startled awake from a frightening dream of an unfamilair landscape"
         ],
         "main_trait_constraint": [
             "insecure",
@@ -207,136 +207,137 @@
     {
         "id": "loving_medicine_cat_apprentice",
         "thoughts": [
-            "Can't bear the sight of beloved Clanmates limping towards the medicine den",
-            "Gave a soft lick to a wound, hoping it would heal faster",
-            "Often reassures {PRONOUN/m_c/subject}{VERB/m_c/'s/'re} fine, sacrificing sleep to keep sick Clanmates company",
-            "Was reminded to tend to {PRONOUN/m_c/poss} own health to avoid collapsing",
+            "Couldn't stand the sight of seeing beloved Clanmates limping towards the medicine den",
+            "Gave a soft lick to a  wound, hoping it'll heal faster",
+            "Often reassures others that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} alright not sleeping to keep sick Clanmates company",
+            "To not drop dead {PRONOUN/m_c/self}, was told to tend to {PRONOUN/m_c/poss} health as well",
             "Randomly checks up on r_c's health",
-            "Shivers at the thought of an unexpected sickness afflicting the Clan",
-            "Wrapped {PRONOUN/m_c/poss} tail around a Clanmate's shoulder, offering reassurance with a smile"
+            "Shivers cold at the thought of an unexpected sickness hurting the Clan",
+            "Wraps {PRONOUN/m_c/poss} tail around a Clanmate's shoulder, reassuring them with a smile"
         ],
         "main_trait_constraint": [
             "loving"
-        ]
+        ]    
     },
     {
         "id": "grumpy_medicine_cat_apprentice",
         "thoughts": [
-            "Insists that Clanmates either eat the pungent herbs or remain unhealed",
-            "Coldly called a Clanmate a mouse-brain for getting injured easily",
-            "Bluntly told a Clanmate that {PRONOUN/m_c/subject} won't treat stubborn patients gently",
-            "Threatened rowdy kits with throwing them far if they touch fragile herbs again",
-            "Would smack anyone asking {PRONOUN/m_c/object} to check a prank injury",
-            "Grumbles at StarClan for being vague in their warnings",
-            "Watches in silence, absorbing the mentor's teachings",
-            "Told r_c to get straight to the point about why {PRONOUN/r_c/subject} {VERB/r_c/is/are} in the medicine den",
-            "Shoved r_c into the medicine den for an early check-up"
+            "Told {PRONOUN/m_c/poss} Clanmate that they either eat the pungent herbs or don't get healed at all",
+            "Coldly called a Clanmate a mouse-brain for getting injuried so easily",
+            "Bluntly told a Clanmate {PRONOUN/m_c/subject} won't be treating stubborn patients gently",
+            "Threatens rowdy kits that {PRONOUN/m_c/subject}'ll throw them far across the camp if they touch fragile herbs again",
+            "Smacks anyone that asks {PRONOUN/m_c/object} to check a fake injury",
+            "Grumbles at StarClan cats for being vague in their warnings",
+            "Watches in silence at their mentor's teachings",
+            "Told r_c to get straight to the point why {PRONOUN/r_c/subject} {VERB/r_c/is/are} in the medicine den",
+            "Shoves r_c into the medicine den for an early check-up"
         ],
         "main_trait_constraint": [
             "grumpy"
-        ]
+        ]  
     },
     {
         "id": "arrogant_medicine_cat_apprentice",
         "thoughts": [
-            "Smugly believes {PRONOUN/m_c/subject} can refuse to help Clanmates {PRONOUN/m_c/subject} dislikes",
-            "Thinks being a medicine apprentice makes {PRONOUN/m_c/subject}{VERB/m_c/'s/'re} superior to other apprentices",
-            "Convinced that c_n is more blessed and favored by StarClan than any other Clan",
-            "Spat at another apprentice that {PRONOUN/m_c/subject} {VERB/m_c/do/does} not need to follow the Warrior Code",
-            "Ponders if there are any future omens concerning {PRONOUN/m_c/object}",
-            "Bragged to {PRONOUN/m_c/poss} Clanmates that their survival depends on {PRONOUN/m_c/subject}'s herb hoarding",
-            "Wishes herbs were closer to the camp to avoid long trips"
+            "Smugly believes {PRONOUN/m_c/subject} can deny helping Clanmates {PRONOUN/m_c/subject} dislikes",
+            "Thinks that since {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} a medicine apprentice, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} better than the other apprentices",
+            "Knows c_n is more blessed by StarClan than any other Clan",
+            "Spits at another apprentice that {PRONOUN/m_c/subject} {VERB/m_c/do/does}n't have to follow the Warrior Code",
+            "Wonders if there are any future omens about {PRONOUN/m_c/object}",
+            "Brags to {PRONOUN/m_c/poss} Clanmates that they're alive because {PRONOUN/m_c/subject} {VERB/m_c/hoards/hoard} the herbs",
+            "Wishes herbs were closer to the camp so {PRONOUN/m_c/subject} didn't have to travel SO far!"        
         ],
         "main_trait_constraint": [
             "arrogant"
-        ]
+        ]  
     },
     {
         "id": "rebellious_medicine_cat_apprentice",
         "thoughts": [
-            "Is skeptical of StarClan's intentions",
-            "Sneaked into a rival Clan's territory to steal plants, replanting them in c_n's territory for future use",
-            "Hoards yew berries, not for malicious intent, but as a precaution against vile cats threatening the Clan",
-            "Withholds warnings and omens received from unusual sources",
-            "Eager to experiment with obscure herbs"
+            "Is a bit skeptical of StarClan's intentions",
+            "Snuck into a rival Clan's territory to steal plants and repot it in c_n's territory for later uses",
+            "Hoards yew berries, not for malicious deeds, but for if vile cats try to harm the Clan",
+            "Withholds warnings and omens {PRONOUN/m_c/subject} {VERB/m_c/was/were} given from unusual voices",
+            "Wants to test out obscured herbs"
         ],
         "main_trait_constraint": [
             "rebellious"
-        ]
+        ]     
     },
     {
         "id": "lonesome_medicine_cat_apprentice",
         "thoughts": [
             "Feels more at home in the medicine den than anywhere else",
-            "Quickly heals injuries to ensure cats leave {PRONOUN/m_c/object} alone",
-            "Ventures out to gather herbs without informing anyone",
-            "Only leaves the medicine den to grab a quick bite before returning to solitude",
-            "Clanmates are surprised {PRONOUN/m_c/subject} even interacts with a mentor",
-            "Prefers the company of herbs and medicinal berries"
+            "Quickly tries to heal injuries so cats can leave {PRONOUN/m_c/object} alone",
+            "Ventured out of camp to gather herbs without telling anyone",
+            "Only leaves the medicine den to grab prey before slinking back inside",
+            "Has Clanmates surprised that {PRONOUN/m_c/subject} even have a mentor to talk to",
+            "Prefers the company of herbs and medical berries more than {PRONOUN/m_c/subject} own Clanmates"
         ],
         "main_trait_constraint": [
             "lonesome"
-        ]
+        ]      
     },
     {
         "id": "strange_medicine_cat_apprentice",
         "thoughts": [
-            "Claims to see dead StarClan cats dancing",
-            "Was found taste-testing berries",
-            "Proposed dragging the Moonstone to the medicine den",
-            "Asked {PRONOUN/m_c/poss} mentor if cats reincarnate as snails"
+            "Told {PRONOUN/m_c/poss} Clanmates {PRONOUN/m_c/subject} could see dead StarClan cats dancing",
+            "Was taste-testing berries",
+            "Proposes dragging the Moonstone to the medicine den",
+            "Asks {PRONOUN/m_c/poss} mentor if cats reincarnate as snails",
+            "Asks {PRONOUN/m_c/poss} mentor if {PRONOUN/m_c/subject} could still be their apprentince if {PRONOUN/m_c/subject} turned into a worm"
         ],
         "main_trait_constraint": [
             "strange"
-        ]
+        ]        
     },
     {
         "id": "childish_medicine_cat_apprentice",
         "thoughts": [
-            "Tells jokes to brighten the days of sick Clanmates",
-            "Covered {PRONOUN/m_c/self} with sticks and plants as a disguise",
-            "Sheepishly asked {PRONOUN/m_c/poss} mentor which herbs could remove skunk scent, claiming no particular reason",
-            "Jokingly told r_c that eating certain berries would cause them to grow antlers",
-            "Tried to hold back laughter after giving r_c spicy herbs instead of the correct ones"
+            "Is telling jokes to sick Clanmates to brighten their day",
+            "Covers {PRONOUN/m_c/self} with sticks and plants",
+            "Sheepishly asks {PRONOUN/m_c/poss} mentor which herbs would rub out a skunk scent. No reason.",
+            "Jokingly told r_c {PRONOUN/r_c/subject} will grow antlers from eating berries",
+            "Tries to hold in a laugh after giving r_c spicy herbs instead of the correct ones"
         ],
         "main_trait_constraint": [
             "childish"
-        ]
+        ]     
     },
     {
         "id": "mellow_medicine_cat_apprentice",
         "thoughts": [
-            "Keeps injured Clanmates company with small talk",
-            "Can wrap a wound single-handedly in the blink of an eye",
-            "Wrapped {PRONOUN/m_c/poss} tail around a Clanmate's shoulder, reassuring them with a smile",
-            "Loafs in front of the medicine den, purring contentedly",
-            "Hopes to create a comforting atmosphere for visits to the medicine den"
+            "Is giving an injuried Clanmate company with small talk",
+            "Can easily wrap a wound in a single blink",
+            "Wraps {PRONOUN/m_c/poss} tail around a Clanmate's shoulder, reassuring them with a smile",
+            "Is loafing in front of the medicine den, purring",
+            "Is hoping to create a comfortable atomphere for cats to visit the medicine den"
         ],
         "main_trait_constraint": [
             "mellow"
-        ]
+        ]  
     },
     {
         "id": "flamboyant_medicine_cat_apprentice",
         "thoughts": [
-            "Struggles to remove the putrid scent of onions from {PRONOUN/m_c/poss} coat",
-            "Told r_c that {PRONOUN/m_c/subject} won't argue if {PRONOUN/r_c/subject} refuses the prescribed herb and leaves",
-            "Groaned upon having to collect damp foliage",
-            "Teasingly told r_c that {PRONOUN/m_c/subject} can see into {PRONOUN/r_c/poss} future but will keep it secret",
-            "Tidily reorganized the herbal stock to beautify the den"
+            "Can't seem to get rid of the putrid scent of onions from {PRONOUN/m_c/poss} coat",
+            "Told r_c {PRONOUN/m_c/subject} won't argue with {PRONOUN/r_c/object} as {PRONOUN/r_c/subject} can leave if {PRONOUN/r_c/subject} {VERB/r_c/are/is} just going to refuse the herbs",
+            "Groans as {PRONOUN/m_c/subject} {VERB/m_c/have/has} to collect damp foliage",
+            "Teasingly told r_c {PRONOUN/m_c/subject} can see into {PRONOUN/r_c/poss} future, but will withhold from telling {PRONOUN/r_c/object}",
+            "Tidily reorganizes the herb stock so the den looks pretty"
         ],
         "main_trait_constraint": [
             "flamboyant"
-        ]
+        ]        
     },
     {
         "id": "bold_medicine_cat_apprentice",
         "thoughts": [
-            "Determined to help {PRONOUN/m_c/poss} Clan even when sick",
-            "Sneaked into a neighboring Clan to find more refined herbs",
-            "Heeded StarClan's warnings and feels prepared",
-            "Isn't afraid to criticize {PRONOUN/m_c/poss} mentor's methods",
-            "Eager to test obscure herbs"
+            "Even if sick {PRONOUN/m_c/self}, {PRONOUN/m_c/subject} still wants to help {PRONOUN/m_c/poss} Clan",
+            "Sneaks {PRONOUN/m_c/poss} way into a neighboring Clan to find rare herbs",
+            "Has heeded StarClan's warnings and is ready",
+            "Isn't shy to criticize {PRONOUN/m_c/poss} mentor's teachings",
+            "Wants to test out obscured herbs"
         ],
         "main_trait_constraint": [
             "bold"
@@ -345,11 +346,11 @@
     {
         "id": "daring_medicine_cat_apprentice",
         "thoughts": [
-            "Returned with a bundle of herbs hanging from {PRONOUN/m_c/poss} mouth",
-            "Confidently claims to tackle any unexpected sickness with {PRONOUN/m_c/poss} eyes closed",
-            "Scrambled to catch herbs floating in the breeze",
-            "Boasts of never being sick while treating patients",
-            "Accidentally trampled healthy herbs while zooming around"
+            "Brings back a bundle of random herbs sticking out from {PRONOUN/m_c/poss} mouth",
+            "Believes {PRONOUN/m_c/subject} will tackle any unexpected sickness with {PRONOUN/m_c/poss} eyes closed",
+            "Is scrambling after herbs floating in the breeze",
+            "Brags that {PRONOUN/m_c/subject} {VERB/m_c/is/are} never sick while treating patients",
+            "Accidently tramples healthy herbs by zooming around"
         ],
         "main_trait_constraint": [
             "daring"
@@ -358,21 +359,21 @@
     {
         "id": "stoic_medicine_cat_apprentice",
         "thoughts": [
-            "Unbothered by the number of sick cats, confident they'll heal",
-            "Doesn't flinch at the sight of a Clanmate writhing in pain",
-            "Told a Clanmate {PRONOUN/m_c/subject} would restrain them if necessary"
+            "Isn't seem bothered by the sick cats, very sure they'll be healed",
+            "Doesn't twitch a whisker while witnessing a Clanmate writhe in pain",
+            "Tells a Clanmate {PRONOUN/m_c/subject} will hold them down if requried"
         ],
         "main_trait_constraint": [
             "stoic"
-        ]
+        ] 
     },
     {
         "id": "adventurous_medicine_cat_apprentice",
         "thoughts": [
-            "Takes on the task of gathering herbs from dangerous heights",
-            "Hopes for distant remedies so {PRONOUN/m_c/subject} can explore more",
-            "Wishes to meet other Clans' medicine apprentices to learn their healing methods",
-            "Hides herbs in secret spots to justify more exploration"
+            "Is taking the task of gathering herbs in dangerous heights",
+            "Hopes the remedies are far so {PRONOUN/m_c/subject} can explore",
+            "Wishes {PRONOUN/m_c/subject} could visit other Clans' medicine apprentices and see how they heal cats",
+            "Hides herbs in a concealed location so {PRONOUN/m_c/subject} {VERB/m_c/can/could} explore more"
         ],
         "main_trait_constraint": [
             "adventurous"
@@ -381,12 +382,12 @@
     {
         "id": "charismatic_medicine_cat_apprentice",
         "thoughts": [
-            "Finds the right words to soothe a crying kit while checking their wounds",
-            "Attempts to coax clearer messages from StarClan through persuasion"
+            "Knows the right words to calm down a crying kit to check their wounds",
+            "Is trying to bribe the StarClan cats for a clearer message of omens"
         ],
         "main_trait_constraint": [
             "charismatic"
-        ]
+        ]        
     },
     {
         "id": "nice_medicine_cat_apprentice",
@@ -412,7 +413,7 @@
             "Is wondering why r_c decided to be a medicine cat",
             "Is worried r_c likes to hurt patients",
             "Is skeptical of StarClan's choice of r_c as a medicine cat",
-            "Is startled to find r_c has a stock pile of death berries"
+            "Is startled to find r_c has a stock pile of deathberries"
         ],
         "main_trait_constraint": [
             "thoughtful",
@@ -436,7 +437,7 @@
         "thoughts": [
             "Is plotting the downfall of c_n with r_c",
             "Is meeting secretly with r_c to discuss a new 'treatment' method",
-            "Is helping r_c secretly gather death berries",
+            "Is helping r_c secretly gather deathberries",
             "Is delighted to find r_c feels the same way about weak cats",
             "Is glad r_c is against sharing life saving herbs with enemy Clans",
             "Is standing with r_c, both glaring over their newest vict-, erm, 'patients'",

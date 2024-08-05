@@ -36,8 +36,8 @@
         [
             "Oh- I haven't seen you before. Did you get lost?",
             "[You finally glance around at your surroundings. Ah, yes, you definitely have gotten yourself lost.]",
-            "[You look at t_c. They seem like they know the area better than you.]",
-            "[You ask for their help home and t_c happily points you in the right direction.]"
+            "[You look at t_c. {PRONOUN/t_c/subject/CAP} {VERB/t_c/seem/seems} like {PRONOUN/t_c/subject} {VERB/t_c/know/knows} the area better than you.]",
+            "[You ask for {PRONOUN/t_c/poss} help home and t_c happily points you in the right direction.]"
         ]
     ],
     "sc_ur_loner_c": [
@@ -54,24 +54,12 @@
             "What do you think my name would be if I were a Clan cat?"
         ]
     ],
-    "you_living_they_outsider_sc_CM1": [
-        [
-            "they_sc",
-            "any"
-        ],
-        [
-            "[t_c is staring around them, their eyes wide as they watch starry-pelted cats walk by. Suddenly, they turn to you, seeming surprised.]",
-            "Oh! t_c! Are you -- No, it's not your time yet.",
-            "[You slowly recognize that this is a cat that you've never seen nor heard of before. You gently question why they're here.]",
-            "I don't know, but no one seems to mind.",
-            "No matter that I wasn't one of you in life, if I ended up here... It must be my duty to protect you.",
-            "So I will."
-        ]
-    ],
     "live_df_ps_1": [
         [
             "they_df",
-            "any"
+            "any",
+            "you_blind",
+            "they_blind"
         ],
         [
             "How curious... a creature, roaming these rooted confinements.",
@@ -81,7 +69,9 @@
     "live_df_ps_2": [
         [
             "they_df",
-            "any"
+            "any",
+            "you_blind",
+            "they_blind"
         ],
         [
             "It seems you are lost in more ways than one.",
@@ -91,7 +81,9 @@
     "live_df_ps_3": [
         [
             "they_df",
-            "any"
+            "any",
+            "you_blind",
+            "they_blind"
         ],
         [
             "You can run as much as you'd like.",
@@ -102,7 +94,8 @@
     "live_df_ps_4": [
         [
             "they_df",
-            "any"
+            "any",
+            "you_blind"
         ],
         [
             "I've seen wondrous lands, even whilst alone and afraid.",
@@ -113,7 +106,9 @@
     "live_df_ps_5": [
         [
             "they_df",
-            "any"
+            "any",
+            "you_blind",
+            "they_blind"
         ],
         [
             "You can't trust anyone, I learnt that out there.",
@@ -124,7 +119,9 @@
         [
             "they_df",
             "any",
-            "no_kit"
+            "no_kit",
+            "you_blind",
+            "they_blind"
         ],
         [
             "How awful must I have been, to end up in the hell for a belief that I didn't even hold?",
@@ -136,7 +133,9 @@
         [
             "they_ur",
             "kitten",
-            "newborn"
+            "newborn",
+            "you_blind",
+            "they_blind"
         ],
         [
             "Do you have a family, little one?",
@@ -147,12 +146,14 @@
         [
             "they_ur",
             "they_loner",
-            "any"
+            "any",
+            "you_blind",
+            "they_blind"
         ],
         [
-            "Are you happy in a clan?",
+            "Are you happy in a Clan?",
             "I can't imagine having all of those cats constantly around... especially now that I'm a ghost.",
-            "[You feel like the loner is assuring themself instead of you.]"
+            "[You feel like the loner is moreso assuring {PRONOUN/t_c/self} rather than of you.]"
         ]
     ],
     "you_df_they_ur_CM1": [
@@ -160,7 +161,8 @@
             "they_ur",
             "they_loner",
             "you_df",
-            "no_kit"
+            "no_kit",
+            "they_blind"
         ],
         [
             "Hm.",
@@ -176,12 +178,14 @@
             "they_ur",
             "they_loner",
             "you_df",
-            "kitten"
+            "kitten",
+            "you_blind",
+            "they_blind"
         ],
         [
             "[Running through the cold shadows that coat the Dark Forest, you stumble back just in time to not run directly into what, at first, seems to be a cloud of mist. Then you realize that it's a cat, but not one from StarClan. Too wispy.]",
             "Oh, little one!",
-            "[They turn to you, frowning.]",
+            "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/turn/turns} to you, frowning.]",
             "You poor thing... ending up in a place like this. Here, let me.",
             "[t_c crouches down, giving gentle laps at the thick layers of shadowy goop that has been matted to your fur since you arrived.]",
             "[You squeal, trying to squirm away from the misty-coated cat's surprise bathtime. When you manage to escape and bolt off, you do somehow seem cleaner. Huh.]"
@@ -192,7 +196,9 @@
             "they_ur",
             "they_loner",
             "you_ur",
-            "any"
+            "any",
+            "you_blind",
+            "they_blind"
         ],
         [
             "Still wandering?",

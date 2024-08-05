@@ -2,8 +2,9 @@ import pygame.transform
 import pygame_gui.elements
 from random import choice
 import ujson
+import re
 from .Screens import Screens
-from scripts.utility import get_text_box_theme, scale
+from scripts.utility import get_text_box_theme, scale, pronoun_repl
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 from scripts.game_structure.image_button import UIImageButton, UISpriteButton
@@ -243,6 +244,13 @@ class QueenScreen(Screens):
         self.update_selected_cat()
 
     def adjust_txt(self, text):
+        process_text_dict = {}
+        process_text_dict["t_k"] = self.selected_cat
+        process_text_dict["t_q"] = self.the_cat
+        for abbrev in process_text_dict.keys():
+            abbrev_cat = process_text_dict[abbrev]
+            process_text_dict[abbrev] = (abbrev_cat, choice(abbrev_cat.pronouns))
+        text = re.sub(r"\{(.*?)\}", lambda x: pronoun_repl(x, process_text_dict, False), text)
         text = text.replace("t_k", str(self.selected_cat.name))
         text = text.replace("t_q", str(self.the_cat.name))
         return text

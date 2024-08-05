@@ -3019,7 +3019,7 @@
       "general_backstory",
       "all_traits"
     ],
-    "Young (old_name) is ready to embrace their role as a queen earlier than many expected. The Clan gathers to offer support and blessings for their new journey."
+    "Young (old_name) is ready to embrace {PRONOUN/m_c/poss} role as a queen earlier than many expected. The Clan gathers to offer support and blessings for {PRONOUN/m_c/poss} new journey."
   ],
   "queen_1": [
     [
@@ -3032,7 +3032,7 @@
       "general_backstory",
       "all_traits"
     ],
-    "With grace and patience, m_c has settled into their duties, nurturing the future of the Clan."
+    "With grace and patience, m_c has settled into {PRONOUN/m_c/poss} duties, nurturing the future of the Clan."
   ],
   "queen_2": [
     [
@@ -3045,7 +3045,7 @@
       "general_backstory",
       "all_traits"
     ],
-    "Though some in the Clan whisper doubts of (old_name)'s new role, l_n welcomes them with warmth and hope, confident in their dedication as a queen."
+    "Though some in the Clan whisper doubts of (old_name)'s new role, l_n welcomes {PRONOUN/m_c/object} with warmth and hope, confident in {PRONOUN/m_c/poss} dedication as a queen."
   ],
   "queen_3": [
     [
@@ -3069,7 +3069,19 @@
       "general_backstory",
       "all_traits"
     ],
-    "The Clan has watched (old_name) rise with strength and grace, choosing the path of a queen. Their dedication is an inspiration to all, and they are warmly acknowledged as m_c."
+    "The Clan has watched (old_name) rise with strength and grace, choosing the path of a queen. {PRONOUN/m_c/poss/CAP} dedication is an inspiration to all, and {PRONOUN/m_c/subject} {VERB/m_c/are/is} warmly acknowledged as m_c."
+  ],
+  "shunned_elder_0": [
+    [
+      "elder",
+      "shunned",
+      "general_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits"
+    ],
+    "m_c has decided that the elder's den will be where {PRONOUN/m_c/subject} will return to, should {PRONOUN/m_c/subject} be welcomed back into the Clan."
   ],
   "elder_0": [
     [
@@ -3136,5 +3148,143 @@
       "all_traits"
     ],
     "Time has taken its toll, and m_c has noticed {PRONOUN/m_c/self} slowing down. {PRONOUN/m_c/subject/CAP} {VERB/m_c/have/has} worked timelessly for many moons, but it is time for {PRONOUN/m_c/object} to retire. "
+  ],
+  "shunned_app1": [
+    [
+      "apprentice",
+      "no_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits",
+      "shunned"
+    ],
+    "m_c wishes {PRONOUN/m_c/subject} could be a real apprentice. For now, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} stuck waiting until {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} forgiven."
+  ],
+  "shunned_app2": [
+    [
+      "medicine cat apprentice",
+      "no_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits",
+      "shunned"
+    ],
+    "m_c wishes {PRONOUN/m_c/subject} could be a real medicine cat apprentice. For now, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} stuck waiting until {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} forgiven."
+  ],
+  "shunned_app3": [
+    [
+      "mediator apprentice",
+      "no_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits",
+      "shunned"
+    ],
+    "m_c wishes {PRONOUN/m_c/subject} could be a real mediator apprentice. For now, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} stuck waiting until {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} forgiven."
+  ],
+  "shunned_app4": [
+    [
+      "queen's apprentice",
+      "no_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits",
+      "shunned"
+    ],
+    "m_c wishes {PRONOUN/m_c/subject} could be a real queen's apprentice. For now, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} stuck waiting until {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} forgiven."
+  ],
+  "forgiven_app1": [
+    [
+      "apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits",
+      "forgiven"
+    ],
+    "m_c is glad to finally begin training after being forgiven by the Clan."
+  ],
+  "forgiven_app2": [
+    [
+      "apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits",
+      "forgiven"
+    ],
+    "m_c is overjoyed at {PRONOUN/m_c/poss} belated apprentice ceremony, vowing to {PRONOUN/m_c/poss} mentor, (mentor), that {PRONOUN/m_c/subject} will be the most loyal warrior the Clan's ever seen."
+  ],
+  "forgiven_app3": [
+    [
+      "medicine cat apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits",
+      "forgiven"
+    ],
+    "m_c has always been interested in medicine, and now, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} finally allowed to begin learning it. {PRONOUN/m_c/subject/CAP} {VERB/m_c/touch/touches} noses with {PRONOUN/m_c/poss} new mentor, (mentor), and promise in front of the Clan that {PRONOUN/m_c/subject} will use {PRONOUN/m_c/poss} new skills only to heal, not hurt."
+  ],
+  "forgiven_app4": [
+    [
+      "mediator apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits",
+      "forgiven"
+    ],
+    "Upon being forgiven by the Clan, m_c will begin training as a mediator apprentice. l_n remarks that learning about mediation will help {PRONOUN/m_c/object} recover from what {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} done."
+  ],
+  "forgiven_app5": [
+    [
+      "queen's apprentice",
+      "yes_mentor",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits",
+      "forgiven"
+    ],
+    "Since {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been forgiven, under close supervision, m_c will be allowed to train to be a queen."
+  ],
+  "forgiven_app6": [
+    [
+      "apprentice",
+      "no_mentor",
+      "queen's apprentice",
+      "mediator apprentice",
+      "medicine cat apprentice",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits",
+      "forgiven"
+    ],
+    "m_c is glad to finally begin training after being forgiven by the Clan."
+  ],
+  "forgiven_app7": [
+    [
+      "apprentice",
+      "yes_mentor",
+      "queen's apprentice",
+      "mediator apprentice",
+      "medicine cat apprentice",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits",
+      "forgiven"
+    ],
+    "m_c is glad to finally begin training after being forgiven by the Clan."
   ]
 }

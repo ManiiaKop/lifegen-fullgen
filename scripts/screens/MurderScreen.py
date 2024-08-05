@@ -313,15 +313,23 @@ class MurderScreen(Screens):
             ceremony_txt = choice(ceremony_txt)
         except:
             ceremony_txt = choice(self.m_txt["murder general"])
-
+            
+        other_clan = choice(game.clan.all_clans)
         ceremony_txt = ceremony_txt.replace('v_c', str(cat_to_murder.name))
         ceremony_txt = ceremony_txt.replace('c_n', game.clan.name)
+        ceremony_txt = ceremony_txt.replace("o_c", str(other_clan.name))
         if cat_to_murder.status == 'leader':
             game.clan.leader_lives = 0
         cat_to_murder.die()
         game.cur_events_list.insert(0, Single_Event(ceremony_txt))
+
         discover_chance = self.get_discover_chance(you, cat_to_murder, accomplice, accompliced)
         r_num = randint(1,100)
+
+        # discover_chance = 2
+        # r_num = 1
+        # debug ^^
+
         discovered = False
         if r_num < discover_chance:
             discovered = True
@@ -395,17 +403,20 @@ class MurderScreen(Screens):
             txt = txt.replace('v_c', str(cat_to_murder.name))
             game.cur_events_list.insert(2, Single_Event(txt))
             you.shunned = 1
+            you.faith -= 0.5
         elif punishment_chance == 2:
             txt = f"{accomplice.name} is blamed for the murder of v_c. However, you were not caught."
             txt = txt.replace('v_c', str(cat_to_murder.name))
             game.cur_events_list.insert(2, Single_Event(txt))
             accomplice.shunned = 1
+            accomplice.faith -= 0.5
         else:
             txt = f"The unsettling truth of v_c's death is discovered, with you and {accomplice.name} responsible. The Clan decides both of your punishments."
             txt = txt.replace('v_c', str(cat_to_murder.name))
             game.cur_events_list.insert(2, Single_Event(txt))
             you.shunned = 1
             accomplice.shunned = 1
+            accomplice.faith -= 0.5
         
         if punishment_chance == 1 or punishment_chance == 3:
             kit_punishment = ["You are assigned counseling by the Clan's medicine cat to help you understand the severity of your actions and to guide you to make better decisions in the future.",

@@ -35,6 +35,8 @@ from .AffairScreen import AffairScreen
 from .ClearingScreen import ClearingScreen
 from .QueenScreen import QueenScreen
 from .MoonplaceScreen import MoonplaceScreen
+from .WarriorDenScreen import WarriorDenScreen
+from .GiftScreen import GiftScreen
 
 # ---------------------------------------------------------------------------- #
 #                                  UI RULES                                    #
@@ -72,6 +74,8 @@ camp_screen = ClanScreen('camp screen')
 catlist_screen = ListScreen('list screen')
 med_den_screen = MedDenScreen('med den screen')
 freshkill_pile_screen = ClearingScreen('clearing screen')
+warrior_den_screen = WarriorDenScreen('warrior den screen')
+
 events_screen = EventsScreen('events screen')
 settings_screen = SettingsScreen('settings screen')
 clan_settings_screen = ClanSettingsScreen('clan settings screen')
@@ -98,6 +102,7 @@ choose_reborn_screen = ChooseRebornScreen("choose reborn screen")
 affair_screen = AffairScreen("affair screen")
 queen_screen = QueenScreen("queen screen")
 moonplace_screen = MoonplaceScreen("moonplace screen")
+gift_screen = GiftScreen("gift screen")
 
 patrol_screen = PatrolScreen('patrol screen2')
 patrol_screen2 = LifeGenPatrolScreen('patrol screen')

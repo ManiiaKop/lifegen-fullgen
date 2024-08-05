@@ -3,9 +3,9 @@
         "id": "deputy_dead_deputy",
         "thoughts": [
             "Wishes {PRONOUN/m_c/subject} could speak to r_c to learn how to assign patrols better",
-            "Feels a slight guilt for replacing r_c",
+            "Feels slightly guilty for replacing r_c",
             "Feels as if {PRONOUN/m_c/subject} can never measure up to r_c",
-            "Hopes r_c is proud of {PRONOUN/m_c/subject} for leading the Clan well"
+            "Hopes r_c is proud of {PRONOUN/m_c/object} and that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} leading the Clan well"
         ],
         "random_status_constraint": [
             "deputy"
@@ -49,7 +49,7 @@
             "Is assessing the apprentices",
             "Is making sure no apprentices are slacking off from training",
             "Is visiting r_c to make sure {PRONOUN/r_c/poss} mentor is treating {PRONOUN/r_c/object} well",
-            "Yowls at r_c to not slack off during {PRONOUN/r_c/poss} training or they'll have to tend to the elders ticks"
+            "Yowl at r_c to not slack during {PRONOUN/r_c/poss} training or {PRONOUN/r_c/subject}'ll tend to the elders ticks"
         ],
         "random_status_constraint": [
             "apprentice"
@@ -62,7 +62,7 @@
             "Feels a thrill imagining the chaos of a large-scale battle",
             "Tells the border patrol not to let any intruders go free without a scar to remember {PRONOUN/m_c/object} by",
             "Is thrilled at the thought of apprentices worshipping {PRONOUN/m_c/object}",
-            "Can feel the nape of {PRONOUN/m_c/poss} neck quivering in anticipation of upcoming wars"
+            "Can feel the nape of {PRONOUN/m_c/poss} neck quivering anticipating upcoming wars"
         ],
         "main_trait_constraint": [
             "bloodthirsty"
@@ -94,12 +94,13 @@
             "Goes missing and comes back smelling like garlic",
             "Is making odd noises",
             "Giggles at the thought of a bird trying to swim"
+    
         ],
         "main_trait_constraint": [
             "strange"
         ]
     },
-    {
+    {  
         "id": "insecure_deputy",
         "thoughts": [
             "Keeps confirming with the leader that the patrols {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} organizing sound right",
@@ -109,16 +110,16 @@
             "Questions whether {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} respected or just tolerated by the Clan",
             "Worries that {PRONOUN/m_c/poss} mistakes will lead to the Clan's downfall"
         ],
-        "main_trait_constraint": [
+        "main_trait_constraint":[
             "insecure"
         ]
     },
-    {
+    {  
         "id": "insecure_deputy_leader",
         "thoughts": [
-            "Keeps confirming with the leader that the patrols {PRONOUN/m_c/subject}{VERB/m_c/'s/'re} organizing sound right"
+            "Keeps confirming with the leader that the patrols {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} organizing sound right"
         ],
-        "main_trait_constraint": [
+        "main_trait_constraint":[
             "insecure"
         ],
         "random_status_constraint": [
@@ -153,15 +154,15 @@
             "Didn't realize {PRONOUN/m_c/subject} sent out the same cats for another patrol",
             "Had forgotten to report to the leader",
             "Is trying to remember a key detail {PRONOUN/m_c/subject} found concerning",
-            "Accidentally bumped into r_c, meowing {PRONOUN/m_c/subject} didn't notice {PRONOUN/r_c/object}",
-            "Didn't realize it was already night, forgetting to organize a moonhigh patrol",
-            "Was told {PRONOUN/m_c/subject} already ate {PRONOUN/m_c/poss} own prey after accusing Clanmates of stealing it",
+            "Accidently bumped into r_c, meowing {PRONOUN/m_c/subject} didn't notice {PRONOUN/r_c/object}",
+            "Didn't realize it was already night to create a patrol",
+            "Was told {PRONOUN/m_c/subject} already ate {PRONOUN/m_c/poss} prey after accusing Clanmates of stealing it",
             "Doesn't know personal space",
             "Had to be reminded of c_n's name again"
         ],
         "main_trait_constraint": [
             "oblivious"
-        ]
+        ]    
     },
     {
         "id": "nervous_deputy",
@@ -170,7 +171,7 @@
             "Feels a twinge of worry about an approaching storm",
             "Is overthinking a recent encounter with a rival Clan",
             "Is stressing over why {PRONOUN/m_c/subject} became deputy",
-            "Was overthinking countless battles {PRONOUN/m_c/subject} must create",
+            "Was overthinking countless battles {PRONOUN/m_c/subject} must create", 
             "Is terrified of leading c_n someday",
             "Was seen counting the number of prey hunting patrols brought in"
         ],
@@ -195,64 +196,65 @@
             "Shivers at the thought {PRONOUN/m_c/subject} will be leader some day",
             "Was found in {PRONOUN/m_c/poss} nest instead of organizing patrols",
             "Believes {PRONOUN/m_c/poss} leader only picked {PRONOUN/m_c/object} as deputy for a laugh",
-            "Grimaces when their Clanmates sought {PRONOUN/m_c/object} out for advice",
-            "Was sitting under a thunderstorm lost in thought",
-            "Was overthinking worse case scenarios that would bring an end to c_n",
+            "Grimce as Clanmates sought {PRONOUN/m_c/object} for an advice",
+            "Wants to let {PRONOUN/m_c/poss} pelt down",
+            "Was sitting out in a thunderstorm, deep in thought",
+            "Was overthinking worse case scenarios that would bring end to c_n",
             "Believes {PRONOUN/m_c/subject} will die before becoming leader"
         ],
         "main_trait_constraint": [
             "gloomy"
-        ]
+        ]  
     },
     {
         "id": "grumpy_deputy",
         "thoughts": [
             "Takes {PRONOUN/m_c/poss} rank a bit too serious",
             "Growls at a patrol for their lack of prey",
-            "Claims scars are prove of a survivor",
+            "Claims scars are proof of a survivor",
             "Has a permanent stone face",
             "Snaps at slothful cats refusing to wake up for morning patrols",
-            "Didn't give a rogue a warning before batting at their muzzle for tresspassing",
+            "Didn't give a rogue a warning before batting their muzzle for tresspassing",
             "Communicate with grunts and piercing stares",
             "Has little patience for r_c right now",
-            "Is giving an apprentice who is falling behind firm, but hopeful advice",
-            "Orders the hunting patrol to go back out and catch prey",
-            "Always hisses in between every word"
+            "Is giving an apprentice falling behind firm, but helpful advice",
+            "Orders the hunting patrol to go back out and catch prey that isn't meager",
+            "Always has a hiss inbetween every word"
         ],
         "main_trait_constraint": [
             "grumpy"
-        ]
+        ]   
     },
     {
         "id": "humble_deputy",
         "thoughts": [
-            "Still brimming with joy after becoming deputy for c_n",
+            "Still brimming with joy becoming deputy for c_n",
             "Orders apprentices to feed the older cats first",
             "Would rather let everyone take a prey from the pile before {PRONOUN/m_c/self}",
-            "Is frightened at the thought of replacing the leader",
-            "Is a too bit soft on disobedient cats"
+            "Is frightened by the thought of replacing the leader",
+            "Is a bit soft not picking disobedient cats for apprentice duties"
         ],
         "main_trait_constraint": [
             "humble"
-        ]
+        ]    
     },
     {
         "id": "arrogant_deputy",
         "thoughts": [
             "Sneering at those below {PRONOUN/m_c/poss} rank",
-            "Is taking the credit on victorious patrols",
+            "Is taking credits on victorious patrols",
             "Orders a hunting patrol to seek out {PRONOUN/m_c/poss} favorite prey",
-            "Is telling other cats that they weren't important enough to be the leader's commander",
+            "Is mouthing off the other cats that they weren't important enough to be the leader's commander",
             "Is being smug that one day {PRONOUN/m_c/subject} will lead the Clan",
             "Brags that StarClan choose {PRONOUN/m_c/object} as deputy because {PRONOUN/m_c/subject} were destined",
-            "Believes c_n will thrive for generations when {PRONOUN/m_c/subject}{VERB/m_c/'s/'re} in charge",
-            "Eyes flashed when a Clanmate bested {PRONOUN/m_c/object}",
+            "Believes c_n will thrive for generations when {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} in charge",
+            "Muzzle flushed red when a Clanmate bested {PRONOUN/m_c/object}",
             "Knows someday {PRONOUN/m_c/subject}'ll lead c_n better than previous leaders",
             "Can't wait to test out a strategy {PRONOUN/m_c/subject} made to capture more prey"
         ],
         "main_trait_constraint": [
             "arrogant"
-        ]
+        ]  
     },
     {
         "id": "daring_deputy",
@@ -265,37 +267,37 @@
         ],
         "main_trait_constraint": [
             "daring"
-        ]
+        ]  
     },
     {
         "id": "strict_deputy",
         "thoughts": [
-            "Is firm with {PRONOUN/m_c/poss} schedule",
+            "Is firm to {PRONOUN/m_c/poss} schedule",
             "Is willing to punish codebreakers however {PRONOUN/m_c/subject} see fit",
             "Doesn't like to stray from {PRONOUN/m_c/poss} familiarities",
-            "Is forcing a disobedient cat to be without food for the duration of the day",
-            "Wants every hunting patrol to catch an abundant amount of prey",
-            "Is stern in making sure apprentices' training is flawless",
-            "Is reminding Clanmates there will be direct consequences if the Warrior Code isn't followed",
+            "Is enforcing that a disobedient cat go without food for the duration of the day",
+            "Wants a hunting patrol to have an abundant of prey in every mouth",
+            "Is stern in making sure apprentices' training is flawless to {PRONOUN/m_c/object}",
+            "Is reminding Clanmates there will be direct consequences if the Warrior Code isn't heed",
             "Is giving r_c direct orders"
         ],
         "main_trait_constraint": [
             "strict"
-        ]
+        ]    
     },
     {
         "id": "adventurous_deputy",
         "thoughts": [
             "Is the first awake to pick {PRONOUN/m_c/self} for morning patrols",
             "Almost crashed into r_c from having too much energy",
-            "Commanded a hunting patrol to catch the biggest and most powerful prey in the territories",
-            "Is imagining vast lands where c_n can live",
-            "Places {PRONOUN/m_c/self} as a barrier to protect {PRONOUN/m_c/poss} Clanmates during a border clash",
-            "Took a patrol on an alternative route to explore more"
+            "Commanded a hunting patrol to catch the biggest and powerful prey in the territories",
+            "Is imagining vast lands c_n can live in instead",
+            "Place {PRONOUN/m_c/self} as a barrier to protect {PRONOUN/m_c/poss} Clanmates during a border clash",
+            "Took a patrol an alternative route to explore more"
         ],
         "main_trait_constraint": [
             "adventurous"
-        ]
+        ]  
     },
     {
         "id": "loyal_deputy",
@@ -303,11 +305,11 @@
             "Will always put c_n above everything else",
             "Doesn't see how allowing outsiders will improve c_n",
             "Promised to protect {PRONOUN/m_c/poss} Clanmates with {PRONOUN/m_c/poss} life",
-            "Wants to serve {PRONOUN/m_c/poss} leader and continue their teachings",
+            "Wants to serve {PRONOUN/m_c/poss} leader and contiue their teachings",
             "Is defending a Clanmate from being accused of crossing borders into another Clan",
             "Is willing to punish codebreakers",
             "Is giving out clear and detailed reports to {PRONOUN/m_c/poss} leader",
-            "Is willing to help r_c, only because {PRONOUN/r_c/subject}{VERB/r_c/'s/'re} a Clanmate",
+            "Is willing to help r_c, only because {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} a Clanmate",
             "Orders Clanmates to defend c_n's borders with their lives"
         ],
         "main_trait_constraint": [
@@ -318,12 +320,12 @@
         "id": "sneaky_deputy",
         "thoughts": [
             "Was speaking to an unknown cat near the border alone",
-            "Seems to be hiding more than what {PRONOUN/m_c/subject} shows",
+            "Seems to be hiding more than what {PRONOUN/m_c/subject} {VERB/m_c/show/shows}",
             "Was seen sneaking out of camp more often...",
             "Is wandering around the territories for... something",
-            "Was carrying something in {PRONOUN/m_c/poss} mouth but refused to address it",
+            "Was carrying something in {PRONOUN/m_c/poss} mouth but refuse to address it",
             "Quickly concealed something under {PRONOUN/m_c/poss} nest when r_c appeared",
-            "Would startle cats by appearing out of thin air"
+            "Startles cats by appearing out of thin air"
         ],
         "main_trait_constraint": [
             "sneaky"
@@ -340,7 +342,7 @@
         ],
         "main_trait_constraint": [
             "sneaky"
-        ]
+        ]     
     },
     {
         "id": "ambitious_deputy_teacher",
@@ -416,7 +418,7 @@
         "id": "teacher_deputy_apprentice",
         "thoughts": [
             "Feels satisfaction watching an apprentice master a lesson",
-            "Guides an apprentice through {PRONOUN/m_c/poss} hunting assessment"
+            "Guides an apprentice through {PRONOUN/r_c/poss} hunting assessment"
         ],
         "main_skill_constraint": [
             "TEACHER,1"
@@ -462,7 +464,7 @@
     {
         "id": "healer_deputy",
         "thoughts": [
-            "Helps a Clanmate get a thorn out of {PRONOUN/m_c/self} paw while out on patrol",
+            "Helps a Clanmate get a thorn out of {PRONOUN/r_c/poss} paw while out on patrol",
             "Feels empathy for a sick Clanmate and is thinking of ways to help",
             "Is sharing knowledge about basic herbs with the Clan"
         ],
@@ -487,7 +489,7 @@
         "thoughts": [
             "Is recalling an old story that might inspire the Clan in tough times",
             "Feels inspired to craft a new legend based on recent events",
-            "Uses the stories of old to help guide {PRONOUN/m_c/self} decisions"
+            "Uses the stories of old to help guide {PRONOUN/m_c/poss} decisions"
         ],
         "main_skill_constraint": [
             "STORY,1"
@@ -498,7 +500,7 @@
         "thoughts": [
             "Is recalling an old story that might inspire the Clan in tough times",
             "Feels inspired to craft a new legend based on recent events",
-            "Uses the stories of old to help guide {PRONOUN/m_c/self} decisions",
+            "Uses the stories of old to help guide {PRONOUN/m_c/poss} decisions",
             "Is sharing tales of the Clan's legacy with wide-eyed apprentices"
         ],
         "main_skill_constraint": [
@@ -508,4 +510,5 @@
             "apprentice"
         ]
     }
+
 ]

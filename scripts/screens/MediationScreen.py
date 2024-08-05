@@ -296,10 +296,10 @@ class MediationScreen(Screens):
         chunked_cats = self.chunks(self.current_listed_cats, 24)
         if chunked_cats:
             for cat in chunked_cats[self.page - 1]:
-                if game.clan.clan_settings["show fav"] and cat.favourite:
+                if game.clan.clan_settings["show fav"] and cat.favourite != 0:
                     _temp = pygame.transform.scale(
                                 pygame.image.load(
-                                    f"resources/images/fav_marker.png").convert_alpha(),
+                                    f"resources/images/fav_marker_{cat.favourite}.png").convert_alpha(),
                                 (100, 100))
                         
                     self.cat_buttons.append(

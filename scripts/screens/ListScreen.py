@@ -571,10 +571,8 @@ class ListScreen(Screens):
         elif self.current_group == 'df':
             self.update_heading_text(f'Dark Forest')
 
-        # If the number of pages becomes smaller than the number of our current page, set
-        #   the current page to the last page
-        if self.list_page > self.all_pages:
-            self.list_page = self.all_pages
+        # clamp current page to a valid page number
+        self.list_page = max(1, min(self.list_page, self.all_pages))
 
         # Handle which next buttons are clickable.
         if self.all_pages <= 1:
@@ -614,11 +612,11 @@ class ListScreen(Screens):
             for cat in self.chunks(self.current_listed_cats, 20)[self.list_page - 1]:
 
                 # update_sprite(cat)
-                if game.clan.clan_settings["show fav"] and cat.favourite:
+                if game.clan.clan_settings["show fav"] and cat.favourite != 0:
 
                     _temp = pygame.transform.scale(
                         pygame.image.load(
-                            f"resources/images/fav_marker.png").convert_alpha(),
+                            f"resources/images/fav_marker_{cat.favourite}.png").convert_alpha(),
                         (100, 100))
 
                     if game.settings["dark mode"]:

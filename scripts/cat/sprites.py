@@ -124,7 +124,7 @@ class Sprites():
             'aliveInsect_accessories', 'fruit_accessories', 'crafted_accessories', 'tail2_accessories',
 
             #WILDS
-            'wildacc', 'wildaccextra', 'wildacc2', 'wildacc2extra',
+            'wildaccs_1', 'wildaccs_2',
 
             #SUPERARTSI
             'superartsi',
@@ -152,7 +152,13 @@ class Sprites():
 
             "chimes",
 
-            "moipa"
+            "moipa",
+
+            "moipa2",
+
+            "eggs",
+
+            "pumpkinbatharness"
 
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
@@ -382,7 +388,7 @@ class Sprites():
         for a, i in enumerate([
             "OAK LEAVES", "CATMINT", "MAPLE SEED", "JUNIPER"]):
             self.make_group('medcatherbs', (a, 3), f'acc_herbs{i}')
-        self.make_group('medcatherbs', (5, 2), 'acc_herbsDRY HERBS')
+        self.make_group('medcatherbs', (5, 2), 'acc_herbs')
 
         for a, i in enumerate([
             "RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS", "MOTH WINGS", "CICADA WINGS"]):
@@ -477,37 +483,34 @@ class Sprites():
             "SEAWEED", "DAISY CORSAGE"]):
             self.make_group('tail2_accessories', (a, 0), f'acc_tail2{i}')
 
-       # wild's accessories
+
+        # wilds accessories redone sheets by moipa and jay
         for a, i in enumerate([
             "LILYPAD", "LARGE DEATHBERRY", "SMALL DEATHBERRY", "ACORN2", "PINECONE", "VINE"]):
-            sprites.make_group('wildacc', (a, 0), f'acc_herbs{i}',sprites_x=3,sprites_y=3)
-            sprites.make_group('wildaccextra', (a, 0),
-                               f'acc_herbs{i}',sprites_x=3,sprites_y=2)
-        for a, i in enumerate(
-                ["CHERRY2", "BLEEDING HEARTS", "SHELL PACK", "FERNS", "GOLD FERNS"]):
-            sprites.make_group('wildacc', (a, 1), f'acc_herbs{i}',sprites_x=3,sprites_y=3)
-            sprites.make_group('wildaccextra', (a, 1),
-                               f'acc_herbs{i}',sprites_x=3,sprites_y=2)
-        for a, i in enumerate(["WHEAT", "BLACK WHEAT"]):
-            sprites.make_group('wildacc', (a, 2), f'acc_herbs{i}',sprites_x=3,sprites_y=3)
-            sprites.make_group('wildaccextra', (a, 2),
-                               f'acc_herbs{i}',sprites_x=3,sprites_y=2)    
+            self.make_group('wildaccs_1', (a, 0), f'acc_herbs{i}')
+        
+        for a, i in enumerate([
+            "CHERRY2", "BLEEDING HEARTS2", "SHELL PACK", "FERNS", "GOLD FERNS"]):
+            self.make_group('wildaccs_1', (a, 1), f'acc_herbs{i}')
 
         for a, i in enumerate([
-            "BERRIES", "CLOVERS", "CLOVER", "MOSS", "FLOWER MOSS", "MUSHROOMS"]):
-            sprites.make_group('wildacc2', (a, 0), f'acc_herbs{i}',sprites_x=3,sprites_y=3)
-            sprites.make_group('wildacc2extra', (a, 0),
-                               f'acc_herbs{i}',sprites_x=3,sprites_y=2)
-        for a, i in enumerate(
-                ["LARGE LUNA", "LARGE COMET", "SMALL LUNA", "SMALL COMET", "LADYBUG"]):
-            sprites.make_group('wildacc2', (a, 1), f'acc_wild{i}', sprites_x=3,sprites_y=3)
-            sprites.make_group('wildacc2extra', (a, 1),
-                               f'acc_wild{i}',sprites_x=3,sprites_y=2)
-        for a, i in enumerate(["MUD PAWS", "ASHY PAWS"]):
-            sprites.make_group('wildacc2', (a, 2), f'acc_wild{i}',sprites_x=3,sprites_y=3)
-            sprites.make_group('wildacc2extra', (a, 2),
-                               f'acc_wild{i}',sprites_x=3,sprites_y=2)
+            "WHEAT", "BLACK WHEAT"]):
+            self.make_group('wildaccs_1', (a, 2), f'acc_herbs{i}')
         
+        # -------------------------------------------------------------------------
+        
+        for a, i in enumerate([
+            "BERRIES", "CLOVERS", "CLOVER2", "MOSS2", "FLOWER MOSS", "MUSHROOMS"]):
+            self.make_group('wildaccs_2', (a, 0), f'acc_herbs{i}')
+
+        for a, i in enumerate([
+            "LARGE LUNA", "LARGE COMET", "SMALL LUNA", "SMALL COMET", "LADYBUG"]):
+            self.make_group('wildaccs_2', (a, 1), f'acc_wild{i}')
+
+        for a, i in enumerate([
+            "MUD PAWS", "ASHY PAWS"]):
+            self.make_group('wildaccs_2', (a, 2), f'acc_wild{i}')
+
         # superartsi's accessories
 
         for a, i in enumerate([
@@ -582,6 +585,22 @@ class Sprites():
         for a, i in enumerate([
             "FIDDLEHEADS", "LANTERNS", "HEARTCHARMS", "CHIMES"]):
             self.make_group('moipa', (a, 0), f'acc_crafted{i}')
+
+        for a, i in enumerate([
+            "SPRINGFLOWERCORSAGE", "ORCHID", "SPRINGFLOWERS", "RADIO", "SWANFEATHER", "DRACULAPARROTFEATHER"]):
+            self.make_group('moipa2', (a, 0), f'acc_flower{i}')
+        
+        for a, i in enumerate([
+            "JAYFEATHER", "EAGLEFEATHER"]):
+            self.make_group('moipa2', (a, 1), f'acc_wild{i}')
+
+        for a, i in enumerate([
+            "EGG"]):
+            self.make_group('eggs', (a, 0), f'acc_wild{i}')
+
+        for a, i in enumerate([
+            "BATHARNESS"]):
+            self.make_group('pumpkinbatharness', (a, 0), f'acc_crafted{i}')
         
 # CREATE INSTANCE
 sprites = Sprites()

@@ -8,12 +8,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
-        "patrol_art": "lg_deputy_default",
+        "tags": [],
+        "patrol_art": "DefaultDeputy",
         "min_cats": 1,
         "max_cats": 4,
         "min_max_status": {},
@@ -45,12 +43,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
-        "patrol_art": "lg_deputy_default",
+        "tags": [],
+        "patrol_art": "DefaultDeputy",
         "min_cats": 1,
         "max_cats": 4,
         "min_max_status": {},
@@ -82,12 +78,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
-        "patrol_art": "lg_deputy_default",
+        "tags": [],
+        "patrol_art": "DefaultDeputy",
         "min_cats": 1,
         "max_cats": 4,
         "min_max_status": {},
@@ -119,12 +113,10 @@
             "leaf-bare"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
-        "patrol_art": "lg_deputy_default",
+        "tags": [],
+        "patrol_art": "DefaultDeputy",
         "min_cats": 1,
         "max_cats": 4,
         "min_max_status": {},
@@ -156,12 +148,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "camp"
-        ],
-        "patrol_art": "lg_deputy_default",
+        "tags": [],
+        "patrol_art": "DefaultDeputy",
         "min_cats": 1,
         "max_cats": 4,
         "min_max_status": {},
@@ -193,29 +183,27 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "lg_deputy_default",
+        "tags": [],
+        "patrol_art": "DefaultDeputy",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "As you are assigning cats to their designated patrols, one clan member questions you about your choice to set them to a specific border, arguing that another one would be much easier to patrol.",
+        "intro_text": "As you are assigning cats to their designated patrols, one Clan member questions you about your choice to set them to a specific border, arguing that another one would be much easier to patrol.",
         "decline_text": "You firmly state that you do not have time for cats to question your orders and send the patrol off without any further explanation.",
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "While you understand your clan member's point of view, you explain that all of the clan's borders must be checked on regularly, and that they were doing the clan a favor by going on that patrol. Thankfully, your clanmate seems to understand and thanks you for your explanation.",
+                "text": "While you understand your Clan member's point of view, you explain that all of the Clan's borders must be checked on regularly, and that they were doing the Clan a favor by going on that patrol. Thankfully, your Clanmate seems to understand and thanks you for your explanation.",
                 "exp": 10,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-                "text": "While you understand your clan member's point of view, you explain that all of the clan's borders must be checked on regularly, and that they were doing the clan a favor by going on that patrol. Unfortunately, your clanmate fails to see your reasoning and argues back, saying that their point still stands. In the end, you decide to switch them out with another cat, allowing them to join a different patrol.",
+                "text": "While you understand your Clan member's point of view, you explain that all of the Clan's borders must be checked on regularly, and that they were doing the Clan a favor by going on that patrol. Unfortunately, your Clanmate fails to see your reasoning and argues back, saying that their point still stands. In the end, you decide to switch them out with another cat, allowing them to join a different patrol.",
                 "exp": 0,
                 "weight": 20
             }
@@ -230,12 +218,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "hunting"
-        ],
-        "patrol_art": "lg_deputy_default",
+        "tags": [],
+        "patrol_art": "DefaultDeputy",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -267,29 +253,27 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "lg_deputy_default",
+        "tags": [],
+        "patrol_art": "DefaultDeputy",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "A clan member has fallen into the river during a fishing patrol and is afraid of water now. They seek your guidance.",
-        "decline_text": "You don't have time for this. You send the clan member to the medicine cat instead.",
+        "intro_text": "A Clan member has fallen into the river during a fishing patrol and is afraid of water now. They seek your guidance.",
+        "decline_text": "You don't have time for this. You send the Clan member to the medicine cat instead.",
         "chance_of_success": 70,
         "success_outcomes": [
             {
-                "text": "You spend some time with the clan member, gradually easing their fear of water. Eventually, they regain their confidence and thank you.",
+                "text": "You spend some time with the Clan member, gradually easing their fear of water. Eventually, they regain their confidence and thank you.",
                 "exp": 20,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-                "text": "Despite your efforts, the clan member is still scared and is unable to overcome their fear.",
+                "text": "Despite your efforts, the Clan member is still scared and is unable to overcome their fear.",
                 "exp": 0,
                 "weight": 20
             }
@@ -304,17 +288,15 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "lg_deputy_default",
+        "tags": [],
+        "patrol_art": "DefaultDeputy",
         "min_cats": 1,
         "max_cats": 3,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "A clan member reports sighting a fox near the border. You need to decide whether to send a patrol or not.",
+        "intro_text": "A Clan member reports sighting a fox near the border. You need to decide whether to send a patrol or not.",
         "decline_text": "You decide to monitor the situation for now, hoping the fox won't pose a threat.",
         "chance_of_success": 50,
         "success_outcomes": [
@@ -341,12 +323,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "lg_deputy_default",
+        "tags": [],
+        "patrol_art": "DefaultDeputy",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -378,18 +358,16 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "lg_deputy_default",
+        "tags": [],
+        "patrol_art": "DefaultDeputy",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "A pair of rogue cats have been spotted near the territory. They claim to be just passing through, but the clan is uneasy.",
-        "decline_text": "You advise the clan to stay vigilant and continue their usual duties, hoping the rogues will keep their word and move on.",
+        "intro_text": "A pair of rogue cats have been spotted near the territory. They claim to be just passing through, but the Clan is uneasy.",
+        "decline_text": "You advise the Clan to stay vigilant and continue their usual duties, hoping the rogues will keep their word and move on.",
         "chance_of_success": 50,
         "success_outcomes": [
             {
@@ -400,7 +378,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "Despite your vigilance, the rogue cats manage to steal some prey, causing unrest among the clan members.",
+                "text": "Despite your vigilance, the rogue cats manage to steal some prey, causing unrest among the Clan members.",
                 "exp": 0,
                 "weight": 20
             }
@@ -415,12 +393,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training"
-        ],
-        "patrol_art": "lg_deputy_default",
+        "tags": [],
+        "patrol_art": "DefaultDeputy",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -452,17 +428,15 @@
             "Greenleaf"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "lg_deputy_default",
+        "tags": [],
+        "patrol_art": "DefaultDeputy",
         "min_cats": 1,
         "max_cats": 3,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "There are suspicious markings on trees near the border. A few clan members believe it could be a sign of a rival clan encroaching.",
+        "intro_text": "There are suspicious markings on trees near the border. A few Clan members believe it could be a sign of a rival Clan encroaching.",
         "decline_text": "You choose to ignore the markings for now, deciding to keep a watchful eye on the border instead.",
         "chance_of_success": 50,
         "success_outcomes": [
@@ -474,7 +448,81 @@
         ],
         "fail_outcomes": [
             {
-                "text": "You decide to ignore the markings, but it turns out to be a sign of a rival clan. They take advantage of the situation and attack your clan.",
+                "text": "You decide to ignore the markings, but it turns out to be a sign of a rival Clan. They take advantage of the situation and attack your Clan.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "lg_deputy_shunned_J1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "shunned"
+        ],
+        "patrol_art": "DefaultDeputy",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "As you watch the new Clan deputy organize the dawn patrols, you notice them pair up two cats who you know work badly together. You consider speaking up to prevent an argument.",
+        "decline_text": "You know your opinion won't be listened to, so you stay silent. You notice the pair already looking annoyed with each other as they leave camp.",
+        "chance_of_success": 40,
+        "success_outcomes": [
+            {
+                "text": "When you voice your opinion, surprisingly, the deputy listens to you. Heeding your advice, they split up the pair and send them off into different groups.",
+                "exp": 20,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You start to voice your opinion, but the deputy hits you with a disgusted glare that stops you in your tracks. It seems any scrap of authority you had left has been lost.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "lg_deputy_shunned_J2",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "shunned"
+        ],
+        "patrol_art": "DefaultDeputy",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "A couple of warriors approach you one morning and ask if you'd like to patrol with them. They say they need some extra paws. Your leader sits several fox lengths away, ears swivelled towards you. Is this some sort of test?",
+        "decline_text": "You can't risk it; you tell the warriors to find someone else.",
+        "chance_of_success": 40,
+        "success_outcomes": [
+            {
+                "text": "Excited for a chance to redeem yourself, you agree, and you recieve no objections from your leader as you pass to leave camp. You catch a good amount of prey with your Clanmates and feel pride for the first time in a while as you drop it on the fresh-kill pile.",
+                "exp": 20,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You instantly stand up and agree, excited at the chance to redeem yourself, but when your leader hears this, they turn their head to glare at the two warriors. Your Clanmates sheepishly apologise for asking, and turn to join their leader, who looks ready to give them a scolding for ignoring your shun.",
                 "exp": 0,
                 "weight": 20
             }

@@ -252,7 +252,7 @@
             "Is wondering if r_c will be chosen for the next Gathering",
             "Wants to go on patrol with r_c",
             "Doesn't want to go on patrol with r_c",
-            "Thinks r_c needs to work on their stalking technique",
+            "Thinks r_c needs to work on {PRONOUN/r_c/poss} stalking technique",
             "Saw r_c sneaking a bite of fresh-kill",
             "Thinks r_c will make a fine warrior",
             "Is proud of r_c's progress"
@@ -391,7 +391,7 @@
         "thoughts": [
             "Wants to speak to r_c about something",
             "Thinks r_c will make a good mediator",
-            "Is grateful to r_c for {PRONOUN/m_c/poss} mediation"
+            "Is grateful to r_c for {PRONOUN/r_c/poss} mediation"
         ],
         "main_status_constraint": [
             "kitten",
@@ -457,7 +457,8 @@
             "Is mourning the lost potential of r_c",
             "Is listening to stories about r_c",
             "Is learning more about r_c",
-            "Is sad {PRONOUN/m_c/subject} couldn't spend time with r_c"
+            "Is sad {PRONOUN/m_c/subject} couldn't spend time with r_c",
+            "Wonders what r_c's medicine cat name would have been"
         ],
         "main_status_constraint": [
             "any"
@@ -475,7 +476,8 @@
             "Is mourning the lost potential of r_c",
             "Is listening to stories about r_c",
             "Is learning more about r_c",
-            "Is sad {PRONOUN/m_c/subject} couldn't spend time with r_c"
+            "Is sad {PRONOUN/m_c/subject} couldn't spend time with r_c",
+            "Wonders what r_c's warrior name would have been"
         ],
         "main_status_constraint": [
             "any"
@@ -1586,7 +1588,7 @@
         "id": "insecure_apprentice",
         "thoughts": [
             "Doesn't think that {PRONOUN/m_c/subject} {VERB/m_c/have/has} been performing up to {PRONOUN/m_c/poss} mentor's standards lately",
-            "Finds that today is going to be a better day than the last",
+            "Hopes that today is going to be a better day than the last",
             "Is making {PRONOUN/m_c/poss} friends laugh at the expense of {PRONOUN/m_c/self}",
             "Finds that {PRONOUN/m_c/subject} {VERB/m_c/are/is} really good at making {PRONOUN/m_c/poss} mentor laugh",
             "Is complimenting another apprentice on {PRONOUN/m_c/poss} hunting crouch",
@@ -1836,7 +1838,7 @@
         "id": "one_bad_eye_gen_to_alive_gen",
         "thoughts": [
             "Was startled by r_c suddenly appearing on {PRONOUN/m_c/poss} blind side",
-            "Makes an eye-patch for {PRONOUN/m_c/object} from grass and leaves",
+            "Makes an eye-patch for {PRONOUN/m_c/self} from grass and leaves",
             "Stumbles into a tree on accident"
         ],
         "perm_conditions": {
@@ -1853,7 +1855,7 @@
         "thoughts": [
             "Tells the kits tall tales about how {PRONOUN/m_c/subject} became half-blind",
             "Trips over r_c!",
-            "Laughs at a kit who offered {PRONOUN/m_c/object} help to find {PRONOUN/m_c/poss} lost eye"
+            "Laughs at a kit who offered {PRONOUN/r_c/object} help to find {PRONOUN/m_c/poss} lost eye"
         ],
         "perm_conditions": {
             "m_c": [
@@ -1931,7 +1933,7 @@
             "Is confused when r_c indicates birdsong",
             "Wonders what r_c sounds like",
             "Knows what r_c is saying from {PRONOUN/r_c/poss} mouth movement",
-            "Teases a Clanmate for trying to call {PRONOUN/m_c/object} out loud"
+            "Teases a Clanmate for trying to call for {PRONOUN/m_c/object} out loud"
         ],
         "perm_conditions": {
             "m_c": [
@@ -1948,7 +1950,7 @@
             "Wonders if the clouds make noise",
             "Wonders if the sun makes noise",
             "Wonders what sound is like",
-            "Tries to ask r_c for something, but {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} understand",
+            "Tries to ask r_c for something, but {PRONOUN/r_c/subject} {VERB/r_c/don't/doesn't} understand",
             "Is frustrated that other cats don't understand {PRONOUN/m_c/poss} signals",
             "Wishes {PRONOUN/m_c/subject} could talk to other cats",
             "Feels thunder boom and watches the others flinch",
@@ -2205,17 +2207,17 @@
             "Is being scolded for straying too far from camp",
             "Wonders what lies just beyond the horizon",
             "Thinks about what it'd be like to explore underwater",
-            "Wishes they could travel far and wide",
-            "Longs to find out what's beyond the clans",
+            "Wishes {PRONOUN/m_c/subject} could travel far and wide",
+            "Longs to find out what's beyond the Clans",
             "Has found an unknown stream",
-            "Considers trespassing on another clan's territory to see what it's like",
+            "Considers trespassing on another Clan's territory to see what it's like",
             "Listens to a Loner discuss land outside their borders",
             "Listens to a kittypet talk about the Twolegplace",
             "Searches under every tree root",
             "Looks for hidden tunnels",
             "Fell into an unknown river while exploring and got wet!",
             "Scraped up their paws while exploring the wilderness",
-            "Snuck outside clan territory to explore",
+            "Snuck outside Clan territory to explore",
             "Found an abandoned twoleg den"
         ],
         "main_age_constraint": [
@@ -2232,18 +2234,18 @@
     {
         "id": "tracker",
         "thoughts": [
-            "Is following a mouse's scent back to their den",
+            "Is following a mouse's scent back to its den",
             "Manages to track down r_c in a game of hide 'n seek",
             "Was able to pinpoint a faint scent trail",
             "Finds a trinket that one of the kits had lost",
-            "Knows that nothing will go missing on their watch",
+            "Knows that nothing will go missing on {PRONOUN/m_c/poss} watch",
             "Tracked a dog all across the territory",
             "Sniff, sniff, sniff",
             "Tracks r_c across the entire territory",
-            "Enjoys the familiar smell of their territory",
+            "Enjoys the familiar smell of {PRONOUN/m_c/poss} territory",
             "Thinks that r_c smells nice",
-            "Wonders what the trees smell like in the other clan's territories",
-            "Takes a deep breath before they start their day",
+            "Wonders what the trees smell like in the other Clan's territories",
+            "Takes a deep breath before {PRONOUN/m_c/subject} start {PRONOUN/m_c/poss} day",
             "Tracks a fox all the way back to its den"
         ],
         "main_age_constraint": [
@@ -2273,12 +2275,12 @@
             "Is weaving feathers into the den walls",
             "Wants to weave some flowers into the branches of the dens",
             "Wants to add a splash of color to the camp",
-            "Is curating their flower collection",
+            "Is curating {PRONOUN/m_c/poss} flower collection",
             "Is sprucing up the elders den",
-            "Is chasing kits away from their pebble stash",
+            "Is chasing kits away from {PRONOUN/m_c/poss} pebble stash",
             "Is foraging for new decorations",
             "Brightens up the camp walls with colorful feathers ",
-            "Sighs as a kit messes up their decorations",
+            "Sighs as a kit messes up {PRONOUN/m_c/poss} decorations",
             "Asks about weaving some leaves into the den walls",
             "Asks r_c to look out for some nice pebbles",
             "Places some pebbles at camp entrance to look like a path",
@@ -2305,18 +2307,18 @@
             "Stares intensely at the entrance of camp",
             "Is standing guard just outside of camp",
             "Ears curling at every moment outside of camp",
-            "Arched their back at the sight of a wobbling badger inching too close",
+            "Arched {PRONOUN/m_c/poss} back at the sight of a wobbling badger inching too close",
             "Trying not to doze off guarding the entrance of the camp",
             "Is glaring at a crow just beyond the camp walls",
             "Catches a pair of apprentices trying to sneak out",
-            "Wave a tail at r_c and watch them head out for a patrol",
+            "Waves {PRONOUN/m_c/poss} tail at r_c and watches {PRONOUN/r_c/object} head out for a patrol",
             "Is trying to stay awake while on guard",
-            "Stands so still they look like they've frozen",
+            "Stands so still {PRONOUN/m_c/subject} look like {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} frozen",
             "Shoos a kit back into the nursery",
             "Doesn't believe a story an apprentice told for why they need to be out of camp",
             "Enjoys the silence outside of camp",
-            "Thought they saw a cat, only for it to be a leaf",
-            "Takes the time to pray to StarClan while doing their duty"
+            "Thought {PRONOUN/m_c/subject} saw a cat, only for it to be a leaf",
+            "Takes the time to pray to StarClan while doing {PRONOUN/m_c/poss} duty"
         ],
         "main_age_constraint": [
             "adolescent",
@@ -2338,12 +2340,12 @@
     {
         "id": "tunneler",
         "thoughts": [
-            "Is letting their eyes adjust to the darkness in the tunnels",
-            "Doesn't mind the constant dirt their pelt gathers underground",
-            "Has a tiny fright when they lose their way through the tunnels",
-            "Prefers the dense burrows to the open space",
+            "Is letting {PRONOUN/m_c/poss} eyes adjust to the darkness in the tunnels",
+            "Doesn't mind the constant dirt {PRONOUN/m_c/poss} pelt gathers underground",
+            "Has a tiny fright when {PRONOUN/m_c/subject} {VERB/m_c/lose/loses} {PRONOUN/m_c/poss} way through the tunnels",
+            "Prefers the feeling of dense burrows to open space",
             "Managed to get lost in a maze of tunnels",
-            "Doesn't bother to clean the dirt from their paws",
+            "Doesn't bother to clean the dirt from {PRONOUN/m_c/poss} paws",
             "Reinforces the walls of the tunnels",
             "Is gathering stones to support a tunnel roof",
             "Is digging a new tunnel to nowhere",
@@ -2351,9 +2353,9 @@
             "Is building a nest underground",
             "Is digging out a rabbit's burrow",
             "Can hear muffled footsteps while in a tunnel",
-            "Enjoys the smell of the tunnel",
+            "Enjoys the smell of the tunnels",
             "Perfectly maps a portion of the tunnels",
-            "Wonders what it would be like if the whole clan lived in the tunnels",
+            "Wonders what it would be like if the whole Clan lived in the tunnels",
             "Thought they heard footsteps",
             "Hears the faint rushing of groundwater",
             "Gets tangled in some roots"
@@ -2375,13 +2377,13 @@
             "Knows the perfect location to gather prey",
             "Tries to find the quickest routes to each border",
             "Attempts to map out a dense part of the territory",
-            "Runs through the entire territory in their mind",
+            "Runs through the entire territory in {PRONOUN/m_c/poss} mind",
             "Helps a lost apprentice back to camp",
-            "Could find their way home with their eyes closed",
+            "Could find {PRONOUN/m_c/poss} way home with {PRONOUN/m_c/poss} eyes closed",
             "Is teaching an apprentice the fastest way to the border",
-            "Uses the shadows on the trees to orient themself",
+            "Uses the shadows on the trees to orient {PRONOUN/m_c/self}",
             "Knows that moss grows on all sides of the trees",
-            "Goes to update their mental map of the territory ",
+            "Goes to update {PRONOUN/m_c/poss} mental map of the territory ",
             "Is confirming the most abundant places for prey",
             "Walks along the river to see where it goes",
             "Eagerly joins the border patrol",
@@ -2403,16 +2405,16 @@
         "thoughts": [
             "Is humming a catchy tune",
             "Is singing a lullaby to the kits",
-            "Is captivating an audience with their voice",
+            "Is captivating an audience with {PRONOUN/m_c/poss} voice",
             "Is singing along with the birds in the trees",
             "Is delighting the warriors with a concert",
             "Is singing sweetly to the sick cats in the medicine den",
             "Mews along to the sound coming from a twoleg metal sound box",
-            "Sings a lullaby that they remember from the nursery to themself",
+            "Sings a lullaby that they remember from the nursery to {PRONOUN/m_c/self}",
             "Comes up with a new song",
-            "Sings a tune to remind themself what they're doing",
+            "Sings a tune to remind {PRONOUN/m_c/self} what they're doing",
             "Tries to convince a songbird to come to the ground, by recommendation of r_c",
-            "Teaches the kits how to sing their favourite song"
+            "Teaches the kits how to sing {PRONOUN/m_c/poss} favourite song"
         ],
         "main_age_constraint": [
             "adolescent",
@@ -2431,16 +2433,16 @@
     {
         "id": "GRACE",
         "thoughts": [
-            "Is light on their paws",
+            "Is light on {PRONOUN/m_c/poss} paws",
             "Is barely touching the ground as they skip across the camp",
-            "Keeps their gaze on the ground to watch for any debris",
-            "Is mesmerizing r_c with their movement",
+            "Keeps {PRONOUN/m_c/poss} gaze on the ground to watch for any debris",
+            "Is mesmerizing r_c with {PRONOUN/m_c/poss} movement",
             "Is slipping through an impossibly small crevice to reach camp",
-            "Just tripped, but caught themself and made it look intentional",
+            "Just tripped, but caught {PRONOUN/m_c/self} and made it look intentional",
             "Flutters up a tree like a bird",
             "Walks across the camp like they're dancing",
-            "Waves their tail like a leaf in the wind",
-            "Practices their walk",
+            "Waves {PRONOUN/m_c/poss} tail like a leaf in the wind",
+            "Practices {PRONOUN/m_c/poss} walk",
             "Manages to climb a tree without even moving the branches"
         ],
         "main_age_constraint": [
@@ -2460,11 +2462,11 @@
     {
         "id": "CLEAN",
         "thoughts": [
-            "Fervently grooms between each of their toes",
-            "Is triple checking their pelt before exiting the den",
-            "Cleans their paws off in the river",
-            "Spends a considerable amount of time cleaning out their fur",
-            "Is changing their bedding for the third time today",
+            "Fervently grooms between each of {PRONOUN/m_c/poss} toes",
+            "Is triple checking {PRONOUN/m_c/poss} pelt before exiting the den",
+            "Cleans {PRONOUN/m_c/poss} paws off in the river",
+            "Spends a considerable amount of time cleaning out {PRONOUN/m_c/poss} fur",
+            "Is changing {PRONOUN/m_c/poss} bedding for the third time today",
             "Is organizing the freshkill pile",
             "Is sorting pebbles by size, for fun",
             "Shrieks after being splashed with mud",
@@ -2518,24 +2520,24 @@
     {
         "id": "COMFORTER",
         "thoughts": [
-            "Is reassuring a clanmate after a missed catch",
-            "Gently bumps their head on a Clanmate's shoulder after a heated argument",
-            "Validates another clanmates worries ",
+            "Is reassuring a Clanmate after a missed catch",
+            "Gently bumps {PRONOUN/m_c/poss} head on a Clanmate's shoulder after a heated argument",
+            "Validates another Clanmates worries ",
             "Comforts r_c after a nightmare",
-            "Voices their support for r_c",
-            "Comforts a clanmate after a hard loss",
+            "Voices {PRONOUN/m_c/poss} support for r_c",
+            "Comforts a Clanmate after a hard loss",
             "Visits the sick in the medicine den",
             "Seems to put everyone at ease",
             "Wraps r_c in a comforting hug",
             "Offers silent support",
-            "Listens to r_c as they voice their troubles",
+            "Listens to r_c as they voice {PRONOUN/r_c/poss} troubles",
             "Checks in on r_c",
             "Comforts the kits during a storm",
-            "Licks r_c's ear after they see that they're sad",
-            "Tells r_c about a time that they struggled in a hunt",
+            "Licks r_c's ear after {PRONOUN/m_c/subject} see that {PRONOUN/r_c/subject}'re sad",
+            "Tells r_c about a time that {PRONOUN/m_c/subject} struggled in a hunt",
             "Quietly listens while r_c vents ",
-            "Offers to move their nest closer to r_c's nest so they don't have to be alone",
-            "Tells r_c to get some rest, and that they'll replace them on the patrol"
+            "Offers to move {PRONOUN/m_c/poss} nest closer to r_c's nest so {PRONOUN/r_c/subject} don't have to be alone",
+            "Tells r_c to get some rest, and that {PRONOUN/m_c/subject}'ll replace {PRONOUN/m_c/object} on the patrol"
         ],
         "main_age_constraint": [
             "adolescent",
@@ -2554,8 +2556,8 @@
     {
         "id": "MATCHMAKER",
         "thoughts": [
-            "Is teasing r_c about their love interest",
-            "Gives advice to r_c on how to share their interests",
+            "Is teasing r_c about {PRONOUN/r_c/poss} love interest",
+            "Gives advice to r_c on how to share {PRONOUN/r_c/poss} interests",
             "Is silently pairing cats together",
             "Feels second-hand embarrassment after thinking about something some cat said to their crush",
             "Thinks about who would make a great pair",
@@ -2563,17 +2565,16 @@
             "Gives an apprentice advice about their crush",
             "Purrs watching another cat talk to their crush",
             "Gossips to r_c about who should end up together",
-            "Teases r_c about who they like",
+            "Teases r_c about who {PRONOUN/r_c/subject} {VERB/r_c/like/likes}",
             "Asks the deputy to set up two warriors on a patrol together",
-            "Makes the medicine cat feel glad they aren't supposed to have a mate",
-            "Has to remind r_c for the tenth time to just be honest with the cat they like",
-            "Winks at r_c when they're talking to their crush",
-            "Tries to convince r_c to ask their crush on a date",
-            "Silently cheers when their favourite couple gets together",
-            "Is pairing up cats in other clans, fully aware that it is a bad idea",
-            "Jokes about pushing r_c into a river so a pretty cat can save them",
-            "Sighs when they realise that this clan is full of mousebrains refusing to admit their feelings",
-            "Is certain they know who r_c likes"
+            "Has to remind r_c for the tenth time to just be honest with the cat {PRONOUN/r_c/subject} {VERB/r_c/like/likes}",
+            "Winks at r_c when {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} talking to {PRONOUN/r_c/poss} crush",
+            "Tries to convince r_c to ask {PRONOUN/r_c/poss} crush on a date",
+            "Silently cheers when {PRONOUN/m_c/poss} favourite couple gets together",
+            "Is pairing up cats in other Clans, fully aware that it is a bad idea",
+            "Jokes about pushing r_c into a river so a pretty cat can save {PRONOUN/r_c/object}",
+            "Sighs when {PRONOUN/m_c/subject} {VERB/m_c/realise/realises} that this Clan is full of mousebrains refusing to admit their feelings",
+            "Is certain {PRONOUN/m_c/subject} {VERB/m_c/know/knows} who r_c likes"
         ],
         "main_age_constraint": [
             "adolescent",
@@ -2601,14 +2602,14 @@
         "thoughts": [
             "Thinks to clear away growing foliage at the root so they're less likely to grow",
             "Gathers a few seeds to pile in the territory to attract prey",
-            "Finds a new approach to a battle move they had been struggling with",
+            "Finds a new approach to a battle move {PRONOUN/m_c/subject}{VERB/r_c/'ve/'s} been struggling with",
             "Comes up with a solution no one else thought of",
             "Pitches a new method of catching prey to the leader",
-            "Is thinking so far out the box, that they've forgotten there was a box in the first place",
+            "Is thinking so far out the box, that {PRONOUN/m_c/subject} forgotten there was a box in the first place",
             "Considers the power of StarClan",
-            "Wonders where the dark forest came from",
+            "Wonders where the Dark Forest came from",
             "Thinks about the warrior code",
-            "Wonders what their favourite fresh kill is",
+            "Wonders what {PRONOUN/m_c/poss} favourite fresh kill is",
             "Tries to figure out the fastest way to get from one border to another",
             "Is questioning everything"
         ],
@@ -2626,17 +2627,17 @@
     {
         "id": "COOPERATIVE",
         "thoughts": [
-            "Congratulates r_c on successfully cornering the prey for them to catch",
+            "Congratulates r_c on successfully cornering the prey for {PRONOUN/m_c/object} to catch",
             "Is content to bring fresh-kill to the elders den",
-            "Wants to help their clanmates",
+            "Wants to help {PRONOUN/m_c/poss} Clanmates",
             "Happily agrees to patrol with r_c",
             "Volunteers to guard the camp during a Gathering",
             "Purposely loses a prey for r_c to catch instead",
-            "Offers to grab some herbs for the medicine den while they're hunting",
+            "Offers to grab some herbs for the medicine den while {PRONOUN/m_c/subject}'re hunting",
             "Practices a fighting move with r_c",
             "Creates a new two-cat fighting move",
-            "Helps r_c up a tree so they can grab a bird",
-            "Shares their favourite hunting spot with a sad apprentice",
+            "Helps r_c up a tree so {PRONOUN/r_c/subject} can grab a bird",
+            "Shares {PRONOUN/m_c/poss} favourite hunting spot with a sad apprentice",
             "Is made of friend material"
         ],
         "main_age_constraint": [
@@ -2662,12 +2663,12 @@
             "Is taking time to master a particularly difficult skill",
             "Is trying to learn a few basic herb remedies",
             "Wants to learn more battle moves",
-            "Wants to expand their skill set",
-            "Asks r_c to teach them how to swim",
+            "Wants to expand {PRONOUN/m_c/poss} skill set",
+            "Asks r_c to teach {PRONOUN/m_c/object} how to swim",
             "Debates trying to climb a tree",
             "Runs down to the lake to get more swimming practice in",
             "Performs a big brain maneuver ",
-            "Practices their speech in the reflection of a lake",
+            "Practices {PRONOUN/m_c/poss} speech in the reflection of a lake",
             "Wishes to be all-knowing, like StarClan!"
         ],
         "main_age_constraint": [
@@ -2688,18 +2689,18 @@
     {
         "id": "TIME",
         "thoughts": [
-            "Prepares their schedule for the day, starting with grooming their pelt",
-            "Is eyeing at the fading sun, hoping they've completed everything today",
-            "Sorted out the type of prey they're planning to eat",
-            "Is planning out their entire week",
-            "Makes a list of what they have to get done before sunhigh",
+            "Prepares {PRONOUN/m_c/poss} schedule for the day, starting with grooming {PRONOUN/m_c/poss} pelt",
+            "Is eyeing at the fading sun, hoping {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} completed everything today",
+            "Sorted out the type of prey {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} planning to eat",
+            "Is planning out {PRONOUN/m_c/poss} entire week",
+            "Makes a list of what {PRONOUN/m_c/subject} have to get done before sunhigh",
             "Plans a morning hunt before spending time with r_c",
-            "Uses pebbles to visualize all the tasks they want to complete",
-            "Sorts their ambitions by how many moons it would take to complete them",
+            "Uses pebbles to visualize all the tasks {PRONOUN/m_c/subject} want to complete",
+            "Sorts {PRONOUN/m_c/poss} ambitions by how many moons it would take to complete them",
             "Counts each second",
-            "Figures out if they can go on border patrol and a hunting patrol in the same day",
-            "Helps another cat manage their schedule",
-            "Double checks their schedule before they go on a hunting patrol with r_c",
+            "Figures out if {PRONOUN/m_c/subject} can go on border patrol and a hunting patrol in the same day",
+            "Helps another cat manage {PRONOUN/m_c/poss} schedule",
+            "Double checks {PRONOUN/m_c/poss} schedule before {PRONOUN/m_c/subject} go on a hunting patrol with r_c",
             "Teaches the kits how to manage their time",
             "Warns an apprentice about wasting their time"
         ],
@@ -2723,20 +2724,20 @@
     {
         "id": "TREASURE",
         "thoughts": [
-            "Is showing off their finds",
-            "Is giving out pebbles to their clanmates",
+            "Is showing off {PRONOUN/m_c/poss} finds",
+            "Is giving out pebbles to {PRONOUN/m_c/poss} Clanmates",
             "Spends the whole day collecting small trinkets",
-            "Parades around their favorite trinket all day",
-            "Stores their treasures in a super secret place",
+            "Parades around {PRONOUN/m_c/poss} favorite trinket all day",
+            "Stores {PRONOUN/m_c/poss} treasures in a super secret place",
             "Proudly presents a shiny new trinket",
             "Gifts a shiny pebble to the kits",
-            "Carefully organizes their trinkets",
+            "Carefully organizes {PRONOUN/m_c/poss} trinkets",
             "Finds a really shiny little stone",
             "Dives into a river after a nice rock",
-            "Debates bringing a very shiny piece of twoleg trash back for their collection",
+            "Debates bringing a very shiny piece of twoleg trash back for {PRONOUN/m_c/poss} collection",
             "Finds two new trinkets and can't carry them both home",
-            "Double checks their treasure hiding spots to make sure they're not tampered with",
-            "Finds a new treasure hiding spot"
+            "Double checks {PRONOUN/m_c/poss} treasure hiding spots to make sure {PRONOUN/m_c/subject}'re not tampered with",
+            "Finds a new hiding spot for {PRONOUN/m_c/poss} treasure"
         ],
         "main_age_constraint": [
             "adolescent",
@@ -2754,25 +2755,25 @@
         "thoughts": [
             "Stands still in the shallow river and watches for fish",
             "Tries to find the perfect fishing spot",
-            "Accidentally knocks their fish back into the river",
-            "Decides to fish at a different river rather than their usual one",
-            "Is sitting at their usual fishing spot",
+            "Accidentally knocks {PRONOUN/m_c/poss} fish back into the river",
+            "Decides to fish at a different river rather than {PRONOUN/m_c/poss} usual one",
+            "Is sitting at {PRONOUN/m_c/poss} usual fishing spot",
             "Was seen wrestling a fish out of a stream",
-            "Was given a sharp fin to their face from a failed hunt",
+            "Was given a sharp fin to {PRONOUN/m_c/poss} face from a failed hunt",
             "Almost slips into the river after missing an unexpectedly quick fish",
             "Fell face-first into the river",
             "Wonders what it'd be like to breathe underwater",
-            "Overestimated their fishing expertise after taking a fish to the face",
-            "Strutting off with pride with a massive fish in their maw",
-            "Laughs heartily as they splashed water at r_c",
-            "Debating with r_c which fish taste best",
+            "Realizes {PRONOUN/m_c/subject} overestimated {PRONOUN/m_c/poss} fishing expertise after taking a fish to the face",
+            "Strutting off with pride with a massive fish in {PRONOUN/m_c/poss} maw",
+            "Laughs heartily as {PRONOUN/m_c/subject} splash water at r_c",
+            "Is debating with r_c which fish taste best",
             "Was mistaken for an otter  ",
             "Perfectly identifies fish before they're even out the water",
-            "Is so focused that they nearly mistake their tail for a fish",
-            "No fish can escape their paws!",
+            "Is so focused that {PRONOUN/m_c/subject} nearly mistake {PRONOUN/m_c/poss} tail for a fish",
+            "No fish can escape {PRONOUN/m_c/poss} paws!",
             "Floats in the water to fake being debris",
             "Fimshin'",
-            "Fish fear them, she-cats love them"
+            "Fish fear {PRONOUN/m_c/object}, she-cats love {PRONOUN/m_c/object}"
         ],
         "main_age_constraint": [
             "adolescent",
@@ -2791,20 +2792,20 @@
     {
         "id": "LANGUAGE",
         "thoughts": [
-            "Doesn't say more than they absolutely need to",
+            "Doesn't say more than {PRONOUN/m_c/subject} absolutely need to",
             "Wondering how to break the news to r_c",
             "Recites a dramatic monologue",
-            "Thinks through their every word before they say it",
+            "Thinks through {PRONOUN/m_c/poss} every word before {PRONOUN/m_c/subject} say it",
             "Reenacts an encounter with an enemy patrol",
             "Shares a rumor with r_c",
             "Is deep in conversation with r_c",
-            "Isn't afraid to voice their opinions",
+            "Isn't afraid to voice {PRONOUN/m_c/poss} opinions",
             "Is giving an encouraging speech ",
-            "Politely asks a bird to stop singing over their head when they're trying to sleep",
+            "Politely asks a bird to stop singing over {PRONOUN/m_c/poss} head when they{VERB/m_c/'re/'s} trying to sleep",
             "Complains that dogs have zero manners!",
-            "Is glaring at a piece of fresh kill like it personally insulted their parents",
+            "Is glaring at a piece of fresh kill like it personally insulted {PRONOUN/m_c/poss} parents",
             "Asks a lark where the nearest patch of marigold is",
-            "Convinces a bee colony to not make their nest in the clan clearing",
+            "Convinces a bee colony to not make {PRONOUN/m_c/poss} nest in the Clan clearing",
             "Huffs into a badger's den, hoping for an answer"
         ],
         "main_age_constraint": [
@@ -2825,32 +2826,35 @@
         "id": "SLEEPER",
         "thoughts": [
             "Takes time to relax",
-            "Is getting a nap in before their patrol",
-            "Invites clanmates to rest with them in the center of camp",
+            "Is getting a nap in before {PRONOUN/m_c/poss} patrol",
+            "Invites Clanmates to rest with {PRONOUN/m_c/object} in the center of camp",
             "Tells the elders the best place to take a nap",
             "Is dozing off",
-            "Falls asleep on top of their prey!",
+            "Falls asleep on top of {PRONOUN/m_c/poss} prey!",
             "Is trying to stay awake",
             "Zzzzzzz ...",
-            "Wishes they were still in their nest right now",
+            "Wishes {PRONOUN/m_c/subject} were still in {PRONOUN/m_c/poss} nest right now",
             "Lounges around out in the territory, soaking in the scenery",
             "Is relaxing in the sun",
             "Bbbiiiigggg stretch!",
-            "Doesn't want to leave the comfort of their nest",
+            "Doesn't want to leave the comfort of {PRONOUN/m_c/poss} nest",
             "Almost fell asleep while on patrol",
             "Is a sleepy little guy",
             "Takes on the very important task of trying out the camps napping spots",
             "Has reached maximum coziness",
-            "Just found the perfect position in their nest",
+            "Just found the perfect position in {PRONOUN/m_c/poss} nest",
             "Is snoring loudly",
-            "Snuggles deeper into their nest",
+            "Snuggles deeper into {PRONOUN/m_c/poss} nest",
             "Looks for materials to make a better nest",
             "Hides in a tree to sleep unbothered",
-            "Sleeps in other clanmate's nests to find the comfiest one",
+            "Sleeps in other Clanmate's nests to find the comfiest one",
             "Has discovered r_c has a soft nest!",
             "Wonders if r_c would be nice to sleep on",
-            "Finds a bug in their nest! But continues to sleep anyways",
-            "Feels like a frog on log in a bog"
+            "Finds a bug in {PRONOUN/m_c/poss} nest! But continues to sleep anyways.",
+            "Feels like a frog on log in a bog",
+            "Yawns loudly",
+            "Feels oh, so eepy",
+            "Honk shoo"
         ],
         "main_age_constraint": [
             "adolescent",

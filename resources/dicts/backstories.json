@@ -127,10 +127,12 @@
     "dead12": "This cat was killed by Twolegs.",
     "dead13" : "This cat was struck down by StarClan for failing to fulfill a prophecy.",
     "dead14": "This cat was struck down by StarClan for failing to heed an omen.",
+    "dead15": "This cat died peacefully in their sleep.",
     "oldstarclan1": "This cat snuck into StarClan when {PRONOUN/m_c/subject} died, but was discovered and exiled back to the Dark Forest after many years.",
     "oldstarclan2": "This cat was originally from StarClan, but after getting lost in the Dark Forest one day, {PRONOUN/m_c/subject} {VERB/m_c/were/was} unable to find {PRONOUN/m_c/poss} way back. Now, {PRONOUN/m_c/subject} belong to the Place of No Stars, resenting {PRONOUN/m_c/poss} StarClan family who never came to find {PRONOUN/m_c/object}.",
     "oldstarclan3" : "This cat belonged to StarClan once, but got lost outside of StarClan territory one day and has been bitterly wandering the Dark Forest ever since.",
-    "starclan1": "This cat died peacefully in their sleep."
+    "dfkit1": "This cat was born in the Dark Forest, with one Dark Forest parent and one living one.",
+    "dfkit2": "This cat was born in the Dark Forest and taken to live with the Clan by {PRONOUN/m_c/poss} living parent."
   },
   "backstory_display": {
     "clan_founder_backstories": "Clan founder",
@@ -146,9 +148,20 @@
     "abandoned_backstories": "abandoned",
     "dead_cat_backstories": "ancient spirit",
     "starclan_backstories": "ancient spirit",
-    "df_backstories": "ancient spirit"
+    "df_backstories": "ancient spirit",
+    "dark_forest_kits": "from the Dark Forest",
+    "oldstarclan_backstories": "ancient spirit"
   },
   "backstory_categories": {
+    "dark_forest_kits": [
+      "dfkit1",
+      "dfkit2"
+    ],
+    "oldstarclan_backstories": [
+      "oldstarclan1",
+      "oldstarclan2",
+      "oldstarclan3"
+    ],
     "dead_cat_backstories": [
       "dead1",
       "dead2",
@@ -157,21 +170,31 @@
       "dead5",
       "dead6",
       "dead8",
+      "dead9",
       "dead10",
       "dead11",
       "dead12"
     ],
     "starclan_backstories": [
-      "starclan1"
+      "dead1",
+      "dead3",
+      "dead4",
+      "dead6",
+      "dead8",
+      "dead10",
+      "dead12",
+      "dead15"
     ],
     "df_backstories": [
+      "dead2",
+      "dead5",
       "dead7",
+      "dead8",
       "dead9",
+      "dead11",
+      "dead12",
       "dead13",
-      "dead14",
-      "oldstarclan1",
-      "oldstarclan2",
-      "oldstarclan3"
+      "dead14"
     ],
     "clan_founder_backstories": [
       "clan_founder",

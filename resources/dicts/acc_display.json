@@ -54,7 +54,7 @@
     "singular": "lavender"
   },
   "HERBS": {
-    "default": "herb-covered pelt",
+    "default": "bunch of herbs",
     "plural": "herbs",
     "singular": "bunch of herbs",
     "comment": [
@@ -591,7 +591,7 @@
     "singular": "brown rabbit"
   },
   "INDIAN GIANT SQUIRREL": {
-    "default": "indian giant squirrel",
+    "default": "indian giant squirrels",
     "plural": "indian giant squirrels",
     "singular": "indian giant squirrels"
   },
@@ -910,7 +910,7 @@
     "plural": "cherries",
     "singular": "cherry"
   },
-  "BLEEDING HEARTS": {
+  "BLEEDING HEARTS2": {
     "default": "bleeding heart",
     "plural": "bleeding hearts",
     "singular": "bleeding heart"
@@ -950,12 +950,12 @@
     "plural": "clover bunches",
     "singular": "bunch of clovers"
   },
-  "CLOVER": {
+  "CLOVER2": {
     "default": "clover",
     "plural": "clovers",
     "singular": "clover"
   },
-  "MOSS": {
+  "MOSS2": {
     "default": "bundle of moss",
     "plural": "moss",
     "singular": "bundle of moss"
@@ -1454,5 +1454,55 @@
     "default": "chimes",
     "plural": "chimes",
     "singular": "chimes"
+  },
+  "SPRINGFLOWERCORSAGE": {
+    "default": "spring flower corsage",
+    "plural": "spring flower corsages",
+    "singular": "spring flower corsage"
+  },
+  "ORCHID": {
+    "default": "orchid",
+    "plural": "orchids",
+    "singular": "orchid"
+  },
+  "SPRINGFLOWERS": {
+    "default": "spring flowers",
+    "plural": "spring flowers",
+    "singular": "spring flowers"
+  },
+  "RADIO": {
+    "default": "radio",
+    "plural": "radios",
+    "singular": "radio"
+  },
+  "SWANFEATHER": {
+    "default": "swan feather",
+    "plural": "swan feather",
+    "singular": "swan feather"
+  },
+  "DRACULAPARROTFEATHER": {
+    "default": "dracula parrot feather",
+    "plural": "dracula parrot feathers",
+    "singular": "dracula parrot feather"
+  },
+  "JAYFEATHER": {
+    "default": "jay feather",
+    "plural": "jay feathers",
+    "singular": "jay feather"
+  },
+  "EAGLEFEATHER": {
+    "default": "eagle feather",
+    "plural": "eagle feathers",
+    "singular": "eagle feather"
+  },
+  "EGG": {
+    "default": "egg",
+    "plural": "eggs",
+    "singular": "egg"
+  },
+  "BATHARNESS": {
+    "default": "bat harness",
+    "plural": "bat harnesses",
+    "singular": "bat harness"
   }
 }

@@ -8,12 +8,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -45,12 +43,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 5,
         "min_max_status": {},
@@ -60,7 +56,7 @@
         "chance_of_success": 60,
         "success_outcomes": [
             {
-                "text": "You participate in the patrol and successfully scout the clan borders. Your keen sense of alertness impresses everyone around.",
+                "text": "You participate in the patrol and successfully scout the Clan borders. Your keen sense of alertness impresses everyone around.",
                 "exp": 20,
                 "weight": 20
             }
@@ -82,12 +78,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 4,
         "min_max_status": {},
@@ -119,11 +113,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training"
-        ],
+        "tags": [],
         "patrol_art": "lg_app4",
         "min_cats": 1,
         "max_cats": 2,
@@ -139,8 +131,12 @@
                 "weight": 20,
                 "accessory": [
                     {
-                        "cats": ["p_l"],
-                        "accessory": ["LEAF"]
+                        "cats": [
+                            "p_l"
+                        ],
+                        "accessory": [
+                            "LEAF"
+                        ]
                     }
                 ]
             }
@@ -162,11 +158,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training"
-        ],
+        "tags": [],
         "patrol_art": "lg_app5",
         "min_cats": 1,
         "max_cats": 2,
@@ -199,12 +193,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -236,29 +228,27 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 5,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "An emergency gathering has been called, suspecting an invasion by the rival clan. You're asked to participate in the border patrol.",
-        "decline_text": "You decide to decline the task, feeling a bit overwhelmed. You resolve to support your clan in other ways.",
+        "intro_text": "An emergency gathering has been called, suspecting an invasion by the rival Clan. You're asked to participate in the border patrol.",
+        "decline_text": "You decide to decline the task, feeling a bit overwhelmed. You resolve to support your Clan in other ways.",
         "chance_of_success": 60,
         "success_outcomes": [
             {
-                "text": "You accept the task and, with your keen senses, you successfully spot traces of the rival clan. The clan praises your vigilance, which has helped avert a potential crisis.",
+                "text": "You accept the task and, with your keen senses, you successfully spot traces of the rival Clan. The Clan praises your vigilance, which has helped avert a potential crisis.",
                 "exp": 20,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-                "text": "Despite your best efforts, you fail to notice any signs of the rival clan. You return to your clan feeling a bit downcast, but your clanmates appreciate your effort and reassure you for the future.",
+                "text": "Despite your best efforts, you fail to notice any signs of the rival Clan. You return to your Clan feeling a bit downcast, but your Clanmates appreciate your effort and reassure you for the future.",
                 "exp": 0,
                 "weight": 20
             }
@@ -273,18 +263,16 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "The leader asks for a volunteer to deliver a message to the next clan. The journey is long and fraught with potential danger.",
-        "decline_text": "You choose to not volunteer for the task, as the journey feels too perilous. You decide to support the clan in more familiar ways.",
+        "intro_text": "The leader asks for a volunteer to deliver a message to the next Clan. The journey is long and fraught with potential danger.",
+        "decline_text": "You choose to not volunteer for the task, as the journey feels too perilous. You decide to support the Clan in more familiar ways.",
         "chance_of_success": 65,
         "success_outcomes": [
             {
@@ -310,11 +298,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training"
-        ],
+        "tags": [],
         "patrol_art": "lg_app9",
         "min_cats": 1,
         "max_cats": 2,
@@ -347,29 +333,27 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 3,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "A thick fog has set over the clan territory, and there are reports of unusual scents near the border. You are called upon to investigate.",
-        "decline_text": "You decide to decline the task. The thick fog makes it a challenging mission and you choose to help the clan with other tasks.",
+        "intro_text": "A thick fog has set over the Clan territory, and there are reports of unusual scents near the border. You are called upon to investigate.",
+        "decline_text": "You decide to decline the task. The thick fog makes it a challenging mission and you choose to help the Clan with other tasks.",
         "chance_of_success": 45,
         "success_outcomes": [
             {
-                "text": "Braving the fog, you proceed to investigate and successfully identify the unusual scent as a harmless raccoon. Your clan appreciates your bravery and keen senses.",
+                "text": "Braving the fog, you proceed to investigate and successfully identify the unusual scent as a harmless raccoon. Your Clan appreciates your bravery and keen senses.",
                 "exp": 20,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-                "text": "Despite your best efforts, the thick fog hampers your investigation and you're unable to identify the source of the scent. Your clan still values your courage and encourages you to keep practicing.",
+                "text": "Despite your best efforts, the thick fog hampers your investigation and you're unable to identify the source of the scent. Your Clan still values your courage and encourages you to keep practicing.",
                 "exp": 0,
                 "weight": 20
             }
@@ -384,12 +368,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -399,7 +381,7 @@
         "chance_of_success": 70,
         "success_outcomes": [
             {
-                "text": "You accept the invitation and enjoy an afternoon filled with captivating tales of the clan's history. The elder cat appreciates your company, and you gain a newfound respect for their wisdom.",
+                "text": "You accept the invitation and enjoy an afternoon filled with captivating tales of the Clan's history. The elder cat appreciates your company, and you gain a newfound respect for their wisdom.",
                 "exp": 15,
                 "weight": 20
             }
@@ -421,12 +403,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -458,11 +438,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_app13",
         "min_cats": 1,
         "max_cats": 1,
@@ -495,12 +473,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -510,7 +486,7 @@
         "chance_of_success": 65,
         "success_outcomes": [
             {
-                "text": "You join the warrior and spend the night listening to their wisdom and experiences while keeping the Clan safe. The shared vigil strengthens your bond and deepens your understanding of the clan's values.",
+                "text": "You join the warrior and spend the night listening to their wisdom and experiences while keeping the Clan safe. The shared vigil strengthens your bond and deepens your understanding of the Clan's values.",
                 "exp": 20,
                 "weight": 20
             }
@@ -532,11 +508,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_app15",
         "min_cats": 1,
         "max_cats": 2,
@@ -569,12 +543,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -606,12 +578,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -643,12 +613,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -680,11 +648,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "border"
-        ],
+        "tags": [],
         "patrol_art": "lg_app19",
         "min_cats": 1,
         "max_cats": 2,
@@ -717,13 +683,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training",
-            "apprentice"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -755,12 +718,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training",
-            "apprentice"
-        ],
+        "tags": [],
         "patrol_art": "lifegen_app21,23,24",
         "min_cats": 1,
         "max_cats": 2,
@@ -793,13 +753,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training",
-            "apprentice"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -816,7 +773,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "You jump to your paws and run after them, as you trek through the territory you become excited and run off, your mentor's walking to slow anyway. After a moment you realize you don't recognise this part of the forest, eventually your mentor finds you and leads you back to camp with a scolding about running off.",
+                "text": "You jump to your paws and run after them. As you trek through the territory, you become excited and run off, your mentor's walking too slow anyway. After a moment you realize you don't recognise this part of the forest. Eventually your mentor finds you and leads you back to camp with a scolding about running off.",
                 "exp": 0,
                 "weight": 20
             }
@@ -831,12 +788,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training",
-            "apprentice"
-        ],
+        "tags": [],
         "patrol_art": "lifegen_app21,23,24",
         "min_cats": 1,
         "max_cats": 2,
@@ -869,12 +823,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training",
-            "apprentice"
-        ],
+        "tags": [],
         "patrol_art": "lifegen_app21,23,24",
         "min_cats": 1,
         "max_cats": 2,
@@ -907,13 +858,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training",
-            "apprentice"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -945,13 +893,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training",
-            "apprentice"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -983,13 +928,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training",
-            "apprentice"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -1021,13 +963,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training",
-            "apprentice"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -1059,13 +998,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training",
-            "apprentice"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -1075,7 +1011,7 @@
         "chance_of_success": 40,
         "success_outcomes": [
             {
-                "text": "You agree, although moss collecting being one of the more boring duties, its still an important task and you work hard at bringing home a healthy collection of fresh moss, familiarising yourself with the territory as you go.",
+                "text": "You agree, and although moss collecting is one of the more boring duties, it is still an important task. You work hard to bring home a healthly collection of fresh moss, familiarizing yourself with the territory as you go.",
                 "exp": 20,
                 "weight": 20
             }
@@ -1097,13 +1033,10 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training",
-            "apprentice"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -1135,18 +1068,15 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
-        "tags": [
-            "training",
-            "apprentice"
-        ],
-        "patrol_art": "gen_hunt_mouse",
+        "tags": [],
+        "patrol_art": "app_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "Your mentor asks you to check the elders for ticks",
+        "intro_text": "Your mentor asks you to check the elders for ticks.",
         "decline_text": "Checking the elders for ticks? Yuck!",
         "chance_of_success": 40,
         "success_outcomes": [
@@ -1173,10 +1103,9 @@
             "Any"
         ],
         "types": [
-            "hunting"
+            "lifegen"
         ],
         "tags": [
-            "training",
             "bloodthirsty_only"
         ],
         "patrol_art": "patrolartapp_clawsout",
@@ -1197,6 +1126,43 @@
         "fail_outcomes": [
             {
                 "text": "You try your best to take their words to heart, but you can barely touch them anyway. Their claws score into your flank over and over again, until you're covered in scratches. They seem disappointed in you, and you limp back to the medicine cat's den, bruised and bleeding. ",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "lg_app_shunned_J1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "shunned"
+        ],
+        "patrol_art": "lg_app4",
+        "min_cats": 1,
+        "max_cats": 2,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You restlessly tap a paw against the ground as you watch the other apprentices leave camp for a hunting trip with their mentors. It's a long shot, you know, but you wonder if you'd be allowed to join them, just this once.",
+        "decline_text": "You decide against asking, not wanting anycat to be more upset with you.",
+        "chance_of_success": 30,
+        "success_outcomes": [
+            {
+                "text": "You call out to the group and ask as politely as possible if they have room for one more on their trip. A few group members look at you sceptically, but after a tentative nod of approval from your leader, they allow you out of camp for the first time since your punishment began.",
+                "exp": 15,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "When you call out to the group and ask to join them, they look at you with disgust. One Clanmate snarkily remarks that they couldn't trust you to remember to kill the prey and not the cats. You drop your head onto your paws as they leave. Maybe next time.",
                 "exp": 0,
                 "weight": 20
             }

@@ -1,6 +1,6 @@
 {
     "medicine cat general": [
-        "You stand over the shoulder of r_m as they tend to a tricky patient. Your ghostly paws can't help them out, but you hope that the medicine cat's StarClan connection is strong enough to sense your support.",
+        "You stand over the shoulder of r_m as {PRONOUN/r_m/subject} {VERB/r_m/tend/tends} to a tricky patient. Your ghostly paws can't help {PRONOUN/r_m/object} out, but you hope that the medicine cat's StarClan connection is strong enough to sense your support.",
         "With no injuries or illnesses to treat, you spend your days watching over the medical dramas of c_nClan."
     ],
     "medicine cat assertive": [],
@@ -11,8 +11,8 @@
     "medicine cat neurotic": [],
     "medicine cat silly": [],
     "medicine cat stable": [
-        "You ponder the need to practise your skills given your circumstance.",
-        "You help the herbs grow with a single touch of your blessed starry paw."
+        "You ponder the need to practise your skills given your circumstances.",
+        "You help a patch of herbs grow with a single touch of your blessed starry paw."
     ],
     "medicine cat sweet": [],
     "medicine cat unabashed": [],

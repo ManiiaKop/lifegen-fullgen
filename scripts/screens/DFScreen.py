@@ -333,11 +333,11 @@ class DFScreen(Screens):
             for cat in self.chunks(self.current_listed_cats, 20)[self.list_page - 1]:
                 #update_sprite(cat)
                 
-                if game.clan.clan_settings["show fav"] and cat.favourite:
-                    
+                if game.clan.clan_settings["show fav"] and cat.favourite != 0:
+
                     _temp = pygame.transform.scale(
                             pygame.image.load(
-                                f"resources/images/fav_marker.png").convert_alpha(),
+                                f"resources/images/fav_marker_{cat.favourite}.png").convert_alpha(),
                             (100, 100))
                     
                     _temp.set_alpha(150)

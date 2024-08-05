@@ -282,6 +282,7 @@ class SkillPath(Enum):
             common_paths = [i for i in list(SkillPath) if 
                            i not in exclude and i not in uncommon_paths]
             return random.choice(common_paths)
+    
 
 class HiddenSkillEnum(Enum):
     ROGUE = "rogue's knowledge"
@@ -434,6 +435,18 @@ class Skill():
     def tier(self):
         print("Can't set tier directly")
     
+    def get_points_to_tier(self, tier:int):
+        """This is seperate from the tier setter, since it will booonly allow you
+        to set points to tier 1, 2, or 3, and never 0. Tier 0 is retricted to interest_only
+        skills"""
+        
+        # Make sure it in the right range. If not, return.
+        if not (1 <= tier <= 3):
+            return
+        
+        # Adjust to 0-indexed ranges list
+        return Skill.tier_ranges[tier - 1][0]
+
     def set_points_to_tier(self, tier:int):
         """This is seperate from the tier setter, since it will booonly allow you
         to set points to tier 1, 2, or 3, and never 0. Tier 0 is retricted to interest_only
@@ -449,6 +462,15 @@ class Skill():
     def get_save_string(self):
         '''Gets the string that is saved in the cat data'''
         return f"{self.path.name},{self.points},{self.interest_only}"
+    
+    def get_skill_from_string(self, string):
+        """Returns a SkillPath given a string skill"""
+        for skill in SkillPath:
+            if string in skill.value:
+                index = skill.value.index(string)
+                return self.generate_from_save_string(f"{skill.name},{Skill.get_points_to_tier(self, tier=max(1,index))},False")
+            
+        return "String not found in any Enum"
 
 class CatSkills:
     """

@@ -1,0 +1,11 @@
+{
+    "reject": [
+        "g_c turns down your gift with a roll of their eyes."
+    ],
+    "reject_already_have": [
+        "g_c thanks you for the offer, but they already have a [acc]."
+    ],
+    "accept": [
+        "g_c graciously accepts the [acc]."
+    ]
+}

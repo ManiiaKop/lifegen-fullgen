@@ -95,7 +95,7 @@ class DFPatrolScreen(Screens):
             if self.selected_cat.ID == self.cat_id:
                 if self.selected_cat in self.current_patrol:
                     self.current_patrol.remove(self.selected_cat)
-                else:
+                elif len(self.current_patrol) < 3:
                     self.current_patrol.append(self.selected_cat)
                 self.update_cat_images_buttons()
                 self.update_button()
@@ -286,24 +286,7 @@ class DFPatrolScreen(Screens):
                     if self.patrol_type == 'med':
                         self.patrol_type = 'general'
 
-                if self.patrol_type == 'general':
-                    text = 'dark forest patrol'
-                elif self.patrol_type == 'training':
-                    text = 'training'
-                elif self.patrol_type == 'border':
-                    text = 'border'
-                elif self.patrol_type == 'hunting':
-                    text = 'hunting'
-                elif self.patrol_type == 'med':
-                    if self.current_patrol:
-                        text = 'herb gathering'
-                        # self.elements['mouse'].disable()
-                        # self.elements['claws'].disable()
-                        # self.elements['paw'].disable()
-                    else:
-                        text = 'herb gathering'
-                else:
-                    text = ""
+                text = "dark forest patrol"
 
                 self.elements['info'] = pygame_gui.elements.UITextBox(
                     text, scale(pygame.Rect((500, 1050), (600, 800))),
@@ -486,7 +469,7 @@ class DFPatrolScreen(Screens):
     def run_patrol_start(self):
         """Runs patrol start. To be run in a seperate thread.  """
         try:
-            self.display_text = self.patrol_obj.setup_patrol(self.current_patrol, self.patrol_type)
+            self.display_text = self.patrol_obj.setup_patrol(self.current_patrol, "df")
         except RuntimeError:
             self.display_text = None
         
@@ -685,12 +668,12 @@ class DFPatrolScreen(Screens):
         pos_x = 100
         i = 0
         for cat in display_cats:
-            if game.clan.clan_settings["show fav"] and cat.favourite:
+            if game.clan.clan_settings["show fav"] and cat.favourite != 0:
                 self.fav[str(i)] = pygame_gui.elements.UIImage(
                     scale(pygame.Rect((pos_x, pos_y), (100, 100))),
                     pygame.transform.scale(
                         pygame.image.load(
-                            f"resources/images/fav_marker.png").convert_alpha(),
+                            f"resources/images/fav_marker_{cat.favourite}.png").convert_alpha(),
                         (100, 100))
                 )
                 self.fav[str(i)].disable()
