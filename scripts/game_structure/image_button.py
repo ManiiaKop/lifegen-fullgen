@@ -291,7 +291,7 @@ class UIRelationStatusBar():
                  positive_trait=True,
                  dark_mode=False,
                  manager=None,
-                 style="dots"):
+                 style="bar"):
 
         # Change the color of the bar depending on the value and if it's a negative or positive trait
         if percent_full > 49:
