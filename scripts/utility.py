@@ -762,32 +762,38 @@ def get_amount_of_cats_with_relation_value_towards(cat, value, all_cats):
 
 
 def change_relationship_values(cats_to: list,
-                               cats_from: list,
-                               romantic_love:int=0,
-                               platonic_like:int=0,
-                               dislike:int=0,
-                               admiration:int=0,
-                               comfortable:int=0,
-                               jealousy:int=0,
-                               trust:int=0,
-                               auto_romance:bool=False,
-                               log:str=None
-                               ):
+                            cats_from: list,
+                            romantic_love: int = 0,
+                            platonic_like: int = 0,
+                            dislike: int = 0,
+                            admiration: int = 0,
+                            comfortable: int = 0,
+                            jealousy: int = 0,
+                            trust: int = 0,
+                            auto_romance: bool = False,
+                            log: str = None
+                    ):
     """
     changes relationship values according to the parameters.
 
-    cats_from - a list of cats for the cats whose rel values are being affected
-    cats_to - a list of cat IDs for the cats who are the target of that rel value
-            i.e. cats in cats_from lose respect towards the cats in cats_to
-    auto_romance - if this is set to False (which is the default) then if the cat_from already has romantic value
-            with cat_to then the platonic_like param value will also be used for the romantic_love param
-            if you don't want this to happen, then set auto_romance to False
-    log - string to add to relationship log. 
+    :param list[Cat] cats_from: list of cat objects whose rel values will be affected
+    (e.g. cat_from loses trust in cat_to)
+    :param list[Cat] cats_to: list of cats objects who are the target of that rel value
+    (e.g. cat_from loses trust in cat_to)
+    :param int romantic_love: amount to change romantic, default 0
+    :param int platonic_like: amount to change platonic, default 0
+    :param int dislike: amount to change dislike, default 0
+    :param int admiration: amount to change admiration (respect), default 0
+    :param int comfortable: amount to change comfort, default 0
+    :param int jealousy: amount to change jealousy, default 0
+    :param int trust: amount to change trust, default 0
+    :param bool auto_romance: if the cat_from already has romantic value with cat_to, then the platonic_like param value
+    will also be applied to romantic, default False
+    :param str log: the string to append to the relationship log of cats involved
+        """
 
-    use the relationship value params to indicate how much the values should change.
-    
-    This is just for test prints - DON'T DELETE - you can use this to test if relationships are changing
-    changed = False
+    # This is just for test prints - DON'T DELETE - you can use this to test if relationships are changing
+    """changed = False
     if romantic_love == 0 and platonic_like == 0 and dislike == 0 and admiration == 0 and \
             comfortable == 0 and jealousy == 0 and trust == 0:
         changed = False
@@ -801,13 +807,21 @@ def change_relationship_values(cats_to: list,
         for single_cat_to_ID in cats_to:
             single_cat_to = single_cat_from.fetch_cat(single_cat_to_ID)
 
-        # make sure that cats don't gain rel with themselves
-        for rel in relationships:
-            if kitty.ID == rel.cat_to.ID:
+            # make sure we aren't trying to change a cat's relationship with themself
+            if single_cat_from == single_cat_to:
                 continue
 
+            # if the cats don't know each other, start a new relationship
+            if single_cat_to_ID not in single_cat_from.relationships:
+                single_cat_from.create_one_relationship(single_cat_to)
+
+            rel = single_cat_from.relationships[single_cat_to_ID]
+
             # here we just double-check that the cats are allowed to be romantic with each other
-            if kitty.is_potential_mate(rel.cat_to, for_love_interest=True) or rel.cat_to.ID in kitty.mate:
+            if (
+                    single_cat_from.is_potential_mate(single_cat_to, for_love_interest=True)
+                    or single_cat_to.ID in single_cat_from.mate
+            ):
                 # if cat already has romantic feelings then automatically increase romantic feelings
                 # when platonic feelings would increase
                 if rel.romantic_love > 0 and auto_romance:
@@ -824,18 +838,26 @@ def change_relationship_values(cats_to: list,
             rel.jealousy += jealousy
             rel.trust += trust
 
-            '''# for testing purposes - DON'T DELETE - you can use this to test if relationships are changing
-            print(str(kitty.name) + " gained relationship with " + str(rel.cat_to.name) + ": " +
+            # for testing purposes - DON'T DELETE - you can use this to test if relationships are changing
+            """
+            print(str(single_cat_from.name) + " gained relationship with " + str(rel.cat_to.name) + ": " +
                   "Romantic: " + str(romantic_love) +
                   " /Platonic: " + str(platonic_like) +
                   " /Dislike: " + str(dislike) +
                   " /Respect: " + str(admiration) +
                   " /Comfort: " + str(comfortable) +
                   " /Jealousy: " + str(jealousy) +
-                  " /Trust: " + str(trust)) if changed else print("No relationship change")'''
-                  
+                  " /Trust: " + str(trust)) if changed else print("No relationship change")"""
+
             if log and isinstance(log, str):
-                rel.log.append(log)
+                if single_cat_to.moons <= 1:
+                    log_text = log + f"- {single_cat_to.name} was {single_cat_to.moons} moon old"
+                    if log_text not in rel.log:
+                        rel.log.append(log_text)
+                else:
+                    log_text = log + f"- {single_cat_to.name} was {single_cat_to.moons} moons old"
+                    if log_text not in rel.log:
+                        rel.log.append(log_text)
 
 def get_cluster(trait):
         # Mapping traits to their respective clusters

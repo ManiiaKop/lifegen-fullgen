@@ -89,15 +89,24 @@ class AllegiancesScreen(Screens):
         self.heading.kill()
         del self.heading
 
-            apps = ""
-            if len(cat.apprentice) > 0:
-                if len(cat.apprentice) == 1:
-                    output += "\n      APPRENTICE: "
-                else:
-                    output += "\n      APPRENTICES: "     
-                output += ", ".join([str(Cat.fetch_cat(i).name).upper() for i in cat.apprentice if Cat.fetch_cat(i)])
+    def generate_one_entry(self, cat, extra_details=""):
+        """Extra Details will be placed after the cat description, but before the apprentice (if they have one. )"""
+        output = f"{str(cat.name).upper()} - {cat.describe_cat()} {extra_details}"
 
-            return ["", cat.ID, output]
+        if len(cat.apprentice) > 0:
+            if len(cat.apprentice) == 1:
+                output += "\n      APPRENTICE: "
+            else:
+                output += "\n      APPRENTICES: "
+            output += ", ".join(
+                [
+                    str(Cat.fetch_cat(i).name).upper()
+                    for i in cat.apprentice
+                    if Cat.fetch_cat(i)
+                ]
+            )
+
+        return ["", cat.ID, output]
 
     def get_allegiances_text(self):
         """Determine Text. Ouputs list of tuples. """

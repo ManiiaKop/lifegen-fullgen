@@ -2746,6 +2746,37 @@
             "shadow_width": "0"
         }
     },
+    "#relation_bar_neg": {
+        "prototype": "#relation_bar",
+        "colours": {
+            "filled_bar": "#E67161"
+        }
+    },
+    "#relation_bar_pos": {
+        "prototype": "#relation_bar",
+        "colours": {
+            "filled_bar": "#8CB250"
+        }
+    },
+    "#relation_bar_dark": {
+        "prototype": "#relation_bar",
+        "colours": {
+            "normal_border": "#2F2918",
+            "unfilled_bar": "#2F2918"
+        }
+    },
+    "#relation_bar_neg_dark": {
+        "prototype": "#relation_bar_dark",
+        "colours": {
+            "filled_bar": "#E67161"
+        }
+    },
+    "#relation_bar_pos_dark": {
+        "prototype": "#relation_bar_dark",
+        "colours": {
+            "filled_bar": "#8CB250"
+        }
+    },
     "#switch_focus_button": {
         "prototype": "#image_button",
         "images": {

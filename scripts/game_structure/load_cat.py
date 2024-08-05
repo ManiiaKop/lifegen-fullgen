@@ -52,28 +52,30 @@ def json_load():
     # create new cat objects
     for i, cat in enumerate(cat_data):
         try:
-            
-            
-            try:
-
+            if "shunned" not in cat:
+                cat["shunned"] = False
+            if "revealed" in cat:
+                cat["forgiven"] = cat["revealed"]
             if cat["favourite"] is False:
                 cat["favourite"] = 0
             elif cat["favourite"] is True:
                 cat["favourite"] = 1
+            
+            try:
 
-            new_cat = Cat(ID=cat["ID"],
-                        prefix=cat["name_prefix"],
-                        suffix=cat["name_suffix"],
-                        specsuffix_hidden=(cat["specsuffix_hidden"] if 'specsuffix_hidden' in cat else False),
-                        gender=cat["gender"],
-                        status=cat["status"],
-                        parent1=cat["parent1"],
-                        parent2=cat["parent2"],
-                        moons=cat["moons"],
-                        genotype=cat["genotype"],
-                        white_patterns=cat["white_pattern"],
-                        chim_white=cat["chim_white"] if 'chim_white' in cat else None,
-                        loading_cat=True)
+                new_cat = Cat(ID=cat["ID"],
+                            prefix=cat["name_prefix"],
+                            suffix=cat["name_suffix"],
+                            specsuffix_hidden=(cat["specsuffix_hidden"] if 'specsuffix_hidden' in cat else False),
+                            gender=cat["gender"],
+                            status=cat["status"],
+                            parent1=cat["parent1"],
+                            parent2=cat["parent2"],
+                            moons=cat["moons"],
+                            genotype=cat["genotype"],
+                            white_patterns=cat["white_pattern"],
+                            chim_white=cat["chim_white"] if 'chim_white' in cat else None,
+                            loading_cat=True)
             except:
                 new_cat = Cat(ID=cat["ID"],
                         prefix=cat["name_prefix"],
@@ -85,11 +87,6 @@ def json_load():
                         parent2=cat["parent2"],
                         moons=cat["moons"],
                         loading_cat=True)
-                
-            if "shunned" not in cat:
-                cat["shunned"] = False
-            if "revealed" in cat:
-                cat["forgiven"] = cat["revealed"]
             
             new_cat.pelt = Pelt(
                 new_cat.genotype,
