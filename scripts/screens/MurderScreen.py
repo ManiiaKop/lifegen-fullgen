@@ -10,11 +10,11 @@ from scripts.events import events_class
 
 from .Screens import Screens
 from scripts.utility import get_personality_compatibility, get_text_box_theme, scale, scale_dimentions, shorten_text_to_fit
+from scripts.game_structure.ui_elements import IDImageButton, UIImageButton, UISpriteButton
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 from scripts.cat.pelts import Pelt
 from scripts.game_structure.windows import GameOver, PickPath, DeathScreen
-from scripts.game_structure.image_button import UIImageButton, UISpriteButton, UIRelationStatusBar
 from scripts.game_structure.game_essentials import game, screen, screen_x, screen_y, MANAGER
 from scripts.game_structure.windows import RelationshipLog
 from scripts.game_structure.propagating_thread import PropagatingThread
@@ -326,8 +326,8 @@ class MurderScreen(Screens):
         discover_chance = self.get_discover_chance(you, cat_to_murder, accomplice, accompliced)
         r_num = randint(1,100)
 
-        # discover_chance = 2
-        # r_num = 1
+        discover_chance = 2
+        r_num = 3
         # debug ^^
 
         discovered = False
@@ -357,6 +357,8 @@ class MurderScreen(Screens):
                 History.add_murders(cat_to_murder, you, True, f"{you.name} murdered this cat.")
             self.choose_discover_punishment(you, cat_to_murder, accomplice, accompliced)
         else:
+            game.clan.focus = "unknown_murder"
+            game.clan.focus_cat = cat_to_murder
             if accomplice:
                 if accompliced:
                     History.add_death(cat_to_murder, f"{you.name} and {accomplice.name} murdered this cat.")

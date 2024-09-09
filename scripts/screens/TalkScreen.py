@@ -7,11 +7,11 @@ from scripts.utility import scale
 
 from .Screens import Screens
 
-from scripts.utility import generate_sprite, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors, pronoun_repl
+from scripts.utility import generate_sprite, get_cluster, pronoun_repl, get_alive_cats, get_alive_status_cats
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
+from scripts.game_structure.ui_elements import IDImageButton, UIImageButton, UISpriteButton
 import pygame_gui
-from scripts.game_structure.image_button import UIImageButton
 from scripts.game_structure.game_essentials import game, screen_x, screen_y, MANAGER, screen
 from enum import Enum  # pylint: disable=no-name-in-module
 from scripts.housekeeping.version import VERSION_NAME
@@ -401,34 +401,38 @@ class TalkScreen(Screens):
                 possible_texts4 = ujson.loads(read_file.read())
                 possible_texts.update(possible_texts4)
         else:
-            if cat.status != "newborn":
+            if cat.status == "newborn":
+                # newborns will no longer participate in nuanced discussion (focus + choices)
+                with open(f"{resource_dir}newborn.json", 'r') as read_file:
+                    possible_texts.update(ujson.loads(read_file.read()))
+            else:
                 with open(f"{resource_dir}choice_dialogue.json", 'r') as read_file:
                     possible_texts.update(ujson.loads(read_file.read()))
 
-            if cat.status not in ['kitten', "newborn"] and you.status not in ['kitten', 'newborn']:
-                with open(f"{resource_dir}general_no_kit.json", 'r') as read_file:
-                    possible_texts2 = ujson.loads(read_file.read())
-                    possible_texts.update(possible_texts2)
+                if cat.status not in ['kitten', "newborn"] and you.status not in ['kitten', 'newborn']:
+                    with open(f"{resource_dir}general_no_kit.json", 'r') as read_file:
+                        possible_texts2 = ujson.loads(read_file.read())
+                        possible_texts.update(possible_texts2)
 
-            if cat.status not in ["newborn"] and you.status not in ['newborn']:
-                with open(f"{resource_dir}general_no_newborn.json", 'r') as read_file:
-                    possible_texts4 = ujson.loads(read_file.read())
-                    possible_texts.update(possible_texts4)
+                if cat.status not in ["newborn"] and you.status not in ['newborn']:
+                    with open(f"{resource_dir}general_no_newborn.json", 'r') as read_file:
+                        possible_texts4 = ujson.loads(read_file.read())
+                        possible_texts.update(possible_texts4)
 
-            if cat.status not in ['kitten', "newborn"] and you.status in ['kitten', 'newborn']:
-                with open(f"{resource_dir}general_you_kit.json", 'r') as read_file:
-                    possible_texts3 = ujson.loads(read_file.read())
-                    possible_texts.update(possible_texts3)
+                if cat.status not in ['kitten', "newborn"] and you.status in ['kitten', 'newborn']:
+                    with open(f"{resource_dir}general_you_kit.json", 'r') as read_file:
+                        possible_texts3 = ujson.loads(read_file.read())
+                        possible_texts.update(possible_texts3)
 
-            if cat.status not in ['kitten', 'newborn'] and you.status not in ['kitten', 'newborn'] and randint(1,3)==1:
-                with open(f"{resource_dir}crush.json", 'r') as read_file:
-                    possible_texts3 = ujson.loads(read_file.read())
-                    possible_texts.update(possible_texts3)
+                if cat.status not in ['kitten', 'newborn'] and you.status not in ['kitten', 'newborn'] and randint(1,3)==1:
+                    with open(f"{resource_dir}crush.json", 'r') as read_file:
+                        possible_texts3 = ujson.loads(read_file.read())
+                        possible_texts.update(possible_texts3)
 
-            if game.clan.focus:
-                with open(f"{resource_dir}focuses/{game.clan.focus}.json", 'r') as read_file:
-                    possible_texts5 = ujson.loads(read_file.read())
-                    possible_texts.update(possible_texts5)
+                if game.clan.focus:
+                    with open(f"{resource_dir}focuses/{game.clan.focus}.json", 'r') as read_file:
+                        possible_texts5 = ujson.loads(read_file.read())
+                        possible_texts.update(possible_texts5)
                     
         return self.filter_texts(cat, possible_texts)
 
@@ -629,6 +633,8 @@ class TalkScreen(Screens):
                     else:
                         if dead_cat.name == cat.name:
                             continue
+                else:
+                    continue
             
             # FORGIVEN TAGS
 
@@ -713,7 +719,7 @@ class TalkScreen(Screens):
 
             if "they_grieving" not in tags and "grief stricken" in cat.illnesses and not cat.dead:
                 continue
-            if "they_grieving" in tags and "grief stricken" not in cat.illnesses and not cat.dead:
+            if "you_grieving" in tags and "grief stricken" not in you.illnesses and not you.dead:
                 continue
 
             if "they_recovering_from_birth" in tags and "recovering from birth" not in cat.injuries:
@@ -780,6 +786,8 @@ class TalkScreen(Screens):
                 continue
 
             if "grief stricken" not in you.illnesses and "you_grieving" in tags and not you.dead:
+                continue
+            if "grief stricken" not in cat.illnesses and "they_grieving" in tags and not cat.dead:
                 continue
 
             if "starving" not in you.illnesses and "you_starving" in tags:
@@ -855,7 +863,7 @@ class TalkScreen(Screens):
                         if you.parent2 == cat.ID:
                             fam = True
                 if "adopted_parent" in tags or "from adopted_parent" in tags or "from_adopted_parent" in tags:
-                    if cat.ID in you.inheritance.get_no_blood_parents():
+                    if cat.ID in you.inheritance.get_adoptive_parents():
                         fam = True
                 if "from_kit" in tags or "from_your_kit" in tags:
                     if cat.ID in you.inheritance.get_blood_kits():
@@ -1043,7 +1051,8 @@ class TalkScreen(Screens):
                             continue
                 else:
                     if "they_born_deaf" in tags or "only_they_born_deaf" not in tags:
-                        continue
+                        if "they_deaf" not in tags:
+                            continue
                 if "they_hearing" in tags:
                     continue
                 # cats who went deaf later in life can get pretty much all normal dialogue, as they're able to talk regularly.
@@ -1291,6 +1300,35 @@ class TalkScreen(Screens):
                     continue
                 elif talk_key.startswith("bad_opinion") and cat.relationships[leader_id].dislike < 30:
                     continue
+            
+            if game.clan.focus_cat:
+                if "you_focuscat" in tags and game.clan.focus_cat.ID != game.clan.your_cat.ID:
+                    continue
+                if "they_focuscat" in tags and cat.ID != game.clan.focus_cat.ID:
+                    continue
+                if game.clan.focus == "unknown_murder":
+                    focus_cat = game.clan.focus_cat
+                    murdered_them = False
+                    if you.history:
+                        if you.history.murder:
+                            if "is_murderer" in you.history.murder:
+                                for murder_event in you.history.murder["is_murderer"]:
+                                    if focus_cat.ID == murder_event.get("victim"):
+                                        murdered_them = True
+                                        break
+                                    else:
+                                        murdered_them = False
+                            else:
+                                murdered_them = False
+                        else:
+                            murdered_them = False
+                    else:
+                        murdered_them = False
+
+                    if "you_murderer" in tags and murdered_them is False:
+                        continue
+                    elif "you_not_murderer" in tags and murdered_them:
+                        continue
 
             # dead moons tags!
             if you.dead or cat.dead:
@@ -1334,13 +1372,21 @@ class TalkScreen(Screens):
     def load_and_replace_placeholders(self, file_path, cat, you):
         with open(file_path, 'r') as read_file:
             possible_texts = ujson.loads(read_file.read())
+
+            y_c_text = f"y_c: {you.status} "
+            t_c_text = f"t_c: {cat.status} "
+
             cluster1, cluster2 = get_cluster(cat.personality.trait)
             cluster3, cluster4 = get_cluster(you.personality.trait)
-            clusters_1 = f"{cluster3} and {cluster4}" if cluster4 else f"{cluster3}"
-            clusters_2 = f"{cluster1} and {cluster2}" if cluster2 else f"{cluster1}"
-            
+            clusters_1 = f"{cluster3}, {cluster4}" if cluster4 else f"{cluster3}"
+            clusters_2 = f"{cluster1}, {cluster2}" if cluster2 else f"{cluster1}"
+
+            y_c_text += clusters_1
+            t_c_text += clusters_2
+
             add_on_map = {
-                (True, True): " df",
+                (True, True, False): " df",
+                (True, True, True): " df",
                 (True, False, False): " sc",
                 (True, False, True): " ur"
             }
@@ -1349,18 +1395,28 @@ class TalkScreen(Screens):
                 add_on += " g"
             if you.shunned > 0:
                 add_on += " sh"
-            
+            if "blind" in you.permanent_condition:
+                add_on += " b"
+            if "deaf" in you.permanent_condition:
+                add_on += " d"
+            y_c_text += add_on
             add_on2 = add_on_map.get((cat.dead, cat.df, cat.outside), "")
             if "grief stricken" in cat.illnesses:
                 add_on2 += " g"
             if cat.shunned > 0:
                 add_on2 += " sh"
-            add_on2 += f" {VERSION_NAME}"
+            if "blind" in cat.permanent_condition:
+                add_on2 += " b"
+            if "deaf" in cat.permanent_condition:
+                add_on2 += " d"
+            t_c_text += add_on2
+            possible_texts['general'][1][0] += f" {VERSION_NAME}"
+            possible_texts['general'][1][0] += "\n"
+            possible_texts['general'][1][0] += y_c_text + f" {you.moons}"
+            possible_texts['general'][1][0] += "\n"
+            possible_texts['general'][1][0] += t_c_text + f" {cat.moons}"
+            possible_texts['general'][1][0] += "\n"
             
-            possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_1", clusters_1)
-            possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_2", clusters_2)
-            possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", you.status + add_on)
-            possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_2", cat.status + add_on2)
             
         return possible_texts['general']
 
@@ -1376,7 +1432,7 @@ class TalkScreen(Screens):
             game.clan.talks.clear()
 
         # Assign weights based on tags
-        weighted_tags = ["you_pregnant", "they_pregnant", "from_mentor", "from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_df_mentor", "from_your_kit", "from_your_apprentice", "from_df_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit", "they_injured", "they_ill", "you_injured", "you_ill", "you_grieving", "you_forgiven", "they_forgiven", "murderedyou", "murderedthem"] # List of tags that increase the weight
+        weighted_tags = ["you_pregnant", "they_pregnant", "from_mentor", "from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_df_mentor", "from_your_kit", "from_your_apprentice", "from_df_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit", "they_injured", "they_ill", "you_injured", "you_ill", "you_grieving", "they_grieving", "you_forgiven", "they_forgiven", "murderedyou", "murderedthem"] # List of tags that increase the weight
         weights = []
         for item in texts_list.values():
             tags = item["tags"] if "tags" in item else item[0]
@@ -1481,7 +1537,7 @@ class TalkScreen(Screens):
     def get_living_cats(self):
         living_cats = []
         for the_cat in Cat.all_cats_list:
-            if not the_cat.dead and not the_cat.outside:
+            if not the_cat.dead and not the_cat.outside and not the_cat.moons == -1:
                 living_cats.append(the_cat)
         return living_cats
 
@@ -1715,7 +1771,7 @@ class TalkScreen(Screens):
                         else:
                             text = re.sub(fr'(?<!\/)r_w{i}(?!\/)', str(self.cat_dict[f"r_w{i}"].name), text)
                         continue
-                    alive_cats = get_alive_warriors(Cat)
+                    alive_cats = get_alive_status_cats(Cat, ["warrior"])
                     if len(alive_cats) < 3:
                         return ""
                     alive_cat = choice(alive_cats)
@@ -1870,7 +1926,7 @@ class TalkScreen(Screens):
                     else:
                         text = re.sub(r'(?<!\/)r_k(?!\/)', str(self.cat_dict["r_k"].name), text)
                 else:
-                    alive_kits = get_alive_kits(Cat)
+                    alive_kits = get_alive_status_cats(Cat, ["kitten", "newborn"])
                     if len(alive_kits) <= 1:
                         return ""
 
@@ -1935,7 +1991,7 @@ class TalkScreen(Screens):
                     else:
                         text = re.sub(r'(?<!\/)r_a(?!\/)', str(self.cat_dict["r_a"].name), text)
                 else:
-                    alive_apps = get_alive_apps(Cat)
+                    alive_apps = get_alive_status_cats(Cat, ["apprentice"])
                     if len(alive_apps) <= 1:
                         return ""
 
@@ -2000,7 +2056,7 @@ class TalkScreen(Screens):
                     else:
                         text = re.sub(r'(?<!\/)r_w(?!\/)', str(self.cat_dict["r_w"].name), text)
                 else:
-                    alive_apps = get_alive_warriors(Cat)
+                    alive_apps = get_alive_status_cats(Cat, ["warrior"])
                     if len(alive_apps) <= 1:
                         return ""
 
@@ -2064,7 +2120,7 @@ class TalkScreen(Screens):
                     else:
                         text = re.sub(r'(?<!\/)r_m(?!\/)', str(self.cat_dict["r_m"].name), text)
                 else:
-                    alive_apps = get_alive_meds(Cat)
+                    alive_apps = get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"])
                     if len(alive_apps) <= 1:
                         return ""
                     alive_app = choice(alive_apps)
@@ -2123,7 +2179,7 @@ class TalkScreen(Screens):
                     else:
                         text = re.sub(r'(?<!\/)r_d(?!\/)', str(self.cat_dict["r_d"].name), text)
                 else:
-                    alive_apps = get_alive_mediators(Cat)
+                    alive_apps = get_alive_status_cats(Cat, ["mediator", "mediator apprentice"])
                     if len(alive_apps) <= 1:
                         return ""
                     alive_app = choice(alive_apps)
@@ -2183,7 +2239,7 @@ class TalkScreen(Screens):
                     else:
                         text = re.sub(r'(?<!\/)r_q(?!\/)', str(self.cat_dict["r_q"].name), text)
                 else:
-                    alive_apps = get_alive_queens(Cat)
+                    alive_apps = get_alive_status_cats(Cat, ["queen", "queen's apprentice"])
                     if len(alive_apps) <= 1:
                         return ""
                     alive_app = choice(alive_apps)
@@ -2243,7 +2299,7 @@ class TalkScreen(Screens):
                     else:
                         text = re.sub(r'(?<!\/)r_e(?!\/)', str(self.cat_dict["r_e"].name), text)
                 else:
-                    alive_apps = get_alive_elders(Cat)
+                    alive_apps = get_alive_status_cats(Cat, ["elder"])
                     if len(alive_apps) <= 1:
                         return ""
                     alive_app = choice(alive_apps)
@@ -2480,7 +2536,7 @@ class TalkScreen(Screens):
                     elif rel and not cluster:
                         text = re.sub(fr'(?<!\/){r}_y_s(?!\/)', str(self.cat_dict[f"{r}_y_s"].name), text)
                     else:
-                        text = re.sub(r'(?<!\/)y_s(?!\/)', str(self.cat_dict["t_s"].name), text)
+                        text = re.sub(r'(?<!\/)y_s(?!\/)', str(self.cat_dict["y_s"].name), text)
                 else:
                     if len(you.inheritance.get_siblings()) == 0:
                         return ""
@@ -3213,7 +3269,7 @@ class TalkScreen(Screens):
                         text = re.sub(r'(?<!\/)y_kk(?!\/)', str(kit.name), text)
             
             # Random cat
-            if "r_c" in text and "r_c1" not in text and "r_c2" not in text and "r_c3" not in text:
+            if "r_c" in text and "r_c1" not in text and "r_c2" not in text and "r_c3" not in text and "r_c4" not in text:
                 cluster = False
                 rel = False
                 match = re.search(r'r_c(\w+)', text)
@@ -3378,23 +3434,21 @@ class TalkScreen(Screens):
                     rel = True
                 else:
                     r = ""
-                if game.clan.leader is None:
-                    return ""
                 if game.clan.deputy is None:
                     return ""
                 if game.clan.deputy.dead or game.clan.deputy.outside or game.clan.deputy.ID == you.ID or game.clan.deputy.ID == cat.ID or\
-                (rel and (game.clan.leader.ID not in cat.relationships) or\
-                (r == "plike" and cat.relationships[game.clan.leader.ID].platonic_like < 20) or\
-                (r == "plove" and cat.relationships[game.clan.leader.ID].platonic_like < 50) or\
-                (r == "rlike" and cat.relationships[game.clan.leader.ID].romantic_love < 10) or\
-                (r == "rlove" and cat.relationships[game.clan.leader.ID].romantic_love < 50) or\
-                (r == "dislike" and cat.relationships[game.clan.leader.ID].dislike < 15) or\
-                (r == "hate" and cat.relationships[game.clan.leader.ID].dislike < 50) or\
-                (r == "jealous" and cat.relationships[game.clan.leader.ID].jeaousy < 20) or\
-                (r == "trust" and cat.relationships[game.clan.leader.ID].trust < 20) or\
-                (r == "comfort" and cat.relationships[game.clan.leader.ID].comfortable < 20) or \
-                (r == "respect" and cat.relationships[game.clan.leader.ID].admiration < 20) or\
-                (r == "neutral" and ((cat.relationships[game.clan.leader.ID].platonic_like > 20) or (cat.relationships[game.clan.leader.ID].romantic_love > 20) or (cat.relationships[game.clan.leader.ID].dislike > 20) or (cat.relationships[game.clan.leader.ID].jealousy > 20) or (cat.relationships[game.clan.leader.ID].trust > 20) or (cat.relationships[game.clan.leader.ID].comfortable > 20) or (cat.relationships[game.clan.leader.ID].admiration > 20)))):
+                (rel and (game.clan.deputy.ID not in cat.relationships) or\
+                (r == "plike" and cat.relationships[game.clan.deputy.ID].platonic_like < 20) or\
+                (r == "plove" and cat.relationships[game.clan.deputy.ID].platonic_like < 50) or\
+                (r == "rlike" and cat.relationships[game.clan.deputy.ID].romantic_love < 10) or\
+                (r == "rlove" and cat.relationships[game.clan.deputy.ID].romantic_love < 50) or\
+                (r == "dislike" and cat.relationships[game.clan.deputy.ID].dislike < 15) or\
+                (r == "hate" and cat.relationships[game.clan.deputy.ID].dislike < 50) or\
+                (r == "jealous" and cat.relationships[game.clan.deputy.ID].jeaousy < 20) or\
+                (r == "trust" and cat.relationships[game.clan.deputy.ID].trust < 20) or\
+                (r == "comfort" and cat.relationships[game.clan.deputy.ID].comfortable < 20) or \
+                (r == "respect" and cat.relationships[game.clan.deputy.ID].admiration < 20) or\
+                (r == "neutral" and ((cat.relationships[game.clan.deputy.ID].platonic_like > 20) or (cat.relationships[game.clan.deputy.ID].romantic_love > 20) or (cat.relationships[game.clan.deputy.ID].dislike > 20) or (cat.relationships[game.clan.deputy.ID].jealousy > 20) or (cat.relationships[game.clan.deputy.ID].trust > 20) or (cat.relationships[game.clan.deputy.ID].comfortable > 20) or (cat.relationships[game.clan.deputy.ID].admiration > 20)))):
                     return ""
                 if cluster and rel:
                     self.cat_dict[f"{r}_d_n_{x}"] = game.clan.deputy
@@ -3422,7 +3476,11 @@ class TalkScreen(Screens):
                     text = re.sub(r'(?<!\/)d_c(?!\/)', str(dead_cat.name), text)
                     self.cat_dict["d_c"] = dead_cat
                 except:
-                    return ""
+                    if "lasting grief" in cat.permanent_condition:
+                        # cats w lasting grief are allowed to have no grief cat
+                        pass
+                    else:
+                        return ""
             elif "grief stricken" in you.illnesses:
                 try:
                     dead_cat = Cat.all_cats.get(you.illnesses['grief stricken'].get("grief_cat"))
@@ -3434,7 +3492,10 @@ class TalkScreen(Screens):
                     text = re.sub(r'(?<!\/)d_c(?!\/)', str(dead_cat.name), text)
                     self.cat_dict["d_c"] = dead_cat
                 except:
-                    return ""
+                    if "lasting grief" in you.permanent_condition:
+                        pass
+                    else:
+                        return ""
 
             if "d_c" in text:
                 cluster = False
@@ -3633,7 +3694,7 @@ class TalkScreen(Screens):
                 else:
                     r = ""
 
-                alive_kits = get_alive_kits(Cat)
+                alive_kits = get_alive_status_cats(Cat, ["kitten", "newborn"])
                 if len(alive_kits) < 1:
                     return ""
                 if f"rsh_k_{x}" in self.cat_dict or "rsh_k" in self.cat_dict or f"{r}_rsh_k" in self.cat_dict or f"{r}_rsh_k_{x}" in self.cat_dict:
@@ -3691,7 +3752,7 @@ class TalkScreen(Screens):
                     rel = True
                 else:
                     r = ""
-                alive_apps = get_alive_apps(Cat)
+                alive_apps = get_alive_status_cats(Cat, ["apprentice"])
                 if len(alive_apps) < 1:
                     return ""
                 if f"rsh_a_{x}" in self.cat_dict or "rsh_a" in self.cat_dict or f"{r}_rsh_a" in self.cat_dict or f"{r}_rsh_a_{x}" in self.cat_dict:
@@ -3749,7 +3810,7 @@ class TalkScreen(Screens):
                     rel = True
                 else:
                     r = ""
-                alive_apps = get_alive_warriors(Cat)
+                alive_apps = get_alive_status_cats(Cat, ["warrior"])
                 if len(alive_apps) < 1:
                     return ""
                 if f"rsh_w_{x}" in self.cat_dict or "rsh_w" in self.cat_dict or f"{r}_rsh_w" in self.cat_dict or f"{r}_rsh_w_{x}" in self.cat_dict:
@@ -3807,7 +3868,7 @@ class TalkScreen(Screens):
                     rel = True
                 else:
                     r = ""
-                alive_apps = get_alive_meds(Cat)
+                alive_apps = get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"])
                 if len(alive_apps) < 1:
                     return ""
                 if f"rsh_a_{x}" in self.cat_dict or "rsh_m" in self.cat_dict or f"{r}_rsh_m" in self.cat_dict or f"{r}_rsh_m_{x}" in self.cat_dict:
@@ -3865,7 +3926,7 @@ class TalkScreen(Screens):
                     rel = True
                 else:
                     r = ""
-                alive_apps = get_alive_mediators(Cat)
+                alive_apps = get_alive_status_cats(Cat, ["mediator", "mediator apprentice"])
                 if len(alive_apps) < 1:
                     return ""
                 if f"rsh_d_{x}" in self.cat_dict or "rsh_d" in self.cat_dict or f"{r}_rsh_d" in self.cat_dict or f"{r}_rsh_d_{x}" in self.cat_dict:
@@ -3923,7 +3984,7 @@ class TalkScreen(Screens):
                     rel = True
                 else:
                     r = ""
-                alive_apps = get_alive_queens(Cat)
+                alive_apps = get_alive_status_cats(Cat, ["queen", "queen's apprentice"])
                 if len(alive_apps) < 1:
                     return ""
                 if f"rsh_q_{x}" in self.cat_dict or "rsh_q" in self.cat_dict or f"{r}_rsh_q" in self.cat_dict or f"{r}_rsh_q_{x}" in self.cat_dict:
@@ -3981,7 +4042,7 @@ class TalkScreen(Screens):
                     rel = True
                 else:
                     r = ""
-                alive_apps = get_alive_elders(Cat)
+                alive_apps = get_alive_status_cats(Cat, ["elder"])
                 if len(alive_apps) < 1:
                     return ""
                 if f"rsh_e_{x}" in self.cat_dict or "rsh_e" in self.cat_dict or f"{r}_rsh_e" in self.cat_dict or f"{r}_rsh_e_{x}" in self.cat_dict:
@@ -4246,6 +4307,55 @@ class TalkScreen(Screens):
                     else:
                         self.cat_dict["e_c"] = alive_app
                         text = re.sub(r'(?<!\/)e_c(?!\/)', str(alive_app.name), text)
+
+            if game.clan.focus_cat is not None:
+                if "fc_c" in text:
+                    print("FOCUS CAT:", game.clan.focus_cat.name)
+                    cluster = False
+                    rel = False
+                    match = re.search(r'fc_c(\w+)', text)
+                    if match:
+                        x = match.group(1).strip("_")
+                        cluster = True
+                    else:
+                        x = ""
+                    match2 = re.search(r'(\w+)fc_c', text)
+                    if match2:
+                        r = match2.group(1).strip("_")
+                        rel = True
+                    else:
+                        r = ""
+                    if game.clan.focus_cat.ID == cat.ID or game.clan.focus_cat.ID == game.clan.your_cat.ID or \
+                    (cluster and x not in get_cluster(game.clan.focus_cat.personality.trait)) or \
+                    (rel and (game.clan.focus_cat.ID not in cat.relationships) or\
+                    (r == "plike" and cat.relationships[game.clan.focus_cat.ID].platonic_like < 20) or\
+                    (r == "plove" and cat.relationships[game.clan.focus_cat.ID].platonic_like < 50) or\
+                    (r == "rlike" and cat.relationships[game.clan.focus_cat.ID].romantic_love < 10) or\
+                    (r == "rlove" and cat.relationships[game.clan.focus_cat.ID].romantic_love < 50) or\
+                    (r == "dislike" and cat.relationships[game.clan.focus_cat.ID].dislike < 15) or\
+                    (r == "hate" and cat.relationships[game.clan.focus_cat.ID].dislike < 50) or\
+                    (r == "jealous" and cat.relationships[game.clan.focus_cat.ID].jeaousy < 20) or\
+                    (r == "trust" and cat.relationships[game.clan.focus_cat.ID].trust < 20) or\
+                    (r == "comfort" and cat.relationships[game.clan.focus_cat.ID].comfortable < 20) or \
+                    (r == "respect" and cat.relationships[game.clan.focus_cat.ID].admiration < 20) or\
+                    (r == "neutral" and ((cat.relationships[game.clan.focus_cat.ID].platonic_like > 20) or (cat.relationships[game.clan.focus_cat.ID].romantic_love > 20) or (cat.relationships[game.clan.focus_cat.ID].dislike > 20) or (cat.relationships[game.clan.focus_cat.ID].jealousy > 20) or (cat.relationships[game.clan.focus_cat.ID].trust > 20) or (cat.relationships[game.clan.focus_cat.ID].comfortable > 20) or (cat.relationships[game.clan.focus_cat.ID].admiration > 20)))):
+                        return ""
+                    if cluster and rel:
+                        self.cat_dict[f"{r}_fc_c_{x}"] = game.clan.focus_cat
+                        text = re.sub(fr'(?<!\/){r}_fc_c_{x}(?!\/)', str(game.clan.focus_cat.name), text)
+                    elif cluster and not rel:
+                        self.cat_dict[f"fc_c_{x}"] = game.clan.focus_cat
+                        text = re.sub(fr'(?<!\/)fc_c_{x}(?!\/)', str(game.clan.focus_cat.name), text)
+                    elif rel and not cluster:
+                        self.cat_dict[f"{r}_fc_c"] = game.clan.focus_cat
+                        text = re.sub(fr'(?<!\/){r}_fc_c(?!\/)', str(game.clan.focus_cat.name), text)
+                    else:
+                        self.cat_dict["fc_c"] = game.clan.focus_cat
+                        text = re.sub(r'(?<!\/)fc_c(?!\/)', str(game.clan.focus_cat.name), text)
+            else:
+                if "fc_c" in text:
+                    print(game.clan.focus_cat)
+                    return ""
         except:
             return ""
         

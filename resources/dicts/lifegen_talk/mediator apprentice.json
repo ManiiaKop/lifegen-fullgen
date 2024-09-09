@@ -136,7 +136,7 @@
             "queen",
             "deputy",
             "leader",
-            "medicine cat",
+            "medicine_cat",
             "they_blind",
             "you_blind"
         ],
@@ -241,10 +241,10 @@
     "assertive_medapp1": [
    
         [
-            "medicine cat apprentice",
-            "medicine cat",
-            "medicine cat apprentice",
-            "medicine cat",
+            "medicine_cat_apprentice",
+            "medicine_cat",
+            "medicine_cat_apprentice",
+            "medicine_cat",
             "assertive",
             "unlawful",
             "silly",
@@ -259,10 +259,10 @@
     "assertiveapp_medapp3": [
    
         [
-            "medicine cat apprentice",
-            "medicine cat",
-            "medicine cat apprentice",
-            "medicine cat",
+            "medicine_cat_apprentice",
+            "medicine_cat",
+            "medicine_cat_apprentice",
+            "medicine_cat",
             "assertive",
             "silly",
             "upstanding",
@@ -582,7 +582,7 @@
     ],
     "assertivemediator_toqueen": [
         [
-            "queen's apprentice",
+            "queen's_apprentice",
             "queen",
             "assertive",
             "silly",
@@ -605,7 +605,7 @@
     ],
     "assertivemediator_toqueen_2": [
         [
-            "queen's apprentice",
+            "queen's_apprentice",
             "queen",
             "assertive",
             "silly",
@@ -646,10 +646,10 @@
             "elder",
             "deputy",
             "leader",
-            "medicine cat",
-            "medicine cat apprentice",
+            "medicine_cat",
+            "medicine_cat_apprentice",
             "queen",
-            "queen's apprentice",
+            "queen's_apprentice",
             "assertive",
             "they_blind",
             "you_blind"
@@ -836,8 +836,8 @@
     ],
     "cool_2": [
         [
-            "medicine cat",
-            "medicine cat apprentice",
+            "medicine_cat",
+            "medicine_cat_apprentice",
             "cool",
             "introspective",
             "they_blind",
@@ -905,9 +905,9 @@
     "sweet_mediapp_5": [
         [
             "apprentice",
-            "queen's apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
+            "queen's_apprentice",
+            "medicine_cat_apprentice",
+            "mediator_apprentice",
             "sweet",
             "they_blind",
             "you_blind"
@@ -920,9 +920,9 @@
     "sweet_mediapp_6": [
         [
             "apprentice",
-            "queen's apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
+            "queen's_apprentice",
+            "medicine_cat_apprentice",
+            "mediator_apprentice",
             "sweet",
             "they_blind",
             "you_blind"
@@ -948,7 +948,7 @@
     ],
     "sweet_mediapp_8": [
         [
-            "queen's apprentice",
+            "queen's_apprentice",
             "sweet",
             "they_blind",
             "you_blind"
@@ -962,7 +962,7 @@
     ],
     "sweet_mediapp_9": [
         [
-            "medicine cat apprentice",
+            "medicine_cat_apprentice",
             "sweet",
             "they_blind",
             "you_blind"
@@ -977,7 +977,7 @@
     ],
     "sweet_mediapp_10": [
         [
-            "mediator apprentice",
+            "mediator_apprentice",
             "sweet",
             "they_blind",
             "you_blind"
@@ -990,7 +990,7 @@
     "sweet_mediapp_11": [
         [
             "warrior",
-            "medicine cat",
+            "medicine_cat",
             "mediator",
             "queen",
             "sweet",
@@ -1006,7 +1006,7 @@
     "sweet_mediapp_12": [
         [
             "warrior",
-            "medicine cat",
+            "medicine_cat",
             "mediator",
             "queen",
             "sweet"
@@ -1036,7 +1036,7 @@
     ],
     "sweet_mediapp_14": [
         [
-            "medicine cat",
+            "medicine_cat",
             "sweet",
             "they_blind",
             "you_blind"
@@ -1287,7 +1287,7 @@
     ],
     "assertivemediator_toqueen_AJ":  [
         [
-            "queen's apprentice",
+            "queen's_apprentice",
             "queen",
             "assertive",
             "silly",
@@ -1309,7 +1309,7 @@
     ],
     "assertivemediator_toqueen_AJ1":  [
         [
-            "queen's apprentice",
+            "queen's_apprentice",
             "queen",
             "assertive",
             "silly",
@@ -1418,7 +1418,7 @@
             "any",
             "assertive",
             "from_your_apprentice",
-            "random_cat",
+            
             "they_blind",
             "you_blind"
         ],
@@ -1434,8 +1434,8 @@
     "assertivemediatorapp_AJ9": [
         [
             "mediator",
-            "mediator apprentice",
-            "random_cat",
+            "mediator_apprentice",
+            
             "you_blind"
         ],
         [
@@ -1473,7 +1473,7 @@
     "assertive_warrior_or_elder2": [
         [
             "mediator",
-            "mediator apprentice",
+            "mediator_apprentice",
             "assertive",
             "platonic_like"
         ],
@@ -1503,7 +1503,8 @@
         [
             "Any",
             "silly",
-            "random_cat"
+            "they_mediator_apprentice"
+            
         ],
         [
             "[The mediator apprentice has been walking around all day in some sort of disguise, decorating themself in leaves and twigs that seem to have at least some rhyme or reason. Intrigued, you come up to them to ask why they've decorated their pelt today.]",
@@ -1518,7 +1519,8 @@
         [
             "Any",
             "silly",
-            "random_cat"
+            "they_mediator_apprentice"
+            
         ],
         [
             "y_c! You see r_c arguing with d_n over there about c_nClan's fresh-kill stock? Well, I wasn't sure how to help resolve the situation, but now I think I have the perfect plan!",
@@ -1531,7 +1533,8 @@
         [
             "Any",
             "silly",
-            "random_cat"
+            "they_mediator_apprentice"
+            
         ],
         [
             "Oh dear... y_c, I dunno what to do!",

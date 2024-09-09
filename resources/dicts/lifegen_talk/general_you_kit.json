@@ -175,9 +175,9 @@
         [
             "kitten",
             "apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
-            "queen's apprentice",
+            "medicine_cat_apprentice",
+            "mediator_apprentice",
+            "queen's_apprentice",
             "assertive",
             "unlawful",
             "unabashed",
@@ -212,9 +212,9 @@
         [
             "kitten",
             "apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
-            "queen's apprentice",
+            "medicine_cat_apprentice",
+            "mediator_apprentice",
+            "queen's_apprentice",
             "assertive",
             "insult",
             "unlawful",
@@ -903,7 +903,7 @@
         [
             "newborn",
             "cool",
-	        "random_cat",
+	        
 	        "you_clanborn",
 	        "non-related",
 	        "you_blind",
@@ -931,7 +931,7 @@
         [
             "kitten",
             "cool",
-	        "random_cat",
+	        
 	        "you_blind",
 	        "they_blind",
 	        "neutral"
@@ -975,7 +975,7 @@
             "cool",
 	        "they_adult",
 	        "they_app",
-	        "random_cat",
+	        
 	        "you_blind",
 	        "they_blind",
             "connected"
@@ -1035,11 +1035,12 @@
 
         "cool_you_kit_10_AJ": [
         [
-            "kitten",
+            "you_kitten",
             "cool",
         	"unlawful",
         	"from_parent",
-        	"random_cat"
+            "any"
+        	
         ],
         [
             "[After getting caught making mischief in the medicine den, r_m chides you in front of your parent, t_c, who nods along sternly.]",
@@ -1059,7 +1060,7 @@
             "kitten",
             "cool",
         	"platonic_like",
-        	"random_cat",
+        	
         	"they_warrior",
         	"they_blind"
         ],
@@ -1078,7 +1079,7 @@
         [
             "kitten",
             "cool",
-	        "random_cat",
+	        
 	        "neutral",
 	        "they_blind"
         ],
@@ -1442,7 +1443,7 @@
             "introspective",
             "from_parent",
             "platonic_like",
-            "random_cat",
+            
             "they_blind",
             "you_blind"
         ],
@@ -1990,7 +1991,7 @@
         [
             "kitten",
             "neurotic",
-            "random_cat",
+            
             "they_blind",
             "you_blind"
         ],
@@ -2346,7 +2347,9 @@
             "sweet",
             "cool",
             "stable",
-            "random_cat"
+            "you_newborn",
+            "they_warrior"
+            
         ],
         [
             "Look how tiny {PRONOUN/y_c/subject} {VERB/y_c/are/is}, plike_r_c!",
@@ -2385,7 +2388,7 @@
         ],
         [
             "Cute little thing, {VERB/y_c/are/is}n't {PRONOUN/y_c/subject}? But cuteness won't help in a fight.",
-            "{PRONOUN/t_c/subject/CAP} better learn to be sharp and cunning if {PRONOUN/y_c/subject} {VERB/y_c/want/wants} to last."
+            "{PRONOUN/y_c/subject/CAP} better learn to be sharp and cunning if {PRONOUN/y_c/subject} {VERB/y_c/want/wants} to last."
         ]
     ],
     "unlawful_newborn4": [
@@ -2476,9 +2479,11 @@
     ],
     "upstanding_newborn3": [
         [
-            "newborn",
+            "you_newborn",
+            "you_kitten",
             "upstanding",
-            "random_cat"
+            "they_any"
+            
         ],
         [
             "[t_c looks solemn as {PRONOUN/t_c/subject} {VERB/t_c/stand/stands} over you.]",
@@ -3652,8 +3657,8 @@
             "grievingyou",
             "any",
             "they_blind",
-            "you_blind",
-            "random_cat"
+            "you_blind"
+            
         ],
         [
             "...",

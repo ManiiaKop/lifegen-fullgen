@@ -158,25 +158,6 @@
             "HAH! As if they'd accept them! I'd like to see you try."
         ]
     ],
-
-    "valentine_focus_SQ1": [
-[
-	"focus",
-	"they_kitten",
-	"they_neurotic",
-	"you_any",
-	"platonic_love",
-	"sibling",
-	"adopted_sibling",
-	"half sibling"
-],
-[
-	"dialogue",
-	"dialogue"
-]
-],
-
-
 "valentine_focus_SQ7": [
 [
 	"focus",
@@ -294,7 +275,7 @@
         [
             "focus",
             "non-mates",
-            "random_cat",
+            
             "any",
             "they_blind"
         ],
@@ -308,7 +289,7 @@
         [
             "focus",
             "from_mate",
-            "random_cat",
+            
             "any",
             "no_kit",
             "you_blind",
@@ -400,7 +381,7 @@
         [
             "focus",
             "assertive",
-            "random_cat",
+            
             "platonic_like",
             "they_sameage"
         ],
@@ -419,7 +400,8 @@
             "focus",
             "assertive",
 	        "unabashed",
-            "random_cat"
+            "any"
+            
         ],
         [
             "[t_c is making a huge commotion in the middle of camp.]",
@@ -451,7 +433,7 @@
         [
             "focus",
             "cool",
-            "random_cat",
+            
 	        "non-mates"
         ],
         [
@@ -487,7 +469,7 @@
             "assertive",
             "unabashed",
             "upstanding",
-            "random_cat",
+            
             "you_blind",
             "they_blind"
         ],
@@ -585,7 +567,7 @@
             "cool",
             "brooding",
             "platonic_like",
-            "random_cat",
+            
             "you_blind",
             "they_blind"
         ],
@@ -602,7 +584,7 @@
             "focus",
             "from_your_kit",
             "from_adopted_kit",
-            "random_cat",
+            
             "they_blind",
             "you_deaf",
             "they_deaf"
@@ -653,7 +635,7 @@
             "silly",
             "assertive",
             "unabashed",
-            "random_cat",
+            
             "platonic_love",
             "you_blind",
             "they_blind"
@@ -694,106 +676,6 @@
             "[t_c trots over to you, shaking a tuft of fur from {PRONOUN/t_c/poss} claws in the process.]",
             "Oh, don't worry about that - I found the prettiest feather in all the Clans for you!",
             "Well, obviously since it's the best, someone else wanted it... but <i>I'm</i> the greatest, so I won it!"
-        ]
-    ],
-
-    "valentine_focus_SQ1": [
-        [
-            "focus",
-            "they_kitten",
-            "they_neurotic",
-            "you_any",
-            "platonic_love",
-            "sibling",
-            "adopted_sibling",
-            "half sibling"
-        ],
-        [
-            "[t_c approaches you nervously, holding a tiny yellow flower in {PRONOUN/t_c/poss} mouth.]",
-            "I don't think I'm doing this right, but...",
-            "[t_c nudges the flower towards you.]",
-            "Everyone's giving flowers to cats they really like, and you're the bestest sibling ever, so... here!"
-        ]
-    ],
-
-    "valentine_focus_SQ2": [
-        [
-            "focus",
-            "no_kit",
-            "they_neurotic",
-            "platonic_like",
-            "trust",
-            "respect"
-        ],
-        [
-            "Hey, y_c, can I ask for some advice?",
-            "I really like their_crush, and it feels like now's supposed to be the time to ask {PRONOUN/their_crush/object} to be mates.",
-            "But I just... I don't know why, but I'm not sure if I'm ready for that.", 
-            "Do you think I'm missing my opportunity? Should I go for it anyways?"
-        ]
-    ],
-
-    "valentine_focus_SQ3": [
-        [
-            "focus",
-            "no_kit",
-            "they_neurotic",
-            "platonic_like"
-        ],
-        [
-            "[You find t_c standing in t_m's nest, decorating it with dozens of meticulously picked petals.]",
-            "Oh! H-hi, y_c. Sorry, I know this looks silly.",
-            "Actually, could you distract t_m for a bit?",
-            "I need to sneak some more petals into camp, and it would be terrible if {PRONOUN/t_m/subject} saw me! That would completely ruin the surprise!"
-        ]
-    ],
-    "valentine_focus_SQ4": [
-        [
-            "focus",
-            "no_kit",
-            "they_neurotic",
-            "platonic_like"
-        ],
-        [
-            "[You're surprised to see t_c up at dawn, trotting towards the edge of camp. {PRONOUN/t_c/subject/CAP} {VERB/t_c/pause/pauses} when you ask where {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} going.]",
-            "Well... everyone's getting gifts for their mates, so of course I need to find something good for t_m!",
-            "There's a patch of blue flowers where we used to go and talk, so I thought I'd bring {PRONOUN/t_m/object} some.",
-            "But last night I was thinking... what if someone got to them first? Or what if they didn't bloom this year? Or... I don't know... something ate them?",
-            "So I need to go check! And if they're gone, I'll need to think of something else, quick!"
-        ]
-    ],
-    "valentine_focus_SQ5": [
-        [
-            "focus",
-            "no_kit",
-            "they_neurotic",
-            "platonic_love",
-            "they_matchmaker",
-            "they_blind"
-        ],
-        [
-            "y_c.",
-            "[t_c sounds uncharacteristically determined. You turn. {PRONOUN/t_c/subject/CAP}{VERB/t_c/'re/'s} right behind you.]",
-            "You should ask your_crush to be your mate.",
-            "Believe me, I know it's intimidating! But it's obvious you like {PRONOUN/your_crush/object}, and I can tell they like you too.",
-            "You're a good match, and...",
-            "[{PRONOUN/t_c/subject/CAP} suddenly {VERB/t_c/shrink/shrinks} back, eyes widening.]",
-            "I... I'm sorry, was that too forward? I just...",
-            "You deserve to be happy, y_c. At least think about it, okay?"
-        ]
-    ],
-    "valentine_focus_SQ6": [
-        [
-            "focus",
-            "no_kit",
-            "they_neurotic",
-            "neutral",
-            "they_blind"
-        ],
-        [
-            "[You find t_c diligently inspecting a bundle of newly picked flowers. {PRONOUN/t_c/subject/CAP} {VERB/t_c/stick/sticks} {PRONOUN/t_c/poss} nose into several before noticing you.]",
-            "Oh, y_c! I know this looks weird.",
-            "I'm just checking these flowers before I give them to t_m. I don't want any bees to be hiding inside... what if they stung {PRONOUN/t_m/object}?"
         ]
     ],
     "valentines_focus_J4": [

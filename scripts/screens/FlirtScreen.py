@@ -1,19 +1,18 @@
 from random import choice, choices, randint
 import pygame
 import ujson
+import re
 
 from scripts.utility import scale
 
 from .Screens import Screens
 
-import re
-
-from scripts.utility import generate_sprite, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors, pronoun_repl
+from scripts.utility import generate_sprite, get_cluster, get_alive_cats, get_alive_status_cats, pronoun_repl
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 import pygame_gui
-from scripts.game_structure.image_button import UIImageButton
 from scripts.game_structure.game_essentials import game, screen_x, screen_y, MANAGER, screen
+from scripts.game_structure.ui_elements import UIImageButton
 from scripts.housekeeping.version import VERSION_NAME
 
 class FlirtScreen(Screens):
@@ -400,22 +399,6 @@ class FlirtScreen(Screens):
             elif not success and "reject" not in tags:
                 continue
 
-
-
-            # bc i dont wanna remove my deaf dialogue rn lol
-
-            # if "deaf" in cat.permanent_condition and "they_deaf" not in tags:
-            #     continue
-
-            # if "blind" in cat.permanent_condition and "they_blind" not in tags:
-            #     continue
-
-            # if "deaf" in you.permanent_condition and "you_deaf" not in tags:
-            #     continue
-
-            # if "blind" in you.permanent_condition and "you_blind" not in tags:
-            #     continue
-
             # Status tags
             if you.status not in tags and f"you_{you.status}" not in tags and "any" not in tags and "young elder" not in tags and "no_kit" not in tags and "you_any" not in tags:
                 continue
@@ -520,23 +503,25 @@ class FlirtScreen(Screens):
 
             if "grief stricken" in cat.illnesses:
                 dead_cat = Cat.all_cats.get(cat.illnesses['grief stricken'].get("grief_cat"))
-                if "grievingyou" in tags:
-                    # if not game.clan.your_cat.dead:
-                    #     cat.illnesses.remove('grief stricken')
-                    if dead_cat.name != game.clan.your_cat.name:
-                        continue
-                else:
-                    if dead_cat.name == game.clan.your_cat.name:
-                        continue
+                if dead_cat:
+                    if "grievingyou" in tags:
+                        # if not game.clan.your_cat.dead:
+                        #     cat.illnesses.remove('grief stricken')
+                        if dead_cat.name != game.clan.your_cat.name:
+                            continue
+                    else:
+                        if dead_cat.name == game.clan.your_cat.name:
+                            continue
 
             if "grief stricken" in you.illnesses:
                 dead_cat = Cat.all_cats.get(you.illnesses['grief stricken'].get("grief_cat"))
-                if "grievingthem" in tags:
-                    if dead_cat.name != cat.name:
-                        continue
-                else:
-                    if dead_cat.name == cat.name:
-                        continue
+                if dead_cat:
+                    if "grievingthem" in tags:
+                        if dead_cat.name != cat.name:
+                            continue
+                    else:
+                        if dead_cat.name == cat.name:
+                            continue
             
             # FORGIVEN TAGS
 
@@ -767,36 +752,115 @@ class FlirtScreen(Screens):
             if "guilty" in tags and "guilt" not in cat.illnesses:
                 continue
 
-
-
             # PERMANENT CONDITIONS
-            # to be un-commented with the actual permacondition dialogue implementation
+            # the exclusive deaf/blind ones
 
-            # if "deaf" in cat.illnesses and "they_deaf" not in tags:
-            #     continue
-            # if "blind" in cat.illnesses and "they_blind" not in tags:
-            #     continue
-            # if "deaf" in you.illnesses and "you_deaf" not in tags:
-            #     continue
-            # if "blind" in you.illnesses and "you_blind" not in tags:
-            #     continue
-
-            # if "only_they_deaf" in tags and "deaf" not in cat.illnesses:
-            #     continue
-            # if "only_they_blind" in tags and "blind" not in cat.illnesses:
-            #     continue
-            # if "only_you_deaf" in tags and "deaf" not in cat.illnesses:
-            #     continue
-            # if "only_you_blind" in tags and "blind" not in cat.illnesses:
-            #     continue
-
-            if "only_they_deaf" in tags:
-                continue
-            if "only_they_blind" in tags:
+            if "only_they_born_deaf" in tags:
+                if "deaf" not in cat.permanent_condition:
+                    continue
+                if "deaf" in cat.permanent_condition and cat.permanent_condition["deaf"]["born_with"] is False:
+                    continue
+            if "only_they_went_deaf" in tags:
+                if "deaf" not in cat.permanent_condition:
+                    continue
+                if "deaf" in cat.permanent_condition and cat.permanent_condition["deaf"]["born_with"] is True:
+                    continue
+            if "only_they_deaf" in tags and "deaf" not in cat.permanent_condition:
                 continue
 
-            # remove when dialogue is implemented
+            if "only_they_born_blind" in tags:
+                if "blind" not in cat.permanent_condition:
+                    continue
+                if "blind" in cat.illnesses and cat.permanent_condition["blind"]["born_with"] is False:
+                    continue
 
+            if "only_they_went_blind" in tags:
+                if "blind" not in cat.permanent_condition:
+                    continue
+                if "blind" in cat.permanent_condition and cat.permanent_condition["blind"]["born_with"] is True:
+                    continue
+
+            if "only_they_blind" in tags and "blind" not in cat.permanent_condition:
+                continue
+
+            if "only_you_born_deaf" in tags:
+                if "deaf" not in you.permanent_condition:
+                    continue
+                if "deaf" in you.permanent_condition and you.permanent_condition["deaf"]["born_with"] is False:
+                    continue
+            if "only_you_went_deaf" in tags:
+                if "deaf" not in you.permanent_condition:
+                    continue
+                if "deaf" in you.permanent_condition and you.permanent_condition["deaf"]["born_with"] is True:
+                    continue
+            if "only_you_deaf" in tags and "deaf" not in you.permanent_condition:
+                continue
+
+            if "only_you_born_blind" in tags:
+                if "blind" not in you.permanent_condition:
+                    continue
+                if "blind" in you.permanent_condition and you.permanent_condition["blind"]["born_with"] is False:
+                    continue
+            if "only_you_went_blind" in tags:
+                if "blind" not in you.permanent_condition:
+                    continue
+                if "blind" in you.permanent_condition and you.permanent_condition["blind"]["born_with"] is True:
+                    continue
+            if "only_you_blind" in tags and "blind" not in you.permanent_condition:
+                continue
+
+            # non-exclusive deaf/blind
+            if "deaf" in cat.permanent_condition:
+                if cat.permanent_condition["deaf"]["born_with"] is True:
+                    if "they_born_deaf" not in tags and "only_they_born_deaf" not in tags:
+                        if "they_deaf" not in tags:
+                            continue
+                else:
+                    if "they_born_deaf" in tags or "only_they_born_deaf" not in tags:
+                        if "they_deaf" not in tags:
+                            continue
+                if "they_hearing" in tags:
+                    continue
+                # cats who went deaf later in life can get pretty much all normal dialogue, as they're able to talk regularly.
+                # they_hearing is for dialogue that explicitly mentions that t_c can hear, so it can be filtered out for cats who went deaf.
+                # "did you hear that?" "i just heard..." "r_k is so loud!" yanno
+
+            if "deaf" in you.permanent_condition:
+                if you.permanent_condition["deaf"]["born_with"] is True:
+                    if "you_born_deaf" not in tags and "only_you_born_deaf" not in tags:
+                        if "you_deaf" not in tags and "only_you_deaf" not in tags:
+                            continue
+                else:
+                    if "you_born_deaf" in tags or "only_you_born_deaf" in tags:
+                        continue
+                    if "you_went_deaf" not in tags and "only_you_went_deaf" not in tags:
+                        if "you_deaf" not in tags and "only_you_deaf" not in tags:
+                            continue
+            
+            # blind
+            if "blind" in cat.permanent_condition:
+                if cat.permanent_condition["blind"]["born_with"] is True:
+                    if "they_born_blind" not in tags and "only_they_born_blind" not in tags:
+                        if "they_blind" not in tags and "only_they_blind" not in tags:
+                            continue
+                else:
+                    if "they_born_blind" in tags or "only_they_born_blind" in tags:
+                        continue
+                    if "they_went_blind" not in tags and "only_they_went_blind" not in tags:
+                        if "they_blind" not in tags and "only_they_blind" not in tags:
+                            continue
+
+            if "blind" in you.permanent_condition:
+                if you.permanent_condition["blind"]["born_with"] is True:
+                    if "you_born_blind" not in tags and "only_you_born_blind" not in tags:
+                        if "you_blind" not in tags and "only_you_blind" not in tags:
+                            continue
+                else:
+                    if "you_born_blind" in tags or "only_you_born_blind" in tags:
+                        continue
+                    if "you_went_blind" not in tags and "only_you_went_blind" not in tags:
+                        if "you_blind" not in tags and "only_you_blind" not in tags:
+                            continue
 
             if "you_allergies" in tags and "allergies" not in you.illnesses:
                 continue
@@ -1096,7 +1160,7 @@ class FlirtScreen(Screens):
     def get_living_cats(self):
         living_cats = []
         for the_cat in Cat.all_cats_list:
-            if not the_cat.dead and not the_cat.outside:
+            if not the_cat.dead and not the_cat.outside and not the_cat.moons == -1:
                 living_cats.append(the_cat)
         return living_cats
 
@@ -1330,7 +1394,7 @@ class FlirtScreen(Screens):
                     else:
                         text = re.sub(fr'(?<!\/)r_w{i}(?!\/)', str(self.cat_dict[f"r_w{i}"].name), text)
                     continue
-                alive_cats = get_alive_warriors(Cat)
+                alive_cats = get_alive_status_cats(Cat, ["warrior"])
                 if len(alive_cats) < 3:
                     return ""
                 alive_cat = choice(alive_cats)
@@ -1485,7 +1549,7 @@ class FlirtScreen(Screens):
                 else:
                     text = re.sub(r'(?<!\/)r_k(?!\/)', str(self.cat_dict["r_k"].name), text)
             else:
-                alive_kits = get_alive_kits(Cat)
+                alive_kits = get_alive_status_cats(Cat, ["kitten","newborn"])
                 if len(alive_kits) <= 1:
                     return ""
 
@@ -1550,7 +1614,7 @@ class FlirtScreen(Screens):
                 else:
                     text = re.sub(r'(?<!\/)r_a(?!\/)', str(self.cat_dict["r_a"].name), text)
             else:
-                alive_apps = get_alive_apps(Cat)
+                alive_apps = get_alive_status_cats(Cat, ["apprentice"])
                 if len(alive_apps) <= 1:
                     return ""
 
@@ -1615,7 +1679,7 @@ class FlirtScreen(Screens):
                 else:
                     text = re.sub(r'(?<!\/)r_w(?!\/)', str(self.cat_dict["r_w"].name), text)
             else:
-                alive_apps = get_alive_warriors(Cat)
+                alive_apps = get_alive_status_cats(Cat, ["warrior"])
                 if len(alive_apps) <= 1:
                     return ""
 
@@ -1679,7 +1743,7 @@ class FlirtScreen(Screens):
                 else:
                     text = re.sub(r'(?<!\/)r_m(?!\/)', str(self.cat_dict["r_m"].name), text)
             else:
-                alive_apps = get_alive_meds(Cat)
+                alive_apps = get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"])
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
@@ -1738,7 +1802,7 @@ class FlirtScreen(Screens):
                 else:
                     text = re.sub(r'(?<!\/)r_d(?!\/)', str(self.cat_dict["r_d"].name), text)
             else:
-                alive_apps = get_alive_mediators(Cat)
+                alive_apps = get_alive_status_cats(Cat, ["mediator", "mediator apprentice"])
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
@@ -1798,7 +1862,7 @@ class FlirtScreen(Screens):
                 else:
                     text = re.sub(r'(?<!\/)r_q(?!\/)', str(self.cat_dict["r_q"].name), text)
             else:
-                alive_apps = get_alive_queens(Cat)
+                alive_apps = get_alive_status_cats(Cat, ["queen", "queen's apprentice"])
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
@@ -1858,7 +1922,7 @@ class FlirtScreen(Screens):
                 else:
                     text = re.sub(r'(?<!\/)r_e(?!\/)', str(self.cat_dict["r_e"].name), text)
             else:
-                alive_apps = get_alive_elders(Cat)
+                alive_apps = get_alive_status_cats(Cat, ["elder"])
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
@@ -3248,7 +3312,7 @@ class FlirtScreen(Screens):
             else:
                 r = ""
 
-            alive_kits = get_alive_kits(Cat)
+            alive_kits = get_alive_status_cats(Cat, ["kitten","newborn"])
             if len(alive_kits) < 1:
                 return ""
             if f"rsh_k_{x}" in self.cat_dict or "rsh_k" in self.cat_dict or f"{r}_rsh_k" in self.cat_dict or f"{r}_rsh_k_{x}" in self.cat_dict:
@@ -3306,7 +3370,7 @@ class FlirtScreen(Screens):
                 rel = True
             else:
                 r = ""
-            alive_apps = get_alive_apps(Cat)
+            alive_apps = get_alive_status_cats(Cat, ["apprentice"])
             if len(alive_apps) < 1:
                 return ""
             if f"rsh_a_{x}" in self.cat_dict or "rsh_a" in self.cat_dict or f"{r}_rsh_a" in self.cat_dict or f"{r}_rsh_a_{x}" in self.cat_dict:
@@ -3364,7 +3428,7 @@ class FlirtScreen(Screens):
                 rel = True
             else:
                 r = ""
-            alive_apps = get_alive_warriors(Cat)
+            alive_apps = get_alive_status_cats(Cat, ["warrior"])
             if len(alive_apps) < 1:
                 return ""
             if f"rsh_w_{x}" in self.cat_dict or "rsh_w" in self.cat_dict or f"{r}_rsh_w" in self.cat_dict or f"{r}_rsh_w_{x}" in self.cat_dict:
@@ -3422,7 +3486,7 @@ class FlirtScreen(Screens):
                 rel = True
             else:
                 r = ""
-            alive_apps = get_alive_meds(Cat)
+            alive_apps = get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"])
             if len(alive_apps) < 1:
                 return ""
             if f"rsh_a_{x}" in self.cat_dict or "rsh_m" in self.cat_dict or f"{r}_rsh_m" in self.cat_dict or f"{r}_rsh_m_{x}" in self.cat_dict:
@@ -3480,7 +3544,7 @@ class FlirtScreen(Screens):
                 rel = True
             else:
                 r = ""
-            alive_apps = get_alive_mediators(Cat)
+            alive_apps = get_alive_status_cats(Cat, ["mediator", "mediator apprentice"])
             if len(alive_apps) < 1:
                 return ""
             if f"rsh_d_{x}" in self.cat_dict or "rsh_d" in self.cat_dict or f"{r}_rsh_d" in self.cat_dict or f"{r}_rsh_d_{x}" in self.cat_dict:
@@ -3538,7 +3602,7 @@ class FlirtScreen(Screens):
                 rel = True
             else:
                 r = ""
-            alive_apps = get_alive_queens(Cat)
+            alive_apps = get_alive_status_cats(Cat, ["queen", "queen's apprentice"])
             if len(alive_apps) < 1:
                 return ""
             if f"rsh_q_{x}" in self.cat_dict or "rsh_q" in self.cat_dict or f"{r}_rsh_q" in self.cat_dict or f"{r}_rsh_q_{x}" in self.cat_dict:
@@ -3596,7 +3660,7 @@ class FlirtScreen(Screens):
                 rel = True
             else:
                 r = ""
-            alive_apps = get_alive_elders(Cat)
+            alive_apps = get_alive_status_cats(Cat, ["elder"])
             if len(alive_apps) < 1:
                 return ""
             if f"rsh_e_{x}" in self.cat_dict or "rsh_e" in self.cat_dict or f"{r}_rsh_e" in self.cat_dict or f"{r}_rsh_e_{x}" in self.cat_dict:

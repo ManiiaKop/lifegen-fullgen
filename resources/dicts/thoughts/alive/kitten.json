@@ -107,7 +107,7 @@
         ],
         "random_status_constraint": [
             "kitten"
-        ]    
+        ]
     },
     {
         "id": "kit_alive_med_cat",
@@ -190,7 +190,7 @@
             "Is waiting patiently for {PRONOUN/m_c/poss} turn",
             "Is always on {PRONOUN/m_c/poss} best behavior",
             "Likes to help others",
-            "Wants to be everycat's friend",
+            "Wants to be everyone's friend",
             "Is asking r_c about {PRONOUN/r_c/poss} day",
             "Is squeaky clean",
             "Is bleping {PRONOUN/m_c/poss} tongue out cutely",
@@ -247,7 +247,7 @@
             "Is annoying the elders for more tales",
             "Wonders what the ancient Clans were like",
             "Wonders what it would be like to live in a different Clan",
-            "Is pretending to be a twoleg kit",
+            "Is pretending to be a Twoleg kit",
             "Wants r_c to pretend to be {PRONOUN/m_c/poss} apprentice",
             "Is pretending to be a rock",
             "Is going everywhere backwards today",
@@ -283,7 +283,7 @@
         ],
         "main_trait_constraint": [
             "honest"
-        ]     
+        ]
     },
     {
         "id": "impulsive_kit",
@@ -332,7 +332,7 @@
         ],
         "main_trait_constraint": [
             "leader-like"
-        ]    
+        ]
     },
     {
         "id": "nervous_kit",
@@ -363,7 +363,7 @@
             "Never wants to leave the camp when {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} older",
             "Asks r_c if it's safe",
             "Is checking on r_c",
-            "Hopes there is enough fresh-kill for everycat",
+            "Hopes there is enough fresh-kill for every cat",
             "Has a lot on {PRONOUN/m_c/poss} mind",
             "Is sadly a victim of another prank"
         ],
@@ -376,7 +376,7 @@
         "thoughts": [
             "Is too good at playing hide-and-seek",
             "Is asked to speak up",
-            "Plays quietly alone with a feather in front of the nursery",
+            "Plays quietly with a feather in front of the nursery alone",
             "Is very excited for {PRONOUN/m_c/poss} nap",
             "Doesn't have much to say",
             "Is happy being alone sometimes",
@@ -384,9 +384,9 @@
             "Mews quietly to {PRONOUN/m_c/self}",
             "Doesn't make a sound today",
             "Is acting very shy",
-            "Is playing by {PRONOUN/m_c/self}",
+            "Plays by {PRONOUN/m_c/self}",
             "Is yawning again",
-            "Is hiding behind r_c",
+            "Hides behind r_c",
             "Doesn't want to play right now",
             "Is very sleepy",
             "Doesn't like to yowl",
@@ -417,14 +417,14 @@
         ],
         "main_trait_constraint": [
             "rebellious"
-        ]    
+        ]
     },
     {
         "id": "sweet_kit",
         "thoughts": [
             "Is pretending to be the medicine cat",
             "Plucks feathers from a fresh-kill bird to add to nests",
-            "Offers to leave camp to collect moss, but can't, because {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} a kit",
+            "Offers to leave camp to collect moss, but can't because {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} a kit",
             "Compliments an older cat on how their fur looks today",
             "Wants to help others",
             "Is so very cute",
@@ -452,15 +452,15 @@
     {
         "id": "troublesome_kit",
         "thoughts": [
-            "Is thinking about mischief",
-            "Is wondering what trouble {PRONOUN/m_c/subject} can create",
-            "Is wondering about the unknown",
+            "Thinks about mischief",
+            "Wonders what trouble {PRONOUN/m_c/subject} can create",
+            "Wonders about the unknown",
             "Is planning to be naughty",
             "Is thinking about being in trouble",
             "Is trying to get out of trouble",
             "Is scrambling the medicine cat's herbs",
             "Is thinking of how to cause trouble",
-            "Is planning to annoy an elder",
+            "Plans to annoy an elder",
             "Is trying very hard to look innocent",
             "Is thinking about play-fighting with {PRONOUN/m_c/poss} littermates",
             "Is putting thorns in r_c's bedding",
@@ -488,9 +488,9 @@
     {
         "id": "lonesome_kit",
         "thoughts": [
-            "Is feeling alone",
+            "Feels alone",
             "Wishes {PRONOUN/m_c/subject} had friends",
-            "Wants somecat to talk to",
+            "Wants someone to talk to",
             "Doesn't understand why {PRONOUN/m_c/subject} {VERB/m_c/are/is} always left out",
             "Hopes to make a friend today",
             "Is talking to some bugs",
@@ -514,9 +514,9 @@
         "thoughts": [
             "Wakes r_c in the middle of the night to ask a question about snails",
             "Wakes up early to say hello to the dawn patrol",
-            "Follows r_c around so closely that {PRONOUN/m_c/subject} step on {PRONOUN/r_c/poss} paw",
+            "Follows r_c around so closely that {PRONOUN/m_c/subject} {VERB/m_c/step/steps} on {PRONOUN/r_c/poss} paw",
             "Says hello to r_c at least 10 times in a row, until {PRONOUN/r_c/subject} finally {VERB/r_c/say/says} hello back",
-            "Is showing everycat the bug {PRONOUN/m_c/subject} caught earlier",
+            "Is showing everyone the bug {PRONOUN/m_c/subject} caught earlier",
             "Is in r_c's way... again",
             "Yowls loudly in the middle of the clearing for absolutely no reason",
             "Begs for life-saving herbs to cure {PRONOUN/m_c/poss} minor scrape",
@@ -532,7 +532,7 @@
         "id": "noisy_kit",
         "thoughts": [
             "Is practicing a mighty roar",
-            "Yowls as loud as {PRONOUN/m_c/subject} can",
+            "Yowls as loudly as {PRONOUN/m_c/subject} can",
             "Challenges r_c to a yowl-off",
             "Loudly explains why being quiet is super boring",
             "Meow meow meow meow meow meow meow meow meow meow meow meow",
@@ -649,7 +649,7 @@
         ],
         "main_trait_constraint": [
             "bossy"
-        ]   
+        ]
     },
     {
         "id": "manipulative_kit",
@@ -666,6 +666,6 @@
         ],
         "main_trait_constraint": [
             "manipulative"
-        ]    
+        ]
     }
 ]

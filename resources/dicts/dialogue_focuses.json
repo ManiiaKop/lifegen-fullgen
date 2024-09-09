@@ -40,5 +40,15 @@
         "focus_loss": [
             "The last of the hail has finally melted and run into the ground, signifying rebirth and healing for c_nClan. As the storm moves on, so, too, does discussion around camp."
         ]
+    },
+    "unknown_murder": {
+        "duration": 2,
+        "season": "Any",
+        "moon_event": [
+            "This moon, a Clanmate has mysteriously turned up dead. With no cat aware of who the killer could be, the Clan is very on edge."
+        ],
+        "focus_loss": [
+            "The discussion surrounding the Clan's mysterious murder has died down... for now."
+        ]
     }
 }

@@ -1,17 +1,17 @@
-import pygame
-import pygame_gui
+import random
 import traceback
 from copy import deepcopy
-import random
 
-from .Screens import Screens
+import pygame
+import pygame_gui
 
 from scripts.cat.cats import Cat
-from scripts.game_structure.image_button import UISpriteButton, UIImageButton
-from scripts.utility import scale
 from scripts.game_structure import image_cache
 from scripts.game_structure.game_essentials import game, screen, screen_x, screen_y
+from scripts.game_structure.ui_elements import UISpriteButton, UIImageButton
 from scripts.game_structure.windows import SaveError
+from scripts.utility import scale
+from .Screens import Screens
 
 
 class ClanScreen(Screens):
@@ -80,10 +80,12 @@ class ClanScreen(Screens):
                 self.menu_button_pressed(event)
             if event.ui_element == self.warrior_den_label:
                 self.change_screen('warrior den screen')
-        
+            if event.ui_element == self.leader_den_label:
+                self.change_screen('leader den screen')
+
         elif event.type == pygame.KEYDOWN and game.settings['keybinds']:
             if event.key == pygame.K_RIGHT:
-                self.change_screen('starclan screen')
+                self.change_screen('list screen')
             elif event.key == pygame.K_LEFT:
                 self.change_screen('events screen')
             elif event.key == pygame.K_SPACE:
@@ -97,7 +99,6 @@ class ClanScreen(Screens):
                 game.switches['saved_clan'] = True
                 self.update_buttons_and_text()
 
-
     def screen_switches(self):
         self.update_camp_bg()
         game.switches['cat'] = None
@@ -107,7 +108,7 @@ class ClanScreen(Screens):
             self.layout = game.clan.layouts["default"]
 
         self.choose_cat_positions()
-        
+
         self.set_disabled_menu_buttons(["camp_screen"])
         self.update_heading_text(f'{game.clan.name}Clan')
         self.show_menu_buttons()
@@ -135,7 +136,7 @@ class ClanScreen(Screens):
                     )
                 except:
                     print(f"ERROR: placing {Cat.all_cats[x].name}\'s sprite on Clan page")
-                    
+
         # Den Labels
         # Redo the locations, so that it uses layout on the Clan page
         self.warrior_den_label = UIImageButton(scale(pygame.Rect(
@@ -144,13 +145,14 @@ class ClanScreen(Screens):
             object_id="#warrior_den_button",
             starting_height=2
         )
-        self.leader_den_label = pygame_gui.elements.UIImage(
+        self.leader_den_label = UIImageButton(
             scale(pygame.Rect(self.layout["leader den"], (224, 56))),
-            pygame.transform.scale(
-                image_cache.load_image('resources/images/leader_den.png'),
-                (224, 56)))
-        self.med_den_label = UIImageButton(scale(pygame.Rect(
-            self.layout["medicine den"], (302, 56))),
+            "",
+            object_id="#lead_den_button",
+            starting_height=2
+            )
+        self.med_den_label = UIImageButton(
+            scale(pygame.Rect(self.layout["medicine den"], (302, 56))),
             "",
             object_id="#med_den_button",
             starting_height=2
@@ -160,11 +162,11 @@ class ClanScreen(Screens):
             pygame.transform.scale(
                 image_cache.load_image('resources/images/elder_den.png'),
                 (206, 56)),
-            )
+        )
         self.nursery_label = pygame_gui.elements.UIImage(scale(pygame.Rect(self.layout['nursery'], (160, 56))),
-                                                         pygame.transform.scale(
-                                                             image_cache.load_image('resources/images/nursery_den.png'),
-                                                             (160, 56)))
+                                                        pygame.transform.scale(
+                                                            image_cache.load_image('resources/images/nursery_den.png'),
+                                                            (160, 56)))
         if game.clan.game_mode == 'classic':
             self.clearing_label = pygame_gui.elements.UIImage(
                 scale(pygame.Rect(self.layout['clearing'], (162, 56))),
@@ -339,8 +341,8 @@ class ClanScreen(Screens):
             if Cat.all_cats[x].dead or Cat.all_cats[x].outside or Cat.all_cats[x].moons <= 0:
                 continue
 
-            # Newborns are not meant to be placed. They are hiding. 
-            if Cat.all_cats[x].status == 'newborn' or game.config['fun']['all_cats_are_newborn']:
+            # Newborns are not meant to be placed. They are hiding.
+            if Cat.all_cats[x].status == 'newborn' or Cat.all_cats[x].moons == -1 or game.config['fun']['all_cats_are_newborn']:
                 if game.config['fun']['all_cats_are_newborn'] or game.config['fun']['newborns_can_roam']:
                     # Free them
                     Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(first_choices, all_dens,
@@ -378,7 +380,6 @@ class ClanScreen(Screens):
             elif Cat.all_cats[x].status == "leader":
                 Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(first_choices, all_dens,
                                                                                   [1, 200, 1, 1, 1, 1, 1])
-                                                                                  
 
     def update_buttons_and_text(self):
         if game.switches['saved_clan']:

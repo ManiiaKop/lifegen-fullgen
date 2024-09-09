@@ -44,7 +44,7 @@
         ]
     },
     {
-        "id": "deputy_alive_apprentices",
+        "id": "deputy_to_alive_apprentice",
         "thoughts": [
             "Is assessing the apprentices",
             "Is making sure no apprentices are slacking off from training",
@@ -60,7 +60,7 @@
         "thoughts": [
             "Is fantasizing about leading the Clan into a victorious battle",
             "Feels a thrill imagining the chaos of a large-scale battle",
-            "Tells the border patrol not to let any intruders go free without a scar to remember {PRONOUN/m_c/object} by",
+            "Tells the border patrol not to let any intruders go free without a scar to remember them by",
             "Is thrilled at the thought of apprentices worshipping {PRONOUN/m_c/object}",
             "Can feel the nape of {PRONOUN/m_c/poss} neck quivering anticipating upcoming wars"
         ],
@@ -69,7 +69,7 @@
         ]
     },
     {
-        "id": "bloodthirsty_deputy_leader",
+        "id": "bloodthirsty_deputy_to_leader",
         "thoughts": [
             "Thinks about killing the leader and staging it as an accident",
             "Encourages the leader to start a war",
@@ -94,32 +94,30 @@
             "Goes missing and comes back smelling like garlic",
             "Is making odd noises",
             "Giggles at the thought of a bird trying to swim"
-    
         ],
         "main_trait_constraint": [
             "strange"
         ]
     },
-    {  
+    {
         "id": "insecure_deputy",
         "thoughts": [
-            "Keeps confirming with the leader that the patrols {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} organizing sound right",
             "Hopes {PRONOUN/m_c/subject}'ll make a decent leader someday",
             "Wonders how {PRONOUN/m_c/subject} became deputy in the first place",
             "Feels a pang of self-doubt when a patrol returns late",
             "Questions whether {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} respected or just tolerated by the Clan",
             "Worries that {PRONOUN/m_c/poss} mistakes will lead to the Clan's downfall"
         ],
-        "main_trait_constraint":[
+        "main_trait_constraint": [
             "insecure"
         ]
     },
-    {  
-        "id": "insecure_deputy_leader",
+    {
+        "id": "insecure_deputy_to_leader",
         "thoughts": [
             "Keeps confirming with the leader that the patrols {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} organizing sound right"
         ],
-        "main_trait_constraint":[
+        "main_trait_constraint": [
             "insecure"
         ],
         "random_status_constraint": [
@@ -162,7 +160,7 @@
         ],
         "main_trait_constraint": [
             "oblivious"
-        ]    
+        ]
     },
     {
         "id": "nervous_deputy",
@@ -171,7 +169,7 @@
             "Feels a twinge of worry about an approaching storm",
             "Is overthinking a recent encounter with a rival Clan",
             "Is stressing over why {PRONOUN/m_c/subject} became deputy",
-            "Was overthinking countless battles {PRONOUN/m_c/subject} must create", 
+            "Was overthinking countless battles {PRONOUN/m_c/subject} must create",
             "Is terrified of leading c_n someday",
             "Was seen counting the number of prey hunting patrols brought in"
         ],
@@ -204,7 +202,7 @@
         ],
         "main_trait_constraint": [
             "gloomy"
-        ]  
+        ]
     },
     {
         "id": "grumpy_deputy",
@@ -223,7 +221,7 @@
         ],
         "main_trait_constraint": [
             "grumpy"
-        ]   
+        ]
     },
     {
         "id": "humble_deputy",
@@ -236,7 +234,7 @@
         ],
         "main_trait_constraint": [
             "humble"
-        ]    
+        ]
     },
     {
         "id": "arrogant_deputy",
@@ -254,7 +252,7 @@
         ],
         "main_trait_constraint": [
             "arrogant"
-        ]  
+        ]
     },
     {
         "id": "daring_deputy",
@@ -267,7 +265,7 @@
         ],
         "main_trait_constraint": [
             "daring"
-        ]  
+        ]
     },
     {
         "id": "strict_deputy",
@@ -283,7 +281,7 @@
         ],
         "main_trait_constraint": [
             "strict"
-        ]    
+        ]
     },
     {
         "id": "adventurous_deputy",
@@ -297,7 +295,7 @@
         ],
         "main_trait_constraint": [
             "adventurous"
-        ]  
+        ]
     },
     {
         "id": "loyal_deputy",
@@ -342,7 +340,7 @@
         ],
         "main_trait_constraint": [
             "sneaky"
-        ]     
+        ]
     },
     {
         "id": "ambitious_deputy_teacher",
@@ -371,7 +369,7 @@
         ]
     },
     {
-        "id": "wise_deputy_apprentice",
+        "id": "wise_deputy_to_apprentice",
         "thoughts": [
             "Is sharing words of wisdom with a confused apprentice"
         ],
@@ -392,10 +390,10 @@
         ]
     },
     {
-        "id": "rebellious_deputy_leader",
+        "id": "rebellious_deputy_to_leader",
         "thoughts": [
             "Feels an urge to challenge the leader's decision for the betterment of the Clan",
-            "Decided to change patrol routes on {PRONOUN/m_c/poss} own, hoping the leader will see the benefits"
+            "Decides to change patrol routes on {PRONOUN/m_c/poss} own, hoping the leader will see the benefits"
         ],
         "main_trait_constraint": [
             "rebellious"
@@ -415,7 +413,7 @@
         ]
     },
     {
-        "id": "teacher_deputy_apprentice",
+        "id": "teacher_deputy_to_apprentice",
         "thoughts": [
             "Feels satisfaction watching an apprentice master a lesson",
             "Guides an apprentice through {PRONOUN/r_c/poss} hunting assessment"
@@ -442,7 +440,7 @@
         "id": "fighter_deputy",
         "thoughts": [
             "Is instructing a group of warriors in advanced combat techniques",
-            "Feels a sense of protection for the Clan, ready to defend {PRONOUN/m_c/object} at any moment",
+            "Feels a sense of protectiveness towards the Clan, ready to defend {PRONOUN/m_c/object} at any moment",
             "Is assessing the Clan's physical strength and readiness for potential threats",
             "Organizes a mock battle to keep the Clan's skills sharp"
         ],
@@ -473,7 +471,7 @@
         ]
     },
     {
-        "id": "healer_deputy_medcat",
+        "id": "healer_deputy_to_medcat",
         "thoughts": [
             "Takes a patrol out to gather herbs for the medicine cat"
         ],
@@ -496,7 +494,7 @@
         ]
     },
     {
-        "id": "story_deputy_apprentice",
+        "id": "story_deputy_to_apprentice",
         "thoughts": [
             "Is recalling an old story that might inspire the Clan in tough times",
             "Feels inspired to craft a new legend based on recent events",
@@ -510,5 +508,4 @@
             "apprentice"
         ]
     }
-
 ]

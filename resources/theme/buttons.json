@@ -3317,7 +3317,7 @@
                 "path": "resources/images/buttons/filter_rank.png"
             },
             "disabled_image": {
-                "path": "resources/images/buttons/filter_rank_unavailable.png"
+                "path": "resources/images/buttons/filter_rank_hover.png"
             }
         }
     },
@@ -3334,7 +3334,7 @@
                 "path": "resources/images/buttons/filter_age.png"
             },
             "disabled_image": {
-                "path": "resources/images/buttons/filter_age_unavailable.png"
+                "path": "resources/images/buttons/filter_age_hover.png"
             }
         }
     },
@@ -3342,16 +3342,16 @@
         "prototype": "#image_button",
         "images": {
             "normal_image": {
-                "path": "resources/images/buttons/filter_ID.png"
+                "path": "resources/images/buttons/filter_id.png"
             },
             "hovered_image": {
-                "path": "resources/images/buttons/filter_ID_hover.png"
+                "path": "resources/images/buttons/filter_id_hover.png"
             },
             "selected_image": {
-                "path": "resources/images/buttons/filter_ID.png"
+                "path": "resources/images/buttons/filter_id.png"
             },
             "disabled_image": {
-                "path": "resources/images/buttons/filter_ID_unavailable.png"
+                "path": "resources/images/buttons/filter_id_hover.png"
             }
         }
     },
@@ -3368,7 +3368,7 @@
                 "path": "resources/images/buttons/filter_exp.png"
             },
             "disabled_image": {
-                "path": "resources/images/buttons/filter_exp_unavailable.png"
+                "path": "resources/images/buttons/filter_exp_hover.png"
             }
         }
     },
@@ -3385,7 +3385,7 @@
                 "path": "resources/images/buttons/filter_death.png"
             },
             "disabled_image": {
-                "path": "resources/images/buttons/filter_death_unavailable.png"
+                "path": "resources/images/buttons/filter_death_hover.png"
             }
         }
     },
@@ -4605,6 +4605,40 @@
             },
             "disabled_image": {
                 "path": "resources/images/buttons/continue_dead_unavailable.png"
+            }
+        }
+    },
+    "#dead_select_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/dead_select.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/dead_select_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/dead_select.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/dead_select_unavaliable.png"
+            }
+        }
+    },
+    "#alive_select_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/alive_select.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/alive_select_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/alive_select.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/alive_select_unavaliable.png"
             }
         }
     }

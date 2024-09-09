@@ -157,7 +157,7 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "The camp is relatively empty as many cats have gone out to do their daily patrols or hunting, and you decide to help tidy up... and maybe add a decoration or two? You start to have a couple doubts as you gather the materials... is this a good idea?",
-        "decline_text": "No, it's not. You put your things away and go back to the Elder's Den, deciding to just take a nap instead.",
+        "decline_text": "No, it's not. You put your things away and go back to the elder's den, deciding to just take a nap instead.",
         "chance_of_success": 50,
         "success_outcomes": [
             {
@@ -226,7 +226,7 @@
         "max_cats": 2,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "You were just trying to rest, the Warriors out on patrol and the Medicine Cat out gathering herbs, however the squeals of other cats managed to wake you up from your nap. You rush outside, and it seems a snake has slithered its way into the middle of the camp. The cats look to you for help, you are the one in the best condition in the camp at the moment, so they're hoping you'll have a plan.",
+        "intro_text": "You were just trying to rest, the warriors out on patrol and the medicine cat out gathering herbs, however the squeals of other cats managed to wake you up from your nap. You rush outside, and it seems a snake has slithered its way into the middle of the camp. The cats look to you for help, you are the one in the best condition in the camp at the moment, so they're hoping you'll have a plan.",
         "decline_text": "Nope. Nope nope. Nope. You hurry back into the den, not willing to deal with the snake.",
         "chance_of_success": 50,
         "success_outcomes": [

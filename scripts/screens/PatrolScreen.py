@@ -1,14 +1,14 @@
 from random import choice, sample
+
 import pygame
 import pygame_gui
 
-from .Screens import Screens
-from scripts.utility import get_text_box_theme, scale, shorten_text_to_fit
-from scripts.game_structure.image_button import UIImageButton, UISpriteButton
-from scripts.patrol.patrol import Patrol
 from scripts.cat.cats import Cat
 from scripts.game_structure.game_essentials import game, MANAGER
-from scripts.game_structure.propagating_thread import PropagatingThread
+from scripts.game_structure.ui_elements import UIImageButton, UISpriteButton
+from scripts.patrol.patrol import Patrol
+from scripts.utility import get_text_box_theme, scale, shorten_text_to_fit
+from .Screens import Screens
 
 
 class PatrolScreen(Screens):
@@ -79,9 +79,9 @@ class PatrolScreen(Screens):
 
         elif event.type == pygame.KEYDOWN and game.settings['keybinds']:
             if event.key == pygame.K_LEFT:
-                self.change_screen("starclan screen")
-            elif event.key == pygame.K_RIGHT:
-                self.change_screen('list screen')
+                self.change_screen("list screen")
+            # elif event.key == pygame.K_RIGHT:
+            # self.change_screen('list screen')
 
     def handle_choose_cats_events(self, event, doubleclick=False):
         if 'cat_icon' in self.elements:

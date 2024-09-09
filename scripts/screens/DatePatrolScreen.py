@@ -4,7 +4,7 @@ import pygame_gui
 
 from .Screens import Screens
 from scripts.utility import get_text_box_theme, scale, shorten_text_to_fit
-from scripts.game_structure.image_button import UIImageButton, UISpriteButton
+from scripts.game_structure.ui_elements import IDImageButton, UIImageButton, UISpriteButton
 from scripts.patrol.patrol import Patrol
 from scripts.cat.cats import Cat
 from scripts.game_structure.game_essentials import game, MANAGER

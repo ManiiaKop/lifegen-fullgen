@@ -83,7 +83,7 @@
     },
     {
         "patrol_id": "wtlnd_gen_hunt_twolegplace2",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -1015,7 +1015,7 @@
                 ]
             },
             {
-                "text": "It's a strange adventure, odd and weird and a little thrilling. s_c takes the lead, but both s_c and r_c are wide eyed and a little scared, in a fun way.",
+                "text": "It's a strange adventure, odd and weird and a little thrilling. s_c takes the lead, but both s_c and r_c are wide-eyed and a little scared, in a fun way.",
                 "exp": 20,
                 "weight": 20,
                 "stat_trait": [
@@ -1131,7 +1131,7 @@
                 ]
             },
             {
-                "text": "A friendly Twolegs makes a psspsspss noise, and pours kittypet food on the ground for app2. They fetch app1, and both apprentices loudly proclaim how much better fresh-kill is, but both are also wide eyed and thrilled by the experience.",
+                "text": "A friendly Twolegs makes a psspsspss noise, and pours kittypet food on the ground for app2. They fetch app1, and both apprentices loudly proclaim how much better fresh-kill is, but both are also wide-eyed and thrilled by the experience.",
                 "exp": 20,
                 "weight": 5,
                 "prey": ["very_small"],
@@ -2423,7 +2423,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_redfox_scavenge5",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -2559,7 +2559,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_redfox_scavenge6",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -2695,7 +2695,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_redfox_scavenge8",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -2860,7 +2860,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_foxgray_scavenge4",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -3004,7 +3004,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_foxgray_scavenge2",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -3124,7 +3124,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_foxgray_scavenge3",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -6231,7 +6231,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_redfox_steal1",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -6458,7 +6458,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_redfox_steal2",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -6636,7 +6636,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_redfox_steal6",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -6814,7 +6814,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_foxgray_steal1",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -7007,7 +7007,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_foxgray_steal5",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -7198,7 +7198,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_foxgray_steal6",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -8426,7 +8426,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_redfox_scavenge9",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -8562,7 +8562,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_redfox_scavenge7",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -8698,7 +8698,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_redfox_scavenge10",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -8863,7 +8863,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_foxgray_scavenge1",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -9007,7 +9007,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_foxgray_scavenge5",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -9127,7 +9127,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_foxgray_scavenge6",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -12234,7 +12234,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_redfox_steal4",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -12461,7 +12461,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_redfox_steal5",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -12639,7 +12639,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_redfox_steal3",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -12813,7 +12813,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_foxgray_steal4",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -13006,7 +13006,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_foxgray_steal2",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],
@@ -13197,7 +13197,7 @@
     },
     {
         "patrol_id": "wtlnd_hunt_foxgray_steal3",
-        "biome": ["wetland"],
+        "biome": ["wetlands"],
         "season": ["any"],
         "types": ["hunting"],
         "tags": [],

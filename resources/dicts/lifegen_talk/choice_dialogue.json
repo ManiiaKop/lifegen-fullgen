@@ -2,6 +2,7 @@
     "sweetchoice_1": {
         "tags": [
             "no_kit",
+            "Any",
             "sweet"
         ],
         "intro": [
@@ -34,8 +35,8 @@
     "sweet_elder_9": {
         "tags": [
             "you_mediator_apprentice",
-            "random_cat",
-             "sweet"
+            "Any",
+            "sweet"
         ],
         "intro": [
             "[A fight broke out in camp this morning, r_c1 had said something unnecessarily rude to t_c.]",
@@ -70,7 +71,8 @@
             "brooding",
             "introspective",
             "they_blind",
-            "you_blind"
+            "you_blind",
+            "Any"
         ],
         "intro": [
             "l_n... What do you think of {PRONOUN/l_n/object}?",
@@ -112,7 +114,8 @@
             "you_pregnant",
             "silly",
             "they_blind",
-            "you_blind"
+            "you_blind",
+            "Any"
         ],
         "intro": [
             "I bet the first pick of the freshkill pile that you'll have three kits!",
@@ -177,7 +180,8 @@
         "tags": [
             "no_kit",
             "introspective",
-            "leafbare"
+            "leafbare",
+            "Any"
         ],
         "intro": [
             "[t_c is pawing at the snow covered ground, thoughtfully.]",
@@ -217,7 +221,8 @@
             "unabashed",
             "they_blind",
             "you_blind",
-            "they_hearing"
+            "they_hearing",
+            "Any"
         ],
         "intro": [
             "Psst, y_c. I heard a rumor that n_r1 totally has a crush on n_r2. Isn't that crazy?"
@@ -256,7 +261,8 @@
             "stable",
             "clan_has_kits",
             "they_blind",
-            "you_blind"
+            "you_blind",
+            "Any"
         ],
         "intro": [
             "Why are kits so difficult...",
@@ -291,7 +297,8 @@
             "sweet",
             "assertive",
             "stable",
-            "cool"
+            "cool",
+            "Any"
         ],
         "intro": [
             "Hey, I need an opinion, if you're up for it.",
@@ -318,7 +325,8 @@
     "gen_mate1": {
         "tags": [
             "no_kit",
-            "they_blind"
+            "they_blind",
+            "Any"
         ],
         "intro": [
             "[t_c is sharing tongues with t_m in the clearing.]",
@@ -346,7 +354,8 @@
     "upstanding_kit10": {
         "tags": [
             "upstanding",
-            "they_kitten"
+            "they_kitten",
+            "Any"
         ],
         "intro": [
             "[t_c is sitting outside the nursery, {PRONOUN/t_c/poss} expression shifting between a look of awe and determination as {PRONOUN/t_c/subject} {VERB/t_c/watch/watches} l_n move about the camp.]"
@@ -378,7 +387,8 @@
             "they_warrior",
             "they_younger",
             "they_blind",
-            "you_blind"
+            "you_blind",
+            "Any"
         ],
         "intro": [
             "Listen, I'm not the type of cat who likes to rake up old bones, but dislike_r_w totally cheated on {PRONOUN/dislike_r_w/poss} warrior assessment!"
@@ -416,6 +426,7 @@
             "assertive",
             "upstanding",
             "non-related",
+            "Any",
             "they_sameage",
             "platonic_love",
             "they_blind",
@@ -462,6 +473,7 @@
     "assertive_gensib2": {
         "tags": [
             "no_kit",
+            "Any",
             "assertive",
             "unlawful",
             "brooding",
@@ -497,6 +509,7 @@
     "assertive_gen3": {
         "tags": [
             "no_kit",
+            "Any",
             "assertive",
             "platonic_like",
             "they_blind",
@@ -532,7 +545,8 @@
             "no_kit",
             "assertive",
             "unlawful",
-            "platonic_like"
+            "platonic_like",
+            "any"
         ],
         "intro": [
             "I found this super cool cave network just outside the territory ... Wanna come explore it with me later?",
@@ -568,15 +582,8 @@
     },
     "assertivekit_1": {
         "tags": [
-            "warrior",
-            "medicine cat apprentice",
-            "medicine cat",
-            "mediator apprentice",
-            "mediator",
-            "queen's apprentice",
-            "queen",
-            "leader",
-            "deputy",
+            "you_any",
+            "you_older",
             "they_kitten",
             "assertive",
             "upstanding",
@@ -612,7 +619,8 @@
     },
     "assertivekit_7": {
         "tags": [
-            "kitten",
+            "they_kitten",
+            "any",
             "assertive",
             "unlawful",
             "cool",
@@ -666,19 +674,10 @@
     },
     "assertivekit_9": {
         "tags": [
-            "apprentice",
-            "warrior",
-            "medicine cat apprentice",
-            "medicine cat",
-            "mediator apprentice",
-            "mediator",
-            "queen's apprentice",
-            "queen",
-            "leader",
-            "deputy",
+            "you_any",
+            "you_older",
             "assertive",
             "they_kitten",
-            "random_cat",
             "they_blind",
             "you_blind"
         ],
@@ -721,7 +720,8 @@
     },
     "assertivekit_13": {
         "tags": [
-            "kitten",
+            "they_kitten",
+            "you_any",
             "assertive",
             "platonic_love",
             "they_kitten",
@@ -757,7 +757,7 @@
     },
     "assertivekit_10": {
         "tags": [
-            "kitten",
+            "you_kitten",
             "assertive",
             "unlawful",
             "they_kitten",
@@ -801,6 +801,7 @@
             "platonic_like",
             "comfort",
             "trust",
+            "you_any",
             "they_kitten",
             "they_blind",
             "you_blind"
@@ -832,7 +833,7 @@
     },
     "assertivekit_17": {
         "tags": [
-            "kitten",
+            "you_kitten",
             "assertive",
             "unlawful",
             "upstanding",
@@ -878,10 +879,10 @@
     },
     "assertivekit_24": {
         "tags": [
-            "kitten",
+            "you_kitten",
             "platonic_like",
             "sibling",
-            "adopted sibling",
+            "adopted_sibling",
             "they_kitten",
             "they_blind",
             "you_blind"
@@ -911,8 +912,8 @@
     },
     "assertiveapp_medapp3": {
         "tags": [
-            "medicine cat apprentice",
-            "medicine cat",
+            "medicine_cat_apprentice",
+            "medicine_cat",
             "assertive",
             "silly",
             "upstanding",
@@ -1061,9 +1062,9 @@
     "assertive_apprentice5": {
         "tags": [
             "apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
-            "queen's apprentice",
+            "medicine_cat_apprentice",
+            "mediator_apprentice",
+            "queen's_apprentice",
             "platonic_like",
             "assertive",
             "they_apprentice",
@@ -1528,7 +1529,7 @@
     },
     "assertivemedcat_queen": {
         "tags": [
-            "queen's apprentice",
+            "queen's_apprentice",
             "queen",
             "assertive",
             "cool",
@@ -1603,7 +1604,7 @@
     },
     "assertive_mentor8": {
         "tags": [
-            "medicine cat apprentice",
+            "medicine_cat_apprentice",
             "assertive",
             "from_mentor",
             "silly",
@@ -1807,7 +1808,7 @@
         "tags": [
             "no_kit",
             "neurotic",
-            "random_cat",
+            
             "they_blind",
             "you_blind"
         ],
@@ -1920,7 +1921,7 @@
             "neurotic",
             "they_kitten",
             "platonic_like",
-            "random_cat",
+            
             "they_blind"
         ],
         "intro": [
@@ -2191,7 +2192,7 @@
             "cool",
 	        "they_mediator",
 	        "they_mediator_apprentice",
-	        "random_cat",
+	        
 	        "non-related"
         ],
         "intro": [
@@ -2244,7 +2245,7 @@
             "cool",
         	"they_mediator",
 	        "they_mediator_apprentice",
-	        "random_cat",
+	        
         	"non-related"
         ],
         "intro": [
@@ -2513,7 +2514,7 @@
             "any",
             "upstanding",
             "from_mentor",
-            "random_cat",
+            
             "they_blind",
             "you_blind"
         ],
@@ -2584,9 +2585,9 @@
         "tags": [
             "upstanding",
             "apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
-            "queen's apprentice",
+            "medicine_cat_apprentice",
+            "mediator_apprentice",
+            "queen's_apprentice",
             "they_kitten"
         ],
         "intro": [
@@ -3409,7 +3410,7 @@
             "they_grieving",
             "brooding",
             "neutral",
-            "random_cat",
+            
             "dead_close"         
         ],
         "intro": [
@@ -3446,7 +3447,7 @@
             "they_grieving",
             "brooding",
             "platonic_love",
-            "random_cat",
+            
             "dead_close"         
         ],
         "intro": [
@@ -3737,9 +3738,9 @@
             "introspective",
             "stable",
             "apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
-            "queen's apprentice",
+            "medicine_cat_apprentice",
+            "mediator_apprentice",
+            "queen's_apprentice",
             "they_older"
         ],
         "intro": [

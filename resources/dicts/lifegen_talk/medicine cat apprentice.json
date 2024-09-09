@@ -174,8 +174,8 @@
     ],
     "assertive_elder_3": [
         [
-            "medicine cat",
-            "medicine cat apprentice",
+            "medicine_cat",
+            "medicine_cat_apprentice",
             "assertive",
             "you_blind",
             "they_blind"
@@ -188,8 +188,8 @@
     ],
     "assertive_elder_4": [
         [
-            "medicine cat",
-            "medicine cat apprentice",
+            "medicine_cat",
+            "medicine_cat_apprentice",
             "assertive",
             "platonic_like",
             "you_blind",
@@ -204,7 +204,7 @@
     ],
     "assertive_elder_5": [
         [
-            "medicine cat",
+            "medicine_cat",
             "assertive",
             "platonic_like",
             "you_blind"
@@ -219,7 +219,7 @@
     "assertive_app29": [
         [
             "mediator",
-            "mediator apprentice",
+            "mediator_apprentice",
             "assertive",
             "platonic_love"
         ],
@@ -236,7 +236,7 @@
     "assertive_app29_2": [
         [
             "mediator",
-            "mediator apprentice",
+            "mediator_apprentice",
             "assertive",
             "you_blind",
             "they_blind"
@@ -337,7 +337,7 @@
     ],
     "assertivemedcat_queen2": [
         [
-            "queen's apprentice",
+            "queen's_apprentice",
             "queen",
             "assertive",
             "silly",
@@ -353,7 +353,7 @@
     ],
     "assertivemedcat_queensapp3": [
         [
-            "queen's apprentice",
+            "queen's_apprentice",
             "assertive",
             "silly",
             "you_blind",
@@ -368,7 +368,7 @@
     ],
     "assertivemedcat_queensapp3_2": [
         [
-            "queen's apprentice",
+            "queen's_apprentice",
             "assertive",
             "silly",
             "you_blind",
@@ -383,7 +383,7 @@
     ],
     "assertivemedcat_queensapp4": [
         [
-            "queen's apprentice",
+            "queen's_apprentice",
             "assertive",
             "silly",
             "you_blind",
@@ -454,9 +454,9 @@
             "deputy",
             "leader",
             "mediator",
-            "mediator apprentice",
+            "mediator_apprentice",
             "queen",
-            "queen's apprentice",
+            "queen's_apprentice",
             "assertive",
             "you_blind",
             "they_blind"
@@ -681,7 +681,7 @@
     ],
     "assertivemedapp_13": [
         [
-            "medicine cat",
+            "medicine_cat",
             "assertive",
             "from_your_apprentice",
             "you_blind",
@@ -695,7 +695,7 @@
     ],
     "assertivemedapp_13_2": [
         [
-            "medicine cat",
+            "medicine_cat",
             "assertive",
             "from_your_apprentice",
             "you_blind",
@@ -1078,9 +1078,9 @@
     "sweet_medapp_5": [
         [
             "apprentice",
-            "queen's apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
+            "queen's_apprentice",
+            "medicine_cat_apprentice",
+            "mediator_apprentice",
             "sweet"
         ],
         [
@@ -1091,9 +1091,9 @@
     "sweet_medapp_6": [
         [
             "apprentice",
-            "queen's apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
+            "queen's_apprentice",
+            "medicine_cat_apprentice",
+            "mediator_apprentice",
             "sweet",
             "you_blind",
             "they_blind"
@@ -1118,7 +1118,7 @@
     ],
     "sweet_medapp_8": [
         [
-            "queen's apprentice",
+            "queen's_apprentice",
             "sweet",
             "you_blind"
         ],
@@ -1129,7 +1129,7 @@
     ],
     "sweet_medapp_9": [
         [
-            "medicine cat apprentice",
+            "medicine_cat_apprentice",
             "sweet",
             "they_blind",
             "clan_has_kits"
@@ -1142,7 +1142,7 @@
     ],
     "sweet_medapp_10": [
         [
-            "mediator apprentice",
+            "mediator_apprentice",
             "sweet",
             "you_blind",
             "they_blind"
@@ -1157,7 +1157,7 @@
     "sweet_medapp_11": [
         [
             "warrior",
-            "medicine cat",
+            "medicine_cat",
             "mediator",
             "queen",
             "sweet",
@@ -1173,7 +1173,7 @@
     "sweet_medapp_12": [
         [
             "warrior",
-            "medicine cat",
+            "medicine_cat",
             "mediator",
             "queen",
             "sweet",
@@ -1203,7 +1203,7 @@
     ],
     "sweet_medapp_14": [
         [
-            "medicine cat",
+            "medicine_cat",
             "sweet",
             "you_blind",
             "they_blind"
@@ -1314,9 +1314,9 @@
             "kitten",
             "apprentice",
             "warrior",
-            "mediator apprentice",
+            "mediator_apprentice",
             "mediator",
-            "queen's apprentice",
+            "queen's_apprentice",
             "queen",
             "deputy",
             "leader",
@@ -1347,9 +1347,9 @@
             "kitten",
             "apprentice",
             "warrior",
-            "mediator apprentice",
+            "mediator_apprentice",
             "mediator",
-            "queen's apprentice",
+            "queen's_apprentice",
             "queen",
             "deputy",
             "leader",
@@ -1621,7 +1621,7 @@
     "upstanding_medapp": [
         [
             "upstanding",
-            "medicine cat",
+            "medicine_cat",
             "from_your_apprentice",
             "you_blind",
             "they_blind"
@@ -1650,7 +1650,7 @@
         [
             "upstanding",
             "mediator",
-            "mediator apprentice",
+            "mediator_apprentice",
             "they_blind"
         ],
         [
@@ -1728,7 +1728,7 @@
         [
             "you_sc",
             "they_sc",
-            "medicine cat"
+            "medicine_cat"
         ],
         [
             "[It's the night of the half-moon meeting and t_c is watching the medicine cats approach closely, tail twitching with anticipation.]",
@@ -1739,7 +1739,7 @@
     ],
     "trainee_living_3c": [
         [
-            "medicine cat apprentice",
+            "medicine_cat_apprentice",
             "you_dftrainee",
             "they_not_dftrainee",
             "from_mentor",

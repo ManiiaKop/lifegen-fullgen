@@ -3,6 +3,7 @@ import random
 from scripts.cat.cats import Cat
 from scripts.events_module.generate_events import GenerateEvents
 from scripts.game_structure.game_essentials import game
+from scripts.cat.history import History
 from scripts.event_class import Single_Event
 
 
@@ -15,6 +16,12 @@ class OutsiderEvents:
 
     @staticmethod
     def killing_outsiders(cat: Cat):
+        if "lead_den_outsider_event" in game.clan.clan_settings:
+            if game.clan.clan_settings["lead_den_outsider_event"]:
+                info_dict = game.clan.clan_settings["lead_den_outsider_event"]
+                if cat.ID == info_dict["cat_ID"]:
+                    return
+
         # killing outside cats
         if cat.outside:
             if random.getrandbits(6) == 1 and not cat.dead:
@@ -28,8 +35,10 @@ class OutsiderEvents:
                     text = f"Will they reach StarClan, even so far away? {cat.name} isn't sure, " \
                            f"but as they drift away, they hope to see " \
                            f"familiar starry fur on the other side."
-                
-                cat.die(None) # none is to prevent griefing
+                    death_history = "m_c died while being lost and trying to get back to the Clan."
+
+                History.add_death(cat, death_text=death_history)
+                cat.die()
                 game.cur_events_list.append(
                     Single_Event(text, "birth_death", cat.ID))
                 

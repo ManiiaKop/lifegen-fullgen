@@ -483,7 +483,7 @@
         ],
         [
             "...",
-            "[{PRONOUN/t_c/subject} {VERB/t_c/lay/lays} still and quiet. You press your nose to {PRONOUN/t_c/object} in fear to make sure {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} okay, seems {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} just a quiet one...]"
+            "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/lay/lays} still and quiet. You press your nose to {PRONOUN/t_c/object} in fear to make sure {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} okay, seems {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} just a quiet one...]"
         ]
     ],
     "stable_newborn_08": [
@@ -717,7 +717,7 @@
     "upstanding_newborn": [
         [
             "upstanding",
-            "queen's apprentice",
+            "queen's_apprentice",
             "queen",
             "they_blind"
         ],
