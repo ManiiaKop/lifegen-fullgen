@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
     "title": "Lifegen",
-=======
-    "title": "Genemod",
->>>>>>> 2024-09
     "background": "resources/images/mac_installer_bg_blank.png",
     "icon-size": 75,
     "window": {
@@ -14,10 +10,6 @@
     },
     "contents": [
         { "x": 204, "y": 200, "type": "link", "path": "/Applications" },
-<<<<<<< HEAD
         { "x": 66, "y": 200, "type": "file", "path": "dist/Lifegen.app" }
-=======
-        { "x": 66, "y": 200, "type": "file", "path": "dist/Genemod.app" }
->>>>>>> 2024-09
       ]
 }

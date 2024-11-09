@@ -3949,10 +3949,6 @@ def get_button_theme():
         return "#allegiance_dark"
     else:
         return "#allegiance_light"
-<<<<<<< HEAD
-=======
-
->>>>>>> 2024-09
 
 def quit(savesettings=False, clearevents=False):
     """
