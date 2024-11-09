@@ -1483,32 +1483,6 @@
     "(old_name) is given {PRONOUN/m_c/poss} full name of m_c and welcomed as a full healer."
   ],
   "med_0_a": [
-<<<<<<< HEAD
-    [
-      "medicine cat",
-      "unprepared",
-      "general_mentor",
-      "general_parents",
-      "general_leader",
-      "general_backstory",
-      "all_traits"
-    ],
-    "(old_name) has struggled to learn the skills of a medicine cat, but {PRONOUN/m_c/subject} {VERB/m_c/refuse/refuses} to train as a warrior. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} too old to remain an apprentice and, as the other medicine cats look with pity, {PRONOUN/m_c/subject} {VERB/m_c/are/is} hesitantly given the name m_c."
-  ],
-  "med_0_b": [
-    [
-      "medicine cat",
-      "early",
-      "general_mentor",
-      "general_parents",
-      "general_leader",
-      "general_backstory",
-      "all_traits"
-    ],
-    
-    "(old_name) has shown exceptional aptitude and skill during {PRONOUN/m_c/poss} short apprenticeship. Although it's rare for a medicine cat apprentice to be given {PRONOUN/m_c/poss} name so young, m_c more than deserves the honor."
-  ],
-=======
   [
     "healer",
     "unprepared",
@@ -1532,7 +1506,6 @@
   ],
     "(old_name) has shown exceptional aptitude and skill during {PRONOUN/m_c/poss} short apprenticeship. Although it's rare for a healer apprentice to be given {PRONOUN/m_c/poss} name so young, m_c more than deserves the honor."
 ],
->>>>>>> 2024-09
   "med_1": [
     [
       "healer",

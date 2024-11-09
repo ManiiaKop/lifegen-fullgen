@@ -3097,11 +3097,7 @@
         "chance_of_success": 70,
         "success_outcomes": [
             {
-<<<<<<< HEAD
-                "text": "The soft, rose-like scent of the mallow bushes drifts around p_l and app1 as they work, snipping off clumps of large fuzzy three-nubbed leaves and the occasional pink flower to be taken back to camp. Thankfully, another pink-flowered plant grows nearby, and the medicine cats had just begun to run out of betony. Bees hum through the air, not trying to bother the medicine cats, and p_l points out where they think the hive might be to app1.",
-=======
                 "text": "The soft, rose-like scent of the mallow bushes drifts around p_l and app1 as they work, snipping off clumps of large, fuzzy three-nubbed leaves, and the occasional pink flower to be taken back to camp. Thankfully, another pink-flowered plant grows nearby, and the healers had just begun to run out of betony. Bees hum through the air, not trying to bother the healers, and p_l points out where they think the hive might be to app1.",
->>>>>>> 2024-09
                 "exp": 20,
                 "weight": 20,
                 "herbs": ["mallow", "betony"],
@@ -3393,11 +3389,7 @@
                 ]
             },
             {
-<<<<<<< HEAD
-                "text": "It stops infection, bleeding, <i>and</i> sore joints - why would any medicine cat ever want to risk running out of it? p_l brings back as much marigold as they can stuff into their mouth, and somehow manages to fit in a little tansy too. app1 actually drops some of the leaves they carry on the way back to camp, a little over-ambitious with how much they can carry.",
-=======
                 "text": "It stops infection, bleeding, <i>and</i> sore joints - why would any healer ever want to risk running out of it? p_l brings back as much marigold as they can stuff into their mouth, and somehow manages to fit in a little tansy too. app1 accidentally drops some of the leaves they carry on the way back to camp, a little overzealous with how much they can carry.",
->>>>>>> 2024-09
                 "exp": 20,
                 "weight": 5,
                 "herbs": ["many_herbs", "tansy", "marigold"],
@@ -3529,11 +3521,7 @@
                 ]
             },
             {
-<<<<<<< HEAD
-                "text": "s_c finds a patch of marigold, harvests its best leaves, picks up some nice tansy too, and pads home, unaware of how much of their success rests on their talent for herb gathering. The patrol, too, is unaware, but it certainly bolsters their faith in their medicine cat to see them succeed with such competence.",
-=======
                 "text": "s_c finds a patch of marigold, harvests its best leaves, and picks up some nice tansy too. They pad home after their work is finished with their Clanmates in tow, unaware of how much of their success rests on their talent for herb gathering. The patrol, too, is unaware, but it certainly bolsters their faith in their healer to see them succeed with such competence.",
->>>>>>> 2024-09
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["SENSE,2"],
@@ -3876,11 +3864,7 @@
                 "herbs": ["elder_leaves", "oak_leaves"]
             },
             {
-<<<<<<< HEAD
-                "text": "As a basic infection-preventing herb, oak leaves are useful for nearly all of the various scrapes, cuts, and injuries p_l sees in the medicine den. Elder leaves work well alongside them, being great for easing the pains of a sprain and to p_l's excitement they come across a young elder tree. p_l is always happy to bring a good crop of them back to the herb stores.",
-=======
                 "text": "As a basic infection-preventing herb, oak leaves are useful for nearly all of the various scrapes, cuts, and injuries p_l sees in the healer den. Elder leaves work well alongside them, being great for easing the pains of a sprain, and to p_l's excitement they come across a young elder tree. p_l is always happy to bring a good crop of them back to the herb stores.",
->>>>>>> 2024-09
                 "exp": 10,
                 "weight": 5,
                 "herbs": ["many_herbs", "elder_leaves", "oak_leaves"]
@@ -3945,11 +3929,7 @@
                 ]
             },
             {
-<<<<<<< HEAD
-                "text": "As a basic infection-preventing herb, oak leaves are useful for nearly all of the various scrapes, cuts, and injuries p_l sees in the medicine den. Elder leaves work well alongside them, being great for easing the pains of a sprain and to p_l's excitement they come across a young elder tree. They're always happy to bring a good crop of the precious leaves back to the herb stores.",
-=======
                 "text": "As a basic infection-preventing herb, oak leaves are useful for nearly all of the various scrapes, cuts, and injuries p_l sees in the healer den. Elder leaves work well alongside them, p_l explains to app1, being great for easing the pains of a sprain. To p_l's excitement, they soon come across a young elder tree, and the older cat quickly uses the oppertunity to teach app1 how to safely climb up the bark and gather the valuable herbs. Both cats return home carrying a good selection, tails held high and curled in satisfaction.",
->>>>>>> 2024-09
                 "exp": 20,
                 "weight": 5,
                 "herbs": ["many_herbs", "elder_leaves", "oak_leaves"],
@@ -4059,11 +4039,7 @@
                 ]
             },
             {
-<<<<<<< HEAD
-                "text": "As a basic infection-preventing herb, oak leaves are useful for nearly all of the various scrapes, cuts, and injuries p_l sees in the medicine den. Elder leaves work well alongside them, being great for easing the pains of a sprain and to p_l's excitement they come across a young elder tree. Their Clanmates are, as expected, a huge help carrying everything back home.",
-=======
                 "text": "As a basic infection-preventing herb, oak leaves are useful for nearly all of the various scrapes, cuts, and injuries p_l sees in the healer den. Elder leaves work well alongside them, being great for easing the pains of a sprain, and to p_l's excitement they come across a young elder tree. Their Clanmates are, as expected, a huge help carrying everything back home.",
->>>>>>> 2024-09
                 "exp": 10,
                 "weight": 5,
                 "herbs": ["many_herbs", "elder_leaves", "oak_leaves"],
@@ -4333,11 +4309,7 @@
                 ]
             },
             {
-<<<<<<< HEAD
-                "text": "Suitable for soothing throat and pelt irritation, and with a welcome - albeit weird - habit of consistently sprouting up on well-trodden paths, plantain is a basic, but valuable, herb to keep stocks of. It's even relatively innocuous taste-wise, making it easy to harvest. p_l finds today's harvest growing overshadowed by a big mullein plant, and takes that too.",
-=======
                 "text": "Suitable for soothing throat and pelt irritation, and with a welcome - albeit weird - habit of consistently sprouting up on well-trodden paths, plantain is a basic, but valuable, herb to keep stocks of. It's even relatively innocuous taste-wise, making it easy to harvest for warriors who don't have the same tolerance to the taste of herbs the same way healers do. p_l finds today's harvest growing overshadowed by a big mullein plant, and takes that too with help from their Clanmates.",
->>>>>>> 2024-09
                 "exp": 10,
                 "weight": 5,
                 "herbs": ["many_herbs", "plantain", "mullein"],

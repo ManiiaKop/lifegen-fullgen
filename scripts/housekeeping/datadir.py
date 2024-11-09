@@ -32,13 +32,8 @@ def get_data_dir():
     from platformdirs import user_data_dir
 
     if get_version_info().is_dev():
-<<<<<<< HEAD
-        return user_data_dir('FullgenLifeGen', 'FullgenLifeGen')
-    return user_data_dir('FullgenLifeGen', 'FullgenLifeGen')
-=======
-        return user_data_dir('Genemod', 'ClanGen')
-    return user_data_dir('Genemod', 'ClanGen')
->>>>>>> 2024-09
+        return user_data_dir('Genemod', 'LifeGen')
+    return user_data_dir('Genemod', 'LifeGen')
 
 
 def get_log_dir():

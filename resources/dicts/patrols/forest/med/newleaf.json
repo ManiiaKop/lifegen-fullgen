@@ -2340,11 +2340,7 @@
                 ]
             },
             {
-<<<<<<< HEAD
-                "text": "It always amazes p_l how quickly the goldenrod bushes sprout back up after leaf-bare, and they collect more goldenrod than they were anticipating, loading up every cat until the patrol until everyone agrees the medicine cat den can't possibly fit more than this.",
-=======
                 "text": "It always amazes p_l how quickly the goldenrod bushes sprout back up after leaf-bare, and {PRONOUN/p_l/subject} {VERB/p_l/collect/collects} more goldenrod than {PRONOUN/p_l/subject} {VERB/p_l/were/was} anticipating, loading up every cat until everyone agrees the healer den can't possibly fit more than this.",
->>>>>>> 2024-09
                 "exp": 10,
                 "weight": 5,
                 "herbs": ["many_herbs", "goldenrod"],
@@ -2774,11 +2770,7 @@
                 ]
             },
             {
-<<<<<<< HEAD
-                "text": "Night falls, and still s_c insists they keep going. Lungwort is the only reliable cure for yellowcough, and they just can't let c_n go without. Exhausted, but determined, the medicine cats persist patiently until they finally find the precious, speckled leaves.",
-=======
                 "text": "Night falls, and still s_c insists they keep going. Lungwort is the only reliable cure for yellowcough, and {PRONOUN/p_l/subject} just can't let c_n go without. Exhausted, but determined, the healers persist patiently until they finally find the precious, speckled leaves.",
->>>>>>> 2024-09
                 "exp": 20,
                 "weight": 20,
                 "stat_trait": ["patient"],
@@ -2891,11 +2883,7 @@
                 ]
             },
             {
-<<<<<<< HEAD
-                "text": "Night falls, but still s_c insistently keeps going - they just can't let c_n go without. Exhausted, but determined, the medicine cat persists patiently until they find the precious, speckled leaves.",
-=======
                 "text": "Night falls, but still s_c insistently keeps going - {PRONOUN/s_c/subject} just can't let c_n go without. Exhausted, but determined, the healer persists patiently until {PRONOUN/s_c/subject} {VERB/s_c/find/finds} the precious, speckled leaves.",
->>>>>>> 2024-09
                 "exp": 20,
                 "weight": 20,
                 "stat_trait": ["patient"],
@@ -3001,11 +2989,7 @@
                 ]
             },
             {
-<<<<<<< HEAD
-                "text": "Night falls, but still s_c insistently keeps going - they just can't let c_n go without. Exhausted, but determined, the medicine cat persists patiently until they find the precious, speckled leaves.",
-=======
                 "text": "Night falls, but still s_c insistently keeps going - {PRONOUN/s_c/subject} just can't let c_n go without. Exhausted, but determined, the healer persists patiently until {PRONOUN/s_c/subject} {VERB/s_c/find/finds} the precious, speckled leaves.",
->>>>>>> 2024-09
                 "exp": 20,
                 "weight": 20,
                 "stat_trait": ["patient"],
