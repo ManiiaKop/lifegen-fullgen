@@ -389,34 +389,6 @@ class ClanSettingsScreen(Screens):
                 elders += 1
             elif cat.status in ("newborn", "kitten"):
                 kits += 1
-<<<<<<< HEAD
-                    
-        text = f"Living Clan Cats: {living_cats}\n" \
-        f"StarClan Cats: {starclan}\n" \
-        f"Dark Forest Cats: {df}\n" \
-        f"Unknown Residence Cats: {ur}\n" \
-        f"Medicine Cats: {med_cats}\n" \
-        f"Medicine Cat Apprentices: {med_cat_apprentices}\n" \
-        f"Warriors: {warriors}\n" \
-        f"Warrior Apprentices: {warrior_apprentices}\n" \
-        f"Mediators: {mediators}\n" \
-        f"Mediators Apprentices: {mediator_apprentices}\n" \
-        f"Queens: {queens}\n" \
-        f"Queen's Apprentices: {queens_apprentices}\n" \
-        f"Elders: {elders}\n" \
-        f"Kittens and Newborns: {kits}\n" \
-        f"Faded Cats: {faded_cats}"
-        
-        self.checkboxes_text["stat_box"] = pygame_gui.elements.UITextBox(text,
-                                                                         scale(pygame.Rect((300, 400, 1060, 690))),
-                                                                         object_id=get_text_box_theme("#text_box_30_horizcenter"))
-        
-        self.checkboxes_text["achievements"] = UIImageButton(
-            scale(pygame.Rect((670, 1290), (240, 60))),
-            "",
-            object_id="#achivements_button",
-            manager=MANAGER)
-=======
 
         text = (
             f"Living Clan Cats: {living_cats}\n"
@@ -429,6 +401,8 @@ class ClanSettingsScreen(Screens):
             f"Warrior Apprentices: {warrior_apprentices}\n"
             f"Mediators: {mediators}\n"
             f"Mediators Apprentices: {mediator_apprentices}\n"
+            f"Queens: {queens}\n" \
+            f"Queen's Apprentices: {queens_apprentices}\n" \
             f"Elders: {elders}\n"
             f"Kittens and Newborns: {kits}\n"
             f"Faded Cats: {faded_cats}"
@@ -439,7 +413,6 @@ class ClanSettingsScreen(Screens):
             scale(pygame.Rect((300, 400, 1060, 690))),
             object_id=get_text_box_theme("#text_box_30_horizcenter"),
         )
->>>>>>> 2024-09
 
     def refresh_checkboxes(self):
         """

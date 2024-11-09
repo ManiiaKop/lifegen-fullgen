@@ -622,19 +622,6 @@ class ProfileScreen(Screens):
                     self.the_cat.genderalign = 'sam'
                     if self.the_cat.gender == 'intersex':
                         self.the_cat.genderalign = 'intersex sam'
-<<<<<<< HEAD
-
-                #pronoun handler
-                if self.the_cat.genderalign in ["molly", "trans molly"]:
-                    self.the_cat.pronouns = [self.the_cat.default_pronouns[1].copy()]
-                elif self.the_cat.genderalign in ["tom", "trans tom"]:
-                    self.the_cat.pronouns = [self.the_cat.default_pronouns[2].copy()]
-                elif self.the_cat.genderalign in ["nonbinary"]:
-                    self.the_cat.pronouns = [self.the_cat.default_pronouns[0].copy()]
-                elif self.the_cat.genderalign not in ["molly", "trans molly", "tom", "trans tom"]:
-                    self.the_cat.pronouns = [self.the_cat.default_pronouns[0].copy()]
-
-=======
                 if 'molly' in self.the_cat.genderalign:
                     self.pronouns = [self.the_cat.default_pronouns[1].copy()]
                 elif 'tom' in self.the_cat.genderalign:
@@ -642,7 +629,6 @@ class ProfileScreen(Screens):
                 else:
                     self.pronouns = [self.the_cat.default_pronouns[0].copy()]
 
->>>>>>> 2024-09
                 self.clear_profile()
                 self.build_profile()
                 self.update_disabled_buttons_and_text()
@@ -1668,25 +1654,6 @@ class ProfileScreen(Screens):
                 else:
                     output += " other"
 
-<<<<<<< HEAD
-        if not the_cat.dead:
-            # NEWLINE ----------
-            output += "\n"
-
-        # NUTRITION INFO (if the game is in the correct mode)
-        if game.clan.game_mode in ["expanded", "cruel season"] and the_cat.is_alive() and FRESHKILL_ACTIVE:
-            nutr = None
-            if the_cat.ID in game.clan.freshkill_pile.nutrition_info:
-                nutr = game.clan.freshkill_pile.nutrition_info[the_cat.ID]
-            if nutr:
-                output += f"nutrition status: {round(nutr.percentage, 1)}%\n"
-            else:
-                output += f"nutrition status: 100%\n"
-
-        
-
-=======
->>>>>>> 2024-09
         return output
 
     def generate_column2(self, the_cat):
@@ -2259,17 +2226,10 @@ class ProfileScreen(Screens):
         mentor_influence = History.get_mentor_influence(self.the_cat)
         influence_history = ""
 
-<<<<<<< HEAD
-        #First, just list the mentors:
-        if self.the_cat.status in ['kitten', 'newborn']:
-                influence_history = 'This cat has not begun training.'
-        elif self.the_cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
-=======
         # First, just list the mentors:
         if self.the_cat.status in ['kitten', 'newborn']:
             influence_history = 'This cat has not begun training.'
-        elif self.the_cat.status in ['apprentice', 'healer apprentice', 'mediator apprentice']:
->>>>>>> 2024-09
+        elif self.the_cat.status in ['apprentice', 'healer apprentice', 'mediator apprentice', "queen's apprentice"]:
             influence_history = 'This cat has not finished training.'
         else:
             valid_formor_mentors = [
@@ -3262,13 +3222,8 @@ class ProfileScreen(Screens):
                 self.manage_roles.disable()
             else:
                 self.manage_roles.enable()
-<<<<<<< HEAD
-            if self.the_cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"] \
-                                            or self.the_cat.dead or self.the_cat.outside:
-=======
-            if self.the_cat.status not in ['apprentice', 'healer apprentice', 'mediator apprentice'] \
+            if self.the_cat.status not in ['apprentice', 'healer apprentice', 'mediator apprentice', "queen's apprentice"] \
                     or self.the_cat.dead or self.the_cat.outside:
->>>>>>> 2024-09
                 self.change_mentor_button.disable()
             else:
                 self.change_mentor_button.enable()
@@ -3417,9 +3372,6 @@ class ProfileScreen(Screens):
                 self.kill_cat_button.enable()
             else:
                 self.kill_cat_button.disable()
-<<<<<<< HEAD
-
-
 
             if self.the_cat.ID != game.clan.your_cat.ID:
                 self.murder_cat_button.hide()
@@ -3428,11 +3380,6 @@ class ProfileScreen(Screens):
                 if self.exit_df_button:
                     self.exit_df_button.hide()
                 self.affair_button.hide()
-=======
-            
-            if self.the_cat.pelt.accessory:
-                self.destroy_accessory_button.enable()
->>>>>>> 2024-09
             else:
                 self.murder_cat_button.show()
                 if self.join_df_button:
@@ -3580,11 +3527,7 @@ class ProfileScreen(Screens):
                 if self.genetic_text_box:
                     self.genetic_text_box.kill()
 
-<<<<<<< HEAD
-                self.genelist = str(self.the_cat.phenotype.PhenotypeOutput()) + "\n" + str(self.the_cat.genotype.ShowGenes())
-=======
                 self.genelist = str(self.the_cat.phenotype.PhenotypeOutput()) + "\n" + str(self.the_cat.genotype.ShowGenes()) + "\n" + self.the_cat.genotype.FormatSomatic()
->>>>>>> 2024-09
                 if(self.the_cat.genotype.chimera):
                     chimpheno = Phenotype(self.the_cat.genotype.chimerageno)
                     self.genelist += "\n\n" + str(chimpheno.PhenotypeOutput(self.the_cat.genotype.chimerageno.gender)) + "\n" + str(self.the_cat.genotype.chimerageno.ShowGenes())
@@ -3651,7 +3594,6 @@ class ProfileScreen(Screens):
             elif self.open_sub_tab == 'genetics':
                 if self.genetic_text_box:
                     self.genetic_text_box.kill()
-<<<<<<< HEAD
         elif self.open_tab == "accessories":
             self.backstory_background.kill()
             for i in self.cat_list_buttons:
@@ -3675,10 +3617,6 @@ class ProfileScreen(Screens):
             if self.request_apprentice_button:
                 self.request_apprentice_button.kill()
         elif self.open_tab == 'conditions':
-=======
-
-        elif self.open_tab == "conditions":
->>>>>>> 2024-09
             self.left_conditions_arrow.kill()
             self.right_conditions_arrow.kill()
             self.conditions_background.kill()

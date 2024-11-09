@@ -149,16 +149,9 @@ class ClanScreen(Screens):
             scale(pygame.Rect(self.layout["leader den"], (224, 56))),
             "",
             object_id="#lead_den_button",
-<<<<<<< HEAD
-            starting_height=2
-            )
-        self.med_den_label = UIImageButton(
-            scale(pygame.Rect(self.layout["medicine den"], (302, 56))),
-=======
             starting_height=2)
         self.med_den_label = UIImageButton(scale(pygame.Rect(
             self.layout["healer den"], (302, 56))),
->>>>>>> 2024-09
             "",
             object_id="#med_den_button",
             starting_height=2
@@ -344,14 +337,10 @@ class ClanScreen(Screens):
             first_choices[x].extend(first_choices[x])
 
         for x in game.clan.clan_cats:
-<<<<<<< HEAD
-            if Cat.all_cats[x].dead or Cat.all_cats[x].outside or Cat.all_cats[x].moons <= 0:
-=======
             if not Cat.all_cats.get(x, False):
                 game.clan.clan_cats.remove(x)
                 continue
-            if Cat.all_cats[x].dead or Cat.all_cats[x].outside:
->>>>>>> 2024-09
+            if Cat.all_cats[x].dead or Cat.all_cats[x].outside or Cat.all_cats[x].moons <= 0:
                 continue
 
             # Newborns are not meant to be placed. They are hiding.

@@ -219,11 +219,7 @@ class Patrol:
         else:
             # Get the oldest cat
             possible_leader = [i for i in self.patrol_cats if i.status not in 
-<<<<<<< HEAD
-                               ["medicine cat apprentice", "apprentice"]]
-=======
                                ["healer apprentice", "apprentice"]]
->>>>>>> 2024-09
             if possible_leader:
                 # Flip a coin to pick the most experience, or oldest. 
                 if randint(0, 1):
@@ -277,11 +273,6 @@ class Patrol:
             else game.clan.clan_settings["disasters"]
         )
         season = current_season.lower()
-<<<<<<< HEAD
-        biome_dir = f"{biome}/"
-        camp = camp.lower()
-=======
->>>>>>> 2024-09
         leaf = f"{season}"
         biome_dir = f"{biome}/"
         self.update_resources(biome_dir, leaf)

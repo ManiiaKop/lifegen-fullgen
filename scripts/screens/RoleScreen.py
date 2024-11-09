@@ -328,13 +328,9 @@ class RoleScreen(Screens):
             self.switch_med_app.disable()
             self.switch_warrior_app.disable()
             self.switch_mediator_app.disable()
-<<<<<<< HEAD
             self.switch_queen_app.disable()
-            
-        elif self.the_cat.status == "medicine cat":
-=======
+
         elif self.the_cat.status == "healer":
->>>>>>> 2024-09
             self.promote_leader.disable()
             self.promote_deputy.disable()
 
@@ -408,12 +404,9 @@ class RoleScreen(Screens):
             self.switch_med_app.disable()
             self.switch_warrior_app.disable()
             self.switch_mediator_app.disable()
-<<<<<<< HEAD
             self.switch_queen_app.disable()
-        elif self.the_cat.status == "medicine cat apprentice":
-=======
+
         elif self.the_cat.status == "healer apprentice":
->>>>>>> 2024-09
             self.promote_leader.disable()
             self.promote_deputy.disable()
 

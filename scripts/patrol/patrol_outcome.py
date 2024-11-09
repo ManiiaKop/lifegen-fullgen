@@ -254,13 +254,9 @@ class PatrolOutcome:
         # This order is important. 
         results.append(self._handle_accessories(patrol))
         results.append(self._handle_death(patrol))
-<<<<<<< HEAD
-        results.append(self._handle_lost(patrol))
+        results.append(self._handle_lost(patrol, tnr, tnr2))
         results.append(self._handle_df_convert(patrol))
         results.append(self._handle_faith_changes(patrol))
-=======
-        results.append(self._handle_lost(patrol, tnr, tnr2))
->>>>>>> 2024-09
         results.append(self._handle_condition_and_scars(patrol))
         results.append(unpack_rel_block(Cat, self.relationship_effects, patrol, stat_cat=self.stat_cat))
         results.append(self._handle_rep_changes(patrol))
