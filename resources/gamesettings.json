@@ -46,6 +46,11 @@
             "This will add a shading layer onto the cat sprites.",
             false
         ],
+        "tints": [
+        "Enable Tints",
+        "This will add a tint layer onto the cat sprites.",
+        true
+        ],
         "gore": [
             "Allow mild gore and blood in patrol artwork",
             "Mild gore and blood will be allowed in the artwork displayed alongside patrols.",
@@ -66,6 +71,11 @@
             "Shows the changelog of the latest release on startup",
             true
         ],
+        "ban problem genes": [
+        "Hide genes directly associated with health issues.",
+        "Newly generated cats will not have genes that are directly correlated with permanent conditions.",
+        false
+      ],
         "special_dates": [
             "Allow special date events",
             "Certain changes may be made to the game on special days such as April Fools",

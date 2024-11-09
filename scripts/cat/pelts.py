@@ -73,7 +73,7 @@ class Pelt:
               "BACK", "QUILLSIDE", "SCRATCHSIDE", "BEAKSIDE", "CATBITETWO", "FOUR"]
 
     # missing parts
-    scars2 = ["LEFTEAR", "RIGHTEAR", "NOTAIL", "HALFTAIL", "NOPAW", "NOLEFTEAR", "NORIGHTEAR", "NOEAR"]
+    scars2 = ["LEFTEAR", "RIGHTEAR", "NOTAIL", "HALFTAIL", "NOPAW", "NOLEFTEAR", "NORIGHTEAR", "NOEAR", "TNR"]
 
     # "special" scars that could only happen in a special event
     scars3 = ["SNAKE", "TOETRAP", "BURNPAWS", "BURNTAIL", "BURNBELLY", "BURNRUMP", "FROSTFACE", "FROSTTAIL",
@@ -159,15 +159,12 @@ class Pelt:
         'SUNLITICE', 'GREENYELLOW', 'BRONZE', 'SILVER'
     ]
     little_white = ['LITTLE', 'LIGHTTUXEDO', 'BUZZARDFANG', 'TIP', 'BLAZE', 'BIB', 'VEE', 'PAWS',
-                    'BELLY', 'TAILTIP', 'TOES', 'BROKENBLAZE', 'LILTWO', 'SCOURGE', 'TOESTAIL', 'RAVENPAW', 'HONEY',
-                    'LUNA',
-                    'EXTRA', 'MUSTACHE', 'REVERSEHEART', 'SPARKLE', 'RIGHTEAR', 'LEFTEAR', 'ESTRELLA', 'REVERSEEYE',
-                    'BACKSPOT',
-                    'EYEBAGS', 'LOCKET', 'BLAZEMASK', 'TEARS']
+                    'BELLY', 'TAILTIP', 'TOES', 'BROKENBLAZE', 'LILTWO', 'SCOURGE', 'TOESTAIL', 'RAVENPAW', 'HONEY', 'LUNA',
+                    'EXTRA', 'MUSTACHE', 'REVERSEHEART', 'SPARKLE', 'RIGHTEAR', 'LEFTEAR', 'ESTRELLA', 'REVERSEEYE', 'BACKSPOT',
+                    'EYEBAGS', 'LOCKET']
     mid_white = ['TUXEDO', 'FANCY', 'UNDERS', 'DAMIEN', 'SKUNK', 'MITAINE', 'SQUEAKS', 'STAR', 'WINGS',
-                 'DIVA', 'SAVANNAH', 'FADESPOTS', 'BEARD', 'DAPPLEPAW', 'TOPCOVER', 'WOODPECKER', 'MISS', 'BOWTIE',
-                 'VEST',
-                 'FADEBELLY', 'DIGIT', 'FCTWO', 'FCONE', 'MIA', 'ROSINA', 'PRINCESS', 'DOUGIE']
+                'DIVA', 'SAVANNAH', 'FADESPOTS', 'BEARD', 'DAPPLEPAW', 'TOPCOVER', 'WOODPECKER', 'MISS', 'BOWTIE', 'VEST',
+                'FADEBELLY', 'DIGIT', 'FCTWO', 'FCONE', 'MIA', 'ROSINA', 'PRINCESS']
     high_white = ['ANY', 'ANYTWO', 'BROKEN', 'FRECKLES', 'RINGTAIL', 'HALFFACE', 'PANTSTWO',
                   'GOATEE', 'PRINCE', 'FAROFA', 'MISTER', 'PANTS', 'REVERSEPANTS', 'HALFWHITE', 'APPALOOSA', 'PIEBALD',
                   'CURVED', 'GLASS', 'MASKMANTLE', 'MAO', 'PAINTED', 'SHIBAINU', 'OWL', 'BUB', 'SPARROW', 'TRIXIE',
@@ -185,36 +182,37 @@ class Pelt:
 
     """Holds all appearance information for a cat. """
 
-    def __init__(self,
-                 genotype:Genotype,
-                 phenotype:Phenotype,
-                 name:str="SingleColour",
-                 colour:str="WHITE",
-                 white_patches:str=None,
-                 eye_color:str="BLUE",
-                 eye_colour2:str=None,
-                 tortiebase:str=None,
-                 tortiecolour:str=None,
-                 pattern:str=None,
-                 tortiepattern:str=None,
-                 vitiligo:str=None,
-                 points:str=None,
-                 accessory:str=None,
-                 paralyzed:bool=False,
-                 opacity:int=100,
-                 scars:list=None,
-                 tint:str="none",
-                 skin:str="BLACK",
-                 white_patches_tint:str="none",
-                 kitten_sprite:int=None,
-                 adol_sprite:int=None,
-                 adult_sprite:int=None,
-                 senior_sprite:int=None,
-                 para_adult_sprite:int=None,
-                 reverse:bool=False,
-                 accessories:list=None,
-                 inventory:list=[]
-                 ) -> None:
+    def __init__(
+        self,
+        genotype:Genotype,
+        phenotype:Phenotype,
+        name:str="SingleColour",
+        colour:str="WHITE",
+        white_patches:str=None,
+        eye_color:str="BLUE",
+        eye_colour2:str=None,
+        tortiebase:str=None,
+        tortiecolour:str=None,
+        pattern:str=None,
+        tortiepattern:str=None,
+        vitiligo:str=None,
+        points:str=None,
+        accessory:str=None,
+        accessories:list=None,
+        inventory:list=None,
+        paralyzed:bool=False,
+        opacity:int=100,
+        scars:list=None,
+        tint:str="none",
+        skin:str="BLACK",
+        white_patches_tint:str="none",
+        kitten_sprite:int=None,
+        adol_sprite:int=None,
+        adult_sprite:int=None,
+        senior_sprite:int=None,
+        para_adult_sprite:int=None,
+        reverse:bool=False,
+        ) -> None:
         self.genotype = genotype
         self.phenotype = phenotype
         self.name = name
@@ -228,27 +226,14 @@ class Pelt:
         self.tortiecolour = tortiecolour
         self.vitiligo = vitiligo
         self.cat_sprites =  {
-            "kitten": kitten_sprite if kitten_sprite is not None else random.randint(0, 2),
-            "adolescent": adol_sprite if adol_sprite is not None else random.randint(3,5),
+            "kitten": kitten_sprite if kitten_sprite is not None else 0,
+            "adolescent": adol_sprite if adol_sprite is not None else 0,
             "young adult": adult_sprite if adult_sprite is not None else 0,
             "adult": adult_sprite if adult_sprite is not None else 0,
             "senior adult": adult_sprite if adult_sprite is not None else 0,
-            "senior": senior_sprite if senior_sprite is not None else random.randint(12,14),
+            "senior": senior_sprite if senior_sprite is not None else 0,
             "para_adult": para_adult_sprite if para_adult_sprite is not None else 0,
-          }
-        if self.cat_sprites['young adult'] == 0:
-            adult_sprite = random.randint(9, 11)
-            self.cat_sprites['young adult'] = adult_sprite
-            self.cat_sprites['adult'] = adult_sprite
-            self.cat_sprites['senior adult'] = adult_sprite
-            self.cat_sprites['para_adult'] = 16
-        elif self.cat_sprites['young adult'] == 0:
-            adult_sprite = random.randint(6, 8)
-            self.cat_sprites['young adult'] = adult_sprite
-            self.cat_sprites['adult'] = adult_sprite
-            self.cat_sprites['senior adult'] = adult_sprite
-            self.cat_sprites['para_adult'] = 15
-        
+        }        
         self.cat_sprites['newborn'] = 20
         self.cat_sprites['para_young'] = 17
         self.cat_sprites["sick_adult"] = 18
@@ -260,17 +245,17 @@ class Pelt:
                 self.cat_sprites['young adult'] += 3
                 self.cat_sprites['senior adult'] += 3
         elif phenotype.length != 'hairless':
-            if phenotype.length == "longhaired":
+            if phenotype.length == "mediumhaired":
                 self.length = 'medium'
             else:
                 self.length="short"
-            if self.cat_sprites['adult'] > 9:
+            if self.cat_sprites['adult'] > 8:
                 self.cat_sprites['adult'] -= 3
                 self.cat_sprites['young adult'] -= 3
                 self.cat_sprites['senior adult'] -= 3
         else:
             self.length="hairless"
-            if self.cat_sprites['adult'] > 9:
+            if self.cat_sprites['adult'] > 8:
                 self.cat_sprites['adult'] -= 3
                 self.cat_sprites['young adult'] -= 3
                 self.cat_sprites['senior adult'] -= 3
@@ -283,33 +268,6 @@ class Pelt:
         self.scars = scars if isinstance(scars, list) else []
         self.tint = tint
         self.white_patches_tint = white_patches_tint
-
-        # self.cat_sprites =  {
-        #     "kitten": kitten_sprite if kitten_sprite is not None else random.randint(0, 2),
-        #     "adolescent": adol_sprite if adol_sprite is not None else random.randint(3,5),
-        #     "young adult": adult_sprite if adult_sprite is not None else 0,
-        #     "adult": adult_sprite if adult_sprite is not None else 0,
-        #     "senior adult": adult_sprite if adult_sprite is not None else 0,
-        #     "senior": senior_sprite if senior_sprite is not None else random.randint(12,14),
-        #     "para_adult": para_adult_sprite if para_adult_sprite is not None else 0,
-        # }
-        # if self.cat_sprites['young adult'] == 0 and self.length == 'long':
-        #     adult_sprite = random.randint(9, 11)
-        #     self.cat_sprites['young adult'] = adult_sprite
-        #     self.cat_sprites['adult'] = adult_sprite
-        #     self.cat_sprites['senior adult'] = adult_sprite
-        #     self.cat_sprites['para_adult'] = 16
-        # elif self.cat_sprites['young adult'] == 0:
-        #     adult_sprite = random.randint(6, 8)
-        #     self.cat_sprites['young adult'] = adult_sprite
-        #     self.cat_sprites['adult'] = adult_sprite
-        #     self.cat_sprites['senior adult'] = adult_sprite
-        #     self.cat_sprites['para_adult'] = 15
-
-        # self.cat_sprites['newborn'] = 20
-        # self.cat_sprites['para_young'] = 17
-        # self.cat_sprites["sick_adult"] = 18
-        # self.cat_sprites["sick_young"] = 19
         
         self.reverse = reverse
         self.skin = skin
@@ -909,8 +867,8 @@ class Pelt:
             chance = 10 - len(par_points)
         else:
             chance = 40
-
-        if self.name != "Tortie" and not (random.random() * chance):
+        # Chance of point is 1 / chance.
+        if self.name != "Tortie" and not int(random.random() * chance):
             self.points = choice(Pelt.point_markings)
         else:
             self.points = None
@@ -1020,11 +978,35 @@ class Pelt:
         # PELT TINT
         # Basic tints as possible for all colors.
         base_tints = sprites.cat_tints["possible_tints"]["basic"]
-        if self.colour in sprites.cat_tints["colour_groups"]:
-            color_group = sprites.cat_tints["colour_groups"].get(self.colour, "warm")
-            color_tints = sprites.cat_tints["possible_tints"][color_group]
+        
+        colour = ""
+        if self.phenotype.genotype.white[0] == "W":
+            colour = "WHITE"
+        elif 'point' in self.phenotype.point or 'silver' in self.phenotype.silvergold or (self.phenotype.genotype.dilute[0] == 'd' and self.phenotype.genotype.pinkdilute[0] == "dp"):
+            colour = "PALE"
+        elif 'gold' in self.phenotype.silvergold or 'sunshine' in self.phenotype.silvergold:
+            colour = "GOLDEN"
         else:
-            color_tints = []
+            if (self.phenotype.genotype.dilute[0] == 'd' or self.phenotype.genotype.pinkdilute[0] == "dp"):
+                if self.phenotype.colour in ['cream', 'cream apricot', 'honey']:
+                    colour = "CREAM"
+                elif self.phenotype.colour in ['fawn', 'fawn caramel', 'buff']:
+                    colour = "FAWN"
+                elif self.phenotype.colour in ['lilac', 'lilac caramel', 'champagne']:
+                    colour = "LILAC"
+                else:
+                    colour = "BLUE"
+            else:
+                if self.phenotype.colour in ['flame', 'red']:
+                    colour = "RED"
+                elif self.phenotype.colour == "cinnamon":
+                    colour = "CINNAMON"
+                elif self.phenotype.colour == "chocolate":
+                    colour = "CHOCOLATE"
+                else:
+                    colour = "BLACK"
+        color_group = sprites.cat_tints["colour_groups"].get(colour, "warm")
+        color_tints = sprites.cat_tints["possible_tints"][color_group]
 
         if base_tints or color_tints:
             self.tint = choice(base_tints + color_tints)
@@ -1036,7 +1018,7 @@ class Pelt:
             # Now for white patches
             base_tints = sprites.white_patches_tints["possible_tints"]["basic"]
             if self.colour in sprites.cat_tints["colour_groups"]:
-                color_group = sprites.white_patches_tints["colour_groups"].get(self.colour, "white")
+                color_group = sprites.white_patches_tints["colour_groups"].get(colour, "white")
                 color_tints = sprites.white_patches_tints["possible_tints"][color_group]
             else:
                 color_tints = []

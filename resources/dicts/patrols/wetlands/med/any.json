@@ -10,7 +10,7 @@
         "max_cats": 1,
         "min_max_status": {
             "apprentice": [-1, -1],
-            "medicine cat": [1, 6],
+            "healer": [1, 6],
             "healer cats": [1, 6],
             "normal adult": [-1, -1]
         },
@@ -77,8 +77,8 @@
         "max_cats": 2,
         "min_max_status": {
             "apprentice": [-1, -1],
-            "medicine cat": [1, 6],
-            "medicine cat apprentice": [1, 6],
+            "healer": [1, 6],
+            "healer apprentice": [1, 6],
             "healer cats": [1, 6],
             "normal adult": [-1, -1]
         },
@@ -144,8 +144,8 @@
         "max_cats": 1,
         "min_max_status": {
             "apprentice": [-1, -1],
-            "medicine cat": [1, 6],
-            "medicine cat apprentice": [1, 6],
+            "healer": [1, 6],
+            "healer apprentice": [1, 6],
             "healer cats": [1, 6],
             "normal adult": [-1, -1]
         },
@@ -184,7 +184,7 @@
         "max_cats": 2,
         "min_max_status": {
             "apprentice": [-1, -1],
-            "medicine cat": [1, 6],
+            "healer": [1, 6],
             "healer cats": [1, 6],
             "normal adult": [-1, -1]
         },
@@ -230,8 +230,8 @@
         "max_cats": 1,
         "min_max_status": {
             "apprentice": [-1, -1],
-            "medicine cat": [1, 6],
-            "medicine cat apprentice": [1, 6],
+            "healer": [1, 6],
+            "healer apprentice": [1, 6],
             "healer cats": [1, 6],
             "normal adult": [-1, -1]
         },
@@ -265,7 +265,7 @@
         "max_cats": 2,
         "min_max_status": {
             "apprentice": [-1, -1],
-            "medicine cat": [1, 6],
+            "healer": [1, 6],
             "all apprentices": [-1, -1],
             "normal adult": [-1, -1]
         },
@@ -333,7 +333,7 @@
         "max_cats": 2,
         "min_max_status": {
             "apprentice": [-1, -1],
-            "medicine cat": [1, 6],
+            "healer": [1, 6],
             "normal adult": [-1, -1]
         },
         "weight": 20,
@@ -364,7 +364,7 @@
                 ]
             },
             {
-                "text": "p_l and r_c decide on a little friendly competition - one medicine cat to another, like all those silly bets the warriors make about hunting prey. They reunite when the sun is going down and walk into camp purring and playfully shoving each other with both their mouths full of herbs.",
+                "text": "p_l and r_c decide on a little friendly competition - one healer to another, like all those silly bets the warriors make about hunting prey. They reunite when the sun is going down and walk into camp purring and playfully shoving each other with both their mouths full of herbs.",
                 "exp": 10,
                 "weight": 5,
                 "herbs": ["random_herbs"],

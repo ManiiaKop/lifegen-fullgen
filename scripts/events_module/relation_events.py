@@ -115,10 +115,13 @@ class Relation_Events:
 
             # the more mates the cat has, the less likely it will be that they interact with another cat romantically
             for mate_id in cat.mate:
-                chance_number -= int(cat.relationships[mate_id].romantic_love / 20)
-            use_mate = int(random.random() * chance_number)
-
-        # If use_mate is falsey, or if the cat has been marked as "no_mates", only allow romantic
+                try:
+                    chance_number -= int(cat.relationships[mate_id].romantic_love / 20)
+                except:
+                    chance_number -= 0
+            use_mate = int(random.random() * chance_number)  
+            
+        # If use_mate is falsey, or if the cat has been marked as "no_mates", only allow romantic 
         # relations with current mates
         if use_mate or cat.no_mates:
             cat_to_choose_from = [
@@ -273,7 +276,6 @@ class Relation_Events:
         )
         if main_cat in cat_list:
             cat_list.remove(main_cat)
-        
         filtered_cat_list = []
 
         for inter_cat in cat_list:
@@ -397,7 +399,7 @@ class Relation_Events:
     @staticmethod
     def can_trigger_events(cat):
         """Returns if the given cat can still trigger events."""
-        special_status = ["leader", "deputy", "medicine cat", "mediator", "queen"]
+        special_status = ["leader", "deputy", "healer", "mediator", "queen"]
         
         # set the threshold correctly
         threshold = game.config["relationship"]["max_interaction"]

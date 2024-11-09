@@ -149,10 +149,16 @@ class ClanScreen(Screens):
             scale(pygame.Rect(self.layout["leader den"], (224, 56))),
             "",
             object_id="#lead_den_button",
+<<<<<<< HEAD
             starting_height=2
             )
         self.med_den_label = UIImageButton(
             scale(pygame.Rect(self.layout["medicine den"], (302, 56))),
+=======
+            starting_height=2)
+        self.med_den_label = UIImageButton(scale(pygame.Rect(
+            self.layout["healer den"], (302, 56))),
+>>>>>>> 2024-09
             "",
             object_id="#med_den_button",
             starting_height=2
@@ -338,7 +344,14 @@ class ClanScreen(Screens):
             first_choices[x].extend(first_choices[x])
 
         for x in game.clan.clan_cats:
+<<<<<<< HEAD
             if Cat.all_cats[x].dead or Cat.all_cats[x].outside or Cat.all_cats[x].moons <= 0:
+=======
+            if not Cat.all_cats.get(x, False):
+                game.clan.clan_cats.remove(x)
+                continue
+            if Cat.all_cats[x].dead or Cat.all_cats[x].outside:
+>>>>>>> 2024-09
                 continue
 
             # Newborns are not meant to be placed. They are hiding.
@@ -370,7 +383,7 @@ class ClanScreen(Screens):
                 Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(first_choices, all_dens,
                                                                                  [60, 8, 1, 1, 1, 1, 1])                                                                     
             elif Cat.all_cats[x].status in [
-                'medicine cat apprentice', 'medicine cat'
+                'healer apprentice', 'healer'
             ]:
                 Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(first_choices, all_dens,
                                                                                  [20, 20, 20, 400, 1, 1, 1])

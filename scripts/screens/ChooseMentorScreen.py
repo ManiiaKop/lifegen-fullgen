@@ -418,7 +418,7 @@ class ChooseMentorScreen(Screens):
                 and check_cat.ID != game.clan.instructor.ID
                 and not check_cat.exiled
                 and check_cat.status
-                in ["apprentice", "medicine cat apprentice", "mediator apprentice"]
+                in ["apprentice", "healer apprentice", "mediator apprentice"]
                 and check_cat.df == self.the_cat.df
             ):
                 self.previous_cat = check_cat.ID
@@ -430,7 +430,7 @@ class ChooseMentorScreen(Screens):
                 and check_cat.ID != game.clan.instructor.ID
                 and not check_cat.exiled
                 and check_cat.status
-                in ["apprentice", "medicine cat apprentice", "mediator apprentice"]
+                in ["apprentice", "healer apprentice", "mediator apprentice"]
                 and check_cat.df == self.the_cat.df
             ):
                 self.next_cat = check_cat.ID
@@ -626,7 +626,7 @@ class ChooseMentorScreen(Screens):
         potential_warrior_mentors = [cat for cat in Cat.all_cats_list if not (cat.dead or cat.outside) and cat.status in ['warrior', 'deputy', 'leader']]
         valid_warrior_mentors = []
         invalid_warrior_mentors = []
-        potential_medcat_mentors = [cat for cat in Cat.all_cats_list if not (cat.dead or cat.outside) and cat.status == 'medicine cat']
+        potential_medcat_mentors = [cat for cat in Cat.all_cats_list if not (cat.dead or cat.outside) and cat.status == 'healer']
         valid_medcat_mentors = []
         invalid_medcat_mentors = []
         potential_mediator_mentors = [cat for cat in Cat.all_cats_list if not (cat.dead or cat.outside) and cat.status == 'mediator']
@@ -659,7 +659,7 @@ class ChooseMentorScreen(Screens):
             return valid_warrior_mentors
 
 
-        elif self.the_cat.status == "medicine cat apprentice":
+        elif self.the_cat.status == "healer apprentice":
             for cat in potential_medcat_mentors:
 
                 is_valid = True

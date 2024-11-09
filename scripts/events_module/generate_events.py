@@ -322,7 +322,7 @@ class GenerateEvents:
                 continue
 
             if "clan_apps" in event.tags and not get_alive_status_cats(Cat_class,
-                                                                       ["apprentice", "medicine cat apprentice",
+                                                                       ["apprentice", "healer apprentice",
                                                                         "mediator apprentice"]):
                 continue
 
@@ -511,14 +511,14 @@ class GenerateEvents:
 
                             if "m_c" in block["cats"]:
                                 if injury == 'mangled tail' and (
-                                        'NOTAIL' in cat.pelt.scars or 'HALFTAIL' in cat.pelt.scars):
+                                        'NOTAIL' in cat.pelt.scars or 'HALFTAIL' in cat.pelt.scars or (0 < cat.phenotype.bobtailnr < 5)):
                                     continue
 
                                 if injury == 'torn ear' and 'NOEAR' in cat.pelt.scars:
                                     continue
                             if "r_c" in block["cats"]:
                                 if injury == 'mangled tail' and (
-                                        'NOTAIL' in random_cat.pelt.scars or 'HALFTAIL' in random_cat.pelt.scars):
+                                        'NOTAIL' in random_cat.pelt.scars or 'HALFTAIL' in random_cat.pelt.scars or (0 < random_cat.phenotype.bobtailnr < 5)):
                                     continue
 
                                 if injury == 'torn ear' and 'NOEAR' in random_cat.pelt.scars:
@@ -801,7 +801,7 @@ class GenerateEvents:
             if "status" in cat_info:
                 # special lost cat check
                 if event_type == "outsider":
-                    if cat.status not in ["loner", "rogue", "kittypet", "former clancat", "exiled"]:
+                    if cat.status not in ["loner", "rogue", "kittypet", "former Clancat", "exiled"]:
                         if "lost" not in cat_info["status"]:
                             continue
                     elif cat.status not in cat_info["status"] and "any" not in cat_info["status"]:

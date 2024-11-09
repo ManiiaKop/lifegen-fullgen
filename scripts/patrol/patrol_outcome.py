@@ -229,6 +229,16 @@ class PatrolOutcome:
         # This must be done before text processing so that the new cat's pronouns are generated first
         results = [self._handle_new_cats(patrol)]
 
+        tnr = False
+        tnr2 = False
+        if 'tnr' in patrol.patrol_event.tags and game.clan.clan_settings['tnr_mode']:
+            if random.random() < game.config['tnr_mode']['Clan_tnr']:
+                tnr = True
+        if 'tnr2' in patrol.patrol_event.tags and game.clan.clan_settings['tnr_mode']:
+            if random.random() < game.config['tnr_mode']['Clan_tnr2']:
+                tnr = True
+                tnr2 = True
+
         # the text has to be processed before - otherwise leader might be referenced with their warrior name
         processed_text = event_text_adjust(Cat,
                                            self.text,
@@ -244,9 +254,13 @@ class PatrolOutcome:
         # This order is important. 
         results.append(self._handle_accessories(patrol))
         results.append(self._handle_death(patrol))
+<<<<<<< HEAD
         results.append(self._handle_lost(patrol))
         results.append(self._handle_df_convert(patrol))
         results.append(self._handle_faith_changes(patrol))
+=======
+        results.append(self._handle_lost(patrol, tnr, tnr2))
+>>>>>>> 2024-09
         results.append(self._handle_condition_and_scars(patrol))
         results.append(unpack_rel_block(Cat, self.relationship_effects, patrol, stat_cat=self.stat_cat))
         results.append(self._handle_rep_changes(patrol))
@@ -331,19 +345,19 @@ class PatrolOutcome:
             # First, the blanket requirements
             if "app" in self.can_have_stat and kitty.status not in [
                 "apprentice",
-                "medicine cat apprentice",
+                "healer apprentice",
             ]:
                 continue
 
             if "adult" in self.can_have_stat and kitty.status in [
                 "apprentice",
-                "medicine cat apprentice",
+                "healer apprentice",
             ]:
                 continue
 
             if "healer" in self.can_have_stat and kitty.status not in [
-                "medicine cat",
-                "medicine cat apprentice",
+                "healer",
+                "healer apprentice",
             ]:
                 continue
 
@@ -424,7 +438,7 @@ class PatrolOutcome:
 
         if gained_exp or app_exp:
             for cat in patrol.patrol_cats:
-                if cat.status in ["apprentice", "medicine cat apprentice"]:
+                if cat.status in ["apprentice", "healer apprentice"]:
                     cat.experience = cat.experience + app_exp
                 else:
                     cat.experience = cat.experience + gained_exp
@@ -477,7 +491,7 @@ class PatrolOutcome:
 
         return " ".join(results)
 
-    def _handle_lost(self, patrol: "Patrol") -> str:
+    def _handle_lost(self, patrol: "Patrol", tnr, tnr2) -> str:
         """Handle losing cats"""
 
         if not self.lost_cats:
@@ -495,6 +509,10 @@ class PatrolOutcome:
         for _cat in cats_to_lose:
             results.append(f"{_cat.name} has been lost.")
             _cat.gone()
+            if tnr and 'TNR' not in _cat.pelt.scars:
+                if not tnr2:
+                    _cat.pelt.scars.append("TNR")
+                _cat.get_permanent_condition("infertility", False)
             # _cat.greif(body=False)
 
         return " ".join(results)
@@ -1380,7 +1398,7 @@ class PatrolOutcome:
                 # Search for parent
                 for sub_sub in patrol.new_cats:
                     if sub_sub[0] != sub[0] and (
-                            sub_sub[0].gender == "female" or game.clan.clan_settings['same sex birth']) \
+                            'Y' not in sub_sub[0].genotype.sexgene or game.clan.clan_settings['same sex birth']) \
                             and sub_sub[0].ID in (sub[0].parent1, sub[0].parent2) and not (
                             sub_sub[0].dead or sub_sub[0].outside):
                         sub_sub[0].get_injured("recovering from birth")

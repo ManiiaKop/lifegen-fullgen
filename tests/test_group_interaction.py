@@ -359,13 +359,13 @@ class Abbreviations(unittest.TestCase):
         random2 = Cat()
         random2.status = "warrior"
         random3 = Cat()
-        random3.status = "medicine cat"
+        random3.status = "healer"
 
         interaction1 = GroupInteraction("1")
         interaction1.status_constraint = {"r_c1": ["warrior"]}
 
         interaction2 = GroupInteraction("2")
-        interaction2.status_constraint = {"r_c1": ["medicine cat"]}
+        interaction2.status_constraint = {"r_c1": ["healer"]}
         
         # when
         all_interactions = [interaction1, interaction2]
@@ -418,7 +418,7 @@ class Abbreviations(unittest.TestCase):
         random2 = Cat()
         random2.status = "warrior"
         random3 = Cat()
-        random3.status = "medicine cat"
+        random3.status = "healer"
 
         # when
         interaction_cats = [random1, random2, random3]

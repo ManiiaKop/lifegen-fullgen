@@ -18,3 +18,4 @@ jobs:
         run: poetry install --with test
       - name: Run Pylint
         run: poetry run pylint --recursive=y --errors-only "$PWD"
+            

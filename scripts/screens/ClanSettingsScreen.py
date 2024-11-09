@@ -369,9 +369,9 @@ class ClanSettingsScreen(Screens):
                 continue
 
             living_cats += 1
-            if cat.status == "medicine cat":
+            if cat.status == "healer":
                 med_cats += 1
-            elif cat.status == "medicine cat apprentice":
+            elif cat.status == "healer apprentice":
                 med_cat_apprentices += 1
             elif cat.status == "warrior":
                 warriors += 1
@@ -389,6 +389,7 @@ class ClanSettingsScreen(Screens):
                 elders += 1
             elif cat.status in ("newborn", "kitten"):
                 kits += 1
+<<<<<<< HEAD
                     
         text = f"Living Clan Cats: {living_cats}\n" \
         f"StarClan Cats: {starclan}\n" \
@@ -415,6 +416,30 @@ class ClanSettingsScreen(Screens):
             "",
             object_id="#achivements_button",
             manager=MANAGER)
+=======
+
+        text = (
+            f"Living Clan Cats: {living_cats}\n"
+            f"StarClan Cats: {starclan}\n"
+            f"Dark Forest Cats: {df}\n"
+            f"Unknown Residence Cats: {ur}\n"
+            f"Healers: {med_cats}\n"
+            f"Healer Apprentices: {med_cat_apprentices}\n"
+            f"Warriors: {warriors}\n"
+            f"Warrior Apprentices: {warrior_apprentices}\n"
+            f"Mediators: {mediators}\n"
+            f"Mediators Apprentices: {mediator_apprentices}\n"
+            f"Elders: {elders}\n"
+            f"Kittens and Newborns: {kits}\n"
+            f"Faded Cats: {faded_cats}"
+        )
+
+        self.checkboxes_text["stat_box"] = pygame_gui.elements.UITextBox(
+            text,
+            scale(pygame.Rect((300, 400, 1060, 690))),
+            object_id=get_text_box_theme("#text_box_30_horizcenter"),
+        )
+>>>>>>> 2024-09
 
     def refresh_checkboxes(self):
         """

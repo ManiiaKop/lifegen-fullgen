@@ -194,7 +194,6 @@
             "Is debating if {PRONOUN/m_c/subject} should declare a war with another Clan",
             "Is wondering if {PRONOUN/m_c/subject} could hold apprentice ceremonies 2 moons earlier",
             "Hopes to postpone the retirement of {PRONOUN/m_c/poss} Clanmates",
-            "Asks the medicine cats to have a stock of deathberries at {PRONOUN/m_c/poss} disposal",
             "Doesn't understand StarClan's resentment towards {PRONOUN/m_c/object}",
             "Is thinking about taking kits from another Clan",
             "Encourages warriors to destroy other Clan's herb supplies",
@@ -203,11 +202,7 @@
             "Thinks about driving out an opposing Clan",
             "Glares over the Clan from the leader's den",
             "Is slashing at a 'disloyal' warrior",
-            "Swears the Clan is plotting against {PRONOUN/m_c/object}",
-            "Isn't afraid to claw a fur off of a Clanmate for disobeying {PRONOUN/m_c/object}",
-            "During a skirmish, sinks {PRONOUN/m_c/subject} fangs into a rival cat until {PRONOUN/m_c/subject} {VERB/m_c/taste/tastes} blood",
-            "Rakes a claw across a cat's muzzle for debating against {PRONOUN/m_c/object}",
-            "Is ready to tear off a cat's coat for c_n"
+            "Swears the Clan is plotting against {PRONOUN/m_c/object}"
         ],
         "main_trait_constraint": [
             "bloodthirsty"
@@ -287,22 +282,21 @@
         ],
         "main_trait_constraint": [
             "childish"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
         "id": "cold_leader",
         "thoughts": [
-            "Rolls {PRONOUN/m_c/poss} eyes when r_c suggests sharing their fresh-kill with other Clans",
-            "Brought forth a new law for c_n to be hostile to outsiders",
-            "Refuses to allow gutless cats as warriors",
-            "Will not open up to mercy, believing it will allow c_n to be weak",
-            "Would rather spend {PRONOUN/m_c/poss} day alone",
-            "Is using harsh words through a distressing event",
-            "Is willing to humiliate a cat for disobeying {PRONOUN/m_c/object}",
-            "Was seen yowling at a crying cat instead of comforting them"
+            "Rolls {PRONOUN/m_c/poss} eyes when r_c suggests sharing their fresh-kill with other Clans"
         ],
         "main_trait_constraint": [
             "cold"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -420,10 +414,7 @@
             "No thoughts, head empty",
             "Insists that {PRONOUN/m_c/subject} received ten lives instead of nine",
             "Has a crazed look in {PRONOUN/m_c/poss} eyes",
-            "Wonders how many cats would agree to changing the Clan's name...",
-            "Is mimicking a stone standing still",
-            "Has been staring at {PRONOUN/m_c/poss} Clanmates for awhile without fluttering an eye",
-            "Told {PRONOUN/m_c/poss} Clanmates to get ready for something that appeared in a dream, but doesn't elaborate"
+            "Wonders how many cats would agree to changing the Clan's name..."
         ],
         "main_trait_constraint": [
             "strange"
@@ -619,8 +610,7 @@
             "Trusts r_c to continue to keep the Clan in line",
             "Threatens to drag r_c to the dark forest with {PRONOUN/m_c/object}",
             "Is teaching r_c how to rat out spies and dissenting warriors",
-            "Shows r_c how to lead by pain and suffering",
-            "Sadistically debating with r_c on whether to exile or publicly kill disloyal cats"
+            "Shows r_c how to control with pain and suffering"
         ],
         "random_status_constraint": [
             "deputy"
@@ -648,12 +638,11 @@
             "Instructs r_c to let a sick cat die",
             "Is telling r_c to make a poultice with deathberries",
             "Tells r_c to fake a sign from StarClan to prepare the Clan for war",
-            "Is pleased with having a like-minded medicine cat like r_c",
-            "Is listening to r_c explain the pointlessness of treating weak or old cats",
-            "Asks r_c to construct a myraid of fake omens and signs to keep {PRONOUN/m_c/object} in power"
+            "Is pleased with having a like-minded healer like r_c",
+            "Is listening to r_c explain the pointlessness of treating weak or old cats"
         ],
         "random_status_constraint": [
-            "medicine cat"
+            "healer"
         ],
         "random_living_status": [
             "living"

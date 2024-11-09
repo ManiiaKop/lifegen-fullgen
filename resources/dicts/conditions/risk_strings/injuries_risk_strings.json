@@ -67,7 +67,7 @@
     },
     "mangled leg": {
         "an infected wound": [
-          "r_c wonders if {PRONOUN/r_c/subject} might need to consult with a medicine cat from another Clan. m_c's mangled leg has become infected and swollen - and {PRONOUN/r_c/subject} {VERB/r_c/need/needs} more ideas.",
+          "r_c wonders if {PRONOUN/r_c/subject} might need to consult with a healer from another Clan. m_c's mangled leg has become infected and swollen - and {PRONOUN/r_c/subject} {VERB/r_c/need/needs} more ideas.",
             "As if the injury wasn't bad enough, the skin around m_c's mangled leg has started to swell and feel feverish."
 
         ]
@@ -214,9 +214,22 @@
             "m_c can't focus on anything but the searing pain in {PRONOUN/m_c/poss} head. {PRONOUN/m_c/poss/CAP} head injury must have rattled something deep in {PRONOUN/m_c/poss} skull."
         ]
     },
+    "itchy skin" : {
+        "an infected wound" : [
+            "Despite r_c's warnings not to, m_c can't help but scratch at {PRONOUN/m_c/poss} itching skin. Now they've got to deal with a fresh infection festering where the skin broke.",
+            "m_c can't help but scratch at the itchy spots of skin. {PRONOUN/r_c/subject} barely {VERB/m_c/notice/notices} the small wounds until one grows infected"
+        ]
+    },
+    "cyst" : {
+        "an infected wound" : [
+            "Despite both r_c and m_c's efforts, the spot where the cyst had popped looks to have become infected.",
+            "Despite m_c's efforts, the spot where the cyst had popped looks to have become infected."
+        ]
+    },
     "guilt": {
         "shock": [
-            "m_c is growing more and more haunted by what {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} done."
+          "r_c tries to comfort m_c as {PRONOUN/m_c/subject} {VERB/m_c/grow/grows} more and more haunted by {PRONOUN/m_c/poss} crimes, but there are no herbs for guilt.",
+          "m_c is growing more and more haunted by what {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} done."
         ]
     }
 }

@@ -2,6 +2,9 @@ import os
 from copy import copy
 
 import pygame
+
+import os
+
 import ujson
 
 from scripts.game_structure.game_essentials import game
@@ -181,12 +184,15 @@ class Sprites:
             sprites.spritesheet("sprites/genemod/Base Colours/"+x, 'base/'+x.replace('.png', ""))
         for x in os.listdir("sprites/genemod/points"):
             sprites.spritesheet("sprites/genemod/points/"+x, x.replace('.png', ""))
-        for x in os.listdir("sprites/genemod/Tabby Bases"):
-            sprites.spritesheet("sprites/genemod/Tabby Bases/"+x, 'Tabby/'+x.replace('.png', ""))
+        for x in os.listdir("sprites/genemod/New Tabbies"):
+            sprites.spritesheet("sprites/genemod/New Tabbies/"+x, 'Tabby/'+x.replace('.png', ""))
         for x in os.listdir("sprites/genemod/extra"):
             sprites.spritesheet("sprites/genemod/extra/"+x, 'Other/'+x.replace('.png', ""))
         for x in os.listdir("sprites/genemod/effects"):
             sprites.spritesheet("sprites/genemod/effects/"+x, 'Other/'+x.replace('.png', ""))
+        for x in os.listdir("sprites/genemod/somatic"):
+            sprites.spritesheet("sprites/genemod/somatic/"+x, 'Somatic/'+x.replace('.png', ""))
+            self.make_group('Somatic/'+x.replace('.png', ""), (0, 0), "Somatic/"+x.replace('.png', ""))
         
         
         for x in os.listdir("sprites/genemod/white"):
@@ -232,17 +238,18 @@ class Sprites:
         for x in ["black", "blue", "dove", "platinum",
                   "chocolate", "lilac", "champagne", "lavender",
                   "cinnamon", "fawn", "buff", "beige",
-                  "red", "unders_red", "cream", "unders_cream", "honey", "unders_honey", "ivory", "unders_ivory"]:
+                  "red", "cream", "honey", "ivory"]:
             for a, i in enumerate(['rufousedlow', 'rufousedmedium', 'rufousedhigh', 'rufousedshaded', 'rufousedchinchilla']):
-                self.make_group('Tabby/'+x, (a, 0), f'{x}{i}')
+                self.make_group('Tabby/'+x, (a, 0), f'{x}{i}', sprites_x=1, sprites_y=1)
             for a, i in enumerate(['mediumlow', 'mediummedium', 'mediumhigh', 'mediumshaded', 'mediumchinchilla']):
-                self.make_group('Tabby/'+x, (a, 1), f'{x}{i}')
+                self.make_group('Tabby/'+x, (a, 1), f'{x}{i}', sprites_x=1, sprites_y=1)
             for a, i in enumerate(['lowlow', 'lowmedium', 'lowhigh', 'lowshaded', 'lowchinchilla']):
-                self.make_group('Tabby/'+x, (a, 2), f'{x}{i}')
+                self.make_group('Tabby/'+x, (a, 2), f'{x}{i}', sprites_x=1, sprites_y=1)
             for a, i in enumerate(['silverlow', 'silvermedium', 'silverhigh', 'silvershaded', 'silverchinchilla']):
-                self.make_group('Tabby/'+x, (a, 3), f'{x}{i}')
+                self.make_group('Tabby/'+x, (a, 3), f'{x}{i}', sprites_x=1, sprites_y=1)
         for a, x in enumerate(['low', 'medium', 'high', 'shaded', 'chinchilla']):
             self.make_group('Tabby/shading', (a, 0), f'{x}shading')
+        self.make_group('Tabby/unders', (0, 0), f'Tabby_unders')
 
         # genemod tabby patterns
 
@@ -278,13 +285,17 @@ class Sprites:
         self.make_group('Other/smoke', (0, 0), 'smoke')
         self.make_group('Other/bleach', (0, 0), 'bleach')
         self.make_group('Other/lykoi', (0, 0), 'lykoi')
+        self.make_group('Other/hairless', (0, 0), 'hairless')
+        self.make_group('Other/donskoy', (0, 0), 'donskoy')
+        self.make_group('Other/furpoint', (0, 0), 'furpoint')
         self.make_group('Other/caramel', (0, 0), 'caramel', 1, 1)
         self.make_group('Other/satin', (0, 0), 'satin', 1, 1)
+        self.make_group('Other/salmiak', (0, 0), 'salmiak')
 
 
         #genemod extra
         self.make_group('Other/ears', (0, 0), 'ears')
-        self.make_group('Other/albino_skin', (0, 0), 'albino')
+        # self.make_group('Other/albino_skin', (0, 0), 'albino') # in old ver, not in merge. here just in case
         self.make_group('Other/noses', (0, 0), 'nose')
         self.make_group('Other/nose_colours', (0, 0), 'nosecolours', sprites_y=5)
         self.make_group('Other/paw_pads', (0, 0), 'pads')
@@ -297,6 +308,8 @@ class Sprites:
         for b, x in enumerate(['P11', 'P10', 'P9', 'P8', 'P7', 'P6', 'P5', 'P4', 'P3', 'P2', 'P1', 'blue', 'albino']):
             for a, y in enumerate(range(1, 12)):
                 self.make_group('Other/eyes_full', (a, b), f'R{y} ; {x}/', sprites_y=6)
+        
+        self.make_group('Other/red_pupils', (0, 0), 'redpupils')
 
         # Line art
         self.make_group('lineart', (0, 0), 'lines')
@@ -312,18 +325,7 @@ class Sprites:
             self.make_group('fadestarclan', (i, 0), f'fadestarclan{i}')
             self.make_group('fadedarkforest', (i, 0), f'fadedf{i}')
 
-        # Define eye colors
-        eye_colors = [
-            ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD',
-             'HEATHERBLUE', 'SUNLITICE'],
-            ['COPPER', 'SAGE', 'COBALT', 'PALEBLUE', 'BRONZE', 'SILVER', 'PALEYELLOW', 'GOLD', 'GREENYELLOW']
-        ]
-
-        for row, colors in enumerate(eye_colors):
-            for col, color in enumerate(colors):
-                self.make_group('eyes', (col, row), f'eyes{color}')
-                self.make_group('eyes2', (col, row), f'eyes2{color}')
-
+        
         # Define white patches
         white_patches = [
             ['FULLWHITE', 'ANY', 'TUXEDO', 'LITTLE', 'COLOURPOINT', 'VAN', 'ANYTWO', 'MOON', 'PHANTOM', 'POWDER',
@@ -349,27 +351,8 @@ class Sprites:
 
         for row, patches in enumerate(white_patches):
             for col, patch in enumerate(patches):
-                self.make_group('whitepatches', (col, row), f'white{patch}')
-
-        # Define colors and categories
-        color_categories = [
-            ['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK'],
-            ['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA'],
-            ['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']
-        ]
-
-        color_types = [
-            'singlecolours', 'tabbycolours', 'marbledcolours', 'rosettecolours',
-            'smokecolours', 'tickedcolours', 'speckledcolours', 'bengalcolours',
-            'mackerelcolours', 'classiccolours', 'sokokecolours', 'agouticolours',
-            'singlestripecolours', 'maskedcolours'
-        ]
-
-        for row, colors in enumerate(color_categories):
-            for col, color in enumerate(colors):
-                for color_type in color_types:
-                    self.make_group(color_type, (col, row), f'{color_type[:-7]}{color}')
-
+                self.make_group('whitepatches', (col, row), patch)
+            
         # tortiepatchesmasks
         tortiepatchesmasks = [
             ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'HALF', 'STREAK', 'MASK', 'SMOKE'],
@@ -377,23 +360,13 @@ class Sprites:
              'GRUMPYFACE'],
             ['MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE', 'SMUDGED', 'DAUB', 'EMBER', 'BRIE'],
             ['ORIOLE', 'ROBIN', 'BRINDLE', 'PAIGE', 'ROSETAIL', 'SAFI', 'DAPPLENIGHT', 'BLANKET', 'BELOVED', 'BODY'],
-            ['SHILOH', 'FRECKLED', 'HEARTBEAT']
+            ['SHILOH', 'FRECKLED', 'HEARTBEAT', 'CRYPTIC']
         ]
 
         for row, masks in enumerate(tortiepatchesmasks):
             for col, mask in enumerate(masks):
                 self.make_group('tortiepatchesmasks', (col, row), f"tortiemask{mask}")
-
-        # Define skin colors 
-        skin_colors = [
-            ['BLACK', 'RED', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN'],
-            ['DARK', 'DARKGREY', 'GREY', 'DARKSALMON', 'SALMON', 'PEACH'],
-            ['DARKMARBLED', 'MARBLED', 'LIGHTMARBLED', 'DARKBLUE', 'BLUE', 'LIGHTBLUE']
-        ]
-
-        for row, colors in enumerate(skin_colors):
-            for col, color in enumerate(colors):
-                self.make_group('skin', (col, row), f"skin{color}")
+        self.make_group('Other/blue-tipped', (0, 0), 'tortiemaskBLUE-TIPPED')
 
         self.load_scars()
         self.load_symbols()
@@ -587,7 +560,7 @@ class Sprites:
 
         # define missing parts
         missing_parts_data = [
-            ["LEFTEAR", "RIGHTEAR", "NOTAIL", "NOLEFTEAR", "NORIGHTEAR", "NOEAR", "HALFTAIL", "NOPAW"]
+            ["LEFTEAR", "RIGHTEAR", "NOTAIL", "NOLEFTEAR", "NORIGHTEAR", "NOEAR", "HALFTAIL", "NOPAW", "TNR"]
         ]
 
         # scars 
@@ -601,15 +574,17 @@ class Sprites:
                 self.make_group('missingscars', (col, row), f'scars{missing_part}')
 
         # accessories
+        #to my beloved modders, im very sorry for reordering everything <333 -clay
         medcatherbs_data = [
-            ["MAPLE LEAF", "HOLLY", "BLUE BERRIES", "FORGET ME NOTS", "RYE STALK", "LAUREL"],
-            ["BLUEBELLS", "NETTLE", "POPPY", "LAVENDER", "HERBS", "PETALS"],
-            [],  # Empty row because this is the wild data, except dry herbs.
-            ["OAK LEAVES", "CATMINT", "MAPLE SEED", "JUNIPER"]
+            ["MAPLE LEAF", "HOLLY", "BLUE BERRIES", "FORGET ME NOTS", "RYE STALK", "CATTAIL", "POPPY", "ORANGE POPPY", "CYAN POPPY", "WHITE POPPY", "PINK POPPY"],
+            ["BLUEBELLS", "LILY OF THE VALLEY", "SNAPDRAGON", "HERBS", "PETALS", "NETTLE", "HEATHER", "GORSE", "JUNIPER", "RASPBERRY", "LAVENDER"],
+            ["OAK LEAVES", "CATMINT", "MAPLE SEED", "LAUREL", "BULB WHITE", "BULB YELLOW", "BULB ORANGE", "BULB PINK", "BULB BLUE", "CLOVER", "DAISY"]
         ]
-
+        dryherbs_data = [
+            ["DRY HERBS", "DRY CATMINT", "DRY NETTLES", "DRY LAURELS"]
+        ]
         wild_data = [
-            ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS", "MOTH WINGS", "CICADA WINGS"]
+            ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS", "GULL FEATHERS", "SPARROW FEATHERS", "MOTH WINGS", "ROSY MOTH WINGS", "MORPHO BUTTERFLY", "MONARCH BUTTERFLY", "CICADA WINGS", "BLACK CICADA"]
         ]
 
         collars_data = [
@@ -640,12 +615,14 @@ class Sprites:
         for row, herbs in enumerate(medcatherbs_data):
             for col, herb in enumerate(herbs):
                 self.make_group('medcatherbs', (col, row), f'acc_herbs{herb}')
-        self.make_group('medcatherbs', (5, 2), 'acc_herbsDRY HERBS')
-
+        #dryherbs
+        for row, dry in enumerate(dryherbs_data):
+            for col, dryherbs in enumerate(dry):
+                self.make_group('medcatherbs', (col, 3), f'acc_herbs{dryherbs}')     
         # wild
         for row, wilds in enumerate(wild_data):
             for col, wild in enumerate(wilds):
-                self.make_group('medcatherbs', (col, 2), f'acc_wild{wild}')
+                self.make_group('wild', (col, 0), f'acc_wild{wild}')
 
         # collars
         for row, collars in enumerate(collars_data):

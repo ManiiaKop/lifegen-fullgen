@@ -35,7 +35,11 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
+<<<<<<< HEAD
     name='Lifegen',
+=======
+    name='Genemod',
+>>>>>>> 2024-09
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -56,11 +60,19 @@ coll = COLLECT(
     strip=False,
     upx=False,
     upx_exclude=[],
+<<<<<<< HEAD
     name='Lifegen',
 )
 app = BUNDLE(
     coll,
     name='Lifegen.app',
+=======
+    name='Genemod',
+)
+app = BUNDLE(
+    coll,
+    name='Genemod.app',
+>>>>>>> 2024-09
     icon='resources/images/icon.png',
     bundle_identifier='com.sablesteel.clangen',
     version='0.7.5' # imo we should give dev builds .5

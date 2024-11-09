@@ -2,16 +2,21 @@ import pygame
 import pygame_gui
 
 from scripts.cat.cats import Cat
+<<<<<<< HEAD
 from scripts.game_structure.image_button import UISpriteButton, UIImageButton, UITextBoxTweaked, AllegiancesCat
 from scripts.utility import get_text_box_theme, get_button_theme, scale, get_med_cats, shorten_text_to_fit, get_alive_clan_queens
+=======
+>>>>>>> 2024-09
 from scripts.game_structure.game_essentials import game, screen_x, screen_y, MANAGER
 from scripts.game_structure.ui_elements import (
     UISpriteButton,
     UIImageButton,
-    UITextBoxTweaked
+    UITextBoxTweaked, 
+    AllegiancesCat
 )
 from scripts.utility import (
-    get_text_box_theme,
+    get_text_box_theme, 
+    get_button_theme,
     scale,
     get_alive_status_cats,
     shorten_text_to_fit,
@@ -67,9 +72,19 @@ class AllegiancesScreen(Screens):
                                    scale(pygame.Rect((0, y_pos), (300, -1))),
                                    object_id=get_text_box_theme("#text_box_30_horizleft"),
                                    container=self.scroll_container, manager=MANAGER))
+<<<<<<< HEAD
             self.ranks_boxes[-1].disable()
 
             self.names_buttons.append(AllegiancesCat(scale(pygame.Rect((290, y_pos+10), (1060, -1))),
+=======
+                self.ranks_boxes[-1].disable()
+            offset = 10
+            x_pos = 290
+            if game.settings["fullscreen"]:
+                offset = screen_y / 225
+                x_pos = 293
+            self.names_buttons.append(AllegiancesCat(scale(pygame.Rect((x_pos, y_pos+offset), (1060, -1))),
+>>>>>>> 2024-09
                                     x[1],
                                     object_id=get_button_theme(),
                                     container=self.scroll_container, manager=MANAGER))
@@ -82,8 +97,11 @@ class AllegiancesScreen(Screens):
             
             #self.names_boxes[-1].process_event(pygame_gui.UI_ELEMENT_PRESSED)
             
+<<<<<<< HEAD
             y_pos += 1400 * self.names_boxes[-1].get_relative_rect()[3] / screen_y 
 
+=======
+>>>>>>> 2024-09
             y_pos += 1400 * self.names_boxes[-1].get_relative_rect()[3] / screen_y
 
         self.scroll_container.set_scrollable_area_dimensions(
@@ -104,7 +122,7 @@ class AllegiancesScreen(Screens):
         del self.scroll_container
         self.heading.kill()
         del self.heading
-
+            
     def generate_one_entry(self, cat, extra_details=""):
         """Extra Details will be placed after the cat description, but before the apprentice (if they have one. )"""
         output = f"{str(cat.name).upper()} - {cat.describe_cat()} {extra_details}"
@@ -122,7 +140,11 @@ class AllegiancesScreen(Screens):
                 ]
             )
 
+<<<<<<< HEAD
         return ["", cat.ID, output]
+=======
+        return [str(cat.name).upper(), cat.ID, output]
+>>>>>>> 2024-09
 
     def get_allegiances_text(self):
         """Determine Text. Ouputs list of tuples."""
@@ -136,20 +158,42 @@ class AllegiancesScreen(Screens):
         living_kits = []
         living_elders = []
         for cat in living_cats:
-            if cat.status == "medicine cat":
+            if cat.status == "healer":
                 living_meds.append(cat)
             elif cat.status == "warrior":
                 living_warriors.append(cat)
             elif cat.status == "mediator":
                 living_mediators.append(cat)
+<<<<<<< HEAD
             elif cat.status == 'queen':
                 living_queens.append(cat)
             elif cat.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"]:
+=======
+            elif cat.status in ["apprentice", "healer apprentice", "mediator apprentice"]:
+>>>>>>> 2024-09
                 living_apprentices.append(cat)
             elif cat.status in ["kitten", "newborn"]:
                 living_kits.append(cat)
             elif cat.status == "elder":
                 living_elders.append(cat)
+        if not len(living_meds):
+            for cat in living_apprentices:
+                if cat.status == "healer apprentice":
+                    living_meds.append(cat)
+                    living_apprentices.remove(cat)
+        if not len(living_mediators):
+            for cat in living_apprentices:
+                if cat.status == "mediator apprentice":
+                    living_mediators.append(cat)
+                    living_apprentices.remove(cat)
+
+
+        living_meds = sorted(living_meds, key=lambda x: x.moons, reverse=True)
+        living_mediators = sorted(living_mediators, key=lambda x: x.moons, reverse=True)
+        living_warriors = sorted(living_warriors, key=lambda x: x.moons, reverse=True)
+        living_apprentices = sorted(living_apprentices, key=lambda x: x.moons, reverse=True)
+        living_kits = sorted(living_kits, key=lambda x: x.moons, reverse=True)
+        living_elders = sorted(living_elders, key=lambda x: x.moons, reverse=True)
 
         # Find Queens:
         queen_dict, living_kits = get_alive_clan_queens(living_cats)
@@ -186,11 +230,15 @@ class AllegiancesScreen(Screens):
                 x[2]
             ])
 
-        # Medicine Cat Box:
+        # Healer Box:
         if living_meds:
             if len(living_meds) == 1:
                 _box = ["", "", "", ""]
+<<<<<<< HEAD
                 _box[0] = '<b><u>MEDICINE CAT</u></b>'
+=======
+                _box[0] = '<b><u>HEALER</u></b>'
+>>>>>>> 2024-09
                 x = self.generate_one_entry(living_meds[0])
                 _box[1] = x[0]
                 _box[2] = x[1]
@@ -200,7 +248,11 @@ class AllegiancesScreen(Screens):
                 for i in range(len(living_meds)):    
                     _box = ["", "", "", ""]
                     if i == 0:    
+<<<<<<< HEAD
                         _box[0] = '<b><u>MEDICINE CATS</u></b>'
+=======
+                        _box[0] = '<b><u>HEALERS</u></b>'
+>>>>>>> 2024-09
                     else:
                         _box[0] = ""
                     x = self.generate_one_entry(living_meds[i])
@@ -281,12 +333,19 @@ class AllegiancesScreen(Screens):
                     _box[3] = x[2]
                     outputs.append(_box)
         
+<<<<<<< HEAD
         # Queens and Kits Box:
         if queen_dict or living_kits or living_queens:
             _box = ["", ""]
             _box[0] = "<b><u>QUEENS AND KITS</u></b>"
 
             # This one is a bit different.  First all the queens, and the kits they are caring for.
+=======
+         # Queens and Kits Box:
+        if queen_dict or living_kits:
+            
+            # This one is a bit different.  First all the queens, and the kits they are caring for. 
+>>>>>>> 2024-09
             all_entries = []
             for q in queen_dict:
                 queen = Cat.fetch_cat(q)

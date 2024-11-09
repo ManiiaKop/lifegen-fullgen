@@ -634,7 +634,7 @@
                 }
             },
             {
-                "text": "r_c eventually manages to pull {PRONOUN/r_c/self} free, but {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} wheezing and injured. It's all {PRONOUN/r_c/subject} can do to find some beach grass to shelter in through the night out on the shore, until a patrol finds {PRONOUN/r_c/object} the next morning and helps {PRONOUN/r_c/object} to the medicine den.",
+                "text": "r_c eventually manages to pull {PRONOUN/r_c/self} free, but {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} wheezing and injured. It's all {PRONOUN/r_c/subject} can do to find some beach grass to shelter in through the night out on the shore, until a patrol finds {PRONOUN/r_c/object} the next morning and helps {PRONOUN/r_c/object} to the healer den.",
                 "exp": 0,
                 "weight": 10,
                 "injury": [
@@ -710,7 +710,7 @@
                 "can_have_stat": ["app"]
             },
             {
-                "text": "The apprentice wanders along obliviously and slips, tumbling right down into a rocky pool. Bruised and sore, r_c has to report to the medicine cat den when {PRONOUN/r_c/subject} {VERB/r_c/return/returns} to camp.",
+                "text": "The apprentice wanders along obliviously and slips, tumbling right down into a rocky pool. Bruised and sore, r_c has to report to the healer den when {PRONOUN/r_c/subject} {VERB/r_c/return/returns} to camp.",
                 "exp": 0,
                 "weight": 10,
                 "injury": [
@@ -1838,7 +1838,7 @@
         },
         "weight": 20,
         "intro_text": "As p_l and r_c wander across the beach with only the stars to light their way, they notice sparkles of light where the waves break upon the shore.",
-        "decline_text": "A little freaked out, the warriors go to fetch a medicine cat to interpret this omen for them.",
+        "decline_text": "A little freaked out, the warriors go to fetch a healer to interpret this omen for them.",
         "chance_of_success": 60,
         "success_outcomes": [
             {
@@ -2135,7 +2135,7 @@
             ],
             "fail_outcomes": [
                 {
-                    "text": "As r_c settles down eagerly for the tale, {PRONOUN/r_c/subject} {VERB/r_c/feel/feels} a spike of pain in {PRONOUN/r_c/poss} paw pad and yelps. {PRONOUN/r_c/subject/CAP} {VERB/r_c/have/has} to report to the medicine den, but p_l reassures {PRONOUN/r_c/object} that {PRONOUN/p_l/subject}'ll wait to tell this tale until r_c can hear it.",
+                    "text": "As r_c settles down eagerly for the tale, {PRONOUN/r_c/subject} {VERB/r_c/feel/feels} a spike of pain in {PRONOUN/r_c/poss} paw pad and yelps. {PRONOUN/r_c/subject/CAP} {VERB/r_c/have/has} to report to the healer den, but p_l reassures {PRONOUN/r_c/object} that {PRONOUN/p_l/subject}'ll wait to tell this tale until r_c can hear it.",
                     "exp": 0,
                     "weight": 20,
                     "injury": [

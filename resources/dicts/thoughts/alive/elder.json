@@ -1,6 +1,6 @@
 [
     {
-      "id": "elder_gen_to_dead_gen",
+        "id": "elder_gen_to_dead_gen",
         "thoughts": [
             "Is telling stories about r_c",
             "Wishes that r_c were still alive",
@@ -56,13 +56,13 @@
         ]
     },
     {
-      "id": "elder_to_alive_younger_cats",
+        "id": "elder_to_alive_younger_cats",
         "thoughts": [
-          "Is giving advice to the younger cats",
-          "Is bossing the younger cats around",
+            "Is giving advice to the younger cats",
+            "Is bossing the younger cats around",
             "Is telling scary stories to the younger cats",
-          "Is sharing wisdom with the younger cats that is... less than helpful",
-          "Is recounting daring expeditions for the younger cats",
+            "Is sharing wisdom with the younger cats that is... less than helpful",
+            "Is recounting daring expeditions for the younger cats",
             "Is telling a rather tall tale to any cat who will listen"
         ],
         "main_age_constraint": [
@@ -76,7 +76,7 @@
         ]
     },
     {
-      "id": "elder_to_alive_apprentice",
+        "id": "elder_to_alive_apprentice",
         "thoughts": [
             "Is requesting an apprentice's help with {PRONOUN/m_c/poss} ticks",
             "Is asking apprentices to help check {PRONOUN/m_c/object} for ticks"
@@ -112,10 +112,10 @@
         "main_age_constraint": [
             "senior"
         ],
-        "random_living_status":[
+        "random_living_status": [
             "starclan"
         ],
-        "relationship_constraint":[
+        "relationship_constraint": [
             "mates"
         ]
     },
@@ -164,9 +164,9 @@
     {
         "id": "gen_retired_disabled_to_med_thoughts",
         "thoughts": [
-            "Wonders if the medicine cat needs any help today",
+            "Wonders if the healer needs any help today",
             "Offers to help r_c sort herbs",
-            "Wonders if {PRONOUN/m_c/subject} could've been a medicine cat with r_c instead of retiring",
+            "Wonders if {PRONOUN/m_c/subject} could've been a healer with r_c instead of retiring",
             "Brought r_c some fresh-kill"
         ],
         "perm_conditions": {
@@ -177,8 +177,11 @@
         "main_status_constraint": [
             "elder"
         ],
-        "random_status_constraint":[
-            "medicine cat"
+        "random_status_constraint": [
+            "healer"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -197,8 +200,11 @@
         "main_status_constraint": [
             "elder"
         ],
-        "random_status_constraint":[
+        "random_status_constraint": [
             "kitten"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -216,8 +222,11 @@
             "elder"
         ],
         "random_status_constraint": [
-            "medicine cat apprentice",
-            "medicine cat"
+            "healer apprentice",
+            "healer"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -276,6 +285,9 @@
         ],
         "random_age_constraint": [
             "any"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -318,11 +330,13 @@
             "adolescent"
         ],
         "random_status_constraint": [
-            "medicine cat apprentice",
-            "medicine cat"
+            "healer apprentice",
+            "healer"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
-
     {
         "id": "blind_gen_retired_to_alive_notkit",
         "thoughts": [
@@ -342,6 +356,9 @@
             "adult",
             "senior adult",
             "senior"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -364,8 +381,11 @@
         ],
         "random_status_constraint": [
             "apprentice",
-            "medicine cat apprentice",
+            "healer apprentice",
             "mediator apprentice"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -385,8 +405,11 @@
             "adolescent"
         ],
         "random_status_constraint": [
-            "medicine cat apprentice",
-            "medicine cat"
+            "healer apprentice",
+            "healer"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -413,7 +436,7 @@
         "id": "wasting_disease_gen_retired_to_alive_med",
         "thoughts": [
             "Thanks r_c for {PRONOUN/r_c/poss} patience",
-            "Feels confined to the medicine den"
+            "Feels confined to the healer den"
         ],
         "perm_conditions": {
             "m_c": [
@@ -424,8 +447,11 @@
             "elder"
         ],
         "random_status_constraint": [
-            "medicine cat apprentice",
-            "medicine cat"
+            "healer apprentice",
+            "healer"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -469,7 +495,7 @@
         ],
         "random_status_constraint": [
             "apprentice",
-            "medicine cat apprentice",
+            "healer apprentice",
             "mediator apprentice"
         ]
     },
@@ -496,6 +522,9 @@
         ],
         "random_status_constraint": [
             "any"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -516,7 +545,7 @@
         ],
         "random_status_constraint": [
             "apprentice",
-            "medicine cat apprentice",
+            "healer apprentice",
             "mediator apprentice"
         ]
     },
@@ -524,7 +553,7 @@
         "id": "missing_leg/tail_gen_retired_to_alive_gen",
         "thoughts": [
             "Is training {PRONOUN/m_c/poss} balance with r_c",
-            "Is heading to the medicine den because {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} starting to feel phantom pain"
+            "Is heading to the healer den because {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} starting to feel phantom pain"
         ],
         "perm_conditions": {
             "m_c": [
@@ -539,6 +568,9 @@
         ],
         "random_status_constraint": [
             "any"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -560,6 +592,9 @@
         ],
         "random_status_constraint": [
             "kitten"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -599,6 +634,9 @@
         ],
         "random_status_constraint": [
             "any"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -619,6 +657,9 @@
         ],
         "random_status_constraint": [
             "kitten"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -640,6 +681,9 @@
         ],
         "random_status_constraint": [
             "newborn"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -658,6 +702,9 @@
         ],
         "random_status_constraint": [
             "any"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -700,6 +747,9 @@
         ],
         "random_status_constraint": [
             "kitten"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -723,6 +773,9 @@
         ],
         "random_status_constraint": [
             "apprentice"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -742,6 +795,9 @@
         ],
         "random_status_constraint": [
             "kitten"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -795,8 +851,11 @@
             "elder"
         ],
         "random_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
+            "healer",
+            "healer apprentice"
+        ],
+        "random_living_status": [
+            "living"
         ]
     }
 ]

@@ -284,15 +284,10 @@ class Thoughts:
         status = main_cat.status
 
         status = status.replace(" ", "_")
-        # match status:
-        #     case "medicine cat apprentice":
-        #         status = "medicine_cat_apprentice"
-        #     case "mediator apprentice":
-        #         status = "mediator_apprentice"
-        #     case "medicine cat":
-        #         status = "medicine_cat"
-        #     case 'former Clancat':
-        #         status = 'former_Clancat'
+        if status == "healer_apprentice":
+            status = "medicine_cat_apprentice"
+        elif status == "healer":
+            status = "medicine_cat"
 
         if not main_cat.dead:
             life_dir = "alive"
@@ -336,8 +331,12 @@ class Thoughts:
     def get_chosen_thought(main_cat, other_cat, game_mode, biome, season, camp):
         # get possible thoughts
         try:
-            chosen_thought_group = choice(Thoughts.load_thoughts(main_cat, other_cat, game_mode, biome, season, camp))
-            chosen_thought = choice(chosen_thought_group["thoughts"])
+            # checks if the cat is Rick Astley to give the rickroll thought, otherwise proceed as usual
+            if (main_cat.name.prefix+main_cat.name.suffix).replace(" ", "").lower() == "rickastley":
+                return "Never going to give r_c up, never going to let {PRONOUN/r_c/object} down, never going to run around and desert {PRONOUN/r_c/object}."
+            else:
+                chosen_thought_group = choice(Thoughts.load_thoughts(main_cat, other_cat, game_mode, biome, season, camp))
+                chosen_thought = choice(chosen_thought_group["thoughts"])
         except Exception:
             chosen_thought = "Prrrp! You shouldn't see this! Report as a bug."
 
@@ -361,7 +360,7 @@ class Thoughts:
             spec_dir = "/starclan"
         elif darkforest:
             spec_dir = "/darkforest"
-        THOUGHTS: []
+        THOUGHTS = []
         try:
             if lives_left > 0:
                 with open(f"{base_path}{spec_dir}/leader_life.json", 'r') as read_file:
@@ -389,7 +388,7 @@ class Thoughts:
             spec_dir = "/starclan"
         elif darkforest:
             spec_dir = "/darkforest"
-        THOUGHTS: []
+        THOUGHTS = []
         try:
             with open(f"{base_path}{spec_dir}/general.json", 'r') as read_file:
                 THOUGHTS = ujson.loads(read_file.read())

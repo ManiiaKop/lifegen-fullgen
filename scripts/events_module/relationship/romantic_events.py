@@ -577,8 +577,8 @@ class Romantic_Events:
         if cat_from.ID not in cat_to.mate:
             return False
         
-        # Moving on, not breakups, occur when one mate is dead or outside.
-        if cat_from.dead or cat_from.outside or cat_to.dead or cat_to.outside:
+        # Moving on, not breakups, occur when one mate is dead or outside. 
+        if cat_from.dead or (cat_from.outside and cat_from.status not in ['loner', 'kittypet', 'rogue']) or cat_to.dead or (cat_to.outside and cat_to.status not in ['loner', 'kittypet', 'rogue']):
             return False
 
         chance_number = Romantic_Events.get_breakup_chance(cat_from, cat_to)

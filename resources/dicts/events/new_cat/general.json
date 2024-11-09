@@ -145,9 +145,9 @@
                 "leader",
                 "deputy",
                 "warrior",
-                "medicine cat",
+                "healer",
                 "apprentice",
-                "medicine cat apprentice",
+                "healer apprentice",
                 "mediator",
                 "mediator apprentice"
             ]
@@ -177,9 +177,9 @@
                 "leader",
                 "deputy",
                 "warrior",
-                "medicine cat",
+                "healer",
                 "apprentice",
-                "medicine cat apprentice",
+                "healer apprentice",
                 "mediator",
                 "mediator apprentice"
             ]
@@ -206,7 +206,7 @@
         "event_text": "m_c finds a rogue near the border. It seems {PRONOUN/n_c:0/subject} {VERB/n_c:0/were/was} bringing {PRONOUN/n_c:0/poss} kit named n_c:1 to the Clan, as {PRONOUN/n_c:0/subject} could no longer care for {PRONOUN/n_c:1/object}.",
         "m_c": {
             "status": [
-                "leader", "deputy", "warrior", "medicine cat", "apprentice", "medicine cat apprentice", "mediator", "mediator apprentice"
+                "leader", "deputy", "warrior", "healer", "apprentice", "healer apprentice", "mediator", "mediator apprentice"
             ]
         },"new_cat": [
             ["age:has_kits", "meeting", "rogue", "can_birth"],
@@ -228,7 +228,7 @@
         "season": ["any"],
         "sub_type":["romance"],
         "weight": 5,
-        "event_text": "m_c and r_c, in the early hours of the day, informed whoever else was awake that they had to handle something and ventured out of camp. Hours later, m_c, r_c, and another cat confidently strode into camp, tails entwined with each other. m_c introduced n_c:0 to the Clan, stating that {PRONOUN/n_c/subject} {VERB/n_c/are/is} staying.",
+        "event_text": "m_c and r_c, in the early hours of the day, informed whoever else was awake that they had to handle something and ventured out of camp. Hours later, m_c, r_c, and another cat confidently strode into camp, tails entwined with each other. m_c introduced n_c:0 to the Clan, stating that {PRONOUN/n_c:0/subject} {VERB/n_c:0/are/is} staying.",
         "m_c": {
             "age": ["young adult", "adult", "senior adult", "senior"],
             "status": ["any"],
@@ -251,7 +251,7 @@
             "cats_from": ["m_c"],
             "cats_to": ["n_c:0"],
             "mutual": true,
-            "values": ["romantice", "trust"],
+              "values": ["romantic", "trust"],
             "amount": 55
           },
           {
@@ -265,7 +265,7 @@
             "cats_from": ["r_c"],
             "cats_to": ["n_c:0"],
             "mutual": true,
-            "values": ["romantice", "trust"],
+              "values": ["romantic", "trust"],
             "amount": 55
           },
           {
@@ -307,7 +307,7 @@
         "weight": 20,
         "event_text": "A loner waits on the border for a patrol and, finding one led by m_c, asks to join the Clan. The loner decides to take on a more Clan-like name and is now called n_c:0.",
         "m_c": {
-            "status": ["warrior", "deputy", "leader", "medicine cat"]
+            "status": ["warrior", "deputy", "leader", "healer"]
         },
         "new_cat": [
             [
@@ -330,7 +330,7 @@
         "event_text": "A loner waits on the border for a patrol and, finding one led by m_c, asks to join the Clan. The loner decides to keep {PRONOUN/n_c:0/poss} old name, n_c:0.",
         "m_c": {
             "status": [
-                "leader", "deputy", "warrior", "medicine cat"
+                "leader", "deputy", "warrior", "healer"
             ]
         },"new_cat": [
             [
@@ -443,7 +443,7 @@
         "weight": 20,
         "event_text": "A kittypet waits on the border for a patrol and, finding one led by m_c, asks to join the Clan. The kittypet decides to keep {PRONOUN/n_c:0/poss} old name, n_c:0.",
         "m_c": {
-            "status": ["leader", "deputy", "warrior", "medicine cat"]
+            "status": ["leader", "deputy", "warrior", "healer"]
         },
         "new_cat": [
             [
@@ -466,7 +466,7 @@
         "event_text": "A kittypet waits on the border for a patrol and, finding one led by m_c, asks to join the Clan. The kittypet decides to take on a more Clan-like name and is now called n_c:0.",
         "m_c": {
             "status": [
-                "leader", "deputy", "warrior", "medicine cat"
+                "leader", "deputy", "warrior", "healer"
             ]
         },
         "new_cat": [
@@ -535,7 +535,7 @@
         "weight": 20,
         "event_text": "A rogue waits on the border for a patrol and, finding one led by m_c, asks to join the Clan. The rogue decides to keep {PRONOUN/n_c:0/poss} old name, n_c:0.",
         "m_c": {
-            "status": ["leader", "deputy", "warrior", "medicine cat"]
+            "status": ["leader", "deputy", "warrior", "healer"]
         },
         "new_cat": [
             [
@@ -557,7 +557,7 @@
         "weight": 20,
         "event_text": "A rogue waits on the border for a patrol and, finding one led by m_c, asks to join the Clan. The rogue decides to take a new name and is now called n_c:0.",
         "m_c": {
-            "status": ["leader", "deputy", "warrior", "medicine cat"]
+            "status": ["leader", "deputy", "warrior", "healer"]
         },
         "new_cat": [
             [
@@ -602,7 +602,7 @@
         "weight": 10,
         "event_text": "m_c meets an injured warrior from o_c_n who asks to join the Clan, in exchange for healing.",
         "m_c": {
-            "status": ["medicine cat", "leader", "warrior", "deputy", "apprentice", "medicine cat apprentice", "mediator", "mediator apprentice"]
+            "status": ["healer", "leader", "warrior", "deputy", "apprentice", "healer apprentice", "mediator", "mediator apprentice"]
         },
         "new_cat": [
             [
@@ -631,7 +631,7 @@
         "event_text": "A member of o_c_n defects in the war and chooses to join c_n, m_c finds {PRONOUN/n_c:0/object} waiting at the border. {PRONOUN/n_c:0/subject/CAP} {VERB/n_c:0/decide/decides} to keep {PRONOUN/n_c:0/poss} name.",
         "m_c": {
             "status": [
-                "leader", "deputy", "warrior", "medicine cat", "apprentice", "medicine cat apprentice", "mediator", "mediator apprentice"
+                "leader", "deputy", "warrior", "healer", "apprentice", "healer apprentice", "mediator", "mediator apprentice"
             ]
         },
         "new_cat": [
@@ -655,7 +655,7 @@
         "event_text": "n_c:0, the deputy of o_c_n, has defected to c_n in the war, m_c finds {PRONOUN/n_c:0/object} at the border. {PRONOUN/n_c:0/subject/CAP} {VERB/n_c:0/decide/decides} to keep {PRONOUN/n_c:0/poss} name.",
         "m_c": {
             "status": [
-                "leader", "deputy", "warrior", "medicine cat", "apprentice", "medicine cat apprentice", "mediator", "mediator apprentice"
+                "leader", "deputy", "warrior", "healer", "apprentice", "healer apprentice", "mediator", "mediator apprentice"
             ]
         },
         "new_cat": [
@@ -676,10 +676,10 @@
         "season": ["any"],
         "sub_type": ["war"],
         "weight": 15,
-        "event_text": "n_c:0, the medicine cat of o_c_n, has defected to c_n in the war, {PRONOUN/n_c:0/subject} meet m_c at the border. {PRONOUN/n_c:0/subject/CAP} {VERB/n_c:0/decide/decides} to keep {PRONOUN/n_c:0/poss} name.",
+        "event_text": "n_c:0, the healer of o_c_n, has defected to c_n in the war, {PRONOUN/n_c:0/subject} meet m_c at the border. {PRONOUN/n_c:0/subject/CAP} {VERB/n_c:0/decide/decides} to keep {PRONOUN/n_c:0/poss} name.",
         "m_c": {
             "status": [
-                "leader", "deputy", "warrior", "medicine cat", "apprentice", "medicine cat apprentice", "mediator", "mediator apprentice"
+                "leader", "deputy", "warrior", "healer", "apprentice", "healer apprentice", "mediator", "mediator apprentice"
             ]
         },
         "new_cat": [

@@ -519,22 +519,14 @@ class RelationshipScreen(Screens):
                     )
 
             # Gender
-            if self.inspect_cat.genderalign == "female":
-                gender_icon = image_cache.load_image(
-                    "resources/images/female_big.png"
-                ).convert_alpha()
-            elif self.inspect_cat.genderalign == "male":
-                gender_icon = image_cache.load_image(
-                    "resources/images/male_big.png"
-                ).convert_alpha()
-            elif self.inspect_cat.genderalign == "trans female":
-                gender_icon = image_cache.load_image(
-                    "resources/images/transfem_big.png"
-                ).convert_alpha()
-            elif self.inspect_cat.genderalign == "trans male":
-                gender_icon = image_cache.load_image(
-                    "resources/images/transmasc_big.png"
-                ).convert_alpha()
+            if self.inspect_cat.genderalign == 'molly':
+                gender_icon = image_cache.load_image("resources/images/female_big.png").convert_alpha()
+            elif self.inspect_cat.genderalign == 'tom':
+                gender_icon = image_cache.load_image("resources/images/male_big.png").convert_alpha()
+            elif self.inspect_cat.genderalign == 'trans molly':
+                gender_icon = image_cache.load_image("resources/images/transfem_big.png").convert_alpha()
+            elif self.inspect_cat.genderalign == 'trans tom':
+                gender_icon = image_cache.load_image("resources/images/transmasc_big.png").convert_alpha()
             else:
                 # Everyone else gets the nonbinary icon
                 gender_icon = image_cache.load_image(
@@ -583,16 +575,16 @@ class RelationshipScreen(Screens):
             # Relation info:
             if related:
                 if self.the_cat.is_uncle_aunt(self.inspect_cat):
-                    if self.inspect_cat.genderalign in ["female", "trans female"]:
+                    if self.inspect_cat.genderalign in ['molly', 'trans molly']:
                         col2 += "related: niece"
-                    elif self.inspect_cat.genderalign in ["male", "trans male"]:
+                    elif self.inspect_cat.genderalign in ['tom', 'trans tom']:
                         col2 += "related: nephew"
                     else:
                         col2 += "related: sibling's child\n"
                 elif self.inspect_cat.is_uncle_aunt(self.the_cat):
-                    if self.inspect_cat.genderalign in ["female", "trans female"]:
+                    if self.inspect_cat.genderalign in ['molly', 'trans molly']:
                         col2 += "related: aunt"
-                    elif self.inspect_cat.genderalign in ["male", "trans male"]:
+                    elif self.inspect_cat.genderalign in ['tom', 'trans tom']:
                         col2 += "related: uncle"
                     else:
                         col2 += "related: parent's sibling"
@@ -748,22 +740,14 @@ class RelationshipScreen(Screens):
         )
 
         # Gender alignment
-        if the_relationship.cat_to.genderalign == "female":
-            gender_icon = image_cache.load_image(
-                "resources/images/female_big.png"
-            ).convert_alpha()
-        elif the_relationship.cat_to.genderalign == "male":
-            gender_icon = image_cache.load_image(
-                "resources/images/male_big.png"
-            ).convert_alpha()
-        elif the_relationship.cat_to.genderalign == "trans female":
-            gender_icon = image_cache.load_image(
-                "resources/images/transfem_big.png"
-            ).convert_alpha()
-        elif the_relationship.cat_to.genderalign == "trans male":
-            gender_icon = image_cache.load_image(
-                "resources/images/transmasc_big.png"
-            ).convert_alpha()
+        if the_relationship.cat_to.genderalign == 'molly':
+            gender_icon = image_cache.load_image("resources/images/female_big.png").convert_alpha()
+        elif the_relationship.cat_to.genderalign == 'tom':
+            gender_icon = image_cache.load_image("resources/images/male_big.png").convert_alpha()
+        elif the_relationship.cat_to.genderalign == 'trans molly':
+            gender_icon = image_cache.load_image("resources/images/transfem_big.png").convert_alpha()
+        elif the_relationship.cat_to.genderalign == 'trans tom':
+            gender_icon = image_cache.load_image("resources/images/transmasc_big.png").convert_alpha()
         else:
             # Everyone else gets the nonbinary icon
             gender_icon = image_cache.load_image(

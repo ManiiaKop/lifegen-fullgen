@@ -123,6 +123,10 @@
             {
                 "name": "yellowcough",
                 "chance": 60
+            },
+            {
+                "name": "raspy lungs",
+                "chance": 120
             }
         ],
         "herbs": [
@@ -162,6 +166,10 @@
             {
                 "name": "whitecough",
                 "chance": 10
+            },
+            {
+                "name": "raspy lungs",
+                "chance": 180
             }
         ],
         "herbs": [
@@ -259,7 +267,12 @@
         "duration": 50,
         "medicine_duration": 40,
         "infectiousness": 0,
-        "risks": [],
+        "risks": [
+            {
+                "name": "raspy lungs",
+                "chance": 60
+            }
+        ],
         "herbs": [
             "lungwort",
             "mullein",
@@ -372,6 +385,10 @@
         "risks": [
             {
                 "name": "redcough",
+                "chance": 80
+            },
+            {
+                "name": "raspy lungs",
                 "chance": 80
             }
         ],
@@ -638,6 +655,81 @@
         "risks": [],
         "herbs": [
             "thyme"
+        ]
+    },
+    "itchy skin": {
+        "severity": "minor",
+        "mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "medicine_mortality": {
+            "newborn": 0,
+            "kitten": 0,
+            "adolescent": 0,
+            "young adult": 0,
+            "adult": 0,
+            "senior adult": 0,
+            "senior": 0
+        },
+        "duration": 3,
+        "medicine_duration": 2,
+        "infectiousness": 0,
+        "risks": [
+            {
+                "name": "an infected wound",
+                "chance": 25
+            }
+        ],
+        "herbs": [
+            "marigold",
+            "burdock",
+            "wild_garlic",
+            "oak_leaves"
+        ]
+    },
+    "ear infection": {
+        "severity": "major",
+        "mortality": {
+            "newborn": 5,
+            "kitten": 5,
+            "adolescent": 10,
+            "young adult": 40,
+            "adult": 40,
+            "senior adult": 25,
+            "senior": 15
+        },
+        "medicine_mortality": {
+            "newborn": 5,
+            "kitten": 15,
+            "adolescent": 20,
+            "young adult": 50,
+            "adult": 50,
+            "senior adult": 40,
+            "senior": 25
+        },
+        "duration": 5,
+        "medicine_duration": 3,
+        "infectiousness": 40,
+        "risks": [
+            {
+                "name": "partial hearing loss",
+                "chance": 50
+            },
+            {
+                "name": "partial hearing loss in one ear",
+                "chance": 50
+            }
+        ],
+        "herbs": [
+            "marigold",
+            "dock",
+            "sweet-sedge"
         ]
     },
     "heartbroken": {

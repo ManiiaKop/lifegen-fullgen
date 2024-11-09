@@ -158,57 +158,137 @@
 		"cat_amount_welcoming": 3
 	},
 	"pregnancy": {
-		"birth_cooldown": 6,
-		"primary_chance_mated": 80,
-		"primary_chance_unmated": 130,
-		"random_affair_chance": 50,
-		"unmated_random_affair_chance": 10,
-		"one_kit_possibility": {"young adult": 8, "adult": 9, "senior adult": 10, "senior": 4},
-        "two_kit_possibility": {"young adult": 10, "adult": 13, "senior adult": 15, "senior": 3},
-        "three_kit_possibility": {"young adult": 17, "adult": 15, "senior adult": 5, "senior": 1},
-        "four_kit_possibility": {"young adult": 12, "adult": 8, "senior adult": 2, "senior": 0},
-        "five_kit_possibility": {"young adult": 6, "adult": 2, "senior adult": 0, "senior": 0},
-        "max_kit_possibility": {"young adult": 2, "adult": 0, "senior adult": 0, "senior": 0},
-		"min_kits": 1,
-		"max_kits": 6,
+    "birth_cooldown": 6,
+    "primary_chance_mated": 80,
+    "primary_chance_unmated": 130,
+    "random_affair_chance": 50,
+    "unmated_random_affair_chance": 10,
+    "multi-sire_chance": 5,
+    "multi-sire_max_sires": 5,
+    "one_kit_possibility": {
+      "young adult": 8,
+      "adult": 9,
+      "senior adult": 10,
+      "senior": 4
+    },
+    "two_kit_possibility": {
+      "young adult": 10,
+      "adult": 13,
+      "senior adult": 15,
+      "senior": 3
+    },
+    "three_kit_possibility": {
+      "young adult": 17,
+      "adult": 15,
+      "senior adult": 5,
+      "senior": 1
+    },
+    "four_kit_possibility": {
+      "young adult": 12,
+      "adult": 8,
+      "senior adult": 2,
+      "senior": 0
+    },
+    "five_kit_possibility": {
+      "young adult": 6,
+      "adult": 2,
+      "senior adult": 0,
+      "senior": 0
+    },
+    "max_kit_possibility": {
+      "young adult": 2,
+      "adult": 0,
+      "senior adult": 0,
+      "senior": 0
+    },
+    "min_kits": 1,
+    "max_kits": 6,
 
-		"one_kit_modded": {"young adult": 64, "adult": 4, "senior adult": 8, "senior": 64},
-		"two_kit_modded": {"young adult": 128, "adult": 8, "senior adult": 16, "senior": 128},
-		"three_kit_modded": {"young adult": 128, "adult": 16, "senior adult": 32, "senior": 128},
-		"four_kit_modded": {"young adult": 128, "adult": 16, "senior adult": 32, "senior": 64},
-		"five_kit_modded": {"young adult": 64, "adult": 16, "senior adult": 32, "senior": 32},
-		"six_kit_modded": {"young adult": 32, "adult": 8, "senior adult": 16, "senior": 16},
-		"nine_kit_modded": {"young adult": 8, "adult": 2, "senior adult": 3, "senior": 4},
-		"max_kit_modded": {"young adult": 1, "adult": 1, "senior adult": 1, "senior": 1},
-		"stillborn_chances": {"small": 0.01, "three": 0.05, "mid": 0.10, "big": 0.15, "large": 0.20},
-		"comment": [
-			"primary mated - 1/chance for kits, relationship and other factors will influence this chance",
-			"primary unmated - 1/chance for kits, relationship and other factors will influence this chance",
-			"The kit number is incremental. It is 1-6 as default so if you change these numbers, you should probably keep this in mind.",
-			"As in, your max kits number should probably be 5 more than the min kits number.",
-			"But that's not required - just makes more sense that way with how the litters are generated."
-		]
-	},
+    "modded_primary_chance_mated": 50,
+    "modded_primary_chance_unmated": 100,
+    "one_kit_modded": {
+      "young adult": 64,
+      "adult": 4,
+      "senior adult": 8,
+      "senior": 64
+    },
+    "two_kit_modded": {
+      "young adult": 128,
+      "adult": 8,
+      "senior adult": 16,
+      "senior": 128
+    },
+    "three_kit_modded": {
+      "young adult": 128,
+      "adult": 16,
+      "senior adult": 32,
+      "senior": 128
+    },
+    "four_kit_modded": {
+      "young adult": 128,
+      "adult": 16,
+      "senior adult": 32,
+      "senior": 64
+    },
+    "five_kit_modded": {
+      "young adult": 64,
+      "adult": 16,
+      "senior adult": 32,
+      "senior": 32
+    },
+    "six_kit_modded": {
+      "young adult": 32,
+      "adult": 8,
+      "senior adult": 16,
+      "senior": 16
+    },
+    "nine_kit_modded": {
+      "young adult": 8,
+      "adult": 2,
+      "senior adult": 3,
+      "senior": 4
+    },
+    "max_kit_modded": {
+      "young adult": 1,
+      "adult": 1,
+      "senior adult": 1,
+      "senior": 1
+    },
+    "stillborn_chances": {
+      "small": 0.01,
+      "three": 0.05,
+      "mid": 0.1,
+      "big": 0.15,
+      "large": 0.2
+    },
+    "comment": [
+      "primary mated - 1/chance for kits, relationship and other factors will influence this chance",
+      "primary unmated - 1/chance for kits, relationship and other factors will influence this chance",
+      "The kit number is incremental. It is 1-6 as default so if you change these numbers, you should probably keep this in mind.",
+      "As in, your max kits number should probably be 5 more than the min kits number.",
+      "But that's not required - just makes more sense that way with how the litters are generated."
+    ]
+  },
 	"cat_generation": {
-		"base_permanent_condition": 90,
-		"base_male_tortie": 13,
-		"base_female_tortie": 4,
-		"base_heterochromia": 120,
-		"direct_inheritance": 15,
-		"wildcard_tortie": 9,
-		"vit_chance": 8,
-		"random_point_chance": 5
-	},
-	"cat_name_controls": {
-		"always_name_after_appearance": false,
-		"allow_eye_names": false,
-		"comment": [
-			"Set always_name_after_appearance to true if you always want cats named after the color of their pelt.",
-			"This overrides the chances of it otherwise. If cats can't find a pelt color, they will choose from normal_prefixes",
-			"So as not to cause an error - false by default",
-			"allow_eye_names allows cats to be named after the color of their eyes - true by default"
-		]
-	},
+    "base_permanent_condition": 90,
+    "base_male_tortie": 13,
+    "base_female_tortie": 4,
+    "base_heterochromia": 120,
+    "direct_inheritance": 15,
+    "wildcard_tortie": 9,
+    "vit_chance": 8,
+    "random_point_chance": 5
+  },
+  "cat_name_controls": {
+    "always_name_after_appearance": false,
+    "allow_eye_names": false,
+    "comment": [
+      "Set always_name_after_appearance to true if you always want cats named after the color of their pelt.",
+      "This overrides the chances of it otherwise. If cats can't find a pelt color, they will choose from normal_prefixes",
+      "So as not to cause an error - false by default",
+      "allow_eye_names allows cats to be named after the color of their eyes - true by default"
+    ]
+  },
 	"accessory_generation": {
 		"base_acc_chance": 150,
 		"med_modifier": -80,
@@ -289,7 +369,14 @@
 		"base_murder_kill_chance": 80,
 		"old_age_death_start": 150,
 		"old_age_death_curve": 4.5,
-		"kit_death_chances":{"0" : 0.25, "1" : 0.2, "2" : 0.2, "3" : 0.15, "4" : 0.1, "5" : 0.05},
+		"kit_death_chances": {
+      "0": 0.25,
+      "1": 0.2,
+      "2": 0.15,
+      "3": 0.1,
+      "4": 0.05,
+      "5": 0.05
+    },
 		"comment": [
 			"old_age_death_curve is a multiplier that affects the chances of cats dying once they are over old_age_death_start moons.",
 			"Average life expectancy with default old_age_death_start of 150 moons:",
@@ -309,18 +396,101 @@
 		"rerolls": -1,
 		"comment": "Set this to -1 for it to be infinite"
 	},
-	"genetic_chances": {
-		"chimera" : 1000,
-		"intersex" : 100,
-		"XXX/XXY" : 1000,
-		"brindled_bicolour" : 250,
-		"vitiligo" : 100
-	},
+	"genetics_config": {
+    "kittypet_breed": 75,
+    "other_breed": 1000,
+
+    "chimera": 1000,
+    "intersex": 100,
+    "XXX/XXY": 1000,
+    "brindled_bicolour": 250,
+    "vitiligo": 100,
+    "random_mutation": 100,
+    "somatic_mutation": 150,
+    "breakthrough": 25,
+    "cryptic_tortie": 100,
+
+    "longhair": 2,
+    "cinnamon": 15,
+    "chocolate": 10,
+    "red": 4,
+    "dilute": 2,
+    "dominant white": 20,
+    "white spotting": 3,
+    "birman gloving": 100,
+    "thai white": 100,
+    "salmiak": 100,
+    "colourpoint": 5,
+    "sepia": 10,
+    "mocha": 100,
+    "albino": 100,
+    "silver": 10,
+    "solid": 2,
+    "charcoal": 75,
+    "blotched": 2,
+    "ticked": 5,
+
+    "pink-eyed dilute": 100,
+    "dilute modifier": 50,
+    "grizzle": 75,
+    "carnelian": 75,
+    "russet": 75,
+    "amber": 50,
+    "sunshine": 50,
+    "extreme sunshine": 75,
+    "copper": 75,
+    "karpati": 75,
+    "bleaching": 100,
+    "ghosting": 100,
+    "satin": 100,
+    "glitter": 75,
+
+    "wirehair": 75,
+    "laperm": 75,
+    "cornish": 75,
+    "urals": 75,
+    "tenn": 75,
+    "fleece": 75,
+    "selkirk": 75,
+    "devon": 75,
+    "canadian hairless": 100,
+    "russian hairless": 100,
+    "lykoi": 100,
+
+    "curl": 75,
+    "fold": 75,
+    "manx": 75,
+    "american bobtail": 75,
+    "karelian bobtail": 75,
+    "kurilian bobtail": 75,
+    "japanese bobtail": 75,
+    "toybob": 75,
+    "ringtail": 100,
+    "munchkin": 100,
+    "polydactyl": 25,
+    "DBE": 50,
+
+    "body_ranges" : [1, 4, 12, 60, 12, 4, 1],
+    "height_ranges" : [1, 4, 12, 60, 180, 60, 12, 2, 2, 1]
+  },
+  "tnr_mode": {
+    "kittypet_neuter": 0.8,
+    "loner_tnr": 0.05,
+    "Clan_tnr": 0.99,
+    "Clan_tnr2": 0.5,
+    "notes": [
+      "Controls how likely cats are to be artificially infertile - spayed and neutered",
+      "kittypet_neuter decides what percentage of kittypets are altered",
+      "loner_tnr is for what percentage of loners are altered",
+      "Clan_tnr is for how likely Clan cats caught in traps by twolegs are to get TNRed",
+      "Clan_tnr2 is for how likely Clan cats caught by twolegs in general are to get altered"
+    ]
+  },
 	"graduation": {
 		"base_app_timeskip_ex": [[3, 12],[5, 6]],
 		"base_med_app_timeskip_ex": [[2, 7],[2, 3]],
 		"max_apprentice_age": {
-			"medicine cat apprentice": 30,
+			"healer apprentice": 30,
 			"apprentice": 25,
 			"mediator apprentice": 25,
 			"queen's apprentice": 25

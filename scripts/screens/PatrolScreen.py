@@ -63,8 +63,17 @@ class PatrolScreen(Screens):
     def handle_event(self, event):
         if game.switches["window_open"]:
             return
+<<<<<<< HEAD
 
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
+=======
+        
+        if event.type == pygame_gui.UI_BUTTON_DOUBLE_CLICKED:
+            if self.patrol_stage == "choose_cats":
+                self.handle_choose_cats_events(event)
+
+        elif event.type == pygame_gui.UI_BUTTON_START_PRESS:
+>>>>>>> 2024-09
             if self.patrol_stage == "choose_cats":
                 if self.dbclock.tick() < 500:
                     self.handle_choose_cats_events(event, doubleclick=True)
@@ -124,6 +133,14 @@ class PatrolScreen(Screens):
             self.cat_id = self.selected_cat.ID
             self.update_selected_cat()
             self.update_button()
+            # Checks if the event was a double click, if it was it add/removes the cat from the patrol as long as the patrol isn't full (6 cats).
+            if event.type == pygame_gui.UI_BUTTON_DOUBLE_CLICKED:
+                if self.selected_cat in self.current_patrol:
+                    self.current_patrol.remove(self.selected_cat)
+                elif len(self.current_patrol) < 6:
+                    self.current_patrol.append(self.selected_cat)
+                self.update_cat_images_buttons()
+                self.update_button()
         elif event.ui_element == self.elements["add_remove_cat"]:
             if self.selected_cat in self.current_patrol:
                 self.current_patrol.remove(self.selected_cat)
@@ -135,7 +152,11 @@ class PatrolScreen(Screens):
             if len(self.current_patrol) < 6:
                 if not game.clan.clan_settings['random med cat']:
                     able_no_med = [cat for cat in self.able_cats if
+<<<<<<< HEAD
                                    cat.status not in ['medicine cat', 'medicine cat apprentice']]
+=======
+                                cat.status not in ['healer', 'healer apprentice']]
+>>>>>>> 2024-09
                     if len(able_no_med) == 0:
                         able_no_med = self.able_cats
                     self.selected_cat = choice(able_no_med)
@@ -149,7 +170,11 @@ class PatrolScreen(Screens):
             if len(self.current_patrol) <= 3:
                 if not game.clan.clan_settings['random med cat']:
                     able_no_med = [cat for cat in self.able_cats if
+<<<<<<< HEAD
                                    cat.status not in ['medicine cat', 'medicine cat apprentice']]
+=======
+                                cat.status not in ['healer', 'healer apprentice']]
+>>>>>>> 2024-09
                     if len(able_no_med) < 3:
                         able_no_med = self.able_cats
                     self.current_patrol += sample(able_no_med, k=3)
@@ -161,7 +186,11 @@ class PatrolScreen(Screens):
             if len(self.current_patrol) == 0:
                 if not game.clan.clan_settings['random med cat']:
                     able_no_med = [cat for cat in self.able_cats if
+<<<<<<< HEAD
                                    cat.status not in ['medicine cat', 'medicine cat apprentice']]
+=======
+                                cat.status not in ['healer', 'healer apprentice']]
+>>>>>>> 2024-09
                     if len(able_no_med) < 6:
                         able_no_med = self.able_cats
                     self.current_patrol += sample(able_no_med, k=6)
@@ -306,9 +335,7 @@ class PatrolScreen(Screens):
             self.elements["random"].enable()
 
             # making sure meds don't get the option for other patrols
-            if any((cat.status in ['medicine cat', 'medicine cat apprentice'] for cat in self.current_patrol)):
-                self.patrol_type = 'med'
-            else:
+            if not( any((cat.status in ['healer', 'healer apprentice'] for cat in self.current_patrol))):
                 if self.patrol_type == 'med':
                     self.patrol_type = 'general'
 
@@ -320,6 +347,7 @@ class PatrolScreen(Screens):
                 self.elements['cat_icon'].disable()
                 self.elements['your_cat'].enable()
 
+<<<<<<< HEAD
                 if game.clan.your_cat.joined_df:
                     self.elements['df_icon'].enable()
                 if game.clan.your_cat.moons >= 12:
@@ -352,6 +380,25 @@ class PatrolScreen(Screens):
                         text = 'herb gathering'
                 else:
                     text = ""
+=======
+            if not( any((cat.status in ['healer', 'healer apprentice'] for cat in self.current_patrol))) and self.current_patrol:
+                self.elements['herb'].disable()
+                if self.patrol_type == 'med':
+                    self.patrol_type = 'general'
+
+            if self.patrol_type == 'general':
+                text = 'random patrol type'
+            elif self.patrol_type == 'training':
+                text = 'training'
+            elif self.patrol_type == 'border':
+                text = 'border'
+            elif self.patrol_type == 'hunting':
+                text = 'hunting'
+            elif self.patrol_type == 'med':
+                text = 'herb gathering'
+            else:
+                text = ""
+>>>>>>> 2024-09
 
                 self.elements['info'] = pygame_gui.elements.UITextBox(
                     text, scale(pygame.Rect((500, 1050), (600, 800))),
@@ -359,7 +406,7 @@ class PatrolScreen(Screens):
                 )
 
             able_no_med = [cat for cat in self.able_cats if
-                           cat.status not in ['medicine cat', 'medicine cat apprentice']]
+                           cat.status not in ['healer', 'healer apprentice']]
             if game.clan.clan_settings['random med cat']:
                 able_no_med = self.able_cats
             if len(able_no_med) == 0:
@@ -912,8 +959,12 @@ class PatrolScreen(Screens):
             short_name = shorten_text_to_fit(name, 350, 30)
 
             self.elements['selected_name'] = pygame_gui.elements.UITextBox(short_name,
+<<<<<<< HEAD
                                                                            scale(pygame.Rect(
                                                                                (600, 650), (400, 60))),
+=======
+                                                                           scale(pygame.Rect((600, 650), (400, 80))),
+>>>>>>> 2024-09
                                                                            object_id=get_text_box_theme(
                                                                                "#text_box_30_horizcenter"),
                                                                            manager=MANAGER)
@@ -945,12 +996,10 @@ class PatrolScreen(Screens):
                         self.mate.sprite, (200, 200)), manager=MANAGER)
                 # Check for name length
                 name = str(self.mate.name)  # get name
-                if 10 <= len(name):  # check name length
-                    short_name = name[0:9]
-                    name = short_name + '..'
+                short_name = shorten_text_to_fit(name, 145, 22)
                 self.elements['mate_name'] = pygame_gui.elements.ui_label.UILabel(
                     scale(pygame.Rect((306, 600), (190, 60))),
-                    name,
+                    short_name,
                     object_id=get_text_box_theme())
                 self.elements['mate_info'] = pygame_gui.elements.UITextBox(
                     "mate",
@@ -978,13 +1027,13 @@ class PatrolScreen(Screens):
 
             # Draw mentor or apprentice
             relation = "should not display"
-            if self.selected_cat.status in ['medicine cat apprentice',
+            if self.selected_cat.status in ['healer apprentice',
                                             'apprentice'] or self.selected_cat.apprentice != []:
                 self.elements['app_mentor_frame'] = pygame_gui.elements.UIImage(
                     scale(pygame.Rect((990, 380), (332, 340))),
                     self.app_frame, manager=MANAGER)
 
-                if self.selected_cat.status in ['medicine cat apprentice',
+                if self.selected_cat.status in ['healer apprentice',
                                                 'apprentice'] and self.selected_cat.mentor is not None:
                     self.app_mentor = Cat.fetch_cat(self.selected_cat.mentor)
                     relation = 'mentor'
@@ -1002,12 +1051,10 @@ class PatrolScreen(Screens):
                 # Failsafe, if apprentice or mentor is set to none.
                 if self.app_mentor is not None:
                     name = str(self.app_mentor.name)  # get name
-                    if 10 <= len(name):  # check name length
-                        short_name = name[0:9]
-                        name = short_name + '..'
+                    short_name = shorten_text_to_fit(name, 145, 22)
                     self.elements['app_mentor_name'] = pygame_gui.elements.ui_label.UILabel(
                         scale(pygame.Rect((1106, 600), (190, 60))),
-                        name,
+                        short_name,
                         object_id=get_text_box_theme(), manager=MANAGER)
                     self.elements['app_mentor_info'] = pygame_gui.elements.UITextBox(
                         relation,

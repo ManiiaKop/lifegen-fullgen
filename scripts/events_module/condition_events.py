@@ -415,12 +415,12 @@ class Condition_Events:
             "TOETRAP": ["weak leg"],
             "NOTAIL": ["lost their tail"],
             "HALFTAIL": ["lost their tail"],
-            "LEFTEAR": ["partial hearing loss"],
-            "RIGHTEAR": ["partial hearing loss"],
+            "LEFTEAR": ["partial hearing loss in one ear"],
+            "RIGHTEAR": ["partial hearing loss in one ear"],
             "MANLEG": ["weak leg", "twisted leg"],
             "BRIGHTHEART": ["one bad eye"],
-            "NOLEFTEAR": ["partial hearing loss"],
-            "NORIGHTEAR": ["partial hearing loss"],
+            "NOLEFTEAR": ["partial hearing loss in one ear"],
+            "NORIGHTEAR": ["partial hearing loss in one ear"],
             "NOEAR": ["partial hearing loss", "deaf"],
             "LEFTBLIND": ["one bad eye", "failing eyesight"],
             "RIGHTBLIND": ["one bad eye", "failing eyesight"],
@@ -438,6 +438,8 @@ class Condition_Events:
             "one bad eye",
             "partial hearing loss",
             "deaf",
+            "partial hearing loss in one ear",
+            "deaf in one ear",
             "constant joint pain",
             "constantly dizzy",
             "recurring shock",
@@ -712,7 +714,7 @@ class Condition_Events:
                     # choose event string and ensure Clan's med cat number aligns with event text
                     random_index = random.randrange(0, len(possible_string_list))
 
-                    med_list = get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"], working=True)
+                    med_list = get_alive_status_cats(Cat, ["healer", "healer apprentice"], working=True)
                     # If the cat is a med cat, don't consider them as one for the event.
 
                     if cat in med_list:
@@ -768,6 +770,9 @@ class Condition_Events:
             "one bad eye": "failing eyesight",
             "failing eyesight": "blind",
             "partial hearing loss": "deaf",
+            "partial hearing loss in one ear" : "deaf in one ear",
+            "partial hearing loss in one ear" : "partial hearing loss",
+            "deaf in one ear" : "deaf"
         }
 
         conditions = deepcopy(cat.permanent_condition)
@@ -799,7 +804,11 @@ class Condition_Events:
                 continue
 
             # revealing perm condition
+<<<<<<< HEAD
             if status == 'reveal' and condition != 'infertility':
+=======
+            if status == 'reveal' and condition not in ['infertility', 'manx syndrome']:
+>>>>>>> 2024-09
                 # gather potential event strings for gotten risk
                 possible_string_list = (
                     Condition_Events.CONGENITAL_CONDITION_GOT_STRINGS[condition]
@@ -807,7 +816,7 @@ class Condition_Events:
 
                 # choose event string and ensure Clan's med cat number aligns with event text
                 random_index = int(random.random() * len(possible_string_list))
-                med_list = get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"], working=True, sort=True)
+                med_list = get_alive_status_cats(Cat, ["healer", "healer apprentice"], working=True, sort=True)
                 med_cat = None
                 has_parents = False
                 if cat.parent1 is not None and cat.parent2 is not None:
@@ -816,14 +825,14 @@ class Condition_Events:
                     med_parent = False  # If they have a med parent, this will be flicked to True in the next couple lines.
                     if cat.parent1 in Cat.all_cats:
                         parent1_dead = Cat.all_cats[cat.parent1].dead
-                        if Cat.all_cats[cat.parent1].status == "medicine cat":
+                        if Cat.all_cats[cat.parent1].status == "healer":
                             med_parent = True
                     else:
                         parent1_dead = True
 
                     if cat.parent2 in Cat.all_cats:
                         parent2_dead = Cat.all_cats[cat.parent2].dead
-                        if Cat.all_cats[cat.parent2].status == "medicine cat":
+                        if Cat.all_cats[cat.parent2].status == "healer":
                             med_parent = True
                     else:
                         parent2_dead = True
@@ -881,9 +890,27 @@ class Condition_Events:
         if game.clan.clan_settings["retirement"] or cat.no_retire:
             return
 
+<<<<<<< HEAD
         if not triggered and not cat.dead and cat.status not in \
                 ['leader', 'medicine cat', 'kitten', 'newborn', 'medicine cat apprentice', 'mediator',
                  'mediator apprentice', "queen", "queen's apprentice", 'elder']:
+=======
+        if (
+            not triggered
+            and not cat.dead
+            and cat.status
+            not in [
+                "leader",
+                "healer",
+                "kitten",
+                "newborn",
+                "healer apprentice",
+                "mediator",
+                "mediator apprentice",
+                "elder",
+            ]
+        ):
+>>>>>>> 2024-09
             for condition in cat.permanent_condition:
                 if cat.permanent_condition[condition]["severity"] not in [
                     "major",
@@ -1050,7 +1077,7 @@ class Condition_Events:
 
                     # choose event string and ensure Clan's med cat number aligns with event text
                     random_index = int(random.random() * len(possible_string_list))
-                    med_list = get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"], working=True, sort=True)
+                    med_list = get_alive_status_cats(Cat, ["healer", "healer apprentice"], working=True, sort=True)
                     if len(med_list) == 0:
                         if random_index == 0:
                             random_index = 1

@@ -5150,6 +5150,39 @@
                 "disabled_image": {
                     "path": "resources/images/buttons/rest_focus_unavailable.png"
                 }
+        }
+    },
+	"#vertical_slider_down_arrow_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/vertical_slider_down.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/vertical_slider_down_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/vertical_slider_down_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/vertical_slider_down_hover.png"
+            }
+        }
+    },
+	"#vertical_slider_up_arrow_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/vertical_slider_up.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/vertical_slider_up_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/vertical_slider_up_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/vertical_slider_up_hover.png"
             }
         },
         "#sabotage_focus_button": {
@@ -5561,5 +5594,6 @@
             }
         }
     }
+}
 }
     

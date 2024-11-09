@@ -158,8 +158,8 @@
 			"warrior",
 			"mediator apprentice",
 			"mediator",
-			"medicine cat apprentice",
-			"medicine cat",
+			"healer apprentice",
+			"healer",
 			"deputy",
 			"leader"
 		],
@@ -169,8 +169,8 @@
 			"warrior",
 			"mediator apprentice",
 			"mediator",
-			"medicine cat apprentice",
-			"medicine cat",
+			"healer apprentice",
+			"healer",
 			"deputy",
 			"leader"
 		]
@@ -248,8 +248,8 @@
 			"warrior",
 			"mediator apprentice",
 			"mediator",
-			"medicine cat apprentice",
-			"medicine cat",
+			"healer apprentice",
+			"healer",
 			"deputy",
 			"leader"
 		],
@@ -268,7 +268,7 @@
 		"random_status_constraint": [
 			"apprentice",
 			"mediator apprentice",
-			"medicine cat apprentice"
+			"healer apprentice"
 		],
 		"reaction_random_cat": {
 			"platonic": "increase"
@@ -297,8 +297,8 @@
 			"warrior",
 			"mediator apprentice",
 			"mediator",
-			"medicine cat apprentice",
-			"medicine cat",
+			"healer apprentice",
+			"healer",
 			"deputy",
 			"leader"
 		],
@@ -326,8 +326,8 @@
 			"warrior",
 			"mediator apprentice",
 			"mediator",
-			"medicine cat apprentice",
-			"medicine cat",
+			"healer apprentice",
+			"healer",
 			"deputy",
 			"leader"
 		],
@@ -414,16 +414,15 @@
 			"apprentice"
 		],
 		"random_status_constraint": [
-			"medicine cat apprentice"
+			"healer apprentice"
 		]
 	},
 	{
 		"id": "platonic_app_med5",
 		"interactions": [
 			"m_c gently grooms some cobwebs off r_c's fur.",
-			"m_c tells r_c that {PRONOUN/r_c/subject}'ll be an amazing medicine cat someday.",
-			"m_c believes in r_c, and reassures r_c that {PRONOUN/r_c/subject} made the right choice by becoming a medicine cat apprentice.",
-			"Stuck inside the medicine den, even though m_c grumbles at {PRONOUN/m_c/poss} wounds, {PRONOUN/m_c/subject} {VERB/m_c/is/are} happy r_c is tending {PRONOUN/m_c/object}"
+			"m_c tells r_c that {PRONOUN/r_c/subject}'ll be an amazing healer someday.",
+			"m_c believes in r_c, and reassures r_c that {PRONOUN/r_c/subject} made the right choice by becoming a healer apprentice."
 		],
 		"relationship_constraint": [
 			"platonic_40"
@@ -432,7 +431,7 @@
 			"apprentice"
 		],
 		"random_status_constraint": [
-			"medicine cat apprentice"
+			"healer apprentice"
 		]
 	},
 	{
@@ -555,8 +554,8 @@
 			"r_c is a little hesitant to ask m_c to check on something minor, but knows that even though m_c can be grumpy sometimes, {PRONOUN/m_c/subject} always takes care of {PRONOUN/r_c/object}."
 		],
 		"main_status_constraint": [
-			"medicine cat",
-			"medicine cat apprentice"
+			"healer",
+			"healer apprentice"
 		],
 		"main_trait_constraint": [
 			"cold",

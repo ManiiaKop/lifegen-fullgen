@@ -32,6 +32,9 @@ from random import choice
 from re import sub
 
 import pygame
+
+from ..cat.phenotype import Phenotype
+
 import pygame_gui
 import ujson
 
@@ -619,6 +622,7 @@ class ProfileScreen(Screens):
                     self.the_cat.genderalign = 'sam'
                     if self.the_cat.gender == 'intersex':
                         self.the_cat.genderalign = 'intersex sam'
+<<<<<<< HEAD
 
                 #pronoun handler
                 if self.the_cat.genderalign in ["molly", "trans molly"]:
@@ -630,6 +634,15 @@ class ProfileScreen(Screens):
                 elif self.the_cat.genderalign not in ["molly", "trans molly", "tom", "trans tom"]:
                     self.the_cat.pronouns = [self.the_cat.default_pronouns[0].copy()]
 
+=======
+                if 'molly' in self.the_cat.genderalign:
+                    self.pronouns = [self.the_cat.default_pronouns[1].copy()]
+                elif 'tom' in self.the_cat.genderalign:
+                    self.pronouns = [self.the_cat.default_pronouns[2].copy()]
+                else:
+                    self.pronouns = [self.the_cat.default_pronouns[0].copy()]
+
+>>>>>>> 2024-09
                 self.clear_profile()
                 self.build_profile()
                 self.update_disabled_buttons_and_text()
@@ -1130,7 +1143,7 @@ class ProfileScreen(Screens):
             starting_height=2,
         )
         if not (self.the_cat.dead or self.the_cat.outside) and (
-            self.the_cat.status in ["medicine cat", "medicine cat apprentice"]
+            self.the_cat.status in ["healer", "healer apprentice"]
             or self.the_cat.is_ill()
             or self.the_cat.is_injured()
         ):
@@ -1539,6 +1552,20 @@ class ProfileScreen(Screens):
         # PELT LENGTH
         output += "fur length: " + the_cat.pelt.length
         # NEWLINE ----------
+        output += "\n"
+        
+        # BODY TYPE
+        output += "body type: " + the_cat.genotype.body_label
+        # NEWLINE ----------
+        output += "\n"
+        
+        # HEIGHT
+        output += "height: " + the_cat.genotype.height_label
+        if game.clan.clan_settings["showheight"]:
+            if game.clan.clan_settings["metric_toggle"]:
+                output += f" ({the_cat.genotype.shoulder_height * 2.54:.2f} cm)"
+            else:
+                output += " ("+ str(the_cat.genotype.shoulder_height) +"\")"
 
         # ACCESSORY
         if the_cat.pelt.accessories:
@@ -1641,6 +1668,7 @@ class ProfileScreen(Screens):
                 else:
                     output += " other"
 
+<<<<<<< HEAD
         if not the_cat.dead:
             # NEWLINE ----------
             output += "\n"
@@ -1657,6 +1685,8 @@ class ProfileScreen(Screens):
 
         
 
+=======
+>>>>>>> 2024-09
         return output
 
     def generate_column2(self, the_cat):
@@ -2229,10 +2259,17 @@ class ProfileScreen(Screens):
         mentor_influence = History.get_mentor_influence(self.the_cat)
         influence_history = ""
 
+<<<<<<< HEAD
         #First, just list the mentors:
         if self.the_cat.status in ['kitten', 'newborn']:
                 influence_history = 'This cat has not begun training.'
         elif self.the_cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
+=======
+        # First, just list the mentors:
+        if self.the_cat.status in ['kitten', 'newborn']:
+            influence_history = 'This cat has not begun training.'
+        elif self.the_cat.status in ['apprentice', 'healer apprentice', 'mediator apprentice']:
+>>>>>>> 2024-09
             influence_history = 'This cat has not finished training.'
         else:
             valid_formor_mentors = [
@@ -3225,8 +3262,13 @@ class ProfileScreen(Screens):
                 self.manage_roles.disable()
             else:
                 self.manage_roles.enable()
+<<<<<<< HEAD
             if self.the_cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"] \
                                             or self.the_cat.dead or self.the_cat.outside:
+=======
+            if self.the_cat.status not in ['apprentice', 'healer apprentice', 'mediator apprentice'] \
+                    or self.the_cat.dead or self.the_cat.outside:
+>>>>>>> 2024-09
                 self.change_mentor_button.disable()
             else:
                 self.change_mentor_button.enable()
@@ -3375,6 +3417,7 @@ class ProfileScreen(Screens):
                 self.kill_cat_button.enable()
             else:
                 self.kill_cat_button.disable()
+<<<<<<< HEAD
 
 
 
@@ -3385,6 +3428,11 @@ class ProfileScreen(Screens):
                 if self.exit_df_button:
                     self.exit_df_button.hide()
                 self.affair_button.hide()
+=======
+            
+            if self.the_cat.pelt.accessory:
+                self.destroy_accessory_button.enable()
+>>>>>>> 2024-09
             else:
                 self.murder_cat_button.show()
                 if self.join_df_button:
@@ -3532,7 +3580,11 @@ class ProfileScreen(Screens):
                 if self.genetic_text_box:
                     self.genetic_text_box.kill()
 
+<<<<<<< HEAD
                 self.genelist = str(self.the_cat.phenotype.PhenotypeOutput()) + "\n" + str(self.the_cat.genotype.ShowGenes())
+=======
+                self.genelist = str(self.the_cat.phenotype.PhenotypeOutput()) + "\n" + str(self.the_cat.genotype.ShowGenes()) + "\n" + self.the_cat.genotype.FormatSomatic()
+>>>>>>> 2024-09
                 if(self.the_cat.genotype.chimera):
                     chimpheno = Phenotype(self.the_cat.genotype.chimerageno)
                     self.genelist += "\n\n" + str(chimpheno.PhenotypeOutput(self.the_cat.genotype.chimerageno.gender)) + "\n" + str(self.the_cat.genotype.chimerageno.ShowGenes())
@@ -3599,6 +3651,7 @@ class ProfileScreen(Screens):
             elif self.open_sub_tab == 'genetics':
                 if self.genetic_text_box:
                     self.genetic_text_box.kill()
+<<<<<<< HEAD
         elif self.open_tab == "accessories":
             self.backstory_background.kill()
             for i in self.cat_list_buttons:
@@ -3622,6 +3675,10 @@ class ProfileScreen(Screens):
             if self.request_apprentice_button:
                 self.request_apprentice_button.kill()
         elif self.open_tab == 'conditions':
+=======
+
+        elif self.open_tab == "conditions":
+>>>>>>> 2024-09
             self.left_conditions_arrow.kill()
             self.right_conditions_arrow.kill()
             self.conditions_background.kill()

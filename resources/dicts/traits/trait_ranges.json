@@ -1,14 +1,8 @@
 {
     "normal_traits": {
         "bouncy": {
-            "lawfulness": [
-                0,
-                7
-            ],
-            "sociability": [
-                8,
-                15
-            ],
+            "lawfulness": [0, 7 ],
+            "sociability": [8, 15],
             "aggression": [
                 8,
                 15
@@ -1028,6 +1022,12 @@
                 15
             ]
         },
+        "unruly": {
+            "lawfulness": [0, 8],
+            "sociability": [0, 8],
+            "aggression": [0, 8],
+            "stability": [0, 8]
+        },
         "lonesome": {
             "lawfulness": [
                 0,
@@ -1063,6 +1063,12 @@
                 0,
                 15
             ]
+        },
+        "shy": {
+            "lawfulness": [0, 8],
+            "sociability": [0, 8],
+            "aggression": [0, 8],
+            "stability": [8, 16]
         },
         "bullying": {
             "lawfulness": [
@@ -1117,6 +1123,18 @@
                 0,
                 15
             ]
+        },
+        "fearless": {
+            "lawfulness": [0, 8],
+            "sociability": [8, 16],
+            "aggression": [8, 16],
+            "stability": [8, 16]
+        },
+        "skittish": {
+            "lawfulness": [8, 16],
+            "sociability": [0, 8],
+            "aggression": [0, 8],
+            "stability": [0, 8]
         },
         "daring": {
             "lawfulness": [
@@ -1279,6 +1297,12 @@
                 0,
                 15
             ]
+        },
+        "self-conscious": {
+            "lawfulness": [8, 16],
+            "sociability": [0, 8],
+            "aggression": [8, 16],
+            "stability": [0, 8]
         },
         "bossy": {
             "lawfulness": [

@@ -14,7 +14,7 @@
             "Is admiring StarClan territory",
             "Is thinking about {PRONOUN/m_c/poss} life",
             "Is missing a loved one",
-            "Is hoping to meet with a medicine cat soon",
+            "Is hoping to meet with a healer soon",
             "Is admiring the stars in {PRONOUN/m_c/poss} fur",
             "Is watching over a Clan ceremony",
             "Is hoping to give a life to a new leader",
@@ -25,7 +25,7 @@
             "Is wondering about Twolegs",
             "Is thinking about {PRONOUN/m_c/poss} ancient ancestors",
             "Is worried about the cats in the Dark Forest",
-            "Is thinking of advice to give to a medicine cat",
+            "Is thinking of advice to give to a healer",
             "Is exploring StarClan",
             "Is sad seeing how the Clan has changed",
             "Wishes {PRONOUN/m_c/subject} could speak to old friends",
@@ -159,14 +159,14 @@
     {
         "id": "gen_dead_med_cat",
         "thoughts": [
-            "Regrets leaving the Clan one medicine cat short",
+            "Regrets leaving the Clan one healer short",
             "Is worried about the Clan's ability to survive the latest illness",
             "Looks after the newborns in StarClan",
             "Is watching c_n, ready to send an omen"
         ],
         "main_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
+            "healer",
+            "healer apprentice"
         ]
     },
     {
@@ -181,12 +181,12 @@
             "Lets {PRONOUN/m_c/poss} scent linger near r_c, if only for a moment"
         ],
         "main_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
+            "healer",
+            "healer apprentice"
         ],
         "random_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
+            "healer",
+            "healer apprentice"
         ],
         "random_living_status": [
             "living"
@@ -198,8 +198,8 @@
             "Sends an omen of things to come to r_c"
         ],
         "main_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
+            "healer",
+            "healer apprentice"
         ],
         "random_living_status": [
             "living"
@@ -213,8 +213,8 @@
             "Is debating with r_c about {PRONOUN/m_c/poss} visions for a certain cat"
         ],
         "main_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
+            "healer",
+            "healer apprentice"
         ],
         "random_living_status": [
             "starclan"
@@ -228,8 +228,8 @@
             "Is trying to find solace to see r_c in StarClan despite being so young"
         ],
         "main_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
+            "healer",
+            "healer apprentice"
         ],
         "random_living_status": [
             "starclan"
@@ -273,7 +273,7 @@
         ],
         "main_status_constraint": [
             "apprentice",
-            "medicine cat apprentice",
+            "healer apprentice",
             "mediator apprentice"
         ]
     },
@@ -286,7 +286,7 @@
         ],
         "main_status_constraint": [
             "apprentice",
-            "medicine cat apprentice",
+            "healer apprentice",
             "mediator apprentice"
         ],
         "random_living_status": [
@@ -303,7 +303,7 @@
         ],
         "main_status_constraint": [
             "apprentice",
-            "medicine cat apprentice",
+            "healer apprentice",
             "mediator apprentice"
         ],
         "relationship_constraint": [
@@ -314,7 +314,7 @@
         ],
         "random_status_constraint": [
             "apprentice",
-            "medicine cat apprentice",
+            "healer apprentice",
             "mediator apprentice"
         ]
     },
@@ -326,7 +326,7 @@
         ],
         "main_status_constraint": [
             "apprentice",
-            "medicine cat apprentice",
+            "healer apprentice",
             "mediator apprentice"
         ],
         "relationship_constraint": [
@@ -350,7 +350,7 @@
         "random_status_constraint": [
             "apprentice",
             "mediator apprentice",
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "random_living_status": [
             "living"

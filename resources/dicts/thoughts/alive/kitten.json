@@ -26,6 +26,9 @@
         ],
         "random_status_constraint": [
             "elder"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -112,16 +115,16 @@
     {
         "id": "kit_alive_med_cat",
         "thoughts": [
-            "Refuses to eat the herbs the medicine cat has given {PRONOUN/m_c/object} for {PRONOUN/m_c/poss} tummy",
-            "Hides in the medicine cat's herb stores",
-            "Is asking the medicine cat about StarClan",
-            "Is asking the medicine cat why all the herbs have to be stinky and gross",
-            "Wants to follow the medicine cat everywhere",
+            "Refuses to eat the herbs the healer has given {PRONOUN/m_c/object} for {PRONOUN/m_c/poss} tummy",
+            "Hides in the healer's herb stores",
+            "Is asking the healer about StarClan",
+            "Is asking the healer why all the herbs have to be stinky and gross",
+            "Wants to follow the healer everywhere",
             "Is covering {PRONOUN/m_c/self} with leaves"
         ],
         "random_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
+            "healer",
+            "healer apprentice"
         ]
     },
     {
@@ -146,6 +149,9 @@
         ],
         "main_trait_constraint": [
             "bouncy"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -176,6 +182,9 @@
         ],
         "main_trait_constraint": [
             "bullying"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -184,7 +193,7 @@
             "Is rolling around cutely while warriors look upon {PRONOUN/m_c/object}",
             "Is rubbing up against the warriors' legs",
             "Is hoping the patrol will come back with a special gift for {PRONOUN/m_c/object} like usual",
-            "Is trying to purr {PRONOUN/m_c/poss} way out of trouble with the medicine cat",
+            "Is trying to purr {PRONOUN/m_c/poss} way out of trouble with the healer",
             "Is absolutely adorable",
             "Is purring softly",
             "Is waiting patiently for {PRONOUN/m_c/poss} turn",
@@ -200,6 +209,9 @@
         ],
         "main_trait_constraint": [
             "charming"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -219,7 +231,7 @@
             "Is sure {PRONOUN/m_c/subject} could fight a badger",
             "Is sneaking into the leader's den",
             "Sticks {PRONOUN/m_c/poss} paw into an old snake hole",
-            "Isn't afraid of the dark",
+            "Isn't afraid of the dark at all",
             "Is planning to escape bathtime",
             "Was caught before taking a paw outside of camp",
             "Pretending r_c is the latest mountain {PRONOUN/m_c/subject} must climb",
@@ -230,7 +242,10 @@
             "Makes another failed attempt at trying to escape the camp"
         ],
         "main_trait_constraint": [
-            "daring"
+            "fearless"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -241,7 +256,7 @@
             "Thinks {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} the leader of {PRONOUN/m_c/poss} own Clan",
             "Bosses around imaginary cats as deputy",
             "Wonders what it would be like to be leader",
-            "Sorts blades of grass like a medicine cat would",
+            "Sorts blades of grass like a healer would",
             "Stares into nothing in particular",
             "Makes up a tale on the spot for the other kits",
             "Is annoying the elders for more tales",
@@ -265,6 +280,9 @@
         ],
         "main_trait_constraint": [
             "daydreamer"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -364,11 +382,13 @@
             "Asks r_c if it's safe",
             "Is checking on r_c",
             "Hopes there is enough fresh-kill for every cat",
-            "Has a lot on {PRONOUN/m_c/poss} mind",
-            "Is sadly a victim of another prank"
+            "Has a lot on {PRONOUN/m_c/poss} mind"
         ],
         "main_trait_constraint": [
-            "nervous"
+            "skittish"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -399,6 +419,9 @@
         ],
         "main_trait_constraint": [
             "quiet"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -422,7 +445,7 @@
     {
         "id": "sweet_kit",
         "thoughts": [
-            "Is pretending to be the medicine cat",
+            "Is pretending to be the healer",
             "Plucks feathers from a fresh-kill bird to add to nests",
             "Offers to leave camp to collect moss, but can't because {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} a kit",
             "Compliments an older cat on how their fur looks today",
@@ -447,6 +470,9 @@
         ],
         "main_trait_constraint": [
             "sweet"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -458,13 +484,13 @@
             "Is planning to be naughty",
             "Is thinking about being in trouble",
             "Is trying to get out of trouble",
-            "Is scrambling the medicine cat's herbs",
+            "Is scrambling the healer's herbs",
             "Is thinking of how to cause trouble",
             "Plans to annoy an elder",
             "Is trying very hard to look innocent",
             "Is thinking about play-fighting with {PRONOUN/m_c/poss} littermates",
             "Is putting thorns in r_c's bedding",
-            "Is thinking about stealing herbs from the medicine den",
+            "Is thinking about stealing herbs from the healer den",
             "Is sneaking out of camp",
             "Is saying bad words",
             "Is tripping other cats",
@@ -473,7 +499,7 @@
             "Is up to no good... again",
             "Splashes around in a puddle, getting r_c all wet",
             "Is not allowed to leave the nursery for the rest of the day after pranking r_c",
-            "Is trying to scare r_c",
+            "Tries to scare r_c",
             "Is covered in mud",
             "Is stealing other kits' toys",
             "Tries to intimidate the other kits",
@@ -482,7 +508,10 @@
             "Is spitting and being spicy"
         ],
         "main_trait_constraint": [
-            "troublesome"
+            "unruly"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -506,7 +535,11 @@
             "Enjoys watching other cats stroll by"
         ],
         "main_trait_constraint": [
-            "lonesome"
+            "lonesome",
+            "shy"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -526,6 +559,9 @@
         ],
         "main_trait_constraint": [
             "attention-seeker"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -560,6 +596,9 @@
         ],
         "main_trait_constraint": [
             "noisy"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -584,7 +623,11 @@
             "Feels as if {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not growing big and strong enough to become an apprentice"
         ],
         "main_trait_constraint": [
-            "insecure"
+            "insecure",
+            "self-conscious"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -603,6 +646,9 @@
         ],
         "main_trait_constraint": [
             "polite"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -628,6 +674,9 @@
         ],
         "main_trait_constraint": [
             "know-it-all"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -649,6 +698,9 @@
         ],
         "main_trait_constraint": [
             "bossy"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
