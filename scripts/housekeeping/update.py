@@ -170,11 +170,7 @@ def self_update(
     )
     progress_bar.advance()
 
-<<<<<<< HEAD
     download_file("https://raw.githubusercontent.com/sedgestripe/clangen/LifeGen-dev/verification/update_pubkey.asc")
-=======
-    download_file("https://raw.githubusercontent.com/Thlumyn/clangen/development/verification/update_pubkey.asc")
->>>>>>> 2024-09
     progress_bar.advance()
 
     key, _ = pgpy.PGPKey.from_file("./Downloads/update_pubkey.asc")
