@@ -804,11 +804,7 @@ class Condition_Events:
                 continue
 
             # revealing perm condition
-<<<<<<< HEAD
-            if status == 'reveal' and condition != 'infertility':
-=======
             if status == 'reveal' and condition not in ['infertility', 'manx syndrome']:
->>>>>>> 2024-09
                 # gather potential event strings for gotten risk
                 possible_string_list = (
                     Condition_Events.CONGENITAL_CONDITION_GOT_STRINGS[condition]
@@ -890,11 +886,6 @@ class Condition_Events:
         if game.clan.clan_settings["retirement"] or cat.no_retire:
             return
 
-<<<<<<< HEAD
-        if not triggered and not cat.dead and cat.status not in \
-                ['leader', 'medicine cat', 'kitten', 'newborn', 'medicine cat apprentice', 'mediator',
-                 'mediator apprentice', "queen", "queen's apprentice", 'elder']:
-=======
         if (
             not triggered
             and not cat.dead
@@ -907,10 +898,11 @@ class Condition_Events:
                 "healer apprentice",
                 "mediator",
                 "mediator apprentice",
+                "queen",
+                "queen's apprentice",
                 "elder",
             ]
         ):
->>>>>>> 2024-09
             for condition in cat.permanent_condition:
                 if cat.permanent_condition[condition]["severity"] not in [
                     "major",
