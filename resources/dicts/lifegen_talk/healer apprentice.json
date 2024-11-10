@@ -751,7 +751,7 @@
         [
             "[You warn t_c that invoking the name of StarClan for every mundane thing is eventually going to catch up with {PRONOUN/t_c/object}.]",
             "*Sigh* Y'know what? Maybe you're right, y_c. I'm so sorry.",
-            "I really need to have more respect for our warrior ancestors, and take my duties as a medicine cat more seriousl .... Ah.",
+            "I really need to have more respect for our warrior ancestors, and take my duties as a healer more seriousl .... Ah.",
             "[t_c squints up at the sky, ears pricking.]",
             "What was that? ... Uh-huh ... Mhm, yes, I see .....",
             "Scratch everything I just said, y_c. StarClan just gave me a new message. They tell me you're jealous of my gift."
@@ -1523,7 +1523,7 @@
         ],
         [
             "Ah, y_c! Quick, I need your help!",
-            "[You rush over to the medicine cat apprentice, startled to see {PRONOUN/t_c/object} so serious.]",
+            "[You rush over to the healer apprentice, startled to see {PRONOUN/t_c/object} so serious.]",
             "r_s is starting to get really sick! everycat else is out of camp and I can't carry {PRONOUN/r_s/object} by myself. Can you please help me?"
         ]
     ],
@@ -1828,7 +1828,7 @@
         },
         "Yup": [
             "I was having a bit of nostalgia, haha! I was so curious about what you were doing back then.",
-            "And now look at me - I'm your apprentice and on the path of being a medicine cat.",
+            "And now look at me - I'm your apprentice and on the path of being a healer.",
             "It's funny how things work out, huh?"
         ],
         "donot": [
@@ -1848,7 +1848,7 @@
             "they_deaf"
         ],
         [
-            "[t_c noses at your side, checking for any noticeable discomfort, as medicine cats do.]",
+            "[t_c noses at your side, checking for any noticeable discomfort, as healers do.]",
             "[When {PRONOUN/t_c/subject} {VERB/t_c/don't/doesn't} find anything particularly concerning, t_c licks the top of your head to provide some comfort.]"
         ]
     ],
@@ -1923,7 +1923,7 @@
      [
 "Um... sorry, y_c? I don't mean to bother you, but plove_r_c has a bit of a sore throat. Could I have some honey from your stores to give them?",
 "O-of course, you could give it to them, too! I don't mean to overstep.",
-"[There's not much that can go terribly wrong with honey. Since t_c seems to know {PRONOUN/t_c/poss} way around medicine despite not being a medicine cat, you give {PRONOUN/t_c/object} a dollop of honey on a stick and send {PRONOUN/t_c/object} on {PRONOUN/t_c/poss} way.]" 
+"[There's not much that can go terribly wrong with honey. Since t_c seems to know {PRONOUN/t_c/poss} way around medicine despite not being a healer, you give {PRONOUN/t_c/object} a dollop of honey on a stick and send {PRONOUN/t_c/object} on {PRONOUN/t_c/poss} way.]" 
      ]
     ],
     "neurotic_skillsong_SQ8~1": [
@@ -1938,7 +1938,7 @@
 "[t_c is singing to {PRONOUN/t_c/self} as {PRONOUN/t_c/subject} {VERB/t_c/look/looks} over herbs. {PRONOUN/t_c/subject/CAP} {VERB/t_c/notice/notices} you listening and {VERB/t_c/wince/winces}.]",
 "Don't laugh at me, okay? I'm trying to make up a song to help me memorize these.",
 "It's not going super well... lots of herbs have names that don't rhyme with much.",
-"*sigh* I'll keep working on it. Maybe this is a waste of time... every other medicine cat's been able to memorize herbs without music."
+"*sigh* I'll keep working on it. Maybe this is a waste of time... every other healer's been able to memorize herbs without music."
      ]
     ],
     "neurotic_fromyourkit_SQ2": [

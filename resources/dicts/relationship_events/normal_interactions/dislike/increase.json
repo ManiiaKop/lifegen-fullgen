@@ -320,12 +320,7 @@
 		"random_status_constraint": [
 			"elder",
 			"mediator apprentice",
-<<<<<<< HEAD
 			"healer apprentice"
-		]
-	}
-=======
-			"medicine cat apprentice"
 		],
 		"reaction_random_cat": {
 			"dislike": "increase"
@@ -347,5 +342,4 @@
 			"dislike": "increase"
 		}
     }
->>>>>>> lifegen_origin/LifeGen-dev
 ]

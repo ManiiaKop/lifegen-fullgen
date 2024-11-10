@@ -219,11 +219,7 @@
             "Is sure {PRONOUN/m_c/subject} could fight a badger",
             "Is sneaking into the leader's den",
             "Sticks {PRONOUN/m_c/poss} paw into an old snake hole",
-<<<<<<< HEAD
-            "Isn't afraid of the dark at all",
-=======
             "Isn't afraid of the dark",
->>>>>>> lifegen_origin/LifeGen-dev
             "Is planning to escape bathtime",
             "Was caught before taking a paw outside of camp",
             "Pretending r_c is the latest mountain {PRONOUN/m_c/subject} must climb",
@@ -234,14 +230,7 @@
             "Makes another failed attempt at trying to escape the camp"
         ],
         "main_trait_constraint": [
-<<<<<<< HEAD
-            "fearless"
-        ],
-        "random_living_status": [
-            "living"
-=======
             "daring"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -374,23 +363,12 @@
             "Never wants to leave the camp when {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} older",
             "Asks r_c if it's safe",
             "Is checking on r_c",
-<<<<<<< HEAD
-            "Hopes there is enough fresh-kill for every cat",
-            "Has a lot on {PRONOUN/m_c/poss} mind"
-        ],
-        "main_trait_constraint": [
-            "skittish"
-        ],
-        "random_living_status": [
-            "living"
-=======
             "Hopes there is enough fresh-kill for everycat",
             "Has a lot on {PRONOUN/m_c/poss} mind",
             "Is sadly a victim of another prank"
         ],
         "main_trait_constraint": [
             "nervous"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -495,11 +473,7 @@
             "Is up to no good... again",
             "Splashes around in a puddle, getting r_c all wet",
             "Is not allowed to leave the nursery for the rest of the day after pranking r_c",
-<<<<<<< HEAD
-            "Tries to scare r_c",
-=======
             "Is trying to scare r_c",
->>>>>>> lifegen_origin/LifeGen-dev
             "Is covered in mud",
             "Is stealing other kits' toys",
             "Tries to intimidate the other kits",
@@ -508,14 +482,7 @@
             "Is spitting and being spicy"
         ],
         "main_trait_constraint": [
-<<<<<<< HEAD
-            "unruly"
-        ],
-        "random_living_status": [
-            "living"
-=======
             "troublesome"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -539,15 +506,7 @@
             "Enjoys watching other cats stroll by"
         ],
         "main_trait_constraint": [
-<<<<<<< HEAD
-            "lonesome",
-            "shy"
-        ],
-        "random_living_status": [
-            "living"
-=======
             "lonesome"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -625,15 +584,7 @@
             "Feels as if {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not growing big and strong enough to become an apprentice"
         ],
         "main_trait_constraint": [
-<<<<<<< HEAD
-            "insecure",
-            "self-conscious"
-        ],
-        "random_living_status": [
-            "living"
-=======
             "insecure"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {

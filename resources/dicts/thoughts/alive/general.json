@@ -110,14 +110,7 @@
             "Wishes {PRONOUN/m_c/subject} understood what r_c is doing"
         ],
         "random_status_constraint": [
-<<<<<<< HEAD
             "healer"
-        ],
-        "random_living_status": [
-            "living"
-=======
-            "medicine cat"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -132,14 +125,7 @@
             "Wishes {PRONOUN/m_c/subject} understood what r_c is doing"
         ],
         "random_status_constraint": [
-<<<<<<< HEAD
             "healer apprentice"
-        ],
-        "random_living_status": [
-            "living"
-=======
-            "medicine cat apprentice"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -907,14 +893,7 @@
             "guided1"
         ],
         "main_status_constraint": [
-<<<<<<< HEAD
             "healer"
-        ],
-        "random_living_status": [
-            "living"
-=======
-            "medicine cat"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -2125,16 +2104,8 @@
             "adolescent"
         ],
         "random_status_constraint": [
-<<<<<<< HEAD
             "healer apprentice",
             "healer"
-        ],
-        "random_living_status": [
-            "living"
-=======
-            "medicine cat apprentice",
-            "medicine cat"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {

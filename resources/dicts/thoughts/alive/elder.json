@@ -199,16 +199,8 @@
         "main_status_constraint": [
             "elder"
         ],
-<<<<<<< HEAD
-        "random_status_constraint": [
-            "healer"
-        ],
-        "random_living_status": [
-            "living"
-=======
         "random_status_constraint":[
-            "medicine cat"
->>>>>>> lifegen_origin/LifeGen-dev
+            "healer"
         ]
     },
     {
@@ -246,16 +238,8 @@
             "elder"
         ],
         "random_status_constraint": [
-<<<<<<< HEAD
             "healer apprentice",
             "healer"
-        ],
-        "random_living_status": [
-            "living"
-=======
-            "medicine cat apprentice",
-            "medicine cat"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -356,16 +340,8 @@
             "adolescent"
         ],
         "random_status_constraint": [
-<<<<<<< HEAD
             "healer apprentice",
             "healer"
-        ],
-        "random_living_status": [
-            "living"
-=======
-            "medicine cat apprentice",
-            "medicine cat"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
 
@@ -431,16 +407,8 @@
             "adolescent"
         ],
         "random_status_constraint": [
-<<<<<<< HEAD
             "healer apprentice",
             "healer"
-        ],
-        "random_living_status": [
-            "living"
-=======
-            "medicine cat apprentice",
-            "medicine cat"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -478,16 +446,8 @@
             "elder"
         ],
         "random_status_constraint": [
-<<<<<<< HEAD
             "healer apprentice",
             "healer"
-        ],
-        "random_living_status": [
-            "living"
-=======
-            "medicine cat apprentice",
-            "medicine cat"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -857,16 +817,8 @@
             "elder"
         ],
         "random_status_constraint": [
-<<<<<<< HEAD
             "healer",
             "healer apprentice"
-        ],
-        "random_living_status": [
-            "living"
-=======
-            "medicine cat",
-            "medicine cat apprentice"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     }
 ]

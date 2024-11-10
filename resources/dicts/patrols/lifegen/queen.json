@@ -191,7 +191,7 @@
                 "weight": 20
             },
             {
-                "text": "You immediately recognize the symptoms and decide the cough is not bad enough to consult the medicine cat. Instead, you search around the nursery for herbs and treat the kitten yourself with much success.",
+                "text": "You immediately recognize the symptoms and decide the cough is not bad enough to consult the healer. Instead, you search around the nursery for herbs and treat the kitten yourself with much success.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["HEALER,1"],
@@ -221,7 +221,7 @@
                 "weight": 20
             },
             {
-                "text": "The kitten coughs in your face one too many times for comfort, and although you were able to locate the issue and direct them to a medicine cat, you find yourself feeling sick as well. Aww rats.",
+                "text": "The kitten coughs in your face one too many times for comfort, and although you were able to locate the issue and direct them to a healer, you find yourself feeling sick as well. Aww rats.",
                 "exp": 0,
                 "weight": 5,
                 "injury": [
@@ -232,7 +232,7 @@
                 ] 
             },
             {
-                "text": "You're not willing to become sick this time, nope! Nope, nope nope! You keep yourself a safe distance away and tell the kitten to find a medicine cat for their cough, even though you can feel the judgemental eyes of other queen's upon you.",
+                "text": "You're not willing to become sick this time, nope! Nope, nope nope! You keep yourself a safe distance away and tell the kitten to find a healer for their cough, even though you can feel the judgemental eyes of other queen's upon you.",
                 "exp": 0,
                 "weight": 15
             }
@@ -439,7 +439,7 @@
                 "weight": 20
             },
             {
-                "text": "Noticing their anxious behavior, you give them advice relating to being calm while birthing. You comment on the importance of staying calm and focused, and to trust the queen's and medicine cats that'll be helping them give birth when the time comes.",
+                "text": "Noticing their anxious behavior, you give them advice relating to being calm while birthing. You comment on the importance of staying calm and focused, and to trust the queen's and healers that'll be helping them give birth when the time comes.",
                 "exp": 10,
                 "weight": 20
             }
@@ -579,7 +579,7 @@
                 "can_have_stat": ["p_l"]
             },
             {
-                "text": "You wrack your brain for any knowledge about continuous crying, refusing to simply brush it off as the kitten being unconscionable. After a moment, you remember a medicine cat mentioning a spread of ear mites and direct the parents to ask about it just in case.",
+                "text": "You wrack your brain for any knowledge about continuous crying, refusing to simply brush it off as the kitten being unconscionable. After a moment, you remember a healer mentioning a spread of ear mites and direct the parents to ask about it just in case.",
                 "exp": 15,
                 "weight": 20,
                 "stat_skill": ["CLAIRVOYANT,1", "INSIGHTFUL,1"]

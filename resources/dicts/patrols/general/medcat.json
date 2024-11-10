@@ -1817,11 +1817,7 @@
             "normal adult": [-1, -1]
         },
         "weight": 5,
-<<<<<<< HEAD
-        "intro_text": "The apprentices strolls through c_n's territory, chatting amicably amongst themselves. The senior healers are all busy back at camp, so the young cats get the chance to be out on their own today, which has everyone excited!",
-=======
-        "intro_text": "The apprentices strolls through c_n's territory, chatting amicably amongst themselves. The senior medicine cats are all busy back at camp, so the young cats get the chance to be out on their own today, which has everycat excited!",
->>>>>>> lifegen_origin/LifeGen-dev
+        "intro_text": "The apprentices strolls through c_n's territory, chatting amicably amongst themselves. The senior healers are all busy back at camp, so the young cats get the chance to be out on their own today, which has everycat excited!",
         "decline_text": "Before they get very far, one of their Clanmates catches up to inform them that they're wanted back at camp. Oh well, maybe they'll get the chance again another day.",
         "chance_of_success": 30,
         "success_outcomes": [
@@ -1970,11 +1966,7 @@
         "relationship_constraint": ["siblings", "platonic_20"],
         "success_outcomes": [
             {
-<<<<<<< HEAD
-                "text": "p_l and app2 walk with their tails entwined and pelts brushing together, thrilled to be able to patrol together. p_l doesn't regret becoming a healer, but {PRONOUN/p_l/subject} {VERB/p_l/do/does} feel secluded at times, watching app2 train and patrol with everyone. The siblings make the most of their time together, returning home side-by-side with their jaws full of herbs.",
-=======
-                "text": "p_l and app2 walk with their tails entwined and pelts brushing together, thrilled to be able to patrol together. p_l doesn't regret becoming a medicine cat, but {PRONOUN/p_l/subject} {VERB/p_l/do/does} feel secluded at times, watching app2 train and patrol with everycat. The siblings make the most of their time together, returning home side-by-side with their jaws full of herbs.",
->>>>>>> lifegen_origin/LifeGen-dev
+                "text": "p_l and app2 walk with their tails entwined and pelts brushing together, thrilled to be able to patrol together. p_l doesn't regret becoming a healer, but {PRONOUN/p_l/subject} {VERB/p_l/do/does} feel secluded at times, watching app2 train and patrol with everycat. The siblings make the most of their time together, returning home side-by-side with their jaws full of herbs.",
                 "exp": 20,
                 "weight": 20,
                 "herbs": ["random_herbs"],
@@ -2073,11 +2065,7 @@
         "relationship_constraint": ["siblings", "platonic_20"],
         "success_outcomes": [
             {
-<<<<<<< HEAD
-                "text": "p_l and r_c walk with their tails entwined and pelts brushing together, thrilled to be able to patrol together. p_l doesn't regret becoming a healer, but {PRONOUN/p_l/subject} {VERB/p_l/do/does} feel secluded at times, watching r_c train and patrol with everyone. The siblings make the most of their time together, returning home side-by-side with their jaws full of herbs.",
-=======
-                "text": "p_l and r_c walk with their tails entwined and pelts brushing together, thrilled to be able to patrol together. p_l doesn't regret becoming a medicine cat, but {PRONOUN/p_l/subject} {VERB/p_l/do/does} feel secluded at times, watching r_c train and patrol with everycat. The siblings make the most of their time together, returning home side-by-side with their jaws full of herbs.",
->>>>>>> lifegen_origin/LifeGen-dev
+                "text": "p_l and r_c walk with their tails entwined and pelts brushing together, thrilled to be able to patrol together. p_l doesn't regret becoming a healer, but {PRONOUN/p_l/subject} {VERB/p_l/do/does} feel secluded at times, watching r_c train and patrol with everycat. The siblings make the most of their time together, returning home side-by-side with their jaws full of herbs.",
                 "exp": 20,
                 "weight": 20,
                 "herbs": ["random_herbs"],

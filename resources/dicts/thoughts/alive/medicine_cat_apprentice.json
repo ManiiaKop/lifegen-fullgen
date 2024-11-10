@@ -124,14 +124,7 @@
         "random_status_constraint": [
             "apprentice",
             "mediator apprentice",
-<<<<<<< HEAD
             "healer apprentice"
-        ],
-        "random_living_status": [
-            "living"
-=======
-            "medicine cat apprentice"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -165,14 +158,7 @@
             "Is learning how to bind a pouch to carry {PRONOUN/m_c/poss} herbs by watching r_c"
         ],
         "random_status_constraint": [
-<<<<<<< HEAD
             "healer"
-        ],
-        "random_living_status": [
-            "living"
-=======
-            "medicine cat"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -448,14 +434,7 @@
             "fierce"
         ],
         "random_status_constraint": [
-<<<<<<< HEAD
             "healer"
-        ],
-        "random_living_status": [
-            "living"
-=======
-            "medicine cat"
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {

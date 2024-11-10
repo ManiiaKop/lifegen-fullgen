@@ -116,13 +116,8 @@
         "max_cats": 3,
         "min_max_status": {},
         "weight": 20,
-<<<<<<< HEAD
-        "intro_text": "An anxious queen is worried about her kit's mobility development. You offer to share some exercises that might help.",
-        "decline_text": "You refer them to the healer.",
-=======
         "intro_text": "An anxious parent is worried about their kit's mobility development and asks if you have any advice on how to further their kits development or prevent any stunting.",
-        "decline_text": "You hesitate, and decide to refer them to a medicine cat or an experienced queen, sheepishly stating you have yet to learn about mobility development. The parent thanks you anyway and you go your separate ways.",
->>>>>>> lifegen_origin/LifeGen-dev
+        "decline_text": "You hesitate, and decide to refer them to a healer or an experienced queen, sheepishly stating you have yet to learn about mobility development. The parent thanks you anyway and you go your separate ways.",
         "chance_of_success": 55,
         "success_outcomes": [
             {
@@ -154,7 +149,7 @@
                 "weight": 20
             },
             {
-                "text": "You explain mobility development and the recommended exercises diligently, the teachings from m_n still fresh in your mind. Although, after a minute of ranting, you realized you're overwhelming the parent with too much information and sheepishly recommend them to seek out a medicine cat instead.",
+                "text": "You explain mobility development and the recommended exercises diligently, the teachings from m_n still fresh in your mind. Although, after a minute of ranting, you realized you're overwhelming the parent with too much information and sheepishly recommend them to seek out a healer instead.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": [
@@ -285,7 +280,7 @@
                 "weight": 20
             },
             {
-                "text": "You hum and state the issue could be more serious than a fussy kit. Although it takes you a few tries and a lot of screaming from r_k, you examine the kit's mouth and determine something is wrong with r_k's teeth. You refer the parent's to r_m for further evaluation. m_n jokes you should have became a medicine cat apprentice instead with a fond look.",
+                "text": "You hum and state the issue could be more serious than a fussy kit. Although it takes you a few tries and a lot of screaming from r_k, you examine the kit's mouth and determine something is wrong with r_k's teeth. You refer the parent's to r_m for further evaluation. m_n jokes you should have became a healer apprentice instead with a fond look.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["HEALER,1"],
@@ -324,7 +319,7 @@
                 "weight": 20
             },
             {
-                "text": "You're at a loss on what to do and ask if the parents mentioned r_k's lack of appetite to a medicine cat. You stress that something else could be going on outside of r_k simply being fussy, and you can't help without knowing more about the situation. The parents look worried as they take r_k out the nursery. m_n scolds you for causing unnecessary fear, even if you were right.",
+                "text": "You're at a loss on what to do and ask if the parents mentioned r_k's lack of appetite to a healer. You stress that something else could be going on outside of r_k simply being fussy, and you can't help without knowing more about the situation. The parents look worried as they take r_k out the nursery. m_n scolds you for causing unnecessary fear, even if you were right.",
                 "exp": 0,
                 "weight": 20
             },

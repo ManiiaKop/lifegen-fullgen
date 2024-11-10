@@ -669,25 +669,25 @@ class TalkScreen(Screens):
                 continue
 
             if "they_adult" in tags and cat.status in [
-                'apprentice', 'medicine cat apprentice', 'mediator apprentice',
+                'apprentice', 'healer apprentice', 'mediator apprentice',
                 "queen's apprentice", "kitten", "newborn"
                 ]:
                 continue
 
             if "you_adult" in tags and you.status in [
-                'apprentice', 'medicine cat apprentice', 'mediator apprentice',
+                'apprentice', 'healer apprentice', 'mediator apprentice',
                 "queen's apprentice", "kitten", "newborn"
                 ]:
                 continue
 
             if "they_app" in tags and cat.status not in [
-                'apprentice', 'medicine cat apprentice',
+                'apprentice', 'healer apprentice',
                 'mediator apprentice', "queen's apprentice"
                 ]:
                 continue
 
             if "you_app" in tags and you.status not in [
-                'apprentice', 'medicine cat apprentice',
+                'apprentice', 'healer apprentice',
                 'mediator apprentice', "queen's apprentice"
                 ]:
                 continue

@@ -1476,13 +1476,8 @@
         "max_cats": 2,
         "min_max_status": {},
         "weight": 20,
-<<<<<<< HEAD
         "intro_text": "The healer asks you to collect some more moss for the herb storage.",
-        "decline_text": "healer duties! No way! You're training to be a warrior!",
-=======
-        "intro_text": "r_m asks you to collect some more moss for the herb storage. It's running low, and the nests need to be changed. It's also good for soaking up water for ill cats. r_m is too busy to do it at the moment.",
-        "decline_text": "Medicine cat duties! No way! You're training to be a warrior!",
->>>>>>> lifegen_origin/LifeGen-dev
+        "decline_text": "Healer duties! No way! You're training to be a warrior!",
         "chance_of_success": 40,
         "success_outcomes": [
             {
@@ -1612,11 +1607,7 @@
         ],
         "fail_outcomes": [
             {
-<<<<<<< HEAD
-                "text": "You try your best to take their words to heart, but you can barely touch them anyway. Their claws score into your flank over and over again, until you're covered in scratches. They seem disappointed in you, and you limp back to the healer's den, bruised and bleeding. ",
-=======
-                "text": "You try your best to take {PRONOUN/m_n/poss} words to heart, but you can barely touch {PRONOUN/m_n/object} anyway. {PRONOUN/m_n/poss/CAP} claws score into your flank over and over again, until you're covered in scratches. d_n seems disappointed in you, and you limp back to the medicine cat's den, bruised and bleeding. ",
->>>>>>> lifegen_origin/LifeGen-dev
+                "text": "You try your best to take {PRONOUN/m_n/poss} words to heart, but you can barely touch {PRONOUN/m_n/object} anyway. {PRONOUN/m_n/poss/CAP} claws score into your flank over and over again, until you're covered in scratches. d_n seems disappointed in you, and you limp back to the healer's den, bruised and bleeding. ",
                 "exp": 0,
                 "weight": 20,
                 "injury": [

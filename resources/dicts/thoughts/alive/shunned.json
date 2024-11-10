@@ -114,7 +114,7 @@
         ],
      "main_status_constraint": [
         "apprentice",
-        "medicine cat apprentice",
+        "healer apprentice",
         "mediator apprentice"
         ]
     }, 
@@ -127,7 +127,7 @@
             "Hadn't realized how much {PRONOUN/m_c/subject} relied on StarClan until they went silent",
             "Feels as if {PRONOUN/m_c/subject} have no where to go",  
             "Shivers in the uneasy silence of being alone", 
-            "Can't help but wonder if {PRONOUN/m_c/subject}'ll still be allowed to be a medicine cat",
+            "Can't help but wonder if {PRONOUN/m_c/subject}'ll still be allowed to be a healer",
             "Thinks that, maybe, another Clan would take {PRONOUN/m_c/object} in",
             "Wishes {PRONOUN/m_c/subject} could apologize to {PRONOUN/m_c/poss} ancestors"
         ],
@@ -137,8 +137,8 @@
         "high_sc"
         ],
      "main_status_constraint": [
-        "medicine cat", 
-        "medicine cat apprentice"
+        "healer", 
+        "healer apprentice"
         ]
     },
     {
@@ -148,7 +148,7 @@
             "Knows this is just part of getting to the glory the Dark Forest promises",
             "Is used to the silence of being alone",
             "Wonders if {PRONOUN/m_c/poss}'ll have to become a warrior", 
-            "Questions the place of a Medicine Cat in the Dark Forest", 
+            "Questions the place of a healer in the Dark Forest", 
             "Is regretting {PRONOUN/m_c/poss} actions", 
             "Is hissing about how this wasn't what {PRONOUN/m_c/subject} planned",
             "Knows the Clan will never understand {PRONOUN/m_c/poss} motive",
@@ -162,8 +162,8 @@
         "high_df"
         ],
      "main_status_constraint": [
-        "medicine cat", 
-        "medicine cat apprentice"
+        "healer", 
+        "healer apprentice"
         ]
     },
     {
@@ -179,8 +179,8 @@
             "Stares at the stars above with a solemn expression"
         ],
      "main_status_constraint": [
-        "medicine cat", 
-        "medicine cat apprentice"
+        "healer", 
+        "healer apprentice"
         ]
     },
     {

@@ -527,21 +527,21 @@ def create_new_cat_block(
                 elif age < 12:
                     cat_type = choice(
                         [
-                            "apprentice", "medicine cat apprentice",
+                            "apprentice", "healer apprentice",
                             "mediator apprentice", "queen's apprentice"
                         ]
                     )
                 elif age < 120:
                     cat_type = choice(
                         [
-                            "warrior", "medicine cat", "mediator", "queen"
+                            "warrior", "healer", "mediator", "queen"
                         ]
                     )
                 else:
                     cat_type = "elder"
             else:
                 age = randint(12,100)
-                cat_type = choice(["warrior", "medicine cat", "mediator", "queen"])
+                cat_type = choice(["warrior", "healer", "mediator", "queen"])
     # -------------------------------------
 
     else:
@@ -558,7 +558,7 @@ def create_new_cat_block(
    
     if status in ("kitten", "newborn"):
         chosen_backstory = choice(BACKSTORIES["backstory_categories"]["abandoned_backstories"])
-    if status == "medicine cat":
+    if status == "healer":
         if cat_type == "former Clancat":
             chosen_backstory = choice(["healer", "disgraced1"])
         else:
@@ -4474,7 +4474,7 @@ def adjust_txt(Cat, text, cat, cat_dict, r_c_allowed, o_c_allowed):
 
             text = add_to_cat_dict("r_w", cluster, x, rel, r, alive_app, text, cat_dict)
 
-    # Random medicine cat or medicine cat apprentice
+    # Random healer or healer apprentice
     if "r_m" in text:
         cluster = False
         rel = False
@@ -4495,7 +4495,7 @@ def adjust_txt(Cat, text, cat, cat_dict, r_c_allowed, o_c_allowed):
         
 
         if in_dict is False:
-            alive_apps = get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"])
+            alive_apps = get_alive_status_cats(Cat, ["healer", "healer apprentice"])
             if len(alive_apps) <= 0:
                 return ""
             alive_app = choice(alive_apps)
@@ -5732,7 +5732,7 @@ def adjust_txt(Cat, text, cat, cat_dict, r_c_allowed, o_c_allowed):
 
             text = add_to_cat_dict("rsh_w", cluster, x, rel, r, alive_app, text, cat_dict)
 
-    # Shunned medicine cat or medicine cat apprentice
+    # Shunned healer or healer apprentice
     if "rsh_m" in text:
         cluster = False
         rel = False
@@ -5748,7 +5748,7 @@ def adjust_txt(Cat, text, cat, cat_dict, r_c_allowed, o_c_allowed):
             rel = True
         else:
             r = ""
-        alive_apps = get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"])
+        alive_apps = get_alive_status_cats(Cat, ["healer", "healer apprentice"])
         if len(alive_apps) < 1:
             return ""
         

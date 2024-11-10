@@ -382,7 +382,7 @@ class Patrol:
 
                 if game.clan.your_cat.status == 'apprentice':
                     possible_patrols.extend(self.generate_patrol_events(self.app_lifegen))
-                elif game.clan.your_cat.status == 'medicine cat apprentice':
+                elif game.clan.your_cat.status == 'healer apprentice':
                     possible_patrols.extend(self.generate_patrol_events(self.medapp_lifegen))
                 elif game.clan.your_cat.status == 'mediator apprentice':
                     possible_patrols.extend(self.generate_patrol_events(self.mediatorapp_lifegen))
@@ -390,7 +390,7 @@ class Patrol:
                     possible_patrols.extend(self.generate_patrol_events(self.queenapp_lifegen))
                 elif game.clan.your_cat.status == "queen":
                     possible_patrols.extend(self.generate_patrol_events(self.queen_lifegen))
-                elif game.clan.your_cat.status == 'medicine cat':
+                elif game.clan.your_cat.status == 'healer':
                     possible_patrols.extend(self.generate_patrol_events(self.med_lifegen))
                 elif game.clan.your_cat.status == 'mediator':
                     possible_patrols.extend(self.generate_patrol_events(self.mediator_lifegen))

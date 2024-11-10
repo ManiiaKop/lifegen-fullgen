@@ -226,33 +226,19 @@
         "max_cats": 6,
         "min_max_status": {},
         "weight": 20,
-<<<<<<< HEAD
-        "intro_text": "An epidemic has spread through the Clan and you must decide how to handle the crisis.",
-        "decline_text": "Recognizing your limitations in medical matters, you choose to defer to the healer's judgment. The Clan appreciates your humility and trust in others.",
-        "chance_of_success": 70,
-        "success_outcomes": [
-            {
-                "text": "You calmly organize a quarantine and direct the healer's efforts. Your Clan admires your composure and swift decision-making in the face of adversity.",
-                "exp": 65,
-=======
         "intro_text": "An epidemic has spread through the Clan and you must decide how to handle the crisis. r_m has {PRONOUN/r_m/poss} paws full enough with multiple patients and not enough herbs.",
-        "decline_text": "Recognizing your limitations in medical matters, you choose to defer to the medicine cat's judgment. The Clan appreciates your humility and trust in others.",
+        "decline_text": "Recognizing your limitations in medical matters, you choose to defer to the healer's judgment. The Clan appreciates your humility and trust in others.",
         "chance_of_success": 70,
         "success_outcomes": [
             {
                 "text": "You calmly organize a quarantine and direct the warrior's efforts to herb gathering. r_m is incredibly grateful, and admires your composure and swift decision-making in the face of adversity. Your choices meant {PRONOUN/r_m/subject} could focus on patients.",
                 "exp": 10,
->>>>>>> lifegen_origin/LifeGen-dev
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-<<<<<<< HEAD
-                "text": "Despite your efforts, the epidemic continues to spread and the healers have to work overtime. This crisis tests your leadership in a way nothing else has.",
-=======
-                "text": "Despite your efforts, the epidemic continues to spread and the medicine cats have to work overtime regardless. This crisis tests r_m's trust in you. Failure hurts, but you can learn from this.",
->>>>>>> lifegen_origin/LifeGen-dev
+                "text": "Despite your efforts, the epidemic continues to spread and the healers have to work overtime regardless. This crisis tests r_m's trust in you. Failure hurts, but you can learn from this.",
                 "exp": 0,
                 "weight": 20
             }

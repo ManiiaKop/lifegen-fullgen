@@ -393,7 +393,7 @@ class Clan:
             return None
         
         clan_kits = get_alive_status_cats(Cat, ["newborn", "kitten"])
-        clan_apps = get_alive_status_cats(Cat, ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"])
+        clan_apps = get_alive_status_cats(Cat, ["apprentice", "healer apprentice", "mediator apprentice", "queen's apprentice"])
 
         if not clan_kits and not clan_apps:
             return
@@ -573,7 +573,7 @@ class Clan:
             return None
         
         clan_kits = get_alive_status_cats(Cat, ["newborn", "kitten"])
-        clan_apps = get_alive_status_cats(Cat, ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"])
+        clan_apps = get_alive_status_cats(Cat, ["apprentice", "healer apprentice", "mediator apprentice", "queen's apprentice"])
 
         if not clan_kits and not clan_apps:
             return

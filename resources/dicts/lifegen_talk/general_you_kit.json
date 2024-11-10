@@ -5764,7 +5764,7 @@
         ],
         "intro": [
             "Ohh... you have to choose what kind of apprentice you want to be soon, right? I almost forgot about how stressful that was.",
-"Um... I don't know if anyone's implied this, but you know you don't have to be a medicine cat just because you can talk to us, right?"
+"Um... I don't know if anyone's implied this, but you know you don't have to be a healer just because you can talk to us, right?"
         ],
         "intro_choices": {
             "choice1": {
@@ -5790,16 +5790,16 @@
 "Ah, never mind. You're doing great, y_c."
         ],
         "should": [
-            "[Talking to StarClan is part of a medicine cat's job, right? So... so you'd be good at being a medicine cat, and doesn't that mean you're supposed to be one?]",
+            "[Talking to StarClan is part of a healer's job, right? So... so you'd be good at being a healer, and doesn't that mean you're supposed to be one?]",
 "[Puzzling through all that stuff makes you kind of dizzy.]",
 "[t_c tries to protest, but {PRONOUN/t_c/subject} {VERB/t_c/seem/seems} unsure of what exactly to say. Maybe thinking about it makes {PRONOUN/t_c/object} dizzy, too.]"
         ],
         "want": [
-            "[You know that, but you want to be a medicine cat! And if your connection to StarClan can help with that, then that's even better.]",
-"Oh! Okay, in that case... good! You'll make a great medicine cat."
+            "[You know that, but you want to be a healer! And if your connection to StarClan can help with that, then that's even better.]",
+"Oh! Okay, in that case... good! You'll make a great healer."
         ],
         "huh": [
- 	"[Choices? Implied stuff? Being a medicine cat because you can talk to cats like t_c? You're not really sure what t_c is trying to say.]",
+ 	"[Choices? Implied stuff? Being a healer because you can talk to cats like t_c? You're not really sure what t_c is trying to say.]",
 "Ah... never mind, then. Don't think about it too much!"
         ]
     },

@@ -360,19 +360,11 @@
         ],
         [
             "[You warn t_c that invoking the name of StarClan for every mundane thing is eventually going to catch up with {PRONOUN/t_c/object}.]",
-<<<<<<< HEAD
-	    "*Sigh* Y'know what? Maybe you're right, y_c. I'm so sorry.",
-	    "I really need to have more respect for our warrior ancestors, and take my duties as a healer more seriousl .... Ah.",
-	    "[t_c squints up at the sky, ears pricking.]",
-	    "What was that? ... Uh-huh ... Mhm, yes, I see .....",
-	    "Scratch everything I just said, y_c. StarClan just gave me a new message. They tell me you're jealous of my gift."
-=======
             "*Sigh* Y'know what? Maybe you're right, y_c. I'm so sorry.",
-            "I really need to have more respect for our warrior ancestors, and take my duties as a medicine cat more seriousl .... Ah.",
+            "I really need to have more respect for our warrior ancestors, and take my duties as a healer more seriousl .... Ah.",
             "[t_c squints up at the sky, ears pricking.]",
             "What was that? ... Uh-huh ... Mhm, yes, I see .....",
             "Scratch everything I just said, y_c. StarClan just gave me a new message. They tell me you're jealous of my gift."
->>>>>>> lifegen_origin/LifeGen-dev
         ]
     ],
     "cool_medcat_AJ2": [
@@ -1186,11 +1178,7 @@
             "neutral"
         ],
         [
-<<<<<<< HEAD
-            "[You've heard stories about the mean, grumpy healer apprentice of c_nClan, and decide to pay {PRONOUN/t_c/object} a visit.]",
-=======
-            "[You've heard stories about the mean, grumpy medicine cat of c_nClan, and decide to pay {PRONOUN/t_c/object} a visit.]",
->>>>>>> lifegen_origin/LifeGen-dev
+            "[You've heard stories about the mean, grumpy healer of c_nClan, and decide to pay {PRONOUN/t_c/object} a visit.]",
             "Tansy, horsetail ...",
             "Hm? y_c?",
             "You ... want to know what I'm doing?",
@@ -2349,7 +2337,7 @@
             "they_deaf"
         ],
         [
-            "[t_c noses at your side, checking for any noticeable discomfort, as medicine cats do.]",
+            "[t_c noses at your side, checking for any noticeable discomfort, as healers do.]",
             "[When {PRONOUN/t_c/subject} {VERB/t_c/don't/doesn't} find anything particularly concerning, t_c licks the top of your head to provide some comfort.]"
         ]
     ],
@@ -2403,7 +2391,7 @@
 ],
 [
 "r_m commented on how well you organised the herb collection earlier, I know you're taking a break but I've been out all day and I wanted to see it for myself, please follow me.",
-"[You follow your mentor into the medicine cat den, you hold your breath as {PRONOUN/t_c/subject} inspect every plant with unbreakable focus. {PRONOUN/t_c/subject/CAP} click {PRONOUN/t_c/poss} tongue and turn back to you, nodding in approval.]",
+"[You follow your mentor into the healer den, you hold your breath as {PRONOUN/t_c/subject} inspect every plant with unbreakable focus. {PRONOUN/t_c/subject/CAP} click {PRONOUN/t_c/poss} tongue and turn back to you, nodding in approval.]",
 "Ha, it looks like r_m was right, this is perfect! Well done, y_c, very proud of your work today."
  ]
 ],
@@ -2548,7 +2536,7 @@
      [
 "Um... sorry, y_c? I don't mean to bother you, but plove_r_c has a bit of a sore throat. Could I have some honey from your stores to give them?",
 "O-of course, you could give it to them, too! I don't mean to overstep.",
-"[There's not much that can go terribly wrong with honey. Since t_c seems to know {PRONOUN/t_c/poss} way around medicine despite not being a medicine cat, you give {PRONOUN/t_c/object} a dollop of honey on a stick and send {PRONOUN/t_c/object} on {PRONOUN/t_c/poss} way.]" 
+"[There's not much that can go terribly wrong with honey. Since t_c seems to know {PRONOUN/t_c/poss} way around medicine despite not being a healer, you give {PRONOUN/t_c/object} a dollop of honey on a stick and send {PRONOUN/t_c/object} on {PRONOUN/t_c/poss} way.]" 
      ]
     ],
     "neurotic_skillsong_SQ8~2": [

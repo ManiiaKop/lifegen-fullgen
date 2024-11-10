@@ -289,11 +289,7 @@
         ]
     },
     {
-<<<<<<< HEAD
-        "id": "formerly_rogue_warrior_apprentice",
-=======
         "id": "apprentice_dead_dark_forest_warrior",
->>>>>>> lifegen_origin/LifeGen-dev
         "thoughts": [
             "Even though {PRONOUN/m_c/subject} {VERB/m_c/have/has} heard the stories about {PRONOUN/r_c/object}, {PRONOUN/m_c/subject} wonders if r_c is truly as evil as everycat claims",
             "Thought {PRONOUN/m_c/subject} saw r_c in {PRONOUN/m_c/poss} dreams last night",
@@ -843,13 +839,8 @@
         ],
         "main_trait_constraint": [
             "rebellious"
-<<<<<<< HEAD
-        ]    
-    }, 
-=======
         ]
     },
->>>>>>> lifegen_origin/LifeGen-dev
     {
         "id": "childish_warrior_apprentice",
         "thoughts": [
@@ -889,11 +880,7 @@
             "adventurous"
         ]
     },
-<<<<<<< HEAD
-    { 
-=======
     {
->>>>>>> lifegen_origin/LifeGen-dev
         "id": "childish_apprentice_to_elder",
         "thoughts": [
             "Pouts about being asked to check the elders for ticks",

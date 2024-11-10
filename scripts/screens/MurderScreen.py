@@ -1067,7 +1067,7 @@ class MurderScreen(Screens):
         if self.method == "attack":
             chance += 5
         elif self.method == "poison":
-            if you.status not in ["medicine cat", "medicine cat apprentice"]:
+            if you.status not in ["healer", "healer apprentice"]:
                 chance += 1
         elif self.method == "accident":
             chance += 8
@@ -1199,7 +1199,7 @@ class MurderScreen(Screens):
 
             if cat_to_murder.status == "warrior" and cat_healthy:
                 chance += 15
-            if you.status in ["mediator", "mediator apprentice", "queen", "queen's apprentice", "medicine cat", "medicine cat apprentice", "kitten"]:
+            if you.status in ["mediator", "mediator apprentice", "queen", "queen's apprentice", "healer", "healer apprentice", "kitten"]:
                 chance += 10
 
             if "avid play-fighter" in their_skills:
@@ -1260,7 +1260,7 @@ class MurderScreen(Screens):
 
             if cat_to_murder.status in ["warrior", "deputy", "leader"] and cat_healthy:
                 chance += 10
-            if you.status in ["queen", "mediator", "kitten", "medicine cat", "queen's apprentice", "mediator apprentice", "medicine cat apprentice"]:
+            if you.status in ["queen", "mediator", "kitten", "healer", "queen's apprentice", "mediator apprentice", "healer apprentice"]:
                 chance += 15
 
             if "avid play-fighter" in their_skills:
@@ -1384,7 +1384,7 @@ class MurderScreen(Screens):
                         continue
 
                 elif "healer_cat" in murder_dict["your_status"]:
-                    if you.status not in ["medicine cat", "medicine cat apprentice"]:
+                    if you.status not in ["healer", "healer apprentice"]:
                         continue
                 
                 elif you.status not in murder_dict["your_status"]:
@@ -1405,7 +1405,7 @@ class MurderScreen(Screens):
                         continue
 
                 elif "healer_cat" in murder_dict["victim_status"]:
-                    if cat_to_murder.status not in ["medicine cat", "medicine cat apprentice"]:
+                    if cat_to_murder.status not in ["healer", "healer apprentice"]:
                         continue
                 
                 elif cat_to_murder.status not in murder_dict["victim_status"]:
@@ -1555,7 +1555,7 @@ class MurderScreen(Screens):
     
         medcats = []
         for cat in Cat.all_cats_list:
-            if cat.status == "medicine cat" and not cat.dead and not cat.outside and cat.status != you.status:
+            if cat.status == "healer" and not cat.dead and not cat.outside and cat.status != you.status:
                 medcats.append(cat)
 
         warriors = []
@@ -1704,13 +1704,13 @@ class MurderScreen(Screens):
                     you.shunned = 1
             txt = ""
             if game.clan.your_cat.dead:
-                # if game.clan.your_cat.status in ['kitten', 'leader', 'deputy', 'medicine cat']:
+                # if game.clan.your_cat.status in ['kitten', 'leader', 'deputy', 'healer']:
                 #     txt = choice(self.mu_txt["murder_discovered dead " + game.clan.your_cat.status])
                 # else:
                 #     txt = choice(self.mu_txt["murder_discovered dead general"])
                 txt = choice(self.mu_txt["murder_discovered dead general"])
             else:
-                if game.clan.your_cat.status in ['kitten', 'leader', 'deputy', 'medicine cat']:
+                if game.clan.your_cat.status in ['kitten', 'leader', 'deputy', 'healer']:
                     txt = choice(self.mu_txt["murder_discovered " + game.clan.your_cat.status])
                 else:
                     txt = choice(self.mu_txt["murder_discovered general"])
@@ -1849,7 +1849,7 @@ class MurderScreen(Screens):
                 chance += 10
 
             if self.method == "poison":
-                if game.clan.your_cat.status == "medicine cat":
+                if game.clan.your_cat.status == "healer":
                     chance += 0
                 else:
                     chance += 20
@@ -1866,7 +1866,7 @@ class MurderScreen(Screens):
             if self.method == "attack":
                 chance += 10
             if self.method == "poison":
-                if game.clan.your_cat.status == "medicine cat":
+                if game.clan.your_cat.status == "healer":
                     chance += 20
                 else:
                     chance += 30
@@ -1901,7 +1901,7 @@ class MurderScreen(Screens):
             if self.method == "attack":
                 chance += 60
             if self.method == "poison":
-                if game.clan.your_cat.status != "medicine cat":
+                if game.clan.your_cat.status != "healer":
                     chance += 30
             if self.method == "accident":
                 chance += 10
@@ -2159,7 +2159,7 @@ class MurderScreen(Screens):
             if "campkeeper" in their_skills:
                 chance -= 15
 
-        if cat_to_murder.status in ["queen", "queen's apprentice", "medicine cat", "medicine cat apprentice", "kitten"] and self.location != "camp":
+        if cat_to_murder.status in ["queen", "queen's apprentice", "healer", "healer apprentice", "kitten"] and self.location != "camp":
             chance -= 8
 
         if cat_to_murder.history:
@@ -2208,7 +2208,7 @@ class MurderScreen(Screens):
 
             if cat_to_murder.status == "warrior":
                 chance -= 10
-            if you.status in ["mediator", "mediator apprentice", "queen", "queen's apprentice", "medicine cat", "medicine cat apprentice", "kitten"]:
+            if you.status in ["mediator", "mediator apprentice", "queen", "queen's apprentice", "healer", "healer apprentice", "kitten"]:
                 chance -= 10
             
             if "avid play-fighter" in their_skills:
@@ -2227,7 +2227,7 @@ class MurderScreen(Screens):
 
         if self.method == "poison":
             # raises chances
-            if you.status in ["medicine cat", "medicine cat apprentice"]:
+            if you.status in ["healer", "healer apprentice"]:
                 chance += 25
             if cat_to_murder.is_ill() or cat_to_murder.is_injured():
                 chance += 15
@@ -2238,11 +2238,11 @@ class MurderScreen(Screens):
                 chance += 15
 
             # lowers chances
-            if cat_to_murder.status in ["medicine cat", "medicine cat apprentice"]:
+            if cat_to_murder.status in ["healer", "healer apprentice"]:
                 chance -= 15
             if not cat_to_murder.is_ill() and not cat_to_murder.is_injured():
                 chance -= 10
-            if you.status not in ["medicine cat", "medicine cat apprentice"]:
+            if you.status not in ["healer", "healer apprentice"]:
                 chance -= 20
 
             if self.location == "border":
@@ -2267,7 +2267,7 @@ class MurderScreen(Screens):
             if any(skill in acc_skills_lvl_4 for skill in your_skills):
                 chance += 20
 
-            if cat_to_murder.status in ["kitten", "queen", "apprentice", "queen's apprentice", "medicine cat apprentice", "mediator apprentice"] and \
+            if cat_to_murder.status in ["kitten", "queen", "apprentice", "queen's apprentice", "healer apprentice", "mediator apprentice"] and \
                 not cat_to_murder.skills.meets_skill_requirement(SkillPath.EXPLORER) and\
                 not cat_to_murder.skills.meets_skill_requirement(SkillPath.NAVIGATOR) and\
                 not cat_to_murder.skills.meets_skill_requirement(SkillPath.CLIMBER):
@@ -2332,7 +2332,7 @@ class MurderScreen(Screens):
                 chance -= 10
             if cat_to_murder.status in ["warrior", "deputy", "leader"]:
                 chance -= 10
-            if you.status in ["queen", "mediator", "kitten", "medicine cat", "queen's apprentice", "mediator apprentice", "medicine cat apprentice"]:
+            if you.status in ["queen", "mediator", "kitten", "healer", "queen's apprentice", "mediator apprentice", "healer apprentice"]:
                 chance -= 15
 
             if "watchful" in their_skills:
@@ -2692,9 +2692,9 @@ class MurderScreen(Screens):
                 chance += 10
             if accomplice.relationships[you.ID].admiration > 10:
                 chance += 10
-            if you.status in ['medicine cat', 'mediator', 'deputy', 'leader']:
+            if you.status in ['healer', 'mediator', 'deputy', 'leader']:
                 chance += 10
-            if accomplice.status in ['medicine cat', 'mediator', 'deputy', 'leader']:
+            if accomplice.status in ['healer', 'mediator', 'deputy', 'leader']:
                 chance -= 20
             if accomplice.ID in game.clan.your_cat.mate:
                 chance += 50

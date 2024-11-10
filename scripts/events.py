@@ -3331,7 +3331,7 @@ class Events:
 
         if promoted_to in [
             "apprentice",
-            "medicine cat apprentice",
+            "healer apprentice",
             "mediator apprentice",
             "queen's apprentice"
         ]:

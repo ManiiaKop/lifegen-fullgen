@@ -228,11 +228,7 @@
         "max_cats": 6,
         "min_max_status": {},
         "weight": 20,
-<<<<<<< HEAD
-        "intro_text": "As an injured Clanmate recieves treatment, you listen from just outside the den as the healer explains what they're doing. You have a question about their methods, eager to learn, but you wonder if they'd be willing to answer you while you're shunned.",
-=======
-        "intro_text": "As an injured Clanmate receives treatment, you listen from just outside the den as the medicine cat explains what they're doing. You have a question about their methods, eager to learn, but you wonder if they'd be willing to answer you while you're shunned.",
->>>>>>> lifegen_origin/LifeGen-dev
+        "intro_text": "As an injured Clanmate receives treatment, you listen from just outside the den as the healer explains what they're doing. You have a question about their methods, eager to learn, but you wonder if they'd be willing to answer you while you're shunned.",
         "decline_text": "You decide against it. You can learn once you're forgiven, if you ever are.",
         "chance_of_success": 40,
         "success_outcomes": [

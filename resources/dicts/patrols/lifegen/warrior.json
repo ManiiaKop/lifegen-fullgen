@@ -780,7 +780,7 @@
                 "can_have_stat": ["p_l"]
             },
             {
-                "text": "You might not be a medicine cat, but for some reason, herb identification has always been easy for you. You remember seeing some flowers while on patrol yesterday, and sure enough, when you return to that spot, you find a thick patch of marigold! r_m is thrilled. There's even enough flowers for you to take one for yourself!",
+                "text": "You might not be a healer, but for some reason, herb identification has always been easy for you. You remember seeing some flowers while on patrol yesterday, and sure enough, when you return to that spot, you find a thick patch of marigold! r_m is thrilled. There's even enough flowers for you to take one for yourself!",
                 "exp": 10,
                 "weight": 20,
                 "accessory": [
@@ -962,7 +962,7 @@
                 "weight": 20
             },
             {
-                "text": "You ask if your_crush wants to hear a story, and they accept. You relate a tale of a long-ago c_nClan medicine cat going on a journey to find a legendary herb to save their mate from a terrible illness while your_crush listens, enraptured. Your storytelling is skillful enough to distract them from their worries, and when you're finished, they seem much lighter.",
+                "text": "You ask if your_crush wants to hear a story, and they accept. You relate a tale of a long-ago c_nClan healer going on a journey to find a legendary herb to save their mate from a terrible illness while your_crush listens, enraptured. Your storytelling is skillful enough to distract them from their worries, and when you're finished, they seem much lighter.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["STORY,1", "LORE,1"],
