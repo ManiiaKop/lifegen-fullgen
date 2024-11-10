@@ -55,7 +55,15 @@ def json_load():
                 cat["favourite"] = 0
             elif cat["favourite"] is True:
                 cat["favourite"] = 1
-<<<<<<< HEAD
+
+            if "accessories" not in cat:
+                cat["accessories"] = []
+            if "inventory" not in cat:
+                cat["inventory"] = []
+            if cat["accessory"] is not None:
+                cat["accessories"].append(cat["accessory"])
+                cat["inventory"].append(cat["accessory"])
+                cat["accessory"] = None
             try:
                 new_cat = Cat(ID=cat["ID"],
                         prefix=cat["name_prefix"],
@@ -81,47 +89,6 @@ def json_load():
                         parent2=cat["parent2"],
                         moons=cat["moons"],
                         loading_cat=True)
-=======
-
-            # moving clangen accs over to accessories + inventory
-            if "accessories" not in cat:
-                cat["accessories"] = []
-            if "inventory" not in cat:
-                cat["inventory"] = []
-            if cat["accessory"] is not None:
-                cat["accessories"].append(cat["accessory"])
-                cat["inventory"].append(cat["accessory"])
-                cat["accessory"] = None
-
-            new_cat = Cat(
-                ID=cat["ID"],
-                prefix=cat["name_prefix"],
-                suffix=cat["name_suffix"],
-                specsuffix_hidden=(
-                    cat["specsuffix_hidden"] if "specsuffix_hidden" in cat else False
-                ),
-                gender=cat["gender"],
-                status=cat["status"],
-                parent1=cat["parent1"],
-                parent2=cat["parent2"],
-                moons=cat["moons"],
-                eye_colour=cat["eye_colour"],
-                loading_cat=True,
-            )
-            
-            if cat["eye_colour"] == "BLUE2":
-                cat["eye_colour"] = "COBALT"
-            if cat["eye_colour"] in ["BLUEYELLOW", "BLUEGREEN"]:
-                if cat["eye_colour"] == "BLUEYELLOW":
-                    cat["eye_colour2"] = "YELLOW"
-                elif cat["eye_colour"] == "BLUEGREEN":
-                    cat["eye_colour2"] = "GREEN"
-                cat["eye_colour"] = "BLUE"
-            if "eye_colour2" in cat:
-                if cat["eye_colour2"] == "BLUE2":
-                    cat["eye_colour2"] = "COBALT"
-
->>>>>>> lifegen_origin/LifeGen-dev
             new_cat.pelt = Pelt(
                 new_cat.genotype,
                 new_cat.phenotype,

@@ -994,14 +994,11 @@ class UICatListDisplay(UIContainer):
                         if game.settings["dark mode"]:
                             self._favor_circle.set_alpha(150)
                         self.create_favor_indicator(i, container)
-<<<<<<< HEAD
             # from genemod
             # fav_indexes = [
             #     display_cats.index(cat) for cat in display_cats if cat.favourite
             # ]
             # [self.create_favor_indicator(i, self.boxes[i]) for i in fav_indexes]
-=======
->>>>>>> lifegen_origin/LifeGen-dev
 
         # CAT SPRITE
         i = -1

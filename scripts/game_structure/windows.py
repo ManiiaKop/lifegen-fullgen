@@ -2030,16 +2030,9 @@ class PickPath(UIWindow):
                 if event.ui_element == self.begin_anew_button:
                     game.switches['window_open'] = False
                     if game.clan.your_cat.moons < 12:
-<<<<<<< HEAD
-                        game.clan.your_cat.status = 'healer apprentice'
+                        status = 'healer apprentice'
                     else:
-                        game.clan.your_cat.status = 'healer'
-                    self.kill()
-=======
-                        status = 'medicine cat apprentice'
-                    else:
-                        status = 'medicine cat'
->>>>>>> lifegen_origin/LifeGen-dev
+                        status = 'healer'
                 elif event.ui_element == self.not_yet_button:
                     game.switches['window_open'] = False
                     if game.clan.your_cat.moons < 12:
@@ -2061,20 +2054,12 @@ class PickPath(UIWindow):
                 elif event.ui_element == self.random_button:
                     game.switches['window_open'] = False
                     if game.clan.your_cat.moons < 12:
-<<<<<<< HEAD
-                        game.clan.your_cat.status = random.choice(['mediator apprentice','apprentice','healer apprentice', "queen's apprentice"])
+                        status = random.choice(['mediator apprentice','apprentice','healer apprentice', "queen's apprentice"])
                     else:
-                        game.clan.your_cat.status = random.choice(['mediator','warrior','healer', "queen"])
-                    
-                    self.kill()
-=======
-                        status = random.choice(['mediator apprentice','apprentice','medicine cat apprentice', "queen's apprentice"])
-                    else:
-                        status = random.choice(['mediator','warrior','medicine cat', "queen"])
+                        status = random.choice(['mediator','warrior','healer', "queen"])
                 
                 game.clan.your_cat.status_change(status)
                 self.kill()
->>>>>>> lifegen_origin/LifeGen-dev
         except:
             print('Error with PickPath window!')
             
