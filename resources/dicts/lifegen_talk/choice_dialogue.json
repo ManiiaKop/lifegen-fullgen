@@ -27,7 +27,7 @@
         ],
         "golden": [
             "Oh, really? Let me put them up here and see how they look...",
-            "Oh, I see now! These golden flowers on the medicine cat's den really give it this bright but comforting look.",
+            "Oh, I see now! These golden flowers on the healer's den really give it this bright but comforting look.",
             "Thanks y_c, it means a lot!"
         ]
     },
@@ -166,7 +166,7 @@
         ],
         "mid": [
             "Four! Now that's a good, round, even number.",
-            "You'd have one for each role! A warrior, a mediator, a medicine cat, and a queen.",
+            "You'd have one for each role! A warrior, a mediator, a healer, and a queen.",
             "That way, you'd really always be taken care of. Hehe!"
         ],
         "big": [
@@ -2917,7 +2917,7 @@
             "Thank you for helping me, y_c. Looks like some others are also asking around. You should see r_m, they're like a kitten with a mossball.",
             "StarClan, where is d_n? It's like {PRONOUN/d_n/subject} just up and disappeared-",
             "[As if on cue, d_n enters the camp with a mouse in {PRONOUN/d_n/poss} jaw. Beside {PRONOUN/d_n/object} is l_n, who looks relaxed until {PRONOUN/l_n/subject} {VERB/l_n/see/sees} the utter disarray the camp is in.]",
-            "[Warriors running left and right, the kits in a panic, apprentices unsure what to do, elders and queens trying to settle the kits, medicine cats trying to gather the warriors and the poor mediators who are trying to settle the camp.]",
+            "[Warriors running left and right, the kits in a panic, apprentices unsure what to do, elders and queens trying to settle the kits, healers trying to gather the warriors and the poor mediators who are trying to settle the camp.]",
             "[A voice cuts through the crowd as l_n yells above the chaos. {PRONOUN/l_n/poss/CAP} gaze narrows as {PRONOUN/l_n/subject} {VERB/l_n/demand/demands} to know the meaning of this mess. All eyes fall onto t_c and you...]",
             "l_n, d_n, while I was out on patrol I saw Twolegs near the territory and came back to camp to find you to organize a plan.",
             "I thought just taking a patrol to follow them without approval was wrong and unfortunately, in my attempt to find you...",
@@ -3073,7 +3073,7 @@
                 "next_scene": "growup_warrior"
             },
             "choice3": {
-                "text": "A medicine cat",
+                "text": "A healer",
                 "next_scene": "growup_medcat"
             },
             "choice4": {
@@ -3093,7 +3093,7 @@
             "You'll be a wonderful warrior one day, I know it."
         ],
         "growup_medcat": [
-            "Oh, really? Being a medicine cat is tough, and you'll have to talk to all those stinky StarClan cats.",
+            "Oh, really? Being a healer is tough, and you'll have to talk to all those stinky StarClan cats.",
             "But if you want to do it, I believe that you can. You're very gifted, y_c.",
             "My brilliant little kit."
         ],
@@ -3127,7 +3127,7 @@
                 "next_scene": "growup_warrior"
             },
             "choice3": {
-                "text": "A medicine cat",
+                "text": "A healer",
                 "next_scene": "growup_medcat"
             },
             "choice4": {
@@ -3145,7 +3145,7 @@
             "Oh, I shouldn't worry about such things. You're going to be a wonderful warrior, darling."
         ],
         "growup_medcat": [
-            "A medicine cat! You'll be a wonderful medicine cat, dear, especially with this gift of yours.",
+            "A healer! You'll be a wonderful healer, dear, especially with this gift of yours.",
             "It's a lot of herbs to memorise, but you're a smart kitty. You've got this."
         ],
         "growup_idk": [

@@ -408,9 +408,9 @@ class FlirtScreen(Screens):
                 continue
 
 
-            if "they_adult" in tags and cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice", "kitten", "newborn"]:
+            if "they_adult" in tags and cat.status in ['apprentice', 'healer apprentice', 'mediator apprentice', "queen's apprentice", "kitten", "newborn"]:
                 continue
-            if "they_app" in tags and cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
+            if "they_app" in tags and cat.status not in ['apprentice', 'healer apprentice', 'mediator apprentice', "queen's apprentice"]:
                 continue
             
             if not any(t in tags for t in ["they_sc", "they_df"]) and cat.dead:
@@ -548,7 +548,7 @@ class FlirtScreen(Screens):
                     has_role = True
                 elif "they_apprentice" in tags and cat.status == "apprentice":
                     has_role = True
-                elif "they_medicine_cat_apprentice" in tags and cat.status == "medicine cat apprentice":
+                elif "they_medicine_cat_apprentice" in tags and cat.status == "healer apprentice":
                     has_role = True
                 elif "they_mediator_apprentice" in tags and cat.status == "mediator apprentice":
                     has_role = True
@@ -558,7 +558,7 @@ class FlirtScreen(Screens):
                     has_role = True
                 elif "they_mediator" in tags and cat.status == "mediator":
                     has_role = True
-                elif "they_medicine_cat" in tags and cat.status == "medicine cat":
+                elif "they_medicine_cat" in tags and cat.status == "healer":
                     has_role = True
                 elif "they_queen" in tags and cat.status == "queen":
                     has_role = True
@@ -1716,7 +1716,7 @@ class FlirtScreen(Screens):
                     self.cat_dict["r_w"] = alive_app
                     text = re.sub(r'(?<!\/)r_w(?!\/)', str(alive_app.name), text)
 
-        # Random medicine cat or medicine cat apprentice
+        # Random healer or healer apprentice
         if "r_m" in text:
             cluster = False
             rel = False
@@ -1743,7 +1743,7 @@ class FlirtScreen(Screens):
                 else:
                     text = re.sub(r'(?<!\/)r_m(?!\/)', str(self.cat_dict["r_m"].name), text)
             else:
-                alive_apps = get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"])
+                alive_apps = get_alive_status_cats(Cat, ["healer", "healer apprentice"])
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
@@ -3486,7 +3486,7 @@ class FlirtScreen(Screens):
                 rel = True
             else:
                 r = ""
-            alive_apps = get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"])
+            alive_apps = get_alive_status_cats(Cat, ["healer", "healer apprentice"])
             if len(alive_apps) < 1:
                 return ""
             if f"rsh_a_{x}" in self.cat_dict or "rsh_m" in self.cat_dict or f"{r}_rsh_m" in self.cat_dict or f"{r}_rsh_m_{x}" in self.cat_dict:

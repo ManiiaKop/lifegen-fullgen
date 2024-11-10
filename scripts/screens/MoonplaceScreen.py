@@ -293,13 +293,13 @@ class MoonplaceScreen(Screens):
     def get_med_type(self, you):
         med_type = "you_single_med"
 
-        if you.status == "medicine cat apprentice" and not you.mentor:
+        if you.status == "healer apprentice" and not you.mentor:
             med_type = "you_app_mentorless"
-        elif you.status == "medicine cat apprentice":
+        elif you.status == "healer apprentice":
             med_type = "you_app_mentor"
-        elif you.status == "medicine cat" and len(get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"], working=False)) == 2:
+        elif you.status == "healer" and len(get_alive_status_cats(Cat, ["healer", "healer apprentice"], working=False)) == 2:
             med_type = "two_meds"
-        elif you.status == "medicine cat" and len(get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"], working=False)) > 2:
+        elif you.status == "healer" and len(get_alive_status_cats(Cat, ["healer", "healer apprentice"], working=False)) > 2:
             med_type = "multi_meds"
 
         return med_type
@@ -332,7 +332,7 @@ class MoonplaceScreen(Screens):
         return self.get_adjusted_txt(choice(possible_texts["intros"][med_type]) + other_med_greeting + choice(possible_texts["moonplace"]["starclan_general"]) + prophecy, cat)
 
     def get_other_med_greeting(self, possible_texts):
-        """ Handles other medicine cat greetings at the Moonplace """
+        """ Handles other healer greetings at the Moonplace """
         other_clan_random = choice(game.switches["other_med_clan"])
         other_clan_random_index = game.switches["other_med_clan"].index(other_clan_random)
         other_meds = game.switches["other_med"][other_clan_random_index]
@@ -565,7 +565,7 @@ class MoonplaceScreen(Screens):
                     alive_app = choice(alive_apps)
                 text = text.replace("r_w", str(alive_app.name))
             if "r_m" in text:
-                alive_apps = get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"])
+                alive_apps = get_alive_status_cats(Cat, ["healer", "healer apprentice"])
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
@@ -851,9 +851,9 @@ class MoonplaceScreen(Screens):
                 other_clan_meds = []
                 for i in range(randint(1,3)):
                     if randint(1,4) != 1:
-                        other_clan_meds.append(Name(status = "medicine cat"))
+                        other_clan_meds.append(Name(status = "healer"))
                     else:
-                        other_clan_meds.append(Name(status = "medicine cat apprentice"))
+                        other_clan_meds.append(Name(status = "healer apprentice"))
                 game.switches["other_med"].append(other_clan_meds)
                 game.switches["other_med_clan"].append(clan_name)
         else:
@@ -864,17 +864,17 @@ class MoonplaceScreen(Screens):
 
             for i in range(len(game.switches["other_med_clan"])):
                 for cat_name in game.switches["other_med"][i]:
-                    if cat_name.status == "medicine cat apprentice":
+                    if cat_name.status == "healer apprentice":
                         if randint(1,2) == 1:
-                            cat_name.status = "medicine cat"
+                            cat_name.status = "healer"
 
             game.switches["other_med"] = self.randomly_remove_string(game.switches["other_med"])
             for clan_meds in game.switches["other_med"]:
                 if len(clan_meds) == 0:
-                    clan_meds.append(Name(status = "medicine cat apprentice"))
+                    clan_meds.append(Name(status = "healer apprentice"))
                 if len(clan_meds) < 3:
                     if randint(1, 5) == 1:
-                        clan_meds.append(Name(status = "medicine cat apprentice"))
+                        clan_meds.append(Name(status = "healer apprentice"))
 
     def randomly_remove_string(self, lists_of_strings):
         for sublist in lists_of_strings:

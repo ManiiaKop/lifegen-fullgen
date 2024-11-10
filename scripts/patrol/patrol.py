@@ -369,7 +369,7 @@ class Patrol:
                 possible_patrols.extend(self.generate_patrol_events(self.kit_lifegen))
             elif game.clan.your_cat.status == 'apprentice':
                 possible_patrols.extend(self.generate_patrol_events(self.app_lifegen))
-            elif game.clan.your_cat.status == 'medicine cat apprentice':
+            elif game.clan.your_cat.status == 'healer apprentice':
                 possible_patrols.extend(self.generate_patrol_events(self.medapp_lifegen))
             elif game.clan.your_cat.status == 'mediator apprentice':
                 possible_patrols.extend(self.generate_patrol_events(self.mediatorapp_lifegen))
@@ -377,7 +377,7 @@ class Patrol:
                 possible_patrols.extend(self.generate_patrol_events(self.queenapp_lifegen))
             elif game.clan.your_cat.status == "queen":
                 possible_patrols.extend(self.generate_patrol_events(self.queen_lifegen))
-            elif game.clan.your_cat.status == 'medicine cat':
+            elif game.clan.your_cat.status == 'healer':
                 possible_patrols.extend(self.generate_patrol_events(self.med_lifegen))
             elif game.clan.your_cat.status == 'mediator':
                 possible_patrols.extend(self.generate_patrol_events(self.mediator_lifegen))
@@ -626,7 +626,7 @@ class Patrol:
 
             if game.current_screen == 'patrol screen4':
                 if "you_med" in patrol.tags:
-                    if game.clan.your_cat.status != 'medicine cat':
+                    if game.clan.your_cat.status != 'healer':
                         continue
                 if "df" in patrol.tags:
                     other_cat = self.patrol_cats[1]
@@ -1356,7 +1356,7 @@ class Patrol:
                 print("YOUR LIKE FOR THEM:", game.clan.your_cat.relationships[alive_app.ID].platonic_like)
                 print("THEIR DISLIKE FOR YOU:", alive_app.relationships[game.clan.your_cat.ID].dislike)
             if "r_m" in text:
-                alive_apps = get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"])
+                alive_apps = get_alive_status_cats(Cat, ["healer", "healer apprentice"])
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = random.choice(alive_apps)

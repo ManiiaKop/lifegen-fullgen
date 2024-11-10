@@ -5,7 +5,7 @@
                 "[You make the long trek to the moonplace. The stars are shining brightly today.]"
             ],
             [
-                "[It's the half-moon and it's time for the medicine cats to gather.]"
+                "[It's the half-moon and it's time for the healers to gather.]"
             ]
         ],
         "you_app_mentor": [
@@ -25,7 +25,7 @@
         ],
         "multi_meds": [
             [
-                "[You and the other medicine cats head to the moonplace, the stars shining brightly above you.]"
+                "[You and the other healers head to the moonplace, the stars shining brightly above you.]"
             ]
         ]
     },
@@ -112,22 +112,22 @@
     "moonplace": {
         "starclan_general": [
             [
-                "[You and the other medicine cats settle around the gathering place. You open your eyes to find yourself in StarClan's hunting grounds.]",
+                "[You and the other healers settle around the gathering place. You open your eyes to find yourself in StarClan's hunting grounds.]",
                 "Welcome, y_c.",
                 "I have a message for you."
             ]
         ],
         "starclan_no_message": [
             [
-                "[You and the other medicine cats settle around the gathering place.]",
+                "[You and the other healers settle around the gathering place.]",
                 "[However, StarClan is silent tonight. It seems like there is no message for you.]"
             ]
         ]
     },
     "apprentice_halfmoon": [
         [
-            "[It's tradition for apprentices to visit the Moonplace once during their apprenticeship, even if they are not a medicine cat apprentice.]",
-            "[You decide to make the journey this moon, following the well-worn path walked by several generations of medicine cats and leaders.]",
+            "[It's tradition for apprentices to visit the Moonplace once during their apprenticeship, even if they are not a healer apprentice.]",
+            "[You decide to make the journey this moon, following the well-worn path walked by several generations of healers and leaders.]",
             "[Carefully, you touch your nose to the sacred spot. A StarClan cat greets you.]",
             "Hello, young y_c. You've come far to visit us.",
             "Let me give you some advice.",
@@ -137,7 +137,7 @@
         ],
         [
             "[Visiting the Moonplace is a rite of passage for all apprentices, regardless of their destined path within the Clan.]",
-            "[You decide to make the journey this moon, treading the path countless medicine cats and leaders have worn smooth before you.]",
+            "[You decide to make the journey this moon, treading the path countless healers and leaders have worn smooth before you.]",
             "[Carefully, you gently press your nose to the sacred spot.]",
             "Greetings, brave apprentice. Allow me to share a piece of wisdom with you.",
             "In your eyes, I see the fire of curiosity burning. Let it fuel your journey, but be wary, for not all knowledge leads to wisdom.",
@@ -145,7 +145,7 @@
         ],
         [
             "[Every apprentice must undertake the revered journey to the Moonplace as part of their training.]",
-            "[You decide to make the journey this moon, treading the path countless medicine cats and leaders have worn smooth before you.]",
+            "[You decide to make the journey this moon, treading the path countless healers and leaders have worn smooth before you.]",
             "[Carefully, you touch your nose to the sacred spot.]",
             "It is rare for one so young to visit us here in the stars.",
             "Your journey has only just begun, yet already you show the resilience of the oak.",
@@ -154,7 +154,7 @@
         ],
         [
             "[All apprentices are expected to make the solemn journey to the Moonplace, honoring an ancient custom.]",
-            "[You decide to make the journey this moon, following the well-worn path walked by several generations of medicine cats and leaders.]",
+            "[You decide to make the journey this moon, following the well-worn path walked by several generations of healers and leaders.]",
             "[Carefully, you touch your nose to the sacred spot.]",
             "[They gaze at you, and you shiver. It's almost like they're staring through your soul.]",
             "[Finally, they speak.]",
@@ -165,7 +165,7 @@
         ],
         [
             "[All apprentices are called to visit the Moonplace, fulfilling a time-honored rite of passage.]",
-            "[You decide to make the journey this moon, following the well-worn path walked by several generations of medicine cats and leaders.]",
+            "[You decide to make the journey this moon, following the well-worn path walked by several generations of healers and leaders.]",
             "[Carefully, you touch your nose to the sacred spot.]",
             "Ah, an apprentice! It's nice to meet you, y_c.",
             "While you're here, let me offer some advice.",

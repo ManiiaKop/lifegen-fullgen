@@ -367,10 +367,10 @@
         [
             "y_c. It's nice to see you today, thank you for stopping by.",
             "Hm. I've been thinking about the role I've chosen, being a queen.",
-            "The role of a permanent queen is fairly recent, Clan history speaking. Especially in comparison to roles like the medicine cat. And some were less...",
+            "The role of a permanent queen is fairly recent, Clan history speaking. Especially in comparison to roles like the healer. And some were less...",
             "Compassionate towards the role we perform, despite its importance.",
             "Some viewed us as wasting Clan resources. A long time ago, the parent of the queen's role, a cat called Ferncloud, received some... uncomfortable comments from individuals related to her choice.",
-            "However, we do more than sit and play with kits, we help in ways medicine cats cannot. We're formally trained to recognise signs of illness in kits and queens, and to provide comfort in stressful situations.",
+            "However, we do more than sit and play with kits, we help in ways healers cannot. We're formally trained to recognise signs of illness in kits and queens, and to provide comfort in stressful situations.",
             "I believe our constant presence with the kits helps us to realise something's wrong and get help before... the worst happens.",
             "Just make sure to know that no matter what, everyone has their role to play. Don't be a cat who believes they're more important than those whose role is less flashy."
         ]
@@ -470,7 +470,7 @@
             "they_blind"
         ],
         [
-            "[Watching t_c play with the kits is like watching the most skilled hunter bring down a piece of prey, or watching the medicine cat heal a wound.]",
+            "[Watching t_c play with the kits is like watching the most skilled hunter bring down a piece of prey, or watching the healer heal a wound.]",
             "[Never once did you ever think anyone could make the act of playing look so skilled and graceful ... but t_c somehow does everything perfectly.]"
         ]
     ],
@@ -556,7 +556,7 @@
             "Hey, guess what time it is?",
             "... Do you reeeaally wanna know?",
             "Do you REALLY, REALLY, REALLY wanna know?!",
-            "... It's time to take the herbs the medicine cat gave you for your tummy! Yaaaayyy!",
+            "... It's time to take the herbs the healer gave you for your tummy! Yaaaayyy!",
             "[Grinning, t_c pushes the herbs towards you, and you find yourself feeling a little tricked.]"
         ]
     ],
@@ -813,7 +813,7 @@
             "they_blind"
         ],
         [
-            "How's it going, mini-medicine cat? Herbal life treating you well?",
+            "How's it going, mini-healer? Herbal life treating you well?",
             "Don't worry, I'm not going to run headfirst into trouble and injure myself today.",
             "As for tomorrow? Who knows!"
         ]
@@ -952,7 +952,7 @@
         ],
         [
             "[r_k just puked in the nursery and it's total chaos.]",
-            "[t_c must attempt to comfort the screaming kit, clean the mess, and alert the medicine cat all at once.]",
+            "[t_c must attempt to comfort the screaming kit, clean the mess, and alert the healer all at once.]",
             "... Little help?",
             "[You rush to grab r_m. You don't envy t_c's job ... Clearly, being a queen isn't as easy as you may have thought.]"
         ]
@@ -1472,7 +1472,7 @@
         [
             "y_c! It's time for r_k's moonly checkup!",
             "[t_c places the little kit at your paws, quietly meowing some gentle encouragement to {PRONOUN/r_k/object}.]",
-            "Don't mind me, we're still learning that the medicine cat's den isn't a scary place."
+            "Don't mind me, we're still learning that the healer's den isn't a scary place."
         ]
     ],
     "sweet_queen_15": [
@@ -1575,7 +1575,7 @@
         [
             "[You overhear t_c speaking with r_k about the different roles a cat can have.]",
             "You could be a warrior, just like r_w. They fight and defend the Clan, whilst going out hunting and doing similar daily tasks.",
-            "You could be a mediator or a medicine cat, both roles are integral to the safety and well-being of the Clan, physical and mental.",
+            "You could be a mediator or a healer, both roles are integral to the safety and well-being of the Clan, physical and mental.",
             "Or, maybe, you could be a queen like me, and help foster and raise the future of the Clan.",
             "[The kitten looks thoughtful for a moment before {PRONOUN/r_k/subject} {VERB/r_k/announce/announces} that {PRONOUN/r_k/subject}{VERB/r_k/'re/'s} going to be a rock.]",
             "Well, I bet you'll be the best rock the Clan has ever seen.",

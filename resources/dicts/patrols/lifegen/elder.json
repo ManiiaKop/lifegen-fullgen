@@ -226,7 +226,7 @@
         "max_cats": 2,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "You were just trying to rest, the warriors out on patrol and the medicine cat out gathering herbs, however the squeals of other cats managed to wake you up from your nap. You rush outside, and it seems a snake has slithered its way into the middle of the camp. The cats look to you for help, you are the one in the best condition in the camp at the moment, so they're hoping you'll have a plan.",
+        "intro_text": "You were just trying to rest, the warriors out on patrol and the healer out gathering herbs, however the squeals of other cats managed to wake you up from your nap. You rush outside, and it seems a snake has slithered its way into the middle of the camp. The cats look to you for help, you are the one in the best condition in the camp at the moment, so they're hoping you'll have a plan.",
         "decline_text": "Nope. Nope nope. Nope. You hurry back into the den, not willing to deal with the snake.",
         "chance_of_success": 50,
         "success_outcomes": [
@@ -301,7 +301,7 @@
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "You and the medicine cat devise a traveling-herb class for the apprentices, laying different clusters of herbs out in a clearing and showing all the apprentices to teach them about the plants. At the end of the meeting, you split the apprentices into teams and quiz them all on uses for the herbs. Not only do they have an unforgettable time playing and learning what traveling herbs serve what purposes, but Team Squirrel also gets bragging rights at the next Gathering!",
+                "text": "You and the healer devise a traveling-herb class for the apprentices, laying different clusters of herbs out in a clearing and showing all the apprentices to teach them about the plants. At the end of the meeting, you split the apprentices into teams and quiz them all on uses for the herbs. Not only do they have an unforgettable time playing and learning what traveling herbs serve what purposes, but Team Squirrel also gets bragging rights at the next Gathering!",
                 "exp": 10,
                 "weight": 20
             }

@@ -3,6 +3,7 @@ from operator import xor
 from random import choice, randint
 
 import ujson
+from copy import deepcopy
 
 from scripts.cat.cats import Cat
 from scripts.cat.history import History
@@ -295,13 +296,13 @@ class Pregnancy_Events:
                                         and (clan.clan_settings['same sex birth'] or xor('Y' in i.genotype.sexgene, 'Y' in cat.genotype.sexgene)) 
                                         and len(i.mate) == 0 and not i.birth_cooldown]
                 if(random.random() < 0.75 or len(possible_affair_partners) < 1):
+                    backstories = {
+                        'loner' : 'loner_backstories',
+                        'rogue' : 'rogue_backstories',
+                        'kittypet' : 'kittypet_backstories'
+                    }
                     if(randint(1, 4) > 1):
                         cat_type = choice(['loner', 'rogue', 'kittypet'])
-                        backstories = {
-                            'loner' : 'loner_backstories',
-                            'rogue' : 'rogue_backstories',
-                            'kittypet' : 'kittypet_backstories'
-                        }
                         backkit = 'outsider_roots2'
                     else:
                         cat_type = 'Clancat'
@@ -338,7 +339,7 @@ class Pregnancy_Events:
 
                 kits = Pregnancy_Events.get_kits(amount, cat, outside_parent, clan, backkit=backkit)
 
-                for kit in kits:
+                for kit in kits.copy():
                     if random.random() < stillborn_chance or kit.genotype.manx[1] == "Ab" or kit.genotype.manx[1] == "M" or kit.genotype.fold[1] == "Fd" or kit.genotype.munch[1] == "Mk" or ('NoDBE' not in kit.genotype.pax3 and 'DBEalt' not in kit.genotype.pax3):
                         kit.dead = True
                         History.add_death(kit, str(kit.name) + " was stillborn.")
@@ -522,14 +523,13 @@ class Pregnancy_Events:
                                     and (clan.clan_settings['same sex birth'] or xor('Y' in i.genotype.sexgene, 'Y' in cat.genotype.sexgene)) 
                                     and len(i.mate) == 0]
             if(random.random() < 0.75 or len(possible_affair_partners) < 1):
+                backstories = {
+                    'loner' : 'loner_backstories',
+                    'rogue' : 'rogue_backstories',
+                    'kittypet' : 'kittypet_backstories'
+                }
                 if(randint(1, 4) > 1):
                     cat_type = choice(['loner', 'rogue', 'kittypet'])
-                    
-                    backstories = {
-                        'loner' : 'loner_backstories',
-                        'rogue' : 'rogue_backstories',
-                        'kittypet' : 'kittypet_backstories'
-                    }
                     backkit = 'outsider_roots1'
                 else:
                     cat_type = 'Clancat'
@@ -1035,7 +1035,10 @@ class Pregnancy_Events:
         
         all_pars = [cat]
         if other_cat:
-            all_pars += other_cat
+            if isinstance(other_cat, list):
+                all_pars += other_cat
+            else:
+                all_pars.append(other_cat)
         birth_parents = [i.ID for i in all_pars if i]
         for _par in all_pars:
             if not _par:
@@ -1111,7 +1114,11 @@ class Pregnancy_Events:
                 # Two parents provided
                 second_blood = None
                 if other_cat:
-                    second_blood = choice(other_cat)
+                    if isinstance(other_cat, list):
+                        second_blood = choice(other_cat)
+                    else:
+                        second_blood = choice([other_cat])
+
 
                 if backkit:    
                     kit = Cat(parent1=cat.ID, parent2=second_blood.ID if second_blood else None, moons=0, backstory=backstory, status='newborn', extrapar = par2geno)
@@ -1132,15 +1139,8 @@ class Pregnancy_Events:
                 kit.name = Name("newborn")
                 tries += 1
 
-                if 'Y' not in cat.genotype.sexgene or not other_cat or other_cat.outside:
-                    kit.thought = f"Snuggles up to the belly of {cat.name}"
-                elif 'Y' in cat.genotype.sexgene and 'Y' in cat.genotype.sexgene:
-                    kit.thought = f"Snuggles up to the belly of {cat.name}"
-                else:
-                    kit.thought = f"Snuggles up to the belly of {other_cat.name}"
-                
-            kit.adoptive_parents = all_adoptive_parents  # Add the adoptive parents. 
             all_kitten.append(kit)
+            # adoptive parents are set at the end, when everything else is decided
 
             # remove scars
             kit.pelt.scars.clear()
@@ -1195,16 +1195,14 @@ class Pregnancy_Events:
                 else:
                     the_cat.relationships[kit.ID] = Relationship(the_cat, kit)
                     kit.relationships[the_cat.ID] = Relationship(kit, the_cat)
-            
-            #### REMOVE ACCESSORY ###### 
+
+            #### REMOVE ACCESSORY ######
             kit.pelt.accessory = None
-            kit.pelt.accessoroes = []
-            kit.pelt.inventory = []
             clan.add_cat(kit)
 
             #### GIVE HISTORY ######
             History.add_beginning(kit, clan_born=bool(cat))
-        
+
         # check other cats of Clan for siblings
         for kitten in all_kitten:
             # update/buff the relationship towards the siblings
@@ -1240,9 +1238,15 @@ class Pregnancy_Events:
                     if birth_p.ID not in [kit.parent2, kit.parent1] and birth_p.ID not in kit.adoptive_parents:
                         kit.adoptive_parents.append(birth_p.ID)
             if other_cat:
-                for birth_p in other_cat:
+                if isinstance(other_cat, list):
+                    for birth_p in other_cat:
+                        if birth_p.ID not in [kit.parent2, kit.parent1] and birth_p.ID not in kit.adoptive_parents:
+                            kit.adoptive_parents.append(birth_p.ID)
+                else:
+                    birth_p = other_cat
                     if birth_p.ID not in [kit.parent2, kit.parent1] and birth_p.ID not in kit.adoptive_parents:
                         kit.adoptive_parents.append(birth_p.ID)
+
             kit.inheritance.update_inheritance()
             kit.inheritance.update_all_related_inheritance()
 

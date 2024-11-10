@@ -913,7 +913,7 @@
             "they_blind"
         ],
         [
-            "How's it going, mini-medicine cat? Herbal life treating you well?",
+            "How's it going, mini-healer? Herbal life treating you well?",
             "Don't worry, I'm not going to run headfirst into trouble and injure myself today.",
             "As for tomorrow? Who knows!"
         ]
@@ -964,7 +964,7 @@
             "Yaknow, y_c, I never really found you all that convincing as a warrior.",
             "Real warriors are strong! We're fearless! We never back down from a fight!",
             "But in you, I sense ... uncertainty.",
-            "Maybe you should see the medicine cat about it."
+            "Maybe you should see the healer about it."
         ]
     ],
     "assertive_rom": [
@@ -976,7 +976,7 @@
         ],
         [
             "Hey, y_c! I just got a new scar today! Wanna come take a look?",
-            "Yeah, I ran into a little dog out at the edge of a territory. Wasn't too hard to chase off, but it gave me a little nick. Medicine cat says it's probably never going away.",
+            "Yeah, I ran into a little dog out at the edge of a territory. Wasn't too hard to chase off, but it gave me a little nick. healer says it's probably never going away.",
             "[You brush your tail over t_c's scar, and {PRONOUN/t_c/subject} {VERB/t_c/seem/seems} a little too thrilled by the gesture for it to just be friendly.]"
         ]
     ],
@@ -1628,7 +1628,7 @@
             "they_blind"
         ],
         [
-            "How's medicine cat training been going for you? I was told you're learning about signs and dreams today.",
+            "How's healer training been going for you? I was told you're learning about signs and dreams today.",
             "Finding the role you're meant to do matters, and sometimes we find out what we're meant to do moons later than you'd expect.",
             "Ah... You haven't been able to get those dreams... I understand. It's not an easy thing to do.",
             "I have had one though, if you'd like to hear about it. It wasn't pleasant, but if it helps you in any way, I'm more than happy to talk about it.",
@@ -1641,7 +1641,7 @@
             "The kit's fur turned starry, and I realized...",
             "This was during a time where my faith was shaken... They gently guided me back to the stars.",
             "It was pretty scary at first, but after I got used to it, it was almost comforting being out there.",
-            "Finding your way as a medicine cat will be the same."
+            "Finding your way as a healer will be the same."
         ]
     ],
     "sweet_leader_10": [

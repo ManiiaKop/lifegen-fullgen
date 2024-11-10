@@ -1929,7 +1929,7 @@ class PickPath(UIWindow):
             "",
             object_id="#med",
             container=self,
-            tool_tip_text='Choose to become a medicine cat apprentice'
+            tool_tip_text='Choose to become a healer apprentice'
         )
         self.not_yet_button = UIImageButton(
             scale(pygame.Rect((220, 190), (150, 150))),
@@ -1980,9 +1980,9 @@ class PickPath(UIWindow):
                 if event.ui_element == self.begin_anew_button:
                     game.switches['window_open'] = False
                     if game.clan.your_cat.moons < 12:
-                        game.clan.your_cat.status = 'medicine cat apprentice'
+                        game.clan.your_cat.status = 'healer apprentice'
                     else:
-                        game.clan.your_cat.status = 'medicine cat'
+                        game.clan.your_cat.status = 'healer'
                     self.kill()
                 elif event.ui_element == self.not_yet_button:
                     game.switches['window_open'] = False
@@ -2008,9 +2008,9 @@ class PickPath(UIWindow):
                 elif event.ui_element == self.random_button:
                     game.switches['window_open'] = False
                     if game.clan.your_cat.moons < 12:
-                        game.clan.your_cat.status = random.choice(['mediator apprentice','apprentice','medicine cat apprentice', "queen's apprentice"])
+                        game.clan.your_cat.status = random.choice(['mediator apprentice','apprentice','healer apprentice', "queen's apprentice"])
                     else:
-                        game.clan.your_cat.status = random.choice(['mediator','warrior','medicine cat', "queen"])
+                        game.clan.your_cat.status = random.choice(['mediator','warrior','healer', "queen"])
                     
                     self.kill()
         except:

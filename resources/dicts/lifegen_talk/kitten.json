@@ -528,7 +528,7 @@
         ],
         [
             "Come play with me, y_c!!!",
-            "What? You have training with the medicine cat and mediator?",
+            "What? You have training with the healer and mediator?",
             "Hmph ... no fair! Come play with me as soon as you're back, okay?"
         ]
     ],
@@ -1855,7 +1855,7 @@
         [
             "[You butt your tiny little nose into the medicine den, where you see t_c sitting up, completely unbothered, on a broken nest formerly made from intricately woven sticks. It seems as though some of them have been pulled out and laid on the floor to play sticks with r_m.]",
             "Oh-my-gosh! Hi, y_c! I haven't seen you since, woah.. One, two, three, four hours ago? That's, oh my goodness... That's the first time I ever counted that high! Oh, I wanna go climb stuff with you so bad...",
-            "[The medicine cat gives t_c a tentative but affectionate look, as if to say 'Not again!' {PRONOUN/r_m/subject/CAP} {VERB/t_c/lean/leans} down and {VERB/t_c/whisper/whispers} something in t_c's ear.]",
+            "[The healer gives t_c a tentative but affectionate look, as if to say 'Not again!' {PRONOUN/r_m/subject/CAP} {VERB/t_c/lean/leans} down and {VERB/t_c/whisper/whispers} something in t_c's ear.]",
             "Oh, {PRONOUN/r_m/subject} said that's not a good idea. Awh, okay...",
             "Well, wanna play sticks with us instead?"
         ]
@@ -2065,7 +2065,7 @@
         ],
         [
             "Eughh ... What's that weird smell?",
-            "You're a medicine cat?",
+            "You're a healer?",
             "Way to say you're useless!"
         ]
     ],
@@ -2775,7 +2775,7 @@
         [
             "Can I ask you a question, y_c?",
             "Why do we follow the Warrior Code? It just sounds strange because why do we let cats of the past tell us who we have to be? I get it but- I just hope StarClan has a plan for me, a great one!",
-            "Maybe I'll be a leader? Someone who you can rely on. Or a deputy, proud to serve the Clan! Maybe a warrior, strong like you. Or what about a medicine cat? Or a queen?",
+            "Maybe I'll be a leader? Someone who you can rely on. Or a deputy, proud to serve the Clan! Maybe a warrior, strong like you. Or what about a healer? Or a queen?",
             "I don't know yet, but when I do, I'll tell you! And, you'll be there to help me, right?"
         ]
     ],
@@ -5897,7 +5897,7 @@
         [
             "I told r_m about you, but {PRONOUN/r_m/subject} said I was lying.",
             "No one is allowed to see ghosts besides {PRONOUN/r_m/object}, I guess.",
-            "Does that mean I have to become a medicine cat?"
+            "Does that mean I have to become a healer?"
         ]
     ],
     "bossy_kit": [
@@ -5909,7 +5909,7 @@
         ],
         [
             "Hi, y_c! Wanna play pretend with me?",
-            "Okay! My character is Goldenstar, the leader of the Clan. You will be Stormshadow, the mysterious medicine cat with a tragic past.",
+            "Okay! My character is Goldenstar, the leader of the Clan. You will be Stormshadow, the mysterious healer with a tragic past.",
             "The Clan was founded hundreds of moons ago by a group of cats escaping from their sworn enemy, the Wolf Tribe. Now, they must repay a karmic debt to StarClan in order to --",
             "[You ask t_c when {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} gonna be done explaining so you can finally start playing.]",
             "But - But the explaining is, like, the funnest part!"

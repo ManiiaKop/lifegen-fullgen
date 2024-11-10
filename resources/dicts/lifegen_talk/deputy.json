@@ -892,7 +892,7 @@
             "you_blind"
         ],
         [
-            "How's it going, mini-medicine cat? Herbal life treating you well?",
+            "How's it going, mini-healer? Herbal life treating you well?",
             "Don't worry, I'm not going to run headfirst into trouble and injure myself today.",
             "As for tomorrow? Who knows!"
         ]
@@ -1200,7 +1200,7 @@
             "Yaknow, y_c, I never really found you all that convincing as a warrior.",
             "Real warriors are strong! We're fearless! We never back down from a fight!",
             "But in you, I sense ... uncertainty.",
-            "Maybe you should see the medicine cat about it."
+            "Maybe you should see the healer about it."
         ]
     ],
     "assertive_dislike": [
@@ -1409,7 +1409,7 @@
         ],
         [
             "Hey, y_c! I just got a new scar today! Wanna come take a look?",
-            "Yeah, I ran into a little dog out at the edge of a territory. Wasn't too hard to chase off, but it gave me a little nick. Medicine cat says it's probably never going away.",
+            "Yeah, I ran into a little dog out at the edge of a territory. Wasn't too hard to chase off, but it gave me a little nick. healer says it's probably never going away.",
             "[You brush your tail over t_c's scar, and {PRONOUN/t_c/subject} {VERB/t_c/seem/seems} a little too thrilled by the gesture for it to just be friendly.]"
         ]
     ],
@@ -2093,7 +2093,7 @@
         ],
         [
             "Let me know if you ever need help reaching StarClan, I can ask l_n and see if they've got any advice.",
-            "Leaders and medicine cats can both reach them, and sometimes what helps your mentor might not help you.",
+            "Leaders and healers can both reach them, and sometimes what helps your mentor might not help you.",
             "Everyone learns differently, after all!"
         ]
     ],
@@ -2400,7 +2400,7 @@
             "you_injured"
         ],
         [
-            "[As you rest, half-asleep in the medicine cat den, you hear hesitant pawsteps approaching. After a moment, t_c's whisper breaks the silence.]",
+            "[As you rest, half-asleep in the healer den, you hear hesitant pawsteps approaching. After a moment, t_c's whisper breaks the silence.]",
             "Hey, y_c. I just wanted to let you know that I'm handling the Clan while you're recovering.",
             "I know you probably assumed that, but I... I guess I wanted to make sure you knew?",
             "I really hope you're better soon. You're much better at all of this than me.",

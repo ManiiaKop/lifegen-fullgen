@@ -44,7 +44,7 @@
         [
             "I noticed you treating r_c the other day, and it really wasn't bad! You've come a long way. But, one thing I did notice was that you were a little too ... nice when delivering {PRONOUN/r_c/poss} diagnosis?",
             "Not that you shouldn't be kind when trying to help your Clanmates. That's not what I mean. But you shouldn't be too afraid to say what you really mean, either.",
-            "We're medicine cats. It's our job to be honest with our Clanmates when something is wrong! Not protect their feelings.",
+            "We're healers. It's our job to be honest with our Clanmates when something is wrong! Not protect their feelings.",
             "The medicine den is a scary place, and you want to help cats feel safer. But isn't it better for a Clanmate to know what they're in for, rather than believe a nicer lie?",
             "Hm ... maybe I should be the one in charge of delivering the bad news from now on."
         ]
@@ -59,10 +59,10 @@
             "they_blind"
         ],
         [
-            "You've been doing a fine job, y_c! Keep this up and you'll be getting your medicine cat name soon.",
-            "But, ah, when you do, I hope you don't just keep following the exact methods and techniques I've taught you here. Take risks! Experiment! Try new things! That's what being a good medicine cat's all about.",
+            "You've been doing a fine job, y_c! Keep this up and you'll be getting your healer name soon.",
+            "But, ah, when you do, I hope you don't just keep following the exact methods and techniques I've taught you here. Take risks! Experiment! Try new things! That's what being a good healer's all about.",
             "If my mentor saw the methods I was using to treat some of these cats, they'd have me exiled, if not skinned alive ... but I don't believe in that type of thinking. There's not just one way of doing things.",
-            "You're your own medicine cat! You should do things the way you think is best for the Clan. Not just because I told you it was the 'right' way."
+            "You're your own healer! You should do things the way you think is best for the Clan. Not just because I told you it was the 'right' way."
         ]
     ],
     "assertive_mentor3": [
@@ -245,7 +245,7 @@
         ],
         [
             "StarClan, y_c, you're so ... rigid.",
-            "You really gotta loosen up more if you really wanna be of service to your Clan. The way I see it, being a good medicine cat's all about motion.",
+            "You really gotta loosen up more if you really wanna be of service to your Clan. The way I see it, being a good healer's all about motion.",
             "Treating a Clanmate with your own paws ... that's an experience you won't learn anywhere but when it's right in front of you.",
             "Try to remember that."
         ]
@@ -261,7 +261,7 @@
         [
             "Eeek! The half-moon meeting is coming up! Aren't you excited?",
             "Is it just me, or is it high time the o_cClan apprentice earns her full name? I hope it ends in -cloud ... that would really suit her.",
-            "And the o_cClan medicine cat has been totally eyeing you at every gathering ... C'mon, don't tell me you haven't noticed!",
+            "And the o_cClan healer has been totally eyeing you at every gathering ... C'mon, don't tell me you haven't noticed!",
             "Though, I suppose whatever he feels is between him and StarClan, teehee!"
         ]
     ],
@@ -387,7 +387,7 @@
         [
             "[You warn t_c that invoking the name of StarClan for every mundane thing is eventually going to catch up with {PRONOUN/t_c/object}.]",
 	    "*Sigh* Y'know what? Maybe you're right, y_c. I'm so sorry.",
-	    "I really need to have more respect for our warrior ancestors, and take my duties as a medicine cat more seriousl .... Ah.",
+	    "I really need to have more respect for our warrior ancestors, and take my duties as a healer more seriousl .... Ah.",
 	    "[t_c squints up at the sky, ears pricking.]",
 	    "What was that? ... Uh-huh ... Mhm, yes, I see .....",
 	    "Scratch everything I just said, y_c. StarClan just gave me a new message. They tell me you're jealous of my gift."
@@ -596,9 +596,9 @@
             "they_blind"
         ],
         [
-            "[You ask t_c why {PRONOUN/t_c/subject} chose to become a medicine cat, given {PRONOUN/t_c/poss} adventurous personality.]",
+            "[You ask t_c why {PRONOUN/t_c/subject} chose to become a healer, given {PRONOUN/t_c/poss} adventurous personality.]",
             "Ah, well, that's easy ... The medicine den is full of adventure!",
-            "I get to explore far and wide gathering all sorts of different herbs, collaborate with medicine cats across territories, and literally commune with the dead! That's plenty of excitement, no?",
+            "I get to explore far and wide gathering all sorts of different herbs, collaborate with healers across territories, and literally commune with the dead! That's plenty of excitement, no?",
             "You might think you know life-or-death situations on the battlefield, but here in the medicine den is where the stakes are really high.",
             "My decisions could be the difference between a Clanmate surviving, or joining our warrior ancestors.",
             "It's terrifying ... but thrilling, too!",
@@ -686,7 +686,7 @@
         [
             "Whoa! Watch it, little guy, or you'll trample my whole herb supply!",
             "Hehe, no worries. Say, maybe this is a sign from StarClan. You're destined to be in the medicine den!",
-            "Or, maybe you're just clumsy, heh ... whatever the case, you might have a future as a medicine cat! It's definitely a unique and important path.",
+            "Or, maybe you're just clumsy, heh ... whatever the case, you might have a future as a healer! It's definitely a unique and important path.",
             "Just think about it, okay?"
         ]
     ],
@@ -1003,7 +1003,7 @@
             "they_blind"
         ],
         [
-            "I love my role as a medicine cat.",
+            "I love my role as a healer.",
             "Seriously. I'm not the kind of cat to exercise my physical muscles. I much prefer to exercise my mental ones.",
             "I get to come up with and practice new ideas almost every day. There's a level of innovation with this job that I just adore compared to the monotonous life of a warrior.",
             "Sure, I could be a mediator or a permanent queen, but even if I still had the option, even if I were still an apprentice, I'd still choose the medicine den life any day.",
@@ -1220,7 +1220,7 @@
             "neutral"
         ],
         [
-            "[You've heard stories about the mean, grumpy medicine cat apprentice of c_nClan, and decide to pay {PRONOUN/t_c/object} a visit.]",
+            "[You've heard stories about the mean, grumpy healer apprentice of c_nClan, and decide to pay {PRONOUN/t_c/object} a visit.]",
             "Tansy, horsetail ...",
             "Hm? y_c?",
             "You ... want to know what I'm doing?",
@@ -1386,7 +1386,7 @@
             "Oh, y_c! What happened?",
             "You tried to mediate something in o_cClan and they attacked you?",
             "At least it isn't too serious... here, have these. They should make you feel better. Just try to take it easy, okay?",
-            "I'll talk to their medicine cat at the next meeting, I promise."
+            "I'll talk to their healer at the next meeting, I promise."
         ]
     ],
     "sweet_meddie_11": [
@@ -1459,7 +1459,7 @@
         [
             "Oh, y_c! Hi there- ah-",
             "[You can tell {PRONOUN/t_c/subject} {VERB/t_c/want/wants} to ask for your help, but {VERB/t_c/don't/doesn't} want to bother you. You offer to help {PRONOUN/t_c/object} instead.]",
-            "Oh, would you? r_w said the rudest thing the other day... that medicine cats shouldn't even be roles, and that I chose this path just to be lazy.",
+            "Oh, would you? r_w said the rudest thing the other day... that healers shouldn't even be roles, and that I chose this path just to be lazy.",
             "Do you think you could talk to {PRONOUN/r_c/object} at all? ... It'd mean a lot."
         ]
     ],
@@ -1726,7 +1726,7 @@
             "they_blind"
         ],
         [
-            "I'll never trust you to heal me. Never again. You're a mockery of what medicine cats stand for. You were being trained to help! To be kind and a voice of StarClan! ",
+            "I'll never trust you to heal me. Never again. You're a mockery of what healers stand for. You were being trained to help! To be kind and a voice of StarClan! ",
             "But you're not, you're a fraud. A foxhearted, merciless killer.",
             "StarClan won't accept you now."
         ]
@@ -1738,7 +1738,7 @@
             "any"
         ],
         [
-            "[Because the medicine cats are too shaken to treat you, you've been forced to sneak in the medicine den and steal some herbs for yourself.]",
+            "[Because the healers are too shaken to treat you, you've been forced to sneak in the medicine den and steal some herbs for yourself.]",
             "[t_c sits in the den, preparing herbs for the next season, alone in the darkness that surrounds {PRONOUN/t_c/object}.]",
             "y_c!",
             "[t_c screeches and quickly stands, fur on end and startled by the sudden nightly appearance.]",
@@ -1773,7 +1773,7 @@
         ],
         [
             "Isn't it odd that cats here can still get injured? I mean, this is supposed to be eternal paradise.",
-            "I figure it's probably just to keep the medicine cats occupied since nobody actually hurts from it, but... I can't help but wonder..."
+            "I figure it's probably just to keep the healers occupied since nobody actually hurts from it, but... I can't help but wonder..."
         ]
     ],
     "DF_med_H1": [
@@ -1800,7 +1800,7 @@
         ],
         [
             "Can't find any more herbs? Yeah, I figured.",
-            "[t_c sighs and looks at the only herbs the medicine cats have on hand. Half-dead herbs that look like they hurt, rather than heal.]",
+            "[t_c sighs and looks at the only herbs the healers have on hand. Half-dead herbs that look like they hurt, rather than heal.]",
             "We'll just have to use what we have, I suppose.",
             "[You begin to protest, but t_c gives you a harsh glare.]",
             "Shush, y_c. We have to use what this vile nature gives us. There are too many wounded."
@@ -1996,7 +1996,7 @@
         [
             "[t_c curls around your sickly body, protecting you from the stares and judgment from the rest of the clan.]",
             "Don't worry. If any of them come close, I'll protect you.",
-            "[It seems like t_c will always be a medicine cat no matter what, through and through.]"
+            "[It seems like t_c will always be a healer no matter what, through and through.]"
         ]
     ],
     "medshunned_H3": [
@@ -2121,7 +2121,7 @@
             "they_blind"
         ],
         [
-            "[You're in pain, and you don't know why. Wasn't this supposed to stop in StarClan? You find the nearest medicine cat.]",
+            "[You're in pain, and you don't know why. Wasn't this supposed to stop in StarClan? You find the nearest healer.]",
             "Hello, y_c.",
             "Pain? That's completely normal. You've experienced death-- your brain isn't quite caught up to the fact that you're here.",
             "We all go through it. You'll feel better in a little bit.",

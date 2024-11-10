@@ -261,13 +261,13 @@ class MurderScreen(Screens):
 
             if self.next_cat == 0 and check_cat.ID != self.the_cat.ID and check_cat.dead == self.the_cat.dead and \
                     check_cat.ID != game.clan.instructor.ID and not check_cat.exiled and check_cat.status in \
-                    ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"] \
+                    ["apprentice", "healer apprentice", "mediator apprentice", "queen's apprentice"] \
                     and check_cat.df == self.the_cat.df:
                 self.previous_cat = check_cat.ID
 
             elif self.next_cat == 1 and check_cat.ID != self.the_cat.ID and check_cat.dead == self.the_cat.dead and \
                     check_cat.ID != game.clan.instructor.ID and not check_cat.exiled and check_cat.status in \
-                    ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"] \
+                    ["apprentice", "healer apprentice", "mediator apprentice", "queen's apprentice"] \
                     and check_cat.df == self.the_cat.df:
                 self.next_cat = check_cat.ID
 
@@ -398,7 +398,7 @@ class MurderScreen(Screens):
                     game.cur_events_list.insert(2, Single_Event(f"Shocked at your request to be an accomplice to murder, {accomplice.name} reports your actions to the Clan leader."))
                 you.shunned = 1
             txt = ""
-            if game.clan.your_cat.status in ['kitten', 'leader', 'deputy', 'medicine cat']:
+            if game.clan.your_cat.status in ['kitten', 'leader', 'deputy', 'healer']:
                 txt = choice(self.mu_txt["murder_discovered " + game.clan.your_cat.status])
             else:
                 txt = choice(self.mu_txt["murder_discovered general"])
@@ -421,15 +421,15 @@ class MurderScreen(Screens):
             accomplice.faith -= 0.5
         
         if punishment_chance == 1 or punishment_chance == 3:
-            kit_punishment = ["You are assigned counseling by the Clan's medicine cat to help you understand the severity of your actions and to guide you to make better decisions in the future.",
+            kit_punishment = ["You are assigned counseling by the Clan's healer to help you understand the severity of your actions and to guide you to make better decisions in the future.",
                                 "You are to be kept in the nursery under the watchful eye of the queens at all times until you become an apprentice."]
-            gen_punishment = ["You are assigned counseling by the Clan's medicine cat to help you understand the severity of your actions and to guide you to make better decisions in the future.",
+            gen_punishment = ["You are assigned counseling by the Clan's healer to help you understand the severity of your actions and to guide you to make better decisions in the future.",
                                 "You will be required to take meals last and are forced to sleep in a separate den away from your clanmates.",
                                 "You are assigned to several moons of tasks that include cleaning out nests, checking elders for ticks, and other chores alongside your normal duties.",
                                 "You are assigned a mentor who will better educate you about the Warrior Code and the sacredness of life."]
             # demote_leader = ["Your lives will be stripped away and you will be demoted to a warrior, no longer trusted to be the Clan's leader."]
             # demote_deputy = ["The Clan decides that you will be demoted to a warrior, no longer trusting you as their deputy."]
-            # demote_medicine_cat = ["The Clan decides that you will be demoted to a warrior, no longer trusting you as their medicine cat."]
+            # demote_medicine_cat = ["The Clan decides that you will be demoted to a warrior, no longer trusting you as their healer."]
             # exiled = ["The Clan decides that they no longer feel safe with you as a Clanmate. You will be exiled from the Clan."]
             
             if you.status == 'kitten' or you.status == 'newborn':
@@ -442,7 +442,7 @@ class MurderScreen(Screens):
                 lead_choice = randint(1,3)
                 if lead_choice == 1:
                     game.cur_events_list.insert(3, Single_Event(choice(gen_punishment)))
-            elif you.status == 'medicine cat':
+            elif you.status == 'healer':
                 lead_choice = randint(1,3)
                 if lead_choice == 1:
                     game.cur_events_list.insert(3, Single_Event(choice(gen_punishment)))
@@ -453,16 +453,16 @@ class MurderScreen(Screens):
         
         if accomplice and accompliced and (punishment_chance == 2 or punishment_chance == 3):
             a_n = str(accomplice.name)
-            kit_punishment = [f"{a_n} is assigned counseling by the Clan's medicine cat to help them understand the severity of their actions and to guide them to make better decisions in the future.",
+            kit_punishment = [f"{a_n} is assigned counseling by the Clan's healer to help them understand the severity of their actions and to guide them to make better decisions in the future.",
                             f"{a_n} is to be kept in the nursery under the watchful eye of the queens at all times until they become an apprentice."]
-            gen_punishment = [f"{a_n} is assigned counseling by the Clan's medicine cat to help them understand the severity of their actions and to guide them to make better decisions in the future.",
+            gen_punishment = [f"{a_n} is assigned counseling by the Clan's healer to help them understand the severity of their actions and to guide them to make better decisions in the future.",
                                 f"{a_n} is required to take meals last and is forced to sleep in a separate den away from their clanmates.",
                                 f"{a_n} is assigned to several moons of tasks that include cleaning out nests, checking elders for ticks, and other chores alongside their normal duties.",
                                 f"{a_n} is assigned a mentor who will better educate them about the Warrior Code and the sacredness of life."]
             
             # demote_leader = [f"{a_n}'s lives will be stripped away and they will be demoted to a warrior, no longer trusted to be the Clan's leader."]
             # demote_deputy = [f"The Clan decides that {a_n} will be demoted to a warrior, no longer trusting them as their deputy."]
-            # demote_medicine_cat = [f"The Clan decides that {a_n} will be demoted to a warrior, no longer trusting them as their medicine cat."]
+            # demote_medicine_cat = [f"The Clan decides that {a_n} will be demoted to a warrior, no longer trusting them as their healer."]
             # exiled = [f"The Clan decides that they no longer feel safe with {a_n} as a Clanmate. They will be exiled from the Clan."]
 
             if accomplice.status == 'kitten' or accomplice.status == 'newborn':
@@ -477,7 +477,7 @@ class MurderScreen(Screens):
                 if lead_choice == 1:
                     game.cur_events_list.insert(3, Single_Event(choice(gen_punishment)))
                
-            elif accomplice.status == 'medicine cat':
+            elif accomplice.status == 'healer':
                 lead_choice = randint(1,3)
                 if lead_choice == 1:
                     game.cur_events_list.insert(3, Single_Event(choice(gen_punishment)))
@@ -497,9 +497,9 @@ class MurderScreen(Screens):
             chance -= 10
         elif you.experience <= 30:
             chance += 20
-        if cat_to_murder.status in ['leader', 'deputy', 'medicine cat']:
+        if cat_to_murder.status in ['leader', 'deputy', 'healer']:
             chance += 20
-        if you.status in ['leader', 'deputy', 'medicine cat']:
+        if you.status in ['leader', 'deputy', 'healer']:
             chance -= 10
         if accomplice and accompliced:
             chance -= 10
@@ -549,10 +549,10 @@ class MurderScreen(Screens):
     
     status_chances = {
         'warrior': 40,
-        'medicine cat': 40,
+        'healer': 40,
         'mediator': 35,
         'apprentice': 30,
-        'medicine cat apprentice': 25,
+        'healer apprentice': 25,
         'mediator apprentice': 20,
         "queen": 25,
         "queen's apprentice": 20,
@@ -564,10 +564,10 @@ class MurderScreen(Screens):
 
     skill_chances = {
         'warrior': -5,
-        'medicine cat': -5,
+        'healer': -5,
         'mediator': 0,
         'apprentice': 5,
-        'medicine cat apprentice': 5,
+        'healer apprentice': 5,
         'mediator apprentice': 5,
         "queen's apprentice": 10,
         'queen': 5,
@@ -734,9 +734,9 @@ class MurderScreen(Screens):
             chance += 10
         if accomplice.relationships[you.ID].admiration > 10:
             chance += 10
-        if you.status in ['medicine cat', 'mediator', 'deputy', 'leader']:
+        if you.status in ['healer', 'mediator', 'deputy', 'leader']:
             chance += 10
-        if accomplice.status in ['medicine cat', 'mediator', 'deputy', 'leader']:
+        if accomplice.status in ['healer', 'mediator', 'deputy', 'leader']:
             chance -= 20
         if accomplice.ID in game.clan.your_cat.mate:
             chance += 50

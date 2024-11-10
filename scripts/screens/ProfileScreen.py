@@ -1392,7 +1392,7 @@ class ProfileScreen(Screens):
             )
             if self.the_cat.dead or self.the_cat.outside or self.the_cat.shunned > 0:
                 self.profile_elements["queen"].disable()
-        elif self.the_cat.status in ["medicine cat", "medicine cat apprentice"] and self.the_cat.ID == game.clan.your_cat.ID:
+        elif self.the_cat.status in ["healer", "healer apprentice"] and self.the_cat.ID == game.clan.your_cat.ID:
             self.profile_elements["halfmoon"] = UIImageButton(scale(pygame.Rect(
                 (746, 220), (68, 68))),
                 "",
@@ -3289,7 +3289,7 @@ class ProfileScreen(Screens):
             # self.change_accessory_button = UIImageButton(scale(pygame.Rect((804, 1100), (344, 72))), "",
             #                                      starting_height=2, object_id="#change_accessory_button",
             #                                      manager=MANAGER)
-            if self.the_cat.status in ['leader', 'deputy', 'medicine cat', 'mediator', 'queen', 'warrior']:
+            if self.the_cat.status in ['leader', 'deputy', 'healer', 'mediator', 'queen', 'warrior']:
                 self.request_apprentice_button = UIImageButton(scale(pygame.Rect((804, 1100), (344, 72))), "",
                                                                tool_tip_text='You will be more likely to recieve an apprentice.',
                                                     starting_height=2, object_id="#request_apprentice_button",

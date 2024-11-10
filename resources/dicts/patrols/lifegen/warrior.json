@@ -196,7 +196,7 @@
         "chance_of_success": 80,
         "success_outcomes": [
             {
-                "text": "You remove the stale prey and prevent any potential sickness in the camp. The medicine cat thanks you.",
+                "text": "You remove the stale prey and prevent any potential sickness in the camp. The healer thanks you.",
                 "exp": 10,
                 "weight": 20
             }
@@ -401,12 +401,12 @@
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "The medicine cat runs out of marigold and asks for your help to find some. It's a chance to help the Clan and learn more about herbs.",
-        "decline_text": "You respectfully decline, not feeling confident in your knowledge of herbs. The medicine cat understands and decides to search themselves.",
+        "intro_text": "The healer runs out of marigold and asks for your help to find some. It's a chance to help the Clan and learn more about herbs.",
+        "decline_text": "You respectfully decline, not feeling confident in your knowledge of herbs. The healer understands and decides to search themselves.",
         "chance_of_success": 65,
         "success_outcomes": [
             {
-                "text": "You manage to find a patch of marigold and return it to the medicine cat. They thank you, and you feel proud of your contribution.",
+                "text": "You manage to find a patch of marigold and return it to the healer. They thank you, and you feel proud of your contribution.",
                 "exp": 20,
                 "weight": 20
             }
@@ -656,7 +656,7 @@
                 "weight": 20
             },
             {
-                "text": "Seaweed! You decide to gather some of the pieces to take it to the medicine cat den. Wash it out to remove the salt and it could be beneficial as makeshift cobwebs to dress wounds.",
+                "text": "Seaweed! You decide to gather some of the pieces to take it to the healer den. Wash it out to remove the salt and it could be beneficial as makeshift cobwebs to dress wounds.",
                 "exp": 15,
                 "weight": 20,
                 "stat_skill": [

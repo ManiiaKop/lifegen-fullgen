@@ -1033,7 +1033,7 @@ class PatrolOutcome:
             # TODO: make this less ugly
             for index in mate_indexes:
                 if index in in_patrol_cats:
-                    if in_patrol_cats[index] in ["apprentice", "medicine cat apprentice", "mediator apprentice"]:
+                    if in_patrol_cats[index] in ["apprentice", "healer apprentice", "mediator apprentice"]:
                         print("Can't give apprentices mates")
                         continue
 
@@ -1076,8 +1076,8 @@ class PatrolOutcome:
                 continue
 
             if match.group(1) in ["newborn", "kitten", "elder", "apprentice", "warrior",
-                                "mediator apprentice", "mediator", "medicine cat apprentice",
-                                "medicine cat"]:
+                                "mediator apprentice", "mediator", "healer apprentice",
+                                "healer"]:
                 status = match.group(1)
                 break
 
@@ -1103,9 +1103,9 @@ class PatrolOutcome:
                 break
 
         # if status and not age:
-        #     if status in ["apprentice", "mediator apprentice", "medicine cat apprentice"]:
+        #     if status in ["apprentice", "mediator apprentice", "healer apprentice"]:
         #         age = random.randint(Cat.age_moons["adolescent"][0], Cat.age_moons["adolescent"][1])
-        #     elif status in ["warrior", "mediator", "medicine cat"]:
+        #     elif status in ["warrior", "mediator", "healer"]:
         #         age = random.randint(Cat.age_moons["young adult"][0], Cat.age_moons["senior adult"][1])
         #     elif status == "elder":
         #         age = random.randint(Cat.age_moons["senior"][0], Cat.age_moons["senior"][1])
@@ -1125,23 +1125,23 @@ class PatrolOutcome:
                 elif age < 6:
                     status = "kitten"
                 elif age < 13:
-                    status = choice(["apprentice", "apprentice", "apprentice", "mediator apprentice", "medicine cat apprentice", "queen's apprentice"])
+                    status = choice(["apprentice", "apprentice", "apprentice", "mediator apprentice", "healer apprentice", "queen's apprentice"])
                 elif age < 119:
-                    status = choice(["warrior", "warrior", "medicine cat", "mediator", "queen", "warrior", "warrior", "medicine cat", "medicine cat", "mediator", "deputy", "leader"])
+                    status = choice(["warrior", "warrior", "healer", "mediator", "queen", "warrior", "warrior", "healer", "healer", "mediator", "deputy", "leader"])
                 else:
                     status = choice(["elder", "elder", "elder", "elder", "elder", "elder", "elder", "elder", "leader", "deputy"])
 
         if "newstarcat" in attribute_list:
             # gives a random status if none was specified in the patrol. kitten cannot be chosen randomly
             if status is None:
-                status = choice(["elder", "elder", "elder", "elder", "elder", "apprentice", "warrior", "warrior", "warrior", "warrior", "warrior", "warrior", "mediator apprentice", "mediator", "mediator", "medicine cat apprentice", "medicine cat", "medicine cat", "medicine cat", "medicine cat", "queen's apprentice", "queen", "queen", "queen", "queen","leader"])
+                status = choice(["elder", "elder", "elder", "elder", "elder", "apprentice", "warrior", "warrior", "warrior", "warrior", "warrior", "warrior", "mediator apprentice", "mediator", "mediator", "healer apprentice", "healer", "healer", "healer", "healer", "queen's apprentice", "queen", "queen", "queen", "queen","leader"])
 
             #and age, dependant on status
             if status in "kitten":
                 age = random.randint(1,5)
-            elif status in ["apprentice", "mediator apprentice", "medicine cat apprentice", "queen's apprentice"]:
+            elif status in ["apprentice", "mediator apprentice", "healer apprentice", "queen's apprentice"]:
                 age = random.randint (6,11)
-            elif status in ["warrior", "medicine cat", "mediator", "queen"]:
+            elif status in ["warrior", "healer", "mediator", "queen"]:
                 age = random.randint (12, 119)
             elif status in ["deputy", "leader"]:
                 age = random.randint(25,119)
@@ -1181,7 +1181,7 @@ class PatrolOutcome:
         else:
             if status in ("kitten", "newborn"):
                 chosen_backstory = choice(BACKSTORIES["backstory_categories"]["abandoned_backstories"])
-            if status == "medicine cat":
+            if status == "healer":
                 if cat_type == "former Clancat":
                     chosen_backstory = choice(["medicine_cat", "disgraced1"])
                 else:

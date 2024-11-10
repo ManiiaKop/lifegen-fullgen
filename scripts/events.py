@@ -126,7 +126,7 @@ class Events:
         # 1 = reg patrol 2 = lifegen patrol 3 = df patrol 4 = date
         game.switches['patrolled'] = []
         game.switches['window_open'] = False
-        if game.clan.your_cat.status == "medicine cat apprentice" or game.clan.your_cat.status == "medicine cat":
+        if game.clan.your_cat.status == "healer apprentice" or game.clan.your_cat.status == "healer":
             game.switches["attended half-moon"] = False
         
         if any(
@@ -385,8 +385,8 @@ class Events:
                     string = f"{game.clan.leader.name} has thrown {cat.name} from their position as {game.clan.name}Clan's deputy."
                     game.cur_events_list.insert(0, Single_Event(string, "alert"))
                 
-                elif cat.status in ["medicine cat", "medicine cat apprentice"]:
-                    string = f"{cat.name} has been forced to step down as a medicine cat due to their crimes."
+                elif cat.status in ["healer", "healer apprentice"]:
+                    string = f"{cat.name} has been forced to step down as a healer due to their crimes."
                     
                     game.cur_events_list.insert(0, Single_Event(string, "alert"))
 
@@ -459,9 +459,9 @@ class Events:
                 self.generate_events() 
             elif game.clan.your_cat.moons == 6:
                 self.generate_app_ceremony()
-            elif game.clan.your_cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
+            elif game.clan.your_cat.status in ['apprentice', 'healer apprentice', 'mediator apprentice', "queen's apprentice"]:
                 self.generate_events()
-            elif game.clan.your_cat.status in ['warrior', 'medicine cat', 'mediator', "queen"] and not game.clan.your_cat.w_done and game.clan.your_cat.shunned == 0:
+            elif game.clan.your_cat.status in ['warrior', 'healer', 'mediator', "queen"] and not game.clan.your_cat.w_done and game.clan.your_cat.shunned == 0:
                 self.generate_ceremony()
             elif game.clan.your_cat.status != 'elder' and game.clan.your_cat.moons != 119:
                 self.generate_events()
@@ -734,7 +734,7 @@ class Events:
             achievements.add('13')
         if you.status == 'warrior':
             achievements.add('14')
-        elif you.status == 'medicine cat':
+        elif you.status == 'healer':
             achievements.add('15')
         elif you.status == 'mediator':
             achievements.add('16')
@@ -931,6 +931,7 @@ class Events:
 
         def handle_backstory(siblings):
             '''Handles creating backstories for your cat'''
+            backstory = "This should not appear"
             if birth_type in [BirthType.NO_PARENTS, BirthType.ONE_ADOPTIVE_PARENT, BirthType.TWO_ADOPTIVE_PARENTS]:
                 backstory = random.choice(["abandoned1", "abandoned2", "abandoned4", "loner3", "orphaned1", "orphaned2", "orphaned3", "orphaned4", "orphaned5", "orphaned6", "orphaned7", "outsider1"])
             elif birth_type == BirthType.ONE_PARENT:
@@ -1141,7 +1142,7 @@ class Events:
                 text = re.sub(r'(?<!\/)r_w(?!\/)', str(alive_app.name), text)
                 self.cat_dict["r_w"] = alive_app
             if "r_m" in text:
-                alive_apps = get_alive_status_cats(Cat, ["medicine cat", "medicine cat apprentice"])
+                alive_apps = get_alive_status_cats(Cat, ["healer", "healer apprentice"])
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = random.choice(alive_apps)
@@ -1425,7 +1426,7 @@ class Events:
                 
     def generate_ceremony(self):
         if game.clan.your_cat.former_mentor:
-            if Cat.all_cats[game.clan.your_cat.former_mentor[-1]].dead and game.clan.your_cat.status == 'medicine cat':
+            if Cat.all_cats[game.clan.your_cat.former_mentor[-1]].dead and game.clan.your_cat.status == 'healer':
                 ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + '_ceremony_no_mentor'])
 
             if game.clan.your_cat.forgiven < 10 and game.clan.your_cat.forgiven > 0:
@@ -1679,7 +1680,7 @@ class Events:
         if game.clan.your_cat.status == 'kitten':
             ceremony_txt = random.choice(self.b_txt['death_kit'])
             game.cur_events_list.insert(1, Single_Event(ceremony_txt))
-        elif game.clan.your_cat.status == 'medicine cat apprentice':
+        elif game.clan.your_cat.status == 'healer apprentice':
             ceremony_txt = random.choice(self.b_txt['death_medapp'])
             game.cur_events_list.insert(1, Single_Event(ceremony_txt))
         elif game.clan.your_cat.status == 'apprentice':
@@ -1989,9 +1990,9 @@ class Events:
                     Single_Event(
                         f"{cat.name} had chosen to use their skills and experience to heal "
                         f"and commune with StarClan. A meeting is called, and they "
-                        f"become the Clan's newest medicine cat. ", "ceremony",
+                        f"become the Clan's newest healer. ", "ceremony",
                         cat.ID))
-                cat.status_change("medicine cat")
+                cat.status_change("healer")
         if game.clan.clan_settings['become_queen']:
             # Note: These chances are large since it triggers every moon.
             # Checking every moon has the effect giving older cats more chances to become a mediator
@@ -2578,6 +2579,10 @@ class Events:
         death_chances = game.config['death_related']['kit_death_chances']
 
         for kit in cats:
+            if kit.ID == game.clan.your_cat.ID:
+                return
+            if kit.moons == -1:
+                return
             if kit.moons < 2 and not kit.dead:
                 if random.random() < death_chances[str(kit.moons)]:
                     fading_kits.append(kit.ID)
@@ -3272,7 +3277,7 @@ class Events:
             if cat.shunned > 0:
                 possible_ceremonies = possible_ceremonies.intersection(self.ceremony_id_by_tag["shunned"])
             
-            if cat.shunned == 0 and cat.forgiven > 0 and cat.forgiven < 5 and cat.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"]:
+            if cat.shunned == 0 and cat.forgiven > 0 and cat.forgiven < 5 and cat.status in ["apprentice", "healer apprentice", "mediator apprentice", "queen's apprentice"]:
                 possible_ceremonies = possible_ceremonies.intersection(self.ceremony_id_by_tag["forgiven"])
 
             # Get ones for prepared status ----------------------------------------------
@@ -4268,7 +4273,7 @@ class Events:
                         f"{game.clan.leader.name} has chosen to lift the shun on {cat.name}, but will be watching them closely."])\
 
                 # Do they get their job back?
-                if cat.status in ['medicine cat', 'deputy', 'mediator', 'queen']:
+                if cat.status in ['healer', 'deputy', 'mediator', 'queen']:
                 
                     if random.randint(1,2) == 1:
                         if cat.ID == game.clan.your_cat.ID:
@@ -4291,10 +4296,10 @@ class Events:
                         cat.status_change(newstatus)
 
                 elif cat.status != "leader":
-                    if cat.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"]:
+                    if cat.status in ["apprentice", "healer apprentice", "mediator apprentice", "queen's apprentice"]:
                         if cat.moons >= 15:
-                            if cat.status == "medicine cat apprentice":
-                                self.ceremony(cat, "medicine cat")
+                            if cat.status == "healer apprentice":
+                                self.ceremony(cat, "healer")
                             elif cat.status == "mediator apprentice":
                                 self.ceremony(cat, "mediator")
                             elif cat.status == "queen's apprentice":
@@ -4302,8 +4307,8 @@ class Events:
                             else:
                                 self.ceremony(cat, "warrior")
                         elif cat.moons >= 6:
-                            if cat.status == "medicine cat apprentice":
-                                self.ceremony(cat, "medicine cat")
+                            if cat.status == "healer apprentice":
+                                self.ceremony(cat, "healer")
                             elif cat.status == "mediator apprentice":
                                 self.ceremony(cat, "mediator apprentice")
                             elif cat.status == "queen's apprentice":
@@ -4312,7 +4317,7 @@ class Events:
                                 self.ceremony(cat, "apprentice")
                             
                     elif cat.status in ["kitten", "newborn"] and cat.moons >= 6:
-                        self.ceremony(cat, "medicine cat apprentice")
+                        self.ceremony(cat, "healer apprentice")
                         cat.name.status = cat.status
                     else:
                         if cat.moons == 0:

@@ -87,11 +87,11 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "One of the kits has developed a cough. You need to decide on the best course of action.",
-        "decline_text": "Unsure of the best approach, you seek advice from the senior queens. They suggest bringing the kit to the medicine cat, ensuring its wellbeing.",
+        "decline_text": "Unsure of the best approach, you seek advice from the senior queens. They suggest bringing the kit to the healer, ensuring its wellbeing.",
         "chance_of_success": 75,
         "success_outcomes": [
             {
-                "text": "Recognizing the symptoms, you immediately consult the medicine cat. Under their care, the kit quickly recovers. Your prompt action is commended.",
+                "text": "Recognizing the symptoms, you immediately consult the healer. Under their care, the kit quickly recovers. Your prompt action is commended.",
                 "exp": 10,
                 "weight": 20
             }
@@ -227,7 +227,7 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "The nursery is empty aside from you, but a queen approaches you anxiously, sitting down next to you. They ask for advice on what they should do when they eventually start giving birth.",
-        "decline_text": "You shake your head, advising them to ask the medicine cat instead. The queen seems further unnerved by this, but takes your word for it, quickly retreating to the medicine cat's den.",
+        "decline_text": "You shake your head, advising them to ask the healer instead. The queen seems further unnerved by this, but takes your word for it, quickly retreating to the healer's den.",
         "chance_of_success": 75,
         "success_outcomes": [
             {

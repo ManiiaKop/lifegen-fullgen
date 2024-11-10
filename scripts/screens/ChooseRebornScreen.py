@@ -200,13 +200,13 @@ class ChooseRebornScreen(Screens):
 
             if self.next_cat == 0 and check_cat.ID != self.the_cat.ID and check_cat.dead == self.the_cat.dead and \
                     check_cat.ID != game.clan.instructor.ID and not check_cat.exiled and check_cat.status in \
-                    ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"] \
+                    ["apprentice", "healer apprentice", "mediator apprentice", "queen's apprentice"] \
                     and check_cat.df == self.the_cat.df:
                 self.previous_cat = check_cat.ID
 
             elif self.next_cat == 1 and check_cat.ID != self.the_cat.ID and check_cat.dead == self.the_cat.dead and \
                     check_cat.ID != game.clan.instructor.ID and not check_cat.exiled and check_cat.status in \
-                    ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"] \
+                    ["apprentice", "healer apprentice", "mediator apprentice", "queen's apprentice"] \
                     and check_cat.df == self.the_cat.df:
                 self.next_cat = check_cat.ID
 
@@ -221,7 +221,7 @@ class ChooseRebornScreen(Screens):
         game.cur_events_list.clear()
         game.clan.your_cat = new_mentor
         game.switches["attended half-moon"] = False
-        if game.clan.your_cat.status not in ['newborn', 'kitten', 'apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
+        if game.clan.your_cat.status not in ['newborn', 'kitten', 'apprentice', 'healer apprentice', 'mediator apprentice', "queen's apprentice"]:
             game.clan.your_cat.w_done = True
         game.switches['cur_screen'] = "events screen"
 

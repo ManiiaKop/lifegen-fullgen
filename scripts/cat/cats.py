@@ -214,7 +214,7 @@ class Cat:
             self.gender = 'fem'
         elif self.gender == 'male':
             self.gender = 'masc'
-        self.status = status.replace("medicine cat", "healer")
+        self.status = status.replace("healer", "healer")
         self.backstory = backstory
         self.age = None
         self.skills = CatSkills(skill_dict=skill_dict)
@@ -280,6 +280,12 @@ class Cat:
         self.driven_out = False
         self.dead_for = 0  # moons
         self.shunned = 0 # moons
+        self.forgiven = 0 # moons
+        self.joined_df = False
+        self.talked_to = False
+        self.flirted = False
+        self.insulted = False
+        self.w_done = False
         self.thought = ''
         self.genderalign = None
         self.birth_cooldown = 0
@@ -579,6 +585,12 @@ class Cat:
         self.compassion = 0
         self.intelligence = 0
         self.empathy = 0
+        self.joined_df = False
+        self.talked_to = False
+        self.flirted = False
+        self.insulted = False
+        self.w_done = False
+        self.revives = 0
         self.did_activity = False
         self.df_mentor = None
         self.df_apprentices = []
@@ -1204,8 +1216,8 @@ class Cat:
         naughty = you.personality.trait in ["bloodthirsty", "sneaky", "manipulative", "strange", "rebellious", "troublesome", "stoic", "aloof", "cunning"]
         acceptchance = randint(1,5)
         killchance = randint(1,50)
+        return_home_upperbound = int(game.config["shunned_cat"]["return_home_chance"])
         if you.exiled:
-            return_home_upperbound = int(game.config["shunned_cat"]["return_home_chance"])
 
             if num_victims == 0:
                 acceptchance = randint (1,4)
@@ -1589,8 +1601,8 @@ class Cat:
                 self.status =  "queen's apprentice"
             elif game.clan.your_cat.status == "mediator":
                 self.status = "mediator apprentice"
-            elif game.clan.your_cat.status == "medicine cat":
-                self.status = "medicine cat apprentice"
+            elif game.clan.your_cat.status == "healer":
+                self.status = "healer apprentice"
             else:
                 self.status = "apprentice"
             game.switches["request apprentice"] = False
@@ -4623,16 +4635,9 @@ def create_cat(status, moons=None, biome=None):
 
 # Twelve example cats
 def create_example_cats():
-    warrior_indices = sample(range(12), 3)
 
     for cat_index in range(12):
-        if cat_index in warrior_indices:
-            game.choose_cats[cat_index] = create_cat(status="warrior")
-        else:
-            random_status = choice(
-                ["kitten", "apprentice", "warrior", "warrior", "elder"]
-            )
-            game.choose_cats[cat_index] = create_cat(status=random_status)
+        game.choose_cats[cat_index] = create_cat(status="kitten")
         game.choose_cats[cat_index].genetic_conditions()
 
 # CAT CLASS ITEMS

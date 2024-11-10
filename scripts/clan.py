@@ -245,8 +245,8 @@ class Clan:
         self.add_to_starclan(self.instructor)
         self.all_clans = []
         
-        self.demon = Cat(status=choice(["apprentice", "mediator apprentice", "medicine cat apprentice", "warrior",
-                                             "medicine cat", "leader", "mediator", "queen", "queen's apprentice", "deputy", "elder"]),
+        self.demon = Cat(status=choice(["apprentice", "mediator apprentice", "healer apprentice", "warrior",
+                                             "healer", "leader", "mediator", "queen", "queen's apprentice", "deputy", "elder"]),
                               )
         self.demon.df = True
         self.demon.dead = True
@@ -285,8 +285,8 @@ class Clan:
                 Cat.all_cats.get(cat_id).status_change('apprentice')
             elif Cat.all_cats.get(cat_id).status == "queen's apprentice":
                 Cat.all_cats.get(cat_id).status_change("queen's apprentice")
-            elif Cat.all_cats.get(cat_id).status == 'medicine cat apprentice':
-                Cat.all_cats.get(cat_id).status_change('medicine cat apprentice')
+            elif Cat.all_cats.get(cat_id).status == 'healer apprentice':
+                Cat.all_cats.get(cat_id).status_change('healer apprentice')
             Cat.all_cats.get(cat_id).thoughts()
 
         game.save_cats()
@@ -594,7 +594,6 @@ class Clan:
         if self.focus_cat:
             clan_data["focus_cat"] = self.focus_cat.ID
         else:
-            print("herebruh")
             clan_data["focus_cat"] = None
 
         if "other_med" in game.switches:
@@ -1145,6 +1144,7 @@ class Clan:
                         c.pelt.inventory.append(acc)
 
     def load_clan_settings(self):
+        _load_settings = None
         if os.path.exists(
             get_save_dir() + f'/{game.switches["clan_list"][0]}/clan_settings.json'
         ):
@@ -1154,10 +1154,12 @@ class Clan:
                 encoding="utf-8",
             ) as write_file:
                 _load_settings = ujson.loads(write_file.read())
-
-        for key, value in _load_settings.items():
-            if key in self.clan_settings:
-                self.clan_settings[key] = value
+        if _load_settings:
+            for key, value in _load_settings.items():
+                if key in self.clan_settings:
+                    self.clan_settings[key] = value
+        else:
+            print("No settings file?")
 
     def load_herbs(self, clan):
         """

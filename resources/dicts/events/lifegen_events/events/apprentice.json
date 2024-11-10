@@ -10,8 +10,8 @@
         "After a particularly hard training session, you and r_a sit atop a hill, watching the stars and contemplating your future as warriors.",
         "r_a challenges you to a sparring match. After a few minutes, you manage to get the upper-paw and win the match!",
         "r_a challenges you to a sparring match. After a few minutes, you make a mistake, which costs you the match.",
-        "A particularly tough border skirmish leaves you exhausted. You wonder if being a medicine cat would have been a better choice.",
-        "m_n calls for you to help the medicine cat, r_m for a day. The only thing you do is gather herbs, leaving you sore and exhausted. Well that definitely didn't boost your respect for {PRONOUN/r_m/object}.",
+        "A particularly tough border skirmish leaves you exhausted. You wonder if being a healer would have been a better choice.",
+        "m_n calls for you to help the healer, r_m for a day. The only thing you do is gather herbs, leaving you sore and exhausted. Well that definitely didn't boost your respect for {PRONOUN/r_m/object}.",
         "A kit leaves a pile of moss out, leaving you intrigued. You pick it up and play around with r_a. It's funny until it hits d_n's face, and you are bound to tick duty once again.",
         "Ticks, day in and day out. It's so boring, and one day, you decide to skip it. m_n doesn't notice anything, but as you snuggle in your nest that night, you can't help but feel a prickling uncertainty.",
         "You wake up before m_n and decide to sneak out of camp with some other apprentices. You spend the morning lazing in the sun together, laughing.",
@@ -38,7 +38,7 @@
         "You ask m_n if {PRONOUN/m_n/subject} can teach you a specific lesson on battle moves this moon.",
         "You ask m_n if {PRONOUN/m_n/subject} can teach you a specific lesson on hunting birds this moon.",
         "r_d gives you a quick lesson on mediation and you boldly test out {PRONOUN/r_d/poss} techniques the next time your denmates argue.",
-        "You spend a day in the medicine cat's den. r_m instructs you about some basic herbs and their uses. Eager to prove your worth, you confidently chime in with your own observations.",
+        "You spend a day in the healer's den. r_m instructs you about some basic herbs and their uses. Eager to prove your worth, you confidently chime in with your own observations.",
         "You boldly suggest a new hunting strategy during a patrol. m_n is impressed by your creativity and initiative.",
         "You get out of paw when sparring with r_a. m_n ends up scolding you for taking the training too far. You end up apologizing to r_a who isn't as bothered as your mentor is.",
         "In your downtime you wander off with your tail high. By the time you begin to head back to camp, d_n and m_n come out of no where, frantic. Apparently you forgot to tell them what you were doing. Oops?",
@@ -47,7 +47,7 @@
     ],
     "apprentice brooding": [
         "r_d gives you a quick lesson on mediation but you don't bother to listen. {PRONOUN/r_d/poss} techniques don't work, anyway.",
-        "You spend a day in the medicine cat's den. r_m instructs you about some basic herbs and their uses. You listen in silence, occassionally giving a curt nod.",
+        "You spend a day in the healer's den. r_m instructs you about some basic herbs and their uses. You listen in silence, occassionally giving a curt nod.",
         "You sulk in your nest, questioning whether you're truly cut out to be a warrior after a mistake during training.",
         "Jealousy swells in your chest as you watch m_n praising r_a. You wonder bitterly if you'll ever be good enough.",
         "r_a invites you to climb trees with them and their friends, but you bitterly decline, then spend the whole day regretting it."
@@ -55,13 +55,13 @@
     "apprentice cool": [
         "You wonder if you look cool and mysterious to other cats while you strut across the camp clearing.",
         "r_d gives you a quick lesson on mediation but you feel like you already know all of what {PRONOUN/r_d/subject}{VERB/r_d/'re/'s} lecturing.",
-        "You spend a day in the medicine cat's den. r_m instructs you about some basic herbs and their uses. While you doubt you'll ever use the knowledge, you listen with practiced nonchalance.",
+        "You spend a day in the healer's den. r_m instructs you about some basic herbs and their uses. While you doubt you'll ever use the knowledge, you listen with practiced nonchalance.",
         "Trotting into camp with an impressive catch, you accept your Clanmates' compliments with a flick of your tail.",
         "You roll your eyes as m_n lectures you about how you need to take your training more seriously."
     ],
     "apprentice upstanding": [
         "r_d gives you a quick lesson on mediation and you listen to the lecture with the same diligence as any other training session.",
-        "You spend a day in the medicine cat's den. r_m instructs you about some basic herbs and their uses. You sit upright, your posture rigid, determination etched on your face as you absorb every word with unwavering focus.",
+        "You spend a day in the healer's den. r_m instructs you about some basic herbs and their uses. You sit upright, your posture rigid, determination etched on your face as you absorb every word with unwavering focus.",
         "Despite your exhaustion, you volunteer for an extra dawn patrol to ensure the Clan's safety.",
         "You beam with pride as you overhear m_n telling d_n that you're already a more advanced hunter than some of the warriors are.",
         "r_a invites you to climb trees with them and their friends, but you decline in hopes of getting more training in.",
@@ -71,7 +71,7 @@
         "When m_n pushes you harder in training, you take it in stride, knowing {PRONOUN/m_n/subject} only {VERB/m_n/want/wants} to help you improve.",
         "During a quiet moment, you find yourself pondering the meaning of the Warrior Code and your place within the Clan.",
         "You have a thoughtful discussion with r_e about the nature of life and death.",
-        "You spend time observing the medicine cat, r_m, and contemplate the importance of {PRONOUN/r_m/poss} role in the Clan.",
+        "You spend time observing the healer, r_m, and contemplate the importance of {PRONOUN/r_m/poss} role in the Clan.",
         "You find yourself drawn to stargazing, finding peace in the vastness of Silverpelt."
     ],
     "apprentice neurotic": [

@@ -86,19 +86,19 @@
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "Lying within a paw's reach of the medicine cat's den, an herb emits a strange scent you've never smelled before. A wave of curiosity compels you to investigate.",
-        "decline_text": "You decide to leave the herb alone, not wanting to disturb the medicine cat's work.",
+        "intro_text": "Lying within a paw's reach of the healer's den, an herb emits a strange scent you've never smelled before. A wave of curiosity compels you to investigate.",
+        "decline_text": "You decide to leave the herb alone, not wanting to disturb the healer's work.",
         "chance_of_success": 45,
         "success_outcomes": [
             {
-                "text": "You get closer and are able to identify the herb as marigold. The medicine cat seems impressed with your observational skills!",
+                "text": "You get closer and are able to identify the herb as marigold. The healer seems impressed with your observational skills!",
                 "exp": 0,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-                "text": "As you approach the herb, you sneeze loudly, alerting the medicine cat who scolds you for wandering too close to their den.",
+                "text": "As you approach the herb, you sneeze loudly, alerting the healer who scolds you for wandering too close to their den.",
                 "exp": 0,
                 "weight": 20
             }
@@ -366,19 +366,19 @@
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "One of the medicine cats is looking for a specific herb and you think you've seen it near the nursery.",
+        "intro_text": "One of the healers is looking for a specific herb and you think you've seen it near the nursery.",
         "decline_text": "You decide not to intervene, unsure of your knowledge of herbs.",
         "chance_of_success": 55,
         "success_outcomes": [
             {
-                "text": "You lead the medicine cat to the herb. It's not exactly what they were looking for, but they praise your observational skills and thank you for your help.",
+                "text": "You lead the healer to the herb. It's not exactly what they were looking for, but they praise your observational skills and thank you for your help.",
                 "exp": 0,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You attempt to locate the herb but end up pointing out a plain leaf with no herbal use. Despite this, the medicine cat appreciates your eagerness to help.",
+                "text": "You attempt to locate the herb but end up pointing out a plain leaf with no herbal use. Despite this, the healer appreciates your eagerness to help.",
                 "exp": 0,
                 "weight": 20
             }

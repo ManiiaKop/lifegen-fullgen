@@ -130,10 +130,11 @@ class Sprites:
             'shadersnewwhite', 'lineartdead', 'tortiepatchesmasks', 
             'medcatherbs', 'lineartdf', 'lightingnew', 'fademask',
             'fadestarclan', 'fadedarkforest',
+            'symbols',
 
             #OHDANS
             'flower_accessories', 'plant2_accessories', 'snake_accessories', 'smallAnimal_accessories', 'deadInsect_accessories',
-            'aliveInsect_accessories', 'fruit_accessories', 'crafted_accessories', 'tail2_accessories',
+            'aliveInsect_accessories', 'fruit_accessories', 'crafted_accessories', 'tail2_accessories', 'wild',
 
             #WILDS
             'wildaccs_1', 'wildaccs_2',

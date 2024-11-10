@@ -450,7 +450,7 @@ class PatrolScreen(Screens):
         self.elements["able_frame"] = pygame_gui.elements.UIImage(
             scale(pygame.Rect((80, 920), self.able_box.get_size())),
             self.able_box,
-            starting_height=1,
+            # starting_height=1,
             manager=MANAGER)
         self.elements["able_frame"].disable()
 

@@ -254,7 +254,7 @@
         "chance_of_success": 55,
         "success_outcomes": [
             {
-                "text": "You agree to their terms and upon waking, you relay the message to your Clan's medicine cat. The prophecy, however, you keep to yourself. The ancient words could give away your training...",
+                "text": "You agree to their terms and upon waking, you relay the message to your Clan's healer. The prophecy, however, you keep to yourself. The ancient words could give away your training...",
                 "exp": 30,
                 "weight": 20,
                 "stat_trait": [
@@ -271,7 +271,7 @@
                 "stat_skill": ["CLAIRVOYANT,1", "CLEVER,1", "GHOST,1", "LORE,1","PROPHET,1", "OMEN,1", "SCHOLAR,1", "STAR,1"]
             },
             {
-                "text": "You agree to their terms and upon waking, you relay the message to your Clan's medicine cat along with the prophecy.",
+                "text": "You agree to their terms and upon waking, you relay the message to your Clan's healer along with the prophecy.",
                 "exp": 15,
                 "weight": 20
             }
@@ -1130,12 +1130,12 @@
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {
-            "medicine cat apprentice": [1, 6],
-            "medicine cat": [1, 6]
+            "healer apprentice": [1, 6],
+            "healer": [1, 6]
         },
         "weight": 20,
         "intro_text": "While wandering the Dark Forest, you hear a hiss of pain from within a thick clump of trees. You wonder if it's safe to investigate.",
-        "decline_text": "You can't risk it. Though your heart urges you to do otherwise as a medicine cat, you turn away from the noise, pretending you heard nothing.",
+        "decline_text": "You can't risk it. Though your heart urges you to do otherwise as a healer, you turn away from the noise, pretending you heard nothing.",
         "chance_of_success": 30,
         "success_outcomes": [
             {
@@ -1868,7 +1868,7 @@
                 ]
             },
             {
-                "text": "You don't get the chance to ponder any longer as r_c takes you by surprise due to your inattention. {PRONOUN/r_c/subject/CAP} {VERB/r_c/land/lands} a harsh blow as the two of you roll across the clearing. Before you know it, you're awake in your nest, a Clanmate frantically calling for the medicine cat.",
+                "text": "You don't get the chance to ponder any longer as r_c takes you by surprise due to your inattention. {PRONOUN/r_c/subject/CAP} {VERB/r_c/land/lands} a harsh blow as the two of you roll across the clearing. Before you know it, you're awake in your nest, a Clanmate frantically calling for the healer.",
                 "exp": 0,
                 "weight": 20,
                 "injury": [ 

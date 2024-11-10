@@ -422,7 +422,7 @@ class RoleScreen(Screens):
             self.switch_warrior_app.enable()
             self.switch_mediator_app.enable()
             self.switch_queen_app.enable()
-        elif self.the_cat.status == "medicine cat apprentice":
+        elif self.the_cat.status == "healer apprentice":
             self.promote_leader.disable()
             self.promote_deputy.disable()
 

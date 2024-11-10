@@ -544,23 +544,23 @@ def create_new_cat_block(
                 elif age < 6:
                     status = "kitten"
                 elif age < 13:
-                    status = choice(["apprentice", "apprentice", "apprentice", "mediator apprentice", "medicine cat apprentice", "queen's apprentice"])
+                    status = choice(["apprentice", "apprentice", "apprentice", "mediator apprentice", "healer apprentice", "queen's apprentice"])
                 elif age < 119:
-                    status = choice(["warrior", "warrior", "medicine cat", "mediator", "queen", "warrior", "warrior", "medicine cat", "medicine cat", "mediator", "deputy", "leader"])
+                    status = choice(["warrior", "warrior", "healer", "mediator", "queen", "warrior", "warrior", "healer", "healer", "mediator", "deputy", "leader"])
                 else:
                     status = choice(["elder", "elder", "elder", "elder", "elder", "elder", "elder", "elder", "leader", "deputy"])
 
     if "newstarcat" in attribute_list:
         # gives a random status if none was specified in the patrol. kitten cannot be chosen randomly
         if status is None:
-            status = choice(["elder", "elder", "elder", "elder", "elder", "apprentice", "warrior", "warrior", "warrior", "warrior", "warrior", "warrior", "mediator apprentice", "mediator", "mediator", "medicine cat apprentice", "medicine cat", "medicine cat", "medicine cat", "medicine cat", "queen's apprentice", "queen", "queen", "queen", "queen","leader"])
+            status = choice(["elder", "elder", "elder", "elder", "elder", "apprentice", "warrior", "warrior", "warrior", "warrior", "warrior", "warrior", "mediator apprentice", "mediator", "mediator", "healer apprentice", "healer", "healer", "healer", "healer", "queen's apprentice", "queen", "queen", "queen", "queen","leader"])
 
         #and age, dependant on status
         if status in "kitten":
             age = randint(1,5)
-        elif status in ["apprentice", "mediator apprentice", "medicine cat apprentice", "queen's apprentice"]:
+        elif status in ["apprentice", "mediator apprentice", "healer apprentice", "queen's apprentice"]:
             age = randint (6,11)
-        elif status in ["warrior", "medicine cat", "mediator", "queen"]:
+        elif status in ["warrior", "healer", "mediator", "queen"]:
             age = randint (12, 119)
         elif status in ["deputy", "leader"]:
             age = randint(25,119)
@@ -600,7 +600,7 @@ def create_new_cat_block(
     else:
         if status in ("kitten", "newborn"):
             chosen_backstory = choice(BACKSTORIES["backstory_categories"]["abandoned_backstories"])
-        if status == "medicine cat":
+        if status == "healer":
             if cat_type == "former Clancat":
                 chosen_backstory = choice(["medicine_cat", "disgraced1"])
             else:
@@ -991,8 +991,8 @@ def create_new_cat(
                         if scarchance == 1:
                             scar = choice(Pelt.scars3)
                             new_cat.pelt.scars.append(scar)
-                    elif new_cat.status in ["medicine cat", "apprentice", 
-                    "elder", "medicine cat apprentice", "queen", "mediator", 
+                    elif new_cat.status in ["healer", "apprentice", 
+                    "elder", "healer apprentice", "queen", "mediator", 
                     "queen's apprentice", "mediator apprentice"]:
                         scarchance = randint(1,8)
                         if scarchance == 1:
