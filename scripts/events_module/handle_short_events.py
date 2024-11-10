@@ -504,6 +504,7 @@ class HandleShortEvents:
             if 'tnr' in self.chosen_event.tags and game.clan.clan_settings['tnr_mode']:
                 if random.random() < game.config['tnr_mode']['Clan_tnr']:
                     tnr = True
+            taken_cats = []
             for kitty in self.dead_cats:
                 if "lost" in self.chosen_event.tags:
                     kitty.gone()

@@ -588,12 +588,7 @@ class ProfileScreen(Screens):
             if event.ui_element == self.change_name_button:
                 ChangeCatName(self.the_cat)
             elif event.ui_element == self.specify_gender_button:
-                SpecifyCatGender(self.the_cat)
-                '''if self.the_cat.genderalign in ["molly", "trans molly"]:
-                    self.the_cat.pronouns = [self.the_cat.default_pronouns[1].copy()]
-                elif self.the_cat.genderalign in ["tom", "trans tom"]:
-                    self.the_cat.pronouns = [self.the_cat.default_pronouns[2].copy()]
-                else: self.the_cat.pronouns = [self.the_cat.default_pronouns[0].copy()]'''
+                self.change_screen("change gender screen")
             # when button is pressed...
             elif event.ui_element == self.cis_trans_button:
                 #if the cat is anything besides m/f/transm/transf then turn them back to cis
