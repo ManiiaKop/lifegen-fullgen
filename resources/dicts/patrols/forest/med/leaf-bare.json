@@ -1124,7 +1124,7 @@
                 ]
             },
             {
-                "text": "It feels nearly impossible, but the glimpse of soggy green stuff at the end of their cold search makes it all worth it! Or... kind of worth it. p_l is <i>sure</i> it'll seem worth it once everyone is back in their nice, warm nests.",
+                "text": "It feels nearly impossible, but the glimpse of soggy green stuff at the end of their cold search makes it all worth it! Or... kind of worth it. p_l is <i>sure</i> it'll seem worth it once everycat is back in their nice, warm nests.",
                 "exp": 10,
                 "weight": 5,
                 "herbs": ["daisy"],
@@ -1146,7 +1146,11 @@
                 ]
             },
             {
+<<<<<<< HEAD
                 "text": "It's not just spotting things that s_c is talented at - finding daisies in leaf-bare is hard enough, but finding good, non-wilted leaves is next to impossible, and it's a mark of s_c's unique skills that they manage it. It reminds everyone on the patrol just how lucky c_n is to have s_c as a healer.",
+=======
+                "text": "It's not just spotting things that s_c is talented at - finding daisies in leaf-bare is hard enough, but finding good, non-wilted leaves is next to impossible, and it's a mark of s_c's unique skills that they manage it. It reminds everycat on the patrol just how lucky c_n is to have s_c as a medicine cat.",
+>>>>>>> lifegen_origin/LifeGen-dev
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["SENSE,2"],
@@ -1477,7 +1481,7 @@
                 ]
             },
             {
-                "text": "It's a truly miserable, gray day, but even the colds of leaf-bare can't dampen p_l's joy when they manage to uncover a couple good dandelion plants. They make sure to check up on the pawpads of the warriors who helped them once everyone is back in camp, wanting to make sure everyone is alright and not too chilled.",
+                "text": "It's a truly miserable, gray day, but even the colds of leaf-bare can't dampen p_l's joy when they manage to uncover a couple good dandelion plants. They make sure to check up on the pawpads of the warriors who helped them once everycat is back in camp, wanting to make sure everycat is alright and not too chilled.",
                 "exp": 10,
                 "weight": 5,
                 "herbs": ["dandelion"],
@@ -1499,7 +1503,11 @@
                 ]
             },
             {
+<<<<<<< HEAD
                 "text": "It's not just spotting things that s_c is talented at - finding dandelions in leaf-bare is hard enough, but finding good, non-wilted leaves is next to impossible, and it's a mark of s_c's unique skills that they manage it. It reminds everyone on the patrol just how lucky c_n is to have s_c as a healer.",
+=======
+                "text": "It's not just spotting things that s_c is talented at - finding dandelions in leaf-bare is hard enough, but finding good, non-wilted leaves is next to impossible, and it's a mark of s_c's unique skills that they manage it. It reminds everycat on the patrol just how lucky c_n is to have s_c as a medicine cat.",
+>>>>>>> lifegen_origin/LifeGen-dev
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["SENSE,2"],

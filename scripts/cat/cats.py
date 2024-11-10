@@ -596,6 +596,7 @@ class Cat:
         self.df_apprentices = []
         self.faith = randint(-3, 3)
         self.connected_dialogue = {}
+        self.lock_faith = "flexible"
         
         self.prevent_fading = False  # Prevents a cat from fading.
         self.faded_offspring = []  # Stores of a list of faded offspring, for family page purposes.
@@ -1100,27 +1101,39 @@ class Cat:
         # if game.clan and game.clan.game_mode != 'classic' and not (self.outside or self.exiled) and body is not None:
         if (
             game.clan
-            and game.clan.game_mode != "classic"
             and not self.outside
             and not self.exiled
             and self.moons > 1
         ):
             self.grief(body)
 
-        if not self.outside:
+        if not self.outside and self.dead_for < 2:
             Cat.dead_cats.append(self)
-            if self.history:
-                if self.history.murder:
-                    if "is_murderer" in self.history.murder:
-                        if len(self.history.murder["is_murderer"]) > 2:
-                            self.df = True
-                            game.clan.add_to_darkforest(self)
-            if game.clan.followingsc is True:
-                self.df = False
-                game.clan.add_to_starclan(self)
-            elif game.clan.followingsc is False:
+            if self.history and self.history.murder and "is_murderer" in self.history.murder and len(self.history.murder["is_murderer"]) > 2:
                 self.df = True
                 game.clan.add_to_darkforest(self)
+            elif self.faith <= -9:
+                self.df = True
+                game.clan.add_to_darkforest(self)
+            elif self.faith >= 9:
+                self.df = False
+                game.clan.add_to_starclan(self)
+            elif randint(1,100) == 1 and self.history:
+                if game.clan.followingsc is True:
+                    self.df = True
+                    self.history.wrong_placement = True
+                    game.clan.add_to_darkforest(self)
+                elif game.clan.followingsc is False:
+                    self.df = False
+                    self.history.wrong_placement = True
+                    game.clan.add_to_starclan(self)
+            else:
+                if game.clan.followingsc is True:
+                    self.df = False
+                    game.clan.add_to_starclan(self)
+                elif game.clan.followingsc is False:
+                    self.df = True
+                    game.clan.add_to_darkforest(self)
         else:
             game.clan.add_to_unknown(self)
         
@@ -1458,11 +1471,9 @@ class Cat:
                 text += " " + choice(MINOR_MAJOR_REACTION["major"])
                 text = event_text_adjust(Cat, text=text, main_cat=self, random_cat=cat)
 
-                # grief the cat
-                if game.clan.game_mode != "classic":
-                    cat.get_ill(
-                        "grief stricken", event_triggered=True, severity="major", grief_cat=self
-                    )
+                cat.get_ill(
+                    "grief stricken", event_triggered=True, severity="major", grief_cat=self
+                )
 
             # If major grief fails, but there are still very_high or high values,
             # it can fail to to minor grief. If they have a family relation, bypass the roll.
@@ -1802,6 +1813,7 @@ class Cat:
                         else []
                     ),
                     murder=history_data["murder"] if "murder" in history_data else {},
+                    wrong_placement=history_data["wrong_placement"] if "wrong_placement" in history_data else False,
                 )
         except:
             self.history = None
@@ -2644,9 +2656,6 @@ class Cat:
         :param severity: _description_, defaults to 'default'
         :type severity: str, optional
         """
-        if game.clan and game.clan.game_mode == "classic":
-            return
-
         if name not in INJURIES:
             if name not in INJURIES:
                 print(f"WARNING: {name} is not in the injuries collection.")
@@ -2787,16 +2796,41 @@ class Cat:
             return
 
         # remove accessories if need be
-        if ("HALFTAIL" in self.pelt.scars or "NOTAIL" in self.pelt.scars or (self.phenotype.bobtailnr > 0 and self.phenotype.bobtailnr < 5)) and self.pelt.accessory in [
-            "RED FEATHERS",
-            "BLUE FEATHERS",
-            "JAY FEATHERS",
-            "GULL FEATHERS",
-            "SPARROW FEATHERS",
-            "CLOVER",
-            "DAISY"
-        ]:
-            self.pelt.accessory = None
+        # if 'NOTAIL' in self.pelt.scars and self.pelt.accessory in ['RED FEATHERS', 'BLUE FEATHERS', 'JAY FEATHERS', "SEAWEED", "DAISY CORSAGE", "GULL FEATHERS",
+        #     "SPARROW FEATHERS",
+        #     "CLOVER",
+        #     "DAISY"]:
+        #     self.pelt.accessory = None
+        # if 'HALFTAIL' in self.pelt.scars and self.pelt.accessory in ['RED FEATHERS', 'BLUE FEATHERS', 'JAY FEATHERS', "SEAWEED", "DAISY CORSAGE", "GULL FEATHERS",
+        #     "SPARROW FEATHERS",
+        #     "CLOVER",
+        #     "DAISY"]:
+        #     self.pelt.accessory = None
+
+        # clangen ^^
+        # lifegen vv
+
+        if 'NOTAIL' in self.pelt.scars or 'HALFTAIL' in self.pelt.scars or (self.phenotype.bobtailnr > 0 and self.phenotype.bobtailnr < 5):
+            for acc in [
+                'RED FEATHERS', 'BLUE FEATHERS', 'JAY FEATHERS', "SEAWEED",
+                "DAISY CORSAGE", "GULL FEATHERS", "SPARROW FEATHERS", "CLOVER", "DAISY",
+                "SPRINGFEATHERS", "CLOVER", "LAVENDERTAILWRAP", "CELESTIALCHIMES",
+                "LUNARCHIMES", "SILVERLUNARCHIMES", "FLOWER MOSS", "SANVITALIAFLOWERS",
+                "STARFLOWERS", "SHELL PACK", "MOSS2", "MUSHROOMS", "CLOVERS", "MUD", "LADYBUGS",
+                "FIRBRANCHES", "CHERRYBLOSSOM", "MISTLETOE", "BROWNMOSSPELT", "BLEEDINGVINES",
+                "BLEEDINGHEART", "MOREFERN", "GRAYMOSSPELT", "FERN"
+                ]:
+                if acc in self.pelt.accessories:
+                    self.pelt.inventory.remove(acc)
+                if acc in self.pelt.inventory:
+                    self.pelt.inventory.remove(acc)
+        if "NOPAW" in self.pelt.scars:
+            for acc in ["VINE", "ASHY PAWS", "MUD PAWS", "MUD", "STARFLOWERS", "LAVENDERANKLET", "HOLLY2", "HOLLYVINES"]:
+                if acc in self.pelt.accessories:
+                    self.pelt.inventory.remove(acc)
+                if acc in self.pelt.inventory:
+                    self.pelt.inventory.remove(acc)
+
 
         condition = PERMANENT[name]
         new_condition = False
@@ -3130,7 +3164,7 @@ class Cat:
                         priority_mentors.append(cat)
             # First try for a cat who currently has no apprentices and is working
             if 'request apprentice' in game.switches:
-                if game.switches['request apprentice'] and self.moons == 6:
+                if game.switches['request apprentice'] and self.moons == 6 and not game.clan.your_cat.dead and not game.clan.your_cat.outside:
                     new_mentor = game.clan.your_cat
                 else:
                     if priority_mentors:  # length of list > 0
@@ -4294,7 +4328,8 @@ class Cat:
                 "df_apprentices": self.df_apprentices if self.df_apprentices else [],
                 "faith": self.faith if self.faith else 0,
                 "no_faith": self.no_faith if self.no_faith else False,
-                "connected_dialogue": self.connected_dialogue if self.connected_dialogue else {}
+                "connected_dialogue": self.connected_dialogue if self.connected_dialogue else {},
+                "lock_faith": self.lock_faith if self.lock_faith else "flexible"
             }
 
 

@@ -104,7 +104,7 @@
                 "prey": ["medium"]
             },
             {
-                "text": "The rat is huge and quick, but s_c is quicker, bringing it down just before it scurries out of reach. Everyone gathers around {PRONOUN/s_c/object} in congratulations of the skillful kill.",
+                "text": "The rat is huge and quick, but s_c is quicker, bringing it down just before it scurries out of reach. Everycat gathers around {PRONOUN/s_c/object} in congratulations of the skillful kill.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["HUNTER,2"],
@@ -284,7 +284,7 @@
         "chance_of_success": 40,
         "success_outcomes": [
             {
-                "text": "p_l leads a successful fishing session, with almost everyone walking home with a fishy mouthful.",
+                "text": "p_l leads a successful fishing session, with almost everycat walking home with a fishy mouthful.",
                 "exp": 10,
                 "weight": 20,
                 "prey": ["large"]
@@ -2283,7 +2283,7 @@
     "chance_of_success": 50,
     "success_outcomes": [
         {
-            "text": "Everyone turns to p_l to lead, and p_l rises to the occasion, giving a clear plan of attack that the patrol pulls off flawlessly. Each cat can be proud of the work they put in today.",
+            "text": "Everycat turns to p_l to lead, and p_l rises to the occasion, giving a clear plan of attack that the patrol pulls off flawlessly. Each cat can be proud of the work they put in today.",
             "exp": 30,
             "weight": 10,
             "relationships": [
@@ -2320,7 +2320,7 @@
             "prey": ["large"]
         },
         {
-            "text": "The cats defer to s_c as the expert, and s_c nods, laying out {PRONOUN/s_c/poss} thoughts and consulting with everyone to make sure each cat is comfortable with the part they'll play. It's a good use of {PRONOUN/s_c/poss} skills, one that rewards the cats handsomely.",
+            "text": "The cats defer to s_c as the expert, and s_c nods, laying out {PRONOUN/s_c/poss} thoughts and consulting with everycat to make sure each cat is comfortable with the part they'll play. It's a good use of {PRONOUN/s_c/poss} skills, one that rewards the cats handsomely.",
             "exp": 30,
             "weight": 20,
             "stat_skill": ["HUNTER,0"],
@@ -2931,7 +2931,7 @@
             "prey": ["huge"]
         },
         {
-            "text": "Not only does s_c personally catch a terrifying amount of prey, but {PRONOUN/s_c/subject} {VERB/s_c/offer/offers} up support to everyone else to do the same, and the patrol brings a truly awe-inspiring haul home.",
+            "text": "Not only does s_c personally catch a terrifying amount of prey, but {PRONOUN/s_c/subject} {VERB/s_c/offer/offers} up support to everycat else to do the same, and the patrol brings a truly awe-inspiring haul home.",
             "exp": 30,
             "weight": 20,
             "stat_skill": ["HUNTER,0"],
@@ -3029,7 +3029,7 @@
             "prey": ["very_small"]
         },
         {
-            "text": "The only apprentice to catch anything is s_c. Who makes sure everyone else knows it. Extensively.",
+            "text": "The only apprentice to catch anything is s_c. Who makes sure everycat else knows it. Extensively.",
             "exp": 20,
             "weight": 20,
             "stat_skill": ["HUNTER,0"],

@@ -24,9 +24,6 @@
         ],
         "random_status_constraint": [
             "mediator apprentice"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -41,9 +38,6 @@
         ],
         "random_status_constraint": [
             "mediator"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -58,10 +52,14 @@
         "random_status_constraint": [
             "mediator apprentice",
             "apprentice",
+<<<<<<< HEAD
             "healer apprentice"
         ],
         "random_living_status": [
             "living"
+=======
+            "medicine cat apprentice"
+>>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -86,5 +84,28 @@
         "main_trait_constraint": [
             "vengeful"
         ]
-    }
+    },
+    {
+        "id": "flamboyant_mediator_app",
+        "thoughts": [
+          "Learns to not gossip so much about what {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} told by Clanmates",
+          "Brings attention off a shyer Clanmate with wild skylarking through camp",
+          "Yowls about another Clan being unreasonable",
+          "Encourages a Clanmate to speak to their crush fearlessly",
+          "Doesn't understand {PRONOUN/m_c/poss} quieter Clanmates but tries to learn",
+          "Is understanding all sorts of personalities through games and acting",
+          "Starts to understand why certain styles are popular compared to others",
+          "Should tell r_c nicely to be more stylish",
+          "Was scolded after bluntly telling r_c {PRONOUN/r_c/subject} {VERB/r_c/weren't/wasn't} stylish enough",
+          "Is learning what makes everycat different",
+          "Encourages the kits to be themselves always",
+          "Yowls approval of r_c making a positive change",
+          "Tells r_c {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} slaying",
+          "Exclaims that being oneself is being their best self",
+          "Hollers support to r_c while 'hiding' across camp"
+        ],
+        "main_trait_constraint": [
+          "flamboyant"
+        ]
+      }
 ]

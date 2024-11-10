@@ -1,12 +1,12 @@
 from random import choice, choices, randint
 import pygame
 import ujson
-
+import re
 from scripts.utility import scale
 
 from .Screens import Screens
 
-from scripts.utility import generate_sprite, get_cluster, get_alive_status_cats, get_alive_cats
+from scripts.utility import generate_sprite, get_cluster, get_alive_status_cats, get_alive_cats, pronoun_repl
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 import pygame_gui
@@ -370,6 +370,16 @@ class MoonplaceScreen(Screens):
 
     def get_adjusted_txt(self, text, cat):
         you = game.clan.your_cat
+        process_text_dict = {}
+        process_text_dict["t_c"] = cat
+
+        for abbrev in process_text_dict.keys():
+            abbrev_cat = process_text_dict[abbrev]
+            process_text_dict[abbrev] = (abbrev_cat, choice(abbrev_cat.pronouns))
+        
+        for i in range(len(text)):
+            text[i] = re.sub(r"\{(.*?)\}", lambda x: pronoun_repl(x, process_text_dict, False), text[i])
+
         text = [t1.replace("c_n", game.clan.name) for t1 in text]
         text = [t1.replace("y_c", str(you.name)) for t1 in text]
         text = [t1.replace("t_c", str(cat.name)) for t1 in text]

@@ -59,17 +59,6 @@
             "Grr..."
         ]
     ],
-    "newborn_7": [
-        [
-            "Any",
-            "insult",
-            "they_blind",
-            "you_blind"
-        ],
-        [
-            "Grr..."
-        ]
-    ],
     "newborn_11": [
         [
             "newborn",
@@ -123,17 +112,6 @@
     "newborn_16": [
         [
             "newborn",
-            "they_blind",
-            "you_blind"
-        ],
-        [
-            "Grr..."
-        ]
-    ],
-    "newborn_17": [
-        [
-            "newborn",
-            "insult",
             "they_blind",
             "you_blind"
         ],
@@ -791,7 +769,7 @@
             "you_deaf"
         ],
         [
-            "[You can barely make out t_c, they're so deeply buried in {PRONOUN/t_c/poss} parent's nest.]"
+            "[You can barely make out t_c, {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} so deeply buried in {PRONOUN/t_c/poss} parent's nest.]"
         ]
     ],
     "newborn_yourkit": [
@@ -1300,7 +1278,7 @@
             "you_deaf"
         ],
         [
-            "[r_c quickly grabs t_c and carries {PRONOUN/t_c/object} away as {PRONOUN/t_c/poss} {VERB/t_c/stumble/stumbles} curiously towards you.]"
+            "[r_c quickly grabs t_c and carries {PRONOUN/t_c/poss} away as {PRONOUN/t_c/subject} {VERB/t_c/stumble/stumbles} curiously towards you.]"
         ]
     ],
     "newborn_shunned4": [
@@ -1896,20 +1874,6 @@
             "Grr..."
         ]
     ],
-    "newborn_7dead_dead": [
-        [
-            "Any",
-            "insult",
-            "you_dead",
-            "they_dead",
-            "they_outside",
-            "they_blind",
-            "you_blind"
-        ],
-        [
-            "Grr..."
-        ]
-    ],
     "newborn_11dead_dead": [
         [
             "any",
@@ -2104,18 +2068,6 @@
             "MROOOOOOOOW!!!!!!!!"
         ]
     ],
-    "newborn_sh_insult_J1": [
-        [
-            "insult",
-            "any",
-            "you_shunned",
-            "they_blind",
-            "you_blind"
-        ],
-        [
-            "MROOOOOOOOW!!!!!!!!"
-        ]
-    ],
     "newborn_J1": [
         [
             "grievingthem",
@@ -2265,6 +2217,45 @@
         ],
         [
             "[t_c is stomping {PRONOUN/t_c/poss} little paws on the ground, figuring out how to use them.]"
+        ]
+    ],
+    "newborn_H1": [
+        [
+            "they_newborn",
+	        "any",
+            "they_deaf",
+            "you_deaf",
+            "they_blind"
+        ],
+        [
+            "[t_c rolls around in the nest, getting a feeling of {PRONOUN/t_c/poss} surroundings.]"
+        ]
+    ],
+   "newborn_sc_SAM1": [
+        [
+            "they_newborn",
+            "any",
+            "you_deaf",
+            "they_blind",
+            "they_deaf",
+            "they_sc"
+        ],
+        [
+            "[t_c is stumbling around blindly.]"
+        ]
+    ],
+    "newborn_sc_H1": [
+        [
+            "they_newborn",
+            "they_sc",
+            "any",
+            "you_deaf",
+            "they_blind",
+            "they_deaf",
+            "they_sc"
+        ],
+        [
+            "[The little body among stars surprises you.]"
         ]
     ]
 }

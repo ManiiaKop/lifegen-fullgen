@@ -55,6 +55,7 @@ def json_load():
                 cat["favourite"] = 0
             elif cat["favourite"] is True:
                 cat["favourite"] = 1
+<<<<<<< HEAD
             try:
                 new_cat = Cat(ID=cat["ID"],
                         prefix=cat["name_prefix"],
@@ -80,6 +81,47 @@ def json_load():
                         parent2=cat["parent2"],
                         moons=cat["moons"],
                         loading_cat=True)
+=======
+
+            # moving clangen accs over to accessories + inventory
+            if "accessories" not in cat:
+                cat["accessories"] = []
+            if "inventory" not in cat:
+                cat["inventory"] = []
+            if cat["accessory"] is not None:
+                cat["accessories"].append(cat["accessory"])
+                cat["inventory"].append(cat["accessory"])
+                cat["accessory"] = None
+
+            new_cat = Cat(
+                ID=cat["ID"],
+                prefix=cat["name_prefix"],
+                suffix=cat["name_suffix"],
+                specsuffix_hidden=(
+                    cat["specsuffix_hidden"] if "specsuffix_hidden" in cat else False
+                ),
+                gender=cat["gender"],
+                status=cat["status"],
+                parent1=cat["parent1"],
+                parent2=cat["parent2"],
+                moons=cat["moons"],
+                eye_colour=cat["eye_colour"],
+                loading_cat=True,
+            )
+            
+            if cat["eye_colour"] == "BLUE2":
+                cat["eye_colour"] = "COBALT"
+            if cat["eye_colour"] in ["BLUEYELLOW", "BLUEGREEN"]:
+                if cat["eye_colour"] == "BLUEYELLOW":
+                    cat["eye_colour2"] = "YELLOW"
+                elif cat["eye_colour"] == "BLUEGREEN":
+                    cat["eye_colour2"] = "GREEN"
+                cat["eye_colour"] = "BLUE"
+            if "eye_colour2" in cat:
+                if cat["eye_colour2"] == "BLUE2":
+                    cat["eye_colour2"] = "COBALT"
+
+>>>>>>> lifegen_origin/LifeGen-dev
             new_cat.pelt = Pelt(
                 new_cat.genotype,
                 new_cat.phenotype,
@@ -172,6 +214,7 @@ def json_load():
             new_cat.no_mates = cat["no_mates"] if "no_mates" in cat else False
             new_cat.no_retire = cat["no_retire"] if "no_retire" in cat else False
             new_cat.no_faith = cat["no_faith"] if "no_faith" in cat else False
+            new_cat.lock_faith = cat["lock_faith"] if "lock_faith" in cat else "flexible"
             new_cat.exiled = cat["exiled"]
             new_cat.shunned = cat["shunned"]
             new_cat.driven_out = cat["driven_out"] if "driven_out" in cat else False
@@ -236,22 +279,23 @@ def json_load():
                     cat["scar_event"] if "scar_event" in cat else [],
                 )
             if "pronouns" in cat:
-                if "sibling" not in cat["pronouns"][0]:
-                    if new_cat.genderalign in ["male", "trans male"]:
-                        cat["pronouns"][0]["sibling"] = "brother"
-                    elif new_cat.genderalign in ["female", "trans female"]:
-                        cat["pronouns"][0]["sibling"] = "sister"
-                    else:
-                        cat["pronouns"][0]["sibling"] = "sibling"
+                for i in cat["pronouns"]:
+                    if "sibling" not in i:
+                        if new_cat.genderalign in ["male", "trans male"]:
+                            i["sibling"] = "brother"
+                        elif new_cat.genderalign in ["female", "trans female"]:
+                            i["sibling"] = "sister"
+                        else:
+                            i["sibling"] = "sibling"
 
-    
-                if "parent" not in cat["pronouns"][0]:
-                    if new_cat.genderalign in ["male", "trans male"]:
-                        cat["pronouns"][0]["parent"] = "father"
-                    elif new_cat.genderalign in ["female", "trans female"]:
-                        cat["pronouns"][0]["parent"] = "mother"
-                    else:
-                        cat["pronouns"][0]["parent"] = "parent"
+        
+                    if "parent" not in i:
+                        if new_cat.genderalign in ["male", "trans male"]:
+                            i["parent"] = "father"
+                        elif new_cat.genderalign in ["female", "trans female"]:
+                            i["parent"] = "mother"
+                        else:
+                            i["parent"] = "parent"
 
             all_cats.append(new_cat)
 

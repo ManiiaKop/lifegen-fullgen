@@ -23,7 +23,9 @@
         "You train with df_y_a the whole night, denying {PRONOUN/df_y_a/poss} request for a break.",
         "df_y_a begs you to teach {PRONOUN/df_y_a/object} a complex battle move.",
         "You watch df_y_a train with the other Dark Forest trainees.",
-        "df_y_a doesn't appear during the night and you decide to make a visit to the Clan to see what's going on."
+        "df_y_a doesn't appear during the night and you decide to make a visit to the Clan to see what's going on.",
+        "After r_a_dark fails {PRONOUN/r_a_dark/poss} first assessment, you try to convince {PRONOUN/r_a_dark/object} to abandon {PRONOUN/r_a_dark/poss} training with the living and to put all {PRONOUN/r_a_dark/poss} effort into training with you in the Dark Forest. It's safe to say {PRONOUN/r_a_dark/subject} didn't like that idea.",
+        "You watch as there is yet another border skirmish between c_nClan and w_cClan. r_a seems like a promising fighter. Maybe you should enter {PRONOUN/r_a/poss} dreams and try to recruit {PRONOUN/r_a/object} for the Dark Forest."
     ],
     "general assertive": [],
     "general brooding": [],
@@ -36,5 +38,7 @@
     "general sweet": [],
     "general unabashed": [],
     "general unlawful": [],
-    "general rare": []
+    "general rare": [
+        "r_k_dark locks eyes with you, slowly backing away. When {PRONOUN/r_k_dark/subject} {VERB/r_k_dark/run/runs} off to get r_q, you walk away.  For now, you'll let {PRONOUN/r_k_dark/object} be a kit. {PRONOUN/r_k_dark/subject/CAP} can be recruited later."
+    ]
 }

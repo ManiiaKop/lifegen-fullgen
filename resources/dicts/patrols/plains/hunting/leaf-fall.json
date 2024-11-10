@@ -1974,7 +1974,7 @@
                 ]
             },
             {
-                "text": "These are the times that it really pays to have a hunter of s_c's caliber on the patrol - they really go above and beyond, impressing everyone and leaving a trail of terror among the local mice.",
+                "text": "These are the times that it really pays to have a hunter of s_c's caliber on the patrol - they really go above and beyond, impressing everycat and leaving a trail of terror among the local mice.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["HUNTER,1"],
@@ -3329,7 +3329,7 @@
         },
         "weight": 20,
         "intro_text": "app1 bounds out of camp, determined to show off to {PRONOUN/app1/poss} older siblings!",
-        "decline_text": "And everyone is immediately recalled - the camp needs new nesting materials, not more prey.",
+        "decline_text": "And everycat is immediately recalled - the camp needs new nesting materials, not more prey.",
         "chance_of_success": 50,
         "relationship_constraint": ["siblings"],
         "success_outcomes": [
@@ -3834,7 +3834,7 @@
                 ]
             },
             {
-                "text": "The hunting patrol is perfectly successful and it matters not a whit to any of the warriors, because p_l makes a joke that {PRONOUN/p_l/subject} {VERB/p_l/think/thinks} is funny but that's always gotten on r_c's nerves and suddenly everyone's acting like apprentices again, snippy, immature, and irritable.",
+                "text": "The hunting patrol is perfectly successful and it matters not a whit to any of the warriors, because p_l makes a joke that {PRONOUN/p_l/subject} {VERB/p_l/think/thinks} is funny but that's always gotten on r_c's nerves and suddenly everycat's acting like apprentices again, snippy, immature, and irritable.",
                 "exp": 20,
                 "weight": 5,
                 "prey": ["medium"],

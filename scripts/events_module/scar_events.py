@@ -154,8 +154,28 @@ class Scar_Events():
 
             specialty = random.choice(scar_pool)
             if specialty in ["NOTAIL", "HALFTAIL"]:
-                if cat.pelt.accessory in ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS"]:
-                    cat.pelt.accessory = None
+                # if cat.pelt.accessory in ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS"]:
+                #     cat.pelt.accessory = None
+                # clangen ^^
+                # lifegen vv
+
+                for acc in ['RED FEATHERS', 'BLUE FEATHERS', 'JAY FEATHERS', "SEAWEED",
+                            "DAISY CORSAGE", "GULL FEATHERS", "SPARROW FEATHERS", "CLOVER", "DAISY",
+                            "SPRINGFEATHERS", "CLOVER", "LAVENDERTAILWRAP", "CELESTIALCHIMES",
+                            "LUNARCHIMES", "SILVERLUNARCHIMES", "FLOWER MOSS", "SANVITALIAFLOWERS",
+                            "STARFLOWERS", "SHELL PACK", "MOSS2", "MUSHROOMS", "CLOVERS", "MUD", "LADYBUGS",
+                            "FIRBRANCHES", "CHERRYBLOSSOM", "MISTLETOE", "BROWNMOSSPELT", "BLEEDINGVINES",
+                            "BLEEDINGHEART", "MOREFERN", "GRAYMOSSPELT", "FERN"]:
+                    if acc in cat.pelt.accessories:
+                        cat.pelt.accessories.remove(acc)
+                    if acc in cat.pelt.inventory:
+                        cat.pelt.inventory.remove(acc)
+            if specialty == "NOPAW":
+                for acc in ["VINE", "ASHY PAWS", "MUD PAWS", "MUD", "STARFLOWERS", "LAVENDERANKLET", "HOLLY2", "HOLLYVINES"]:
+                    if acc in cat.pelt.accessories:
+                        cat.pelt.inventory.remove(acc)
+                    if acc in cat.pelt.inventory:
+                        cat.pelt.inventory.remove(acc)
 
             # combining left/right variations into the both version
             if "NOLEFTEAR" in cat.pelt.scars and specialty == 'NORIGHTEAR':

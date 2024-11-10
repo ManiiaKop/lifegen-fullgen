@@ -403,14 +403,16 @@
                 "text": "You look out over the graves, a place of peace you will one day join... Yet it is your job to keep the members of your Clan - your family - out of. At least for as long as StarClan wills it.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["CLAIRVOYANT,1", "GHOST,1", "LORE,1", "OMEN,1", "STAR,1", "HEALER,1"]
+                "stat_skill": ["CLAIRVOYANT,1", "GHOST,1", "LORE,1", "OMEN,1", "STAR,1", "HEALER,1"],
+                "can_have_stat": ["p_l"]
             },
  {
                 "text": "A chill runs up your spine, your claws sink into the blessed ground. You cry out to the sky, hoping someone will hear you, understand your need for guidance... and this spirit does.",
                 "exp": 10,
                 "weight": 5,
                 "stat_skill": ["DARK,1"],
-                "new_cat":["newdfcat", "backstory: oldstarClan2"]
+                "new_cat":["newdfcat", "backstory: oldstarClan2"],
+                "can_have_stat": ["p_l"]
             }
         ],
         "fail_outcomes": [
@@ -451,7 +453,8 @@
                 "text": "You listen closely to the situation, and you think you have a solution that will fix it for good!",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["CLEVER,1", "INSIGHTFUL,1", "LORE,1", "SENSE,1", "INNOVATOR,1", "THINKER,1"]
+                "stat_skill": ["CLEVER,1", "INSIGHTFUL,1", "LORE,1", "SENSE,1", "INNOVATOR,1", "THINKER,1"],
+                "can_have_stat": ["p_l"]
 
             },
   {

@@ -76,7 +76,7 @@
     {
         "id": "careful_medicine_cat",
         "thoughts": [
-            "Counts and re-counts the poppy seeds",
+            "Counts and recounts the poppy seeds",
             "Makes sure none of the herbs get mixed up"
         ],
         "main_trait_constraint": [
@@ -101,6 +101,26 @@
         "main_trait_constraint": [
             "childish"
         ]
+    },
+    {
+        "id": "flamboyant_medicine_cat",
+        "thoughts": [
+            "Loudly proclaims {PRONOUN/m_c/subject} {VERB/m_c/have/has} recieved a vision but won't tell about it",
+            "Is making faces behind the deputy's back to entertain an injured apprentice",
+            "Organizes the herbs according to {PRONOUN/m_c/poss} favorite colors",
+            "Stares at a harmless blue butterfly before yowling about it being an evil omen for all to hear",
+            "Bursts into camp overdramatically after being called back to take care of a thorn in a paw",
+            "Squeals when {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} sneezed on",
+            "Spends ages washing up after being sneezed on by a patient",
+            "Has a sick kit giggling with {PRONOUN/m_c/poss} tomfoolery",
+            "Claims that StarClan is dramatic - then proceeds to be more dramatic than StarClan could ever be",
+            "Demands attention for something important but playfully walks away when {PRONOUN/m_c/subject} {VERB/m_c/get/gets} it",
+            "Is dramatically insisting the leader listen to {PRONOUN/m_c/object} about something mundane",
+            "Tells a whiny warrior that they're being more dramatic can {PRONOUN/m_c/object}"
+        ],
+        "main_trait_constraint": [
+            "flamboyant"
+        ]    
     },
     {
         "id": "cold_medicine_cat",
@@ -284,7 +304,7 @@
     {
         "id": "strange_medicine_cat",
         "thoughts": [
-            "Insists everyone eat chamomile leaves at moonhigh",
+            "Insists everycat eat chamomile leaves at Moonhigh",
             "Sleeps in the middle of the clearing",
             "Looks dazed",
             "Hisses at the kits randomly",

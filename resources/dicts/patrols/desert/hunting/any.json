@@ -29,7 +29,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "The patrol tries, but the unnatural environment causes everyone to be on edge, and their hunt is unsuccessful.",
+                "text": "The patrol tries, but the unnatural environment causes everycat to be on edge, and their hunt is unsuccessful.",
                 "exp": 0,
                 "weight": 20,
                 "prey": ["very_small"]
@@ -80,7 +80,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "The patrol tries, but the unnatural environment causes everyone to be on edge, and their hunt is unsuccessful.",
+                "text": "The patrol tries, but the unnatural environment causes everycat to be on edge, and their hunt is unsuccessful.",
                 "exp": 0,
                 "weight": 20,
                 "prey": ["very_small"]
@@ -223,7 +223,7 @@
         "chance_of_success": 30,
         "success_outcomes": [
             {
-                "text": "r_c manages a skillful catch, and brings it back to the camp to show everyone!",
+                "text": "r_c manages a skillful catch, and brings it back to the camp to show everycat!",
                 "exp": 20,
                 "weight": 20,
                 "prey": ["medium"]
@@ -772,7 +772,7 @@
                 "weight": 20
             },
             {
-                "text": "r_c is hit by a monster while crossing and dies instantly. c_n is shaken by the death, and it's a reminder to every cat that just because their territory contains few Thunderpaths doesn't mean they can forget their dangers.",
+                "text": "r_c is hit by a monster while crossing and dies instantly. c_n is shaken by the death, and it's a reminder to everycat that just because their territory contains few Thunderpaths doesn't mean they can forget their dangers.",
                 "exp": 0,
                 "weight": 10,
                 "dead_cats": ["r_c"],
@@ -844,7 +844,7 @@
                 "weight": 20
             },
             {
-                "text": "r_c is crossing the Thunderpath and hears a monster thundering towards them. They freeze, and the monster swerves to hit them deliberately, killing them instantly. c_n is shaken by the death, and it's a reminder to every cat that just because their territory contains few Thunderpaths doesn't mean they can forget their dangers.",
+                "text": "r_c is crossing the Thunderpath and hears a monster thundering towards them. They freeze, and the monster swerves to hit them deliberately, killing them instantly. c_n is shaken by the death, and it's a reminder to everycat that just because their territory contains few Thunderpaths doesn't mean they can forget their dangers.",
                 "exp": 0,
                 "weight": 10,
                 "dead_cats": ["r_c"],
@@ -3102,7 +3102,7 @@
                 "prey": ["medium"]
             },
             {
-                "text": "The rat is huge and quick, but s_c is quicker, bringing it down just before it scurries out of reach. Everyone gathers around them in congratulations of the skillful kill.",
+                "text": "The rat is huge and quick, but s_c is quicker, bringing it down just before it scurries out of reach. Everycat gathers around them in congratulations of the skillful kill.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["HUNTER,2"],
@@ -3282,7 +3282,7 @@
         "chance_of_success": 10,
         "success_outcomes": [
             {
-                "text": "p_l leads a successful fishing session, with almost everyone walking home with a fishy mouthful.",
+                "text": "p_l leads a successful fishing session, with almost everycat walking home with a fishy mouthful.",
                 "exp": 10,
                 "weight": 20,
                 "prey": ["large"]

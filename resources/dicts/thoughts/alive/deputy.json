@@ -194,7 +194,7 @@
             "Shivers at the thought {PRONOUN/m_c/subject} will be leader some day",
             "Was found in {PRONOUN/m_c/poss} nest instead of organizing patrols",
             "Believes {PRONOUN/m_c/poss} leader only picked {PRONOUN/m_c/object} as deputy for a laugh",
-            "Grimce as Clanmates sought {PRONOUN/m_c/object} for an advice",
+            "Grimaces as Clanmates ask {PRONOUN/m_c/object} for advice",
             "Wants to let {PRONOUN/m_c/poss} pelt down",
             "Was sitting out in a thunderstorm, deep in thought",
             "Was overthinking worse case scenarios that would bring end to c_n",
@@ -202,6 +202,32 @@
         ],
         "main_trait_constraint": [
             "gloomy"
+        ]
+    },{
+        "id": "flamboyant_deputy",
+        "thoughts": [
+            "Is telling r_c to add 'star' to {PRONOUN/m_c/poss} name to know how it sounds",
+            "Dislikes how {PRONOUN/m_c/poss} name sounds with 'star'",
+            "Has the clan's attention despite the leader having called the meeting for a more important matter",
+            "Theatrically regales a tale of {PRONOUN/m_c/poss} apprenticeship to wide-eyed kits",
+            "Is practicing a leader-like speech",
+            "Boosts the confidence of {PRONOUN/m_c/poss} Clanmates in themselves",
+            "Is crowing triumphantly about a mundane accomplishment",
+            "Tells r_c to lead a patrol because {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} the most stylish today",
+            "Organizes the patrols with a funny voice to entertain everycat",
+            "Proclaims that yes, {PRONOUN/m_c/subject} {VERB/m_c/do/does} have a favorite clanmate, but won't share who",
+            "Lets kits pounce on {PRONOUN/m_c/object} before falling over with a poetic final speech",
+            "Is certainly not playing games with the apprentices instead of training them",
+            "Has the elders entertained with {PRONOUN/m_c/poss} tomfoolery rather than listening to their stories",
+            "Is making funny faces at the medicine cat's wisdom {PRONOUN/m_c/subject} should be listening to",
+            "Recounts the latest drama {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} overheard for all to hear",
+            "Reenacts a fight despite r_c saying it didn't actually happen that way"
+        ],
+        "random_status_constraint": [
+            "warrior"
+        ],
+        "main_trait_constraint": [
+            "flamboyant"
         ]
     },
     {
@@ -212,12 +238,12 @@
             "Claims scars are proof of a survivor",
             "Has a permanent stone face",
             "Snaps at slothful cats refusing to wake up for morning patrols",
-            "Didn't give a rogue a warning before batting their muzzle for tresspassing",
+            "Didn't give a rogue a warning before batting their muzzle for trespassing",
             "Communicate with grunts and piercing stares",
             "Has little patience for r_c right now",
             "Is giving an apprentice falling behind firm, but helpful advice",
             "Orders the hunting patrol to go back out and catch prey that isn't meager",
-            "Always has a hiss inbetween every word"
+            "Always has a hiss in between every word"
         ],
         "main_trait_constraint": [
             "grumpy"
@@ -228,7 +254,7 @@
         "thoughts": [
             "Still brimming with joy becoming deputy for c_n",
             "Orders apprentices to feed the older cats first",
-            "Would rather let everyone take a prey from the pile before {PRONOUN/m_c/self}",
+            "Would rather let everycat take a prey from the pile before {PRONOUN/m_c/self}",
             "Is frightened by the thought of replacing the leader",
             "Is a bit soft not picking disobedient cats for apprentice duties"
         ],
@@ -303,7 +329,7 @@
             "Will always put c_n above everything else",
             "Doesn't see how allowing outsiders will improve c_n",
             "Promised to protect {PRONOUN/m_c/poss} Clanmates with {PRONOUN/m_c/poss} life",
-            "Wants to serve {PRONOUN/m_c/poss} leader and contiue their teachings",
+            "Wants to serve {PRONOUN/m_c/poss} leader and continue their teachings",
             "Is defending a Clanmate from being accused of crossing borders into another Clan",
             "Is willing to punish codebreakers",
             "Is giving out clear and detailed reports to {PRONOUN/m_c/poss} leader",
@@ -406,7 +432,7 @@
         "id": "teacher_deputy",
         "thoughts": [
             "Is devising an effective teaching strategy for new skills",
-            "Encourages the older cats to share {PRONOUN/m_c/poss} skills and techniques with the younger generations"
+            "Encourages the older cats to share their skills and techniques with the younger generations"
         ],
         "main_skill_constraint": [
             "TEACHER,1"

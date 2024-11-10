@@ -133,7 +133,7 @@
         "chance_of_success": 60,
         "success_outcomes": [
             {
-                "text": "Feeling ever so alone on {PRONOUN/r_c/poss} solo patrol, r_c carefully sniffs around the mouth of the burrow, but the scent change is unmistakable - a new badger occupant has moved in. Creeping forward, belly flat in the dirt, {PRONOUN/r_c/subject} {VERB/r_c/manage/manages} just enough of a glimpse to confirm the badger's presence. Heart pounding, r_c sprints back to camp to warn everyone.",
+                "text": "Feeling ever so alone on {PRONOUN/r_c/poss} solo patrol, r_c carefully sniffs around the mouth of the burrow, but the scent change is unmistakable - a new badger occupant has moved in. Creeping forward, belly flat in the dirt, {PRONOUN/r_c/subject} {VERB/r_c/manage/manages} just enough of a glimpse to confirm the badger's presence. Heart pounding, r_c sprints back to camp to warn everycat.",
                 "exp": 30,
                 "weight": 20,
                 "relationships": [
@@ -176,7 +176,7 @@
                 ]
             },
             {
-                "text": "Carefully considering {PRONOUN/s_c/poss} options, s_c decides on a stakeout, and watches from a safe hiding place in the grass. When the badger pokes its head above ground at dusk, {PRONOUN/s_c/subject}{VERB/s_c/'re/'s} prepared, and {VERB/s_c/dart/darts} off back to camp to warn everyone before the predator has blinked the sleep out of its eyes.",
+                "text": "Carefully considering {PRONOUN/s_c/poss} options, s_c decides on a stakeout, and watches from a safe hiding place in the grass. When the badger pokes its head above ground at dusk, {PRONOUN/s_c/subject}{VERB/s_c/'re/'s} prepared, and {VERB/s_c/dart/darts} off back to camp to warn everycat before the predator has blinked the sleep out of its eyes.",
                 "exp": 30,
                 "weight": 20,
                 "stat_trait": [
@@ -337,7 +337,7 @@
                 ]
             },
             {
-                "text": "Carefully considering their options, s_c decides to set up a stakeout with the patrol. When the badger pokes its head above the ground at dusk, they're prepared, and in unison everyone turns for home. The cats fade into the grass before the predator has even blinked the sleep out of its eyes.",
+                "text": "Carefully considering their options, s_c decides to set up a stakeout with the patrol. When the badger pokes its head above the ground at dusk, they're prepared, and in unison everycat turns for home. The cats fade into the grass before the predator has even blinked the sleep out of its eyes.",
                 "exp": 30,
                 "weight": 20,
                 "stat_trait": [
@@ -388,7 +388,7 @@
                 ]
             },
             {
-                "text": "As the patrol is sniffing around the burrow entrance, they hear a rustle from the grass. It's difficult to say who's more surprised - the cats or the badger. There's a confused rush of paws and flying fur as the patrol scatters and the beast charges for the sett. r_c is battered in the process but everyone gets home safe in the end. . . including the badger.",
+                "text": "As the patrol is sniffing around the burrow entrance, they hear a rustle from the grass. It's difficult to say who's more surprised - the cats or the badger. There's a confused rush of paws and flying fur as the patrol scatters and the beast charges for the sett. r_c is battered in the process but everycat gets home safe in the end. . . including the badger.",
                 "exp": 0,
                 "weight": 10,
                 "injury": [
@@ -418,7 +418,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "{PRONOUN/r_c/poss/CAP} Clanmates come running at {PRONOUN/r_c/poss} yowls, and r_c is soon freed, shaken but unharmed. The patrol settles down as everyone comforts each other.",
+                "text": "{PRONOUN/r_c/poss/CAP} Clanmates come running at {PRONOUN/r_c/poss} yowls, and r_c is soon freed, shaken but unharmed. The patrol settles down as everycat comforts each other.",
                 "exp": 20,
                 "weight": 20,
                 "relationships": [
@@ -2510,7 +2510,7 @@
         "weight": 40,
         "chance_of_success": 60,
         "pl_skill_constraint": ["STORY,1", "LORE,1"],
-        "intro_text": "app1 seems a little nervous as the cats head out to train. {PRONOUN/app1/subject/CAP} know that obviously everyone goes to Starclan when they die, but, what if someone died beyond c_n's borders? What if they died even further away than the sunset?",
+        "intro_text": "app1 seems a little nervous as the cats head out to train. {PRONOUN/app1/subject/CAP} know that obviously everycat goes to StarClan when they die, but, what if someone died beyond c_n's borders? What if they died even further away than the sunset?",
         "decline_text": "p_l vaguely reassures app1 and urges {PRONOUN/app1/object} to hurry down to the training grounds.",
         "success_outcomes": [
                 {
@@ -2633,7 +2633,7 @@
         "weight": 40,
         "chance_of_success": 60,
         "pl_skill_constraint": ["LORE,1", "TEACHER,1", "INSIGHTFUL,1"],
-        "intro_text": "Don't get too close, p_l warns the apprentices, well before they can even smell the tacky stink of the tunderpath on the air. They're here to learn, <i>not</i> to take risks. Does everyone understand that?",
+        "intro_text": "Don't get too close, p_l warns the apprentices, well before they can even smell the tacky stink of the tunderpath on the air. They're here to learn, <i>not</i> to take risks. Does everycat understand that?",
         "decline_text": "p_l, worried that the apprentices aren't giving the patrol the focus is deserves, calls it off early.",
         "success_outcomes": [
                 {
@@ -2753,7 +2753,7 @@
             ],
             "fail_outcomes": [
                 {
-                    "text": "Everyone does not understand that. s_c wants to prove {PRONOUN/s_c/poss} bravery, egging the others on, crawling forward too far, and p_l is <i>not</i> having it. {PRONOUN/p_l/subject/CAP} {VERB/p_l/sink/sinks} {PRONOUN/p_l/poss} claws into s_c's pelt to haul {PRONOUN/s_c/object} back to a safe distance, ignoring s_c's outrage and hissing that {PRONOUN/s_c/subject} {VERB/s_c/deserve/deserves} the blood on {PRONOUN/s_c/poss} fur for being so stupid.",
+                    "text": "Everycat does not understand that. s_c wants to prove {PRONOUN/s_c/poss} bravery, egging the others on, crawling forward too far, and p_l is <i>not</i> having it. {PRONOUN/p_l/subject/CAP} {VERB/p_l/sink/sinks} {PRONOUN/p_l/poss} claws into s_c's pelt to haul {PRONOUN/s_c/object} back to a safe distance, ignoring s_c's outrage and hissing that {PRONOUN/s_c/subject} {VERB/s_c/deserve/deserves} the blood on {PRONOUN/s_c/poss} fur for being so stupid.",
                     "exp": 0,
                     "weight": 20,
                     "art": "gen_angry_cat_warrior",

@@ -1433,7 +1433,7 @@
         "chance_of_success": 30,
         "success_outcomes": [
             {
-                "text": "Daisies may seem like part of the everyday carpet of greenery, present everywhere from rocks to fields to nestled at the foot of trees, but that doesn't make their leaves any less useful. And there's some dandelion nearby - perfect. With a larger patrol, the cats bring back a good haul, and p_l makes sure to thank everyone for their assistance.",
+                "text": "Daisies may seem like part of the everyday carpet of greenery, present everywhere from rocks to fields to nestled at the foot of trees, but that doesn't make their leaves any less useful. And there's some dandelion nearby - perfect. With a larger patrol, the cats bring back a good haul, and p_l makes sure to thank everycat for their assistance.",
                 "exp": 10,
                 "weight": 20,
                 "herbs": ["daisy", "dandelion"],
@@ -2014,7 +2014,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "Elder leaves being used to <i>soothe</i> sprains, and elder leaves having to be gathered in a way that <i>risks</i> sprains, is truly one of StarClan's little ironies, p_l reflects. They share the little joke with the patrol, and the cats <i>murrp</i> with amusement, but it does also remind everyone to be careful as they strip leaves from the tree.",
+                "text": "Elder leaves being used to <i>soothe</i> sprains, and elder leaves having to be gathered in a way that <i>risks</i> sprains, is truly one of StarClan's little ironies, p_l reflects. They share the little joke with the patrol, and the cats <i>murrp</i> with amusement, but it does also remind everycat to be careful as they strip leaves from the tree.",
                 "exp": 10,
                 "weight": 20,
                 "herbs": ["elder_leaves", "juniper"],
@@ -2516,7 +2516,7 @@
                 ]
             },
             {
-                "text": "s_c follows not their eyes, but their nose, tracking the juniper trees by the scent of their fragrant berries to find an excellent crop. As they work, they chat to app1 about juniper's calming effects. This is one of the few herbs their Clanmates compete to go on patrols to help collect, as everyone enjoys the scent. s_c climbs into the low-growing tree to better reach the berries. From their vantage point, they are able to reach a low oak branch. They are astounded the branch has a healthy collection of still-green oak leaves. They take the opportunity to gather a pawful, asking app1 to help carry the precious leaves back to camp.",
+                "text": "s_c follows not their eyes, but their nose, tracking the juniper trees by the scent of their fragrant berries to find an excellent crop. As they work, they chat to app1 about juniper's calming effects. This is one of the few herbs their Clanmates compete to go on patrols to help collect, as everycat enjoys the scent. s_c climbs into the low-growing tree to better reach the berries. From their vantage point, they are able to reach a low oak branch. They are astounded the branch has a healthy collection of still-green oak leaves. They take the opportunity to gather a pawful, asking app1 to help carry the precious leaves back to camp.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["SENSE,2"],
@@ -3489,7 +3489,7 @@
         "chance_of_success": 30,
         "success_outcomes": [
             {
-                "text": "The low-growing marigold creeps across the ground, spotted less by its strange leaves that look like they're pretending to be small fern fronds from a distance, and more by their explosively sunset-colored flowers. Time to collect these while they're still here, and every cat returns to camp carrying something, although some of them seem to have weirdly picked up tansy instead.",
+                "text": "The low-growing marigold creeps across the ground, spotted less by its strange leaves that look like they're pretending to be small fern fronds from a distance, and more by their explosively sunset-colored flowers. Time to collect these while they're still here, and everycat returns to camp carrying something, although some of them seem to have weirdly picked up tansy instead.",
                 "exp": 10,
                 "weight": 20,
                 "herbs": ["tansy", "marigold"],

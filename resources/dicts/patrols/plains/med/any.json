@@ -280,7 +280,11 @@
                 ]
             },
             {
+<<<<<<< HEAD
                 "text": "The entire patrol mutely agrees to grit their teeth and bear it, but that doesn't stop the relief everyone feels when they settle into their nests to dry off, a rather motley assortment of herbs refreshing the healer den's stocks.",
+=======
+                "text": "The entire patrol mutely agrees to grit their teeth and bear it, but that doesn't stop the relief everycat feels when they settle into their nests to dry off, a rather motley assortment of herbs refreshing the medicine cat den's stocks.",
+>>>>>>> lifegen_origin/LifeGen-dev
                 "exp": 10,
                 "weight": 5,
                 "herbs": ["random_herbs"],
@@ -499,7 +503,11 @@
                 ]
             },
             {
+<<<<<<< HEAD
                 "text": "The patrol brings back a truly massive haul, and return in good humor, laughing as they set down their sticks of spun-up webbing in the healer den. p_l joins everyone as they sit down to share tongues, ridding their pelts of dust and the odd spider as the cats catch up with each other and enjoy the day.",
+=======
+                "text": "The patrol brings back a truly massive haul, and return in good humor, laughing as they set down their sticks of spun-up webbing in the medicine cat den. p_l joins everycat as they sit down to share tongues, ridding their pelts of dust and the odd spider as the cats catch up with each other and enjoy the day.",
+>>>>>>> lifegen_origin/LifeGen-dev
                 "exp": 20,
                 "weight": 5,
                 "herbs": ["many_herbs", "cobwebs"],
@@ -1817,7 +1825,7 @@
                 ]
             },
             {
-                "text": "... However, once out of camp, the apprentices realize they're out of their depth, and turn to p_l for help. p_l, to their credit, is very gracious about it, not making anyone feel stupid, and by the time the patrol returns with a successful haul there's a new feeling of rapport between everyone, regardless of their role.",
+                "text": "... However, once out of camp, the apprentices realize they're out of their depth, and turn to p_l for help. p_l, to their credit, is very gracious about it, not making anyone feel stupid, and by the time the patrol returns with a successful haul there's a new feeling of rapport between everycat, regardless of their role.",
                 "exp": 20,
                 "weight": 5,
                 "herbs": ["many_herbs", "cobwebs"],
@@ -1906,7 +1914,7 @@
                 ]
             },
             {
-                "text": "... However, once out of camp, the apprentices realize they're out of their depth, and turn to p_l for help. p_l, to their credit, is very gracious about it, not making anyone feel stupid, and by the time the patrol returns with a successful haul there's a new feeling of rapport between everyone, regardless of their role.",
+                "text": "... However, once out of camp, the apprentices realize they're out of their depth, and turn to p_l for help. p_l, to their credit, is very gracious about it, not making anyone feel stupid, and by the time the patrol returns with a successful haul there's a new feeling of rapport between everycat, regardless of their role.",
                 "exp": 20,
                 "weight": 5,
                 "herbs": ["many_herbs", "cobwebs"],
@@ -1995,7 +2003,7 @@
                 ]
             },
             {
-                "text": "... However, once out of camp, the apprentices realize they're out of their depth, and turn to p_l for help. p_l, to their credit, is very gracious about it, not making anyone feel stupid, and by the time the patrol returns with a successful haul there's a new feeling of rapport between everyone, regardless of their role.",
+                "text": "... However, once out of camp, the apprentices realize they're out of their depth, and turn to p_l for help. p_l, to their credit, is very gracious about it, not making anyone feel stupid, and by the time the patrol returns with a successful haul there's a new feeling of rapport between everycat, regardless of their role.",
                 "exp": 20,
                 "weight": 5,
                 "herbs": ["many_herbs", "cobwebs"],
@@ -2084,7 +2092,7 @@
                 ]
             },
             {
-                "text": "... However, once out of camp, the apprentices realize they're out of their depth, and turn to p_l for help. p_l, to their credit, is very gracious about it, not making anyone feel stupid, and by the time the patrol returns with a successful haul there's a new feeling of rapport between everyone, regardless of their role.",
+                "text": "... However, once out of camp, the apprentices realize they're out of their depth, and turn to p_l for help. p_l, to their credit, is very gracious about it, not making anyone feel stupid, and by the time the patrol returns with a successful haul there's a new feeling of rapport between everycat, regardless of their role.",
                 "exp": 20,
                 "weight": 5,
                 "herbs": ["many_herbs", "cobwebs"],
@@ -2440,7 +2448,7 @@
                 ]
             },
             {
-                "text": "p_l is determined to prove themself to the other apprentices, and fortunately they don't push it too far. Despite their enthusiasm, they avoid bossing everyone around, instead encouraging the patrol in their duties. Are they a bit stiff? Sure, but they're not unlikeable!",
+                "text": "p_l is determined to prove themself to the other apprentices, and fortunately they don't push it too far. Despite their enthusiasm, they avoid bossing everycat around, instead encouraging the patrol in their duties. Are they a bit stiff? Sure, but they're not unlikeable!",
                 "exp": 20,
                 "weight": 5,
                 "herbs": ["many_herbs", "moss"],
@@ -2464,7 +2472,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "app1 and app2 start to argue, ruining everyone's day.",
+                "text": "app1 and app2 start to argue, ruining everycat's day.",
                 "exp": 0,
                 "weight": 20,
                 "relationships": [
@@ -2529,7 +2537,7 @@
                 ]
             },
             {
-                "text": "p_l is determined to prove themself to the other apprentices, and fortunately they don't push it too far. Despite their enthusiasm, they avoid bossing everyone around, instead encouraging the patrol in their duties. Are they a bit stiff? Sure, but they're not unlikeable!",
+                "text": "p_l is determined to prove themself to the other apprentices, and fortunately they don't push it too far. Despite their enthusiasm, they avoid bossing everycat around, instead encouraging the patrol in their duties. Are they a bit stiff? Sure, but they're not unlikeable!",
                 "exp": 20,
                 "weight": 5,
                 "herbs": ["many_herbs", "moss"],
@@ -2553,7 +2561,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "app1 and app2 start to argue, ruining everyone's day.",
+                "text": "app1 and app2 start to argue, ruining everycat's day.",
                 "exp": 0,
                 "weight": 20,
                 "relationships": [
@@ -2707,7 +2715,7 @@
                 ]
             },
             {
-                "text": "p_l is determined to prove themself to the other apprentices, and fortunately they don't push it too far. Despite their enthusiasm, they avoid bossing everyone around, instead encouraging the patrol in their duties. Are they a bit stiff? Sure, but they're not unlikeable!",
+                "text": "p_l is determined to prove themself to the other apprentices, and fortunately they don't push it too far. Despite their enthusiasm, they avoid bossing everycat around, instead encouraging the patrol in their duties. Are they a bit stiff? Sure, but they're not unlikeable!",
                 "exp": 20,
                 "weight": 5,
                 "herbs": ["many_herbs", "moss"],
@@ -2731,7 +2739,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "app1 and app2 start to argue, ruining everyone's day.",
+                "text": "app1 and app2 start to argue, ruining everycat's day.",
                 "exp": 0,
                 "weight": 20,
                 "relationships": [
@@ -2884,7 +2892,7 @@
                 ]
             },
             {
-                "text": "p_l is determined to prove themself to the other apprentices, and fortunately they don't push it too far. Despite their enthusiasm, they avoid bossing everyone around, instead encouraging the patrol in their duties. Are they a bit stiff? Sure, but they're not unlikeable!",
+                "text": "p_l is determined to prove themself to the other apprentices, and fortunately they don't push it too far. Despite their enthusiasm, they avoid bossing everycat around, instead encouraging the patrol in their duties. Are they a bit stiff? Sure, but they're not unlikeable!",
                 "exp": 20,
                 "weight": 5,
                 "herbs": ["many_herbs", "moss"],
@@ -2908,7 +2916,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "app1 and app2 start to argue, ruining everyone's day.",
+                "text": "app1 and app2 start to argue, ruining everycat's day.",
                 "exp": 0,
                 "weight": 20,
                 "relationships": [

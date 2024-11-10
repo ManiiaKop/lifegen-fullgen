@@ -4,7 +4,7 @@
         "y_s visits you in the medicine den and the two of you spend all day updating each other on the exciting new things you've learned!",
         "y_s fakes an injury to spend more time with you in the medicine den.",
         "You give y_s a tour of the den, giggling at how overwhelmed {PRONOUN/y_s/subject} {VERB/y_s/seem/seems} at all the herbs.",
-        "Your training has kept both of you busy, but you y_s schedule some much-needed sibling time.",
+        "Your training has kept both of you busy, but you and y_l schedule some much-needed sibling time.",
         "You spend the day cleaning out the very back corner of the herb store, much to the approval of your mentor.",
         "You can't help but feel a bit left out after watching the warrior apprentices share an inside joke you don't understand.",
         "As instructed by y_m, you take over the task of checking your Clanmates ailments for the day. A glow of pride runs through you as you are entrusted with the duty.",
@@ -22,8 +22,8 @@
     "healer apprentice neurotic": [
         "You overhear m_n reviewing your progress with l_n, but can't make out enough to be sure what m_n really thinks of you.",
         "You find the perfect spot to lie in the sun by yourself and watch the camp.",
-        "r_w notices you sitting alone and invites you to eat with them.",
-        "m_n asks you to go out alone to collect marigold. They've taught you how to identify it before, but you still ask them to remind you.",
+        "r_w notices you sitting alone and invites you to eat with {PRONOUN/r_w/object}.",
+        "m_n asks you to go out alone to collect marigold. {PRONOUN/m_n/subject/CAP}{VERB/m_n/'ve/'s} taught you how to identify it before, but you still ask {PRONOUN/m_n/object} to remind you.",
         "You collect cobwebs, careful to not tear them. m_n praises your meticulousness.",
         "When r_e tells you stories, you're comforted by the cats and places you recognize.",
         "You wonder if you're living up to y_p's hopes and expectations."

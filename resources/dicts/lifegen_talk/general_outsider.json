@@ -491,7 +491,7 @@
         ],
         [
             "[t_c is looking at you with pity.]",
-            "[You flash them a harsh glare. A ghost shouldn't be sympathising with a killer.]"
+            "[You flash {PRONOUN/t_c/object} a harsh glare. A ghost shouldn't be sympathising with a killer.]"
         ]
     ],
     "oshunned_deaf_J3": [
@@ -504,7 +504,97 @@
         ],
         [
             "[t_c is looking at you with pity.]",
-            "[You flash them a harsh glare. A ghost shouldn't be sympathising with a killer.]"
+            "[You flash {PRONOUN/t_c/object} a harsh glare. A ghost shouldn't be sympathising with a killer.]"
+        ]
+    ],
+    "deaf_ur_J1": [
+        [
+            "you_deaf",
+            "they_ur",
+            "any",
+            "they_deaf",
+            "they_blind"
+        ],
+        [
+            "[t_c is fast asleep in a patch of sunlight.]",
+            "[Can ghosts still feel warmth..?]"
+        ]
+    ],
+    "deaf_ur_J2": [
+        [
+            "only_you_deaf",
+            "they_ur",
+            "any",
+            "they_deaf"
+        ],
+        [
+            "[You're sitting alone in camp, your focus occupied by a ladybug crawling on a leaf in front of you.]",
+            "[Suddenly, a ghostly paw pokes its way into your view and waves! When you turn, t_c is signing an apology.]",
+            "[Oh. Apparently it was hard to get your attention when {PRONOUN/t_c/poss} paw passes right through you!]"
+        ]
+    ],
+    "deaf_ur_J3": [
+        [
+            "they_dead",
+            "only_you_deaf",
+            "any"
+        ],
+        [
+            "[You catch a glimpse of t_c out of the corner of your eye, but {PRONOUN/t_c/subject} {VERB/t_c/disappear/disappears} every time you turn around.]",
+            "[The ghostly cat has no scent, so you have no other way to find {PRONOUN/t_c/object}.]"
+        ]
+    ],
+    "deaf_ur_J4": [
+        [
+            "they_dead",
+            "you_deaf",
+            "you_blind",
+            "they_deaf",
+            "they_blind",
+            "any"
+        ],
+        [
+            "[While sunbathing in camp, you feel your temperature drop.]",
+            "[t_c must be walking past.]"
+        ]
+    ],
+    "deaf_ur_J5": [
+        [
+            "they_dead",
+            "you_deaf",
+            "you_blind",
+            "you_shunned",
+            "any"
+        ],
+        [
+            "[While laying in camp, trying your best to fall asleep, you feel your temperature drop.]",
+            "[t_c must be walking past.]"
+        ]
+    ],
+    "deaf_ur_J6": [
+        [
+            "they_dead",
+            "you_deaf",
+            "you_blind",
+            "you_shunned",
+            "any",
+            "you_grieving"
+        ],
+        [
+            "[While laying in camp, trying your best to fall asleep, you feel your temperature drop.]",
+            "[t_c must be walking past.]"
+        ]
+    ],
+    "deaf_sc_Guy1": [
+        [
+            "they_sc",
+            "any",
+            "they_deaf",
+            "you_deaf",
+            "they_blind"
+        ],
+        [
+            "[t_c raises {PRONOUN/t_c/poss} sparkling tail in welcome.]"
         ]
     ]
 }

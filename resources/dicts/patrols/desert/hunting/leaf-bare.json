@@ -1337,7 +1337,7 @@
         },
         "weight": 40,
         "intro_text": "app1 bounds out of camp, determined to show off to {PRONOUN/app1/poss} older siblings!",
-        "decline_text": "And everyone is immediately recalled - the camp needs new nesting materials, not more prey.",
+        "decline_text": "And everycat is immediately recalled - the camp needs new nesting materials, not more prey.",
         "chance_of_success": 50,
         "relationship_constraint": ["siblings"],
         "success_outcomes": [
@@ -1842,7 +1842,7 @@
                 ]
             },
             {
-                "text": "The hunting patrol is perfectly successful and it matters not a whit to any of the warriors, because p_l makes a joke that {PRONOUN/p_l/subject} {VERB/p_l/think/thinks} is funny but that's always gotten on r_c's nerves and suddenly everyone's acting like apprentices again, snippy, immature, and irritable.",
+                "text": "The hunting patrol is perfectly successful and it matters not a whit to any of the warriors, because p_l makes a joke that {PRONOUN/p_l/subject} {VERB/p_l/think/thinks} is funny but that's always gotten on r_c's nerves and suddenly everycat's acting like apprentices again, snippy, immature, and irritable.",
                 "exp": 20,
                 "weight": 5,
                 "prey": ["large"],
@@ -2326,7 +2326,7 @@
                 ]
             },
             {
-                "text": "s_c leads the patrol to one of their favorite hunting spots, a bounce in everyone's steps as the water promises new life for the desert. The cats are unused to hunting the scrubland in wet, let alone in mud, but thanks to s_c they bring home a mighty haul, laughing at each other's damp and fluffed out fur.",
+                "text": "s_c leads the patrol to one of their favorite hunting spots, a bounce in everycat's steps as the water promises new life for the desert. The cats are unused to hunting the scrubland in wet, let alone in mud, but thanks to s_c they bring home a mighty haul, laughing at each other's damp and fluffed out fur.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["HUNTER,2"],
@@ -2342,7 +2342,7 @@
                 ]
             },
             {
-                "text": "The cats slip and slide in a world suddenly damp and wet in the growing rainstorm, but s_c commiserates with those who fall and encourages every cat on, the patrol not only having fun with each other, but also managing to catch a good haul of desert creatures as confused by the slippery ground as they are.",
+                "text": "The cats slip and slide in a world suddenly damp and wet in the growing rainstorm, but s_c commiserates with those who fall and encourages everycat on, the patrol not only having fun with each other, but also managing to catch a good haul of desert creatures as confused by the slippery ground as they are.",
                 "exp": 20,
                 "weight": 20,
                 "stat_trait": ["altruistic", "compassionate", "empathetic", "faithful", "loving"],
@@ -2432,7 +2432,7 @@
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "A storm descends, sudden and violent enough to drive the c_n cats to shelter. The life-giving water is still a relief to witness, but they aren't interested in being as pummeled like the dry ground. The cats shelter in a rocky alcove, sharing stories and laughing occasionally as everyone shares tongues, licking their pelts dry.",
+                "text": "A storm descends, sudden and violent enough to drive the c_n cats to shelter. The life-giving water is still a relief to witness, but they aren't interested in being as pummeled like the dry ground. The cats shelter in a rocky alcove, sharing stories and laughing occasionally as everycat shares tongues, licking their pelts dry.",
                 "exp": 10,
                 "weight": 20,
                 "relationships": [
@@ -2446,7 +2446,7 @@
                 ]
             },
             {
-                "text": "A storm descends, sudden and violent enough to drive the c_n cats to shelter. s_c keeps everyone's spirits up as the patrol hides in an abandoned tortoise den where the wind can't get them, until everyone is talking, a little damp but keeping each other's spirits up.",
+                "text": "A storm descends, sudden and violent enough to drive the c_n cats to shelter. s_c keeps everycat's spirits up as the patrol hides in an abandoned tortoise den where the wind can't get them, until everycat is talking, a little damp but keeping each other's spirits up.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["SPEAKER,2"],
@@ -2461,7 +2461,7 @@
                 ]
             },
             {
-                "text": "A storm descends, sudden and violent enough to drive the c_n cats to shelter. As the cats hide from the wind, s_c keeps an eye out for everyone. There's a lot of restless energy in the shelter as the cats watch Leaf-bare bless c_n, but it's easily redirected to games and friendly debates, perhaps even a little flirting.",
+                "text": "A storm descends, sudden and violent enough to drive the c_n cats to shelter. As the cats hide from the wind, s_c keeps an eye out for everycat. There's a lot of restless energy in the shelter as the cats watch Leaf-bare bless c_n, but it's easily redirected to games and friendly debates, perhaps even a little flirting.",
                 "exp": 10,
                 "weight": 20,
                 "stat_trait": ["altruistic", "compassionate", "empathetic", "faithful", "loving"],

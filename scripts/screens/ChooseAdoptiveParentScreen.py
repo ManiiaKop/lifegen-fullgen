@@ -896,6 +896,8 @@ class ChooseAdoptiveParentScreen(Screens):
                 and not check_cat.exiled
                 and not check_cat.outside
                 and check_cat.df == self.the_cat.df
+                # LG
+                and not check_cat.moons < 0
             ):
                 self.previous_cat = check_cat.ID
 
@@ -907,6 +909,8 @@ class ChooseAdoptiveParentScreen(Screens):
                 and not check_cat.exiled
                 and not check_cat.outside
                 and check_cat.df == self.the_cat.df
+                # LG
+                and not check_cat.moons < 0
             ):
                 self.next_cat = check_cat.ID
 

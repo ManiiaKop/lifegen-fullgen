@@ -31,6 +31,7 @@ class ChooseRebornScreen(Screens):
 
     def __init__(self, name=None):
         super().__init__(name)
+        self.fav = {}
         self.list_page = None
         self.next_cat = None
         self.previous_cat = None
@@ -152,6 +153,10 @@ class ChooseRebornScreen(Screens):
             self.cat_list_buttons[ele].kill()
         self.cat_list_buttons = {}
 
+        for marker in self.fav:
+            self.fav[marker].kill()
+        self.fav = {}
+
         for ele in self.apprentice_details:
             self.apprentice_details[ele].kill()
         self.apprentice_details = {}
@@ -220,6 +225,13 @@ class ChooseRebornScreen(Screens):
         self.exit_screen()
         game.cur_events_list.clear()
         game.clan.your_cat = new_mentor
+
+        # resetting talked_to so the new MC can talk to a cat
+        # the old one previously talked to in the same moon
+        for cat in Cat.all_cats_list:
+            if cat.talked_to is True:
+                cat.talked_to = False
+
         game.switches["attended half-moon"] = False
         if game.clan.your_cat.status not in ['newborn', 'kitten', 'apprentice', 'healer apprentice', 'mediator apprentice', "queen's apprentice"]:
             game.clan.your_cat.w_done = True
@@ -291,10 +303,23 @@ class ChooseRebornScreen(Screens):
             self.cat_list_buttons[ele].kill()
         self.cat_list_buttons = {}
 
+        for marker in self.fav:
+            self.fav[marker].kill()
+        self.fav = {}
+
         pos_x = 0
         pos_y = 40
         i = 0
         for cat in display_cats:
+            if game.clan.clan_settings["show fav"] and cat.favourite != 0:
+                self.fav[str(i)] = pygame_gui.elements.UIImage(
+                    scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))),
+                    pygame.transform.scale(
+                        pygame.image.load(
+                            f"resources/images/fav_marker_{cat.favourite}.png").convert_alpha(),
+                        (100, 100))
+                )
+                self.fav[str(i)].disable()
             self.cat_list_buttons["cat" + str(i)] = UISpriteButton(
                 scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))),
                 cat.sprite, cat_object=cat, manager=MANAGER)
@@ -312,10 +337,7 @@ class ChooseRebornScreen(Screens):
                 if not cat.dead and not cat.outside and not cat.ID == game.clan.your_cat.ID:
                     valid_mentors.append(cat)
             else:
-              
                 if cat.dead and not cat.ID == game.clan.your_cat.ID and not cat.ID == game.clan.instructor.ID and not cat.ID == game.clan.demon.ID and not cat.outside and cat.status not in ["loner", "kittypet", "rogue", "former Clancat"]:
-
-
                     valid_mentors.append(cat)
         
         return valid_mentors

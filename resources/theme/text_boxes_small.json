@@ -125,8 +125,9 @@
         }
     },
     "#text_box_22_horizcenter_spacing_95": {
-        "prototype": "#text_box_22_horizcenter",
+        "prototype": "#text_box_22",
         "misc": {
+            "text_horiz_alignment": "center",
             "line_spacing": "0.95"
         }
     },
@@ -134,6 +135,14 @@
         "prototype": "#text_box_22",
         "misc": {
             "text_horiz_alignment": "center",
+            "text_vert_alignment": "center",
+            "line_spacing": "0.95"
+        }
+    },
+    "#text_box_22_horizleft_vertcenter_spacing_95": {
+        "prototype": "#text_box_22",
+        "misc": {
+            "text_horiz_alignment": "left",
             "text_vert_alignment": "center",
             "line_spacing": "0.95"
         }

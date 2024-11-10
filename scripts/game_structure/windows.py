@@ -247,7 +247,6 @@ class SaveCheck(UIWindow):
             object_id="#text_box_30_horizcenter",
             container=self,
         )
-
         self.save_button = UIImageButton(
             scale(pygame.Rect((186, 230), (228, 60))),
             "",
@@ -739,7 +738,7 @@ class PronounCreation(UIWindow):
         # Add UITextBox for the sample text to the sub-container
         self.sample_text_box = pygame_gui.elements.UITextBox(
             self.get_sample_text(self.the_cat.pronouns[0]),
-            scale(pygame.Rect((18, 120), (394, 556))),
+            scale(pygame.Rect((18, 120), (394, 340))),
             object_id="#text_box_30_horizcenter",
             manager=MANAGER,
             container=self.demo_container,
@@ -756,7 +755,7 @@ class PronounCreation(UIWindow):
         # Adjusted positions for labels
         self.box_labels["subject"] = pygame_gui.elements.UITextBox(
             "Subject",
-            scale(pygame.Rect((175, 230), (200, 60))),
+            scale(pygame.Rect((175, 220), (200, 60))),
             object_id="#text_box_30_horizcenter_spacing_95",
             manager=MANAGER,
             container=self,
@@ -764,7 +763,7 @@ class PronounCreation(UIWindow):
 
         self.box_labels["object"] = pygame_gui.elements.UITextBox(
             "Object",
-            scale(pygame.Rect((425, 230), (200, 60))),
+            scale(pygame.Rect((425, 220), (200, 60))),
             object_id="#text_box_30_horizcenter_spacing_95",
             manager=MANAGER,
             container=self,
@@ -772,15 +771,15 @@ class PronounCreation(UIWindow):
 
         self.box_labels["poss"] = pygame_gui.elements.UITextBox(
             "Possessive",
-            scale(pygame.Rect((50, 410), (200, 60))),
+            scale(pygame.Rect((50, 340), (200, 60))),
             object_id="#text_box_30_horizcenter_spacing_95",
             manager=MANAGER,
             container=self,
         )
 
         self.box_labels["inposs"] = pygame_gui.elements.UITextBox(
-            "Independent<br>Possessive",
-            scale(pygame.Rect((250, 370), (300, 120))),
+            "Ind. Possessive",
+            scale(pygame.Rect((250, 340), (300, 60))),
             object_id="#text_box_30_horizcenter_spacing_95",
             manager=MANAGER,
             container=self,
@@ -788,21 +787,38 @@ class PronounCreation(UIWindow):
 
         self.box_labels["self"] = pygame_gui.elements.UITextBox(
             "Reflexive",
-            scale(pygame.Rect((550, 410), (200, 60))),
+            scale(pygame.Rect((550, 340), (200, 60))),
             object_id="#text_box_30_horizcenter_spacing_95",
             manager=MANAGER,
             container=self,
         )
+        
+        self.box_labels["parent"] = pygame_gui.elements.UITextBox(
+            "Parent",
+            scale(pygame.Rect((175, 460), (200, 60))),
+            object_id="#text_box_30_horizcenter_spacing_95",
+            manager=MANAGER,
+            container=self,
+        )
+
+        self.box_labels["sibling"] = pygame_gui.elements.UITextBox(
+            "Sibling",
+            scale(pygame.Rect((425, 460), (200, 60))),
+            object_id="#text_box_30_horizcenter_spacing_95",
+            manager=MANAGER,
+            container=self,
+        )
+
         self.checkbox_label["singular_label"] = pygame_gui.elements.UITextBox(
             "Singular",
-            scale(pygame.Rect((255, 570), (200, 60))),
+            scale(pygame.Rect((255, 580), (200, 60))),
             object_id="#text_box_30_horizcenter_spacing_95",
             manager=MANAGER,
             container=self,
         )
         self.checkbox_label["plural_label"] = pygame_gui.elements.UITextBox(
             "Plural",
-            scale(pygame.Rect((470, 570), (200, 60))),
+            scale(pygame.Rect((470, 580), (200, 60))),
             object_id="#text_box_30_horizcenter_spacing_95",
             manager=MANAGER,
             container=self,
@@ -810,14 +826,14 @@ class PronounCreation(UIWindow):
 
         # Row 1
         self.boxes["subject"] = pygame_gui.elements.UITextEntryLine(
-            scale(pygame.Rect((180, 290), (200, 60))),
+            scale(pygame.Rect((180, 280), (200, 60))),
             placeholder_text=self.the_cat.pronouns[0]["subject"],
             manager=MANAGER,
             container=self,
         )
 
         self.boxes["object"] = pygame_gui.elements.UITextEntryLine(
-            scale(pygame.Rect((430, 290), (200, 60))),
+            scale(pygame.Rect((430, 280), (200, 60))),
             placeholder_text=self.the_cat.pronouns[0]["object"],
             manager=MANAGER,
             container=self,
@@ -825,25 +841,44 @@ class PronounCreation(UIWindow):
 
         # Row 2
         self.boxes["poss"] = pygame_gui.elements.UITextEntryLine(
-            scale(pygame.Rect((50, 470), (200, 60))),
+            scale(pygame.Rect((50, 400), (200, 60))),
             placeholder_text=self.the_cat.pronouns[0]["poss"],
             manager=MANAGER,
             container=self,
         )
 
         self.boxes["inposs"] = pygame_gui.elements.UITextEntryLine(
-            scale(pygame.Rect((300, 470), (200, 60))),
+            scale(pygame.Rect((300, 400), (200, 60))),
             placeholder_text=self.the_cat.pronouns[0]["inposs"],
             manager=MANAGER,
             container=self,
         )
 
         self.boxes["self"] = pygame_gui.elements.UITextEntryLine(
-            scale(pygame.Rect((550, 470), (200, 60))),
+            scale(pygame.Rect((550, 400), (200, 60))),
             placeholder_text=self.the_cat.pronouns[0]["self"],
             manager=MANAGER,
             container=self,
         )
+
+        self.boxes["parent"] = pygame_gui.elements.UITextEntryLine(
+            scale(pygame.Rect((180, 520), (200, 60))),
+            placeholder_text=self.the_cat.pronouns[0]["parent"],
+            manager=MANAGER,
+            container=self,
+        )
+
+        self.boxes["sibling"] = pygame_gui.elements.UITextEntryLine(
+            scale(pygame.Rect((430, 520), (200, 60))),
+            placeholder_text=self.the_cat.pronouns[0]["sibling"],
+            manager=MANAGER,
+            container=self,
+        )
+
+        # setting parent/sibling text right away
+        # so they can go unedited when creating new pronouns
+        self.boxes["parent"].set_text(self.the_cat.pronouns[0]["parent"])
+        self.boxes["sibling"].set_text(self.the_cat.pronouns[0]["sibling"])
 
         # Save Confirmation
         self.pronoun_added = pygame_gui.elements.UITextBox(
@@ -866,7 +901,7 @@ class PronounCreation(UIWindow):
         )
         # Creating Checkmarks
         self.buttons["singular_unchecked"] = UIImageButton(
-            scale(pygame.Rect((225, 570), (68, 68))),
+            scale(pygame.Rect((225, 580), (68, 68))),
             "",
             object_id="#unchecked_checkbox",
             starting_height=2,
@@ -875,7 +910,7 @@ class PronounCreation(UIWindow):
             container=self,
         )
         self.buttons["singular_checked"] = UIImageButton(
-            scale(pygame.Rect((225, 570), (68, 68))),
+            scale(pygame.Rect((225, 580), (68, 68))),
             "",
             object_id="#checked_checkbox",
             starting_height=2,
@@ -885,7 +920,7 @@ class PronounCreation(UIWindow):
         )
 
         self.buttons["plural_unchecked"] = UIImageButton(
-            scale(pygame.Rect((455, 570), (68, 68))),
+            scale(pygame.Rect((455, 580), (68, 68))),
             "",
             object_id="#unchecked_checkbox",
             starting_height=2,
@@ -894,7 +929,7 @@ class PronounCreation(UIWindow):
             container=self,
         )
         self.buttons["plural_checked"] = UIImageButton(
-            scale(pygame.Rect((455, 570), (68, 68))),
+            scale(pygame.Rect((455, 580), (68, 68))),
             "",
             object_id="#checked_checkbox",
             starting_height=2,
@@ -931,6 +966,8 @@ class PronounCreation(UIWindow):
             "inposs": "",
             "self": "",
             "conju": 1,
+            "parent": "",
+            "sibling": ""
         }
 
         if sub(r"[^A-Za-z0-9 ]+", "", self.boxes["subject"].get_text()) != "":
@@ -953,6 +990,14 @@ class PronounCreation(UIWindow):
             pronoun_template["self"] = sub(
                 r"[^A-Za-z0-9 ]+", "", self.boxes["self"].get_text()
             )
+        if sub(r"[^A-Za-z0-9 ]+", "", self.boxes["parent"].get_text()) != "":
+            pronoun_template["parent"] = sub(
+                r"[^A-Za-z0-9 ]+", "", self.boxes["parent"].get_text()
+            )
+        if sub(r"[^A-Za-z0-9 ]+", "", self.boxes["sibling"].get_text()) != "":
+            pronoun_template["sibling"] = sub(
+                r"[^A-Za-z0-9 ]+", "", self.boxes["sibling"].get_text()
+            )
         if self.conju == 2:
             pronoun_template["conju"] = 2
         # if save button or add to cat is pressed, set 'name' as a counting number thing as an invisible identifier
@@ -973,6 +1018,8 @@ class PronounCreation(UIWindow):
         values.append(self.is_box_full(self.boxes["poss"]))
         values.append(self.is_box_full(self.boxes["inposs"]))
         values.append(self.is_box_full(self.boxes["self"]))
+        values.append(self.is_box_full(self.boxes["parent"]))
+        values.append(self.is_box_full(self.boxes["sibling"]))
         for value in values:
             if value is False:
                 return False
@@ -989,6 +1036,7 @@ class PronounCreation(UIWindow):
                 self.kill()
             elif event.ui_element == self.buttons["save_pronouns"]:
                 if self.are_boxes_full():
+                    print("SAVED")
                     new_pronouns = self.get_new_pronouns()
                     game.clan.custom_pronouns.append(new_pronouns)
                     self.pronoun_added.show()
@@ -1026,6 +1074,10 @@ class PronounCreation(UIWindow):
         text += poss.capitalize()
         text += f"That den is {pronouns['inposs']}. <br>"
         text += f"This cat hunts by {pronouns['self']}.<br>"
+
+        text += f"This cat wants to be a {pronouns['parent']} someday.<br>"
+        text += f"This cat is a good {pronouns['sibling']}.<br>"
+
         # Full Sentence Example, doesn't fit.
         """sentence = f"{pronouns['poss']} keen sense alerted {pronouns['object']} to prey and {pronouns['subject']} decided to treat {pronouns['self']} by catching prey that would be {pronouns['inposs']} alone to eat. "
         if pronouns["conju"] == 2:
@@ -1969,8 +2021,6 @@ class PickPath(UIWindow):
         self.mediator_button.enable()
         self.random_button.enable()
 
-
-
     def process_event(self, event):
         super().process_event(event)
 
@@ -1980,45 +2030,58 @@ class PickPath(UIWindow):
                 if event.ui_element == self.begin_anew_button:
                     game.switches['window_open'] = False
                     if game.clan.your_cat.moons < 12:
+<<<<<<< HEAD
                         game.clan.your_cat.status = 'healer apprentice'
                     else:
                         game.clan.your_cat.status = 'healer'
                     self.kill()
+=======
+                        status = 'medicine cat apprentice'
+                    else:
+                        status = 'medicine cat'
+>>>>>>> lifegen_origin/LifeGen-dev
                 elif event.ui_element == self.not_yet_button:
                     game.switches['window_open'] = False
                     if game.clan.your_cat.moons < 12:
-                        game.clan.your_cat.status = 'apprentice'
+                        status = 'apprentice'
                     else:
-                        game.clan.your_cat.status = 'warrior'
-                    self.kill()
+                        status = 'warrior'
                 elif event.ui_element == self.mediator_button:
                     game.switches['window_open'] = False
                     if game.clan.your_cat.moons < 12:
-                        game.clan.your_cat.status = 'mediator apprentice'
+                        status = 'mediator apprentice'
                     else:
-                        game.clan.your_cat.status = 'mediator'
-                    self.kill()
+                        status = 'mediator'
                 elif event.ui_element == self.queen_button:
                     game.switches['window_open'] = False
                     if game.clan.your_cat.moons < 12:
-                        game.clan.your_cat.status = "queen's apprentice"
+                        status = "queen's apprentice"
                     else:
-                        game.clan.your_cat.status = "queen"
-                    self.kill()
+                        status = "queen"
                 elif event.ui_element == self.random_button:
                     game.switches['window_open'] = False
                     if game.clan.your_cat.moons < 12:
+<<<<<<< HEAD
                         game.clan.your_cat.status = random.choice(['mediator apprentice','apprentice','healer apprentice', "queen's apprentice"])
                     else:
                         game.clan.your_cat.status = random.choice(['mediator','warrior','healer', "queen"])
                     
                     self.kill()
+=======
+                        status = random.choice(['mediator apprentice','apprentice','medicine cat apprentice', "queen's apprentice"])
+                    else:
+                        status = random.choice(['mediator','warrior','medicine cat', "queen"])
+                
+                game.clan.your_cat.status_change(status)
+                self.kill()
+>>>>>>> lifegen_origin/LifeGen-dev
         except:
             print('Error with PickPath window!')
+            
                 
 class DeathScreen(UIWindow):
     def __init__(self, last_screen):
-        super().__init__(scale(pygame.Rect((400, 400), (780, 500))),
+        super().__init__(scale(pygame.Rect((400, 400), (980, 500))),
                          window_display_title='You have died',
                          object_id='#game_over_window',
                          resizable=False)
@@ -2028,7 +2091,7 @@ class DeathScreen(UIWindow):
         self.last_screen = last_screen
         self.pick_path_message = UITextBoxTweaked(
             f"What will you do now?",
-            scale(pygame.Rect((40, 40), (670, -1))),
+            scale(pygame.Rect((40, 40), (870, -1))),
             line_spacing=1,
             object_id="#text_box_30_horizcenter",
             container=self
@@ -2059,12 +2122,21 @@ class DeathScreen(UIWindow):
             tool_tip_text='Revive'
         )
 
+        self.mediator_button4 = UIImageButton(
+            scale(pygame.Rect((670, 140), (150, 150))),
+            "",
+            object_id="#queen_activity_button",
+            container=self,
+            tool_tip_text="Start a new life"
+        )
+
         self.mediator_button3 = UIImageButton(
-            scale(pygame.Rect((130, 330), (498, 96))),
+            scale(pygame.Rect((230, 330), (498, 96))),
             "",
             object_id="#continue_dead_button",
             container=self,
         )
+
         
 
         self.begin_anew_button.enable()
@@ -2074,12 +2146,13 @@ class DeathScreen(UIWindow):
         if (game.clan.your_cat.dead_for >= game.config["fading"]["age_to_fade"]) and game.clan.your_cat.prevent_fading == False:
             self.mediator_button2.disable()
         self.mediator_button3.enable()
+        self.mediator_button4.enable()
 
     def process_event(self, event):
         super().process_event(event)
 
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
-            if event.ui_element == self.begin_anew_button:
+            if event.ui_element == self.begin_anew_button: 
                 game.last_screen_forupdate = None
                 game.switches['window_open'] = False
                 game.switches['cur_screen'] = 'start screen'
@@ -2089,6 +2162,7 @@ class DeathScreen(UIWindow):
                 self.mediator_button.kill()
                 self.mediator_button2.kill()
                 self.mediator_button3.kill()
+                self.mediator_button4.kill()
                 self.kill()
                 game.all_screens['events screen'].exit_screen()
             elif event.ui_element == self.mediator_button:
@@ -2101,6 +2175,7 @@ class DeathScreen(UIWindow):
                 self.mediator_button.kill()
                 self.mediator_button2.kill()
                 self.mediator_button3.kill()
+                self.mediator_button4.kill()
                 self.kill()
                 game.all_screens['events screen'].exit_screen()
             elif event.ui_element == self.mediator_button2:
@@ -2109,6 +2184,9 @@ class DeathScreen(UIWindow):
                 game.clan.your_cat.df = False
                 if not game.clan.your_cat.outside:
                     game.clan.your_cat.outside = False
+                if game.clan.your_cat.status in ["rogue", "kittypet", "former Clancat", "loner"]:
+                    game.clan.your_cat.status = "exiled"
+                    # cant play as an outsider yet gotta cheese it for now
                 game.clan.your_cat.dead_for = 0
                 game.clan.your_cat.moons+=1
                 game.clan.your_cat.update_mentor()
@@ -2144,6 +2222,7 @@ class DeathScreen(UIWindow):
                 self.mediator_button.kill()
                 self.mediator_button2.kill()
                 self.mediator_button3.kill()
+                self.mediator_button4.kill()
                 self.kill()
             elif event.ui_element == self.mediator_button3:
                 game.last_screen_forupdate = None
@@ -2155,14 +2234,28 @@ class DeathScreen(UIWindow):
                 self.mediator_button.kill()
                 self.mediator_button2.kill()
                 self.mediator_button3.kill()
+                self.mediator_button4.kill()
                 self.kill()
+            elif event.ui_element == self.mediator_button4:
+                game.last_screen_forupdate = None
+                game.switches['window_open'] = False
+                game.switches['cur_screen'] = "new life screen"
+                game.switches['continue_after_death'] = False
+                self.begin_anew_button.kill()
+                self.pick_path_message.kill()
+                self.mediator_button.kill()
+                self.mediator_button2.kill()
+                self.mediator_button3.kill()
+                self.mediator_button4.kill()
+                self.kill()
+                game.all_screens['events screen'].exit_screen()
                 
 class DeputyScreen(UIWindow):
     def __init__(self, last_screen):
         super().__init__(scale(pygame.Rect((500, 400), (600, 500))),
-                         window_display_title='Choose your deputy',
-                         object_id='#game_over_window',
-                         resizable=False)
+                        window_display_title='Choose your deputy',
+                        object_id='#game_over_window',
+                        resizable=False)
         self.set_blocking(True)
         game.switches['window_open'] = True
         self.clan_name = str(game.clan.name + 'Clan')

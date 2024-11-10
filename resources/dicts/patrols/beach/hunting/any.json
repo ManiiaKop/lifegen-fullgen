@@ -235,7 +235,7 @@
         "chance_of_success": 40,
         "success_outcomes": [
             {
-                "text": "app1 manages a skillful catch and brings it back to the camp to show everyone!",
+                "text": "app1 manages a skillful catch and brings it back to the camp to show everycat!",
                 "exp": 20,
                 "weight": 20,
                 "prey": ["large"],
@@ -1225,7 +1225,7 @@
             "all apprentices": [-1, -1]
         },
         "weight": 20,
-        "intro_text": "{PRONOUN/r_c/poss} eyes daring p_l to say no, r_c suggests hunting by the Twoleg dens.",
+        "intro_text": "{PRONOUN/r_c/poss/CAP} eyes daring p_l to say no, r_c suggests hunting by the Twoleg dens.",
         "decline_text": "On second thought, they decide to recline in their nests today instead.",
         "chance_of_success": 40,
         "success_outcomes": [
@@ -2003,7 +2003,7 @@
                 ]
             },
             {
-                "text": "s_c pounces on the octopus enthusiastically. It thwacks its tentacles around {PRONOUN/s_c/poss} head, trying to avoid {PRONOUN/s_c/poss} snapping muzzle, but s_c takes it in stride, prancing out of the rockpool to cheers and hilarity from the patrol, letting {PRONOUN/s_c/poss} friends guide {PRONOUN/s_c/object} and {PRONOUN/s_c/poss} semi-captured prey blindly back to camp as everyone murrps with laughter.",
+                "text": "s_c pounces on the octopus enthusiastically. It thwacks its tentacles around {PRONOUN/s_c/poss} head, trying to avoid {PRONOUN/s_c/poss} snapping muzzle, but s_c takes it in stride, prancing out of the rockpool to cheers and hilarity from the patrol, letting {PRONOUN/s_c/poss} friends guide {PRONOUN/s_c/object} and {PRONOUN/s_c/poss} semi-captured prey blindly back to camp as everycat murrps with laughter.",
                 "exp": 15,
                 "weight": 20,
                 "stat_trait": [

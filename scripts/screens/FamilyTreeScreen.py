@@ -14,6 +14,7 @@ class FamilyTreeScreen(Screens):
 
     def __init__(self, name=None):
         super().__init__(name)
+        self.fav = {}
         self.next_cat = None
         self.previous_cat = None
         self.grandkits_tab = None
@@ -76,7 +77,7 @@ class FamilyTreeScreen(Screens):
                 self.change_screen("profile screen")
                 game.switches["root_cat"] = None
             elif event.ui_element == self.previous_cat_button:
-                if isinstance(Cat.fetch_cat(self.previous_cat), Cat):
+                if isinstance(Cat.fetch_cat(self.previous_cat), Cat) and Cat.fetch_cat(self.previous_cat).moons >= 0:
                     game.switches["cat"] = self.previous_cat
                     game.switches["root_cat"] = Cat.all_cats[self.previous_cat]
                     self.exit_screen()
@@ -84,7 +85,7 @@ class FamilyTreeScreen(Screens):
                 else:
                     print("invalid previous cat", self.previous_cat)
             elif event.ui_element == self.next_cat_button:
-                if isinstance(Cat.fetch_cat(self.next_cat), Cat):
+                if isinstance(Cat.fetch_cat(self.next_cat), Cat) and Cat.fetch_cat(self.next_cat).moons >= 0:
                     game.switches["cat"] = self.next_cat
                     game.switches["root_cat"] = Cat.all_cats[self.next_cat]
                     self.exit_screen()
@@ -487,6 +488,10 @@ class FamilyTreeScreen(Screens):
             self.relation_elements[ele].kill()
         self.relation_elements = {}
 
+        for marker in self.fav:
+            self.fav[marker].kill()
+        self.fav = {}
+
         self.update_tab()
         if not self.current_group:
             self.relation_elements["no_cats_notice"] = pygame_gui.elements.UITextBox(
@@ -512,6 +517,8 @@ class FamilyTreeScreen(Screens):
             _kitty = Cat.fetch_cat(kitty)
             if not _kitty:
                 continue
+            if _kitty.moons < 0:
+                continue
             info_text = f"{str(_kitty.name)}"
             additional_info = self.the_cat.inheritance.get_cat_info(kitty)
             if len(additional_info["type"]) > 0:  # types is always real
@@ -528,6 +535,19 @@ class FamilyTreeScreen(Screens):
                     add_info = set(additional_info["additional"])  # remove duplicates
                     info_text += "\n"
                     info_text += ", ".join(add_info)
+
+            if game.clan.clan_settings["show fav"] and (not _kitty.faded and _kitty.favourite != 0):
+                try:
+                    self.fav[str(i)] = pygame_gui.elements.UIImage(
+                        scale(pygame.Rect((649 + pos_x, 970 + pos_y), (100, 100))),
+                        pygame.transform.scale(
+                            pygame.image.load(
+                                f"resources/images/fav_marker_{_kitty.favourite}.png").convert_alpha(),
+                            (100, 100))
+                    )
+                    self.fav[str(i)].disable()
+                except:
+                    pass
 
             self.relation_elements["cat" + str(i)] = UISpriteButton(
                 scale(pygame.Rect((649 + pos_x, 970 + pos_y), (100, 100))),
@@ -712,6 +732,8 @@ class FamilyTreeScreen(Screens):
                     and check_cat.outside == self.the_cat.outside
                     and check_cat.df == self.the_cat.df
                     and not check_cat.faded
+                    # LG
+                    and not check_cat.moons < 0
                 ):
                     previous_cat = check_cat.ID
 
@@ -723,6 +745,8 @@ class FamilyTreeScreen(Screens):
                     and check_cat.outside == self.the_cat.outside
                     and check_cat.df == self.the_cat.df
                     and not check_cat.faded
+                    # LG
+                    and not check_cat.moons < 0
                 ):
                     next_cat = check_cat.ID
 
@@ -752,6 +776,10 @@ class FamilyTreeScreen(Screens):
         for ele in self.cat_elements:
             self.cat_elements[ele].kill()
         self.cat_elements = {}
+
+        for marker in self.fav:
+            self.fav[marker].kill()
+        self.fav = {}
 
         for ele in self.relation_elements:
             self.relation_elements[ele].kill()

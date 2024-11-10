@@ -29,12 +29,12 @@
         "You and a_n decide to meet at the old Twoleg barn for some privacy. But as you share a moment, a patrol suddenly appears, having decided to check the barn for rogues."
     ],
     "fail breakup": [
-        "After learning of your affair, m_n breaks it off with you immediately. {PRONOUN/m_n/subject} {VERB/m_n/avoid/avoids} you whenever possible.",
+        "After learning of your affair, m_n breaks it off with you immediately. {PRONOUN/m_n/subject/CAP} {VERB/m_n/avoid/avoids} you whenever possible.",
         "After learning of your affair, m_n coldly brushes past you, refusing to look at or acknowledge you at all. It's safe to say that your relationship is over ... or at least, it will never be the same.",
         "You come back to your den that night to see that m_n has moved {PRONOUN/m_n/poss} nest away from yours. It seems like after {PRONOUN/m_n/subject} learned of your affair, {PRONOUN/m_n/subject} decided that you will no longer be mates.",
         "After learning of your affair, m_n bluntly states that it's best for the both of you to part ways.",
         "After learning of your affair, m_n publicly announces {PRONOUN/m_n/poss} decision to break up with you, citing your betrayal. The weight of the Clan's collective gaze is almost too much to bear.",
-        "After learning of your affair, m_n confronts you, {PRONOUN/m_n/poss} eyes filled with hurt and betrayal. {PRONOUN/m_n/subject/CAP} {VERB/m_n/declare/declares} that StarClan would never approve of your actions, and neither do {PRONOUN/m_n/subject}. With a heavy heart, {PRONOUN/m_n/subject} {VERB/m_n/end/ends} your relationship."
+        "After learning of your affair, m_n confronts you, {PRONOUN/m_n/poss} eyes filled with hurt and betrayal. {PRONOUN/m_n/subject/CAP} {VERB/m_n/declare/declares} that StarClan would never approve of your actions, and neither {VERB/m_c/do/does} {PRONOUN/m_n/subject}. With a heavy heart, {PRONOUN/m_n/subject} {VERB/m_n/end/ends} your relationship."
     ],
     "fail none": [
         "After learning of your affair, you plead with m_n to give you a second chance. After a while, m_n accepts, making you swear to never look at a_n again.",

@@ -555,7 +555,7 @@
     "plural": "indigo nylon collars",
     "singular": "indigo nylon collar"
   },
-  "DAISY": {
+  "DAISIES": {
     "default": "daisy",
     "plural": "daisies",
     "singular": "daisy"
@@ -625,7 +625,7 @@
     "plural": "wisteria strands",
     "singular": "wisteria strand"
   },
-  "CLOVER": {
+  "SINGULARCLOVER": {
     "default": "clover",
     "plural": "clovers",
     "singular": "clover"
@@ -860,7 +860,7 @@
     "plural": "rosy maple moth wings",
     "singular": "rosy maple moth wing"
   },
-  "MONARCH BUTTERFLY": {
+  "MONARCH": {
     "default": "monarch butterfly wings",
     "plural": "monarch butterfly wings",
     "singular": "monarch butterfly wing"
@@ -940,7 +940,7 @@
     "plural": "yellow ladybugs",
     "singular": "yellow ladybug"
   },
-  "RASPBERRY": {
+  "RASPBERRY2": {
     "default": "raspberry",
     "plural": "raspberries",
     "singular": "raspberry"
@@ -1179,6 +1179,11 @@
     "default": "fern wrap",
     "plural": "fern wraps",
     "singular": "fern wrap"
+  },
+  "BLEEDINGVINES": {
+    "default": "bleeding vine",
+    "plural": "bleeding vines",
+    "singular": "bleeding vine"
   },
   "BLEEDINGHEART": {
     "default": "bleeding heart",
@@ -1435,10 +1440,10 @@
     "plural": "yews",
     "singular": "yew"
   },
-  "HEATHER": {
-    "default": "heather",
-    "plural": "heathers",
-    "singular": "heather"
+  "CALLUNA": {
+    "default": "calluna",
+    "plural": "callunas",
+    "singular": "calluna"
   },
   "TEETHCOLLAR": {
     "default": "teeth collar",
@@ -1580,11 +1585,6 @@
     "plural": "heart charms",
     "singular": "heart charms"
   },
-  "CHIMES": {
-    "default": "chimes",
-    "plural": "chimes",
-    "singular": "chimes"
-  },
   "SPRINGFLOWERCORSAGE": {
     "default": "spring flower corsage",
     "plural": "spring flower corsages",
@@ -1634,5 +1634,80 @@
     "default": "bat harness",
     "plural": "bat harnesses",
     "singular": "bat harness"
+  },
+  "STARFLOWERS": {
+    "default": "star flowers",
+    "plural": "star flowers",
+    "singular": "star flower"
+  },
+  "HEARTLEAVES": {
+    "default": "heart leaves",
+    "plural": "heart leaves",
+    "singular": "heart leaves"
+  },
+  "YELLOWWISTERIA": {
+    "default": "yellow wisteria",
+    "plural": "yellow wisteria",
+    "singular": "yellow wisteria"
+  },
+  "LAVENDERHEADPIECE": {
+    "default": "lavender headpiece",
+    "plural": "lavender headpieces",
+    "singular": "lavender headpiece"
+  },
+  "LAVENDERANKLET": {
+    "default": "lavender anklet",
+    "plural": "lavender anklets",
+    "singular": "lavender anklet"
+  },
+  "LAVENDERTAILWRAP": {
+    "default": "lavender tailwrap",
+    "plural": "lavender tailwraps",
+    "singular": "lavender tailwrap"
+  },
+  "HOLLY2": {
+    "default": "holly",
+    "plural": "holly",
+    "singular": "holly"
+  },
+  "HOLLYVINES": {
+    "default": "holly vines",
+    "plural": "holly vines",
+    "singular": "holly vine"
+  },
+  "TOAST": {
+    "default": "toast",
+    "plural": "toast",
+    "singular": "toast"
+  },
+  "TOASTBERRY": {
+    "default": "berry toast",
+    "plural": "berry toasts",
+    "singular": "berry toast"
+  },
+  "TOASTGRAPE": {
+    "default": "grape toast",
+    "plural": "grape toasts",
+    "singular": "grape toast"
+  },
+  "TOASTNUTELLA": {
+    "default": "nutella toast",
+    "plural": "nutella toasts",
+    "singular": "nutella toast"
+  },
+  "TOASTPB": {
+    "default": "peanut butter toast",
+    "plural": "peanut butter toasts",
+    "singular": "peanut butter toast"
+  },
+  "WINTERSTOAT": {
+    "default": "winter stoat",
+    "plural": "winter stoats",
+    "singular": "winter stoat"
+  },
+  "BROWNSTOAT": {
+    "default": "brown stoat",
+    "plural": "brown stoats",
+    "singular": "brown stoat"
   }
 }

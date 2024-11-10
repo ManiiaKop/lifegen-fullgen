@@ -21,7 +21,7 @@
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "You gather everyone's input and propose a plan that takes into account the various perspectives. The Clan agrees on your plan, commending your mediation skills.",
+                "text": "You gather everycat's input and propose a plan that takes into account the various perspectives. The Clan agrees on your plan, commending your mediation skills.",
                 "exp": 15,
                 "weight": 20
             }
@@ -91,7 +91,7 @@
         "chance_of_success": 55,
         "success_outcomes": [
             {
-                "text": "You hear both sides and suggest a compromise that satisfies everyone. Your skills as a mediator are commended by the Clan.",
+                "text": "You hear both sides and suggest a compromise that satisfies everycat. Your skills as a mediator are commended by the Clan.",
                 "exp": 15,
                 "weight": 20
             }
@@ -116,7 +116,7 @@
             "lifegen"
         ],
         "tags": [],
-        "patrol_art": "lg_mediator_default",
+        "patrol_art": "life_mediator_og4",
         "min_cats": 1,
         "max_cats": 3,
         "min_max_status": {},
@@ -126,7 +126,7 @@
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "You suggest a friendly race to determine the fastest runner. The apprentices agree, the argument is settled, and everyone enjoys the race.",
+                "text": "You suggest a friendly race to determine the fastest runner. The apprentices agree, the argument is settled, and everycat enjoys the race.",
                 "exp": 10,
                 "weight": 20
             }
@@ -223,13 +223,13 @@
             "lifegen"
         ],
         "tags": [],
-        "patrol_art": "lg_mediator_r1",
+        "patrol_art": "lifegen_mediator_r1",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
         "intro_text": "You watch a hunting patrol return, anticipating a good hunt. At the end of the patrol an apprentice is trudging behind with their head low.",
-        "decline_text": "Everyone has a hard day, but they can rest now. It's time for you to tuck into a well deserved meal!",
+        "decline_text": "Everycat has a hard day, but they can rest now. It's time for you to tuck into a well deserved meal!",
         "chance_of_success": 55,
         "success_outcomes": [
             {
@@ -258,7 +258,7 @@
             "lifegen"
         ],
         "tags": [],
-        "patrol_art": "lg_mediator_r2",
+        "patrol_art": "lifegen_mediator_r2",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},

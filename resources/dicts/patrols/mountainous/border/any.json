@@ -257,7 +257,7 @@
         "max_cats": 6,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "On their way to mark the far corners of their mountain, r_c starts telling a story of their ancestors to keep every cat entertained.",
+        "intro_text": "On their way to mark the far corners of their mountain, r_c starts telling a story of their ancestors to keep everycat entertained.",
         "decline_text": "A shadow flies over them, and r_c's storytelling is forgotten as the patrol makes sure it wasn't an eagle.",
         "chance_of_success": 20,
         "success_outcomes": [
@@ -276,7 +276,7 @@
                 ]
             },
             {
-                "text": "s_c spins a vivid, engaging tale of a massive war their ancestors fought over the border the patrol is headed to mark. Not only does it keep every cat entertained, but it also emphasizes the importance of the patrol and motivates everyone.",
+                "text": "s_c spins a vivid, engaging tale of a massive war their ancestors fought over the border the patrol is headed to mark. Not only does it keep everycat entertained, but it also emphasizes the importance of the patrol and motivates everycat.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["SPEAKER,1"],
@@ -291,7 +291,7 @@
                 ]
             },
             {
-                "text": "It's a fantastic idea, making the patrol fly by as cats chat and laugh with their Clanmates, and everyone ends the day feeling much closer to each other.",
+                "text": "It's a fantastic idea, making the patrol fly by as cats chat and laugh with their Clanmates, and everycat ends the day feeling much closer to each other.",
                 "exp": 20,
                 "weight": 20,
                 "stat_trait": [

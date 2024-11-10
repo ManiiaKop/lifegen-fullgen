@@ -320,7 +320,32 @@
 		"random_status_constraint": [
 			"elder",
 			"mediator apprentice",
+<<<<<<< HEAD
 			"healer apprentice"
 		]
 	}
+=======
+			"medicine cat apprentice"
+		],
+		"reaction_random_cat": {
+			"dislike": "increase"
+		}
+	},
+    {
+        "id": "H1_dislikeincrease_low_kitten",
+        "intensity": "low",
+        "interactions": [
+            "m_c wails that r_c isn't their favorite queen anymore after being scolded."
+        ],
+        "main_status_constraint": [
+            "kitten"
+        ],
+        "random_status_constraint": [
+            "queen"
+        ],
+		"reaction_random_cat": {
+			"dislike": "increase"
+		}
+    }
+>>>>>>> lifegen_origin/LifeGen-dev
 ]

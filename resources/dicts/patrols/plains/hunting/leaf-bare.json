@@ -30,7 +30,7 @@
                 ]
             },
             {
-                "text": "Everyone looks admiringly at s_c by the end of the afternoon. Every cat carries something home, but nearly all of it was caught by s_c.",
+                "text": "Everycat looks admiringly at s_c by the end of the afternoon. Everycat carries something home, but nearly all of it was caught by s_c.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["HUNTER,2"],
@@ -46,7 +46,7 @@
                 ]
             },
             {
-                "text": "s_c really keeps the patrol on task and motivated through the sharp cold of the leaf-bare morning, not through authority or commands, but with a gentle voice and compassionate understanding that encourages every cat to do their best for c_n.",
+                "text": "s_c really keeps the patrol on task and motivated through the sharp cold of the leaf-bare morning, not through authority or commands, but with a gentle voice and compassionate understanding that encourages everycat to do their best for c_n.",
                 "exp": 10,
                 "weight": 20,
                 "stat_trait": ["altruistic", "compassionate", "empathetic", "faithful", "loving"],
@@ -178,7 +178,7 @@
                 ]
             },
             {
-                "text": "A storm descends, sudden and violent, putting an end to any other thoughts but survival. s_c keeps everyone's spirits up as the patrol hides inside the mouth to an abandoned badger sett, until everyone is talking, shaky and unhappy, but keeping each other's spirits up.",
+                "text": "A storm descends, sudden and violent, putting an end to any other thoughts but survival. s_c keeps everycat's spirits up as the patrol hides inside the mouth to an abandoned badger sett, until everycat is talking, shaky and unhappy, but keeping each other's spirits up.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": ["SPEAKER,2"],
@@ -193,7 +193,7 @@
                 ]
             },
             {
-                "text": "A storm descends, sudden and violent, putting an end to any other thoughts but survival. As the cats hide from the wind in a stream gully, s_c keeps an eye out for everyone. It's a long couple of hours, but with gentle understanding and compassion the cats make it through safely, closer than ever afterwards.",
+                "text": "A storm descends, sudden and violent, putting an end to any other thoughts but survival. As the cats hide from the wind in a stream gully, s_c keeps an eye out for everycat. It's a long couple of hours, but with gentle understanding and compassion the cats make it through safely, closer than ever afterwards.",
                 "exp": 10,
                 "weight": 20,
                 "stat_trait": ["altruistic", "compassionate", "empathetic", "faithful", "loving"],
@@ -1380,7 +1380,7 @@
                 ]
             },
             {
-                "text": "Oh. This is what those lessons with the high hunting pounce were for. app1 positions themselves and launches up, diving gracefully into the snow. After a heartbeat, {PRONOUN/m_c/subject} {VERB/m_c/pop/pops} back up, sending a flurry of snow everywhere and laughing excitedly - {PRONOUN/m_c/subject} can feel a mouse pinned under {PRONOUN/m_c/poss} paws!",
+                "text": "Oh. This is what those lessons with the high hunting pounce were for. app1 positions themselves and launches up, diving gracefully into the snow. After a heartbeat, {PRONOUN/app1/subject} {VERB/app1/pop/pops} back up, sending a flurry of snow everywhere and laughing excitedly - {PRONOUN/app1/subject} can feel a mouse pinned under {PRONOUN/app1/poss} paws!",
                 "exp": 20,
                 "weight": 5,
                 "prey": ["medium"],
@@ -1552,7 +1552,7 @@
                 ]
             },
             {
-                "text": "These are the times that it really pays to have a hunter of s_c's caliber on the patrol - they really go above and beyond, impressing everyone and leaving a trail of terror among the local mice.",
+                "text": "These are the times that it really pays to have a hunter of s_c's caliber on the patrol - they really go above and beyond, impressing everycat and leaving a trail of terror among the local mice.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["HUNTER,1"],
@@ -2907,7 +2907,7 @@
         },
         "weight": 20,
         "intro_text": "app1 bounds out of camp, determined to show off to {PRONOUN/app1/poss} older siblings!",
-        "decline_text": "And everyone is immediately recalled - the camp needs new nesting materials, not more prey.",
+        "decline_text": "And everycat is immediately recalled - the camp needs new nesting materials, not more prey.",
         "chance_of_success": 30,
         "relationship_constraint": ["siblings"],
         "success_outcomes": [
@@ -3412,7 +3412,7 @@
                 ]
             },
             {
-                "text": "The hunting patrol isn't very successful, yet matters not a whit to any of the warriors, because p_l makes a joke that {PRONOUN/p_l/subject} {VERB/p_l/think/thinks} is funny but that's always gotten on r_c's nerves and suddenly everyone's acting like apprentices again, snippy, immature, and irritable.",
+                "text": "The hunting patrol isn't very successful, yet matters not a whit to any of the warriors, because p_l makes a joke that {PRONOUN/p_l/subject} {VERB/p_l/think/thinks} is funny but that's always gotten on r_c's nerves and suddenly everycat's acting like apprentices again, snippy, immature, and irritable.",
                 "exp": 20,
                 "weight": 5,
                 "prey": ["small"],

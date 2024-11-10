@@ -65,7 +65,7 @@
                 ]
             },
             {
-                "text": "s_c makes sure everyone gets a good basking spot as the cats pause for a little break before resuming their herb-gathering.",
+                "text": "s_c makes sure everycat gets a good basking spot as the cats pause for a little break before resuming their herb-gathering.",
                 "exp": 20,
                 "weight": 20,
                 "stat_trait": [
@@ -130,7 +130,7 @@
                 ]
             },
             {
-                "text": "s_c makes sure everyone gets a good basking spot as the cats pause for a little break before resuming their herb-gathering.",
+                "text": "s_c makes sure everycat gets a good basking spot as the cats pause for a little break before resuming their herb-gathering.",
                 "exp": 20,
                 "weight": 20,
                 "stat_trait": [
@@ -1755,7 +1755,7 @@
                 ]
             },
             {
-                "text": "The patrol decides to collect herbs first, so they have time to idle and chat before heading back to camp. They spend some time in a warm sunbeam, sharing tongues and sunning themselves, and by the time they're ready to go home, every cat is feeling closer to one another.",
+                "text": "The patrol decides to collect herbs first, so they have time to idle and chat before heading back to camp. They spend some time in a warm sunbeam, sharing tongues and sunning themselves, and by the time they're ready to go home, everycat is feeling closer to one another.",
                 "exp": 30,
                 "weight": 5,
                 "herbs": ["random_herbs"],
@@ -1817,7 +1817,11 @@
             "normal adult": [-1, -1]
         },
         "weight": 5,
+<<<<<<< HEAD
         "intro_text": "The apprentices strolls through c_n's territory, chatting amicably amongst themselves. The senior healers are all busy back at camp, so the young cats get the chance to be out on their own today, which has everyone excited!",
+=======
+        "intro_text": "The apprentices strolls through c_n's territory, chatting amicably amongst themselves. The senior medicine cats are all busy back at camp, so the young cats get the chance to be out on their own today, which has everycat excited!",
+>>>>>>> lifegen_origin/LifeGen-dev
         "decline_text": "Before they get very far, one of their Clanmates catches up to inform them that they're wanted back at camp. Oh well, maybe they'll get the chance again another day.",
         "chance_of_success": 30,
         "success_outcomes": [
@@ -1861,7 +1865,7 @@
                 "weight": 20
             },
             {
-                "text": "The apprentices get easily distracted without a more experienced cat to keep them on track. They return empty pawed, much to the dissapointment of the clan.",
+                "text": "The apprentices get easily distracted without a more experienced cat to keep them on track. They return empty pawed, much to the dissapointment of the Clan.",
                 "exp": 0,
                 "art": "gen_train_patrolapprenticesessionfail",
                 "weight": 5,
@@ -1966,7 +1970,11 @@
         "relationship_constraint": ["siblings", "platonic_20"],
         "success_outcomes": [
             {
+<<<<<<< HEAD
                 "text": "p_l and app2 walk with their tails entwined and pelts brushing together, thrilled to be able to patrol together. p_l doesn't regret becoming a healer, but {PRONOUN/p_l/subject} {VERB/p_l/do/does} feel secluded at times, watching app2 train and patrol with everyone. The siblings make the most of their time together, returning home side-by-side with their jaws full of herbs.",
+=======
+                "text": "p_l and app2 walk with their tails entwined and pelts brushing together, thrilled to be able to patrol together. p_l doesn't regret becoming a medicine cat, but {PRONOUN/p_l/subject} {VERB/p_l/do/does} feel secluded at times, watching app2 train and patrol with everycat. The siblings make the most of their time together, returning home side-by-side with their jaws full of herbs.",
+>>>>>>> lifegen_origin/LifeGen-dev
                 "exp": 20,
                 "weight": 20,
                 "herbs": ["random_herbs"],
@@ -2065,7 +2073,11 @@
         "relationship_constraint": ["siblings", "platonic_20"],
         "success_outcomes": [
             {
+<<<<<<< HEAD
                 "text": "p_l and r_c walk with their tails entwined and pelts brushing together, thrilled to be able to patrol together. p_l doesn't regret becoming a healer, but {PRONOUN/p_l/subject} {VERB/p_l/do/does} feel secluded at times, watching r_c train and patrol with everyone. The siblings make the most of their time together, returning home side-by-side with their jaws full of herbs.",
+=======
+                "text": "p_l and r_c walk with their tails entwined and pelts brushing together, thrilled to be able to patrol together. p_l doesn't regret becoming a medicine cat, but {PRONOUN/p_l/subject} {VERB/p_l/do/does} feel secluded at times, watching r_c train and patrol with everycat. The siblings make the most of their time together, returning home side-by-side with their jaws full of herbs.",
+>>>>>>> lifegen_origin/LifeGen-dev
                 "exp": 20,
                 "weight": 20,
                 "herbs": ["random_herbs"],
@@ -2210,7 +2222,7 @@
                 ]
             },
             {
-                "text": "p_l sits down and motions for app1 to join {PRONOUN/p_l/object}, looking at {PRONOUN/app1/object} inquisitively. app1 tentatively explains that {PRONOUN/app1/subject}{VERB/app1/'re/'s} curious about what it's like to get a vision from StarClan. p_l ponders how to explain it, and settles for a vague description and iterating that it's different for every cat who has one. app1 seems a bit confused, but grateful.",
+                "text": "p_l sits down and motions for app1 to join {PRONOUN/p_l/object}, looking at {PRONOUN/app1/object} inquisitively. app1 tentatively explains that {PRONOUN/app1/subject}{VERB/app1/'re/'s} curious about what it's like to get a vision from StarClan. p_l ponders how to explain it, and settles for a vague description and iterating that it's different for everycat who has one. app1 seems a bit confused, but grateful.",
                 "exp": 20,
                 "weight": 20,
                 "herbs": ["random_herbs"],

@@ -1436,7 +1436,7 @@
         "chance_of_success": 30,
         "success_outcomes": [
             {
-                "text": "Daisies may seem like part of the everyday carpet of greenery, present everywhere from rocks to fields to nestled at the foot of trees, but that doesn't make their leaves any less useful. And there's some dandelion nearby - perfect. With a larger patrol, the cats bring back a good haul, and p_l makes sure to thank everyone for their assistance.",
+                "text": "Daisies may seem like part of the everyday carpet of greenery, present everywhere from rocks to fields to nestled at the foot of trees, but that doesn't make their leaves any less useful. And there's some dandelion nearby - perfect. With a larger patrol, the cats bring back a good haul, and p_l makes sure to thank everycat for their assistance.",
                 "exp": 10,
                 "weight": 20,
                 "herbs": ["daisy", "dandelion"],
@@ -2013,7 +2013,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "Elder leaves being used to <i>soothe</i> sprains, and elder leaves having to be gathered in a way that <i>risks</i> sprains, is truly one of StarClan's little ironies, p_l reflects. They share the little joke with the patrol, and the cats <i>murrp</i> with amusement, but it does also remind everyone to be careful as they strip leaves from the tree.",
+                "text": "Elder leaves being used to <i>soothe</i> sprains, and elder leaves having to be gathered in a way that <i>risks</i> sprains, is truly one of StarClan's little ironies, p_l reflects. They share the little joke with the patrol, and the cats <i>murrp</i> with amusement, but it does also remind everycat to be careful as they strip leaves from the tree.",
                 "exp": 10,
                 "weight": 20,
                 "herbs": ["elder_leaves", "juniper"],
@@ -2507,7 +2507,7 @@
                 ]
             },
             {
-                "text": "s_c trots off to a good juniper tree, hopping onto a low branch to harvest its needles. From their vantage point, they are able to reach a low oak branch with a collection of large, deep green oak leaves. They take the opportunity to gather a pawful. As they work, they chat to app1 about juniper's calming effects and the importance of oak leaves in curing deadly infections. Juniper is one of the few herbs their Clanmates compete to go on patrols to help collect, everyone likes the scent.",
+                "text": "s_c trots off to a good juniper tree, hopping onto a low branch to harvest its needles. From their vantage point, they are able to reach a low oak branch with a collection of large, deep green oak leaves. They take the opportunity to gather a pawful. As they work, they chat to app1 about juniper's calming effects and the importance of oak leaves in curing deadly infections. Juniper is one of the few herbs their Clanmates compete to go on patrols to help collect, everycat likes the scent.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["SENSE,2"],

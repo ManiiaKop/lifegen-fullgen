@@ -31,6 +31,7 @@ class ChooseMentorScreen(Screens):
 
     def __init__(self, name=None):
         super().__init__(name)
+        self.fav = {}
         self.list_page = None
         self.next_cat = None
         self.previous_cat = None
@@ -279,6 +280,10 @@ class ChooseMentorScreen(Screens):
             self.cat_list_buttons[ele].kill()
         self.cat_list_buttons = {}
 
+        for marker in self.fav:
+            self.fav[marker].kill()
+        self.fav = {}
+
         for ele in self.apprentice_details:
             self.apprentice_details[ele].kill()
         self.apprentice_details = {}
@@ -418,7 +423,7 @@ class ChooseMentorScreen(Screens):
                 and check_cat.ID != game.clan.instructor.ID
                 and not check_cat.exiled
                 and check_cat.status
-                in ["apprentice", "healer apprentice", "mediator apprentice"]
+                in ["apprentice", "healer apprentice", "mediator apprentice", "queen's apprentice"]
                 and check_cat.df == self.the_cat.df
             ):
                 self.previous_cat = check_cat.ID
@@ -430,7 +435,7 @@ class ChooseMentorScreen(Screens):
                 and check_cat.ID != game.clan.instructor.ID
                 and not check_cat.exiled
                 and check_cat.status
-                in ["apprentice", "healer apprentice", "mediator apprentice"]
+                in ["apprentice", "healer apprentice", "mediator apprentice", "queen's apprentice"]
                 and check_cat.df == self.the_cat.df
             ):
                 self.next_cat = check_cat.ID
@@ -565,10 +570,23 @@ class ChooseMentorScreen(Screens):
             self.cat_list_buttons[ele].kill()
         self.cat_list_buttons = {}
 
+        for marker in self.fav:
+            self.fav[marker].kill()
+        self.fav = {}
+
         pos_x = 0
         pos_y = 40
         i = 0
         for cat in display_cats:
+            if game.clan.clan_settings["show fav"] and cat.favourite != 0:
+                self.fav[str(i)] = pygame_gui.elements.UIImage(
+                    scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))),
+                    pygame.transform.scale(
+                        pygame.image.load(
+                            f"resources/images/fav_marker_{cat.favourite}.png").convert_alpha(),
+                        (100, 100))
+                )
+                self.fav[str(i)].disable()
             self.cat_list_buttons["cat" + str(i)] = UISpriteButton(
                 scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))),
                 cat.sprite,
@@ -695,7 +713,7 @@ class ChooseMentorScreen(Screens):
                 if is_valid:
                     valid_mediator_mentors.append(cat)
 
-            return potential_mediator_mentors
+            return valid_mediator_mentors
         
         elif self.the_cat.status == "queen's apprentice":
             for cat in potential_queen_mentors:
@@ -712,9 +730,9 @@ class ChooseMentorScreen(Screens):
 
                 # Add to valid or invalid list based on checks
                 if is_valid:
-                    potential_queen_mentors.append(cat)
+                    valid_queen_mentors.append(cat)
 
-            return potential_queen_mentors
+            return valid_queen_mentors
         
         return []
 

@@ -1558,7 +1558,7 @@
         "chance_of_success": 30,
         "success_outcomes": [
             {
-                "text": "Daisies may seem like part of the everyday ground cover of greenery, present everywhere from rocks to fields to nestled at the foot of trees, but that doesn't make their leaves any less useful. With a larger patrol, the cats bring back a good haul, and p_l makes sure to thank everyone for their assistance.",
+                "text": "Daisies may seem like part of the everyday ground cover of greenery, present everywhere from rocks to fields to nestled at the foot of trees, but that doesn't make their leaves any less useful. With a larger patrol, the cats bring back a good haul, and p_l makes sure to thank everycat for their assistance.",
                 "exp": 10,
                 "weight": 20,
                 "herbs": ["daisy"],
@@ -2173,7 +2173,7 @@
         "chance_of_success": 30,
         "success_outcomes": [
             {
-                "text": "Elder leaves being used to <i>soothe</i> sprains and elder leaves having to be gathered in a way that <i>risks</i> sprains is truly one of StarClan's little ironies, p_l reflects. {PRONOUN/p_l/subject/CAP} {VERB/p_l/share/shares} the little joke with the patrol. The other cats murrp with amusement, but it does also remind everyone to be careful as they strip leaves from the tree.",
+                "text": "Elder leaves being used to <i>soothe</i> sprains and elder leaves having to be gathered in a way that <i>risks</i> sprains is truly one of StarClan's little ironies, p_l reflects. {PRONOUN/p_l/subject/CAP} {VERB/p_l/share/shares} the little joke with the patrol. The other cats murrp with amusement, but it does also remind everycat to be careful as they strip leaves from the tree.",
                 "exp": 10,
                 "weight": 20,
                 "herbs": ["elder_leaves"],
@@ -2758,7 +2758,7 @@
                 ]
             },
             {
-                "text": "s_c trots off to a good juniper tree, hopping onto a low branch to harvest its needles. As {PRONOUN/s_c/subject} {VERB/s_c/work/works}, {PRONOUN/s_c/subject} {VERB/s_c/chat/chats} to app1 about juniper's calming effects. This is one of the few herbs their Clanmates compete to go on patrols to help collect, as everyone enjoys the scent.",
+                "text": "s_c trots off to a good juniper tree, hopping onto a low branch to harvest its needles. As {PRONOUN/s_c/subject} {VERB/s_c/work/works}, {PRONOUN/s_c/subject} {VERB/s_c/chat/chats} to app1 about juniper's calming effects. This is one of the few herbs their Clanmates compete to go on patrols to help collect, as everycat enjoys the scent.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["SENSE,2"],

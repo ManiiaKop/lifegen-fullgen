@@ -166,5 +166,21 @@
 			"bloodthirsty",
 			"vengeful"
 		]
+	},
+	{
+		"id": "guy_trust_queen_inc_low1",
+		"interactions": [
+			"m_c thinks r_c was too rough with a kitten.",
+			"m_c doesn't think r_c deserves c_nClan's adoration.",
+			"m_c hopes r_c resigns if {PRONOUN/m_c/subject} {VERB/m_c/have/has} kittens.",
+			"m_c doesn't let r_c watch the kits."
+		],
+		"random_status_constraint": [
+			"queen apprentice",
+			"queen"
+		],
+		"reaction_random_cat": {
+			"trust": "decrease"
+		}
 	}
 ]

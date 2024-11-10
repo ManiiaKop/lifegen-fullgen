@@ -53,7 +53,7 @@
 		"id": "group_3_leader_neg1",
 		"cat_amount": 3,
 		"interactions": [
-			"After having r_c2 challenge {PRONOUN/m_c/object}, m_c commands r_c1 to help {PRONOUN/m_c/object} punish r_c2. Everyone ends up hurt, though m_c feels {PRONOUN/m_c/subject} can trust r_c1 more."
+			"After having r_c2 challenge {PRONOUN/m_c/object}, m_c commands r_c1 to help {PRONOUN/m_c/object} punish r_c2. Everycat ends up hurt, though m_c feels {PRONOUN/m_c/subject} can trust r_c1 more."
 		],
 		"get_injuries": {
 			"m_c": {
@@ -136,9 +136,7 @@
 		"id": "group_3_leader_neg2",
 		"cat_amount": 3,
 		"interactions": [
-			"m_c and r_c1 discuss where they should be marking the border. r_c2 overhears, and disagrees with their decision, causing m_c and r_c1 to sneer at them in distaste.",
-			"Ensuring that {PRONOUN/m_c/poss} warriors meet {PRONOUN/m_c/poss} high standards, m_c directs r_c1 and r_c2 to combat a rival Clan cat. As r_c1 savagely tears the suffering cat apart, r_c2 is struck by a sudden surge of conscience. Ignoring the potential consequences-or perhaps despite them-r_c2 throws {PRONOUN/r_c2/self} against the stunned warrior, yowling for the victim to escape. After prying r_c2 from {PRONOUN/m_c/poss} loyal cat, m_c scowls silently at the trembling traitor.",
-			"m_c sets a despicable ambush for a loner found lounging uninvited in the territories. With a vicious grin etched on {PRONOUN/m_c/poss} muzzle, m_c commands r_c1 and r_c2 to 'teach a lesson' to the quivering loner. r_c1, with a cruel pleasure, treats the weeping loner like prey, mercilessly using {PRONOUN/r_c1/poss} claws to dissect them. However, r_c2, who hangs back, watches the horrifying scene unfold with growing dismay. Without fully realizing what {PRONOUN/r_c2/subject} is doing, r_c2 slams into {PRONOUN/r_c2/poss} Clanmate, knocking the startled cat away from the loner and yowling for the loner to flee. Pinned under the seething claws of a furious m_c, r_c2 knows {PRONOUN/r_c2/subject} will be the next target..."
+			"m_c and r_c1 discuss where they should be marking the border. r_c2 overhears, and disagrees with their decision, causing m_c and r_c1 to sneer at them in distaste."
 		],
 		"status_constraint": {
 			"m_c": [

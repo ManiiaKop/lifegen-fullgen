@@ -110,10 +110,14 @@
             "Wishes {PRONOUN/m_c/subject} understood what r_c is doing"
         ],
         "random_status_constraint": [
+<<<<<<< HEAD
             "healer"
         ],
         "random_living_status": [
             "living"
+=======
+            "medicine cat"
+>>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -128,10 +132,14 @@
             "Wishes {PRONOUN/m_c/subject} understood what r_c is doing"
         ],
         "random_status_constraint": [
+<<<<<<< HEAD
             "healer apprentice"
         ],
         "random_living_status": [
             "living"
+=======
+            "medicine cat apprentice"
+>>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -834,7 +842,7 @@
             "Trains all day long to prove {PRONOUN/m_c/self} to be as good as any other apprentice",
             "Is worried {PRONOUN/m_c/subject} will never fit in",
             "Refuses to let {PRONOUN/m_c/poss} past kittypet life hold {PRONOUN/m_c/object} back",
-            "Wants to play with {PRONOUN/r_c/poss} old kittypet toys",
+            "Wants to play with {PRONOUN/m_c/poss} old kittypet toys",
             "Avoids the Twoleg place to prove {PRONOUN/m_c/poss} loyalty"
         ],
         "main_backstory_constraint": [
@@ -848,9 +856,6 @@
         ],
         "main_status_constraint": [
             "apprentice"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -881,16 +886,13 @@
         ],
         "random_backstory_constraint": [
             "clanborn"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
         "id": "gen_former_kittypet_medcat",
         "thoughts": [
-            "Uses knowledge from {PRONOUN/r_c/poss} time with Twolegs to improve a healing method",
-            "Wonders what {PRONOUN/r_c/poss} old vet would do for greencough",
+            "Uses knowledge from {PRONOUN/m_c/poss} time with Twolegs to improve a healing method",
+            "Wonders what {PRONOUN/m_c/poss} old vet would do for greencough",
             "Is annoyed by Clan gossip surrounding {PRONOUN/m_c/poss} past and {PRONOUN/m_c/poss} connection to StarClan",
             "Knows a great garden in the Twoleg place for gathering catmint",
             "Wishes {PRONOUN/m_c/subject} could get {PRONOUN/m_c/poss} paws on the wrappings the vet uses"
@@ -905,10 +907,14 @@
             "guided1"
         ],
         "main_status_constraint": [
+<<<<<<< HEAD
             "healer"
         ],
         "random_living_status": [
             "living"
+=======
+            "medicine cat"
+>>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -969,9 +975,6 @@
         ],
         "random_status_constraint": [
             "kitten"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -1321,9 +1324,6 @@
         ],
         "random_status_constraint": [
             "apprentice"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -1588,9 +1588,6 @@
         ],
         "main_trait_constraint": [
             "calm"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -1679,9 +1676,6 @@
         ],
         "main_trait_constraint": [
             "compassionate"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -1816,9 +1810,6 @@
         },
         "random_age_constraint": [
             "any"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -1836,9 +1827,6 @@
         "random_age_constraint": [
             "newborn",
             "kitten"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -1871,9 +1859,6 @@
         ],
         "random_age_constraint": [
             "any"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -1892,9 +1877,6 @@
         "random_age_constraint": [
             "newborn",
             "kitten"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -1914,9 +1896,6 @@
             "apprentice",
             "healer apprentice",
             "mediator apprentice"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -1939,9 +1918,6 @@
         },
         "random_age_constraint": [
             "any"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -1963,9 +1939,6 @@
         ],
         "random_age_constraint": [
             "any"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -2001,9 +1974,6 @@
         },
         "random_age_constraint": [
             "any"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -2020,9 +1990,6 @@
         },
         "random_age_constraint": [
             "kitten"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -2043,9 +2010,6 @@
         ],
         "random_age_constraint": [
             "any"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -2065,9 +2029,6 @@
             "apprentice",
             "healer apprentice",
             "mediator apprentice"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -2107,9 +2068,6 @@
         },
         "random_age_constraint": [
             "any"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -2134,9 +2092,6 @@
         ],
         "random_age_constraint": [
             "any"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -2170,11 +2125,16 @@
             "adolescent"
         ],
         "random_status_constraint": [
+<<<<<<< HEAD
             "healer apprentice",
             "healer"
         ],
         "random_living_status": [
             "living"
+=======
+            "medicine cat apprentice",
+            "medicine cat"
+>>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -2201,9 +2161,6 @@
             "adult",
             "senior adult",
             "senior"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -2230,9 +2187,6 @@
         },
         "random_age_constraint": [
             "any"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -2273,7 +2227,7 @@
     {
         "id": "wasting_disease_adolescent_to_alive_gen",
         "thoughts": [
-            "Is frustrated by everyone's concern for {PRONOUN/m_c/poss} health",
+            "Is frustrated by everycat's concern for {PRONOUN/m_c/poss} health",
             "Daydreams about being leader someday"
         ],
         "perm_conditions": {
@@ -2398,7 +2352,7 @@
             "Fell into an unknown river while exploring and got wet!",
             "Scraped up their paws while exploring the wilderness",
             "Snuck outside Clan territory to explore",
-            "Found an abandoned twoleg den"
+            "Found an abandoned Twoleg den"
         ],
         "main_age_constraint": [
             "adolescent",
@@ -2464,7 +2418,7 @@
             "Asks about weaving some leaves into the den walls",
             "Asks r_c to look out for some nice pebbles",
             "Places some pebbles at camp entrance to look like a path",
-            "Is jealous of some glowy little suns that twolegs have attached to string",
+            "Is jealous of some glowy little suns that Twolegs have attached to string",
             "Thinks the camp looks pretty!"
         ],
         "main_age_constraint": [
@@ -2478,6 +2432,25 @@
             "ARTISTAN,1"
         ],
         "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "constantly_dizzy_gen_to_alive_gen",
+        "thoughts": [
+            "Stood up too fast again",
+            "Assures r_c {PRONOUN/m_c/poss} dizzy spell will end in a moment",
+            "Ignores the fuzzy spots on the edge of {PRONOUN/m_c/poss} vision",
+            "Feels like the world is moving a little too fast",
+            "Tells r_c that {PRONOUN/m_c/subject} {VERB/m_c/need/needs} to sit down for a second",
+            "Finds the sun to be too bright today"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "constantly dizzy"
+            ]
+        },
+        "random_living_constraint": [
             "living"
         ]
     },
@@ -2589,7 +2562,7 @@
             "Is singing along with the birds in the trees",
             "Is delighting the warriors with a concert",
             "Is singing sweetly to the sick cats in the medicine den",
-            "Mews along to the sound coming from a twoleg metal sound box",
+            "Mews along to the sound coming from a Twoleg metal sound box",
             "Sings a lullaby that they remember from the nursery to {PRONOUN/m_c/self}",
             "Comes up with a new song",
             "Sings a tune to remind {PRONOUN/m_c/self} what they're doing",
@@ -2707,16 +2680,16 @@
             "Voices {PRONOUN/m_c/poss} support for r_c",
             "Comforts a Clanmate after a hard loss",
             "Visits the sick in the medicine den",
-            "Seems to put everyone at ease",
+            "Seems to put everycat at ease",
             "Wraps r_c in a comforting hug",
             "Offers silent support",
             "Listens to r_c as they voice {PRONOUN/r_c/poss} troubles",
             "Checks in on r_c",
             "Comforts the kits during a storm",
-            "Licks r_c's ear after {PRONOUN/m_c/subject} see that {PRONOUN/r_c/subject}'re sad",
+            "Licks r_c's ear after {PRONOUN/m_c/subject} {VERB/m_c/see/sees} that {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} sad",
             "Tells r_c about a time that {PRONOUN/m_c/subject} struggled in a hunt",
             "Quietly listens while r_c vents ",
-            "Offers to move {PRONOUN/m_c/poss} nest closer to r_c's nest so {PRONOUN/r_c/subject} don't have to be alone",
+            "Offers to move {PRONOUN/m_c/poss} nest closer to r_c's nest so {PRONOUN/r_c/subject} {VERB/r_c/don't/doesn't} have to be alone",
             "Tells r_c to get some rest, and that {PRONOUN/m_c/subject}'ll replace {PRONOUN/m_c/object} on the patrol"
         ],
         "main_age_constraint": [
@@ -2864,7 +2837,6 @@
         "random_living_status": [
             "living"
         ]
-        
     },
     {
         "id": "TIME",
@@ -2873,7 +2845,7 @@
             "Is eyeing at the fading sun, hoping {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} completed everything today",
             "Sorted out the type of prey {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} planning to eat",
             "Is planning out {PRONOUN/m_c/poss} entire week",
-            "Makes a list of what {PRONOUN/m_c/subject} have to get done before sunhigh",
+            "Makes a list of what {PRONOUN/m_c/subject} {VERB/m_c/have/has} to get done before sunhigh",
             "Plans a morning hunt before spending time with r_c",
             "Uses pebbles to visualize all the tasks {PRONOUN/m_c/subject} want to complete",
             "Sorts {PRONOUN/m_c/poss} ambitions by how many moons it would take to complete them",
@@ -2914,7 +2886,7 @@
             "Carefully organizes {PRONOUN/m_c/poss} trinkets",
             "Finds a really shiny little stone",
             "Dives into a river after a nice rock",
-            "Debates bringing a very shiny piece of twoleg trash back for {PRONOUN/m_c/poss} collection",
+            "Debates bringing a very shiny piece of Twoleg trash back for {PRONOUN/m_c/poss} collection",
             "Finds two new trinkets and can't carry them both home",
             "Double checks {PRONOUN/m_c/poss} treasure hiding spots to make sure {PRONOUN/m_c/subject}'re not tampered with",
             "Finds a new hiding spot for {PRONOUN/m_c/poss} treasure"
@@ -2975,7 +2947,7 @@
             "Doesn't say more than {PRONOUN/m_c/subject} absolutely need to",
             "Wondering how to break the news to r_c",
             "Recites a dramatic monologue",
-            "Thinks through {PRONOUN/m_c/poss} every word before {PRONOUN/m_c/subject} say it",
+            "Thinks through {PRONOUN/m_c/poss} every word before {PRONOUN/m_c/subject} {VERB/m_c/say/says} it",
             "Reenacts an encounter with an enemy patrol",
             "Shares a rumor with r_c",
             "Is deep in conversation with r_c",
@@ -3046,7 +3018,23 @@
         "main_skill_constraint": [
             "SLEEPER,1"
         ],
-        "random_living_status": [
+        "random_living_constraint": [
+            "living"
+        ]
+    },
+    {
+        "id": "lasting_grief_gen_to_alive_gen",
+        "thoughts": [
+            "Worries about losing r_c too",
+            "Puts on a smile for r_c",
+            "Struggles to voice how {PRONOUN/m_c/subject} {VERB/m_c/feel/feels}"
+        ],
+        "perm_conditions": {
+            "m_c": [
+                "lasting grief"
+            ]
+        },
+        "random_living_constraint": [
             "living"
         ]
     }

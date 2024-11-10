@@ -468,7 +468,7 @@
                 ]
             },
             {
-                "text": "r_c reminds p_l of all the advice {PRONOUN/p_l/subject}{VERB/p_l/'ve/'s} given r_c that has made such a difference in {PRONOUN/r_c/poss} life. Every cat has their skills, and p_l is vital to the Clan.",
+                "text": "r_c reminds p_l of all the advice {PRONOUN/p_l/subject}{VERB/p_l/'ve/'s} given r_c that has made such a difference in {PRONOUN/r_c/poss} life. Everycat has their skills, and p_l is vital to the Clan.",
                 "exp": 20,
                 "weight": 5,
                 "relationships": [
@@ -642,7 +642,7 @@
                 ]
             },
             {
-                "text": "The sunlight energizes the cats for a training session, and soon everyone puts that energy to good use!",
+                "text": "The sunlight energizes the cats for a training session, and soon everycat puts that energy to good use!",
                 "exp": 20,
                 "weight": 5,
                 "relationships": [
@@ -656,7 +656,7 @@
                 ]
             },
             {
-                "text": "s_c makes sure everyone gets a good basking spot as the cats pause for a little break before they resume their training.",
+                "text": "s_c makes sure everycat gets a good basking spot as the cats pause for a little break before they resume their training.",
                 "exp": 20,
                 "weight": 20,
                 "stat_trait": [
@@ -680,7 +680,7 @@
                 ]
             },
             {
-                "text": "s_c can see that no one wants to get up again for training, not with the peace lingering around the patrol. Instead, {PRONOUN/s_c/subject} {VERB/s_c/tuck/tucks} {PRONOUN/s_c/self} into a loaf and begins talking. Everyone can bask <i>and</i> learn from the past.",
+                "text": "s_c can see that no one wants to get up again for training, not with the peace lingering around the patrol. Instead, {PRONOUN/s_c/subject} {VERB/s_c/tuck/tucks} {PRONOUN/s_c/self} into a loaf and begins talking. Everycat can bask <i>and</i> learn from the past.",
                 "exp": 20,
                 "weight": 40,
                 "stat_skill": [
@@ -1027,7 +1027,7 @@
         "chance_of_success": 60,
         "success_outcomes": [
             {
-                "text": "p_l smiles, inviting app1 to sit down. The apprentice is a little stiff at first, unsure how to act in front of the warrior, but that's actually what p_l wants to work on here. c_n contains cats of all ages, skills, and talents - it's important to work on being comfortable with everyone, just as important as working on respecting them. They're all c_n, after all.",
+                "text": "p_l smiles, inviting app1 to sit down. The apprentice is a little stiff at first, unsure how to act in front of the warrior, but that's actually what p_l wants to work on here. c_n contains cats of all ages, skills, and talents - it's important to work on being comfortable with everycat, just as important as working on respecting them. They're all c_n, after all.",
                 "exp": 20,
                 "weight": 20,
                 "relationships": [
@@ -1256,7 +1256,7 @@
         "chance_of_success": 40,
         "success_outcomes": [
             {
-                "text": "Everyone has had enough on their shoulders lately - p_l decides to lead a casual sparring session, which ends with the patrol flopped around chatting to each other. It's just what's needed to lower their stress levels.",
+                "text": "Everycat has had enough on their shoulders lately - p_l decides to lead a casual sparring session, which ends with the patrol flopped around chatting to each other. It's just what's needed to lower their stress levels.",
                 "exp": 20,
                 "weight": 5,
                 "relationships": [
@@ -1270,7 +1270,7 @@
                 ]
             },
             {
-                "text": "They all need to stay sharp. p_l decides on a hard, punishing sparring session, driving the patrol on until they're all too tired to even lash their tails. There are no hard feelings about it though - of everyone, p_l sets {PRONOUN/p_l/self} the hardest goals, leading by example.",
+                "text": "They all need to stay sharp. p_l decides on a hard, punishing sparring session, driving the patrol on until they're all too tired to even lash their tails. There are no hard feelings about it though - of everycat, p_l sets {PRONOUN/p_l/self} the hardest goals, leading by example.",
                 "exp": 60,
                 "weight": 5,
                 "relationships": [
@@ -1340,7 +1340,7 @@
                 ]
             },
             {
-                "text": "s_c has an awesome spot to show everyone, far out from camp near one of c_n's borders. {PRONOUN/s_c/subject/CAP} lead the way with a jaunty raised tail, setting off on {PRONOUN/s_c/poss} adventure. The patrol spends so long galavanting about with s_c that it's past dark by the time they return to camp, with muddy paws and shining eyes.",
+                "text": "s_c has an awesome spot to show everycat, far out from camp near one of c_n's borders. {PRONOUN/s_c/subject/CAP} lead the way with a jaunty raised tail, setting off on {PRONOUN/s_c/poss} adventure. The patrol spends so long galavanting about with s_c that it's past dark by the time they return to camp, with muddy paws and shining eyes.",
                 "exp": 20,
                 "weight": 20,
                 "can_have_stat":["p_l"],
@@ -1466,7 +1466,7 @@
                 ]
             },
             {
-                "text": "s_c has an awesome spot to show everyone, far out from camp near one of c_n's borders. {PRONOUN/s_c/subject/CAP} lead the way with a jaunty raised tail, setting off on {PRONOUN/s_c/poss} adventure. They return having run afoul of the landscape - it's not serious, but it's definitely annoying. Maybe they'll think better of following s_c next time.",
+                "text": "s_c has an awesome spot to show everycat, far out from camp near one of c_n's borders. {PRONOUN/s_c/subject/CAP} lead the way with a jaunty raised tail, setting off on {PRONOUN/s_c/poss} adventure. They return having run afoul of the landscape - it's not serious, but it's definitely annoying. Maybe they'll think better of following s_c next time.",
                 "exp": 0,
                 "weight": 20,
                 "can_have_stat":["p_l"],
@@ -1677,7 +1677,7 @@
                 ]
             },
             {
-                "text": "A patrol of full warriors doesn't ensure that everything will go smoothly. When p_l gets in r_c's way at the end of a hard set of exercises, tripping {PRONOUN/r_c/object} into faceplanting into the dirt, the entire afternoon nearly goes to fox-dung. It's only s_c's levelheaded serenity that saves it. {PRONOUN/s_c/subject/CAP} {VERB/s_c/calm/calms} everyone down and {VERB/s_c/prevent/prevents} anything from escalating.",
+                "text": "A patrol of full warriors doesn't ensure that everything will go smoothly. When p_l gets in r_c's way at the end of a hard set of exercises, tripping {PRONOUN/r_c/object} into faceplanting into the dirt, the entire afternoon nearly goes to fox-dung. It's only s_c's levelheaded serenity that saves it. {PRONOUN/s_c/subject/CAP} {VERB/s_c/calm/calms} everycat down and {VERB/s_c/prevent/prevents} anything from escalating.",
                 "exp": 40,
                 "weight": 20,
                 "can_have_stat":["not_pl_rc"],
@@ -1713,7 +1713,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "The more senior warriors immediately claim authority over the training session. This doesn't go well - it's <i>training</i>! Everyone should get the chance to contribute, and no one is going to let themselves be talked down to like a wet-eared apprentice!",
+                "text": "The more senior warriors immediately claim authority over the training session. This doesn't go well - it's <i>training</i>! everycat should get the chance to contribute, and no one is going to let themselves be talked down to like a wet-eared apprentice!",
                 "exp": 0,
                 "weight": 5,
                 "relationships": [
@@ -1734,7 +1734,7 @@
                 ]
             },
             {
-                "text": "The cats take advantage of the rare opportunity to work on some highly advanced battle moves. s_c tries to take charge, but not everyone can land on an opponent's forehead or turn on one pad. Though no one disputes s_c's fighting talent, {PRONOUN/s_c/poss} <i>teaching</i> talent leaves a lot to be desired, and the training session ends in failure.",
+                "text": "The cats take advantage of the rare opportunity to work on some highly advanced battle moves. s_c tries to take charge, but not everycat can land on an opponent's forehead or turn on one pad. Though no one disputes s_c's fighting talent, {PRONOUN/s_c/poss} <i>teaching</i> talent leaves a lot to be desired, and the training session ends in failure.",
                 "exp": 0,
                 "weight": 20,
                 "can_have_stat":["any"],
@@ -2142,7 +2142,7 @@
                 ]
             },
             {
-                "text": "s_c doesn't take charge or lead the patrol haring off after some grand adventure. That just isn't {PRONOUN/s_c/poss} style. Instead, the cats are reminded of the kindness in their leader's heart as they watch s_c help r_c up off the ground, reassure another Clanmate when they get a move wrong. The warmth of these little sparks of empathy remind everyone why c_n follows s_c.",
+                "text": "s_c doesn't take charge or lead the patrol haring off after some grand adventure. That just isn't {PRONOUN/s_c/poss} style. Instead, the cats are reminded of the kindness in their leader's heart as they watch s_c help r_c up off the ground, reassure another Clanmate when they get a move wrong. The warmth of these little sparks of empathy remind everycat why c_n follows s_c.",
                 "exp": 40,
                 "weight": 20,
                 "can_have_stat":["p_l"],
@@ -2333,7 +2333,7 @@
                 ]
             },
             {
-                "text": "Talking everyone down, p_l encourages the patrol to focus on their work collecting nesting material.",
+                "text": "Talking everycat down, p_l encourages the patrol to focus on their work collecting nesting material.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["SPEAKER,2"],
@@ -2442,7 +2442,7 @@
                 ]
             },
             {
-                "text": "s_c spends so much time listening sympathetically to every cat that the patrol gets nothing done, and as they return home, the quarrel continues.",
+                "text": "s_c spends so much time listening sympathetically to everycat that the patrol gets nothing done, and as they return home, the quarrel continues.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": [
@@ -2763,7 +2763,7 @@
                 ]
             },
             {
-                "text": "s_c tilts {PRONOUN/s_c/poss} head slightly - has r_c considered an alternative solution instead? And that derails the argument completely; everyone is eager to go with a better, easier idea that no one has to argue over.",
+                "text": "s_c tilts {PRONOUN/s_c/poss} head slightly - has r_c considered an alternative solution instead? And that derails the argument completely; everycat is eager to go with a better, easier idea that no one has to argue over.",
                 "exp": 20,
                 "weight": 20,
                 "can_have_stat": ["p_l"],
@@ -2939,7 +2939,7 @@
                 ]
             },
             {
-                "text": "s_c spends so much time listening sympathetically to every cat that the patrol gets nothing done, and as they return home, the quarrel continues.",
+                "text": "s_c spends so much time listening sympathetically to everycat that the patrol gets nothing done, and as they return home, the quarrel continues.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": [
@@ -3388,7 +3388,7 @@
             "all apprentices": [-1, -1]
         },
         "weight": 20,
-        "intro_text": "The patrol devolves into ghost stories, putting everyone on edge.",
+        "intro_text": "The patrol devolves into ghost stories, putting everycat on edge.",
         "decline_text": "p_l quickly silences any talk about ghosts.",
         "chance_of_success": 20,
         "success_outcomes": [
@@ -3467,7 +3467,7 @@
             "all apprentices": [2, 2]
         },
         "weight": 20,
-        "intro_text": "The patrol devolves into ghost stories, putting everyone on edge.",
+        "intro_text": "The patrol devolves into ghost stories, putting everycat on edge.",
         "decline_text": "p_l quickly silences any talk about ghosts.",
         "chance_of_success": 20,
         "success_outcomes": [
@@ -3733,7 +3733,7 @@
                 "can_have_stat": ["app"]
             },
             {
-                "text": "s_c ignores {PRONOUN/s_c/poss} rumbling belly and dutifully brings the prey back to camp, only for {PRONOUN/s_c/poss} mentor to tell {PRONOUN/s_c/object} to pick out a bite to eat before {PRONOUN/s_c/poss} stomach wakes every cat in camp. This would've all been much quicker if {PRONOUN/s_c/subject}'d eaten it when {PRONOUN/s_c/subject} first caught it.",
+                "text": "s_c ignores {PRONOUN/s_c/poss} rumbling belly and dutifully brings the prey back to camp, only for {PRONOUN/s_c/poss} mentor to tell {PRONOUN/s_c/object} to pick out a bite to eat before {PRONOUN/s_c/poss} stomach wakes everycat in camp. This would've all been much quicker if {PRONOUN/s_c/subject}'d eaten it when {PRONOUN/s_c/subject} first caught it.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": [
@@ -3784,7 +3784,7 @@
         "chance_of_success": 25,
         "success_outcomes": [
             {
-                "text": "Everyone has a nice practice session, and their coordination and trust in their Clanmates grows stronger.",
+                "text": "Everycat has a nice practice session, and their coordination and trust in their Clanmates grows stronger.",
                 "exp": 20,
                 "weight": 20,
                 "relationships": [
@@ -4348,7 +4348,7 @@
         "chance_of_success": 40,
         "success_outcomes": [
             {
-                "text": "Everyone has a nice practice session and their coordination with their Clanmates grows stronger. app1 really gets into it and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
+                "text": "Everycat has a nice practice session and their coordination with their Clanmates grows stronger. app1 really gets into it and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
                 "exp": 20,
                 "weight": 20,
                 "relationships": [
@@ -4383,7 +4383,7 @@
                 ]
             },
             {
-                "text": "Sometimes, the best thing of all is to just help an apprentice get the chance to feel equal to the warriors {PRONOUN/app1/subject}{VERB/app1/'re/'s} trying to become. p_l treats app1 exactly like everyone else. app1's confidence grows and {PRONOUN/app1/poss} eyes light up as the cats work together.",
+                "text": "Sometimes, the best thing of all is to just help an apprentice get the chance to feel equal to the warriors {PRONOUN/app1/subject}{VERB/app1/'re/'s} trying to become. p_l treats app1 exactly like everycat else. app1's confidence grows and {PRONOUN/app1/poss} eyes light up as the cats work together.",
                 "exp": 20,
                 "weight": 20,
                 "relationships": [
@@ -4458,7 +4458,7 @@
                 "weight": 20
             },
             {
-                "text": "app1 screws up the teamwork exercise, making a decision that betrays {PRONOUN/app1/poss} lack of experience, and while p_l smoothes everything over between everyone, the exercise is concluded early.",
+                "text": "app1 screws up the teamwork exercise, making a decision that betrays {PRONOUN/app1/poss} lack of experience, and while p_l smoothes everything over between everycat, the exercise is concluded early.",
                 "exp": 0,
                 "weight": 20
             },
@@ -4551,7 +4551,7 @@
                 ]
             },
             {
-                "text": "Sometimes, the best thing of all is to just help an apprentice get the chance to feel equal to the warrior {PRONOUN/app1/subject}{VERB/app1/'re/'s} trying to become. p_l treats app1 exactly like everyone else. app1's confidence grows and {PRONOUN/app1/poss} eyes light up as the cats work together.",
+                "text": "Sometimes, the best thing of all is to just help an apprentice get the chance to feel equal to the warrior {PRONOUN/app1/subject}{VERB/app1/'re/'s} trying to become. p_l treats app1 exactly like everycat else. app1's confidence grows and {PRONOUN/app1/poss} eyes light up as the cats work together.",
                 "exp": 20,
                 "weight": 20,
                 "relationships": [
@@ -5580,7 +5580,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "Everyone has a nice practice session, picking up a good selection of new tricks to try out on their next hunting patrol.",
+                "text": "Everycat has a nice practice session, picking up a good selection of new tricks to try out on their next hunting patrol.",
                 "exp": 20,
                 "weight": 20,
                 "relationships": [
@@ -5989,7 +5989,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "Everyone has a nice practice session, picking up a good selection of new tricks to try out on their next hunting patrol. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
+                "text": "Everycat has a nice practice session, picking up a good selection of new tricks to try out on their next hunting patrol. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
                 "exp": 30,
                 "weight": 20,
                 "relationships": [
@@ -6010,7 +6010,7 @@
                 ]
             },
             {
-                "text": "The cats have a wonderful training session. Everyone agrees that app1 using a side pounce to hook r_c's feet out from under {PRONOUN/r_c/object} was definitely a highlight, though r_c maintains it'd be a bit different if {PRONOUN/r_c/subject} {VERB/r_c/weren't/wasn't} standing waiting to be pounced on as a static target.",
+                "text": "The cats have a wonderful training session. Everycat agrees that app1 using a side pounce to hook r_c's feet out from under {PRONOUN/r_c/object} was definitely a highlight, though r_c maintains it'd be a bit different if {PRONOUN/r_c/subject} {VERB/r_c/weren't/wasn't} standing waiting to be pounced on as a static target.",
                 "exp": 30,
                 "weight": 10,
                 "relationships": [
@@ -6302,7 +6302,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "Everyone has a nice practice session, picking up a good selection of new tricks to try out on their next hunting patrol. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
+                "text": "Everycat has a nice practice session, picking up a good selection of new tricks to try out on their next hunting patrol. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
                 "exp": 30,
                 "weight": 20,
                 "relationships": [
@@ -6383,7 +6383,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "Everyone has a nice practice session, picking up a good selection of new tricks to try out on their next hunting patrol. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
+                "text": "Everycat has a nice practice session, picking up a good selection of new tricks to try out on their next hunting patrol. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
                 "exp": 30,
                 "weight": 20,
                 "relationships": [
@@ -6450,7 +6450,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "Everyone has a nice practice session, picking up a good selection of new tricks to try out on their next hunting patrol. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
+                "text": "Everycat has a nice practice session, picking up a good selection of new tricks to try out on their next hunting patrol. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
                 "exp": 30,
                 "weight": 20,
                 "relationships": [
@@ -6517,7 +6517,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "Everyone has a nice practice session, picking up a good selection of new tricks to try out on their next hunting patrol. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
+                "text": "Everycat has a nice practice session, picking up a good selection of new tricks to try out on their next hunting patrol. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
                 "exp": 30,
                 "weight": 20,
                 "relationships": [
@@ -6582,7 +6582,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "Everyone has a nice practice session, picking up a good selection of new tricks to try out in their next skirmish.",
+                "text": "Everycat has a nice practice session, picking up a good selection of new tricks to try out in their next skirmish.",
                 "exp": 20,
                 "weight": 20,
                 "relationships": [
@@ -6710,7 +6710,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "Everyone has a nice practice session, picking up a good selection of new tricks to try out in their next skirmish. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
+                "text": "Everycat has a nice practice session, picking up a good selection of new tricks to try out in their next skirmish. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
                 "exp": 30,
                 "weight": 20,
                 "relationships": [
@@ -6843,7 +6843,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "Everyone has a nice practice session, picking up a good selection of new tricks to try out in their next skirmish. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
+                "text": "Everycat has a nice practice session, picking up a good selection of new tricks to try out in their next skirmish. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
                 "exp": 30,
                 "weight": 20,
                 "relationships": [
@@ -6910,7 +6910,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "Everyone has a nice practice session, picking up a good selection of new tricks to try out in their next skirmish. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
+                "text": "Everycat has a nice practice session, picking up a good selection of new tricks to try out in their next skirmish. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
                 "exp": 30,
                 "weight": 20,
                 "relationships": [
@@ -6977,7 +6977,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "Everyone has a nice practice session, picking up a good selection of new tricks to try out in their next skirmish. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
+                "text": "Everycat has a nice practice session, picking up a good selection of new tricks to try out in their next skirmish. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
                 "exp": 30,
                 "weight": 20,
                 "relationships": [
@@ -7044,7 +7044,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "Everyone has a nice practice session, picking up a good selection of new tricks to try out in their next skirmish. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
+                "text": "Everycat has a nice practice session, picking up a good selection of new tricks to try out in their next skirmish. app1 really gets into it, and p_l praises {PRONOUN/app1/object} for {PRONOUN/app1/poss} focus and enthusiasm.",
                 "exp": 30,
                 "weight": 20,
                 "relationships": [
@@ -7859,7 +7859,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "Everyone keeps their claws in (no matter the temptations), but r_c slips at a crucial moment while {PRONOUN/r_c/subject} and p_l spar, and {PRONOUN/r_c/subject} {VERB/r_c/wince/winces} as {PRONOUN/r_c/subject} {VERB/r_c/get/gets} up. Time to stop.",
+                "text": "Everycat keeps their claws in (no matter the temptations), but r_c slips at a crucial moment while {PRONOUN/r_c/subject} and p_l spar, and {PRONOUN/r_c/subject} {VERB/r_c/wince/winces} as {PRONOUN/r_c/subject} {VERB/r_c/get/gets} up. Time to stop.",
                 "exp": 0,
                 "weight": 10,
                 "injury": [
@@ -8209,7 +8209,7 @@
             "all apprentices": [-1, -1]
         },
         "weight": 100,
-        "intro_text": "Everyone agrees that p_l and r_c get along like a forest fire, but surely they can hold it together for one afternoon's worth of training?",
+        "intro_text": "Everycat agrees that p_l and r_c get along like a forest fire, but surely they can hold it together for one afternoon's worth of training?",
         "decline_text": "...Best not to try it.",
         "chance_of_success": 60,
         "relationship_constraint": ["dislike_40", "romantic_40"],
@@ -8273,7 +8273,7 @@
             "all apprentices": [-1, -1]
         },
         "weight": 100,
-        "intro_text": "Everyone agrees that p_l and r_c get along like a forest fire, but surely they can hold it together for one afternoon's worth of training?",
+        "intro_text": "Everycat agrees that p_l and r_c get along like a forest fire, but surely they can hold it together for one afternoon's worth of training?",
         "decline_text": "...Best not to try it.",
         "chance_of_success": 60,
         "relationship_constraint": ["dislike_40", "romantic_40"],
@@ -8673,7 +8673,7 @@
         "relationship_constraint": ["parent/child"],
         "success_outcomes": [
             {
-                "text": "Trying not to let on how much care is going into choosing each mew, p_l starts up a series of quiet complaints, shared with app1 like it's no big thing. p_l talks about how hard it is to feel so distant from the rest of c_n, how {PRONOUN/p_l/subject}{VERB/p_l/'re/'s} so glad {PRONOUN/p_l/subject}{VERB/p_l/'ve/'s} got app1, how {PRONOUN/p_l/subject} only {VERB/p_l/want/wants} to be seen as another cat trying {PRONOUN/p_l/poss} hardest, just like everyone else. app1 doesn't reply - but {PRONOUN/app1/subject} {VERB/app1/do/does} brush against p_l, the touch of {PRONOUN/app1/poss} pelt a massive comfort.",
+                "text": "Trying not to let on how much care is going into choosing each mew, p_l starts up a series of quiet complaints, shared with app1 like it's no big thing. p_l talks about how hard it is to feel so distant from the rest of c_n, how {PRONOUN/p_l/subject}{VERB/p_l/'re/'s} so glad {PRONOUN/p_l/subject}{VERB/p_l/'ve/'s} got app1, how {PRONOUN/p_l/subject} only {VERB/p_l/want/wants} to be seen as another cat trying {PRONOUN/p_l/poss} hardest, just like everycat else. app1 doesn't reply - but {PRONOUN/app1/subject} {VERB/app1/do/does} brush against p_l, the touch of {PRONOUN/app1/poss} pelt a massive comfort.",
                 "exp": 20,
                 "weight": 20,
                 "relationships": [
@@ -8694,7 +8694,7 @@
                 ]
             },
             {
-                "text": "p_l sits down with app1 in the training grounds. What's wrong? As the leader, p_l could - app1 cuts {PRONOUN/p_l/object} off. Yes, app1 knows {PRONOUN/p_l/subject}{VERB/p_l/'re/'s} the leader, <i>everyone</i> knows p_l is the leader! That's the problem! Everyone expects so much, just because app1 happened to be born into p_l's nest, like that's helped app1 at all! p_l curls around them sympathetically, listening, heart sinking to hear the burden placed on {PRONOUN/p_l/poss} kit by the Clan.",
+                "text": "p_l sits down with app1 in the training grounds. What's wrong? As the leader, p_l could - app1 cuts {PRONOUN/p_l/object} off. Yes, app1 knows {PRONOUN/p_l/subject}{VERB/p_l/'re/'s} the leader, <i>everycat</i> knows p_l is the leader! That's the problem! everycat expects so much, just because app1 happened to be born into p_l's nest, like that's helped app1 at all! p_l curls around them sympathetically, listening, heart sinking to hear the burden placed on {PRONOUN/p_l/poss} kit by the Clan.",
                 "exp": 20,
                 "weight": 5,
                 "relationships": [
@@ -8859,7 +8859,7 @@
         "relationship_constraint": ["parent/child"],
         "success_outcomes": [
             {
-                "text": "Trying not to let on how much care is going into choosing each mew, p_l starts up a series of quiet complaints, shared with app1 like it's no big thing. p_l talks about how hard it is to feel so distant from the rest of c_n, how {PRONOUN/p_l/subject}{VERB/p_l/'re/'s} so glad {PRONOUN/p_l/subject}{VERB/p_l/'ve/'s} got app1, how {PRONOUN/p_l/subject} only {VERB/p_l/want/wants} to be seen as another cat trying {PRONOUN/p_l/poss} hardest, just like everyone else. app1 doesn't reply - but {PRONOUN/app1/subject} {VERB/app1/do/does} brush against p_l, the touch of {PRONOUN/app1/poss} pelt a massive comfort.",
+                "text": "Trying not to let on how much care is going into choosing each mew, p_l starts up a series of quiet complaints, shared with app1 like it's no big thing. p_l talks about how hard it is to feel so distant from the rest of c_n, how {PRONOUN/p_l/subject}{VERB/p_l/'re/'s} so glad {PRONOUN/p_l/subject}{VERB/p_l/'ve/'s} got app1, how {PRONOUN/p_l/subject} only {VERB/p_l/want/wants} to be seen as another cat trying {PRONOUN/p_l/poss} hardest, just like everycat else. app1 doesn't reply - but {PRONOUN/app1/subject} {VERB/app1/do/does} brush against p_l, the touch of {PRONOUN/app1/poss} pelt a massive comfort.",
                 "exp": 20,
                 "weight": 20,
                 "relationships": [
@@ -8880,7 +8880,7 @@
                 ]
             },
             {
-                "text": "p_l sits down with app1 in the training grounds. What's wrong? As the deputy, p_l could - app1 cuts {PRONOUN/p_l/object} off. Yes, app1 knows {PRONOUN/p_l/subject}{VERB/p_l/'re/'s} the deputy, <i>everyone</i> knows p_l is the deputy! That's the problem! Everyone expects so much, just because app1 happened to be born into p_l's nest, like that's helped app1 at all! p_l curls around them sympathetically, listening, heart sinking to hear the burden placed on {PRONOUN/p_l/poss} child by the Clan.",
+                "text": "p_l sits down with app1 in the training grounds. What's wrong? As the deputy, p_l could - app1 cuts {PRONOUN/p_l/object} off. Yes, app1 knows {PRONOUN/p_l/subject}{VERB/p_l/'re/'s} the deputy, <i>everycat</i> knows p_l is the deputy! That's the problem! everycat expects so much, just because app1 happened to be born into p_l's nest, like that's helped app1 at all! p_l curls around them sympathetically, listening, heart sinking to hear the burden placed on {PRONOUN/p_l/poss} child by the Clan.",
                 "exp": 20,
                 "weight": 5,
                 "relationships": [
@@ -9505,7 +9505,7 @@
         "decline_text": "No one is interested bringing up that frustrating fable today.",
             "success_outcomes": [
                 {
-                "text": "Smug, slimy, and unpleasant, the cats of the Whisker Grove stole from c_n and every other Clan - a bunch of pathetic pilfering poncy wastes of air. Everyone should despise them for being cowardly ungrateful thieves, and were one ever found in c_n's lands, they would be driven out.",
+                "text": "Smug, slimy, and unpleasant, the cats of the Whisker Grove stole from c_n and every other Clan - a bunch of pathetic pilfering poncy wastes of air. Everycat should despise them for being cowardly ungrateful thieves, and were one ever found in c_n's lands, they would be driven out.",
                 "exp": 30,
                 "weight": 20,
                 "art": "scaryghost_INTRO",
@@ -9558,7 +9558,7 @@
                         ]
                 },
                 {
-                    "text": "The cats of the Whisker Grove are repulsive, s_c says, and the rest of the patrol is surprised to here the quiet fury in {PRONOUN/s_c/poss} tone. s_c will never forgive those who steal from the kind and generous, who take other cats hard work and try to profit from it.",
+                    "text": "The cats of the Whisker Grove are repulsive, s_c says, and the rest of the patrol is surprised to hear the quiet fury in {PRONOUN/s_c/poss} tone. s_c will never forgive those who steal from the kind and generous, who take other cats' hard work and try to profit from it.",
                     "exp": 30,
                     "weight": 20,
                     "art": "scaryghost_INTRO",
@@ -9706,7 +9706,7 @@
             "normal adult": [1, 6]
         },
         "weight": 30,
-        "intro_text": "Leading the group of cats around {PRONOUN/p_l/object} to a good vantage point, p_l settles down. As the patrol chats among themselves, something sparks p_l's attention. It reminds {PRONOUN/p_l/object} of charming <i>Casanova</i>, and it occurs to {PRONOUN/p_l/object} that maybe not every cat here knows that history.",
+        "intro_text": "Leading the group of cats around {PRONOUN/p_l/object} to a good vantage point, p_l settles down. As the patrol chats among themselves, something sparks p_l's attention. It reminds {PRONOUN/p_l/object} of charming <i>Casanova</i>, and it occurs to {PRONOUN/p_l/object} that maybe not everycat here knows that history.",
         "decline_text": "It's a lovely day - too lovely to be ruined by mentions of that ancient furball.",
         "chance_of_success": 60,
         "pl_skill_constraint": ["LORE,1"],
@@ -9790,7 +9790,7 @@
                 ]
             },
             {
-                "text": "It's hard to describe, but eventually p_l manages to communicate {PRONOUN/p_l/poss} idea: a type of kicking-off maneuver where a warrior simultaneously gets distance from an opponent and can also wind them if they kick them right in the abdomen. The patrol practices until they've got it, and everyone takes a turn getting winded by sheathed claws.",
+                "text": "It's hard to describe, but eventually p_l manages to communicate {PRONOUN/p_l/poss} idea: a type of kicking-off maneuver where a warrior simultaneously gets distance from an opponent and can also wind them if they kick them right in the abdomen. The patrol practices until they've got it, and everycat takes a turn getting winded by sheathed claws.",
                 "exp": 30,
                 "weight": 5,
                 "relationships": [
@@ -9900,7 +9900,7 @@
             "normal adult": [1, 6]
         },
         "weight": 30,
-        "intro_text": "Gathering together to train, p_l notices that some of the other cats in the training ring are starting without warming up properly. Whoa, whoa, whoa, - everyone stop, let's go back to basics.",
+        "intro_text": "Gathering together to train, p_l notices that some of the other cats in the training ring are starting without warming up properly. Whoa, whoa, whoa, - everycat stop, let's go back to basics.",
         "decline_text": "Today isn't the day for this lesson.",
         "chance_of_success": 60,
         "pl_skill_constraint": ["RUNNER,1", "SWIMMER,1", "CLIMBER,1"],
@@ -10381,7 +10381,7 @@
             "normal adult": [1, 6]
         },
         "weight": 30,
-        "intro_text": "While the cats are out training, the subject of Twolegs comes up. r_c tells everyone to just not get caught by them. o_c1 suggests clawing their faces off - or their ankles if any cat has trouble reaching up that high. p_l laughs, and the patrol turns to {PRONOUN/p_l/object}.",
+        "intro_text": "While the cats are out training, the subject of Twolegs comes up. r_c tells everycat to just not get caught by them. o_c1 suggests clawing their faces off - or their ankles if any cat has trouble reaching up that high. p_l laughs, and the patrol turns to {PRONOUN/p_l/object}.",
         "decline_text": "Oh, nothing, don't worry about it.",
         "chance_of_success": 60,
         "pl_skill_constraint": ["KITTYPET,0"],
@@ -10845,7 +10845,7 @@
                 ]
             },
             {
-                "text": "app2 isn't surprised when app1 speaks up and looks annoyed. app1 suggests that it would be a clever idea to split up, so that they don't startle each other's prey. Everyone thinks this is a good compromise and splits up with the promise to meet back at camp.",
+                "text": "app2 isn't surprised when app1 speaks up and looks annoyed. app1 suggests that it would be a clever idea to split up, so that they don't startle each other's prey. Everycat thinks this is a good compromise and splits up with the promise to meet back at camp.",
                 "exp": 15,
                 "weight": 5,
                 "relationships": [
@@ -10888,7 +10888,7 @@
                 ]
             },
             {
-                "text": "app1 can't let app2 have all the glory. {PRONOUN/app1/subject/CAP} {VERB/app1/suggest/suggests} a good place to hunt that can show off the patrol's teamwork. Even app2 says that teamwork in a Clan is important. Everyone follows app1 and is shocked when they are instantly greeted with a running hare. Catching it is easy, and the apprentices share amused purrs.",
+                "text": "app1 can't let app2 have all the glory. {PRONOUN/app1/subject/CAP} {VERB/app1/suggest/suggests} a good place to hunt that can show off the patrol's teamwork. Even app2 says that teamwork in a Clan is important. Everycat follows app1 and is shocked when they are instantly greeted with a running hare. Catching it is easy, and the apprentices share amused purrs.",
                 "exp": 15,
                 "weight": 20,
                 "stat_trait": ["ambitious", "competitive"],
@@ -11277,6 +11277,19 @@
                         "amount": 10
                     } ],
                 "weight": 20
+            },
+            {
+                "text": "s_c waits patiently for app1 to calm down from {PRONOUN/app1/poss} outburst. Training to be a warrior is a difficult task and not every cat has the patience to learn from failure, after all. s_c comments that no cat is truly ready to become a warrior, and {PRONOUN/s_c/subject} {VERB/s_c/do/does} not expect app1 to be perfect. s_c dismisses training with a flict of {PRONOUN/s_c/poss} tail.",
+                "exp": 10,
+                "relationships": [
+                    {
+                        "cat_to": ["p_l"],
+                        "cat_from": ["app1"],
+                        "values": ["platonic", "comfort", "respect", "trust"],
+                        "amount": 10
+                    } 
+                ],
+                "weight": 20
             }
         ],
         "fail_outcomes": [
@@ -11290,7 +11303,8 @@
                         "cat_from": ["app1"],
                         "values": ["platonic", "comfort", "respect", "trust"],
                         "amount": -10
-                    } ],
+                    } 
+                ],
                 "weight": 10
             }
         ]

@@ -267,7 +267,7 @@
             ]
         },
         "conclusion_events": [
-            "The sun rises one day, rainbow shards of ice glinting on the ground like so many days before, but as the day goes on... They melt and turn to mud. While everyone soon gets dirty, the sunlight feels so good on every cat's fur, no one can complain too much through their purrs.",
+            "The sun rises one day, rainbow shards of ice glinting on the ground like so many days before, but as the day goes on... They melt and turn to mud. While everycat soon gets dirty, the sunlight feels so good on everycat's fur, no one can complain too much through their purrs.",
             "When the Clan steps from their dens and finds the world no longer freezing, they're almost shocked by the change. It had been so cold for so long, they'd forgotten warmth's embrace.",
             "As the cold loses its grip on their throats, the forest of c_n weeps with relief, trees oozing sap from their damaged trunks."
         ],
@@ -302,7 +302,7 @@
         "rarity": "uncommon",
         "trigger_events": [
             "lead_name checks on the tiny streams of snowmelt crisscrossing the forest with growing concern. They're far higher than usual for this point in newleaf, and if this keeps up, the woods will be flooded.",
-            "c_n huddles in their dens, miserable and soaked. The brambles and forest canopy still thin and budding have both failed under the heavy, constant rain. There's no sound out in the forest, there hasn't been for days, every preystep or bird chirp eclipse by the steady shower of water.",
+            "c_n huddles in their dens, miserable and soaked. The brambles and forest canopy still thin and budding have both failed under the heavy, constant rain. There's no sound out in the forest, there hasn't been for days, every preystep or bird chirp eclipsed by the steady shower of water.",
             "The ground, still not fully recovered its green pelt after leaf-bare, now lies drenched and sodden, more mud than forest-floor. A stream is establishing itself right through the center of camp where the fresh-kill pile should be - not that there's been much fresh-kill, not with the rains soaking the hunting patrols right down to their skin."
         ],
         "progress_events": {
@@ -466,11 +466,11 @@
         "duration": 2,
         "rarity": "common",
         "trigger_events": [
-            "The winds begin to yowl through the trees like the world itself is going to war with c_n. Following in the pawsteps of the wind are the dark clouds and rain, with the wrath of the sky crashing across the sky with thunderous bellows, lightning causing every cat's hair to stand on end."
+            "The winds begin to yowl through the trees like the world itself is going to war with c_n. Following in the pawsteps of the wind are the dark clouds and rain, with the wrath of the sky crashing across the sky with thunderous bellows, lightning causing everycat's hair to stand on end."
         ],
         "progress_events": {
             "moon1": [
-                "The storms continue to thrash the forest, trees crackling all around them, some dropping limbs, some falling over. Large hailstones sometimes fall from the sky, causing every cat to run for the nearest den, and the unpredictability of it makes hunting hard."
+                "The storms continue to thrash the forest, trees crackling all around them, some dropping limbs, some falling over. Large hailstones sometimes fall from the sky, causing everycat to run for the nearest den, and the unpredictability of it makes hunting hard."
             ]
         },
         "conclusion_events": [
@@ -482,7 +482,7 @@
                 "triggers_during": "during",
                 "chance": 0,
                 "trigger_events": [
-                    "The sky has brought with it swelling rivers that fight their embankments. Water flows freely without a path, and every cat has to keep their claws on the ground to keep themselves from floating away."
+                    "The sky has brought with it swelling rivers that fight their embankments. Water flows freely without a path, and everycat has to keep their claws on the ground to keep themselves from floating away."
                 ]
             },
             "Wildfire": {
@@ -539,12 +539,12 @@
             "moon1": [
                 "The Clan hunts and scrounges for any hint of possible food, but they never seem to find enough.",
                 "As famine hunts the Clan, none of their own hunts seem enough to drive it from haunting their paws.",
-                "Every cat in the Clan seems a little sadder, a little more serious as the situation dawns on them all. They have to try find more prey, before it becomes too late."
+                "Everycat in the Clan seems a little sadder, a little more serious as the situation dawns on them all. They have to try find more prey, before it becomes too late."
             ],
             "moon2": [
                 "c_n has started wandering past their borders to find prey. While it might not be as much as they hoped for, any catch is considered a blessing from StarClan, even if some prey might smell like a rival Clan. No questions are asked if it means not going hungry.",
-                "Every scrap, every catch, every piece brought back to the Clan, it all carries such weight. With prey so scarce, every mouthful is critical.",
-                "Never before has the whispered prayers to StarClan over every catch seemed so heartful. All the cats of Clan can do with hunger dogging their pawsteps is their best. The rest is in the paws of the stars."
+                "Every scrap, everycatch, every piece brought back to the Clan, it all carries such weight. With prey so scarce, every mouthful is critical.",
+                "Never before has the whispered prayers to StarClan over everycatch seemed so heartful. All the cats of Clan can do with hunger dogging their pawsteps is their best. The rest is in the paws of the stars."
             ]
         },
         "conclusion_events": [

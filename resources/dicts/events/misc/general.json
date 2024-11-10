@@ -239,7 +239,7 @@
     "season": ["any"],
     "sub_type": ["murder_reveal"],
     "weight": 15,
-    "event_text": "r_c overheard m_c muttering in {PRONOUN/m_c/poss} sleep, claws slashing at the air. {PRONOUN/m_c/poss/CAP} muttering confirms what r_c always suspected -  m_c was the one responsible for mur_c's death.",
+    "event_text": "r_c overheard m_c muttering in {PRONOUN/m_c/poss} sleep, claws slashing at the air. {PRONOUN/m_c/poss/CAP} muttering confirms what r_c always suspected - m_c was the one responsible for mur_c's death.",
     "m_c": {
       "age": ["any"],
       "status": ["any"]
@@ -258,6 +258,233 @@
       }
     ]
   },
+  {
+    "event_id": "lifegen_reveal_R1",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["murder_reveal"],
+    "tags": ["clan_discovery","clan_wide"],
+    "weight": 5,
+    "event_text": "Though it's never been a big deal before, r_c has always seen StarClan vividly in both reality and dreams. Seeing mur_c was a gift like no other. r_c cautiously asked if {PRONOUN/mur_c/subject} remembered how {PRONOUN/mur_c/subject} died... and was aghast to learn it was all m_c's doing. Even if it meant revealing {PRONOUN/r_c/poss} gifts, r_c accuses m_c openly, and gives details only mur_c would have known...",
+    "m_c": {
+        "age": ["any"],
+        "status": ["any"]
+    },
+    "r_c": {
+        "age": ["any"],
+        "status": ["any"],
+        "skill": ["STAR,1"]
+    }
+},
+{
+    "event_id": "lifegen_reveal_R2",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["murder_reveal"],
+    "tags": ["clan_discovery","clan_wide"],
+    "weight": 5,
+    "event_text": "r_c always felt it was strange - the way mur_c died was suspicious. When mur_c visits {PRONOUN/r_c/object}  in {PRONOUN/r_c/poss} dreams, the truth is finally revealed. m_c killed {PRONOUN/mur_c/object}. The shock startles r_c awake and {PRONOUN/r_c/subject} {VERB/r_c/rush/rushes} to inform the Clan of this horrific revelation.",
+    "m_c": {
+        "age": ["any"],
+        "status": ["any"]
+    },
+    "r_c": {
+        "age": ["any"],
+        "status": ["medicine cat"],
+        "skill": ["STAR,1"]
+    }
+},
+{
+    "event_id": "lifegen_reveal_R3",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["murder_reveal"],
+    "tags": ["clan_discovery","clan_wide"],
+    "weight": 5,
+    "event_text": "r_c has always seen wandering ghosts here and there. Few stick around, but one has approached with worry. The ghost revealed something they'd stumbled upon - a cold-blooded murder. Horrified, r_c learns that mur_c was killed by one of {PRONOUN/r_c/poss} very own Clanmates... m_c. {PRONOUN/r_c/subject/CAP} informs the Clan immediately, telling that a passing loner had seen it and shared the tale with {PRONOUN/r_c/object}.",
+    "m_c": {
+        "age": ["any"],
+        "status": ["any"]
+    },
+    "r_c": {
+        "age": ["any"],
+        "status": ["any"],
+        "skill": ["GHOST,1"]
+    }
+},
+{
+    "event_id": "lifegen_reveal_R4",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["murder_reveal"],
+    "tags": ["clan_discovery","clan_wide"],
+    "weight": 5,
+    "event_text": "It was r_c's little secret. Seeing the cats of the Dark Forest was a power {PRONOUN/r_c/subject}'d never asked for. In this moment, though, it came in handy. Word through the murk was that mur_c was killed brutally by m_c. Gathering proof through those shadowy spirits, r_c accuses to the Clan - though is a bit tightlipped on how {PRONOUN/r_c/subject} found out.",
+    "m_c": {
+        "age": ["any"],
+        "status": ["any"]
+    },
+    "r_c": {
+        "age": ["any"],
+        "status": ["any"],
+        "skill": ["DARK,1"]
+    }
+},
+{
+    "event_id": "lifegen_reveal_sam1",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["murder_reveal"],
+    "weight": 5,
+    "event_text": "r_c snuck out of camp one night to find m_c sitting alone, muttering to {PRONOUN/m_c/self}. {PRONOUN/m_c/subject/CAP} hadn't noticed r_c yet, so {PRONOUN/r_c/subject} sat to listen. m_c was muttering about.. Murder? After listening further, r_c finds out that m_c murdered mur_c.",
+    "m_c": {
+        "age": ["any"],
+        "status": ["any"]
+    },
+    "r_c": {
+        "age": ["kitten"],
+        "status": ["any"]
+    } 
+},
+{
+    "event_id": "lifegen_reveal_sam2",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["murder_reveal"],
+    "tags": ["clan_discovery","clan_wide"],
+    "weight": 5,
+    "event_text": "r_c swears {PRONOUN/r_c/subject} heard m_c talking about how {PRONOUN/m_c/subject} murdered mur_c, but nobody seems to believe {PRONOUN/r_c/object}. Later, m_c gets r_c alone and tells {PRONOUN/r_c/object} that {PRONOUN/r_c/subject} {VERB/r_c/need/needs} to drop the story, or else. r_c ran off crying, and enough cats witnessed the aftermath of the conversation to start believing what r_c said.",
+    "m_c": {
+        "age": ["any"],
+        "status": ["any"]
+    },
+    "r_c": {
+        "age": ["kitten"],
+        "status": ["any"]
+    } 
+},
+{
+    "event_id": "lifegen_reveal_guy1",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["murder_reveal"],
+    "tags": ["clan_discovery","clan_wide"],
+    "weight": 5,
+    "event_text": "Fed up with the Clan mourning, m_c yowls that {PRONOUN/m_c/subject} should've been exiled a long time ago, and m_c only did what other cats refused. {PRONOUN/m_c/subject/CAP} start to add that {PRONOUN/m_c/subject} would do it again, but r_c manages to shut {PRONOUN/m_c/object} up before {PRONOUN/m_c/subject} make it even worse...",
+    "m_c": {
+        "age": ["any"],
+        "status": ["any"],
+        "trait": ["sneaky, rebellious, obsessive, adventurous, stoic, aloof, cunning, troublesome, manipulative"]
+    },
+    "r_c": {
+        "age": ["any"],
+        "status": ["any"]
+    }
+},
+{
+    "event_id": "lifegen_reveal_guy2",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["murder_reveal"],
+    "tags": ["clan_discovery","clan_wide"],
+    "weight": 5,
+    "event_text": "r_c knew something was wrong. It just didn't add up, the behavior mur_c had shown before {PRONOUN/mur_c/poss} death just wasn't <i>{PRONOUN/mur_c/object}</i>. After putting together all of the evidence, every story and detail, r_c accuses m_c of murder during a Clan meeting.",
+    "m_c": {
+        "age": ["any"],
+        "status": ["any"]
+    },
+    "r_c": {
+        "age": ["any"],
+        "status": ["any"],
+        "skill": ["SENSE,1","INSIGHTFUL,1","CLAIRVOYANT,1"]
+    }
+},
+{
+    "event_id": "lifegen_reveal_guy3",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["murder_reveal"],
+    "tags": ["clan_discovery","clan_wide"],
+    "weight": 5,
+    "event_text": "m_c spreads rumors that r_c killed mur_c, but the rumors backfire as it causes suspicion in m_c's reliability. With a little more investigating and questioning, the Clan is horrified to find m_c is mur_c's murderer.",
+    "m_c": {
+        "age": ["any"],
+        "status": ["any"]
+    },
+    "r_c": {
+        "age": ["any"],
+        "status": ["any"]
+    }
+},
+{
+    "event_id": "lifegen_reveal_guy4",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["murder_reveal"],
+    "tags": ["clan_discovery","clan_wide"],
+    "weight": 5,
+    "event_text": "m_c wakes up during the night and believes {PRONOUN/m_c/subject} see mur_c standing over {PRONOUN/m_c/poss} nest. {PRONOUN/m_c/subject/CAP} begin wailing and begging for mercy, but only manage to alert the entire Clan to {PRONOUN/m_c/poss} sins.",
+    "m_c": {
+        "age": ["any"],
+        "status": ["any"]
+    },
+    "r_c": {
+        "age": ["any"],
+        "status": ["any"]
+    }
+},
+{
+    "event_id": "lifegen_reveal_H1",
+    "location": ["any"],
+    "season": ["leafbare"],
+    "sub_type": ["murder_reveal"],
+    "tags": ["clan_discovery","clan_wide"],
+    "weight": 5,
+    "event_text": "While walking along the border, r_c notices a trail of blood staining the snow. Assuming it's a hurt wild animal, r_c crouches low and follows the trail, only to shockingly find the culprit of mur_c's murder -- m_c. r_c quickly darts to the leader to report {PRONOUN/r_c/poss} findings before the evidence could be tainted.",
+    "m_c": {
+        "age": ["any"],
+        "status": ["any"]
+    },
+    "r_c": {
+        "age": ["any"],
+        "status": ["warrior, apprentice"],
+        "skill": ["SENSE,1","INSIGHTFUL,1","CLAIRVOYANT,1","HUNTER,1"]
+    }
+},
+{
+    "event_id": "lifegen_reveal_H2",
+    "location": ["forest"],
+    "season": ["any"],
+    "sub_type": ["murder_reveal","LIFEGEN_no_shun"],
+    "weight": 5,
+    "event_text": "r_c follows after a blue butterfly, batting at it playfully as {PRONOUN/r_c/subject} {VERB/r_c/run/runs} into the thick forest. Accidentally, r_c stumbles across m_c talking to what seems to be nothing, stating {PRONOUN/m_c/subject} murdered mur_c. r_c sneaks away before m_c could realize {PRONOUN/r_c/subject} {VERB/r_c/were/was} there, wondering if the blue butterfly really is an omen...",
+    "m_c": {
+        "age": ["any"],
+        "status": ["any"],
+        "skill": ["DARK,1"]
+    },
+    "r_c": {
+        "age": ["kitten"],
+        "status": ["any"]
+    }
+},
+{
+    "event_id": "lifegen_reveal_ren1",
+    "location": ["any"],
+    "season": ["any"],
+    "sub_type": ["murder_reveal","LIFEGEN_no_shun"],
+    "weight": 5,
+    "event_text": "A blue butterfly flutters past r_c's nose, leading the way down the path through the murky forest. Eventually, it alights on the still paw of mur_c, m_c standing over {PRONOUN/mur_c/poss} body.",
+    "m_c": {
+        "age": ["any"],
+        "status": ["any"],
+        "skill": ["DARK,1"]
+    },
+    "r_c": {
+        "age": ["kitten"],
+        "status": ["any"]
+    }
+},
   {
     "event_id": "gen_misc_any_misc2",
     "location": ["any"],
@@ -1270,7 +1497,7 @@
         "season": ["any"],
         "sub_type": ["accessory"],
         "weight": 15,
-        "event_text": "m_c sneaked out of camp, and brought back with them some acc_singular from when {PRONOUN/m_c/poss} fur got snagged in a bush.",
+        "event_text": "m_c snuck out of camp, and brought back with {PRONOUN/m_c/object} some acc_singular from when {PRONOUN/m_c/poss} fur got snagged in a bush.",
         "new_accessory": ["HOLLY", "JUNIPER", "RASPBERRY"],
         "m_c": {
             "status": ["kitten"]
@@ -2124,7 +2351,7 @@
     "season": ["any"],
     "sub_type": ["war"],
     "weight": 20,
-    "event_text": "m_c is checking in on every cat in the camp to make sure everyone is staying healthy in the midst of war.",
+    "event_text": "m_c is checking in on everycat in the camp to make sure everycat is staying healthy in the midst of war.",
     "m_c": {
       "age":["any"],  
       "status": ["mediator", "mediator apprentice"],
@@ -2160,7 +2387,7 @@
     "location": ["any"],
     "season": ["any"],
     "weight": 10,
-    "event_text": "m_c pulls r_c to the side, quietly asking {PRONOUN/r_c/object} abou {PRONOUN/r_c/poss} crush on a fellow Clanmate.",
+    "event_text": "m_c pulls r_c to the side, quietly asking {PRONOUN/r_c/object} about {PRONOUN/r_c/poss} crush on a fellow Clanmate.",
     "m_c":{
       "status":["mediator", "mediator apprentice"]
     },
@@ -2406,7 +2633,7 @@
     "season": ["any"],
     "tags": ["skill_trait_required"],
     "weight": 10,
-    "event_text": "m_c walks into the dreams of {PRONOUN/m_c/poss} Clanmates while everyone sleeps.",
+    "event_text": "m_c walks into the dreams of {PRONOUN/m_c/poss} Clanmates while everycat sleeps.",
     "m_c": {
       "status": ["healer"],
       "skill": ["DREAM,2"]
@@ -2515,7 +2742,7 @@
     "season": ["any"],
     "sub_type": ["war"],
     "weight": 20,
-    "event_text": "m_c watches every little thing around {PRONOUN/m_c/object} for any omen that indicates what the Clan should do in the war. The losses weigh heavy on the hearts of every cat.",
+    "event_text": "m_c watches every little thing around {PRONOUN/m_c/object} for any omen that indicates what the Clan should do in the war. The losses weigh heavy on the hearts of everycat.",
     "m_c": {
       "status": ["healer apprentice", "healer"],
       "skill": ["OMEN,1"]
@@ -3648,7 +3875,7 @@
     "season": ["newleaf", "greenleaf", "leaf-fall"],
     "sub_type": ["accessory"],
     "weight": 20,
-    "event_text":  "r_c found a little patch of acc_plural and decided to gift them to m_c",
+    "event_text":  "r_c found a little patch of acc_plural and decided to gift them to m_c.",
     "new_accessory": ["POPPY", "ORANGE POPPY", "CYAN POPPY", "WHITE POPPY", "PINK POPPY", "BULB WHITE", "BULB YELLOW", "BULB ORANGE", "BULB PINK", "BULB BLUE", "LAVENDER", "HEATHER", "GORSE", "LILY OF THE VALLEY", "BLUEBELLS", "FORGET ME NOTS"],
     "m_c": {
       "age": ["adolescent", "young adult", "adult", "senior adult", "senior"]
@@ -3663,7 +3890,7 @@
     "season": ["newleaf","greenleaf"],
     "subtype": ["accessory", "romance"],
     "weight": 10,
-    "event_text": "Flowers can be so pretty, even before they bloom, just like m_c. r_c blushes as they see m_c wear the acc_singular {PRONOUN/r_c/subject} got {PRONOUN/m_c/object}",
+    "event_text": "Flowers can be so pretty, even before they bloom, just like m_c. r_c blushes as {PRONOUN/r_c/subject} {VERB/r_c/see/sees} m_c wear the acc_singular {PRONOUN/r_c/subject} got {PRONOUN/m_c/object}.",
     "new_accessory": ["BULB WHITE", "BULB YELLOW", "BULB ORANGE", "BULB PINK", "BULB BLUE"],
     "m_c": {
       "age": ["young adult", "adult", "senior adult"]
@@ -3687,7 +3914,7 @@
     "season": ["any"],
     "tags": ["skill_trait_required"],
     "weight": 5,
-    "event_text": "m_c thinks starclan is trying to warn {PRONOUN/m_c/object} about r_c.",
+    "event_text": "m_c thinks StarClan is trying to warn {PRONOUN/m_c/object} about r_c.",
     "m_c": {
       "age": ["adolescent", "young adult", "adult", "senior adult", "senior"],
       "status": ["healer"],
@@ -3712,7 +3939,7 @@
     "season": ["leaf-bare"],
     "sub_type": ["accessory"],
     "weight": 10,
-    "event_text": "m_c finds a stray acc_singular in its last moments of life leading them to a new herb gathering spot before {PRONOUN/m_c/subject} {VERB/m_c/have/has} never found before. It gives a final flutter before it gently decends to the ground. Is it a sign from star clan, or a coincidence? m_c doesnt know but {PRONOUN/m_c/subject} {VERB/m_c/decide/decides} to keep it with {PRONOUN/m_c/object} in its honor.",
+    "event_text": "m_c finds a stray acc_singular in its last moments of life leading them to a new herb gathering spot before {PRONOUN/m_c/subject} {VERB/m_c/have/has} never found before. It gives a final flutter before it gently decends to the ground. Is it a sign from StarClan, or a coincidence? m_c doesnt know but {PRONOUN/m_c/subject} {VERB/m_c/decide/decides} to keep it with {PRONOUN/m_c/object} in its honor.",
     "new_accessory": ["BLACK CICADA", "CICADA WINGS", "ROSY MOTH WINGS", "MORPHO BUTTERFLY", "MONARCH BUTTERFLY"],
     "m_c": {
       "age": ["adolescent", "young adult", "adult", "senior adult", "senior"],

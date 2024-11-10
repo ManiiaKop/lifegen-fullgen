@@ -1,10 +1,10 @@
 import pygame.transform
 import pygame_gui.elements
-from random import choice
+from random import choice, randint
 import ujson
 import re
 from .Screens import Screens
-from scripts.utility import get_text_box_theme, scale, pronoun_repl
+from scripts.utility import get_text_box_theme, scale, pronoun_repl, get_personality_compatibility
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 from scripts.game_structure.game_essentials import game, screen, screen_x, screen_y, MANAGER
@@ -23,6 +23,7 @@ class QueenScreen(Screens):
 
     def __init__(self, name=None):
         super().__init__(name)
+        self.fav = {}
         self.list_page = None
         self.next_cat = None
         self.previous_cat = None
@@ -145,6 +146,10 @@ class QueenScreen(Screens):
             self.cat_list_buttons[ele].kill()
         self.cat_list_buttons = {}
 
+        for marker in self.fav:
+            self.fav[marker].kill()
+        self.fav = {}
+
         for ele in self.apprentice_details:
             self.apprentice_details[ele].kill()
         self.apprentice_details = {}
@@ -216,12 +221,16 @@ class QueenScreen(Screens):
         RESOURCE_DIR = "resources/dicts/events/lifegen_events/"
         with open(f"{RESOURCE_DIR}nursery_activities.json", 'r') as read_file:
             display_events = ujson.loads(read_file.read())[self.activity]
+
+        success = self.get_success()
         stat_change = choice(display_events["stat_change"])
+        while (success and "down" in stat_change) or (not success and "up" in stat_change):
+            stat_change = choice(display_events["stat_change"])
         self.activity_box.kill()
         self.activity_box = pygame_gui.elements.UITextBox(self.adjust_txt(choice(display_events[stat_change])),
-                                                     scale(pygame.Rect((200, 420), (600, 400))),
-                                                     object_id=get_text_box_theme("#text_box_26"),
-                                                     manager=MANAGER)
+                                                    scale(pygame.Rect((200, 420), (600, 400))),
+                                                    object_id=get_text_box_theme("#text_box_26"),
+                                                    manager=MANAGER)
         if stat_change == "courage up":
             self.selected_cat.courage += 1
         elif stat_change == "courage down":
@@ -239,9 +248,61 @@ class QueenScreen(Screens):
         elif stat_change == "intelligence down":
             self.selected_cat.intelligence -= 1
         
+        if success:
+            exp_gain = randint(5, 20)
+            self.the_cat.experience += exp_gain
         self.the_cat.did_activity = True
         self.confirm_mentor.disable()
         self.update_selected_cat()
+
+    def get_success(self):
+        queen = self.the_cat
+        kit = self.selected_cat
+
+        #influences on success chances: exp, relationship, skill
+
+        chance = 50
+        
+        if queen.experience_level == "untrained":
+            chance = 40
+        elif queen.experience_level == "trainee":
+            chance = 50
+        elif queen.experience_level == "prepared":
+            chance = 60
+        elif queen.experience_level == "proficient":
+            chance = 70
+        elif queen.experience_level == "expert":
+            chance = 80
+        elif queen.experience_level == "master":
+            chance = 90
+
+        if queen.ID in kit.relationships:
+            rel1 = queen.relationships[kit.ID]
+        else:
+            rel1 = queen.create_one_relationship(kit)
+
+        if kit.ID in queen.relationships:
+            rel2 = kit.relationships[queen.ID]
+        else:
+            rel2 = kit.create_one_relationship(queen)
+
+        compat = get_personality_compatibility(queen, kit)
+        if compat is True:
+            chance += 10
+        elif compat is False:
+            chance -= 5
+
+        if rel1.platonic_like > 30:
+            chance += 5
+        if rel1.dislike > 10:
+            chance -= 5
+        if rel2.platonic_like > 30:
+            chance += 5
+        if rel2.dislike > 10:
+            chance -= 5
+        
+        return randint(0, 100) < min(chance, 95)
+
 
     def adjust_txt(self, text):
         process_text_dict = {}
@@ -316,10 +377,23 @@ class QueenScreen(Screens):
             self.cat_list_buttons[ele].kill()
         self.cat_list_buttons = {}
 
+        for marker in self.fav:
+            self.fav[marker].kill()
+        self.fav = {}
+
         pos_x = 0
         pos_y = 40
         i = 0
         for cat in display_cats:
+            if game.clan.clan_settings["show fav"] and cat.favourite != 0:
+                self.fav[str(i)] = pygame_gui.elements.UIImage(
+                    scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))),
+                    pygame.transform.scale(
+                        pygame.image.load(
+                            f"resources/images/fav_marker_{cat.favourite}.png").convert_alpha(),
+                        (100, 100))
+                )
+                self.fav[str(i)].disable()
             self.cat_list_buttons["cat" + str(i)] = UISpriteButton(
                 scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))),
                 cat.sprite, cat_object=cat, manager=MANAGER)

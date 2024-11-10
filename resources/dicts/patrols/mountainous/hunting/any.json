@@ -165,7 +165,7 @@
         "chance_of_success": 30,
         "success_outcomes": [
             {
-                "text": "r_c manages a skillful catch, and brings it back to the camp to show everyone!",
+                "text": "r_c manages a skillful catch, and brings it back to the camp to show everycat!",
                 "exp": 20,
                 "weight": 20,
                 "prey": ["medium"]
@@ -937,7 +937,7 @@
                 "weight": 20
             },
             {
-                "text": "r_c is hit by a monster while crossing and dies instantly. c_n is shaken by the death, and it's a reminder to every cat that just because their territory contains few Thunderpaths doesn't mean they can forget their dangers.",
+                "text": "r_c is hit by a monster while crossing and dies instantly. c_n is shaken by the death, and it's a reminder to everycat that just because their territory contains few Thunderpaths doesn't mean they can forget their dangers.",
                 "exp": 0,
                 "weight": 10,
                 "dead_cats": ["r_c"],
@@ -948,7 +948,7 @@
                 }
             },
             {
-                "text": "r_c is hit by a monster and seems quite injured, but miraculously still alive. c_n is shaken by the incident, and it's a reminder to every cat that just because their territory contains few Thunderpaths doesn't mean they can forget their dangers.",
+                "text": "r_c is hit by a monster and seems quite injured, but miraculously still alive. c_n is shaken by the incident, and it's a reminder to everycat that just because their territory contains few Thunderpaths doesn't mean they can forget their dangers.",
                 "exp": 0,
                 "weight": 10,
                 "injury": [
@@ -1026,7 +1026,7 @@
                 "weight": 20
             },
             {
-                "text": "r_c is crossing the Thunderpath and hears a monster thundering towards {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} {VERB/r_c/freeze/freezes}, and the monster swerves to hit {PRONOUN/r_c/object} deliberately, killing {PRONOUN/r_c/object} instantly. c_n is shaken by the death, and it's a reminder to every cat that just because their territory contains few Thunderpaths doesn't mean they can forget their dangers.",
+                "text": "r_c is crossing the Thunderpath and hears a monster thundering towards {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} {VERB/r_c/freeze/freezes}, and the monster swerves to hit {PRONOUN/r_c/object} deliberately, killing {PRONOUN/r_c/object} instantly. c_n is shaken by the death, and it's a reminder to everycat that just because their territory contains few Thunderpaths doesn't mean they can forget their dangers.",
                 "exp": 0,
                 "weight": 10,
                 "dead_cats": ["r_c"],
@@ -1037,7 +1037,7 @@
                 }
             },
             {
-                "text": "r_c is hit by a monster and seems quite injured, but miraculously still alive. c_n is shaken by the incident, and it's a reminder to every cat that just because their territory contains few Thunderpaths doesn't mean they can forget their dangers.",
+                "text": "r_c is hit by a monster and seems quite injured, but miraculously still alive. c_n is shaken by the incident, and it's a reminder to everycat that just because their territory contains few Thunderpaths doesn't mean they can forget their dangers.",
                 "exp": 0,
                 "weight": 10,
                 "injury": [

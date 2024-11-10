@@ -239,5 +239,24 @@
 			"comfortable": "increase",
 			"trust": "increase"
 		}
+	},
+	{
+		"id": "Guy_comfort_inc_highQueen1",
+		"interactions": [
+			"m_c tucks r_c in between {PRONOUN/m_c/subject} paws to protect {PRONOUN/r_c/object} from the rain.",
+			"m_c grooms r_c's mud-covered pelt.",
+			"m_c curls {PRONOUN/m_c/subject} tail around r_c.",
+			"m_c makes r_c the main character in a bedtime story."
+		],
+		"main_status_constraint": [
+			"queen apprentice",
+			"queen"
+		],
+		"random_status_constraint": [
+			"kitten"
+		],
+		"reaction_random_cat": {
+			"comfortable": "increase"
+		}
 	}
 ]

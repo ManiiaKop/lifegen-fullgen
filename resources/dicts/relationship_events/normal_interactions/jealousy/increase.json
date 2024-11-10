@@ -130,5 +130,35 @@
 		"random_status_constraint": [
 			"elder"
 		]
-	}
+	},
+	{
+        "id": "H1_jealousydecrease_med",
+        "intensity": "medium",
+		"interactions": [
+			"m_c snickers as r_c falls flat on {PRONOUN/r_c/poss} face in the middle of c_n."
+		],
+        "reaction_random_cat": {
+            "dislike": "increase"
+        }
+    },
+    {
+        "id": "H1_jealousyincrease_low_queen",
+        "intensity": "low",
+        "interactions": [
+            "m_c grumbles as r_c successfully calms down a kitten after m_c attempted for ages.",
+            "m_c watches as r_c perfectly organizes the nursery, feeling jealous of r_c's skills.",
+            "m_c doesn't understand why r_c is so good with the kits. m_c doesn't think it's fair!"
+        ],
+        "main_status_constraint": [
+            "queen",
+            "queen's apprentice"
+        ],
+        "random_status_constraint": [
+            "queen",
+            "queen's apprentice"
+        ],
+        "reaction_random_cat": {
+            "dislike": "increase"
+        }
+    }
 ]

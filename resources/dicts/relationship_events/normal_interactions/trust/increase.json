@@ -279,5 +279,20 @@
 			"healer apprentice",
 			"healer"
 		]
+	},
+	{
+		"id": "guy_trust_queen_inc_high1",
+		"interactions": [
+			"m_c asks r_c about the best way to raise a kit.",
+			"m_c listens to r_c advice about what to do if {PRONOUN/m_c/subject} {VERB/m_c/find/finds} an orphaned kit.",
+			"m_c hopes r_c is still there if {PRONOUN/m_c/subject} have kits."
+		],
+		"random_status_constraint": [
+			"queen apprentice",
+			"queen"
+		],
+		"reaction_random_cat": {
+			"trust": "increase"
+		}
 	}
 ]

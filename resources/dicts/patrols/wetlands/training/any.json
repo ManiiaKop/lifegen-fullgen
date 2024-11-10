@@ -63,7 +63,7 @@
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "p_l fishes their Clanmate out from the swamp and settles down to groom the water from their pelt. Everyone is relieved to have gotten off so lightly.",
+                "text": "p_l fishes their Clanmate out from the swamp and settles down to groom the water from their pelt. Everycat is relieved to have gotten off so lightly.",
                 "exp": 20,
                 "weight": 20,
                 "relationships": [
@@ -208,7 +208,7 @@
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "{PRONOUN/r_c/poss/CAP} Clanmates come running at {PRONOUN/r_c/poss} yowls, and r_c is soon back on dry land, shaken but unharmed. The patrol settles down as everyone comforts each other.",
+                "text": "{PRONOUN/r_c/poss/CAP} Clanmates come running at {PRONOUN/r_c/poss} yowls, and r_c is soon back on dry land, shaken but unharmed. The patrol settles down as everycat comforts each other.",
                 "exp": 20,
                 "weight": 20,
                 "relationships": [

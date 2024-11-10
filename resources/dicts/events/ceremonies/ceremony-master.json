@@ -380,7 +380,7 @@
       "wise",
       "thoughtful"
     ],
-    "Surprising (mentor), the first thing that m_c does after {PRONOUN/m_c/poss} apprentice ceremony is gather moss, just to make sure everyone has fresh bedding."
+    "Surprising (mentor), the first thing that m_c does after {PRONOUN/m_c/poss} apprentice ceremony is gather moss, just to make sure everycat has fresh bedding."
   ],
   "app_23": [
     [
@@ -552,7 +552,7 @@
       "grumpy",
       "rebellious"
     ],
-    "m_c has been pestering everyone for moons on when {PRONOUN/m_c/subject} finally {VERB/m_c/get/gets} to be an apprentice, and everyone is relieved that they're finally free of the young cat's nagging... Until {PRONOUN/m_c/subject} {VERB/m_c/start/starts} asking about when {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} going to be a warrior as soon as the meeting ends."
+    "m_c has been pestering everycat for moons on when {PRONOUN/m_c/subject} finally {VERB/m_c/get/gets} to be an apprentice, and everycat is relieved that they're finally free of the young cat's nagging... Until {PRONOUN/m_c/subject} {VERB/m_c/start/starts} asking about when {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} going to be a warrior as soon as the meeting ends."
   ],
   "app_31": [
     [
@@ -925,7 +925,11 @@
       "general_backstory",
       "bloodthirsty"
     ],
+<<<<<<< HEAD
     "To gain access to both life-saving herbs and life-threatening poisons, m_c decides to become a healer and is apprenticed to (mentor)."
+=======
+    "To better understand both life-saving herbs and life-threatening poisons, m_c decides to become a medicine cat and is apprenticed to (mentor)."
+>>>>>>> lifegen_origin/LifeGen-dev
   ],
   "med_app_7": [
     [
@@ -1686,7 +1690,11 @@
       "arrogant",
       "rebellious"
     ],
+<<<<<<< HEAD
     "(old_name) may have butted heads with nearly every Clan member there is, but being able to argue was a blessing as a healer. m_c will have to continue shoving odd mixtures down everyone's throats, after all. StarClan will be watching {PRONOUN/m_c/object} with pride."
+=======
+    "(old_name) may have butted heads with nearly every Clan member there is, but being able to argue was a blessing as a medicine cat. m_c will have to continue shoving odd mixtures down everycat's throats, after all. StarClan will be watching {PRONOUN/m_c/object} with pride."
+>>>>>>> lifegen_origin/LifeGen-dev
   ],
   "med_16": [
     [
@@ -2641,7 +2649,7 @@
       "righteous",
       "sincere"
     ],
-    "(old_name) stands tall before the Clan, gaze determined as l_n says {PRONOUN/m_c/subject} {VERB/m_c/are/is} ready for {PRONOUN/m_c/poss} warrior name. (old_name) takes the vow seriously, and promises to always do what is best for everyone. Gaze proud, l_n names {PRONOUN/m_c/object} m_c after {PRONOUN/m_c/poss} r_h."
+    "(old_name) stands tall before the Clan, gaze determined as l_n says {PRONOUN/m_c/subject} {VERB/m_c/are/is} ready for {PRONOUN/m_c/poss} warrior name. (old_name) takes the vow seriously, and promises to always do what is best for everycat. Gaze proud, l_n names {PRONOUN/m_c/object} m_c after {PRONOUN/m_c/poss} r_h."
   ],
   "warrior_39": [
     [
@@ -3205,7 +3213,8 @@
       "general_leader",
       "general_backstory",
       "all_traits",
-      "forgiven"
+      "forgiven",
+      "shunned_as_kit"
     ],
     "m_c is glad to finally begin training after being forgiven by the Clan."
   ],
@@ -3217,7 +3226,8 @@
       "general_leader",
       "general_backstory",
       "all_traits",
-      "forgiven"
+      "forgiven",
+      "shunned_as_kit"
     ],
     "m_c is overjoyed at {PRONOUN/m_c/poss} belated apprentice ceremony, vowing to {PRONOUN/m_c/poss} mentor, (mentor), that {PRONOUN/m_c/subject} will be the most loyal warrior the Clan's ever seen."
   ],
@@ -3229,7 +3239,8 @@
       "general_leader",
       "general_backstory",
       "all_traits",
-      "forgiven"
+      "forgiven",
+      "shunned_as_kit"
     ],
     "m_c has always been interested in medicine, and now, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} finally allowed to begin learning it. {PRONOUN/m_c/subject/CAP} {VERB/m_c/touch/touches} noses with {PRONOUN/m_c/poss} new mentor, (mentor), and promise in front of the Clan that {PRONOUN/m_c/subject} will use {PRONOUN/m_c/poss} new skills only to heal, not hurt."
   ],
@@ -3241,7 +3252,7 @@
       "general_leader",
       "general_backstory",
       "all_traits",
-      "forgiven"
+      "shunned"
     ],
     "Upon being forgiven by the Clan, m_c will begin training as a mediator apprentice. l_n remarks that learning about mediation will help {PRONOUN/m_c/object} recover from what {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} done."
   ],
@@ -3268,7 +3279,8 @@
       "general_leader",
       "general_backstory",
       "all_traits",
-      "forgiven"
+      "forgiven",
+      "shunned_as_kit"
     ],
     "m_c is glad to finally begin training after being forgiven by the Clan."
   ],
@@ -3283,8 +3295,25 @@
       "general_leader",
       "general_backstory",
       "all_traits",
-      "forgiven"
+      "forgiven",
+      "shunned_as_kit"
     ],
     "m_c is glad to finally begin training after being forgiven by the Clan."
+  ],
+  "forgiven_app8": [
+    [
+      "apprentice",
+      "yes_mentor",
+      "queen's apprentice",
+      "mediator apprentice",
+      "medicine cat apprentice",
+      "general_parents",
+      "general_leader",
+      "general_backstory",
+      "all_traits",
+      "forgiven",
+      "shunned_as_apprentice"
+    ],
+      "m_c is relieved to get back to training after being forgiven by the Clan."
   ]
 }

@@ -55,7 +55,7 @@
             "Can still feel {PRONOUN/m_c/poss} wounds that killed {PRONOUN/m_c/object}",
             "Is discussing future plans with the other Dark Forest cats",
             "Is eerily staring at the black abyss",
-            "Is yowling into the ebony void that {PRONOUN/m_c/subject} don't belong here"
+            "Is yowling into the ebony void that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} belong here"
         ]
     },
     {
@@ -67,10 +67,7 @@
             "Is watching r_c with a sly smile",
             "Is currently walking inside r_c's dreams, whispering of promises and lies",
             "Is taking over r_c's body in order to finish what {PRONOUN/m_c/subject} started",
-            "Pulls r_c into the Dark Forest in {PRONOUN/r_c/poss} dreams",
-            "Is secretly training r_c",
-            "Is begging r_c to vouch for {PRONOUN/m_c/object} to join StarClan",
-            "Is explaining to r_c about {PRONOUN/m_c/poss} backstory and why {PRONOUN/m_c/subject} {VERB/m_c/are/is} here"
+            "Pulls r_c into the Dark Forest in {PRONOUN/r_c/poss} dreams"
         ],
         "random_living_status": [
             "living"
@@ -97,6 +94,19 @@
         "main_backstory_constraint": ["clan_founder"],
         "random_living_status": [
             "darkforest"
+        ]
+    },
+    {
+        "id": "darkforest_tostarclan_LG",
+        "thoughts": [
+            "Is begging r_c to vouch for {PRONOUN/m_c/object} to join StarClan",
+            "Is explaining to r_c about {PRONOUN/m_c/poss} backstory and why {PRONOUN/m_c/subject} {VERB/m_c/are/is} here"
+        ],
+        "main_living_status": [
+            "darkforest"
+        ],
+        "random_living_status": [
+            "starclan"
         ]
     }
 ]

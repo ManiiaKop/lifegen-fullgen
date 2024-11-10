@@ -455,7 +455,7 @@
             "lifegen"
         ],
         "tags": [],
-        "patrol_art": "date_default",
+        "patrol_art": "pond_encounter",
         "min_cats": 2,
         "max_cats": 2,
         "min_max_status": {},
@@ -634,7 +634,7 @@
             "lifegen"
         ],
         "tags": [],
-        "patrol_art": "date_sunrise",
+        "patrol_art": "sunrise_cliff",
         "min_cats": 2,
         "max_cats": 2,
         "min_max_status": {},
@@ -1432,7 +1432,7 @@
         "max_cats": 3,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "oc_1 and r_c are settling down for an afternoon nap together. It looks cosy-- you wonder if they'd let you join them.",
+        "intro_text": "o_c1 and r_c are settling down for an afternoon nap together. It looks cosy-- you wonder if they'd let you join them.",
         "decline_text": "You decide instead to settle down on your own, knowing they probably wouldn't want to be seen cuddling with you.",
         "chance_of_success": 60,
         "success_outcomes": [
@@ -1478,7 +1478,7 @@
         "max_cats": 3,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "You're bored around camp, and you notice that r_c and o_c1 are both in camp as well, looking equally bored. The flowers have bloomed-- you consider asking them both if they're like to spend some time with you.",
+        "intro_text": "You're bored around camp, and you notice that r_c and o_c1 are both in camp as well, looking equally bored. The flowers have bloomed-- you consider asking them both if they'd like to spend some time with you.",
         "decline_text": "You decide against it, the fear of rejection too strong to overpower.",
         "chance_of_success": 60,
         "success_outcomes": [
@@ -1530,7 +1530,7 @@
         "max_cats": 3,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "oc_1 and r_c are settling down for an afternoon nap together. It looks cosy-- you wonder if they'd let you join them.",
+        "intro_text": "o_c1 and r_c are settling down for an afternoon nap together. It looks cosy-- you wonder if they'd let you join them.",
         "decline_text": "You decide instead to settle down on your own, knowing they probably wouldn't want to be seen cuddling with you.",
         "chance_of_success": 60,
         "success_outcomes": [
@@ -1733,7 +1733,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "You agree, but as r_c leads you to a tree in the corner of camp, r_w calls out to you, requesting that you don't go anywhere they can't keep an eye on you. You sigh and follow r_c back into the centre of the camp, where you spend the sunset trying to catch a glimpse of it through the trees.",
+                "text": "You agree, but as r_c leads you to a tree in the corner of camp, a warrior calls out to you, requesting that you don't go anywhere they can't keep an eye on you. You sigh and follow r_c back into the centre of the camp, where you spend the sunset trying to catch a glimpse of it through the trees.",
                 "exp": 0,
                 "weight": 20
             }
@@ -1784,5 +1784,274 @@
                 "weight": 20
             }
         ]
-    }
+    },
+    {
+        "patrol_id": "Life_alreadymates_date_H1",
+        "biome": [
+            "forest",
+            "mountainous",
+            "plains"
+        ],
+        "season": [
+            "newleaf",
+            "greenleaf"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "patrol_art": "date_flowerfield",
+        "min_cats": 2,
+        "max_cats": 2,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "While walking with r_c, you notice the small clearing in which you and r_c used to lay in to watch the stars. Blooming with wildflowers and the sun shining on the warm grass, you feel the urge to lay there and enjoy the sunset with r_c once more.",
+        "decline_text": "You realize you'd rather not lay in a pile of bees and itchy grass, and trot away to find a place that wouldn't make you or r_c itch for an eternity.",
+        "chance_of_success": 50,
+        "relationship_constraint": ["mates"],
+        "success_outcomes": [
+            {
+                "text": "r_c accepts and before you know it, {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} playfully chasing you through the wildflower fields. Just as the sun sets against the horizon, r_c tackles you into the clearing and rolls, wildflower petals floating through the air in a beautiful arrangement of color. You and r_c share a moment of laughter, enjoying yourself before you have to travel back to c_n.",
+                "exp": 0,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["r_c"],
+                        "cats_from": ["y_c"],
+                        "mutual": true,
+                        "values": ["romantic"],
+                        "amount": 10
+                    }
+                ]
+            },
+            {
+                "text": "r_c agrees and hops through the flower field with joyful glee, breaking the seeds from the flowers so they float to the sky. While {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} distracted, you pluck a few flowers from the stems and start to weave the stems together until it forms a circle. Proud of your work, you show it off to r_c as a gift. {PRONOUN/r_c/subject/CAP} {VERB/r_c/accept/accepts} it with a bunt of heads!",
+                "exp": 0,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["r_c"],
+                        "cats_from": ["y_c"],
+                        "mutual": true,
+                        "values": ["romantic"],
+                        "amount": 10
+                    }
+                ],
+                "accessory": [
+                    {
+                        "cats": ["r_c"],
+                        "accessory": ["FLOWERCROWN"]
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You perk up and imply the idea of going into the clearing to lay in the sun, hopeful that r_c would agree. r_c hesitates and shakes {PRONOUN/r_c/poss} head, stating {PRONOUN/r_c/subject} {VERB/r_c/have/has} more important things to do and cannot rest. You're left pouting, entering the clearing alone as r_c trots to the Clan.",
+                "exp": 0,
+                "weight": 15,
+                "relationships": [
+                    {
+                        "cats_to": ["r_c"],
+                        "cats_from": ["y_c"],
+                        "mutual": false,
+                        "values": ["romantic"],
+                        "amount": -5
+                    }
+                ]
+            },
+            {
+                "text": "r_c agrees and follows you into the clearing, stepping over the wildflowers carefully. You hear a fearful yelp from behind and before you know it, r_c is racing off with a few dozen bees following {PRONOUN/r_c/poss} tail. You can't help but snicker into your paw at {PRONOUN/r_c/poss} misfortune, but quickly hide your amusement as r_c comes back with a few angry stings.",
+                "exp": 0,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["r_c"],
+                        "cats_from": ["y_c"],
+                        "mutual": true,
+                        "values": ["romantic"],
+                        "amount": 5
+                    }
+                ],
+                "injury": [
+                    {
+                        "cats": ["r_c"],
+                        "injuries": ["bee sting"]
+                    }
+                ]
+            },
+            {
+                "text": "r_c agrees and follows you into the clearing, stepping over the wildflowers carefully. You hear a fearful yelp from behind and before you know it, r_c is racing out of the field. You hear the familiar buzz of angry bees and run off yourself, the angry creatures redirecting their target onto you. Safe to say it <i>stung</i> to hear your mate's laughter.",
+                "exp": 0,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["r_c"],
+                        "cats_from": ["y_c"],
+                        "mutual": true,
+                        "values": ["romantic"],
+                        "amount": 5
+                    }
+                ],
+                "injury": [
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["bee sting"]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "patrol_id": "halloween_date_J1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "halloween"
+        ],
+        "patrol_art": "date_default",
+        "min_cats": 2,
+        "max_cats": 2,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You watch from across camp as r_c works hard to help set a haunted den up for the kits. You wonder if {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} distracted enough to allow for you sneak out of camp to find {PRONOUN/r_c/object} a gift.",
+        "decline_text":"You dismiss the idea. You shouldn't be distracting {PRONOUN/r_c/object} from {PRONOUN/r_c/poss} work, anyway.",
+        "chance_of_success": 40,
+        "success_outcomes": [
+            {
+                "text":"When r_k runs up to {PRONOUN/r_c/object}, you take the opportunity and slide out of the camp entrance while {PRONOUN/r_c/poss} head is turned. While you're out, you collect as many sweet things you can find-- some berries, catmint, and even some honeycombs-- and arrange them on a large rhubarb leaf. When you arrive back to camp, dragging the treats behind you, r_c is excited to receive the gift while {PRONOUN/r_c/poss} friends fawn about it behind {PRONOUN/r_c/object}.",
+                "exp": 20,
+                "weight": 10,
+                "relationships": [
+                    {
+                        "cats_to": ["r_c"],
+                        "cats_from": ["y_c"],
+                        "mutual": true,
+                        "values": ["romantic"],
+                        "amount": 10
+                    }
+                ]
+            },
+            {
+                "text": "You decide to call out to r_c that you'll be leaving to collect some cobwebs for the den's decorations. {PRONOUN/r_c/subject/CAP} {VERB/r_c/give/gives} you a quick nod before getting back to work, so you head out. You gather some spooky cobwebs while you're out of camp, but make sure to grab a treat for r_c while you're there. You return to camp with the cobwebs and a small bundle of berries, both of which {PRONOUN/r_c/subject} {VERB/r_c/accept/accepts} gratefully.",
+                "exp": 20,
+                "weight": 10,
+                "herbs": ["cobwebs"],
+                "relationships": [
+                    {
+                        "cats_to": ["r_c"],
+                        "cats_from": ["y_c"],
+                        "mutual": true,
+                        "values": ["romantic"],
+                        "amount": 7
+                    }
+                ]
+            },
+            {
+                "text": "r_k runs up to r_c, distracting {PRONOUN/r_c/object}, so you take the opportunity and slip out of camp. You're not able to find much, but you manage to snatch a pretty trinket from a display in front of a Twoleg nest. You surprise r_c with it back at camp, who thanks you enthusiastically!",
+                "exp": 20,
+                "weight": 20,
+                "accessory": [
+                    {
+                        "cats": ["r_c"],
+                        "accessory": ["DRIEDORANGE", "CREAMWOOL", "SNAILSHELL", "PUMPKIN", "BIRDSKULL"],
+                        "no_results": true
+                    }
+                ],
+                "relationships": [
+                    {
+                        "cats_to": ["r_c"],
+                        "cats_from": ["y_c"],
+                        "mutual": true,
+                        "values": ["romantic"],
+                        "amount": 10
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You stand up to leave, but at the same time, r_k sprints up to you, saying r_c needs your help with the den. You'll have to find the time to get a gift later.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "You quickly slip out of camp, grab a bundle of raspberries, and return to camp before anycat can notice you've left. However, when you return to camp, you're told that r_c left to gather some cobwebs for the den decorations. You just give r_m the raspberries instead.",
+                "exp": 0,
+                "weight": 20,
+                "herbs": ["raspberry"]
+            }
+        ]
+    },
+    {
+        "patrol_id": "halloween_date_J2",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "halloween"
+        ],
+        "patrol_art": "date_default",
+        "min_cats": 2,
+        "max_cats": 2,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You've asked r_c to meet you by the camp entrance. Little {VERB/r_c/do/does} {PRONOUN/r_c/subject} know, you're waiting just outside to give {PRONOUN/r_c/object} a scare!",
+        "decline_text": "On second thought, you shouldn't contribute to the scariness of the season. When r_c approaches, you give {PRONOUN/r_c/object} a polite nod and invite {PRONOUN/r_c/object} on a normal, jumpscare-less walk.",
+        "chance_of_success": 40,
+        "success_outcomes": [
+            {
+                "text": "You listen for {PRONOUN/r_c/poss} footsteps, and when {PRONOUN/r_c/subject} {VERB/r_c/get/gets} close, you lunge towards {PRONOUN/r_c/object} with a yowl. r_c yelps and launches into the air, furr puffed up, but is laughing as soon as {PRONOUN/r_c/subject} {VERB/r_c/hit/hits} the ground. Good one!",
+                "exp": 20,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["r_c"],
+                        "cats_from": ["y_c"],
+                        "mutual": true,
+                        "values": ["romantic"],
+                        "amount": 5
+                    }
+                ]
+            },
+            {
+                "text": "As r_c passes through the camp entrance, you tackle {PRONOUN/r_c/object} with a shout. Caught off-guard, {PRONOUN/r_c/subject} {VERB/r_c/slap/slaps} at {PRONOUN/r_c/poss} assailant with frantic paws until {PRONOUN/r_c/subject} {VERB/r_c/realise/realises} it's you. {PRONOUN/r_c/subject/CAP} playfully {VERB/r_c/shove/shoves} you off and {VERB/r_c/tell/tells} you {PRONOUN/r_c/subject}'ll get you back soon before inviting you on a walk.",
+                "exp": 20,
+                "weight": 10,
+                "relationships": [
+                    {
+                        "cats_to": ["r_c"],
+                        "cats_from": ["y_c"],
+                        "mutual": true,
+                        "values": ["romantic"],
+                        "amount": 8
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "When r_c gets close to the camp entrance, you leap out at {PRONOUN/r_c/object} with your scariest face. {PRONOUN/r_c/subject/CAP} {VERB/r_c/jump/jumps}, fur puffed up and claws unsheathed, and {VERB/r_c/begin/begins} to scold you once they've landed. Apparently, {PRONOUN/r_c/subject} {VERB/r_c/weren't/wasn't} in the mood.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "You jump out at r_c as {PRONOUN/r_c/subject} {VERB/r_c/near/nears} the entrance, but, apparently, {PRONOUN/r_c/subject} {VERB/r_c/weren't/wasn't} quite close enough. A few tail lengths away, {PRONOUN/r_c/subject} {VERB/r_c/stand/stands} still and {VERB/r_c/tell/tells} you it was a good attempt.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    }    
 ]

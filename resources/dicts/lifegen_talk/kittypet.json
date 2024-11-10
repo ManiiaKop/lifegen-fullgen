@@ -249,7 +249,7 @@
             "Oh! Hello there!",
             "Jee, you Clan cats are less scary than I thought you were.",
             "Sad that I only figured that out once... you know...",
-            "[You offer the kittypet to hunt with you in StarClan for a while, and {PRONOUN/t_c/subject} cautiously {VERB/t_c/accept/accepts}, allowing you to show {PRONOUN/t_c/poss} the ropes. After a few catches, {PRONOUN/t_c/subject} {VERB/t_c/return/returs} to {PRONOUN/t_c/poss} side of the border.]",
+            "[You offer the kittypet to hunt with you in StarClan for a while, and {PRONOUN/t_c/subject} cautiously {VERB/t_c/accept/accepts}, allowing you to show {PRONOUN/t_c/poss} the ropes. After a few catches, {PRONOUN/t_c/subject} {VERB/t_c/return/returns} to {PRONOUN/t_c/poss} side of the border.]",
             "Thank you, y_c! I had a lovely time, but I have to go back to watching over my housefolk. They still need me."
         ]
     ],
@@ -343,5 +343,37 @@
             "Have you seen the new housefolk that moved in to your old home?",
             "They brought a kitten with them!"
         ]
+    ],
+    "neurotic_urtoliving_SQ1": [
+     [
+"no_kit",
+"they_neurotic",
+"they_ur",
+"they_kittypet",
+"you_injured",
+"you_blind"
+     ],
+     [
+"[t_c anxiously surveys your injuries.]",
+"I think my housefolk kept most dangerous stuff away from me. I didn't even realize it at the time.",
+"You Clan cats get hurt a lot. I really hope you recover soon, y_c."
+     ]
+    ],
+
+"neurotic_urtoliving_SQ2": [
+     [
+"no_kit",
+"they_neurotic",
+"they_ur",
+"they_kittypet",
+"you_ill",
+"you_blind"
+     ],
+     [
+"You're really not looking great, y_c. Maybe... maybe you could find a Twoleg to take care of you, just for a bit?",
+"I'm sorry, I know you Clan cats don't like that! It's just... the Twolegs did a lot of scary things, but I think they were trying to help me.",
+"Whenever I was sick, they brought me to this place that smelled bad and had bright lights, and I really didn't like it but I felt better afterwards...",
+"Just... please think about it, okay? I really don't want to see you... you know."
+     ]
     ]
 }

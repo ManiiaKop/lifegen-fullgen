@@ -8,9 +8,6 @@
             "Is eagerly listening to gossip surrounding another Clan",
             "Wants to solve the disagreements between c_n and the surrounding Clans",
             "Is theorizing with other StarClan cats on how to resolve the problems within the Clans"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -22,9 +19,6 @@
         ],
         "main_trait_constraint": [
             "childish"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -37,9 +31,6 @@
         ],
         "main_trait_constraint": [
             "troublesome"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -47,10 +38,11 @@
         "thoughts": [
             "Has been thinking carefully about how to avoid pitting the Clans against eachother",
             "Worries that the newest prophecy is going to cause mayhem",
-            "Wonders why everyone can't just get along"
+            "Wonders why everycat can't just get along"
         ],
         "main_trait_constraint": [
             "compassionate"
         ]
     }
 ]
+

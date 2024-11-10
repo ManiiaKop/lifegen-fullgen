@@ -21,18 +21,6 @@
             "For I know, I've played a part in shaping the Clan's future, one kit at a time."
         ]
     ],
-    "dep_132": [
-        [
-            "newborn",
-            "they_older",
-            "insult",
-            "you_blind",
-            "they_blind"
-        ],
-        [
-            "Wha.. What was that?"
-        ]
-    ],
     "assertivewarriorapp_comfort": [
         [
             "no_kit",
@@ -51,7 +39,7 @@
             "*Sigh* y_c, have you ever felt like you're not enough for anyone?",
             "Usually, when it comes to making a decision, I never hesitate. Whatever the obstacle, I'll run headfirst into it, no questions asked.",
             "But, today, in the nursery, I was playing with one of the kits, and they accidentally got hurt ...",
-            "I just feel like such a failure. A liability. I can't help the way I am, but what if everyone's better off without me?",
+            "I just feel like such a failure. A liability. I can't help the way I am, but what if everycat's better off without me?",
             "[You offer t_c words of reassurance, but {PRONOUN/t_c/subject} {VERB/t_c/seem/seems} troubled beyond comforting.]",
             "[Still, you sit with t_c through the night, hoping to stabilize {PRONOUN/t_c/object} through whatever storm {PRONOUN/t_c/subject} might be weathering right now.]"
         ]
@@ -67,17 +55,6 @@
         [
             "Come here, little one. Your fur is so spiky!",
             "Hey! Don't run away from me!"
-        ]
-    ],
-    "queen_3d": [
-        [
-            "insult",
-            "Any",
-            "you_blind",
-            "they_blind"
-        ],
-        [
-            "Where are your manners?"
         ]
     ],
     "assertive_medapp2": [
@@ -110,6 +87,7 @@
             "brooding",
             "neutral",
             "you_any",
+            "clan_has_kits",
             "you_deaf",
             "they_deaf"
         ],
@@ -131,7 +109,7 @@
         [
             "*Sigh*",
             "y_c ... Do you think I'm not ... 'nice' enough to be a queen?",
-            "Everyone tells me that queens are supposed to be all soft and loving ...",
+            "Everycat tells me that queens are supposed to be all soft and loving ...",
             "I just like keeping kits safe."
         ]
     ],
@@ -637,7 +615,7 @@
     ],
     "sweet_queenapp_1": [
         [
-            "you_newborn",
+            "newborn",
             "they_queen's_apprentice",
             "sweet",
             "you_blind"
@@ -1130,5 +1108,60 @@
             "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/pause/pauses} and {VERB/t_c/duck/ducks} {PRONOUN/t_c/poss} head, suddenly mumbling.]",
             "...you know. Not like me."
         ]
+    ],
+    "neurotic_queenapp_SQ3": [
+        [
+            "they_neurotic",
+            "they_queen's_apprentice",
+            "you_adult",
+            "you_app",
+            "min_platonic_30",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "It feels really weird to become an apprentice, but still spend all my time in the same places I did when I was a kit.",
+            "Like, the warrior apprentices go explore the territory, and the medicine cat apprentices move to the medicine den and visit the herb patches... but I'm still in the nursery.",
+            "Sometimes, I'm scared I just decided to be a queen's apprentice 'cause I'm scared of things changing.",
+            "I... I don't think that's true, but maybe it is and I just don't realize it?"
+        ]
+    ],
+    "neurotic_queenapp_SQ4": [
+        [
+            "they_neurotic",
+            "they_queen's_apprentice",
+            "you_adult",
+            "you_app",
+            "min_platonic_30",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "r_k_unlawful said {PRONOUN/r_k_unlawful/subject} didn't have to listen to me, because I'm basically still a kit too...",
+            "I didn't know what to say. {PRONOUN/r_k_unlawful/subject}{VERB/r_k_unlawful/'re/'s} kind of right. I'm not that much older than {PRONOUN/r_k_unlawful/object}, and I have no idea what I'm doing.",
+            "I guess I just... hoped {PRONOUN/r_k_unlawful/subject}'d still respect me? That sounds stupid when I say it out loud."
+        ]
+    ],
+    "neurotic_skillhealer_SQ2": [
+     [
+"they_neurotic",
+"they_healer",
+"they_warrior",
+"they_deputy",
+"they_apprentice",
+"they_mediator",
+"they_mediator_apprentice",
+"they_queen",
+"they_queen's_apprentice",
+"you_medicine_cat",
+"you_medicine_cat_apprentice",
+	"they_blind",
+	"you_blind"
+     ],
+     [
+"Um... sorry, y_c? I don't mean to bother you, but plove_r_c has a bit of a sore throat. Could I have some honey from your stores to give them?",
+"O-of course, you could give it to them, too! I don't mean to overstep.",
+"[There's not much that can go terribly wrong with honey. Since t_c seems to know {PRONOUN/t_c/poss} way around medicine despite not being a medicine cat, you give {PRONOUN/t_c/object} a dollop of honey on a stick and send {PRONOUN/t_c/object} on {PRONOUN/t_c/poss} way.]" 
+     ]
     ]
 }

@@ -21,6 +21,7 @@ class DeputyScreen(Screens):
 
     def __init__(self, name=None):
         super().__init__(name)
+        self.fav = {}
         self.list_page = None
         self.next_cat = None
         self.previous_cat = None
@@ -159,6 +160,10 @@ class DeputyScreen(Screens):
         for ele in self.cat_list_buttons:
             self.cat_list_buttons[ele].kill()
         self.cat_list_buttons = {}
+
+        for marker in self.fav:
+            self.fav[marker].kill()
+        self.fav = {}
 
         for ele in self.apprentice_details:
             self.apprentice_details[ele].kill()
@@ -350,6 +355,15 @@ class DeputyScreen(Screens):
         pos_y = 40
         i = 0
         for cat in display_cats:
+            if game.clan.clan_settings["show fav"] and cat.favourite != 0:
+                self.fav[str(i)] = pygame_gui.elements.UIImage(
+                    scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))),
+                    pygame.transform.scale(
+                        pygame.image.load(
+                            f"resources/images/fav_marker_{cat.favourite}.png").convert_alpha(),
+                        (100, 100))
+                )
+                self.fav[str(i)].disable()
             self.cat_list_buttons["cat" + str(i)] = UISpriteButton(
                 scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))),
                 cat.sprite, cat_object=cat, manager=MANAGER)

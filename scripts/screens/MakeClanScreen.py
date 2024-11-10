@@ -7,8 +7,12 @@ from re import sub
 import pygame
 import pygame_gui
 
+from scripts.utility import get_text_box_theme, scale, generate_sprite
+from scripts.housekeeping.version import get_version_info
 from scripts.clan import Clan
-
+from scripts.cat.cats import create_example_cats, Cat, Personality
+from scripts.cat.skills import Skill, SkillPath
+from scripts.cat.pelts import Pelt
 from scripts.cat.cats import create_example_cats, create_cat, Cat
 from scripts.housekeeping.version import get_version_info
 from scripts.cat.names import names
@@ -172,6 +176,7 @@ class MakeClanScreen(Screens):
         self.reverse=False
         self.skill = "Random"
         self.accessories=[]
+        self.inventory = []
         self.sex = "male"
         self.personality = "troublesome"
         self.accessory = None
@@ -181,6 +186,7 @@ class MakeClanScreen(Screens):
         self.adolescent_pose = 0
         self.adult_pose = 0
         self.elder_pose = 0
+        self.faith = "flexible"
         game.choose_cats = {}
         self.skills = []
         for skillpath in SkillPath:
@@ -467,6 +473,9 @@ class MakeClanScreen(Screens):
             elif game.choose_cats[a].moons == 0:
                 game.choose_cats[a].moons = choice([1, 2, 3, 4, 5])
 
+            # fucking inventory
+            game.choose_cats[a].pelt.inventory = []
+
             if self.clan_age == "new":
                 if game.choose_cats[a].status not in ['newborn', 'kitten']:
                     unique_backstories = ["clan_founder4", "clan_founder13", "clan_founder14", "clan_founder15"]
@@ -542,7 +551,7 @@ class MakeClanScreen(Screens):
             if self.biome_selected == 'Forest':
                 self.selected_camp_tab = randrange(1, 7)
             elif self.biome_selected == "Mountainous":
-                self.selected_camp_tab = randrange(1, 6)
+                self.selected_camp_tab = randrange(1, 7)
             elif self.biome_selected == "Plains":
                 self.selected_camp_tab = randrange(1, 6)
             else:
@@ -877,6 +886,7 @@ class MakeClanScreen(Screens):
 
     def refresh_selected_camp(self):
         """Updates selected camp image and tabs"""
+
         self.tabs["tab1"].kill()
         self.tabs["tab2"].kill()
         self.tabs["tab3"].kill()
@@ -908,6 +918,12 @@ class MakeClanScreen(Screens):
                                               , manager=MANAGER)
             self.tabs["tab5"] = UIImageButton(scale(pygame.Rect((85, 640), (308, 60))), "", object_id="#quarry_tab"
                                               , manager=MANAGER)
+            self.tabs["tab6"] = UIImageButton(
+                scale(pygame.Rect((215, 710), (308, 60))),
+                "",
+                object_id="#ruins_tab",
+                manager=MANAGER,
+            )
         elif self.biome_selected == 'Plains':
             self.tabs["tab1"] = UIImageButton(scale(pygame.Rect((128, 360), (308, 60))), "", object_id="#grasslands_tab"
                                               , manager=MANAGER, )
@@ -919,15 +935,17 @@ class MakeClanScreen(Screens):
                                               , manager=MANAGER)
             self.tabs["tab5"] = UIImageButton(scale(pygame.Rect((118, 640), (308, 60))), "", object_id="#desert_tab"
                                               , manager=MANAGER)
+            self.tabs["tab6"] = UIImageButton(scale(pygame.Rect((118, 710), (308, 60))), "", object_id="#city_tab"
+                                              , manager=MANAGER)
         elif self.biome_selected == 'Beach':
             self.tabs["tab1"] = UIImageButton(scale(pygame.Rect((152, 360), (308, 60))), "", object_id="#tidepool_tab"
-                                              , manager=MANAGER)
+                                            , manager=MANAGER)
             self.tabs["tab2"] = UIImageButton(scale(pygame.Rect((130, 430), (308, 60))), "", object_id="#tidal_cave_tab"
-                                              , manager=MANAGER)
+                                                , manager=MANAGER)
             self.tabs["tab3"] = UIImageButton(scale(pygame.Rect((140, 500), (308, 60))), "", object_id="#shipwreck_tab"
-                                              , manager=MANAGER)
-            self.tabs["tab4"] = UIImageButton(scale(pygame.Rect((95, 570), (308, 60))), "", object_id="#tropical_island_tab"
-                                              , manager=MANAGER)
+                                                , manager=MANAGER)
+            self.tabs["tab4"] = UIImageButton(scale(pygame.Rect((78, 570), (308, 60))), "", object_id="#tropical_island_tab"
+                                                , manager=MANAGER)
 
         if self.selected_camp_tab == 1:
             self.tabs["tab1"].disable()
@@ -1008,29 +1026,25 @@ class MakeClanScreen(Screens):
     def refresh_selected_cat_info(self, selected=None):
         # SELECTED CAT INFO
         if selected is not None:
-            if self.sub_screen == "choose leader":
-                self.elements["cat_name"].set_text(
-                    str(selected.name) + " --> " + selected.name.prefix + "star"
-                )
+
+            if self.sub_screen == 'choose leader':
+                self.elements['cat_name'].set_text(str(selected.name))
             else:
-                self.elements["cat_name"].set_text(str(selected.name))
-            self.elements["cat_name"].show()
-            self.elements["cat_info"].set_text(
-                selected.genderalign
-                + "\n"
-                + str(
-                    selected.age
-                    + "\n"
-                    + str(selected.personality.trait)
-                    + "\n"
-                    + str(selected.skills.skill_string())
-                )
-            )
-            self.elements["cat_info"].show()
-        # else:
-        #     self.elements["next_step"].disable()
-        #     self.elements["cat_info"].hide()
-        #     self.elements["cat_name"].hide()
+                self.elements['cat_name'].set_text(str(selected.name))
+            self.elements['cat_name'].show()
+            self.elements['cat_info'].set_text(selected.gender + "\n" +
+                                               "fur length: " + str(selected.pelt.length) + "\n" +
+                                                   str(selected.personality.trait) + "\n" +
+                                                   str(selected.skills.skill_string()))
+            if selected.permanent_condition:
+
+                self.elements['cat_info'].set_text(selected.gender + "\n" +
+                                               "fur length: " + str(selected.pelt.length) + "\n" +
+                                                   str(selected.personality.trait) + "\n" +
+                                                   str(selected.skills.skill_string()) + "\n" +
+                                                   "permanent condition: " + list(selected.permanent_condition.keys())[0])
+            self.elements['cat_info'].show()
+
 
     def refresh_cat_images_and_info(self, selected=None):
         """Update the image of the cat selected in the middle. Info and image.
@@ -1073,25 +1087,15 @@ class MakeClanScreen(Screens):
             if "cat" + str(u) in self.elements:
                 self.elements["cat" + str(u)].kill()
             if game.choose_cats[u] == selected:
-                self.elements["cat" + str(u)] = self.elements[
-                    "cat" + str(u)
-                ] = UISpriteButton(
+                self.elements["cat" + str(u)] = self.elements["cat" + str(u)] = UISpriteButton(
                     scale(pygame.Rect((540, 400), (300, 300))),
                     pygame.transform.scale(game.choose_cats[u].sprite, (300, 300)),
-                    cat_object=game.choose_cats[u],
-                    manager=MANAGER,
-                )
-            elif (
-                game.choose_cats[u]
-                in [self.leader, self.deputy, self.med_cat] + self.members
-            ):
-                self.elements["cat" + str(u)] = UISpriteButton(
-                    scale(pygame.Rect((1400, 260 + 100 * (u - 6)), (100, 100))),
-                    game.choose_cats[u].sprite,
-                    cat_object=game.choose_cats[u],
-                    manager=MANAGER,
-                )
-                self.elements["cat" + str(u)].disable()
+                    cat_object=game.choose_cats[u], manager=MANAGER)
+            elif game.choose_cats[u] in [self.leader, self.deputy, self.med_cat] + self.members:
+                self.elements["cat" + str(u)] = self.elements["cat" + str(u)] = UISpriteButton(
+                    scale(pygame.Rect((540, 400), (300, 300))),
+                    pygame.transform.scale(game.choose_cats[u].sprite, (300, 300)),
+                    cat_object=game.choose_cats[u], manager=MANAGER)
             else:
                 self.elements["cat" + str(u)] = UISpriteButton(
                     scale(
@@ -1474,7 +1478,7 @@ class MakeClanScreen(Screens):
         self.vitiligo=choice(Pelt.vit) if random.randint(1,5) == 1 else None
         self.points=choice(Pelt.point_markings) if random.randint(1,5) == 1 else None
         self.scars=[choice(Pelt.scars1 + Pelt.scars2 + Pelt.scars3)] if random.randint(1,10) == 1 else []
-        self.tint=choice(["pink", "gray", "red", "orange", "black", "yellow", "purple", "blue"]) if random.randint(1,5) == 1 else None
+        self.tint=choice(["pink", "gray", "red", "orange", "black", "yellow", "purple", "blue","dilute","warmdilute","cooldilute"]) if random.randint(1,5) == 1 else None
         self.skin=choice(Pelt.skin_sprites)
         self.white_patches_tint=choice(["offwhite", "cream", "darkcream", "gray", "pink"]) if random.randint(1,5) == 1 else None
         self.reverse= False if random.randint(1,2) == 1 else True
@@ -1483,7 +1487,7 @@ class MakeClanScreen(Screens):
         self.personality = choice(['troublesome', 'lonesome', 'impulsive', 'bullying', 'attention-seeker', 'charming', 'daring', 'noisy', 'nervous', 'quiet', 'insecure', 'daydreamer', 'sweet', 'polite', 'know-it-all', 'bossy', 'disciplined', 'patient', 'manipulative', 'secretive', 'rebellious', 'grumpy', 'passionate', 'honest', 'leader-like', 'smug'])
         self.accessory = choice(Pelt.plant_accessories + Pelt.wild_accessories + Pelt.collars + Pelt.flower_accessories + Pelt.plant2_accessories + Pelt.snake_accessories + Pelt.smallAnimal_accessories + Pelt.deadInsect_accessories + Pelt.aliveInsect_accessories + Pelt.fruit_accessories + Pelt.crafted_accessories + Pelt.tail2_accessories) if random.randint(1,5) == 1 else None
         self.permanent_condition = choice(permanent_conditions) if random.randint(1,30) == 1 else None
-
+        self.faith = random.choice(["flexible", "starclan", "dark forest", "neutral"])
 
         self.kitten_sprite=random.randint(0,2)
         self.adolescent_pose = random.randint(0,2)
@@ -2581,9 +2585,12 @@ class MakeClanScreen(Screens):
                         game_mode="expanded",
                         starting_members=self.members,
                         starting_season=self.selected_season,
-                        your_cat=self.your_cat)
+                        your_cat=self.your_cat,
+                        clan_age=self.clan_age)
         game.clan.your_cat.moons = -1
         game.clan.create_clan()
+        if self.clan_age == "established":
+            game.clan.leader_lives = random.randint(1,9)
         game.cur_events_list.clear()
         game.herb_events_list.clear()
         Cat.grief_strings.clear()

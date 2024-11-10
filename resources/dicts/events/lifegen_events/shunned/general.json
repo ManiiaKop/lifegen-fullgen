@@ -6,19 +6,27 @@
         "The cats that you thought were your friends look at you with hatred.",
         "Warriors chase you away from the freshkill pile when you are hungry.",
         "You sit and reflect.",
-        "You wonder if enough time will pass that everyone will forget and things will go back to normal again.",
-        "You go back to your den one night to find your nest ripped to shreds."
+        "You wonder if enough time will pass that everycat will forget and things will go back to normal again.",
+        "You go back to your den one night to find your nest ripped to shreds.",
+        "You look upon the freshkill and your stomach grumbles, a reminder that your actions starved you - literally."
     ],
     "general assertive": [],
     "general brooding": [],
-    "general cool": [],
+    "general cool": [
+        "You turn your nose to the bits of scrap fresh kill you're given, regardless of your hunger."
+    ],
     "general upstanding": [],
-    "general introspective": [],
+    "general introspective": [
+        "You spend nights unable to sleep, wondering if murdering was really worth the treatment you get from c_nClan."
+    ],
     "general neurotic": [],
     "general silly": [],
     "general stable": [],
     "general sweet": [],
     "general unabashed": [],
     "general unlawful": [],
-    "general rare": []
+    "general rare": [
+        "If you were to leave tonight, would you go unnoticed? Would the Clan search for you?",
+        "A small part of you wishes l_n would just get this over with and exile you already."
+    ]
 }

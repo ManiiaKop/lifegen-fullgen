@@ -4,6 +4,8 @@ from random import choice
 import ujson
 from scripts.game_structure.game_essentials import game
 
+from scripts.utility import get_cluster
+
 
 class Thoughts:
     @staticmethod
@@ -161,6 +163,61 @@ class Thoughts:
         if 'random_backstory_constraint' in thought:
             if random_cat and random_cat.backstory not in thought['random_backstory_constraint']:
                 return False
+            
+        # LIFEGEN CONSTRAINTS
+        if 'main_faith_constraint' in thought:
+            if "low_sc" in thought['main_faith_constraint']:
+                if (not main_cat.faith < 3 and main_cat.faith > 0):
+                    return False
+            elif "mid_sc" in thought['main_faith_constraint']:
+                if (not main_cat.faith < 6 and main_cat.faith > 3):
+                    return False
+            elif "high_sc" in thought['main_faith_constraint']:
+                if (not main_cat.faith < 10 and main_cat.faith > 6):
+                    return False
+                
+            if "low_df" in thought['main_faith_constraint']:
+                if (not main_cat.faith < 0 and main_cat.faith > -3):
+                    return False
+            elif "mid_df" in thought['main_faith_constraint']:
+                if (not main_cat.faith < -3 and main_cat.faith > -6):
+                    return False
+            elif "high_df" in thought['main_faith_constraint']:
+                if (not main_cat.faith < -6 and main_cat.faith > -10):
+                    return False
+                
+        if 'random_faith_constraint' in thought:
+            if "low_sc" in thought['random_faith_constraint']:
+                if (not random_cat.faith < 3 and random_cat.faith > 0):
+                    return False
+            elif "mid_sc" in thought['random_faith_constraint']:
+                if (not random_cat.faith < 6 and random_cat.faith > 3):
+                    return False
+            elif "high_sc" in thought['random_faith_constraint']:
+                if (not random_cat.faith < 10 and random_cat.faith > 6):
+                    return False
+                
+            if "low_df" in thought['random_faith_constraint']:
+                if (not random_cat.faith < 0 and random_cat.faith > -3):
+                    return False
+            elif "mid_df" in thought['random_faith_constraint']:
+                if (not random_cat.faith < -3 and random_cat.faith > -6):
+                    return False
+            elif "high_df" in thought['random_faith_constraint']:
+                if (not random_cat.faith < -6 and random_cat.faith > -10):
+                    return False
+                
+        if "main_cluster_constraint" in thought:
+            cluster, cluster2 = get_cluster(main_cat.personality.trait)
+            if cluster not in thought["main_cluster_constraint"] and (cluster2 and cluster2 not in thought["main_cluster_constraint"]):
+                return False
+        
+        if "random_cluster_constraint" in thought and random_cat:
+            cluster, cluster2 = get_cluster(random_cat.personality.trait)
+            if cluster not in thought["random_cluster_constraint"] and (cluster2 and cluster2 not in thought["random_cluster_constraint"]):
+                return False
+                    
+        
 
         # Filter for the living status of the random cat. The living status of the main cat
         # is taken into account in the thought loading process.
@@ -211,47 +268,43 @@ class Thoughts:
                 if outside_status and outside_status != 'clancat' and len(r_c_in) > 0:
                     return False
 
-            # makes sure thought is valid for game mode
-            if game_mode == "classic" and ('has_injuries' in thought or "perm_conditions" in thought):
-                return False
-            else:
-                if 'has_injuries' in thought:
-                    if "m_c" in thought['has_injuries']:
-                        if main_cat.injuries or main_cat.illnesses:
-                            injuries_and_illnesses = main_cat.injuries.keys() + main_cat.injuries.keys()
-                            if not [i for i in injuries_and_illnesses if i in thought['has_injuries']["m_c"]] and \
-                                    "any" not in thought['has_injuries']["m_c"]:
-                                return False
+            if 'has_injuries' in thought:
+                if "m_c" in thought['has_injuries']:
+                    if main_cat.injuries or main_cat.illnesses:
+                        injuries_and_illnesses = main_cat.injuries.keys() + main_cat.injuries.keys()
+                        if not [i for i in injuries_and_illnesses if i in thought['has_injuries']["m_c"]] and \
+                                "any" not in thought['has_injuries']["m_c"]:
+                            return False
+                    return False
+
+                if "r_c" in thought['has_injuries'] and random_cat:
+                    if random_cat.injuries or random_cat.illnesses:
+                        injuries_and_illnesses = random_cat.injuries.keys() + random_cat.injuries.keys()
+                        if not [i for i in injuries_and_illnesses if i in thought['has_injuries']["r_c"]] and \
+                                "any" not in thought['has_injuries']["r_c"]:
+                            return False
+                    return False
+
+            if "perm_conditions" in thought:
+                if "m_c" in thought["perm_conditions"]:
+                    if main_cat.permanent_condition:
+                        if not [i for i in main_cat.permanent_condition if
+                                i in thought["perm_conditions"]["m_c"]] and \
+                                "any" not in thought['perm_conditions']["m_c"]:
+                            return False
+                    else:
                         return False
 
-                    if "r_c" in thought['has_injuries'] and random_cat:
-                        if random_cat.injuries or random_cat.illnesses:
-                            injuries_and_illnesses = random_cat.injuries.keys() + random_cat.injuries.keys()
-                            if not [i for i in injuries_and_illnesses if i in thought['has_injuries']["r_c"]] and \
-                                    "any" not in thought['has_injuries']["r_c"]:
-                                return False
+                if "r_c" in thought["perm_conditions"] and random_cat:
+                    if random_cat.permanent_condition:
+                        if not [i for i in random_cat.permanent_condition if
+                                i in thought["perm_conditions"]["r_c"]] and \
+                                "any" not in thought['perm_conditions']["r_c"]:
+                            return False
+                    else:
                         return False
-
-                if "perm_conditions" in thought:
-                    if "m_c" in thought["perm_conditions"]:
-                        if main_cat.permanent_condition:
-                            if not [i for i in main_cat.permanent_condition if
-                                    i in thought["perm_conditions"]["m_c"]] and \
-                                    "any" not in thought['perm_conditions']["m_c"]:
-                                return False
-                        else:
-                            return False
-
-                    if "r_c" in thought["perm_conditions"] and random_cat:
-                        if random_cat.permanent_condition:
-                            if not [i for i in random_cat.permanent_condition if
-                                    i in thought["perm_conditions"]["r_c"]] and \
-                                    "any" not in thought['perm_conditions']["r_c"]:
-                                return False
-                        else:
-                            return False
-
-        if game_mode != "classic" and "perm_conditions" in thought:
+        
+        if "perm_conditions" in thought:
             if "m_c" in thought["perm_conditions"]:
                 if main_cat.permanent_condition:
                     if not [i for i in main_cat.permanent_condition if i in thought["perm_conditions"]["m_c"]] and \
@@ -358,7 +411,7 @@ class Thoughts:
         base_path = f"resources/dicts/thoughts/ondeath"
         if darkforest is False:
             spec_dir = "/starclan"
-        elif darkforest:
+        else:
             spec_dir = "/darkforest"
         THOUGHTS = []
         try:
@@ -386,7 +439,7 @@ class Thoughts:
             spec_dir = "/unknownresidence"
         elif darkforest is False:
             spec_dir = "/starclan"
-        elif darkforest:
+        else:
             spec_dir = "/darkforest"
         THOUGHTS = []
         try:

@@ -42,7 +42,7 @@
             "Wonders if r_c gets to venture out of the tunnels in StarClan",
             "Thought {PRONOUN/m_c/subject} saw r_c playing with the roots of the tree, but sadly shakes off the thought",
             "Was surprised to find r_c's spot in the nursery warm, despite {PRONOUN/r_c/object} being with the stars now",
-            "Is pondering if r_c would stay in tunnels or go out an explore the territory in StarClan",
+            "Is pondering if r_c would stay in tunnels or go out and explore the territory in StarClan",
             "Wonders if the newborns in StarClan will ever get to play and run across open fields",
             "Prays to StarClan that the passed newborn kits get to feel the wind across their pelt"
         ],
@@ -124,10 +124,14 @@
         "random_status_constraint": [
             "apprentice",
             "mediator apprentice",
+<<<<<<< HEAD
             "healer apprentice"
         ],
         "random_living_status": [
             "living"
+=======
+            "medicine cat apprentice"
+>>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -145,9 +149,6 @@
         ],
         "random_status_constraint": [
             "elder"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -164,10 +165,14 @@
             "Is learning how to bind a pouch to carry {PRONOUN/m_c/poss} herbs by watching r_c"
         ],
         "random_status_constraint": [
+<<<<<<< HEAD
             "healer"
         ],
         "random_living_status": [
             "living"
+=======
+            "medicine cat"
+>>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -184,10 +189,10 @@
             "Is frightened about {PRONOUN/m_c/poss} role, but even more frightened about ever switching to a warrior",
             "Feels like StarClan made a mistake picking {PRONOUN/m_c/object} for this role",
             "Scurries out of the medicine den at the sight of blood",
-            "Is worrying about misinterpretating a sign that might endanger the Clan",
+            "Is worrying about misinterpreting a sign that might endanger the Clan",
             "Is frightened by the constant ghostly voices",
             "Was overthinking hoarding herbs for a hypothetical crisis",
-            "Was startled awake from a frightening dream of an unfamilair landscape"
+            "Was startled awake from a frightening dream of an unfamiliar landscape"
         ],
         "main_trait_constraint": [
             "insecure",
@@ -294,7 +299,7 @@
             "Was taste-testing berries",
             "Proposes dragging the Moonstone to the medicine den",
             "Asks {PRONOUN/m_c/poss} mentor if cats reincarnate as snails",
-            "Asks {PRONOUN/m_c/poss} mentor if {PRONOUN/m_c/subject} could still be their apprentince if {PRONOUN/m_c/subject} turned into a worm"
+            "Asks {PRONOUN/m_c/poss} mentor if {PRONOUN/m_c/subject} could still be their apprentice if {PRONOUN/m_c/subject} turned into a worm"
         ],
         "main_trait_constraint": [
             "strange"
@@ -316,11 +321,11 @@
     {
         "id": "mellow_medicine_cat_apprentice",
         "thoughts": [
-            "Is giving an injuried Clanmate company with small talk",
+            "Is giving an injured Clanmate company with small talk",
             "Can easily wrap a wound in a single blink",
             "Wraps {PRONOUN/m_c/poss} tail around a Clanmate's shoulder, reassuring them with a smile",
             "Is loafing in front of the medicine den, purring",
-            "Is hoping to create a comfortable atomphere for cats to visit the medicine den"
+            "Is hoping to create a comfortable atmosphere for cats to visit the medicine den"
         ],
         "main_trait_constraint": [
             "mellow"
@@ -329,11 +334,16 @@
     {
         "id": "flamboyant_medicine_cat_apprentice",
         "thoughts": [
-            "Can't seem to get rid of the putrid scent of onions from {PRONOUN/m_c/poss} coat",
-            "Told r_c {PRONOUN/m_c/subject} won't argue with {PRONOUN/r_c/object} as {PRONOUN/r_c/subject} can leave if {PRONOUN/r_c/subject} {VERB/r_c/are/is} just going to refuse the herbs",
-            "Groans as {PRONOUN/m_c/subject} {VERB/m_c/have/has} to collect damp foliage",
-            "Teasingly told r_c {PRONOUN/m_c/subject} can see into {PRONOUN/r_c/poss} future, but will withhold from telling {PRONOUN/r_c/object}",
-            "Tidily reorganizes the herb stock so the den looks pretty"
+            "Proudly claims {PRONOUN/m_c/subject} can see r_c's future yet loudly vows silence.",
+            "Is embellishing the epic tale of how {PRONOUN/m_c/subject} snuck honey from right under a hoard of angry bees",
+            "Is demanding r_c follow {PRONOUN/m_c/object} into the medicine den for a check up for all to witness",
+            "Can distract an unhappy kit with {PRONOUN/m_c/poss} funny antics",
+            "Dramatically mimics a grouchy patient",
+            "Was definitely working diligently to sort herbs and certainly not playing around",
+            "Has the elders wrapped around {PRONOUN/m_c/poss} paw with {PRONOUN/m_c/poss} dramatics",
+            "Winks as {PRONOUN/m_c/subject} {VERB/m_c/sneak/sneaks} some honey into a bitter mixture for a fussy kit",
+            "Proclaims that there is no need to check {PRONOUN/m_c/poss} organization since it's perfect...ly messy",
+            "Whines about an early morning wake up to harvest herbs"
         ],
         "main_trait_constraint": [
             "flamboyant"
@@ -370,7 +380,7 @@
         "thoughts": [
             "Isn't seem bothered by the sick cats, very sure they'll be healed",
             "Doesn't twitch a whisker while witnessing a Clanmate writhe in pain",
-            "Tells a Clanmate {PRONOUN/m_c/subject} will hold them down if requried"
+            "Tells a Clanmate {PRONOUN/m_c/subject} will hold them down if required"
         ],
         "main_trait_constraint": [
             "stoic"
@@ -438,10 +448,14 @@
             "fierce"
         ],
         "random_status_constraint": [
+<<<<<<< HEAD
             "healer"
         ],
         "random_living_status": [
             "living"
+=======
+            "medicine cat"
+>>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -470,9 +484,6 @@
             "cold",
             "vengeful",
             "fierce"
-        ],
-        "random_living_status": [
-            "living"
         ]
     }
 ]

@@ -1125,6 +1125,40 @@
             }
         }
     },
+    "#gift_clanmate_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/gift_accessory.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/gift_accessory_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/gift_accessory_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/gift_accessory_unavaliable.png"
+            }
+        }
+    },
+    "#your_faith_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/your_faith.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/your_faith_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/your_faith_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/your_faith_unavailable.png"
+            }
+        }
+    },
     "#leader_ceremony_button": {
         "prototype": "#image_button",
         "images": {
@@ -2787,6 +2821,74 @@
             }
         }
     },
+    "#arrow_right_button2": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/arrow_right2.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/arrow_right_hover2.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/arrow_right_hover2.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/arrow_right_unavailable2.png"
+            }
+        }
+    },
+    "#arrow_left_button2": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/arrow_left2.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/arrow_left_hover2.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/arrow_left_hover2.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/arrow_left_unavailable2.png"
+            }
+        }
+    },
+    "#arrow_double_right_button2": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/arrow_double_right2.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/arrow_double_right_hover2.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/arrow_double_right_hover2.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/arrow_double_right_unavailable2.png"
+            }
+        }
+    },
+    "#arrow_double_left_button2": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/arrow_double_left2.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/arrow_double_left_hover2.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/arrow_double_left_hover2.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/arrow_double_left_unavailable2.png"
+            }
+        }
+    },
     "#to_living_button": {
         "prototype": "#image_button",
         "images": {
@@ -4335,6 +4437,23 @@
             }
         }
     },
+    "#city_tab": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/city_camp.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/city_camp_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/city_camp_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/city_camp_unavailable.png"
+            }
+        }
+    },
     "#birch_camp_tab": {
         "prototype": "#image_button",
         "images": {
@@ -4365,7 +4484,7 @@
                 "path": "resources/images/buttons/tropical_island_hover.png"
             },
             "disabled_image": {
-                "path": "resources/images/buttons/tropical_island_unavaliable.png"
+                "path": "resources/images/buttons/tropical_island_unavailable.png"
             }
         }
     },
@@ -5150,39 +5269,6 @@
                 "disabled_image": {
                     "path": "resources/images/buttons/rest_focus_unavailable.png"
                 }
-        }
-    },
-	"#vertical_slider_down_arrow_button": {
-        "prototype": "#image_button",
-        "images": {
-            "normal_image": {
-                "path": "resources/images/buttons/vertical_slider_down.png"
-            },
-            "hovered_image": {
-                "path": "resources/images/buttons/vertical_slider_down_hover.png"
-            },
-            "selected_image": {
-                "path": "resources/images/buttons/vertical_slider_down_hover.png"
-            },
-            "disabled_image": {
-                "path": "resources/images/buttons/vertical_slider_down_hover.png"
-            }
-        }
-    },
-	"#vertical_slider_up_arrow_button": {
-        "prototype": "#image_button",
-        "images": {
-            "normal_image": {
-                "path": "resources/images/buttons/vertical_slider_up.png"
-            },
-            "hovered_image": {
-                "path": "resources/images/buttons/vertical_slider_up_hover.png"
-            },
-            "selected_image": {
-                "path": "resources/images/buttons/vertical_slider_up_hover.png"
-            },
-            "disabled_image": {
-                "path": "resources/images/buttons/vertical_slider_up_hover.png"
             }
         },
         "#sabotage_focus_button": {
@@ -5594,6 +5680,5 @@
             }
         }
     }
-}
 }
     

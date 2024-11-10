@@ -1092,7 +1092,11 @@
                 "weight": 20
             },
             {
+<<<<<<< HEAD
                 "text": "The rat king's defenses are too powerful, and as wave upon wave of rats poured down onto the patrol, most of them manage to escape... but not everyone makes it out.",
+=======
+                "text": "The Rat King's defenses are too powerful, and as wave upon wave of rats poured down onto the patrol, most of them manage to escape... but not everycat makes it out.",
+>>>>>>> lifegen_origin/LifeGen-dev
                 "exp": 0,
                 "weight": 10,
                 "dead_cats": ["multi", "some_lives"],
@@ -3107,7 +3111,7 @@
                 ]
             },
             {
-                "text": "The patrol finds a stocky gray vixen wandering their forest, and drives her out in a scene that mostly involves yowling and screaming and yapping at each other until she gives in. r_c gets a little battered, but everyone is mostly fine.",
+                "text": "The patrol finds a stocky gray vixen wandering their forest, and drives her out in a scene that mostly involves yowling and screaming and yapping at each other until she gives in. r_c gets a little battered, but everycat is mostly fine.",
                 "exp": 0,
                 "weight": 10,
                 "injury": [
@@ -3268,7 +3272,7 @@
                 ]
             },
             {
-                "text": "The patrol finds a stocky gray vixen wandering their forest, and drives her out in a scene that mostly involves yowling and screaming and yapping at each other until she gives in. r_c gets a little battered, but everyone is mostly fine.",
+                "text": "The patrol finds a stocky gray vixen wandering their forest, and drives her out in a scene that mostly involves yowling and screaming and yapping at each other until she gives in. r_c gets a little battered, but everycat is mostly fine.",
                 "exp": 0,
                 "weight": 10,
                 "injury": [
@@ -3529,7 +3533,7 @@
             "apprentice": [1, 6]
         },
         "weight": 20,
-        "intro_text": "app1 catches scent of a mouse nearby. Surely greenleaf is the perfect time to try solo-hunting, everyone always says that this is when the prey wanders right into a cat's jaws.",
+        "intro_text": "app1 catches scent of a mouse nearby. Surely greenleaf is the perfect time to try solo-hunting, everycat always says that this is when the prey wanders right into a cat's jaws.",
         "decline_text": "app1 ignores the mouse.",
         "chance_of_success": 60,
         "success_outcomes": [
@@ -3768,7 +3772,7 @@
                 ]
             },
             {
-                "text": "These are the times that it really pays to have a hunter of s_c's caliber on the patrol - {PRONOUN/s_c/subject} really {VERB/s_c/go/goes} above and beyond, impressing everyone and leaving a trail of terror among the local mice.",
+                "text": "These are the times that it really pays to have a hunter of s_c's caliber on the patrol - {PRONOUN/s_c/subject} really {VERB/s_c/go/goes} above and beyond, impressing everycat and leaving a trail of terror among the local mice.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["HUNTER,1"],
@@ -4008,7 +4012,11 @@
                 ]
             },
             {
+<<<<<<< HEAD
                 "text": "Surprising everyone, s_c begins stalking. As they guessed, the squirrel notices something amiss and hops onto the tree for safety. s_c, not willing to let the prey go, climbs right after it! Everyone is rather impressed when {PRONOUN/s_c/subject} {VERB/s_c/return/returns}, the squirrel firmly clutched in {PRONOUN/s_c/poss} jaws.",
+=======
+                "text": "Surprising everycat, s_c begins stalking. As {PRONOUN/s_c/subject} guessed, the squirrel notices something amiss and hops onto the tree for safety. s_c, not willing to let the prey go, climbs right after it! everycat is rather impressed when {PRONOUN/s_c/subject} {VERB/s_c/return/returns}, the squirrel firmly clutched in {PRONOUN/s_c/poss} jaws.",
+>>>>>>> lifegen_origin/LifeGen-dev
                 "exp": 25,
                 "weight": 20,
                 "stat_skill": ["CLIMBER,1"],
@@ -5369,7 +5377,7 @@
         },
         "weight": 40,
         "intro_text": "app1 bounds out of camp, determined to show off to {PRONOUN/app1/poss} older siblings!",
-        "decline_text": "And everyone is immediately recalled - the camp needs new nesting materials, not more prey.",
+        "decline_text": "And everycat is immediately recalled - the camp needs new nesting materials, not more prey.",
         "chance_of_success": 50,
         "relationship_constraint": ["siblings"],
         "success_outcomes": [
@@ -5874,7 +5882,7 @@
                 ]
             },
             {
-                "text": "The hunting patrol is perfectly successful and it matters not a whit to any of the warriors, because p_l makes a joke that {PRONOUN/p_l/subject} {VERB/p_l/think/thinks} is funny but that's always gotten on r_c's nerves and suddenly everyone's acting like apprentices again, snippy, immature, and irritable.",
+                "text": "The hunting patrol is perfectly successful and it matters not a whit to any of the warriors, because p_l makes a joke that {PRONOUN/p_l/subject} {VERB/p_l/think/thinks} is funny but that's always gotten on r_c's nerves and suddenly everycat's acting like apprentices again, snippy, immature, and irritable.",
                 "exp": 20,
                 "weight": 5,
                 "prey": ["large"],

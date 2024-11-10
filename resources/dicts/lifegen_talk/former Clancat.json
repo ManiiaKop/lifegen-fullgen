@@ -264,5 +264,17 @@
             "[t_c is looking at you with pity.]",
             "[You flash them a harsh glare. A ghost shouldn't be sympathising with a killer.]"
         ]
+    ],
+    "deaf_sc_Guy1": [
+        [
+            "they_sc",
+            "any",
+            "they_deaf",
+            "you_deaf",
+            "they_blind"
+        ],
+        [
+            "[t_c raises {PRONOUN/t_c/poss} sparkling tail in welcome.]"
+        ]
     ]
 }

@@ -300,5 +300,51 @@
 		"reaction_random_cat": {
 			"platonic": "increase"
 		}
+	},
+    {
+        "id": "H1_admirationincrease_high_queenapp",
+        "intensity": "high",
+        "interactions": [
+            "m_c gazes in awe as r_c easily rounds up the kittens for bedtime, as if it was nothing!",
+            "m_c marvels at r_c's knowledge."
+        ],
+        "main_status_constraint": [
+            "queen's apprentice"
+        ],
+        "random_status_constraint": [
+            "queen"
+        ],
+		"reaction_random_cat": {
+			"platonic": "increase"
+		}
+    },
+	{
+		"id": "H1_admire_med",
+		"intensity": "med",
+		"interactions": [
+			"m_c thinks r_c is doing wonderful as a queen.",
+			"m_c praised r_c's patience, wondering how {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} able to care of so many kittens at once!",
+			"m_c asks for r_c's advice on how to care for kittens."
+		],
+        "random_status_constraint": [
+            "queen"
+        ]
+	},
+	{
+		"id": "H1_elder_admire",
+		"intensity": "low",
+		"interactions": [
+			"r_c enlists your thoughts on a recent controversial decision for the clan."
+		],
+		"random_status_constraint": [
+			"leader",
+			"deputy"
+		],
+		"main_status_constraint": [
+			"elder"
+		],
+		"reaction_random_cat": {
+			"trust": "increase"
+		}
 	}
 ]

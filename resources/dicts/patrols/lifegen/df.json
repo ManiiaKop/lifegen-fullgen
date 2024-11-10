@@ -33,7 +33,7 @@
                 "exp": 30,
                 "weight": 5,
                 "new_cat": [
-                    ["newdfcat", "status:warrior"]
+                    ["meeting", "residence:df", "clan_status", "status:warrior"]
                 ],
                 "stat_trait": [
                     "ambitious",
@@ -46,7 +46,8 @@
                     "flexible",
                     "careful"
                 ],
-                "stat_skill": ["FIGHTER,1", "GUARDIAN,1", "INSIGHTFUL,1", "SENSE,1"]
+                "stat_skill": ["FIGHTER,1", "GUARDIAN,1", "INSIGHTFUL,1", "SENSE,1"],
+                "can_have_stat": ["p_l"]
             },
             {
                 "text": "You swerve around, just as a cat lunges from the shadows and aims their claws at your pelt. You react faster than the attacker can, ducking the blow, before retailiating with a rake to their belly. You watch as they tumble to the ground from the attack. It seems you've learned a thing or two here.",
@@ -63,7 +64,8 @@
                     "flexible",
                     "careful"
                 ],
-                "stat_skill": ["FIGHTER,1", "GUARDIAN,1", "INSIGHTFUL,1", "SENSE,1"]
+                "stat_skill": ["FIGHTER,1", "GUARDIAN,1", "INSIGHTFUL,1", "SENSE,1"],
+                "can_have_stat": ["p_l"]
             }
         ],
         "fail_outcomes": [
@@ -175,7 +177,7 @@
                 "exp": 15,
                 "weight": 5,
                 "new_cat": [
-                    ["newdfcat", "status:warrior"]
+                    ["meeting", "residence:df", "clan_status", "status:warrior"]
                 ],
                 "stat_trait": [
                     "ambitious",
@@ -186,7 +188,8 @@
                     "fierce",
                     "vengeful"
                 ],
-                "stat_skill": ["FIGHTER,1", "SENSE,1"]
+                "stat_skill": ["FIGHTER,1", "SENSE,1"],
+                "can_have_stat": ["p_l"]
             },
             {
                 "text": "You accept the training, but when you show more skill than the ghostly warrior themselves, deflecting every one of their attacks, they hiss and stalk back into the trees.",
@@ -201,7 +204,8 @@
                     "fierce",
                     "vengeful"
                 ],
-                "stat_skill": ["FIGHTER,1", "SENSE,1"]
+                "stat_skill": ["FIGHTER,1", "SENSE,1"],
+                "can_have_stat": ["p_l"]
             }
         
         ],
@@ -268,7 +272,8 @@
                     "righteous",
                     "rebellious"
                 ],
-                "stat_skill": ["CLAIRVOYANT,1", "CLEVER,1", "GHOST,1", "LORE,1","PROPHET,1", "OMEN,1", "SCHOLAR,1", "STAR,1"]
+                "stat_skill": ["CLAIRVOYANT,1", "CLEVER,1", "GHOST,1", "LORE,1","PROPHET,1", "OMEN,1", "SCHOLAR,1", "STAR,1"],
+                "can_have_stat": ["p_l"]
             },
             {
                 "text": "You agree to their terms and upon waking, you relay the message to your Clan's healer along with the prophecy.",
@@ -317,7 +322,7 @@
                 "exp": 5,
                 "weight": 20,
                 "new_cat": [
-                    ["newdfcat", "status:apprentice"]
+                    ["meeting", "residence:df", "clan_status", "age:adolescent"]
                 ]
             },
             {
@@ -366,14 +371,15 @@
                 "text": "You guide the cat through the eerie forest, successfully leading them out. They wake up grateful for your help.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["COMFORTER,1", "DREAM,1", "GUARDIAN,1", "NAVIGATOR,1", "STAR, 1", "TRACKER,1"]
+                "stat_skill": ["COMFORTER,1", "DREAM,1", "GUARDIAN,1", "NAVIGATOR,1", "STAR, 1", "TRACKER,1"],
+                "can_have_stat": ["p_l"]
             },
             {
                 "text": "There's no need for {PRONOUN/n_c:0/object} to be afraid. You coax {PRONOUN/n_c:0/object} into joining you and your mentor. Although {PRONOUN/n_c:0/subject}{VERB/n_c:0/'re/'s} hesitant at first, you soon meet {PRONOUN/n_c:0/object} on more and more nights, now confident with a pelt of muck.",
                 "exp": 20,
                 "weight": 20,
                 "new_cat": [
-                    ["newdfcat", "oldstarclan"]
+                    ["meeting", "residence:df", "clan_status", "status:warrior", "backstory:oldstarclan1"]
                 ]
             }
         ],
@@ -434,7 +440,7 @@
                 "exp": 10,
                 "weight": 5,
                 "new_cat": [
-                    ["newdfcat"]
+                    ["meeting", "residence:df", "clan_status"]
                 ]
             },
             {
@@ -452,7 +458,8 @@
                     "cunning",
                     "adventurous"
                 ],
-                "stat_skill": ["SWIMMER,1", "THINKER,1", "SENSE,1", "NAVIGATOR,1", "CLEVER,1"]
+                "stat_skill": ["SWIMMER,1", "THINKER,1", "SENSE,1", "NAVIGATOR,1", "CLEVER,1"],
+                "can_have_stat": ["p_l"]
             },
             {
                 "text": "You stay calm, holding your breath and treading water until you reach the surface again. Some of the water was swallowed, however, and by morning your Clanmates find you ill without clear cause.",
@@ -525,8 +532,7 @@
             "df"
         ],
         "tags": [
-            "border",
-            "convince_rc"
+            "border"
         ],
         "patrol_art": "df_Clanmate",
         "min_cats": 1,
@@ -596,6 +602,7 @@
                 "weight": 20,
                 "stat_trait": ["cunning", "wise","ambitious","bold","daring","calm","careful","loyal","compassionate","thoughtful","flexible","trusting"],
                 "stat_skill": ["FIGHTER,1", "TEACHER,1", "INSIGHTFUL,1","SCHOLAR,1"],
+                "can_have_stat": ["p_l"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -686,8 +693,7 @@
             "df"
         ],
         "tags": [
-            "border",
-            "convince_rc"
+            "border"
         ],
         "patrol_art": "df_friendly",
         "min_cats": 2,
@@ -724,6 +730,7 @@
                 "exp": 25,
                 "weight": 20,
                 "stat_trait":["cunning", "sincere", "confident","responsible", "loving","loyal", "charismatic", "trusting", "playful", "compassionate","thoughtful"],
+                "can_have_stat": ["p_l"],
                 "relationships": [
                     {
                         "cats_to": ["patrol"],
@@ -833,7 +840,6 @@
         ],
         "tags": [
             "border",
-            "convince_rc",
             "fellowtrainee"
         ],
         "patrol_art": "df_friendly",
@@ -904,7 +910,6 @@
         ],
         "tags": [
             "border",
-            "convince_rc",
             "fellowtrainee"
         ],
         "patrol_art": "life_df_og11",
@@ -1052,7 +1057,7 @@
                 "exp": 30,
                 "weight": 5,
                 "new_cat": [
-                    ["newdfcat", "status:kitten"]
+                    ["meeting", "residence:df", "clan_status", "status:kitten"]
                 ]
             },
             {
@@ -1143,7 +1148,7 @@
                 "exp": 30,
                 "weight": 5,
                 "new_cat": [
-                    ["newdfcat"]
+                    ["meeting", "residence:df", "clan_status"]
                 ]
             },
             {
@@ -1156,7 +1161,7 @@
                 "exp": 30,
                 "weight": 10,
                 "new_cat": [
-                    ["newdfcat"]
+                    ["meeting", "residence:df", "clan_status"]
                 ]
             },
             {
@@ -1211,7 +1216,7 @@
             "new_cat",
             "fellowtrainee"
         ],
-        "patrol_art": "df_default",
+        "patrol_art": "df_see_clanmate",
         "min_cats": 2,
         "max_cats": 3,
         "min_max_status": {},
@@ -1225,7 +1230,7 @@
                 "exp": 30,
                 "weight": 10,
                 "new_cat": [
-                    ["newdfcat"]
+                    ["meeting", "residence:df", "clan_status"]
                 ]
             },
             {
@@ -1317,7 +1322,7 @@
                 "weight": 20
             },
             {
-                "text": "When they see who you are, r_c jumps off of you, apologising profusely and stating that {PRONOUN/r_c/subject} just wanted to defend {PRONOUN/r_c/poss} watering hole. {PRONOUN/r_c/subject/CAP} {VERB/r_c/decide/decides} that you can share it, so long as you don't tell anyone else.",
+                "text": "When they see who you are, r_c jumps off of you, apologizing profusely and stating that {PRONOUN/r_c/subject} just wanted to defend {PRONOUN/r_c/poss} watering hole. {PRONOUN/r_c/subject/CAP} {VERB/r_c/decide/decides} that you can share it, so long as you don't tell anyone else.",
                 "exp": 20,
                 "weight": 10,
                 "relationships": [
@@ -1488,7 +1493,7 @@
                 "weight": 30
             },
             {
-                "text": "When you reach forward to try to pull {PRONOUN/r_c/object} out, r_c swats your paws away, mistaking you for a threat. As {PRONOUN/r_c/subject} {VERB/r_c/try/tries} to climb up onto the bank {PRONOUN/r_c/self}, eyes blinded by the filthy lakewater, the ground crumbles away, sending {PRONOUN/r_c/object} back into the lake. It take you longer than you'd like to will yourself awake, and when it finally works, you can already hear r_c hacking and coughing from {PRONOUN/r_c/poss} nest.",
+                "text": "When you reach forward to try to pull {PRONOUN/r_c/object} out, r_c swats your paws away, mistaking you for a threat. As {PRONOUN/r_c/subject} {VERB/r_c/try/tries} to climb up onto the bank {PRONOUN/r_c/self}, eyes blinded by the filthy lakewater, the ground crumbles away, sending {PRONOUN/r_c/object} back into the lake. It takes you longer than you'd like to will yourself awake, and when it finally works, you can already hear r_c hacking and coughing from {PRONOUN/r_c/poss} nest.",
                 "exp": 0,
                 "weight": 40,
                 "injury": [ 
@@ -1665,16 +1670,15 @@
             "lifegen"
         ],
         "tags": [
-            "new_cat",
-            "newdfcat"
+            "new_cat"
         ],
         "patrol_art": "bribe patrol",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {
-            "normal adult": [1, 6]
+            "all apprentices": [-1, 0]
         },
-        "weight": 10,
+        "weight": 1,
         "intro_text": "You slip into the dark depths of the forest alone. Training can wait - you have more important matters to attend to tonight. A single pair of eyes flash ahead in the darkness, affixed on you.",
         "decline_text": "Thinking back, this is a bad idea. You turn tail and return to training.",
         "chance_of_success": 30,
@@ -1682,10 +1686,10 @@
             {
                 "text": "You surge forward to greet your secret mate. {PRONOUN/n_c:0/subject/CAP} {VERB/n_c:0/purr/purrs} out a greeting, and {VERB/n_c:0/call/calls} out to someone in the darkness. Oh! Your kits! You greet each of them with a purr loud as thunder. Before you know it, it's time to say good-bye to your family, and you wake in your nest with a bitter-sweet ache in your chest.",
                 "exp": 15,
-                "weight": 10,
+                "weight": 1,
                 "new_cat": [
-                    ["newdfcat", "age:mate_with_kits", "mate:p_l"],
-                    ["newdfcat", "your_litter", "parent:0", "status:kitten", "backstory:dfkit1"]
+                    ["meeting", "residence:df", "age:has_kits", "mate:p_l", "clan_status"],
+                    ["clan_status", "meeting", "litter", "residence:df", "parent:0", "backstory:dfkit1", "status:kitten"]
                 ]
             },
             {
@@ -1701,10 +1705,10 @@
             {
                 "text": "You surge forward to greet your secret mate, but {PRONOUN/n_c:0/subject} {VERB/n_c:0/don't/doesn't} reciprocate. It's time to part ways despite your aching hearts. {PRONOUN/n_c:0/subject/CAP} {VERB/n_c:0/whisk/whisks} your confused kits forward and you choke out a goodbye as your love walks away with a hanging head. You need to get the little ones into a warm nest now. Now the question is, what to tell your Clanmates?",
                 "exp": 15,
-                "weight": 5,
+                "weight": 1,
                 "new_cat": [
-                    ["newdfcat", "age:mate_with_kits", "mate:p_l"],
-                    ["your_litter", "parent:0", "status:kitten", "backstory:dfkit2"]
+                    ["meeting", "residence:df", "age:mate", "mate:p_l", "clan_status"],
+                    ["clan_status", "litter", "parent:0", "backstory:dfkit2", "status:kitten"]
                 ]
             },
             {
@@ -1712,7 +1716,7 @@
                 "exp": 15,
                 "weight": 5,
                 "new_cat": [
-                    ["newdfcat", "meeting", "age:mate", "mate:p_l", "backstory:ostracized_warrior"]
+                    ["residence:df", "meeting", "clan_status", "age:mate", "mate:p_l", "backstory:ostracized_warrior"]
                 ]
             },
             {
@@ -1720,7 +1724,7 @@
                 "exp": 15,
                 "weight": 5,
                 "new_cat": [
-                    ["newdfcat", "age:mate", "mate:p_l"]
+                    ["meeting", "residence:df", "clan_status", "age:mate", "mate:p_l"]
                 ]
             }
         ],
@@ -1737,7 +1741,8 @@
                 "injury": [
                     {
                         "cats": ["y_c"],
-                        "injuries": ["battle_injury"]
+                        "injuries": ["battle_injury"],
+                        "scars": []
                     }
                 ],
                 "history_text": {
@@ -1762,7 +1767,8 @@
                     "fierce",
                     "vengeful"
                 ],
-                "stat_skill": ["FIGHTER,1", "GUARDIAN,1", "DARK,1","CLEVER,1"]
+                "stat_skill": ["FIGHTER,1", "GUARDIAN,1", "DARK,1","CLEVER,1"],
+                "can_have_stat": ["p_l"]
             },
             {
                 "text": "Nothing but a trick of the light... There's no one there, even though there should be... ",
@@ -1874,7 +1880,8 @@
                 "injury": [ 
                     {
                         "cats": ["y_c"],
-                        "injuries": ["battle_injury"]
+                        "injuries": ["battle_injury"],
+                        "scars": []
                     }
                 ],
                 "history_text": {
@@ -1979,7 +1986,7 @@
         ],
         "antag_success_outcomes": [
             {
-                "text": "Courage surges in you. You're not going to be cowed by a mere unsettling feeling! You yowl your challenge into the dark mists of the forest. As your gaze scans up you realize, with embarassment hot on your pelt, that it's just r_c. You remember that {PRONOUN/r_c/subject} wanted to speak to you now that you see {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} clearly aren't interested anymore, however, as {PRONOUN/r_c/subject} hold back mirth at your paranoia...",
+                "text": "Courage surges in you. You're not going to be cowed by a mere unsettling feeling! You yowl your challenge into the dark mists of the forest. As your gaze scans up you realize, with embarassment hot on your pelt, that it's just r_c. You remember that {PRONOUN/r_c/subject} wanted to speak to you now that you see {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} clearly {VERB/r_c/aren't/isn't} interested anymore, however, as {PRONOUN/r_c/subject} {VERB/r_c/hold/holds} back mirth at your paranoia...",
                 "exp": 10,
                 "weight": 20,
                 "relationships": [
@@ -2024,7 +2031,8 @@
                 "injury": [ 
                     {
                         "cats": ["r_c"],
-                        "injuries": ["battle_injury"]
+                        "injuries": ["battle_injury"],
+                        "scars": []
                     }
                 ],
                 "history_text": {
@@ -2037,7 +2045,7 @@
                 "text": "Your claws unsheathe as you prepare. It's too late - you hear the whistle of wind above you and try to move from your position. You're too slow. Your attacker lands upon you as your yowl is cut off. Your gaze manages to catch on your assailant. r_c's eyes gleam in the low light before {PRONOUN/r_c/poss} fangs meet your throat. In the morning, the Clan is horrified to find your cold body in your nest...",
                 "exp": 0,
                 "weight": 20,
-                "dead cats": ["y_c"],
+                "dead cats": ["p_l"],
                 "murder": [
                     {
                         "murderer": ["r_c"],
@@ -2050,5 +2058,446 @@
                 }
             }
         ]
+    },
+    {
+        "patrol_id": "life_df_ant1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "df"
+        ],
+        "patrol_art": "life_df_og11",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You walk through the inky expanses of the Dark Forest, following the well-worn paths created by the residents here. Ahead of you, a sprawling mess of trails taper off in what seems like a thousand different directions, and you're not sure which one goes to the training grounds.",
+        "decline_text": "Honestly, it's too much of a hassle to bother trying to find your way there. The forest is an expansive place, with so much to discover. You spring into the bushes, knowing you can always come back and train another time--now is time to explore!",
+        "chance_of_success": 45,
+        "success_outcomes": [
+            {
+                "text": "Navigating through the Dark Forest is no easy feat--and you're sure your Clanmates would be completely lost if they found themselves in the misty stretches. You, however, know this place better than any other cat in c_n. Effortlessly making your way to the training grounds, you emerge from the shrubbery with your head held high.",
+                "exp": 15,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You march down one of the paths, knowing surefire where you're going. The tug of thorns against your pelt a few minutes later makes you realize your mistake all too late--you chose the wrong path. After a couple moments of thrashing, thorns digging into your pelt, you finally free yourself and stumble away. Maybe it's best to hold off on training until you're more confident about your abilities...",
+                "exp": 0,
+                "weight": 20,
+                "injury": [ 
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["torn_pelt"],
+                        "scars": ["SNAKETWO"]
+                    }
+                ],
+                "history_text": {
+                    "scar": "m_c was scarred after getting caught in thorns in the Dark Forest."
+                }
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_ant2", 
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "df"
+        ],
+        "patrol_art": "df_mentor",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You creep through the Dark Forest, your paws crunching on the dead leaves that litter the floor. After meandering for a bit, you come to a stop near a stream and bend down for a drink. As you glance up, you freeze as you see a shadowy figure watching you from the other side of the river.",
+        "decline_text": "The menacing glint you can see in the silhouette's eye tells a story of its own. You leap to your paws and rush away from the river as fast as you can. Not all dark spirits like to be messed with.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You flick your tail politely to the figure. {PRONOUN/n_c:0/subject/CAP} {VERB/n_c:0/step/steps} out of the foliage and into your view, inclining {PRONOUN/n_c:0/poss} head to you in return. Before {PRONOUN/n_c:0/subject} {VERB/n_c:0/turn/turns} and {VERB/n_c:0/leap/leaps} back into the bushes-- presumably to go find someone else to observe -- you even catch a small smile on {PRONOUN/n_c:0/poss} face. As it turns out, Dark Forest cats appreciate niceties too!",
+                "exp": 15,
+                "weight": 20,
+	            "new_cat": [
+                    ["meeting", "residence:df", "clan_status"]
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You flick your tail politely to the figure. They snarl in response and leap out of the bushes, scowling as they beeline towards you. Once they get close enough for you to see their unsheathed claws, you scramble away from the river and back into the forest. You peek back at them from around a tree, but they stop at the water's edge before slinking away. Lucky you escaped that one!",
+                "exp": 0,
+                "weight": 20
+            }
+        ],
+        "antag_fail_outcomes": [
+            {
+                "text": "You feel a rush of annoyance. Who do they think they are, watching you from the forest like that? You leap into the river and wade across, your ears slanted back as you prowl towards them. Just before you get within range, they leap towards you with otherworldly speed, claws hitting you before you can react. You stumble back, shocked, and find that before you can return the gesture, the mysterious figure already left.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["battle_injury"],
+                        "scars": ["BELLY"]
+                    }
+                ],
+                "history_text": {
+                    "scar": "m_c was scarred by a Dark Forest warrior."
+                }
+            }
+        ],
+        "antag_success_outcomes": [
+            {
+                "text": "You wait until the figure looks away before silently wading into the water and crossing the river. By keeping your belly low to the ground, you're able to creep up behind them. You yowl a battle cry before flinging yourself onto their back and clawing their pelt. They hiss in response and throw you off, glaring at you as they scurry off into the underbrush. That'll teach them to mind their own business!",
+                "exp": 45,
+                "weight": 15
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_ant3",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "df"
+        ],
+        "patrol_art": "life_df_og11",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You race through the Dark Forest, leaping over twisted vines and roots as you zip towards the training grounds. You're late for training, and you know that df_m_n won't be happy about it...",
+        "decline_text": "Breathing heavily, you slow to a stop. You're already late, so what's the point of even going? You're probably just going to get yelled at by df_m_n anyway. Besides, you've wanted to explore this place for a while, and now's the perfect chance!",
+        "chance_of_success": 45,
+        "success_outcomes": [
+            {
+                "text": "You have to backtrack a couple times, but you make it there eventually. You casually walk over and join one of the training groups, hoping that no one noticed your absence. When df_m_n finally spots you, {PRONOUN/df_m_n/subject} {VERB/df_m_n/nod/nods} {PRONOUN/df_m_n/poss} head. Phew, {PRONOUN/df_m_n/subject} must not have seen you slink in halfway through the session!",
+                "exp": 15,
+                "weight": 20
+            },
+           {
+                "text": "You ignore the brambles that catch at your fur as you push your way into the clearing. Everycat else seems too focused to have noticed you, so you take a moment to rid your pelt of thorns. Once you've finished that, you pad over to the nearest pair of cats sparring and ask for a turn after them.",
+                "exp": 10,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Your paws are barely touching the floor as you fly through the forest. You know you can make it on time if you're fast enough. Maybe you're going a little <i>too</i> fast, because a few seconds later your paws catch on a particularly long root and you tumble to the ground. You hiss and recoil as you try to set your paw down, wondering how you'll explain this to r_m when you wake up.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [ 
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["sprain"]
+                    }
+                ]
+             },
+             {
+                "text": "You're going as quickly as you can, but it's no use. You didn't look at where you were running and tumbled down a small slope, landing in a patch of brambles. Thorns clutch you in a vice-like grip as you wriggle to free yourself. By the time you emerge, you're in no mood for training.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [ 
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["torn_pelt"],
+                        "scars": ["NECKBITE"]
+                    }
+                ],
+                "history_text": {
+                    "scar": "m_c was scarred after getting caught in thorns in the Dark Forest."
+                }
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_sam1",
+        "biome" : [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen",
+            "df"
+        ],
+        "tags": [],
+        "patrol_art": "df_starcat",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You're training with df_m_n, when you see a StarClan cat, lost. df_m_n growls at the cat, before telling you to go kill them.",
+        "decline_text": "You refuse, forcing yourself to wake up. df_m_n won't be seeing you for a while.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You make quick work of the StarClan cat, barely trying. As the stars fade from their body, you report back to df_m_n, who smirks proudly.",
+                "exp": 20,
+                "weight": 20
+            },
+            {
+                "text": "You use your affinity for StarClan cats to your advantage, thinking one step ahead. df_m_n praises your skill afterwards, stating that {PRONOUN/df_m_n/subject} never thought your gift could be used that way.",
+                "exp": 20,
+                "weight": 20,
+                "stat_skill": ["STAR,1"],
+                "can_have_stat": ["p_l"]
+            },
+            {
+                "text": "You quickly run away, already forming a plan. The StarClan cat catches up to you just for you to jump off of a tree and pounce on them. df_m_n nods proudly.",
+                "exp": 20,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "The StarClan cat puts up a good fight, but you still succeed. As you watch the stars fade from their body, you tend to your wounds.",
+                "exp": 5,
+                "weight": 20,
+                "injury": [
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["sore", "claw-wound", "broken bone", "bruises", "scrapes", "torn ear"],
+                        "no_results": false
+                    }
+                ]
+            },
+            {
+                "text": "Before you can blink, they're pouncing on you, clawing at your face. You decide that you're not ready for this fight, and run off before you get hurt too badly.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["sore", "bruises", "scrapes", "torn ear"],
+                        "no_results": false
+                    }
+                ]
+            },
+            {
+                "text": "You try your best to beat the StarClan cat, but as you're about to get the upper paw, they finish you off. As you succumb to your injuries, you realize you bit off more than you could chew. Your cold body is found covered in wounds the next morning.",
+                "exp": 0,
+                "weight": 10,
+                "dead_cats": ["y_c"],
+                "history_text": {
+                    "reg_death": "m_c died trying to attack a StarClan cat.",
+                    "lead_death": "failed to win in a battle against a StarClan cat"
+                }
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_TBS1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+        ],
+        "patrol_art": "df_default",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {
+        },
+        "weight": 20,
+        "intro_text": "You slink through the shadows, whiskers twitching as you track a particularly interesting scent. df_m_n had claimed that there was no prey in the Dark Forest, but you recognize the smell from your meals in the waking world. Surely it can't hurt to try and find a quick snack?",
+        "decline_text": "Your mentor wouldn't be happy with you skipping out on training, or wandering the dark forest alone. Deciding it's not worth the risk, you slink back to where your mentor is waiting for you, ghostly claws sunk into the mud.",
+        "chance_of_success": 20,
+        "success_outcomes": [
+     
+            {
+                "text": "All you can hear is your heartbeat, beating quickly as you open your mouth, drawing the scent of blood and muck over your jaws. The warm prey-scent is tempting, especially in the midst of all of the unsavory smells, but you're careful to stay hidden as you stalk. Your caution pays off as you reach the end of the trail, stopping just in time to avoid a furious blow from a bloodied spirit. Unsheathing your claws, you leap into battle, waking in your nest with your mentor's pleased growl ringing in your ears.",
+                "exp": 30,
+                "weight": 30
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Your mouth waters, and you rush after the scent, trying your best to trace it through the thick mud. All too soon, the scent fades, and you're left to slink back to your mentor, empty pawed.",
+                "exp": 20,
+                "weight": 30
+            },
+            {
+                "text": "Nose to the ground, you track the scent, barely managing to keep track of it among all of the muck and rot. When you finally find a proper scent trail, you forget all caution, and race forward. But, instead of prey, you run straight into a furious spirit, who manages to land a heavy blow, shocking you right into the waking world.",
+                "exp": 0,
+                "weight": 10,
+                "injury": [ 
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["claw-wound"],
+                        "scars": ["ONE"]
+                    }
+                ],
+                "history_text": {
+                    "scar": "m_c was scarred looking for prey in the Dark Forest.",
+                    "reg_death": "m_c died after getting injured looking for prey in the Dark Forest.",
+                    "lead_death": "lost a life getting injured looking for prey in the Dark Forest."
+                }
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_TBS2",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+        ],
+        "patrol_art": "df_default",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {
+        },
+        "weight": 20,
+        "intro_text": "As you walk towards the training fields, a soft sound in the undergrowth catches your attention. It sounds almost like crackling flames, but this is the Dark Forest. Surely there isn't fire here?",
+        "decline_text": "Fire or not, the mere thought of flames devouring the mud covered landscape is enough to send shivers down your spine. Ignoring the sound, you keep walking, fur spiking with fear.",
+        "chance_of_success": 30,
+        "success_outcomes": [
+{
+                "text": "It makes you nervous, but your mentor would want you to check it out. Making sure to keep a safe distance, you stare down at the flames, watching for a moment to make sure the fire doesn't get any larger, before you walk back to df_m_n, leaving just as a few other Dark Forest cats go to check out the already sputtering flames.  ",
+                "exp": 20,
+                "weight": 50
+            },
+
+            {
+                "text": "Even though the idea of a fire in a place like the Dark Forest sets you on edge, it's difficult to deny your curiosity. Following the noise, you soon catch sight of the small, flickering flames, somehow burning, even here. You settle nearby, the normal fear a fire would bring receding somewhat. Once the fire dies down, you go to investigate, waking up in your nest, paws covered in still-warm ash.",
+                "exp": 10,
+                "weight": 20,
+                "accessory": [
+                    {
+                        "cats": [
+                            "y_c"
+                        ],
+                        "accessory": [
+                            "ASHY PAWS"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Interested, you decide to follow the sound, ears pricked. It's much bigger than you expected, and fear quickly takes hold as you see how quickly it's growing. Turning, you race away, desperately trying to escape the flames. You leap from your nest to the smell of burning fur, wondering how you'll even start to explain this.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [ 
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["burn"],
+                        "scars": ["BURNTAIL"]
+                    }
+                ],
+                "history_text": {
+                    "scar": "m_c was burned in the Dark Forest.",
+                    "reg_death": "m_c was killed by a burn gained in the Dark Forest.",
+                    "lead_death": "{VERB/m_c/were/was} killed by a burn gained in the Dark Forest."
+                }
+            },
+            {
+                "text": "All you manage to see of the potential fire is a glimpse of leaping flames, towering against the dull sky, before your courage fails and you turn tail, heart beating so quickly you're worried that it might beat right out of your chest. You certainly aren't looking forward to telling your mentor what happened.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "df_template_TBS3",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+        ],
+        "patrol_art": "df_default",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {
+        },
+        "weight": 20,
+        "intro_text": "The Dark Forest has been... quiet, lately. Usually, you can always make out the glinting eyes of df_m_n peering out at you, wreathed in mud and mist, but tonight, the forest is dark.",
+        "decline_text": "df_m_n must not be in the mood for training today. Pacing the training grounds, you wait until you eventually wake up.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You've gotten used to most of your mentor's tricks, but this is more unsettling than most. The mist you walk through casts odd shadows, and you wrinkle your nose at the sharp, unpleasant scent. The fur on your spine stiffens with fear, but you push on, eventually making your way through the mist, to where df_m_n has been waiting.",
+                "exp": 30,
+                "weight": 20
+            },
+            {
+                "text": "It's difficult to see much of anything in the mist, so you're forced to rely on your ears, swiveling at the slightest sound, everything sounding oddly muted by the strange weather. A couple times, you think you can hear df_m_n, calling into the mist, but it's only when it begins to clear that you finally notice them. They're not too pleased by your struggles, but at least you can start the night's training.",
+                "exp": 10,
+                "weight": 40
+            }
+
+
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You plunge deeper into the mist, but you've only gone a few pawsteps when you start coughing, the sharp scent beginning to overwhelm you. Distantly, you can hear df_m_n's calls, but you're suddenly unsteady on your paws. You wake in your nest, still coughing, wondering if the medicine cat will be able to fix whatever the mist's done to you. ",
+                "exp": 0,
+                "weight": 10,
+                "injury": [ 
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["raspy lungs"],
+                        "scars": ["none"]
+                    }
+                ],
+                "history_text": {
+                    "reg_death": "m_c was killed after breathing in strange mist in the Dark Forest.",
+                    "lead_death": "{VERB/m_c/were/was} killed by breathing in strange mist in the Dark Forest."
+                }
+            },
+            {
+                "text": "You swear you can see shapes in the mist, flinching as you catch a glimpse of one that looks like an enemy spirit, claws raised to attack. Deciding to not take the chance, you turn and run, hackles raised, until you've made it clear of the suffocating mist.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "You step into the mist, watching it swirl around you, before noticing the strange, sharp scent. Recoiling, you step back, and retreat to the edges of the mist. You search for df_m_n, but there's little trace of their scent, and you wake in your nest, defeated.",
+                "exp": 0,
+                "weight": 40
+            }
+        ]
     }
-]
+] 

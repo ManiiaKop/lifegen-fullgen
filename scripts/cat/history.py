@@ -10,15 +10,16 @@ class History:
     """
 
     def __init__(self,
-                 beginning=None,
-                 mentor_influence=None,
-                 app_ceremony=None,
-                 lead_ceremony=None,
-                 possible_history=None,
-                 died_by=None,
-                 scar_events=None,
-                 murder=None
-                 ):
+                beginning=None,
+                mentor_influence=None,
+                app_ceremony=None,
+                lead_ceremony=None,
+                possible_history=None,
+                died_by=None,
+                scar_events=None,
+                murder=None,
+                wrong_placement=False
+                ):
         self.beginning = beginning if beginning else {}
         self.mentor_influence = mentor_influence if mentor_influence else {"trait": {}, "skill": {}}
         self.app_ceremony = app_ceremony if app_ceremony else {}
@@ -27,6 +28,7 @@ class History:
         self.died_by = died_by if died_by else []
         self.scar_events = scar_events if scar_events else []
         self.murder = murder if murder else {}
+        self.wrong_placement = wrong_placement if wrong_placement else False
 
         # fix 'old' history save bugs
         if type(self.mentor_influence["trait"]) is type(None):
@@ -148,6 +150,7 @@ class History:
             "died_by": cat.history.died_by,
             "scar_events": cat.history.scar_events,
             "murder": cat.history.murder,
+            "wrong_placement": cat.history.wrong_placement
         }
         return history_dict
 

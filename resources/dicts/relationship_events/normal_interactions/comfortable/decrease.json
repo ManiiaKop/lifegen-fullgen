@@ -68,9 +68,9 @@
 			"r_c started a fight with m_c.",
 			"m_c was startled after r_c snarled viciously during a trivial disagreement.",
             "Although it was supposed to be a harmless training session, it was cut short when r_c got a little too carried away, enjoying the grip of {PRONOUN/r_c/poss} fangs on m_c's throat.",
-"During a tense and heated border patrol, m_c had to drag r_c away to prevent {PRONOUN/r_c/poss} fangs from sinking further into a rival Clan cat.",
-"As m_c tried to enjoy a peaceful break, {PRONOUN/m_c/subject} quivered, noticing r_c glaring at {PRONOUN/m_c/object} and licking {PRONOUN/r_c/poss} jaws, as blood drooled from {PRONOUN/r_c/poss} lips while chewing on prey.",
-"Peering through formerly blissful, sleeping eyes, m_c woke up with a yelp, shivering as {PRONOUN/m_c/subject} saw r_c looming above {PRONOUN/m_c/object}, with the glint of {PRONOUN/r_c/poss} fangs poking through."
+			"During a tense and heated border patrol, m_c had to drag r_c away to prevent {PRONOUN/r_c/poss} fangs from sinking further into a rival Clan cat.",
+			"As m_c tried to enjoy a peaceful break, {PRONOUN/m_c/subject} quivered, noticing r_c glaring at {PRONOUN/m_c/object} and licking {PRONOUN/r_c/poss} jaws, as blood drooled from {PRONOUN/r_c/poss} lips while chewing on prey.",
+			"Peering through formerly blissful, sleeping eyes, m_c woke up with a yelp, shivering as {PRONOUN/m_c/subject} saw r_c looming above {PRONOUN/m_c/object}, with the glint of {PRONOUN/r_c/poss} fangs poking through."
 		],
 		"random_trait_constraint": [
 			"bloodthirsty"
@@ -168,6 +168,24 @@
 		"random_status_constraint": [
 			"healer",
 			"healer apprentice"
+		]
+	},
+	{
+		"id": "H1_comfort_dec",
+		"intensity": "low",
+		"interactions": [
+			"r_c's lack of involvement has put m_c on edge.",
+			"m_c finds it strange {PRONOUN/m_c/subject} can never find r_c when {PRONOUN/m_c/subject} {VERB/m_c/need/needs} {PRONOUN/r_c/object}.",
+			"m_c disagrees with r_c's performance as a queen.",
+			"m_c feels r_c is lacking in {PRONOUN/r_c/poss} supervision of the nursery."
+		],
+		"random_status_constraint": [
+			"queen",
+			"queen apprentice"
+		],
+		"main_age_constraint": [
+			"adult",
+			"apprentice"
 		]
 	}
 ]

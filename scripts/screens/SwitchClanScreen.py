@@ -3,6 +3,11 @@ import logging
 import pygame
 import pygame_gui
 
+# for lifegen
+import os
+import ujson
+from scripts.housekeeping.datadir import get_save_dir
+
 from scripts.clan import Clan
 from scripts.game_structure.game_essentials import game, screen, screen_x, screen_y, MANAGER
 from scripts.game_structure.ui_elements import UIImageButton
@@ -65,6 +70,11 @@ class SwitchClanScreen(Screens):
 
         # del self.screen  # No need to keep that in memory.
 
+        for page in self.your_cat_buttons:
+            for button in page:
+                button.kill()
+                del button  # pylint: disable=modified-iterating-list
+
         for page in self.clan_buttons:
             for button in page:
                 button.kill()
@@ -85,6 +95,8 @@ class SwitchClanScreen(Screens):
         self.clan_buttons = [[]]
         self.delete_buttons = [[]]
         self.clan_name = [[]]
+
+        self.your_cat_buttons = [[]]
 
     def screen_switches(self):
         """
@@ -122,9 +134,57 @@ class SwitchClanScreen(Screens):
         self.clan_name = [[]]
         self.delete_buttons = [[]]
 
+        self.your_cat_buttons = [[]]
+
         i = 0
         y_pos = 378
         for clan in self.clan_list[1:]:
+            clan_age = ""
+            try:
+                # LIFEGEN: grabbing mc names for QOL display -------------------
+                clan_json_path = f"{get_save_dir()}/{clan}clan.json"
+                if os.path.exists(clan_json_path):
+                    with open(clan_json_path, "r") as read_file:
+                        clan_json = ujson.loads(read_file.read())
+                        you = clan_json["your_cat"]
+                        clan_age = clan_json["clanage"]
+            except:
+                pass
+
+            clan_cats_json_path = f"{get_save_dir()}/{clan}/clan_cats.json"
+            your_name = ""
+            try:
+                if os.path.exists(clan_cats_json_path):
+                    with open(clan_cats_json_path, "r") as read_file:
+                        clan_cats_json = ujson.loads(read_file.read())
+                    for item in clan_cats_json:
+                        if item["ID"] == you:
+                            # if theres a better way to do this Keep it to yourself
+                            if item["name_suffix"] != "":
+                                if item["status"] in ["kitten", "newborn"]:
+                                    suffix = "kit"
+                                elif item["status"] in [
+                                    "apprentice", "queen's apprentice",
+                                    "mediator apprentice", "medicine cat apprentice"
+                                    ]:
+                                    suffix = "paw"
+                                elif item["status"] == "leader":
+                                    suffix = "star"
+                                else:
+                                    suffix = item["name_suffix"]
+                            else:
+                                suffix = item["name_suffix"]
+
+                            your_name = item["name_prefix"] + suffix
+                            break
+            except:
+                pass
+                # if your_name:
+                #     print(your_name)
+                # else:
+                #     print("no your name ?")
+            # ---------------------------------------------------------------------
+
             self.clan_name[-1].append(clan)
             self.clan_buttons[-1].append(
                 pygame_gui.elements.UIButton(scale(
@@ -132,6 +192,22 @@ class SwitchClanScreen(Screens):
                     clan + "Clan",
                     object_id="#saved_clan",
                     manager=MANAGER))
+
+            if your_name != "" and clan_age != "":
+                tooltext = f"{your_name}<br>Clan age: {clan_age} moons"
+            else:
+                print("Can't find info for", clan)
+                print(your_name, clan_age)
+                tooltext = ""
+
+            self.your_cat_buttons[-1].append(
+                pygame_gui.elements.UIButton(scale(
+                    pygame.Rect((480, y_pos), (68, 68))),
+                    "",
+                    object_id="#help_button",
+                    tool_tip_text=f"{your_name}<br>Clan age: {clan_age} moons",
+                    manager=MANAGER))
+
             self.delete_buttons[-1].append(
                 UIImageButton(scale(pygame.Rect((940, y_pos + 17), (44, 44))),
                               "",
@@ -145,6 +221,9 @@ class SwitchClanScreen(Screens):
                 self.clan_buttons.append([])
                 self.clan_name.append([])
                 self.delete_buttons.append([])
+
+                self.your_cat_buttons.append([])
+
                 i = 0
                 y_pos = 378
 
@@ -194,11 +273,22 @@ class SwitchClanScreen(Screens):
             for button in page:
                 button.hide()
 
+        # LG
+        for page in self.your_cat_buttons:
+            for button in page:
+                button.hide()
+        # ---
+
         for button in self.clan_buttons[self.page]:
             button.show()
 
         for button in self.delete_buttons[self.page]:
             button.show()
+
+        # LG
+        for button in self.your_cat_buttons[self.page]:
+            button.show()
+        # ---
 
     def on_use(self):
         """

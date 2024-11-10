@@ -946,7 +946,7 @@
                 ]
             },
             {
-                "text": "The Rat King's defenses are too powerful, and as wave upon wave of rats poured down onto the patrol, most of them manage to escape... but not everyone makes it out.",
+                "text": "The Rat King's defenses are too powerful, and as wave upon wave of rats poured down onto the patrol, most of them manage to escape... but not everycat makes it out.",
                 "exp": 0,
                 "weight": 10,
                 "dead_cats": ["multi", "some_lives"],
@@ -2591,7 +2591,7 @@
                 ]
             },
             {
-                "text": "The patrol finds a stocky gray vixen wandering their forest, and drives her out in a scene that mostly involves yowling and screaming and yapping at each other until she gives in. r_c gets a little battered, but everyone is mostly fine.",
+                "text": "The patrol finds a stocky gray vixen wandering their forest, and drives her out in a scene that mostly involves yowling and screaming and yapping at each other until she gives in. r_c gets a little battered, but everycat is mostly fine.",
                 "exp": 0,
                 "weight": 10,
                 "injury": [
@@ -2754,7 +2754,7 @@
                 ]
             },
             {
-                "text": "The patrol finds a stocky gray vixen wandering their forest, and drives her out in a scene that mostly involves yowling and screaming and yapping at each other until she gives in. r_c gets a little battered, but everyone is mostly fine.",
+                "text": "The patrol finds a stocky gray vixen wandering their forest, and drives her out in a scene that mostly involves yowling and screaming and yapping at each other until she gives in. r_c gets a little battered, but everycat is mostly fine.",
                 "exp": 0,
                 "weight": 10,
                 "injury": [
@@ -3117,7 +3117,7 @@
         "chance_of_success": 10,
         "success_outcomes": [
             {
-                "text": "r_c makes it look easy, and when the patrol is done mousing everyone else ends up carrying catches mostly brought down by {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} {VERB/r_c/lead/leads} the way back to camp, sauntering with a distinctly smug sway of {PRONOUN/r_c/poss} hips.",
+                "text": "r_c makes it look easy, and when the patrol is done mousing everycat else ends up carrying catches mostly brought down by {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} {VERB/r_c/lead/leads} the way back to camp, sauntering with a distinctly smug sway of {PRONOUN/r_c/poss} hips.",
                 "exp": 20,
                 "weight": 20,
                 "prey": ["medium"],
@@ -3239,7 +3239,7 @@
                 ]
             },
             {
-                "text": "These are the times that it really pays to have a hunter of s_c's caliber on the patrol - {PRONOUN/s_c/subject} really {VERB/s_c/go/goes} above and beyond, impressing everyone and leaving a trail of terror among the local mice.",
+                "text": "These are the times that it really pays to have a hunter of s_c's caliber on the patrol - {PRONOUN/s_c/subject} really {VERB/s_c/go/goes} above and beyond, impressing everycat and leaving a trail of terror among the local mice.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["HUNTER,1"],
@@ -5494,7 +5494,7 @@
         },
         "weight": 40,
         "intro_text": "app1 bounds out of camp, determined to show off to {PRONOUN/app1/poss} older siblings!",
-        "decline_text": "And everyone is immediately recalled - the camp needs new nesting materials, not more prey.",
+        "decline_text": "And everycat is immediately recalled - the camp needs new nesting materials, not more prey.",
         "chance_of_success": 50,
         "relationship_constraint": ["siblings"],
         "success_outcomes": [
@@ -5999,7 +5999,7 @@
                 ]
             },
             {
-                "text": "The hunting patrol is perfectly successful and it matters not a whit to any of the warriors, because p_l makes a joke that {PRONOUN/p_l/subject} {VERB/p_l/think/thinks} is funny but that's always gotten on r_c's nerves and suddenly everyone's acting like apprentices again, snippy, immature, and irritable.",
+                "text": "The hunting patrol is perfectly successful and it matters not a whit to any of the warriors, because p_l makes a joke that {PRONOUN/p_l/subject} {VERB/p_l/think/thinks} is funny but that's always gotten on r_c's nerves and suddenly everycat's acting like apprentices again, snippy, immature, and irritable.",
                 "exp": 20,
                 "weight": 5,
                 "prey": ["medium"],

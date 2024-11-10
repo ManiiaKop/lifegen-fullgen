@@ -1511,7 +1511,7 @@
         "max_cats": 6,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "On {PRONOUN/r_c/poss} way to mark the far corners of {PRONOUN/r_c/poss} plains, r_c starts telling a story of {PRONOUN/r_c/poss} ancestors to keep every cat entertained.",
+        "intro_text": "On {PRONOUN/r_c/poss} way to mark the far corners of {PRONOUN/r_c/poss} plains, r_c starts telling a story of {PRONOUN/r_c/poss} ancestors to keep everycat entertained.",
         "decline_text": "r_c nearly trips into a rabbit burrow and decides to watch where {PRONOUN/r_c/poss} paws are going instead.",
         "chance_of_success": 10,
         "success_outcomes": [
@@ -1530,7 +1530,7 @@
                 ]
             },
             {
-                "text": "s_c spins a vivid, engaging tale of a massive war {PRONOUN/s_c/poss} ancestors fought over the border the patrol is headed to mark. Not only does it keep every cat entertained, but it also emphasizes the importance of the patrol and motivates everyone.",
+                "text": "s_c spins a vivid, engaging tale of a massive war {PRONOUN/s_c/poss} ancestors fought over the border the patrol is headed to mark. Not only does it keep everycat entertained, but it also emphasizes the importance of the patrol and motivates everycat.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": ["SPEAKER,1"],
@@ -1545,7 +1545,7 @@
                 ]
             },
             {
-                "text": "It's a fantastic idea, making the patrol fly by as cats chat and laugh with their Clanmates, and everyone ends the day feeling much closer to each other.",
+                "text": "It's a fantastic idea, making the patrol fly by as cats chat and laugh with their Clanmates, and everycat ends the day feeling much closer to each other.",
                 "exp": 20,
                 "weight": 20,
                 "stat_trait": [
@@ -1729,7 +1729,7 @@
                     ]
                 },
                 {
-                    "text": "With a terrifying anger, the tom unsheathed his claws... but luckily for the molly, she was a StarClan cat in disguise, and with a burst of starlight, Starclan judged him, and turned him into a horrifying monster... a <i>coyote</i>.",
+                    "text": "With a terrifying anger, the tom unsheathed his claws... but luckily for the molly, she was a StarClan cat in disguise, and with a burst of starlight, StarClan judged him, and turned him into a horrifying monster... a <i>coyote</i>.",
                     "exp": 30,
                     "weight": 20,
                     "art": "gen_train_ghost",

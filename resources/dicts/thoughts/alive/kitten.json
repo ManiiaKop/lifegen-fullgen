@@ -26,9 +26,6 @@
         ],
         "random_status_constraint": [
             "elder"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -83,7 +80,7 @@
             "Is annoying older cats",
             "Is asking the older cats about how kittens are made",
             "Is pestering older cats to play with {PRONOUN/m_c/object}",
-            "Is yowling after the older cats to gather more trickets for {PRONOUN/m_c/poss} collections"
+            "Is yowling after the older cats to gather more trinkets for {PRONOUN/m_c/poss} collections"
         ],
         "random_age_constraint": [
             "adolescent",
@@ -149,9 +146,6 @@
         ],
         "main_trait_constraint": [
             "bouncy"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -182,9 +176,6 @@
         ],
         "main_trait_constraint": [
             "bullying"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -199,19 +190,16 @@
             "Is waiting patiently for {PRONOUN/m_c/poss} turn",
             "Is always on {PRONOUN/m_c/poss} best behavior",
             "Likes to help others",
-            "Wants to be everyone's friend",
+            "Wants to be everycat's friend",
             "Is asking r_c about {PRONOUN/r_c/poss} day",
             "Is squeaky clean",
             "Is bleping {PRONOUN/m_c/poss} tongue out cutely",
             "Isn't bashful after being called cute",
-            "Is trying to dazzle {PRONOUN/m_c/poss} coat until it sparkles",
+            "Is trying to shine {PRONOUN/m_c/poss} coat until it sparkles",
             "Poses magnificently"
         ],
         "main_trait_constraint": [
             "charming"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -231,7 +219,11 @@
             "Is sure {PRONOUN/m_c/subject} could fight a badger",
             "Is sneaking into the leader's den",
             "Sticks {PRONOUN/m_c/poss} paw into an old snake hole",
+<<<<<<< HEAD
             "Isn't afraid of the dark at all",
+=======
+            "Isn't afraid of the dark",
+>>>>>>> lifegen_origin/LifeGen-dev
             "Is planning to escape bathtime",
             "Was caught before taking a paw outside of camp",
             "Pretending r_c is the latest mountain {PRONOUN/m_c/subject} must climb",
@@ -242,10 +234,14 @@
             "Makes another failed attempt at trying to escape the camp"
         ],
         "main_trait_constraint": [
+<<<<<<< HEAD
             "fearless"
         ],
         "random_living_status": [
             "living"
+=======
+            "daring"
+>>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -280,9 +276,6 @@
         ],
         "main_trait_constraint": [
             "daydreamer"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -290,7 +283,7 @@
         "thoughts": [
             "Told r_c {PRONOUN/m_c/subject} can never lie",
             "Doesn't want to hurt {PRONOUN/m_c/poss} Clanmates' feelings by lying to them",
-            "Is open and direct to everyone",
+            "Is open and direct to everycat",
             "Is spilling out personal information about {PRONOUN/m_c/poss} trip to the dirtplace",
             "Doesn't like to have secrets",
             "Told the healer the truth about {PRONOUN/m_c/poss} tummyache from eating bugs",
@@ -381,6 +374,7 @@
             "Never wants to leave the camp when {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} older",
             "Asks r_c if it's safe",
             "Is checking on r_c",
+<<<<<<< HEAD
             "Hopes there is enough fresh-kill for every cat",
             "Has a lot on {PRONOUN/m_c/poss} mind"
         ],
@@ -389,6 +383,14 @@
         ],
         "random_living_status": [
             "living"
+=======
+            "Hopes there is enough fresh-kill for everycat",
+            "Has a lot on {PRONOUN/m_c/poss} mind",
+            "Is sadly a victim of another prank"
+        ],
+        "main_trait_constraint": [
+            "nervous"
+>>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -419,9 +421,6 @@
         ],
         "main_trait_constraint": [
             "quiet"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -470,9 +469,6 @@
         ],
         "main_trait_constraint": [
             "sweet"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -499,7 +495,11 @@
             "Is up to no good... again",
             "Splashes around in a puddle, getting r_c all wet",
             "Is not allowed to leave the nursery for the rest of the day after pranking r_c",
+<<<<<<< HEAD
             "Tries to scare r_c",
+=======
+            "Is trying to scare r_c",
+>>>>>>> lifegen_origin/LifeGen-dev
             "Is covered in mud",
             "Is stealing other kits' toys",
             "Tries to intimidate the other kits",
@@ -508,10 +508,14 @@
             "Is spitting and being spicy"
         ],
         "main_trait_constraint": [
+<<<<<<< HEAD
             "unruly"
         ],
         "random_living_status": [
             "living"
+=======
+            "troublesome"
+>>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -535,11 +539,15 @@
             "Enjoys watching other cats stroll by"
         ],
         "main_trait_constraint": [
+<<<<<<< HEAD
             "lonesome",
             "shy"
         ],
         "random_living_status": [
             "living"
+=======
+            "lonesome"
+>>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -549,7 +557,7 @@
             "Wakes up early to say hello to the dawn patrol",
             "Follows r_c around so closely that {PRONOUN/m_c/subject} {VERB/m_c/step/steps} on {PRONOUN/r_c/poss} paw",
             "Says hello to r_c at least 10 times in a row, until {PRONOUN/r_c/subject} finally {VERB/r_c/say/says} hello back",
-            "Is showing everyone the bug {PRONOUN/m_c/subject} caught earlier",
+            "Is showing everycat the bug {PRONOUN/m_c/subject} caught earlier",
             "Is in r_c's way... again",
             "Yowls loudly in the middle of the clearing for absolutely no reason",
             "Begs for life-saving herbs to cure {PRONOUN/m_c/poss} minor scrape",
@@ -559,9 +567,6 @@
         ],
         "main_trait_constraint": [
             "attention-seeker"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -588,7 +593,7 @@
             "Mimics the croak of a frog",
             "Is convinced that the louder {PRONOUN/m_c/subject} are, the faster {PRONOUN/m_c/subject} will grow",
             "Is repeating everything that r_c says back to them mockingly",
-            "Is asking every cat in earshot to play with them",
+            "Is asking everycat in earshot to play with them",
             "Is practicing being a howling wolf. At night.",
             "Trying to see how loudly {PRONOUN/m_c/subject} can scream",
             "Can hold in {PRONOUN/m_c/poss} breath talking nonstop",
@@ -596,9 +601,6 @@
         ],
         "main_trait_constraint": [
             "noisy"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -623,11 +625,15 @@
             "Feels as if {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not growing big and strong enough to become an apprentice"
         ],
         "main_trait_constraint": [
+<<<<<<< HEAD
             "insecure",
             "self-conscious"
         ],
         "random_living_status": [
             "living"
+=======
+            "insecure"
+>>>>>>> lifegen_origin/LifeGen-dev
         ]
     },
     {
@@ -646,9 +652,6 @@
         ],
         "main_trait_constraint": [
             "polite"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -669,14 +672,10 @@
             "Is convinced that {PRONOUN/m_c/subject} will become an apprentice early",
             "Butts into a coversation to correct someone",
             "Is going off, in great detail, about the history of c_n",
-            "Rubbing in r_c's muzzle about a subject {PRONOUN/m_c/subject} greatly excel at",
-            "Is trying to retell a story {PRONOUN/m_c/subject} know IS the absolute truth"
+            "Is trying to retell a story {PRONOUN/m_c/subject} {VERB/m_c/know/knows} is the absolute truth"
         ],
         "main_trait_constraint": [
             "know-it-all"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
@@ -698,9 +697,6 @@
         ],
         "main_trait_constraint": [
             "bossy"
-        ],
-        "random_living_status": [
-            "living"
         ]
     },
     {
