@@ -683,7 +683,7 @@
             "Hey, so, uh ...",
             "I just thought I'd come say thanks for keeping me out of trouble.",
             "Seriously, without you, I'd probably be a red smear on the forest floor by now. I owe you a bunch.",
-            "... Say, do ya ever get lonely spending so much time in the medicine den?",
+            "... Say, do ya ever get lonely spending so much time in the healer den?",
             "Hm ... What if I started eating my meals in here, with you?",
             "I'll catch you up on all the latest Clan gossip, and it'll keep me out of trouble!",
             "C'mon, whaddaya say? It'd help one of your patients out!"
@@ -909,7 +909,7 @@
         ],
         [
             "Hey, y_c! I got into a bit of trouble again. No big deal, just a scratch!",
-            "[It is not, in fact, just a scratch. In fact, t_c is bleeding all over the medicine den. {PRONOUN/t_c/subject/CAP} {VERB/t_c/chat/chats} loudly as you hurry to help {PRONOUN/t_c/object}.]",
+            "[It is not, in fact, just a scratch. In fact, t_c is bleeding all over the healer den. {PRONOUN/t_c/subject/CAP} {VERB/t_c/chat/chats} loudly as you hurry to help {PRONOUN/t_c/object}.]",
             "Man, I must be using up, like, half your herb stores, huh? But where's the fun in being careful? Besides, I know you could use some company in here.",
             "Oh man, what type of herbs are those? They look cool. Are you talking to StarClan? Can you hear them right now?",
             "[You finish helping t_c with {PRONOUN/t_c/poss} injury.]",
@@ -1804,7 +1804,7 @@
         ],
         [
             "Hello? Is anyone in here?",
-            "[t_c is almost unrecognizable as {PRONOUN/t_c/subject} awkwardly {VERB/t_c/shuffle/shuffles} into the medicine den. {PRONOUN/t_c/poss/CAP} fur is spiky and tangled and covered entirely in snow.]",
+            "[t_c is almost unrecognizable as {PRONOUN/t_c/subject} awkwardly {VERB/t_c/shuffle/shuffles} into the healer den. {PRONOUN/t_c/poss/CAP} fur is spiky and tangled and covered entirely in snow.]",
             "y_c, Just the cat I was hoping to find! So, funny story actually, it turns out that it's a LOT colder out in the snow when the sun isn't up. Crazy right? Who would have imagined? Heh...",
             "All I wanted to do was to catch a bit of prey before the dawn patrol went out. That way, they could have a little bit of something before they left. I clearly underestimated how much snow, and how little prey there would be.",
             "I was wondering if you have a herb or remedy that could warm me up a little? Maybe even just some dry moss? Right now, I feel like my paws are frozen solid."
@@ -2883,7 +2883,7 @@
             "stable"
         ],
         [
-            "StarClan... I do not feel good. Oh- hello y_c, what are you doing here in the medicine den?",
+            "StarClan... I do not feel good. Oh- hello y_c, what are you doing here in the healer den?",
             "[You roll {PRONOUN/t_c/object} a shiny pebble, in fact, it's one {PRONOUN/t_c/subject} gave to you. t_c blinks {PRONOUN/t_c/poss} tired eyes in shock, {PRONOUN/t_c/subject} {VERB/t_c/pull/pulls} the pebble close to {PRONOUN/t_c/poss} chest and {VERB/t_c/smile/smiles} softly.]",
             "Thank you y_c... But please, don't stay here for too long *cough* StarClan... Please go back to the nursery y_c, I don't want you getting sick."
         ]
@@ -2895,7 +2895,7 @@
             "stable"
         ],
         [
-            "Ouch, probably shouldn't walk- oh, y_c, I didn't see you here. What are you doing in the medicine den?",
+            "Ouch, probably shouldn't walk- oh, y_c, I didn't see you here. What are you doing in the healer den?",
             "[You show t_c your paw, there's a thorn buried deeply in the pad. You sniff quietly as r_q grooms your fur in an attempt to soothe your sorrows.]",
             "Oh, that looks nasty, I'm so sorry. I'm guessing r_m will have to pull that out for you. It's okay, don't worry, I'll be here.",
             "[You breathe in deeply as the healer begins to pull on the thorn, the queen beside you is offering strong words of support while t_c watches with a soft smile.]",
@@ -3085,8 +3085,8 @@
         ],
         [
             "[You're currently on patrol with r_w when r_m comes through, in {PRONOUN/r_m/poss} mouth holding bundles of herbs. {PRONOUN/r_m/subject/CAP} {VERB/r_m/look/looks} up and {VERB/r_m/see/sees} you and {VERB/r_m/run/runs} over, panic in every step. You're eyes widen in fear-]",
-            "[{PRONOUN/r_m/subject/CAP} {VERB/r_m/explain/explains} your mate is currently in the medicine den and {PRONOUN/t_c/poss} condition is concerning. You quickly mumble an apology to both the healer and warrior who are left in your dust.]",
-            "[You bolt into the medicine den to find t_c curled in a tight ball, {PRONOUN/t_c/subject} {VERB/t_c/look/looks} up and {PRONOUN/t_c/poss} eyes soften. Despite looking ill and frail, {PRONOUN/t_c/poss} warmth always returns at the sight of you.]",
+            "[{PRONOUN/r_m/subject/CAP} {VERB/r_m/explain/explains} your mate is currently in the healer den and {PRONOUN/t_c/poss} condition is concerning. You quickly mumble an apology to both the healer and warrior who are left in your dust.]",
+            "[You bolt into the healer den to find t_c curled in a tight ball, {PRONOUN/t_c/subject} {VERB/t_c/look/looks} up and {PRONOUN/t_c/poss} eyes soften. Despite looking ill and frail, {PRONOUN/t_c/poss} warmth always returns at the sight of you.]",
             "y_c, hello... Heh... Yeah not doing so well. I'm sorry Love, I don't mean to upset you.",
             "[You lay down next to {PRONOUN/t_c/object} and rest your head on {PRONOUN/t_c/poss} back, the two of you warm and hopeful in each other's company.]",
             "... ... ...",
@@ -3136,7 +3136,7 @@
         ],
         [
             "I'm so thankful to have a mate like you, y_c. You already know what happens, how this is going to work and... I guess, I'll be trusting you to make the decisions.",
-            "[You freeze and whip around to face your mate. t_c lays in your moss bedding in the medicine den, watching you as you sort through your herb supply.]",
+            "[You freeze and whip around to face your mate. t_c lays in your moss bedding in the healer den, watching you as you sort through your herb supply.]",
             "[You frown slightly, 'what do you mean by that?']",
             "Well, you're a healer. You've seen cats give birth, assisted in some cases and are there to guide the parents. I just- well... I'm so excited to be a parent but I'm worried.",
             "I'm worried that once the kits are here, I'll have no plan. I won't know what to do- I don't want to make mistakes, I don't want to do anything that could- that could hurt them...",
@@ -3353,7 +3353,7 @@
             "I was an apprentice at six moons and then became a warrior. I'm sure you've all heard it before but training is very hard work. But I persevered, as will all of you. When I was diagnosed, it was like my world turned upside down.",
             "To be told that you won't be able to perform to the best of your abilities is rough. Knowing that it was something I had to live with, was rougher. But, it changed my perspective on things. On life.",
             "I learned that while there are things I couldn't do, I learned there were things I could do differently. I learned how to adapt, change and better myself. I didn't choose this, no one chooses their conditions.",
-            "That's all the more reason to fight back. Earn your place and do so with pride. For example, on days where my joints are sore; a little fern warmed in the sun wrapped tightly helps relieve that stress. By stretching every morning I can stay flexible and of course, the medicine den is always there to support me.",
+            "That's all the more reason to fight back. Earn your place and do so with pride. For example, on days where my joints are sore; a little fern warmed in the sun wrapped tightly helps relieve that stress. By stretching every morning I can stay flexible and of course, the healer den is always there to support me.",
             "If you are going to take anything away from this today; take away the fact there is no right way. Yes, there are things I can't do, I can't climb as well or jump as high. To compensate, I learnt to swim. Thanks to that, I can still hunt. I still serve c_nClan my way.",
             "You kits are our future, it will be your duty to support each other, regardless of the limits of your bodies. Don't give up, give things a go and if something is absolutely out of your ability, it's okay to be upset. It's okay to second guess yourself, but don't be afraid to reach out for help and think differently.",
             "I could ramble on and on but, I think that's enough from me. Now, I'm about to go hunting, I'm sure r_q would be kind enough to let you all see how I do things.",
@@ -3490,7 +3490,7 @@
             "When I was hunting today, I tripped and I think I fell into one of your herb patches. I didn't mean to, I swear, but I broke some of the stems. It looked like I might have killed them...",
             "Where was this? Um, kind of near the big tree on the far side of the territory? You can see the o_cClan border from there.",
             "Wait, that wasn't an herb patch? Oh... oh wow, okay! Thank you! I'm so, so sorry for bothering you!",
-            "[t_c scurries out of the medicine den, practically sagging with relief.]"
+            "[t_c scurries out of the healer den, practically sagging with relief.]"
         ]
     ],
     "neurotic_warrior_SQ7": [
@@ -3916,7 +3916,7 @@
 [
 "[You stumble into camp, your mouth full with bundles of herbs. t_c spots you from across the clearing- right in the middle of being handed instructions from d_n and l_n. {PRONOUN/t_c/subject/CAP} quickly forget the meeting and bolt in your direction.]",
 "Woah- woah, woah, woah! Hold on there a second, y_c, let me help you with that.",
-"[You see d_n and l_n watching, both give a nod of approval and address the other warriors. t_c picks up some herbs and follows you into the medicine den. {PRONOUN/t_c/subject/CAP} places it down gently and flash a charming smile.]",
+"[You see d_n and l_n watching, both give a nod of approval and address the other warriors. t_c picks up some herbs and follows you into the healer den. {PRONOUN/t_c/subject/CAP} places it down gently and flash a charming smile.]",
 "There we go, safe and sound. I'm sorry, but can you handle it from here, I need to get back-",
 "['No you don't.' d_n purrs from behind, you and t_c yelp in shock, the deputy chuckles. 'Don't worry about patrols today, t_c, stay here and help y_c, it's more important.']",
 "Is- is this a punishment? I'm sorry, I know it was rude-",
@@ -4428,7 +4428,7 @@
      [
 "[t_c bursts into camp, wind-blown and shaking.]",
 "y_c! Um... plove_r_w and I were hunting by the shore, and {PRONOUN/plove_r_w/subject} fell in the water. {PRONOUN/plove_r_w/subject/CAP} climbed back out, but {PRONOUN/plove_r_w/subject}{VERB/plove_r_w/'re/'s} really cold and {VERB/plove_r_w/say/says} {PRONOUN/plove_r_w/subject} can't feel {PRONOUN/plove_r_w/poss} paws... Please, help!",
-"[plove_r_w stumbles after t_c, violently shivering. You quickly call r_m over, and {PRONOUN/r_m/subject} {VERB/r_m/get/gets} plove_r_w into the medicine den while t_c paces anxiously outside.]",
+"[plove_r_w stumbles after t_c, violently shivering. You quickly call r_m over, and {PRONOUN/r_m/subject} {VERB/r_m/get/gets} plove_r_w into the healer den while t_c paces anxiously outside.]",
 "I'm sorry. I should've gotten {PRONOUN/plove_r_w/object} out of the water quicker... I should've been keeping a better eye on {PRONOUN/plove_r_w/object}! I didn't realize the rocks were so slippery!",
 "[You tell t_c that {PRONOUN/t_c/subject} did everything {PRONOUN/t_c/subject} could, and that plove_r_w will be okay. t_c doesn't seem to hear you.]",
 "plove_r_w's so important to me, y_c. What if... what if...",

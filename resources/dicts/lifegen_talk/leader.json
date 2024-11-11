@@ -776,7 +776,7 @@
         ],
         [
             "Hey, y_c! I got into a bit of trouble again. No big deal, just a scratch!",
-            "[It is not, in fact, just a scratch. In fact, t_c is bleeding all over the medicine den. {PRONOUN/t_c/subject/CAP} {VERB/t_c/chat/chats} loudly as you hurry to help {PRONOUN/t_c/object}.]",
+            "[It is not, in fact, just a scratch. In fact, t_c is bleeding all over the healer den. {PRONOUN/t_c/subject/CAP} {VERB/t_c/chat/chats} loudly as you hurry to help {PRONOUN/t_c/object}.]",
             "Man, I must be using up, like, half your herb stores, huh? But where's the fun in being careful? Besides, I know you could use some company in here.",
             "Oh man, what type of herbs are those? They look cool. Are you talking to StarClan? Can you hear them right now?",
             "[You finish helping t_c with {PRONOUN/t_c/poss} injury.]",
@@ -2319,7 +2319,7 @@
      [
 "[t_c bursts into camp, wind-blown and shaking.]",
 "y_c! Um... plove_r_w and I were hunting by the shore, and {PRONOUN/plove_r_w/subject} fell in the water. {PRONOUN/plove_r_w/subject/CAP} climbed back out, but {PRONOUN/plove_r_w/subject}{VERB/plove_r_w/'re/'s} really cold and {VERB/plove_r_w/say/says} {PRONOUN/plove_r_w/subject} can't feel {PRONOUN/plove_r_w/poss} paws... Please, help!",
-"[plove_r_w stumbles after t_c, violently shivering. You quickly call r_m over, and {PRONOUN/r_m/subject} {VERB/r_m/get/gets} plove_r_w into the medicine den while t_c paces anxiously outside.]",
+"[plove_r_w stumbles after t_c, violently shivering. You quickly call r_m over, and {PRONOUN/r_m/subject} {VERB/r_m/get/gets} plove_r_w into the healer den while t_c paces anxiously outside.]",
 "I'm sorry. I should've gotten {PRONOUN/plove_r_w/object} out of the water quicker... I should've been keeping a better eye on {PRONOUN/plove_r_w/object}! I didn't realize the rocks were so slippery!",
 "[You tell t_c that {PRONOUN/t_c/subject} did everything {PRONOUN/t_c/subject} could, and that plove_r_w will be okay. t_c doesn't seem to hear you.]",
 "plove_r_w's so important to me, y_c. What if... what if...",

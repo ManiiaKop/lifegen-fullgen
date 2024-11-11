@@ -949,7 +949,7 @@
             "What? Seriously? StarClan said that about me?",
             "Hmph. Well, what does StarClan know anyways?",
             "I'll show them ... I'll become the strongest warrior this Clan has ever seen! Then, StarClan will be begging to make prophecies about me!",
-            "[t_c stalks out of the medicine den with a huff. {PRONOUN/t_c/subject/CAP} probably won't be asking about StarClan again any time soon.]"
+            "[t_c stalks out of the healer den with a huff. {PRONOUN/t_c/subject/CAP} probably won't be asking about StarClan again any time soon.]"
         ],
         "doesnt_work_like_that": [
             "... It doesn't work like that? Awh. That's no fun.",
@@ -1632,7 +1632,7 @@
             "Don't beat yourself up about it, though. You're doing a great job!"
         ],
         "yarrow": [
-            "Whoa, are you crazy?! You want a wounded patient puking all over the medicine den? Because that's just what you're asking for!",
+            "Whoa, are you crazy?! You want a wounded patient puking all over the healer den? Because that's just what you're asking for!",
             "*Sigh* Maybe it's time to go over the fundamentals again ..."
         ],
         "cobwebs_comfrey": [
@@ -2526,7 +2526,7 @@
         ],
         "admit": [
             "[Although t_c isn't exactly happy, {PRONOUN/t_c/subject} {VERB/t_c/appreciate/appreciates} your honesty.]",
-            "I'll tell you what. Go get some moss from the medicine den and meet me by the nursery. I'll lend you a paw and replace the nests, while you fix up the walls and clear any debris.",
+            "I'll tell you what. Go get some moss from the healer den and meet me by the nursery. I'll lend you a paw and replace the nests, while you fix up the walls and clear any debris.",
             "Afterward, we'll go out and catch some prey for the Clan. Sound like a plan?"
         ]
     },
@@ -2578,7 +2578,7 @@
             "they_kitten"
         ],
         "intro": [
-            "[You're dragging a large pile of moss across the camp, intent on delivering it to the medicine den. t_c spots you in the middle of your task and perks up, racing over.]",
+            "[You're dragging a large pile of moss across the camp, intent on delivering it to the healer den. t_c spots you in the middle of your task and perks up, racing over.]",
             "y_c! y_c! Need a helping paw? I'm super good at carrying moss, I swear!",
             "[t_c stares up at you with wide eyes, eagerly awaiting your response.]"
         ],
@@ -2596,7 +2596,7 @@
             "[You shrug t_c off and tell {PRONOUN/t_c/object} to go back to the nursery. t_c looks hurt but doesn't protest as {PRONOUN/t_c/subject} slowly {VERB/t_c/pad/pads} away with {PRONOUN/t_c/poss} head hung low.]"
         ],
         "accept": [
-            "[You graciously accept t_c's offer and slide {PRONOUN/t_c/object} a portion of your moss. With {PRONOUN/t_c/poss} head held high and an extra spring in {PRONOUN/t_c/poss} step, the two of you successfully deliver the moss to the medicine den.]"
+            "[You graciously accept t_c's offer and slide {PRONOUN/t_c/object} a portion of your moss. With {PRONOUN/t_c/poss} head held high and an extra spring in {PRONOUN/t_c/poss} step, the two of you successfully deliver the moss to the healer den.]"
         ]
     },
     "upstanding_choice4": {
@@ -2877,7 +2877,7 @@
                 "next_scene": "ReportFail"
             },
             "choice2": {
-                "text": "{PRONOUN/d_n/subject/CAP}{VERB/d_n/'re/'s} in the medicine den.",
+                "text": "{PRONOUN/d_n/subject/CAP}{VERB/d_n/'re/'s} in the healer den.",
                 "next_scene": "ReportFound"
             }
         },
@@ -2917,7 +2917,7 @@
         ],
         "ReportFound": [
             "Thank you so much y_c! I'll pass on a good word, see you later!",
-            "[t_c bolts off towards the medicine den, almost crashing through the front entrance. You can hear the murmurs from the inside.]",
+            "[t_c bolts off towards the healer den, almost crashing through the front entrance. You can hear the murmurs from the inside.]",
             "[Shortly afterward the voices die down and d_n leaps from the den. {PRONOUN/d_n/subject/CAP} {VERB/d_n/begin/begins} to shout orders and call for warriors, t_c following {PRONOUN/d_n/object} closely behind.]",
             "[The warriors soon follow in hot pursuit behind d_n, t_c included. As {PRONOUN/t_c/subject} {VERB/t_c/run/runs} with the patrol, t_c turns to face you, the gleam in {PRONOUN/t_c/poss} eyes full of a million thank yous.]",
             "[Hopefully {PRONOUN/t_c/subject} {VERB/t_c/keep/keeps} the territory safe, maybe while {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} at it, {VERB/t_c/keep/keeps} up {PRONOUN/t_c/poss} end of the deal and {VERB/t_c/tell/tells} d_n of your assistance.]"
@@ -2932,7 +2932,7 @@
         ],
         "intro": [
             "G'day y_c, how you doing? You look really relaxed there- actually, what are you doing???",
-            "[You look down and can't help but give an awkward smile. That's a great question actually... You find yourself stretched out next to the medicine den, your head on the floor and your rear in the air.]",
+            "[You look down and can't help but give an awkward smile. That's a great question actually... You find yourself stretched out next to the healer den, your head on the floor and your rear in the air.]",
             "[You're laying on your back with your paws in the air, your tail partly tangled amongst your legs... It doesn't feel uncomfortable, in fact quite the opposite.]",
             "Uh... Hello? StarClan hasn't claimed you yet y_c, what are you- pft- I'm sorry it's just so... Oh my I can't-",
             "[t_c explodes into a fit of giggles as you stare at {PRONOUN/t_c/object} upside down with big buggy eyes.]"
@@ -4236,7 +4236,7 @@
             "min_platonic_40"
         ],
         "intro": [
-            "dislike_r_m isn't doing enough for plove_r_s. I swear, every time I visit the medicine den, plove_r_s looks worse.",
+            "dislike_r_m isn't doing enough for plove_r_s. I swear, every time I visit the healer den, plove_r_s looks worse.",
             "If this keeps up, {PRONOUN/plove_r_s/subject}{VERB/plove_r_s/'re/'s} going to...",
             "[t_c breaks off and looks away, swallowing hard.]",
             "dislike_r_m doesn't seem to care about {PRONOUN/plove_r_s/object}, and I don't know what to do."

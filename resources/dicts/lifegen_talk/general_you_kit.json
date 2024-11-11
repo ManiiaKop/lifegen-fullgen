@@ -974,7 +974,7 @@
             "they_blind"
         ],
         [
-            "[After a small accident while playing, you wait hours for t_c to come and pick you up from the medicine den.]",
+            "[After a small accident while playing, you wait hours for t_c to come and pick you up from the healer den.]",
             "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/don't/doesn't} come until long after dusk has fallen, and even then, {PRONOUN/t_c/subject} {VERB/t_c/seem/seems} distracted.]",
             "Sorry, squirt. Got busy catching up with a bunch of friends.",
             "What happened? Scrape yourself a little? Tch, that's no big deal, don't worry. It'll heal itself up in no time.",
@@ -990,10 +990,10 @@
             "any"
         ],
         [
-            "[After getting caught making mischief in the medicine den, r_m chides you in front of your parent, t_c, who nods along sternly.]",
+            "[After getting caught making mischief in the healer den, r_m chides you in front of your parent, t_c, who nods along sternly.]",
             "Of course, r_m, I completely understand. Needless to say, transgressions like this are not taken lightly in our family.",
             "Come along, y_c. We'll deal with this back at the nursery.",
-            "[As t_c shepherds you away from the medicine den, {PRONOUN/t_c/poss} 'disapproving parent' act slowly slips away into giddy excitement.]",
+            "[As t_c shepherds you away from the healer den, {PRONOUN/t_c/poss} 'disapproving parent' act slowly slips away into giddy excitement.]",
             "Wow, kid! Your first act of rebellion. I was starting to think you didn't have it in you!",
             "What was it that caught your attention?",
             "[You offer up a sprig of pretty yellow flowers that you managed to sneak away from r_m.]",
@@ -2356,7 +2356,7 @@
             "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/lift/lifts} {PRONOUN/t_c/poss} head to the stars and {VERB/t_c/scream/screams} to the Clan.]",
             "We lost a Clanmate! To a kit, nonetheless! And yet we stand here and protect the killer?! EVIL WILL SPREAD!",
             "Make no mistake! {PRONOUN/y_c/subject/CAP} killed once, {PRONOUN/y_c/subject}'ll kill again! And I <b>won't</b> let that happen!",
-            "[r_q tells t_c to go to the medicine den and stay there. The Clan will not harm you. t_c shows brief confusion before hissing {PRONOUN/t_c/poss} response.]",
+            "[r_q tells t_c to go to the healer den and stay there. The Clan will not harm you. t_c shows brief confusion before hissing {PRONOUN/t_c/poss} response.]",
             "Just know, you can't protect {PRONOUN/y_c/object} forever! One day, when you're not there, I will banish this evil myself! I don't care if blood stains my paws. Because at least I'll know StarClan will forgive me. They will never forgive you.",
             "[A chill wracks through your body as you meet t_c's cold and heartless stare. {PRONOUN/t_c/subject/CAP} no longer {VERB/t_c/have/has} the warmth that they used to. Since your actions, you begin to wonder...]",
             "[Maybe that cat you killed wasn't the only one who died that day.]"
@@ -3079,7 +3079,7 @@
         [
             "I've... I've gone so mad that I'm hallucinating y_c...",
             "Oh, StarClan...",
-            "[t_c stumbles away from you and towards the medicine den.]"
+            "[t_c stumbles away from you and towards the healer den.]"
         ]
     ],
     "revived_grievingyou2": [
@@ -4966,7 +4966,7 @@
         ],
         [
             "t_p says I've gotta go to see r_m 'cause I tripped and now my paw kind of hurts.",
-            "C-could you come with, please? The medicine den's big and scary and I really, really don't want to go alone."
+            "C-could you come with, please? The healer den's big and scary and I really, really don't want to go alone."
         ]
     ],
     "neurotic_kitten_SQ20": [
@@ -5012,7 +5012,7 @@
         ],
         [
             "[t_c is sitting out of the nursery chores today, sick with a stomachache.]",
-            "[You go to visit {PRONOUN/t_c/object} with some herbs you collected from the medicine den.]",
+            "[You go to visit {PRONOUN/t_c/object} with some herbs you collected from the healer den.]",
             "Oughh - Ahh, the pain! The pain! It's -- Ack -- excruciating!",
             "[You drop the herbs at t_c's paws and gently lick {PRONOUN/t_c/poss} ear, asking if there's anything you can to to make {PRONOUN/t_c/object} better.]",
             "... Psst, y_c. I'm not really sick, dummy. I'm just faking to get out of cleaning my nest.",
@@ -5318,7 +5318,7 @@
             "[You haven't seen t_c for a few hours, so you make another attempt at climbing to the top of the nursery.]",
             "[Like the first time, you're amazed by how far you can see! You can even see past the edge of camp!]",
             "[But just as you're reaching the top, you see a flash of fur below you. t_c scrambles up, grabs you by the scruff, and once again brings you to the ground. Foiled again!]",
-            "I'm sorry, y_c, but that really is dangerous! You're too little to have to spend time in the medicine den!"
+            "I'm sorry, y_c, but that really is dangerous! You're too little to have to spend time in the healer den!"
         ]
     ],
     "neurotic_tokit_SQ7~3": [
@@ -5615,16 +5615,16 @@
         ],
         [
             "y_c.",
-            "[t_c walks through the medicine den, {PRONOUN/t_c/poss} shoulders tense and {PRONOUN/t_c/poss} ears held back slightly. A frown creases {PRONOUN/t_c/poss} features as {PRONOUN/t_c/subject} stares you down. {PRONOUN/t_c/subject} calmly looks back to r_m who's fuming.]",
+            "[t_c walks through the healer den, {PRONOUN/t_c/poss} shoulders tense and {PRONOUN/t_c/poss} ears held back slightly. A frown creases {PRONOUN/t_c/poss} features as {PRONOUN/t_c/subject} stares you down. {PRONOUN/t_c/subject} calmly looks back to r_m who's fuming.]",
             "[You flinch as r_m coldly states that you tore up the fresh herbs {PRONOUN/r_m/subject} dug up this morning. t_c looks angry but eventually sighs and apologises, promising to find replacements and promising you'll be dealt with accordingly.]",
             "[You turn to go back to the nursery, t_c cuts in front of you and shakes {PRONOUN/t_c/poss} head.]",
             "No, you caused this mess, you're helping me clean it up. Come on, let's get a move on.",
-            "What were you even doing in the medicine den? Looking for honey? y_c, I've told you countless times, that if you want some, all you have to do is ask.",
+            "What were you even doing in the healer den? Looking for honey? y_c, I've told you countless times, that if you want some, all you have to do is ask.",
             "Look, I get it, kits your age are full of boundless energy and accidents can happen, I'm guessing you didn't mean to tear up those herbs, they're pretty fragile.",
             "['Am I going outside the camp? Is that safe?']",
             "Yes, whilst I'm here, it will be fine, besides, we're not going too far, I know exactly where to look.",
             "[t_c quickly informs the guards and then picks you up by the scruff, {PRONOUN/t_c/poss} grip firm. As {PRONOUN/t_c/subject} walks, it's silent, not even the birds or trees dared to move. {PRONOUN/t_c/subject} eventually sits you down and loom above you, {PRONOUN/t_c/poss} gaze full of love and worry.]",
-            "Let me be clear, I don't want you in there without supervision, but it's done now. What we can do is learn from it and I trust that you will remember that. The medicine den can be a very dangerous place.",
+            "Let me be clear, I don't want you in there without supervision, but it's done now. What we can do is learn from it and I trust that you will remember that. The healer den can be a very dangerous place.",
             "[{PRONOUN/t_c/subject} nudges you forwards, {PRONOUN/t_c/poss} shadow cast over you to protect you from the sky. The two of you walk in silence once more.]",
             "The last thing I want is for you to get hurt. I love you, you're my kit. It's my job to protect you however, I can't always be there. What if you slipped? What if there was a poisonous herb?",
             "y_c, please be careful. I can't afford to lose you. Oh! There we are, this is the herb we're looking for, here, this is how you extract it.",

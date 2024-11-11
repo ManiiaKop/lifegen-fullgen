@@ -16,7 +16,7 @@
         "max_cats": 3,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "A heavy rainstorm has soaked through the medicine den, making some of your herbs wet. You need to act quickly to salvage what you can.",
+        "intro_text": "A heavy rainstorm has soaked through the healer den, making some of your herbs wet. You need to act quickly to salvage what you can.",
         "decline_text": "Feeling overwhelmed, you decide to call for help. Other cats step in to assist, understanding the importance of preserving the medicine stock.",
         "chance_of_success": 50,
         "success_outcomes": [
@@ -196,7 +196,7 @@
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "Curious, you poke your head into the den only to see a group of kits poking about the herb store! As soon as you round up the kits, you harshly scold them on the potential dangers that come with playing around in the medicine den. You know it's a hard lesson to hear, but it is a necessary one.",
+                "text": "Curious, you poke your head into the den only to see a group of kits poking about the herb store! As soon as you round up the kits, you harshly scold them on the potential dangers that come with playing around in the healer den. You know it's a hard lesson to hear, but it is a necessary one.",
                 "exp": 10,
                 "weight": 20
             }
@@ -263,7 +263,7 @@
         "max_cats": 6,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "The Clan's healers have gone out to fetch herbs, leaving a couple of sick and injured Clanmates in the medicine den. You notice a patient in pain, and you know exactly how to treat them, but you don't want to get in trouble for touching the herbs.",
+        "intro_text": "The Clan's healers have gone out to fetch herbs, leaving a couple of sick and injured Clanmates in the healer den. You notice a patient in pain, and you know exactly how to treat them, but you don't want to get in trouble for touching the herbs.",
         "decline_text": "You decide to sit back and wait for the unshunned healers to return.",
         "chance_of_success": 50,
         "success_outcomes": [
@@ -275,7 +275,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "Just as you poke your head into the medicine den, the patient lifts their head and notices you. Though half-asleep and in pain, they manage to yell at you to get out, and you flee to return to your nest without any other Clanmates taking notice.",
+                "text": "Just as you poke your head into the healer den, the patient lifts their head and notices you. Though half-asleep and in pain, they manage to yell at you to get out, and you flee to return to your nest without any other Clanmates taking notice.",
                 "exp": 0,
                 "weight": 20
             }

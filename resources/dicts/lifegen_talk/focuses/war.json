@@ -356,7 +356,7 @@
             "platonic_like"
         ],
         [
-            "[Long after dusk, you're organizing your herbs in the medicine den when you hear tiny paws at the entrance.]",
+            "[Long after dusk, you're organizing your herbs in the healer den when you hear tiny paws at the entrance.]",
             "[t_c creeps in, {PRONOUN/t_c/poss} eyes wide and fur fluffed. When {PRONOUN/t_c/subject} {VERB/t_c/see/sees} you, {PRONOUN/t_c/subject} {VERB/t_c/gasp/gasps}.]",
             "I- I'm sorry! I know I'm not supposed to be here!",
             "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/shuffle/shuffles} {PRONOUN/t_c/poss} paws, not meeting your eyes.]",
@@ -1773,10 +1773,10 @@
             "they_blind"
         ],
         [
-            "[Since you're not allowed to work right now, you're sat at the edge of camp, watching the medicine den from afar as injured warriors mill in and out.]",
+            "[Since you're not allowed to work right now, you're sat at the edge of camp, watching the healer den from afar as injured warriors mill in and out.]",
             "Hey, y_c?",
             "[You turn your head. t_c hops up to you with a wound on {PRONOUN/t_c/poss} foreleg.]",
-            "The medicine den is totally full... can you help me?",
+            "The healer den is totally full... can you help me?",
             "Hm? Yes, of course I trust you. You're still a healer.",
             "[You know it's not the time, so you stifle your smile as you examine t_c's injury.]"
         ]
@@ -1828,7 +1828,7 @@
         [
             "[t_c stumbles into camp, out of breath and bleeding.]",
             "You're, uh... you're lucky you get to skip out on this, y_c.",
-            "[You watch sadly as {PRONOUN/t_c/subject} {VERB/t_c/stumble/stumbles} to the medicine den.]"
+            "[You watch sadly as {PRONOUN/t_c/subject} {VERB/t_c/stumble/stumbles} to the healer den.]"
         ]
     ],
     "war_focus_sh_J6": [

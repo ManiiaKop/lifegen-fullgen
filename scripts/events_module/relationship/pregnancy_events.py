@@ -1121,7 +1121,7 @@ class Pregnancy_Events:
                 if backkit:    
                     kit = Cat(parent1=cat.ID, parent2=second_blood.ID if second_blood else None, moons=0, backstory=backstory, status='newborn', extrapar = par2geno)
                 else:
-                    kit = Cat(parent1=cat.ID, parent2=second_blood.ID, moons=0, status='newborn')
+                    kit = Cat(parent1=cat.ID, parent2=second_blood.ID if second_blood else None, moons=0, status='newborn')
                 
                 if 'Y' not in cat.genotype.sexgene or not second_blood or second_blood.outside:
                     kit.thought = f"Snuggles up to the belly of {cat.name}"

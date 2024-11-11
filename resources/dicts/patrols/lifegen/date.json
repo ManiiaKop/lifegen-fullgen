@@ -595,7 +595,7 @@
         "max_cats": 2,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "You need herbs for the medicine den, and decide to bring r_c with you. You appreciate {PRONOUN/r_c/object} coming with you, as the extra paws are a massive help! You notice how {PRONOUN/r_c/poss} fur sparkles beautifully with dew, looking almost like Silverpelt had come alive on {PRONOUN/r_c/object}. You consider telling {PRONOUN/r_c/object} so.",
+        "intro_text": "You need herbs for the healer den, and decide to bring r_c with you. You appreciate {PRONOUN/r_c/object} coming with you, as the extra paws are a massive help! You notice how {PRONOUN/r_c/poss} fur sparkles beautifully with dew, looking almost like Silverpelt had come alive on {PRONOUN/r_c/object}. You consider telling {PRONOUN/r_c/object} so.",
         "decline_text": "Nope. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} here on business. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} just helping you get herbs. Don't get any weird ideas.",
         "chance_of_success": 50,
         "success_outcomes": [

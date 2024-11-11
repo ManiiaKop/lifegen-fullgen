@@ -212,7 +212,8 @@ class MakeClanScreen(Screens):
         #    print(game.choose_cats[i].genotype.agouti)
 
         # self.worldseed = randrange(10000)
-        self.open_clan_count()
+        # self.open_clan_count()
+        self.open_name_clan()
 
     def handle_event(self, event):
         # if self.sub_screen == 'customize cat':

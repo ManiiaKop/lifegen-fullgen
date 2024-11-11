@@ -359,7 +359,7 @@
             "they_blind"
         ],
         [
-            "Hey, y_c ... do you ever get lonely sleeping here in the medicine den all by yourself? I know I would ...",
+            "Hey, y_c ... do you ever get lonely sleeping here in the healer den all by yourself? I know I would ...",
             "Tell you what, if you ever get scared or cold in the night, just come over to my den. You can sleep in my nest, with me. Okay?"
         ]
     ],
@@ -404,7 +404,7 @@
             "Hey, so, uh ...",
             "I just thought I'd come say thanks for keeping me out of trouble.",
             "Seriously, without you, I'd probably be a red smear on the forest floor by now. I owe you a bunch.",
-            "... Say, do ya ever get lonely spending so much time in the medicine den?",
+            "... Say, do ya ever get lonely spending so much time in the healer den?",
             "Hm ... What if I started eating my meals in here, with you?",
             "I'll catch you up on all the latest Clan gossip, and it'll keep me out of trouble!",
             "C'mon, whaddaya say? It'd help one of your patients out!"
@@ -597,7 +597,7 @@
         ],
         [
             "Hey, y_c! I got into a bit of trouble again. No big deal, just a scratch!",
-            "[It is not, in fact, just a scratch. In fact, t_c is bleeding all over the medicine den. {PRONOUN/t_c/subject/CAP} {VERB/t_c/chat/chats} loudly as you hurry to help {PRONOUN/t_c/object}.]",
+            "[It is not, in fact, just a scratch. In fact, t_c is bleeding all over the healer den. {PRONOUN/t_c/subject/CAP} {VERB/t_c/chat/chats} loudly as you hurry to help {PRONOUN/t_c/object}.]",
             "Man, I must be using up, like, half your herb stores, huh? But where's the fun in being careful? Besides, I know you could use some company in here.",
             "Oh man, what type of herbs are those? They look cool. Are you talking to StarClan? Can you hear them right now?",
             "[You finish helping t_c with {PRONOUN/t_c/poss} injury.]",
@@ -652,7 +652,7 @@
         ],
         [
             "y_c! I finally got away from my mentor! C'mon, let's go explore!",
-            "What's that? You have to stay in the medicine den, in case anyone is hurt?",
+            "What's that? You have to stay in the healer den, in case anyone is hurt?",
             "Oh, okay ... I guess what you do here is really important, huh?",
             "Come find me if you ever get a moment away!"
         ]
@@ -2576,7 +2576,7 @@
         ],
         [
             "Knock, knock, anyone home?",
-            "[t_c walks into the medicine den, a four leaf clover in {PRONOUN/t_c/poss} mouth. {PRONOUN/t_c/subject/CAP} {VERB/t_c/walk/walks} up to your nest and {VERB/t_c/place/places} it down. You tilt your head as you watch in curiosity.]",
+            "[t_c walks into the healer den, a four leaf clover in {PRONOUN/t_c/poss} mouth. {PRONOUN/t_c/subject/CAP} {VERB/t_c/walk/walks} up to your nest and {VERB/t_c/place/places} it down. You tilt your head as you watch in curiosity.]",
             "Found it while I was out hunting this morning, it reminded me of you. The other cats on patrol didn't think it was interesting, but I knew you would.",
             "I wonder if it's a sign from StarClan, huh... Either way, I'll leave you be. I'll drop by later with some prey for you and the other healers. You'll need it after a hard day's work.",
             "[You bid {PRONOUN/t_c/object} farewell and smile at the clover placed in your den. You really needed that; such a small act of kindness can mean the world.]"
@@ -2853,7 +2853,7 @@
         ],
         [
             "[You're just about to bite into a tasty-looking mouse when you see t_c stomping towards you, {PRONOUN/t_c/poss} pelt ruffled and {PRONOUN/t_c/poss} tail flicking irritably. What happened this time?]",
-            "y_c. I need you to tell r_a that {PRONOUN/r_a/subject} can't just leave me alone to clean out the entire elders' den because {PRONOUN/r_a/subject} 'needed to fetch more moss.' {PRONOUN/r_a/subject/CAP} {VERB/t_c/were/was} in the medicine den until sunhigh!",
+            "y_c. I need you to tell r_a that {PRONOUN/r_a/subject} can't just leave me alone to clean out the entire elders' den because {PRONOUN/r_a/subject} 'needed to fetch more moss.' {PRONOUN/r_a/subject/CAP} {VERB/t_c/were/was} in the healer den until sunhigh!",
             "[You haul yourself to your paws and stare longingly at your mouse as t_c drags you to the opposite side of the clearing.]"
         ]
     ],
@@ -2910,7 +2910,7 @@
         ],
         [
             "Hello? Is anyone in here?",
-            "[t_c is almost unrecognizable as {PRONOUN/t_c/subject} awkwardly {VERB/t_c/shuffle/shuffles} into the medicine den. {PRONOUN/t_c/poss/CAP} fur is spiky and tangled and covered entirely in snow.]",
+            "[t_c is almost unrecognizable as {PRONOUN/t_c/subject} awkwardly {VERB/t_c/shuffle/shuffles} into the healer den. {PRONOUN/t_c/poss/CAP} fur is spiky and tangled and covered entirely in snow.]",
             "y_c, Just the cat I was hoping to find! So, funny story actually, it turns out that it's a LOT colder out in the snow when the sun isn't up. Crazy right? Who would have imagined? Heh...",
             "All I wanted to do was to catch a bit of prey before the dawn patrol went out. That way, they could have a little bit of something before they left. I clearly underestimated how much snow, and how little prey there would be.",
             "I was wondering if you have a herb or remedy that could warm me up a little? Maybe even just some dry moss? Right now, I feel like my paws are frozen solid."
@@ -3707,7 +3707,7 @@
 "they_deaf"
      ],
      [
-"[r_m finds you while you're cleaning out your nest. Apparently t_c got some scratches during training today, and {PRONOUN/t_c/subject} {VERB/t_c/want/wants} you with {PRONOUN/t_c/object} in the medicine den.]",
+"[r_m finds you while you're cleaning out your nest. Apparently t_c got some scratches during training today, and {PRONOUN/t_c/subject} {VERB/t_c/want/wants} you with {PRONOUN/t_c/object} in the healer den.]",
 "[t_c tries to smile when {PRONOUN/t_c/subject} {VERB/t_c/see/sees} you, but {PRONOUN/t_c/poss} mouth quavers. {PRONOUN/t_c/subject/CAP} {VERB/t_c/bury/buries} {PRONOUN/t_c/poss} face in your fur, and you gently lick {PRONOUN/t_c/poss} forehead while r_m treats {PRONOUN/t_c/poss} injuries.]"
      ]
     ],
@@ -3748,7 +3748,7 @@
      [
 "[t_c bursts into camp, wind-blown and shaking.]",
 "y_c! Um... plove_r_w and I were hunting by the shore, and {PRONOUN/plove_r_w/subject} fell in the water. {PRONOUN/plove_r_w/subject/CAP} climbed back out, but {PRONOUN/plove_r_w/subject}{VERB/plove_r_w/'re/'s} really cold and {VERB/plove_r_w/say/says} {PRONOUN/plove_r_w/subject} can't feel {PRONOUN/plove_r_w/poss} paws... Please, help!",
-"[plove_r_w stumbles after t_c, violently shivering. You quickly call r_m over, and {PRONOUN/r_m/subject} {VERB/r_m/get/gets} plove_r_w into the medicine den while t_c paces anxiously outside.]",
+"[plove_r_w stumbles after t_c, violently shivering. You quickly call r_m over, and {PRONOUN/r_m/subject} {VERB/r_m/get/gets} plove_r_w into the healer den while t_c paces anxiously outside.]",
 "I'm sorry. I should've gotten {PRONOUN/plove_r_w/object} out of the water quicker... I should've been keeping a better eye on {PRONOUN/plove_r_w/object}! I didn't realize the rocks were so slippery!",
 "[You tell t_c that {PRONOUN/t_c/subject} did everything {PRONOUN/t_c/subject} could, and that plove_r_w will be okay. t_c doesn't seem to hear you.]",
 "plove_r_w's so important to me, y_c. What if... what if...",

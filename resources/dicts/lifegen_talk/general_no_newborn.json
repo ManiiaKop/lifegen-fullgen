@@ -1216,7 +1216,7 @@
         ],
         [
             "[t_c is sitting out of the nursery chores today, sick with a stomachache.]",
-            "[You go to visit {PRONOUN/t_c/object} with some herbs you collected from the medicine den.]",
+            "[You go to visit {PRONOUN/t_c/object} with some herbs you collected from the healer den.]",
             "Oughh - Ahh, the pain! The pain! It's -- Ack -- excruciating!",
             "[You drop the herbs at t_c's paws and gently lick {PRONOUN/t_c/poss} ear, asking if there's anything you can to to make {PRONOUN/t_c/object} better.]",
             "... Psst, y_c. I'm not really sick, dummy. I'm just faking to get out of cleaning my nest.",
@@ -2405,7 +2405,7 @@
             "they_blind"
         ],
         [
-            "[t_c runs into the medicine den with an exasperated look on {PRONOUN/t_c/poss} face.]",
+            "[t_c runs into the healer den with an exasperated look on {PRONOUN/t_c/poss} face.]",
             "y_c! y_c, what do you call a frog with stumpy legs that lives in dry environments?",
             "You call that a toad! You call that a TOAD, but r_c doesn't seem to get that!",
             "...Oh. Oh, you're croaking like one too, are you okay?"
@@ -3088,7 +3088,7 @@
         [
             "Oh, StarClan, did r_m_brooding call yet another patient a mousebrain? *Sigh* They sure tend to do that a lot ...",
             "Try not to take it too personally, y_c. I know their methods may seem ... unorthodox, but r_m_brooding really isn't a bad cat. They just want to keep everycat safe.",
-            "And if scaring cats stiff out of the medicine den is what it takes ... Well, then that's just what they'll do."
+            "And if scaring cats stiff out of the healer den is what it takes ... Well, then that's just what they'll do."
         ]
     ],
     "about_brooding_AJ1": [

@@ -90,7 +90,7 @@
             "Is neatly stacking bundles of herbs after drying",
             "Helps apply a poultice to a small wound",
             "Is counting the numbers of herbs left",
-            "Rounding out rowdy kits from the medicine den",
+            "Rounding out rowdy kits from the healer den",
             "Patching up a Clanmate's wounds",
             "Having a debate with r_c about {PRONOUN/r_c/poss} latest dreams"
         ]
@@ -174,7 +174,7 @@
             "Flattens {PRONOUN/m_c/poss} ears hearing the other apprentices having more fun than {PRONOUN/m_c/object}",
             "Is frightened about {PRONOUN/m_c/poss} role, but even more frightened about ever switching to a warrior",
             "Feels like StarClan made a mistake picking {PRONOUN/m_c/object} for this role",
-            "Scurries out of the medicine den at the sight of blood",
+            "Scurries out of the healer den at the sight of blood",
             "Is worrying about misinterpreting a sign that might endanger the Clan",
             "Is frightened by the constant ghostly voices",
             "Was overthinking hoarding herbs for a hypothetical crisis",
@@ -207,7 +207,7 @@
     {
         "id": "loving_medicine_cat_apprentice",
         "thoughts": [
-            "Couldn't stand the sight of seeing beloved Clanmates limping towards the medicine den",
+            "Couldn't stand the sight of seeing beloved Clanmates limping towards the healer den",
             "Gave a soft lick to a  wound, hoping it'll heal faster",
             "Often reassures others that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} alright not sleeping to keep sick Clanmates company",
             "To not drop dead {PRONOUN/m_c/self}, was told to tend to {PRONOUN/m_c/poss} health as well",
@@ -229,8 +229,8 @@
             "Smacks anyone that asks {PRONOUN/m_c/object} to check a fake injury",
             "Grumbles at StarClan cats for being vague in their warnings",
             "Watches in silence at their mentor's teachings",
-            "Told r_c to get straight to the point why {PRONOUN/r_c/subject} {VERB/r_c/is/are} in the medicine den",
-            "Shoves r_c into the medicine den for an early check-up"
+            "Told r_c to get straight to the point why {PRONOUN/r_c/subject} {VERB/r_c/is/are} in the healer den",
+            "Shoves r_c into the healer den for an early check-up"
         ],
         "main_trait_constraint": [
             "grumpy"
@@ -267,10 +267,10 @@
     {
         "id": "lonesome_medicine_cat_apprentice",
         "thoughts": [
-            "Feels more at home in the medicine den than anywhere else",
+            "Feels more at home in the healer den than anywhere else",
             "Quickly tries to heal injuries so cats can leave {PRONOUN/m_c/object} alone",
             "Ventured out of camp to gather herbs without telling anyone",
-            "Only leaves the medicine den to grab prey before slinking back inside",
+            "Only leaves the healer den to grab prey before slinking back inside",
             "Has Clanmates surprised that {PRONOUN/m_c/subject} even have a mentor to talk to",
             "Prefers the company of herbs and medical berries more than {PRONOUN/m_c/subject} own Clanmates"
         ],
@@ -283,7 +283,7 @@
         "thoughts": [
             "Told {PRONOUN/m_c/poss} Clanmates {PRONOUN/m_c/subject} could see dead StarClan cats dancing",
             "Was taste-testing berries",
-            "Proposes dragging the Moonstone to the medicine den",
+            "Proposes dragging the Moonstone to the healer den",
             "Asks {PRONOUN/m_c/poss} mentor if cats reincarnate as snails",
             "Asks {PRONOUN/m_c/poss} mentor if {PRONOUN/m_c/subject} could still be their apprentice if {PRONOUN/m_c/subject} turned into a worm"
         ],
@@ -310,8 +310,8 @@
             "Is giving an injured Clanmate company with small talk",
             "Can easily wrap a wound in a single blink",
             "Wraps {PRONOUN/m_c/poss} tail around a Clanmate's shoulder, reassuring them with a smile",
-            "Is loafing in front of the medicine den, purring",
-            "Is hoping to create a comfortable atmosphere for cats to visit the medicine den"
+            "Is loafing in front of the healer den, purring",
+            "Is hoping to create a comfortable atmosphere for cats to visit the healer den"
         ],
         "main_trait_constraint": [
             "mellow"
@@ -322,7 +322,7 @@
         "thoughts": [
             "Proudly claims {PRONOUN/m_c/subject} can see r_c's future yet loudly vows silence.",
             "Is embellishing the epic tale of how {PRONOUN/m_c/subject} snuck honey from right under a hoard of angry bees",
-            "Is demanding r_c follow {PRONOUN/m_c/object} into the medicine den for a check up for all to witness",
+            "Is demanding r_c follow {PRONOUN/m_c/object} into the healer den for a check up for all to witness",
             "Can distract an unhappy kit with {PRONOUN/m_c/poss} funny antics",
             "Dramatically mimics a grouchy patient",
             "Was definitely working diligently to sort herbs and certainly not playing around",

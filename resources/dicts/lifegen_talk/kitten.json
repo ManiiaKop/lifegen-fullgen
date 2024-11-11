@@ -257,7 +257,7 @@
         ],
         [
             "y_c, help! I'm playing hide and seek with my den mates, and I need to hide, quick!",
-            "Yes, I know that there are some really good hiding spots over by the medicine den, but, erm, I'm kind of not allowed over there after the incident a few days ago.",
+            "Yes, I know that there are some really good hiding spots over by the healer den, but, erm, I'm kind of not allowed over there after the incident a few days ago.",
             "Hey, don't you get started on me as well! I didn't know that those brightly colored plants that I used for hunting practice were marigolds! And how was I supposed to know that the cobwebs were supposed to be stacked up like that?",
             "If you tell me, I actually did r_m a favor! That den looked like it needed to be reorganized anyways, so I gave {PRONOUN/r_m/object} a reason to! {PRONOUN/r_m/subject/CAP} didn't seem to appreciate my work though..",
             "Uh oh. I think I'm running out of time to hide. I gotta go! I'll see you later y_c, maybe you can tell me another story later!"
@@ -1784,7 +1784,7 @@
             "they_blind"
         ],
         [
-            "[You butt your tiny little nose into the medicine den, where you see t_c sitting up, completely unbothered, on a broken nest formerly made from intricately woven sticks. It seems as though some of them have been pulled out and laid on the floor to play sticks with r_m.]",
+            "[You butt your tiny little nose into the healer den, where you see t_c sitting up, completely unbothered, on a broken nest formerly made from intricately woven sticks. It seems as though some of them have been pulled out and laid on the floor to play sticks with r_m.]",
             "Oh-my-gosh! Hi, y_c! I haven't seen you since, woah.. One, two, three, four hours ago? That's, oh my goodness... That's the first time I ever counted that high! Oh, I wanna go climb stuff with you so bad...",
             "[The healer gives t_c a tentative but affectionate look, as if to say 'Not again!' {PRONOUN/r_m/subject/CAP} {VERB/t_c/lean/leans} down and {VERB/t_c/whisper/whispers} something in t_c's ear.]",
             "Oh, {PRONOUN/r_m/subject} said that's not a good idea. Awh, okay...",
@@ -2959,7 +2959,7 @@
             "y_c, look! I'm helping r_m! Are you watching?",
             "I'm carrying TWO whole herbs all by myself, see? r_m said that I'm the best helper {PRONOUN/r_m/subject} ever had, and that I'm going to be a great apprentice!",
             "Does this mean that I can be apprenticed early? Could you ask l_n?",
-            "[Before you have a chance to respond, t_c turns, noticing that r_m was waiting by the entrance to the medicine den.]",
+            "[Before you have a chance to respond, t_c turns, noticing that r_m was waiting by the entrance to the healer den.]",
             "I gotta go catch up! I'll tell you all about this later, okay? Bye!",
             "[t_c bounds after r_m, ducking under {PRONOUN/r_m/poss} legs and diving into the den.]"
         ]
@@ -3748,7 +3748,7 @@
         ],
         [
             "*Cough* *Cough*",
-            "Oh ... y_c! Did you come to visit me on my special vacation in the medicine den?",
+            "Oh ... y_c! Did you come to visit me on my special vacation in the healer den?",
             "r_m told me that, if I'm really good, {PRONOUN/r_m/subject}'ll go out and get me a really special gift from the territory ...",
             "I wonder what it'll be? Maybe a really cool feather? Ooh, or a Twoleg thing!",
             "I can't wait to see what it is."
@@ -3817,7 +3817,7 @@
             "you_blind"
         ],
         [
-            "I'm tired of staying in the medicine den, y_c. I wanna go home.",
+            "I'm tired of staying in the healer den, y_c. I wanna go home.",
             "Why can't you take me home?"
         ]
     ],
@@ -7180,7 +7180,7 @@
 "max_platonic_15"
         ],
         "intro": [
-            "[As you go over herbs with y_a, you notice t_c watching you from just outside the medicine den.]",
+            "[As you go over herbs with y_a, you notice t_c watching you from just outside the healer den.]",
 "[You swear you see {PRONOUN/t_c/object} mouthing herb names as you quiz your apprentice on how to identify similar-looking leaves.]"
         ],
         "intro_choices": {
@@ -7207,7 +7207,7 @@
 "[The lesson continues for a while longer, until you hear r_w_upstanding scolding t_c and telling {PRONOUN/t_c/object} to go back to the nursery.]"
         ],
         "scare": [
- 	"[Without taking your eyes off the herbs, you loudly announce your thoughts on how dangerous the medicine den is, and how kits really should stay where they belong.]",
+ 	"[Without taking your eyes off the herbs, you loudly announce your thoughts on how dangerous the healer den is, and how kits really should stay where they belong.]",
 "[You hear a tiny squeak and the patter of tiny paws scurrying away.]"
         ]
     },
@@ -7710,7 +7710,7 @@
 "you_deaf"
      ],
      [
-"[r_m gave t_c a dollop of honey for {PRONOUN/t_c/poss} sore throat. Now, the kit sits outside the medicine den with the gooey liquid on {PRONOUN/t_c/poss} paw, eying it dubiously.]",
+"[r_m gave t_c a dollop of honey for {PRONOUN/t_c/poss} sore throat. Now, the kit sits outside the healer den with the gooey liquid on {PRONOUN/t_c/poss} paw, eying it dubiously.]",
 "[You try to convince t_c to take just a lick, but t_c just shakes {PRONOUN/t_c/poss} head. After a few minutes of cajoling, you finally lean forward and lick the honey yourself.]",
 "[The delicious sweetness floods your mouth, and you hold yourself back from tasting more. t_c stares at you, but when you don't suddenly start holding your stomach, {PRONOUN/t_c/subject} {VERB/t_c/follow/follows} your lead.]",
 "...!",
