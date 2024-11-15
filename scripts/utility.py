@@ -3655,8 +3655,9 @@ def generate_sprite(
                 bodylines.blit(sprites.sprites['lineartdead' + cat_sprite], (0, 0))
             
         bodylines.blit(sprites.sprites['noears' + cat_sprite], (0, 0), special_flags=pygame.BLEND_RGBA_SUB)
-        if cat_sprite != '20':
-            lineart.blit(bodylines, (0, 0))
+        # if cat_sprite != '20':
+        #     lineart.blit(bodylines, (0, 0))
+        lineart.blit(bodylines, (0, 0))
         new_sprite.blit(lineart, (0, 0))
 
         # draw skin and scars2
