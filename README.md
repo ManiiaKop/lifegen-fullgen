@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# This is a file with the mods LifeGen and FullGenetic combined. 
-# IMPORTANT : The customisation option does not work when creating your starting cat, it causes the game to crash. The rest of the game seems to work normally.
-=======
 # clangen (now with 100% more cat genetics)
 
 ### [Discord Server](https://discord.gg/rnFQqyPZ7K) || [Itch.io Page](https://sablesteel.itch.io/clan-gen-fan-edit)
@@ -47,4 +43,3 @@ Double click the `run.bat` script
 
 ## Bug Reporting
 We have migrated to GitHub Issues for bug reporting and tracking. We no longer review bug reports from the retired Google Form.
->>>>>>> 2024-09

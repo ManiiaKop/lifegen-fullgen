@@ -59,19 +59,11 @@ jobs:
         env:
           IS_RELEASE: 1
       - name: Create archive (.tar.xz)
-<<<<<<< HEAD
         run: tar -caf Lifegen_Linux64_glibc2.31+.tar.xz -C dist Lifegen
       - uses: actions/upload-artifact@v3
         with:
           name: Lifegen_Linux64_glibc2.31+.tar.xz
           path: Lifegen_Linux64_glibc2.31+.tar.xz
-=======
-        run: tar -caf Genemod_Linux64_glibc2.31+.tar.xz -C dist Genemod
-      - uses: actions/upload-artifact@v3
-        with:
-          name: Genemod_Linux64_glibc2.31+.tar.xz
-          path: Genemod_Linux64_glibc2.31+.tar.xz
->>>>>>> 2024-09
       - name: Import GPG key
         id: import_gpg
         uses: crazy-max/ghaction-import-gpg@v5
@@ -82,11 +74,7 @@ jobs:
       - name: Upload artifact to API
         if: ${{ env.update_api_push_token != '' && (github.ref == 'refs/heads/Lifegen-dev' || startsWith(github.ref, 'refs/tags/')) }}
         run: |
-<<<<<<< HEAD
           gpg --output Lifegen_Linux64_glibc2.31+.tar.xz.sig --detach-sig -a Lifegen_Linux64_glibc2.31+.tar.xz
-=======
-          gpg --output Genemod_Linux64_glibc2.31+.tar.xz.sig --detach-sig -a Genemod_Linux64_glibc2.31+.tar.xz
->>>>>>> 2024-09
           curl -X 'POST' \
             'https://clangen.io/api/v1/Update/Channels/${{ env.RELEASE_CHANNEL }}/Releases/${{ env.VERSION_NUMBER }}/Appoint' \
             -H 'X-API-Key: ${{ secrets.UPDATE_API_DEPLOY_KEY }}' \
@@ -96,13 +84,8 @@ jobs:
             -H 'X-API-Key: ${{ secrets.UPDATE_API_DEPLOY_KEY }}' \
             -H 'accept: */*' \
             -H 'Content-Type: multipart/form-data' \
-<<<<<<< HEAD
             -F 'fileBundle=@Lifegen_Linux64_glibc2.31+.tar.xz' \
             -F 'fileBundle=@Lifegen_Linux64_glibc2.31+.tar.xz.sig' \
-=======
-            -F 'fileBundle=@Genemod_Linux64_glibc2.31+.tar.xz' \
-            -F 'fileBundle=@Genemod_Linux64_glibc2.31+.tar.xz.sig' \
->>>>>>> 2024-09
             --http1.1
       - name: Set up butler
         uses: jdno/setup-butler@v1
@@ -110,20 +93,12 @@ jobs:
         env:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
         if: startsWith(github.ref, 'refs/tags/') && env.BUTLER_API_KEY != ''
-<<<<<<< HEAD
         run: butler push Lifegen_Linux64_glibc2.31+.tar.xz sablesteel/clan-gen-fan-edit:linux64_glibc_231 --userversion "${{ env.VERSION_NUMBER }}"
-=======
-        run: butler push Genemod_Linux64_glibc2.31+.tar.xz sablesteel/clan-gen-fan-edit:linux64_glibc_231 --userversion "${{ env.VERSION_NUMBER }}"
->>>>>>> 2024-09
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-<<<<<<< HEAD
           files: Lifegen_Linux64_glibc2.31+.tar.xz
-=======
-          files: Genemod_Linux64_glibc2.31+.tar.xz
->>>>>>> 2024-09
 
   build_ubuntu_22_04:
     runs-on: ubuntu-22.04
@@ -178,19 +153,11 @@ jobs:
         env:
           IS_RELEASE: 1
       - name: Create archive (.tar.xz)
-<<<<<<< HEAD
         run: tar -caf Lifegen_Linux64_glibc2.35+.tar.xz -C dist Lifegen
       - uses: actions/upload-artifact@v3
         with:
           name: Lifegen_Linux64_glibc2.35+.tar.xz
           path: Lifegen_Linux64_glibc2.35+.tar.xz
-=======
-        run: tar -caf Genemod_Linux64_glibc2.35+.tar.xz -C dist Genemod
-      - uses: actions/upload-artifact@v3
-        with:
-          name: Genemod_Linux64_glibc2.35+.tar.xz
-          path: Genemod_Linux64_glibc2.35+.tar.xz
->>>>>>> 2024-09
       - name: Import GPG key
         id: import_gpg
         uses: crazy-max/ghaction-import-gpg@v5
@@ -201,11 +168,7 @@ jobs:
       - name: Upload artifact to API
         if: ${{ env.update_api_push_token != '' && (github.ref == 'refs/heads/Lifegen-dev' || startsWith(github.ref, 'refs/tags/')) }}
         run: |
-<<<<<<< HEAD
           gpg --output Lifegen_Linux64_glibc2.35+.tar.xz.sig --detach-sig -a Lifegen_Linux64_glibc2.35+.tar.xz
-=======
-          gpg --output Genemod_Linux64_glibc2.35+.tar.xz.sig --detach-sig -a Genemod_Linux64_glibc2.35+.tar.xz
->>>>>>> 2024-09
           curl -X 'POST' \
             'https://clangen.io/api/v1/Update/Channels/${{ env.RELEASE_CHANNEL }}/Releases/${{ env.VERSION_NUMBER }}/Appoint' \
             -H 'X-API-Key: ${{ secrets.UPDATE_API_DEPLOY_KEY }}' \
@@ -215,13 +178,8 @@ jobs:
             -H 'X-API-Key: ${{ secrets.UPDATE_API_DEPLOY_KEY }}' \
             -H 'accept: */*' \
             -H 'Content-Type: multipart/form-data' \
-<<<<<<< HEAD
             -F 'fileBundle=@Lifegen_Linux64_glibc2.35+.tar.xz' \
             -F 'fileBundle=@Lifegen_Linux64_glibc2.35+.tar.xz.sig' \
-=======
-            -F 'fileBundle=@Genemod_Linux64_glibc2.35+.tar.xz' \
-            -F 'fileBundle=@Genemod_Linux64_glibc2.35+.tar.xz.sig' \
->>>>>>> 2024-09
             --http1.1
       - name: Set up butler
         uses: jdno/setup-butler@v1
@@ -229,20 +187,12 @@ jobs:
         env:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
         if: startsWith(github.ref, 'refs/tags/') && env.BUTLER_API_KEY != ''
-<<<<<<< HEAD
         run: butler push Lifegen_Linux64_glibc2.35+.tar.xz sablesteel/clan-gen-fan-edit:linux64_glibc_235 --userversion "${{ env.VERSION_NUMBER }}"
-=======
-        run: butler push Genemod_Linux64_glibc2.35+.tar.xz sablesteel/clan-gen-fan-edit:linux64_glibc_235 --userversion "${{ env.VERSION_NUMBER }}"
->>>>>>> 2024-09
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-<<<<<<< HEAD
           files: Lifegen_Linux64_glibc2.35+.tar.xz
-=======
-          files: Genemod_Linux64_glibc2.35+.tar.xz
->>>>>>> 2024-09
 
   build_win32:
     runs-on: windows-2019
@@ -319,21 +269,12 @@ jobs:
           IS_RELEASE: 1
       - name: Create archive (.zip)
         run: |
-<<<<<<< HEAD
           cp dist/Lifegen/_internal/.itch.toml dist/ 
           tar.exe -a -c -f Lifegen_Win32.zip -C dist Lifegen .itch.toml
       - uses: actions/upload-artifact@v3
         with:
           name: Lifegen_Win32
           path: Lifegen_Win32.zip
-=======
-          cp dist/Genemod/_internal/.itch.toml dist/ 
-          tar.exe -a -c -f Genemod_Win32.zip -C dist Genemod .itch.toml
-      - uses: actions/upload-artifact@v3
-        with:
-          name: Genemod_Win32
-          path: Genemod_Win32.zip
->>>>>>> 2024-09
       - name: Import GPG key
         id: import_gpg
         uses: crazy-max/ghaction-import-gpg@v5
@@ -345,11 +286,7 @@ jobs:
         if: ${{ env.update_api_push_token != '' && (github.ref == 'refs/heads/Lifegen-dev' || startsWith(github.ref, 'refs/tags/')) }}
         shell: bash
         run: |
-<<<<<<< HEAD
           gpg --output Lifegen_Win32.zip.sig --detach-sig -a Lifegen_Win32.zip
-=======
-          gpg --output Genemod_Win32.zip.sig --detach-sig -a Genemod_Win32.zip
->>>>>>> 2024-09
           curl -X 'POST' \
             'https://clangen.io/api/v1/Update/Channels/${{ env.RELEASE_CHANNEL }}/Releases/${{ env.VERSION_NUMBER }}/Appoint' \
             -H 'X-API-Key: ${{ secrets.UPDATE_API_DEPLOY_KEY }}' \
@@ -359,13 +296,8 @@ jobs:
             -H 'X-API-Key: ${{ secrets.UPDATE_API_DEPLOY_KEY }}' \
             -H 'accept: */*' \
             -H 'Content-Type: multipart/form-data' \
-<<<<<<< HEAD
             -F 'fileBundle=@Lifegen_Win32.zip;type=application/zip' \
             -F 'fileBundle=@Lifegen_Win32.zip.sig' \
-=======
-            -F 'fileBundle=@Genemod_Win32.zip;type=application/zip' \
-            -F 'fileBundle=@Genemod_Win32.zip.sig' \
->>>>>>> 2024-09
             --http1.1
       - name: Set up butler
         uses: jdno/setup-butler@v1
@@ -373,20 +305,12 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/') && env.BUTLER_API_KEY != ''
         env:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
-<<<<<<< HEAD
         run: butler push Lifegen_Win32.zip sablesteel/clan-gen-fan-edit:win32 --userversion "${{ env.VERSION_NUMBER }}"
-=======
-        run: butler push Genemod_Win32.zip sablesteel/clan-gen-fan-edit:win32 --userversion "${{ env.VERSION_NUMBER }}"
->>>>>>> 2024-09
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-<<<<<<< HEAD
           files: Lifegen_Win32.zip
-=======
-          files: Genemod_Win32.zip
->>>>>>> 2024-09
 
   build_win64:
     runs-on: windows-latest
@@ -469,21 +393,12 @@ jobs:
           IS_RELEASE: 1
       - name: Create archive (.zip)
         run: |
-<<<<<<< HEAD
           cp dist/Lifegen/_internal/.itch.toml dist/ 
           tar.exe -a -c -f Lifegen_Win64.zip -C dist Lifegen .itch.toml
       - uses: actions/upload-artifact@v3
         with:
           name: Lifegen_Win64
           path: Lifegen_Win64.zip
-=======
-          cp dist/Genemod/_internal/.itch.toml dist/ 
-          tar.exe -a -c -f Genemod_Win64.zip -C dist Genemod .itch.toml
-      - uses: actions/upload-artifact@v3
-        with:
-          name: Genemod_Win64
-          path: Genemod_Win64.zip
->>>>>>> 2024-09
       - name: Import GPG key
         id: import_gpg
         uses: crazy-max/ghaction-import-gpg@v5
@@ -495,11 +410,7 @@ jobs:
         if: ${{ env.update_api_push_token != '' && (github.ref == 'refs/heads/Lifegen-dev' || startsWith(github.ref, 'refs/tags/')) }}
         shell: bash
         run: |
-<<<<<<< HEAD
           gpg --output Lifegen_Win64.zip.sig --detach-sig -a Lifegen_Win64.zip
-=======
-          gpg --output Genemod_Win64.zip.sig --detach-sig -a Genemod_Win64.zip
->>>>>>> 2024-09
           curl -X 'POST' \
             'https://clangen.io/api/v1/Update/Channels/${{ env.RELEASE_CHANNEL }}/Releases/${{ env.VERSION_NUMBER }}/Appoint' \
             -H 'X-API-Key: ${{ secrets.UPDATE_API_DEPLOY_KEY }}' \
@@ -509,13 +420,8 @@ jobs:
             -H 'X-API-Key: ${{ secrets.UPDATE_API_DEPLOY_KEY }}' \
             -H 'accept: */*' \
             -H 'Content-Type: multipart/form-data' \
-<<<<<<< HEAD
             -F 'fileBundle=@Lifegen_Win64.zip;type=application/zip' \
             -F 'fileBundle=@Lifegen_Win64.zip.sig' \
-=======
-            -F 'fileBundle=@Genemod_Win64.zip;type=application/zip' \
-            -F 'fileBundle=@Genemod_Win64.zip.sig' \
->>>>>>> 2024-09
             --http1.1
       - name: Set up butler
         uses: jdno/setup-butler@v1
@@ -523,20 +429,12 @@ jobs:
         env:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
         if: startsWith(github.ref, 'refs/tags/') && env.BUTLER_API_KEY != ''
-<<<<<<< HEAD
         run: butler push Lifegen_Win64.zip sablesteel/clan-gen-fan-edit:win64 --userversion "${{ env.VERSION_NUMBER }}"
-=======
-        run: butler push Genemod_Win64.zip sablesteel/clan-gen-fan-edit:win64 --userversion "${{ env.VERSION_NUMBER }}"
->>>>>>> 2024-09
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-<<<<<<< HEAD
           files: Lifegen_Win64.zip
-=======
-          files: Genemod_Win64.zip
->>>>>>> 2024-09
 
   build_win64_py311:
     runs-on: windows-latest
@@ -619,21 +517,12 @@ jobs:
           IS_RELEASE: 1
       - name: Create archive (.zip)
         run: |
-<<<<<<< HEAD
           cp dist/Lifegen/_internal/.itch.toml dist/ 
           tar.exe -a -c -f Lifegen_Win64_Windows10+.zip -C dist Lifegen .itch.toml
       - uses: actions/upload-artifact@v3
         with:
           name: Lifegen_Win64_Windows10+
           path: Lifegen_Win64_Windows10+.zip
-=======
-          cp dist/Genemod/_internal/.itch.toml dist/ 
-          tar.exe -a -c -f Genemod_Win64_Windows10+.zip -C dist Genemod .itch.toml
-      - uses: actions/upload-artifact@v3
-        with:
-          name: Genemod_Win64_Windows10+
-          path: Genemod_Win64_Windows10+.zip
->>>>>>> 2024-09
       - name: Import GPG key
         id: import_gpg
         uses: crazy-max/ghaction-import-gpg@v5
@@ -645,11 +534,7 @@ jobs:
         if: ${{ env.update_api_push_token != '' && (github.ref == 'refs/heads/Lifegen-dev' || startsWith(github.ref, 'refs/tags/')) }}
         shell: bash
         run: |
-<<<<<<< HEAD
           gpg --output Lifegen_Win64_Windows10+.zip.sig --detach-sig -a Lifegen_Win64_Windows10+.zip
-=======
-          gpg --output Genemod_Win64_Windows10+.zip.sig --detach-sig -a Genemod_Win64_Windows10+.zip
->>>>>>> 2024-09
           curl -X 'POST' \
             'https://clangen.io/api/v1/Update/Channels/${{ env.RELEASE_CHANNEL }}/Releases/${{ env.VERSION_NUMBER }}/Appoint' \
             -H 'X-API-Key: ${{ secrets.UPDATE_API_DEPLOY_KEY }}' \
@@ -659,13 +544,8 @@ jobs:
             -H 'X-API-Key: ${{ secrets.UPDATE_API_DEPLOY_KEY }}' \
             -H 'accept: */*' \
             -H 'Content-Type: multipart/form-data' \
-<<<<<<< HEAD
             -F 'fileBundle=@Lifegen_Win64_Windows10+.zip;type=application/zip' \
             -F 'fileBundle=@Lifegen_Win64_Windows10+.zip.sig' \
-=======
-            -F 'fileBundle=@Genemod_Win64_Windows10+.zip;type=application/zip' \
-            -F 'fileBundle=@Genemod_Win64_Windows10+.zip.sig' \
->>>>>>> 2024-09
             --http1.1
       - name: Set up butler
         uses: jdno/setup-butler@v1
@@ -673,20 +553,12 @@ jobs:
         env:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
         if: startsWith(github.ref, 'refs/tags/') && env.BUTLER_API_KEY != ''
-<<<<<<< HEAD
         run: butler push Lifegen_Win64_Windows10+.zip sablesteel/clan-gen-fan-edit:win64_10 --userversion "${{ env.VERSION_NUMBER }}"
-=======
-        run: butler push Genemod_Win64_Windows10+.zip sablesteel/clan-gen-fan-edit:win64_10 --userversion "${{ env.VERSION_NUMBER }}"
->>>>>>> 2024-09
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-<<<<<<< HEAD
           files: Lifegen_Win64_Windows10+.zip
-=======
-          files: Genemod_Win64_Windows10+.zip
->>>>>>> 2024-09
 
   build_macos64:
     # For commits to the original mac build action see:
@@ -745,7 +617,6 @@ jobs:
         env:
           IS_RELEASE: 1
       - name: Create archive (.tar.xz)
-<<<<<<< HEAD
         run: rm -r dist/Lifegen
       - name: Install appdmg
         run: "npm install -g appdmg"
@@ -755,17 +626,6 @@ jobs:
         with:
           name: Lifegen_macOS64.dmg
           path: Lifegen_macOS64.dmg
-=======
-        run: rm -r dist/Genemod
-      - name: Install appdmg
-        run: "npm install -g appdmg"
-      - name: Generate .dmg
-        run: "appdmg appdmg.json Genemod_macOS64.dmg"
-      - uses: actions/upload-artifact@v3
-        with:
-          name: Genemod_macOS64.dmg
-          path: Genemod_macOS64.dmg
->>>>>>> 2024-09
       - name: Import GPG key
         id: import_gpg
         uses: crazy-max/ghaction-import-gpg@v5
@@ -776,13 +636,8 @@ jobs:
       - name: Upload artifact to API
         if: ${{ env.update_api_push_token != '' && (github.ref == 'refs/heads/Lifegen-dev' || startsWith(github.ref, 'refs/tags/')) }}
         run: |
-<<<<<<< HEAD
           zip Lifegen_macOS64.dmg.zip ./Lifegen_macOS64.dmg
           gpg --output Lifegen_macOS64.dmg.zip.sig --detach-sig -a Lifegen_macOS64.dmg.zip
-=======
-          zip Genemod_macOS64.dmg.zip ./Genemod_macOS64.dmg
-          gpg --output Genemod_macOS64.dmg.zip.sig --detach-sig -a Genemod_macOS64.dmg.zip
->>>>>>> 2024-09
           curl -X 'POST' \
             'https://clangen.io/api/v1/Update/Channels/${{ env.RELEASE_CHANNEL }}/Releases/${{ env.VERSION_NUMBER }}/Appoint' \
             -H 'X-API-Key: ${{ secrets.UPDATE_API_DEPLOY_KEY }}' \
@@ -792,13 +647,8 @@ jobs:
             -H 'X-API-Key: ${{ secrets.UPDATE_API_DEPLOY_KEY }}' \
             -H 'accept: */*' \
             -H 'Content-Type: multipart/form-data' \
-<<<<<<< HEAD
             -F 'fileBundle=@Lifegen_macOS64.dmg.zip;type=application/zip' \
             -F 'fileBundle=@Lifegen_macOS64.dmg.zip.sig' \
-=======
-            -F 'fileBundle=@Genemod_macOS64.dmg.zip;type=application/zip' \
-            -F 'fileBundle=@Genemod_macOS64.dmg.zip.sig' \
->>>>>>> 2024-09
             --http1.1
       - name: Set up butler
         uses: jdno/setup-butler@v1
@@ -806,20 +656,12 @@ jobs:
         env:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
         if: startsWith(github.ref, 'refs/tags/') && env.BUTLER_API_KEY != ''
-<<<<<<< HEAD
         run: butler push Lifegen_macOS64.dmg sablesteel/clan-gen-fan-edit:osx64 --userversion "${{ env.VERSION_NUMBER }}"
-=======
-        run: butler push Genemod_macOS64.dmg sablesteel/clan-gen-fan-edit:osx64 --userversion "${{ env.VERSION_NUMBER }}"
->>>>>>> 2024-09
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-<<<<<<< HEAD
           files: Lifegen_macOS64.dmg
-=======
-          files: Genemod_macOS64.dmg
->>>>>>> 2024-09
 
   confirm_release_ubuntu_22_04:
     runs-on: ubuntu-22.04
