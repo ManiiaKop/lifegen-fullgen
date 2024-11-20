@@ -4837,6 +4837,9 @@ def adjust_txt(Cat, text, cat, cat_dict, r_c_allowed, o_c_allowed):
             sibling = Cat.fetch_cat(choice(you.inheritance.get_siblings()))
             addon_check = abbrev_addons(cat, sibling, cluster, x, rel, r)
 
+            if sibling is None:
+                return ""
+
             while sibling.outside or sibling.dead or sibling.ID == game.clan.your_cat.ID or sibling.ID == cat.ID or\
             addon_check is False:
                 counter += 1
