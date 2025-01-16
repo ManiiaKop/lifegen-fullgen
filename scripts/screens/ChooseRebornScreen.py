@@ -1,31 +1,31 @@
 import pygame.transform
 import pygame_gui.elements
-from random import choice, randint
-import ujson
-
-from scripts.cat_relations.inheritance import Inheritance
-from scripts.cat.history import History
-from scripts.event_class import Single_Event
-from scripts.events import events_class
 
 from .Screens import Screens
 
-from scripts.utility import get_personality_compatibility, get_text_box_theme, scale, scale_dimentions, shorten_text_to_fit
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
-from scripts.cat.pelts import Pelt
-from scripts.game_structure.windows import GameOver, PickPath, DeathScreen
-from scripts.game_structure.game_essentials import game, screen, screen_x, screen_y, MANAGER
-from scripts.game_structure.windows import RelationshipLog
-from scripts.game_structure.propagating_thread import PropagatingThread
-from scripts.game_structure.ui_elements import UIImageButton, UITextBoxTweaked, UISpriteButton
+from scripts.game_structure.game_essentials import game
+from scripts.game_structure.screen_settings import MANAGER
+
+from scripts.game_structure.ui_elements import (
+    UISpriteButton,
+    UISurfaceImageButton,
+)
+from scripts.utility import (
+    get_text_box_theme,
+    ui_scale,
+    ui_scale_offset
+)
+from ..ui.generate_box import get_box, BoxStyles
+from ..ui.generate_button import get_button_dict, ButtonStyles
+from ..ui.get_arrow import get_arrow
+from ..ui.icon import Icon
+
 
 class ChooseRebornScreen(Screens):
     selected_cat = None
     current_page = 1
-    list_frame = pygame.transform.scale(image_cache.load_image("resources/images/choosing_frame.png").convert_alpha(),
-                                        (1300 / 1600 * screen_x, 452 / 1400 * screen_y))
-    apprentice_details = {}
     selected_details = {}
     cat_list_buttons = {}
 
@@ -33,34 +33,32 @@ class ChooseRebornScreen(Screens):
         super().__init__(name)
         self.fav = {}
         self.list_page = None
+        self.list_frame = None
         self.next_cat = None
         self.previous_cat = None
         self.next_page_button = None
         self.previous_page_button = None
-        self.current_mentor_warning = None
-        self.confirm_mentor = None
+        self.confirm_cat = None
         self.back_button = None
         self.next_cat_button = None
         self.previous_cat_button = None
-        self.mentor_icon = None
-        self.app_frame = None
-        self.mentor_frame = None
-        self.current_mentor_text = None
+        self.selected_cat_frame = None
         self.info = None
         self.heading = None
-        self.mentor = None
         self.the_cat = None
         self.dead_tab = None
         self.alive_tab = None
         self.current_list = "alive"
+        self.current_sublist = "starclan"
 
     def handle_event(self, event):
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             if event.ui_element in self.cat_list_buttons.values():
                 self.selected_cat = event.ui_element.return_cat_object()
                 self.update_selected_cat()
+                self.update_tabs()
                 # self.update_buttons()
-            elif event.ui_element == self.confirm_mentor and self.selected_cat:
+            elif event.ui_element == self.confirm_cat and self.selected_cat:
                 self.update_selected_cat()
                 self.change_cat(self.selected_cat)
                 if not self.selected_cat.dead:
@@ -89,16 +87,50 @@ class ChooseRebornScreen(Screens):
                 else:
                     print("invalid previous cat", self.previous_cat)
             elif event.ui_element == self.dead_tab:
+                self.selected_cat = None
                 self.current_list = "dead"
                 self.current_page = 1
                 self.alive_tab.enable()
                 self.dead_tab.disable()
+                self.update_selected_cat()
                 self.update_cat_list()
             elif event.ui_element == self.alive_tab:
+                self.selected_cat = None
                 self.current_list = "alive"
                 self.current_page = 1
                 self.alive_tab.disable()
                 self.dead_tab.enable()
+                self.update_selected_cat()
+                self.update_cat_list()
+            elif event.ui_element == self.darkforest_tab:
+                self.selected_cat = None
+                self.current_list = "dead"
+                self.current_sublist = "darkforest"
+                self.current_page = 1
+                self.darkforest_tab.disable()
+                self.unknown_tab.enable()
+                self.starclan_tab.enable()
+                self.update_selected_cat()
+                self.update_cat_list()
+            elif event.ui_element == self.starclan_tab:
+                self.selected_cat = None
+                self.current_list = "dead"
+                self.current_sublist = "starclan"
+                self.current_page = 1
+                self.starclan_tab.disable()
+                self.unknown_tab.enable()
+                self.darkforest_tab.enable()
+                self.update_selected_cat()
+                self.update_cat_list()
+            elif event.ui_element == self.unknown_tab:
+                self.selected_cat = None
+                self.current_list = "dead"
+                self.current_sublist = "unknown"
+                self.current_page = 1
+                self.darkforest_tab.enable()
+                self.unknown_tab.disable()
+                self.starclan_tab.enable()
+                self.update_selected_cat()
                 self.update_cat_list()
             elif event.ui_element == self.next_page_button:
                 self.current_page += 1
@@ -109,36 +141,132 @@ class ChooseRebornScreen(Screens):
             
 
     def screen_switches(self):
+        super().screen_switches()
         self.the_cat = game.clan.your_cat
         self.current_page = 1
-        self.mentor = Cat.fetch_cat(self.the_cat.mentor)
+
+        list_frame = get_box(BoxStyles.ROUNDED_BOX, (650, 226))
+        self.list_frame = pygame_gui.elements.UIImage(
+            ui_scale(pygame.Rect((75, 360), (650, 226))), list_frame, starting_height=1
+        )
 
         self.heading = pygame_gui.elements.UITextBox("",
-                                                     scale(pygame.Rect((300, 50), (1000, 80))),
+                                                     ui_scale(pygame.Rect((150, 25), (500, 40))),
                                                      object_id=get_text_box_theme("#text_box_34_horizcenter"),
                                                      manager=MANAGER)
         self.selected_cat = None
-        self.mentor_frame = pygame_gui.elements.UIImage(scale(pygame.Rect((630, 226), (562, 394))),
+
+        self.selected_cat_frame = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((315, 113), (281, 197))),
                                                         pygame.transform.scale(
                                                             image_cache.load_image(
                                                                 "resources/images/choosing_cat1_frame_ment.png").convert_alpha(),
-                                                            (562, 394)), manager=MANAGER)
+                                                            (281, 197)), manager=MANAGER)
 
-        self.back_button = UIImageButton(scale(pygame.Rect((50, 1290), (210, 60))), "", object_id="#back_button")
-        self.confirm_mentor = UIImageButton(scale(pygame.Rect((680, 610), (208, 52))), "",
-                                            object_id="#patrol_select_button")
+        self.cant_switch_warning = pygame_gui.elements.UITextBox(
+            "You can't switch to an outside cat yet!",
+            ui_scale(pygame.Rect((100, 210), (200, 100))),
+            object_id=get_text_box_theme("#text_box_26_horizcenter"),
+            manager=MANAGER
+            )
+        self.cant_switch_warning.hide()
+
+        self.back_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((25, 60), (105, 30))),
+            get_arrow(2) + " Back",
+            get_button_dict(ButtonStyles.SQUOVAL, (105, 30)),
+            object_id="@buttonstyles_squoval",
+            manager=MANAGER,
+        )
+        self.confirm_cat = UISurfaceImageButton(
+            ui_scale(pygame.Rect((326, 310), (148, 30))),
+            "Select Cat",
+            get_button_dict(ButtonStyles.SQUOVAL, (148, 30)),
+            object_id="@buttonstyles_squoval",
+        )
+        self.confirm_cat.disable()
        
-        self.previous_page_button = UIImageButton(scale(pygame.Rect((630, 1160), (68, 68))), "",
-                                                  object_id="#relation_list_previous", manager=MANAGER)
-        self.next_page_button = UIImageButton(scale(pygame.Rect((902, 1160), (68, 68))), "",
-                                              object_id="#relation_list_next", manager=MANAGER)
+        self.previous_page_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((315, 579), (34, 34))),
+            Icon.ARROW_LEFT,
+            get_button_dict(ButtonStyles.ICON, (34, 34)),
+            object_id="@buttonstyles_icon",
+            starting_height=0,
+        )
+        self.next_page_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((451, 579), (34, 34))),
+            Icon.ARROW_RIGHT,
+            get_button_dict(ButtonStyles.ICON, (34, 34)),
+            object_id="@buttonstyles_icon",
+            starting_height=0,
+        )
 
         self.current_list = "alive"
 
-        self.alive_tab = UIImageButton(scale(pygame.Rect((200, 653), (150, 70))), "",
-                                              object_id="#alive_select_button", manager=MANAGER)
-        self.dead_tab = UIImageButton(scale(pygame.Rect((360, 653), (150, 70))), "",
-                                              object_id="#dead_select_button", manager=MANAGER)
+        button_rect = ui_scale(pygame.Rect((0, 0), (90, 39)))
+        button_rect.bottomleft = ui_scale_offset((90, 8))
+
+        self.alive_tab = UISurfaceImageButton(
+            button_rect,
+            "Alive",
+            get_button_dict(ButtonStyles.HORIZONTAL_TAB, (90, 39)),
+            object_id="@buttonstyles_horizontal_tab",
+            starting_height=2,
+            anchors={"bottom": "bottom", "bottom_target": self.list_frame},
+        )
+
+        button_rect.bottomleft = ui_scale_offset((15, 8))
+        self.dead_tab = UISurfaceImageButton(
+            button_rect,
+            "Dead",
+            get_button_dict(ButtonStyles.HORIZONTAL_TAB, (90, 39)),
+            object_id="@buttonstyles_horizontal_tab",
+            starting_height=2,
+            anchors={
+                "bottom": "bottom",
+                "bottom_target": self.list_frame,
+                "left_target": self.alive_tab
+            },
+        )
+
+        button_rect = ui_scale(pygame.Rect((0, 0), (34, 34)))
+        button_rect.bottomleft = ui_scale_offset((350, 8))
+        self.starclan_tab = UISurfaceImageButton(
+            button_rect,
+            Icon.STARCLAN,
+            get_button_dict(ButtonStyles.HORIZONTAL_TAB, (34, 34)),
+            object_id="@buttonstyles_icon",
+            starting_height=2,
+            anchors={
+                "bottom": "bottom",
+                "bottom_target": self.list_frame,
+                "left_target": self.alive_tab
+            },
+        )
+        button_rect.bottomleft = ui_scale_offset((15, 8))
+        self.unknown_tab = UISurfaceImageButton(
+            button_rect,
+            Icon.CLAN_OTHER,
+            get_button_dict(ButtonStyles.HORIZONTAL_TAB, (34, 34)),
+            object_id="@buttonstyles_icon",
+            starting_height=2,
+            anchors={
+                "bottom": "bottom",
+                "bottom_target": self.list_frame,
+                "left_target": self.starclan_tab
+            },
+        )
+        self.darkforest_tab = UISurfaceImageButton(
+            button_rect,
+            Icon.DARKFOREST,
+            get_button_dict(ButtonStyles.HORIZONTAL_TAB, (34, 34)),
+            object_id="@buttonstyles_icon",
+            starting_height=2,
+            anchors={
+                "bottom": "bottom",
+                "bottom_target": self.list_frame,
+                "left_target": self.unknown_tab
+            },
+        )
 
         self.alive_tab.disable()
         self.update_selected_cat()  # Updates the image and details of selected cat
@@ -157,10 +285,6 @@ class ChooseRebornScreen(Screens):
             self.fav[marker].kill()
         self.fav = {}
 
-        for ele in self.apprentice_details:
-            self.apprentice_details[ele].kill()
-        self.apprentice_details = {}
-
         for ele in self.selected_details:
             self.selected_details[ele].kill()
         self.selected_details = {}
@@ -168,13 +292,13 @@ class ChooseRebornScreen(Screens):
         self.heading.kill()
         del self.heading
 
-        self.mentor_frame.kill()
-        del self.mentor_frame
+        self.selected_cat_frame.kill()
+        del self.selected_cat_frame
 
         self.back_button.kill()
         del self.back_button
-        self.confirm_mentor.kill()
-        del self.confirm_mentor
+        self.confirm_cat.kill()
+        del self.confirm_cat
 
         self.previous_page_button.kill()
         del self.previous_page_button
@@ -184,6 +308,15 @@ class ChooseRebornScreen(Screens):
         del self.alive_tab
         self.dead_tab.kill()
         del self.dead_tab
+
+        self.starclan_tab.kill()
+        del self.starclan_tab
+        self.darkforest_tab.kill()
+        del self.darkforest_tab
+        self.unknown_tab.kill()
+        del self.unknown_tab
+
+        self.list_frame.kill()
 
     def find_next_previous_cats(self):
         """Determines where the previous and next buttons lead"""
@@ -245,10 +378,10 @@ class ChooseRebornScreen(Screens):
         if self.selected_cat:
 
             self.selected_details["selected_image"] = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((650, 300), (300, 300))),
+                ui_scale(pygame.Rect((325, 150), (150, 150))),
                 pygame.transform.scale(
                     self.selected_cat.sprite,
-                    (300, 300)), manager=MANAGER)
+                    (150, 150)), manager=MANAGER)
 
             info = self.selected_cat.status + "\n" + \
                    self.selected_cat.genderalign + "\n" + self.selected_cat.personality.trait + "\n"
@@ -257,18 +390,18 @@ class ChooseRebornScreen(Screens):
             else:
                 info += self.selected_cat.skills.skill_string(short=True)
 
-            self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(info,
-                                                                                   scale(pygame.Rect((965, 325),
-                                                                                                     (210, 250))),
-                                                                                   object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
-                                                                                   manager=MANAGER)
+            self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(
+                info,
+                ui_scale(pygame.Rect((482, 162), (105, 125))),
+                object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
+                manager=MANAGER)
 
             name = str(self.selected_cat.name)  # get name
             if 11 <= len(name):  # check name length
                 short_name = str(name)[0:9]
                 name = short_name + '...'
             self.selected_details["mentor_name"] = pygame_gui.elements.ui_label.UILabel(
-                scale(pygame.Rect((690, 230), (220, 60))),
+                ui_scale(pygame.Rect((345, 115), (110, 30))),
                 name,
                 object_id="#text_box_34_horizcenter", manager=MANAGER)
 
@@ -308,26 +441,48 @@ class ChooseRebornScreen(Screens):
         self.fav = {}
 
         pos_x = 0
-        pos_y = 40
+        pos_y = 20
         i = 0
         for cat in display_cats:
             if game.clan.clan_settings["show fav"] and cat.favourite != 0:
                 self.fav[str(i)] = pygame_gui.elements.UIImage(
-                    scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))),
+                    ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))),
                     pygame.transform.scale(
                         pygame.image.load(
                             f"resources/images/fav_marker_{cat.favourite}.png").convert_alpha(),
-                        (100, 100))
+                        (50, 50))
                 )
                 self.fav[str(i)].disable()
             self.cat_list_buttons["cat" + str(i)] = UISpriteButton(
-                scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))),
+                ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))),
                 cat.sprite, cat_object=cat, manager=MANAGER)
-            pos_x += 120
-            if pos_x >= 1100:
+            pos_x += 60
+            if pos_x >= 550:
                 pos_x = 0
-                pos_y += 120
+                pos_y += 60
             i += 1
+
+        self.update_tabs()
+
+    def update_tabs(self):
+        if self.selected_cat and self.selected_cat.status in ["kittypet", "rogue", "loner", "former Clancat"]:
+            self.confirm_cat.disable()
+            self.cant_switch_warning.show()
+        elif self.selected_cat is None:
+            self.confirm_cat.disable()
+            self.cant_switch_warning.hide()
+        else:
+            self.confirm_cat.enable()
+            self.cant_switch_warning.hide()
+        
+        if self.current_list == "alive":
+            self.starclan_tab.hide()
+            self.darkforest_tab.hide()
+            self.unknown_tab.hide()
+        else:
+            self.starclan_tab.show()
+            self.darkforest_tab.show()
+            self.unknown_tab.show()
 
     def get_valid_cats(self):
         valid_mentors = []
@@ -337,14 +492,42 @@ class ChooseRebornScreen(Screens):
                 if not cat.dead and not cat.outside and not cat.ID == game.clan.your_cat.ID:
                     valid_mentors.append(cat)
             else:
-                if cat.dead and not cat.ID == game.clan.your_cat.ID and not cat.ID == game.clan.instructor.ID and not cat.ID == game.clan.demon.ID and not cat.outside and cat.status not in ["loner", "kittypet", "rogue", "former Clancat"]:
-                    valid_mentors.append(cat)
+                if self.current_sublist == "darkforest":
+                    if (
+                        cat.dead and
+                        cat.df and
+                        not cat.outside and
+                        not cat.ID == game.clan.your_cat.ID and
+                        not cat.ID == game.clan.instructor.ID and
+                        not cat.ID == game.clan.demon.ID
+                        ):
+                        valid_mentors.append(cat)
+                elif self.current_sublist == "starclan":
+                    if (
+                        cat.dead and
+                        not cat.df and
+                        not cat.outside and
+                        not cat.ID == game.clan.your_cat.ID and
+                        not cat.ID == game.clan.instructor.ID and
+                        not cat.ID == game.clan.demon.ID
+                        ):
+                        valid_mentors.append(cat)
+                elif self.current_sublist == "unknown":
+                    if (
+                        cat.dead and
+                        not cat.df and
+                        cat.outside and
+                        not cat.ID == game.clan.your_cat.ID and
+                        not cat.ID == game.clan.instructor.ID and
+                        not cat.ID == game.clan.demon.ID
+                        ):
+                        valid_mentors.append(cat)
+
         
         return valid_mentors
 
     def on_use(self):
-        # Due to a bug in pygame, any image with buttons over it must be blited
-        screen.blit(self.list_frame, (150 / 1600 * screen_x, 720 / 1400 * screen_y))
+        super().on_use()
 
     def chunks(self, L, n):
         return [L[x: x + n] for x in range(0, len(L), n)]

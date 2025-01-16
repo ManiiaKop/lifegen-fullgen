@@ -38,7 +38,7 @@
         ],
         [
             "Is it time for another hunting patrol already?",
-            "[t_c struggles to their paws and heads to the camp's entrance.]",
+            "[t_c struggles to {PRONOUN/t_c/poss} paws and heads to the camp's entrance.]",
             "Let's hope we catch something this time..."
         ]
     ],
@@ -99,7 +99,7 @@
             "None of the kits have been out to play today.",
             "[t_c makes a choking sound, avoiding your gaze.]",
             "Th-they're usually always so energetic... I don't...",
-            "y_c, I don't know what to do! This starvation it's.. I know it affects the kits. I need to get some prey. I can't think."
+            "y_c, I don't know what to do! This starvation, it's... I know it affects the kits. I need to get some prey. I can't think."
         ]
     ],
     "theystarving_sweet1": [
@@ -111,8 +111,8 @@
             "focus"
         ],
         [
-            "[Despite {PRONOUN/t_c/poss} obvious hunger, you can see t_c nudging what little {PRONOUN/t_c/subject} have to r_c.]",
-            "[{PRONOUN/t_c/subject} {VERB/t_c/look/looks} at you and smile tiredly. The pain means nothing to {PRONOUN/t_c/object} if it means {PRONOUN/t_c/subject} could help someone else.]"
+            "[Despite {PRONOUN/t_c/poss} obvious hunger, you can see t_c nudging what little {PRONOUN/t_c/subject} {VERB/t_c/have/has} to r_c.]",
+            "[{PRONOUN/t_c/subject} {VERB/t_c/look/looks} at you and {VERB/t_c/smile/smiles} tiredly. The pain means nothing to {PRONOUN/t_c/object} if it means {PRONOUN/t_c/subject} could help someone else.]"
         ]
     ],
     "theystarving_sweet2": [
@@ -125,7 +125,7 @@
         ],
         [
             "I'm gonna do what I can to get more food... I promise.",
-            "If I can't, you can have my portion tonight.. I don't mind."
+            "If I can't, you can have my portion tonight... I don't mind."
         ]
     ],
     "theystarving_sweet3": [
@@ -138,7 +138,7 @@
         [
             "[Despite everything, t_c continues to smile. Despite everything, {PRONOUN/t_c/subject} {VERB/t_c/keep/keeps} trying to make you happy.]",
             "StarClan will bring us food, we just need to be patient.",
-            "[Despite everything... the look in {PRONOUN/t_c/poss} eyes tells you {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} just as hopeless as you are.]"
+            "[Despite everything... The look in {PRONOUN/t_c/poss} eyes tells you {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} just as hopeless as you are.]"
         ]
     ],
     "youstarving_1": [
@@ -271,7 +271,7 @@
         ],
         [
             "[t_c drops a tiny mouse at your paws and looks away shyly.]",
-            "I know it's not much, but ... the hunting patrol couldn't bring much back. It's all I could manage to save for you.",
+            "I know it's not much, but ... The hunting patrol couldn't bring much back. It's all I could manage to save for you.",
             "What about me?",
             "[t_c looks away.]",
             "I ... I'll be fine. Don't worry."
@@ -300,10 +300,10 @@
         [
             "Oh, good morning, y_c.",
             "[You look over to see t_c coming over to you, a bundle of herbs wrapped in a leaf in {PRONOUN/t_c/poss} mouth. {PRONOUN/t_c/subject/CAP} gently {VERB/t_c/place/places} the package down next to you.]",
-            "Listen, I've noticed that... well you're not doing okay. This starvation is awful for the body and the mind. I've been thinking about it since yesterday, and I decided to make some herb bundles.",
-            "They're normally for traveling, but I suppose in a morbid sense this is its own kind of adventure. Please will you eat them? I've made a bundle for all the cats that need it, so you don't need to worry that you're taking herbs off of someone else.",
+            "Listen, I've noticed that... well, you're not doing okay. This starvation is awful for the body and the mind. I've been thinking about it since yesterday, and I decided to make some herb bundles.",
+            "They're normally for traveling, but I suppose in a morbid sense this is its own kind of adventure. Please, will you eat them? I've made a bundle for all the cats that need it, so you don't need to worry that you're taking herbs off of someone else.",
             "In case you're wondering, it's a mixture of honey, chamomile and willow herb, and wrapped in a laurel leaf.",
-            "... there we go. Thank you y_c. Hopefully there will be more fresh-kill soon."
+            "... There we go. Thank you y_c. Hopefully there will be more fresh-kill soon."
         ]
     ],
     "you_starving_51": [
@@ -316,10 +316,10 @@
         [
             "Oh, good morning, y_c.",
             "[You look over to see t_c coming over to you, a bundle of herbs wrapped in a leaf in {PRONOUN/t_c/poss} mouth. {PRONOUN/t_c/subject/CAP} gently {VERB/t_c/place/places} the package down next to you.]",
-            "Listen, I've noticed that... well you're not doing okay. This starvation is awful for the body and the mind. I've been thinking about it since yesterday, and I decided to make some herb bundles.",
-            "They're normally for traveling, but I suppose in a morbid sense this is its own kind of adventure. Please will you eat them? I've made a bundle for all the cats that need it, so you don't need to worry that you're taking herbs off of someone else.",
+            "Listen, I've noticed that... well, you're not doing okay. This starvation is awful for the body and the mind. I've been thinking about it since yesterday, and I decided to make some herb bundles.",
+            "They're normally for traveling, but I suppose in a morbid sense this is its own kind of adventure. Please, will you eat them? I've made a bundle for all the cats that need it, so you don't need to worry that you're taking herbs off of someone else.",
             "In case you're wondering, it's a mixture of honey, chamomile and willow herb, and wrapped in a laurel leaf.",
-            "... there we go. Thank you y_c. Hopefully there will be more fresh-kill soon."
+            "... There we go. Thank you y_c. Hopefully there will be more fresh-kill soon."
         ]
     ],
     "you_starving_31": [
@@ -347,7 +347,7 @@
         [
             "Psst, y_c.",
             "[You gather the strength to look at t_c, and notice that {PRONOUN/t_c/subject}  {VERB/t_c/have/has} somehow found a skinny vole.",
-            "It was supposed to be l_n's... but you need it more."
+            "It was supposed to be l_n's... But you need it more."
         ]
     ],
     "starve_shunned_CM1": [
@@ -373,8 +373,8 @@
         ],
         [
             "[Since the Clan has been so low on prey recently, you've had even rarer meals than you would have before. The days spent stuck in camp are long and hard. And yet...]",
-            ".. y_c? Are you there?",
-            "[t_c approaches you with a small, scrawny mouse in {PRONOUN/t_c/poss} jaws, looking around to check that no cat notices when {PRONOUN/t_c/subject} drop it in front of you.]",
+            "... y_c? Are you there?",
+            "[t_c approaches you with a small, scrawny mouse in {PRONOUN/t_c/poss} jaws, looking around to check that no cat notices when {PRONOUN/t_c/subject} {VERB/t_c/drop/drops} it in front of you.]",
             "You have to eat too. Some of our Clanmates don't think it's worth it to feed you anymore.",
             "But I've seen the real you, y_c, I know what kind of cat you are, and you need to survive this.",
             "I believe in you, and I know that you'll hold on."
@@ -476,7 +476,7 @@
         ],
         "no_thanks": [
             "But it's the polite thing to do!",
-            "Well, if I can't thank you, you need to carry my thanks to Starclan, okay?",
+            "Well, if I can't thank you, you need to carry my thanks to StarClan, okay?",
             "Preferably with haste and smiles!"
         ]
     },
@@ -588,7 +588,7 @@
         [
             "Hey... y_c?",
             "[You hear t_c's stomach growl. t_c sighs from the recent familiar feeling of being hungry.]",
-            "What's it like to not have to eat fresh-kill? Sometimes I wished it wasn't a necessity.",
+            "What's it like to not have to eat fresh-kill? Sometimes I wish it wasn't a necessity.",
             "... Especially now."
         ]
     ]

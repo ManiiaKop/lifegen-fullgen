@@ -4,7 +4,7 @@ from typing import Union
 
 class SkillPath(Enum):
     TEACHER = ("quick to help", "good teacher", "great teacher", "excellent teacher")
-    HUNTER = ("moss-ball hunter", "good hunter", "great hunter", "renowned hunter")
+    HUNTER = ("moss ball hunter", "good hunter", "great hunter", "renowned hunter")
     FIGHTER = (
         "avid play-fighter",
         "good fighter",
@@ -422,7 +422,7 @@ class Skill:
         print("Can't set tier directly")
 
     def get_points_to_tier(self, tier:int):
-        """This is seperate from the tier setter, since it will booonly allow you
+        """This is separate from the tier setter, since it will booonly allow you
         to set points to tier 1, 2, or 3, and never 0. Tier 0 is retricted to interest_only
         skills"""
         
@@ -434,7 +434,7 @@ class Skill:
         return Skill.tier_ranges[tier - 1][0]
 
     def set_points_to_tier(self, tier: int):
-        """This is seperate from the tier setter, since it will booonly allow you
+        """This is separate from the tier setter, since it will booonly allow you
         to set points to tier 1, 2, or 3, and never 0. Tier 0 is retricted to interest_only
         skills"""
 

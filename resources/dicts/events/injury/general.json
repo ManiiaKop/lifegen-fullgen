@@ -16,7 +16,6 @@
             "trait": [
                 "daring",
                 "impulsive",
-
                 "troublesome"
             ]
         },
@@ -48,7 +47,6 @@
             "trait": [
                 "daring",
                 "impulsive",
-
                 "troublesome"
             ]
         },
@@ -114,7 +112,6 @@
             "trait": [
                 "daring",
                 "impulsive",
-
                 "troublesome"
             ]
         },
@@ -146,7 +143,6 @@
             "trait": [
                 "daring",
                 "impulsive",
-
                 "troublesome"
             ]
         },
@@ -701,7 +697,6 @@
             "trait": [
                 "calm",
                 "compassionate",
-                
                 "thoughtful",
                 "wise"
             ]
@@ -748,7 +743,7 @@
                 ],
                 "scar": "m_c was scarred by r_c.",
                 "reg_death": "m_c died from {PRONOUN/m_c/poss} wounds after r_c hurt {PRONOUN/m_c/object} for trying to stop an argument.",
-                "lead_death": "died from {PRONOUN/m_c/poss} wounds r_c gave them"
+                "lead_death": "died from {PRONOUN/m_c/poss} wounds r_c gave {PRONOUN/m_c/object}"
             }
         ],
         "relationships": [
@@ -804,7 +799,6 @@
             "trait": [
                 "calm",
                 "compassionate",
-                
                 "thoughtful",
                 "daring",
                 "bold",
@@ -845,7 +839,7 @@
                 ],
                 "scar": "m_c was scarred while trying to save r_c from a rogue.",
                 "reg_death": "m_c died from {PRONOUN/m_c/poss} wounds after trying to save r_c from a rogue.",
-                "lead_death": "died from {PRONOUN/m_c/poss} wounds given to them by a rogue"
+                "lead_death": "died from {PRONOUN/m_c/poss} wounds given to {PRONOUN/m_c/object} by a rogue"
             }
         ],
         "relationships": [
@@ -924,7 +918,6 @@
             "trait": [
                 "calm",
                 "compassionate",
-                
                 "thoughtful",
                 "daring",
                 "bold",
@@ -1303,7 +1296,6 @@
             "trait": [
                 "daring",
                 "impulsive",
-
                 "troublesome"
             ]
         },
@@ -1326,7 +1318,7 @@
                     "m_c"
                 ],
                 "scar": "m_c was scarred as a kit by frostbite.",
-                "reg_death": "m_c died after they got frostbite sneaking out of camp."
+                "reg_death": "m_c died after {PRONOUN/m_c/subject} got frostbite sneaking out of camp."
             }
         ]
     },
@@ -1418,10 +1410,10 @@
             "status": [
                 "apprentice",
                 "mediator apprentice",
-                "healer apprentice",
+                "medicine cat apprentice",
                 "warrior",
                 "mediator",
-                "healer",
+                "medicine cat",
                 "deputy",
                 "leader",
                 "elder"
@@ -2079,7 +2071,6 @@
             "trait": [
                 "compassionate",
                 "loving",
-                
                 "responsible",
                 "loyal",
                 "adventurous",
@@ -2153,7 +2144,6 @@
             "trait": [
                 "compassionate",
                 "loving",
-                
                 "responsible",
                 "loyal",
                 "adventurous",
@@ -2367,7 +2357,6 @@
             "trait": [
                 "compassionate",
                 "loving",
-                
                 "responsible",
                 "loyal",
                 "adventurous",
@@ -2533,7 +2522,6 @@
             "trait": [
                 "compassionate",
                 "loving",
-                
                 "responsible",
                 "loyal",
                 "adventurous",
@@ -2621,7 +2609,6 @@
             "trait": [
                 "compassionate",
                 "loving",
-                
                 "responsible",
                 "loyal",
                 "adventurous",
@@ -2831,7 +2818,6 @@
             "trait": [
                 "compassionate",
                 "loving",
-                
                 "responsible",
                 "loyal",
                 "adventurous",
@@ -2976,7 +2962,6 @@
             "trait": [
                 "compassionate",
                 "loving",
-                
                 "responsible",
                 "loyal",
                 "adventurous",
@@ -3058,7 +3043,6 @@
             "trait": [
                 "compassionate",
                 "loving",
-                
                 "responsible",
                 "loyal",
                 "adventurous",
@@ -5043,8 +5027,12 @@
     },
     {
         "event_id": "gen_injury_clawwoundcatbite_anydisobeypunish1",
-        "location": ["any"],
-        "season": ["any"],
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
         "weight": 10,
         "event_text": "m_c was hurt by {PRONOUN/m_c/poss} mentor, r_c, as a punishment for disobeying {PRONOUN/r_c/object}.",
         "m_c": {
@@ -5136,8 +5124,12 @@
     },
     {
         "event_id": "gen_injury_clawwoundcatbite_anymentorfight1",
-        "location": ["any"],
-        "season": ["any"],
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
         "weight": 10,
         "event_text": "m_c fought with {PRONOUN/m_c/poss} mentor, r_c, and was injured.",
         "m_c": {
@@ -5790,7 +5782,9 @@
     },
     {
         "event_id": "gen_injury_crackedpads_any1",
-        "location": ["any"],
+        "location": [
+            "any"
+        ],
         "season": [
             "leaf-bare"
         ],
@@ -5995,7 +5989,7 @@
             "any"
         ],
         "weight": 20,
-        "event_text": "m_c fought a rogue and, while {PRONOUN/m_c/subject} drove the trespasser away, {PRONOUN/m_c/subject} needed to be rushed to the healer den afterwards.",
+        "event_text": "m_c fought a rogue and, while {PRONOUN/m_c/subject} drove the trespasser away, {PRONOUN/m_c/subject} needed to be rushed to the medicine cat den afterwards.",
         "m_c": {
             "age": [
                 "senior",
@@ -6308,8 +6302,8 @@
                 "warrior",
                 "mediator",
                 "mediator apprentice",
-                "healer",
-                "healer apprentice"
+                "medicine cat",
+                "medicine cat apprentice"
             ],
             "not_trait": [
                 "loyal",
@@ -6402,8 +6396,8 @@
                 "warrior",
                 "mediator",
                 "mediator apprentice",
-                "healer",
-                "healer apprentice"
+                "medicine cat",
+                "medicine cat apprentice"
             ],
             "not_trait": [
                 "loyal"
@@ -6634,7 +6628,9 @@
     },
     {
         "event_id": "gen_injury_beesting_multiany3",
-        "location": ["any"],
+        "location": [
+            "any"
+        ],
         "season": [
             "greenleaf",
             "newleaf"
@@ -6692,8 +6688,8 @@
                 "deputy",
                 "leader",
                 "warrior",
-                "healer",
-                "healer apprentice"
+                "medicine cat",
+                "medicine cat apprentice"
             ]
         },
         "injury": [
@@ -6746,8 +6742,8 @@
                 "warrior",
                 "leader",
                 "deputy",
-                "healer",
-                "healer apprentice"
+                "medicine cat",
+                "medicine cat apprentice"
             ]
         },
         "injury": [
@@ -6769,7 +6765,7 @@
                     "m_c"
                 ],
                 "scar": "m_c's ear was torn in a scuffle when {PRONOUN/m_c/subject} chased off an enemy warrior.",
-                "reg_death": "m_c died after an enemy warrior injured them.",
+                "reg_death": "m_c died after an enemy warrior injured {PRONOUN/m_c/object}.",
                 "lead_death": "after being injured by an enemy warrior"
             }
         ],
@@ -6797,8 +6793,8 @@
                 "warrior",
                 "mediator",
                 "mediator apprentice",
-                "healer",
-                "healer apprentice"
+                "medicine cat",
+                "medicine cat apprentice"
             ]
         },
         "injury": [
@@ -6835,7 +6831,7 @@
             "newleaf"
         ],
         "weight": 20,
-        "event_text": "The day is so nice out today that m_c decided to sneak out of camp and go play in the flowers without anyone noticing. {PRONOUN/m_c/subject/CAP} come back with a swollen paw, having stepped on a bee.",
+        "event_text": "The day is so nice out today that m_c decided to sneak out of camp and go play in the flowers without anyone noticing. {PRONOUN/m_c/subject/CAP} {VERB/m_c/come/comes} back with a swollen paw, having stepped on a bee.",
         "m_c": {
             "age": [
                 "kitten"
@@ -6874,7 +6870,7 @@
             "newleaf"
         ],
         "weight": 20,
-        "event_text": "Camp was supposed to be safe, but m_c found bees trying to form a hive in a corner of camp. Annoyed by their buzzing, m_c attacks them, and got swarmed by bees.",
+        "event_text": "Camp was supposed to be safe, but m_c found bees trying to form a hive in a corner of camp. Annoyed by their buzzing, m_c attacked them, and got swarmed by bees.",
         "m_c": {
             "age": [
                 "any"
@@ -6985,8 +6981,8 @@
             "status": [
                 "apprentice",
                 "warrior",
-                "healer",
-                "healer apprentice",
+                "medicine cat",
+                "medicine cat apprentice",
                 "leader",
                 "deputy"
             ],
@@ -7009,9 +7005,9 @@
                 "cats": [
                     "m_c"
                 ],
-                "scar": "m_c was scarred after falling into an o_c_n trap.",
-                "reg_death": "m_c died after falling into an o_c_n trap.",
-                "lead_death": "died after falling into an o_c_n trap"
+                "scar": "m_c was scarred after falling into a o_c_n trap.",
+                "reg_death": "m_c died after falling into a o_c_n trap.",
+                "lead_death": "died after falling into a o_c_n trap"
             }
         ],
         "other_clan": {
@@ -7033,7 +7029,7 @@
             "war"
         ],
         "weight": 20,
-        "event_text": "During a skirmish, m_c bounds into battle against an o_c_n warrior, protecting r_c from a powerful blow. m_c bears the brunt of the strike, and r_c helps them back to camp.",
+        "event_text": "During a skirmish, m_c bounds into battle against a o_c_n warrior, protecting r_c from a powerful blow. m_c bears the brunt of the strike, and r_c helps {PRONOUN/m_c/object} back to camp.",
         "m_c": {
             "status": [
                 "apprentice",

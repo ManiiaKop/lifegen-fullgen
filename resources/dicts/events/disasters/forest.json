@@ -85,7 +85,7 @@
             "moon1": [
                 "Even the trees look dry. The cats of c_n cart moss between camp and their water source, bringing back vital liquid to their youngest and oldest Clanmates. But there are murmurs of discontented gossip - what will they do if their water dries up?",
                 "The prey that cats bring back to the fresh-kill pile is beginning to look weak. Difficult to say what's taking its toll - the heat, or the difficulty of finding water.",
-                "med_name feels the crunch of leaf litter so dry it shatters under their footsteps. They swallow their concern - drought cannot be fought by the Clan's warriors, but med_name can stock the healer's den with remedies against heat stroke and exhaustion."
+                "med_name feels the crunch of leaf litter so dry it shatters under their footsteps. They swallow their concern - drought cannot be fought by the Clan's warriors, but med_name can stock the medicine cat den with remedies against heat stroke and exhaustion."
             ],
             "moon2": [
                 "The drought continues. The cats of c_n pant in the shade, too hot to move, their tongues dry and tacky.",
@@ -182,8 +182,8 @@
                 "Trees send out new branches to mingle with their soot-stained and charred trunks."
             ],
             "moon4": [
-                "Birdsong - c_n has been without it for so long. With the forest growing back to life, their longed for dawn chorus has returned.",
-                "It sounds so strange, but their mud has changed color, back to being made of soil instead of soot! Still a pain to groom out of pelts though.",
+                "Birdsong - c_n has been without it for so long. With the forest growing back to life, their longed-for dawn chorus has returned.",
+                "It sounds so strange, but the mud has changed color, back to being made of soil instead of soot! Still a pain to groom out of pelts though.",
                 "The growth of the forest has never been so well celebrated by c_n, but after the devastation of the wildfire, the flush of green returning feels like victory."
             ]
         },
@@ -232,8 +232,8 @@
             "deaths": {
                 "death_text": [
                     "During the chaos of the rapidly spreading wildfire, m_c became trapped by a ring of fire, cut off from any escape.",
-                    "The Clan finds desparate claw-marks up a blackened tree, leading up to where m_c was overcome by the blaze.",
-                    "The smoke and heat became too much for m_c, who suddenly collapsed and sucumbed to the encroaching inferno."
+                    "The Clan finds desperate claw-marks up a blackened tree, leading up to where m_c was overcome by the blaze.",
+                    "The smoke and heat became too much for m_c, who suddenly collapsed and succumbed to the encroaching inferno."
                 ],
                 "history_text": {
                     "reg_death": "m_c died in a wildfire."
@@ -380,7 +380,7 @@
                 "triggers_during": "end",
                 "chance": 0,
                 "trigger_events": [
-                    "A Twoleg was seen playing with fire, seemingly enjoying the dangerous plaything like a kit does a mossball and, just like a kit, they lost control of it. The forest is too dry in greenleaf to stop the fire, and it quickly spreads, the cats of c_n only able to run with the rest of the animals in the forest.",
+                    "A Twoleg was seen playing with fire, seemingly enjoying the dangerous plaything like a kit does a moss ball and, just like a kit, they lost control of it. The forest is too dry in greenleaf to stop the fire, and it quickly spreads, the cats of c_n only able to run with the rest of the animals in the forest.",
                     "The Twolegs seem to enjoy gathering around large fires, much to the terror of the Clan.  Though the fires seem to be put out before the Twolegs leave, it's no surprise when some embers persist and the forest begins to go up in flames."
                 ]
             },
@@ -425,7 +425,7 @@
         "rarity": "uncommon",
         "trigger_events": [
             "The objects the Twolegs bring smell so enticing, but the cats of c_n avoid them as much as possible. It only occurs to them that the prey they so rely on for food might not do the same when the first cats start getting sick.",
-            "The prey has been easy to catch lately, though even the freshest of fresh-kill has seemed a little... off. The healer den has more work than usual, and bellyaches are now very common."
+            "The prey has been easy to catch lately, though even the freshest of fresh-kill has seemed a little... off. The medicine cat den has more work than usual, and bellyaches are now very common."
         ],
         "progress_events": {
             "moon1": [
@@ -442,8 +442,8 @@
             ],
             "deaths": {
                 "death_text": [
-                    "The prey smelled fine, and m_c's stomach had been rumbling the whole day. After taking a bite, its clear that something was wrong. m_c succumbed to the poison later that day.",
-                    "m_c bites into some sour smelling fresh-kill just to ease the pain of hunger. They are found dead in their nest later that day."
+                    "The prey <i>smelled</i> fine, and m_c's stomach had been rumbling the whole day. After taking a bite, it's clear that something was wrong. m_c succumbed to the poison later that day.",
+                    "m_c bites into some sour-smelling fresh-kill just to ease the pain of hunger. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} found dead in {PRONOUN/m_c/poss} nest later that day."
                 ],
                 "history_text": {
                     "reg_death": "m_c died during a prey sickness."
@@ -637,7 +637,7 @@
                 "It's both exhausting and heartbreaking, tearing down the battered remnants of what used to be a safe and whole home. But c_n grits their teeth and yowl encouragement to each other. Nothing will drive them from the forest, and they're determined to make this their home again.",
                 "As dep_name roughly rips down the broken back of the nursery, pulling down the brambles that failed to protect it, something flutters down along with them. Feathers from the artfully made, carefully chosen kitten-nests inside, heartbreaking survivors of the devastation of c_n.",
                 "As lead_name surveys the camp, full of their cats hauling the tattered wreckage of their lives out to the dirt-place, they wonder if staying here was the right decision. How can anything be the same after this? How can any cat ever feel safe here again, on the ground that was supposed to be their greatest and safest shelter?",
-                "lead_name announced their plans confidently, what needed to happen to repair the camp. But they can't watch as the  shattered wreckage of the apprentice's den is torn down and carted away. Maybe it's a weakness. But they can't watch.",
+                "lead_name announced their plans confidently, what needed to happen to repair the camp. But they can't watch as the  shattered wreckage of the apprentices' den is torn down and carted away. Maybe it's a weakness. But they can't watch.",
                 "As c_n works in frenzied activity, dep_name is called over. One of the oldest of c_n's cats won't give up their nest, not even as broken and shattered as it is. They can't be convinced, and eventually dep_name has to take it from them, over their protests. They'll get a new one, a better one, a perfect one in their rebuilt home, dep_name vows. But it's still not enough. dep_name can't fix this.",
                 "To rebuild their shattered camp and their shattered lives, the Clan must clear out the wreckage of their old home. But it is its own sort of death to process, the loss of their home, their safety, their innocence."
             ],

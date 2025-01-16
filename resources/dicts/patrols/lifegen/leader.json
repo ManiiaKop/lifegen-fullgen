@@ -51,7 +51,7 @@
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "As you ponder over a tough decision to make for the Clan, you wonder if it would be wise to confide some of your Clan members and ask for their opinions and advice. A few of your warriors may have good insight.",
+        "intro_text": "As you ponder over a tough decision to make for the Clan, you wonder if it would be wise to confide in some of your Clan members and ask for their opinions and advice. A few of your warriors may have good insight.",
         "decline_text": "You decide not to confide in your Clanmates, confident in your ability to make decisions on your own.",
         "chance_of_success": 50,
         "success_outcomes": [
@@ -269,7 +269,7 @@
         "success_outcomes": [
             {
                 "text": "Ready to get shot down, you raise your voice above the crowd and express your disagreement with the leader's plan. The entire Clan looks to them to see whether or not they'll shoot you down. To your surprise, though, they do not, and instead acknowledge your opinion with a curt nod, and a mutter about how they'll consider it. It's not much, but it's better than nothing.",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -443,7 +443,7 @@
                 "weight": 20
             },
             {
-                "text": "You summon r_w and d_n to your den after assuring r_w_upstanding you'll take care of it. The two recieve an earful from you for the trespassing and dismissal of r_w_upstanding. ",
+                "text": "You summon r_w and d_n to your den after assuring r_w_upstanding you'll take care of it. The two receive an earful from you for the trespassing and dismissal of r_w_upstanding. ",
                 "exp": 10,
                 "weight": 20
             }

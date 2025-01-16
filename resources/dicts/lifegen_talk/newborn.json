@@ -195,7 +195,7 @@
         ],
         [
             "[You walk into the nursery to check on the kittens.]",
-            "[r_q smiles and gestures to a newborn tucked into {PRONOUN/r_q/poss} side, gently snoring]",
+            "[r_q smiles and gestures to a newborn tucked into {PRONOUN/r_q/poss} side, gently snoring.]",
             "...zzzz...",
             "[You politely smile at the queen and leave.]"
         ]
@@ -239,7 +239,7 @@
             "you_deaf"
         ],
         [
-            "[You notice a newborn kitten... t_c? t_c sits in the corner.]",
+            "[You notice a newborn kitten... T_c? t_c sits in the corner.]",
             "...",
             "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/don't/doesn't} look distressed so you decide to leave {PRONOUN/t_c/object} there.]"
         ]
@@ -941,18 +941,6 @@
         [
             "... ... ...",
             "Mew... me..."
-        ]
-    ],
-    "stable_newborn_13": [
-        [
-            "Any",
-            "stable",
-            "they_blind",
-            "they_deaf",
-            "you_deaf"
-        ],
-        [
-            "[You watch curiously as t_c opens {PRONOUN/t_c/poss} little mouth again and again making a small popping sound. {PRONOUN/t_c/poss/CAP}{VERB/t_c/'re/'s} so cute!!!]"
         ]
     ],
     "newborn_fromlittermate": [
@@ -1793,7 +1781,7 @@
             "[You see t_c rolling in the misty fields, the tiny kitten angrily flopping around.]",
             "MEW!!!!",
             "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/squeal/squeals}, stomping {PRONOUN/t_c/poss} little paws onto the ground.]",
-            "[Is.. is this what a tantrum from {PRONOUN/t_c/object} looks like?]"
+            "[Is... is this what a tantrum from {PRONOUN/t_c/object} looks like?]"
         ]
     ],
     "newborn_1dead_dead": [
@@ -2222,7 +2210,7 @@
     "newborn_H1": [
         [
             "they_newborn",
-	        "any",
+            "any",
             "they_deaf",
             "you_deaf",
             "they_blind"
@@ -2231,7 +2219,7 @@
             "[t_c rolls around in the nest, getting a feeling of {PRONOUN/t_c/poss} surroundings.]"
         ]
     ],
-   "newborn_sc_SAM1": [
+    "newborn_sc_SAM1": [
         [
             "they_newborn",
             "any",

@@ -743,40 +743,6 @@
             }
         }
     },
-    "#your_clan_button": {
-        "prototype": "#image_button",
-        "images": {
-            "normal_image": {
-                "path": "resources/images/buttons/your_clan.png"
-            },
-            "hovered_image": {
-                "path": "resources/images/buttons/your_clan_hover.png"
-            },
-            "selected_image": {
-                "path": "resources/images/buttons/your_clan_hover.png"
-            },
-            "disabled_image": {
-                "path": "resources/images/buttons/your_clan_unavailable.png"
-            }
-        }
-    },
-    "#outside_clan_button": {
-        "prototype": "#image_button",
-        "images": {
-            "normal_image": {
-                "path": "resources/images/buttons/outside_clan.png"
-            },
-            "hovered_image": {
-                "path": "resources/images/buttons/outside_clan_hover.png"
-            },
-            "selected_image": {
-                "path": "resources/images/buttons/outside_clan_hover.png"
-            },
-            "disabled_image": {
-                "path": "resources/images/buttons/outside_clan_unavailable.png"
-            }
-        }
-    },
     "#arrow_right_button": {
         "prototype": "#image_button",
         "images": {
@@ -1977,23 +1943,6 @@
             }
         }
     },
-    "#random_dice_button": {
-        "prototype": "#image_button",
-        "images": {
-            "normal_image": {
-                "path": "resources/images/buttons/random_dice.png"
-            },
-            "hovered_image": {
-                "path": "resources/images/buttons/random_dice_hover.png"
-            },
-            "selected_image": {
-                "path": "resources/images/buttons/random_dice_hover.png"
-            },
-            "disabled_image": {
-                "path": "resources/images/buttons/random_dice_unavailable.png"
-            }
-        }
-    },
     "#reset_name_button": {
         "prototype": "#image_button",
         "images": {
@@ -3076,23 +3025,6 @@
                 }
             }
         },
-        "#change_focus_button": {
-            "prototype": "#image_button",
-            "images": {
-                "normal_image": {
-                    "path": "resources/images/buttons/change_focus.png"
-                },
-                "hovered_image": {
-                    "path": "resources/images/buttons/change_focus_hover.png"
-                },
-                "selected_image": {
-                    "path": "resources/images/buttons/change_focus.png"
-                },
-                "disabled_image": {
-                    "path": "resources/images/buttons/change_focus_unavailable.png"
-                }
-            }
-        },
         "#save_button_pronoun": {
             "prototype": "#image_button",
             "images": {
@@ -4042,23 +3974,6 @@
             },
             "disabled_image": {
                 "path": "resources/images/buttons/retire_unavailable.png"
-            }
-        }
-    },
-    "#unknown_residence_button": {
-        "prototype": "#image_button",
-        "images": {
-            "normal_image": {
-                "path": "resources/images/buttons/unknown.png"
-            },
-            "hovered_image": {
-                "path": "resources/images/buttons/unknown_hover.png"
-            },
-            "selected_image": {
-                "path": "resources/images/buttons/unknown_hover.png"
-            },
-            "disabled_image": {
-                "path": "resources/images/buttons/unknown_unavailable.png"
             }
         }
     },
@@ -5821,6 +5736,142 @@
             },
             "disabled_image": {
                 "path": "resources/images/buttons/gift_again_unavailable.png"
+            }
+        }
+    },
+    "#large_x_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/large_x_button.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/large_x_button_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/large_x_button_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/large_x_button_hover.png"
+            }
+        }
+    },
+    "#magnifying_glass_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/magnifying_glass_button.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/magnifying_glass_button_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/magnifying_glass_button_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/magnifying_glass_button_hover.png"
+            }
+        }
+    },
+    "#default_sort_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/default_sort_button.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/default_sort_button_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/default_sort_button_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/default_sort_button_unavailable.png"
+            }
+        }
+    },
+    "#alphabetical_sort_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/alphabetical_sort_button.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/alphabetical_sort_button_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/alphabetical_sort_button_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/alphabetical_sort_button_unavailable.png"
+            }
+        }
+    },
+    "#faith_starclan_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/faith_starclan.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/faith_starclan_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/faith_starclan_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/faith_starclan_unavailable.png"
+            }
+        }
+    },
+    "#faith_neutral_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/faith_neutral.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/faith_neutral_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/faith_neutral_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/faith_neutral_unavailable.png"
+            }
+        }
+    },
+    "#faith_darkforest_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/faith_darkforest.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/faith_darkforest_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/faith_darkforest_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/faith_darkforest_unavailable.png"
+            }
+        }
+    },
+    "#faith_flexible_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/faith_flexible.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/faith_flexible_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/faith_flexible_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/faith_flexible_unavailable.png"
             }
         }
     }

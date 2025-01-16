@@ -1,5 +1,5 @@
 {
-    "halloween_J1" : {
+    "halloween_J1": {
         "tags": [
             "silly",
             "stable",
@@ -143,30 +143,30 @@
         ]
     },
     "halloween_sam1": {
-    "tags": [
-        "they_queen",
-        "they_queen's_apprentice",
-        "you_kitten",
-        "they_formerlyakittypet",
-        "they_silly",
-        "halloween"
-    ],
-    "intro": [
-        "[t_c walks into camp, holding some strange colorful things. Pelt decorations, maybe?]",
-        "I got costumes!!! The Twolegs would always dress me up in these around this time of year and then point metal boxes at me.",
-        "I don't have metal boxes, but I thought you guys would look adorable in these! plike_r_c_unlawful gave me the idea.",
-        "Who wants a costume first?",
-        "y_c! Come here, you'll be first!"
-    ],
-    "intro_choices": {
-        "choice1": {
-            "text": "Run away",
-            "next_scene": "run"
-        },
-        "choice2": {
-            "text": "Let them",
-            "next_scene": "accept"
-        }
+        "tags": [
+            "they_queen",
+            "they_queen's_apprentice",
+            "you_kitten",
+            "they_formerlyakittypet",
+            "they_silly",
+            "halloween"
+        ],
+        "intro": [
+            "[t_c walks into camp, holding some strange colorful things. Pelt decorations, maybe?]",
+            "I got costumes!!! The Twolegs would always dress me up in these around this time of year and then point metal boxes at me.",
+            "I don't have metal boxes, but I thought you guys would look adorable in these! plike_r_c_unlawful gave me the idea.",
+            "Who wants a costume first?",
+            "y_c! Come here, you'll be first!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Run away",
+                "next_scene": "run"
+            },
+            "choice2": {
+                "text": "Let them",
+                "next_scene": "accept"
+            }
         },
         "run": [
             "Come on! It'll only be for a few minutes!",
@@ -231,7 +231,6 @@
         [
             "halloween",
             "they_ghost"
-
         ],
         [
             "y_c! Come join us! r_e is going to tell ghost stories!",
@@ -245,7 +244,6 @@
             "halloween",
             "leaffall",
             "no_kit"
-
         ],
         [
             "[You and t_c sit in the clearing, watching the last light of day fade from the sky.]",
@@ -269,7 +267,7 @@
         [
             "[While out on patrol, t_c suddenly halts and holds you back with {PRONOUN/t_c/poss} tail.]",
             "Whoa, whoa, don't get too close to that thing.",
-            "[t_c glances at a nearby hollowed-out tree, its bark gnarled and twisted into strange patterns.]",  
+            "[t_c glances at a nearby hollowed-out tree, its bark gnarled and twisted into strange patterns.]",
             "They say a cat was buried inside it, and during Leaf-fall, you can still hear them scratching to get out.",
             "[In an instant, a sharp scraping sound emerges from within the hollow.]",
             "Did you hear that?"
@@ -302,7 +300,7 @@
         ],
         [
             "[t_c blocks your path, bursting into song.]",
-            "Prank or prey, come and play! Give me some fresh-kill today! If you don't, I don't care, I'll give you a big old scare!" 
+            "Prank or prey, come and play! Give me some fresh-kill today! If you don't, I don't care, I'll give you a big old scare!"
         ]
     ],
     "Halloween_SV6": [
@@ -326,10 +324,10 @@
         [
             "they_kittypet",
             "they_introspective",
-	        "halloween",
+            "halloween",
             "they_dead",
             "any",
-	        "leaffall"
+            "leaffall"
         ],
         [
             "[Anytime you saw t_c in the past, {PRONOUN/t_c/subject} looked gloomy. However, as the leaves turn orange and the air chills, t_c is absolutely ecstatic.]",
@@ -339,7 +337,7 @@
             "[You nod, though as t_c continues to talk, you wonder what exactly a 'picture' and a 'candle' is.]"
         ]
     ],
-   "ofrenda_dead_H2": [
+    "ofrenda_dead_H2": [
         [
             "they_kittypet",
             "they_introspective",
@@ -380,11 +378,10 @@
         ],
         [
             "Have you noticed there've been lots of spiders around camp recently?",
-	        "I mean... I've got nothing against spiders! And I don't think these ones are venomous, it's just... they're a bit startling, you know?",
-	        "I wonder why there are so many around recently. I hope they stop soon."
+            "I mean... I've got nothing against spiders! And I don't think these ones are venomous, it's just... They're a bit startling, you know?",
+            "I wonder why there are so many around recently. I hope they stop soon."
         ]
     ],
-
     "halloween_SQ1~2": [
         [
             "halloween",
@@ -396,12 +393,11 @@
         ],
         [
             "Ugh! There are still so many spiders around camp... I've been trying to stay out of their way.",
-	        "There was one hanging right in the middle of the entrance to the warriors' den, like it was guarding the place... it was huge, and orange, and... *shudder*",
-	        "I know they eat insects, and they're good to have around! All their legs, though... they just creep me out.",
-	        "I still don't understand why there are so many in camp."
+            "There was one hanging right in the middle of the entrance to the warriors' den, like it was guarding the place... it was huge, and orange, and... *shudder*",
+            "I know they eat insects, and they're good to have around! All their legs, though... They just creep me out.",
+            "I still don't understand why there are so many in camp."
         ]
     ],
-
     "halloween_SQ2": [
         [
             "halloween",
@@ -410,75 +406,71 @@
         ],
         [
             "[A large raven has been hanging around the camp recently, filling silences with its mournful croaks and loudly flapping its wings when cats least expect it.]",
-	        "[t_c is trying to speak with the bird to figure out what it wants, but so far {PRONOUN/t_c/poss} efforts have just been met with disparaging glances.}"
+            "[t_c is trying to speak with the bird to figure out what it wants, but so far {PRONOUN/t_c/poss} efforts have just been met with disparaging glances.]"
         ]
     ],
-
     "halloween_SQ3": [
         [
             "halloween",
             "they_story",
             "no_kit",
-	        "they_blind"
+            "they_blind"
         ],
         [
             "[t_c's using the recent spooky mood in camp as an excuse to tell scarier stories than usual.]",
-	        "And with a mournful wail, the ghost lifted its paw and pointed at the c_nClan cats! It hissed that for the blood they had spilled, all of them would be cursed for the rest of their lives...",
-	        "[r_c_neurotic excuses {PRONOUN/r_c_neurotic/self} and quickly leaves the audience, shivering.]"
+            "And with a mournful wail, the ghost lifted its paw and pointed at the c_nClan cats! It hissed that for the blood they had spilled, all of them would be cursed for the rest of their lives...",
+            "[r_c_neurotic excuses {PRONOUN/r_c_neurotic/self} and quickly leaves the audience, shivering.]"
         ]
     ],
-
     "halloween_SQ4": [
         [
             "halloween",
             "they_navigator",
             "no_kit",
-	        "min_platonic_15"
+            "min_platonic_15"
         ],
         [
             "I just had a weird experience today when I was on a walk with plike_r_w. We were on the western side of the territory, and it was a bit foggy...",
-	        "And suddenly, we were just... in another part of the territory. I swear, it was like I blinked and everything around us shifted!",
-	        "[t_c shudders. {PRONOUN/t_c/subject/CAP}{VERB/t_c/'ve/'s} always been unnaturally good at keeping {PRONOUN/t_c/poss} bearings, and you used to think it was impossible for {PRONOUN/t_c/object} to get lost.]",
-	        "[This experience seems to have spooked {PRONOUN/t_c/object} more than {PRONOUN/t_c/subject}'d like to admit.]"
+            "And suddenly, we were just... in another part of the territory. I swear, it was like I blinked and everything around us shifted!",
+            "[t_c shudders. {PRONOUN/t_c/subject/CAP}{VERB/t_c/'ve/'s} always been unnaturally good at keeping {PRONOUN/t_c/poss} bearings, and you used to think it was impossible for {PRONOUN/t_c/object} to get lost.]",
+            "[This experience seems to have spooked {PRONOUN/t_c/object} more than {PRONOUN/t_c/subject}'d like to admit.]"
         ]
     ],
-
     "halloween_SQ5": [
         [
             "halloween",
             "they_dream",
-	        "they_neurotic",
+            "they_neurotic",
             "no_kit",
-	        "min_platonic_15"
+            "min_platonic_15"
         ],
         [
             "I've been having weird dreams lately. They're full of shadows and spiderwebs, and it keeps feeling like someone's watching me...",
-	        "[t_c shivers. For a moment, {PRONOUN/t_c/subject} {VERB/t_c/stare/stares} into space.]",
-	        "I... I really hope they don't mean something bad."
+            "[t_c shivers. For a moment, {PRONOUN/t_c/subject} {VERB/t_c/stare/stares} into space.]",
+            "I... I really hope they don't mean something bad."
         ]
     ],
-
     "halloween_SQ6~1": [
         [
             "halloween",
-	        "they_neurotic",
+            "they_neurotic",
             "no_kit",
-	        "min_platonic_15",
-	        "you_blind",
-	        "they_blind"
+            "min_platonic_15",
+            "you_blind",
+            "they_blind"
         ],
         [
             "Have you ever wondered if we could fight ghosts? You know, if one decided to come after the Clan?",
-	        "Please don't laugh at me. It's just... Everycat's been talking about ghosts and spooky things recently, and I can't help but worry. What if that stuff's real, and dangerous?"
+            "Please don't laugh at me. It's just... Everycat's been talking about ghosts and spooky things recently, and I can't help but worry. What if that stuff's real, and dangerous?"
         ]
     ],
     "halloween_SQ6~2": [
         [
             "halloween",
-	        "they_neurotic",
+            "they_neurotic",
             "no_kit",
-	        "min_platonic_15",
-	        "connected"
+            "min_platonic_15",
+            "connected"
         ],
         [
             "[t_c stares intently at the empty space in front of {PRONOUN/t_c/object}. {PRONOUN/t_c/subject/CAP} {VERB/t_c/swipe/swipes} one paw through the air with a quiet battlecry, but {VERB/t_c/stumble/stumbles} when {PRONOUN/t_c/subject} {VERB/t_c/notice/notices} you nearby.]",
@@ -491,9 +483,9 @@
     "halloween_SQ7": [
         [
             "halloween",
-	        "they_neurotic",
+            "they_neurotic",
             "no_kit",
-	        "min_platonic_15",
+            "min_platonic_15",
             "they_hearing"
         ],
         [

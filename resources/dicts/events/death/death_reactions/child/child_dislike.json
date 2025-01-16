@@ -1,8 +1,8 @@
 {
   "general": {
     "body": [
-      "It's sad, the vigil. More so because r_c knows {PRONOUN/r_c/subject} should care and doesn't, than any grief for m_c.",
-      "r_c refuses to sit vigil for m_c. {PRONOUN/m_c/subject/CAP} failed r_c as a parent, guardian, and mentor. Why should r_c honor {PRONOUN/m_c/object} now?",
+      "It's sad, the vigil. More because r_c knows {PRONOUN/r_c/subject} should care and {VERB/r_c/don't/doesn't}, than out of any grief for m_c.",
+      "r_c refuses to sit vigil for m_c. {PRONOUN/m_c/subject/CAP} failed {PRONOUN/r_c/object} as a parent, guardian, and mentor. Why should r_c honor {PRONOUN/m_c/object} now?",
       "r_c is called to m_c's vigil, but declines to speak. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} not sure {PRONOUN/r_c/subject}'d have anything good to say.",
       "They may have shared blood, but nothing more. r_c doesn't show up to m_c's vigil.",
       "Maybe in a deep-rooted hatred of {PRONOUN/m_c/object}, r_c is glad {PRONOUN/r_c/subject} doesn't have to see {PRONOUN/r_c/poss} parent, m_c, anymore.",
@@ -10,16 +10,33 @@
       "r_c hisses until {PRONOUN/r_c/poss} throat is burnt and hoarse, believing m_c could hear {PRONOUN/r_c/object}. Why did {PRONOUN/m_c/subject} hate {PRONOUN/r_c/object} so much, yet brought {PRONOUN/r_c/object} into this life? {PRONOUN/r_c/subject/CAP} knows {PRONOUN/r_c/subject} will never have the answers.",
       "Since birth, r_c was lectured countless times that {PRONOUN/r_c/subject} should always honor {PRONOUN/r_c/poss} parents. Pfft. m_c doesn't deserve such praises from {PRONOUN/r_c/object}.",
       "It's a horrendous moment when a child outlives their parents. But, for r_c? {PRONOUN/r_c/subject/CAP} couldn't help but leer at m_c's body in {PRONOUN/m_c/poss} dirty grave. Here's to many moons without {PRONOUN/r_c/poss} parent.",
-      "m_c wasn't there for r_c. And now, r_c will never be there for {PRONOUN/r_c/poss} parent's death. Love was never reciprocated between the two of them, so it was easy and a breath of fresh air as r_c simply strolled by, ignoring the vigil."
+      "m_c wasn't there for r_c. And now, r_c will never be there for {PRONOUN/r_c/poss} parent's death. Love was never reciprocated between the two of them, so it was easy and a breath of fresh air as r_c simply strolled by, ignoring the vigil.",
+      "m_c, dead? r_c snorts. Good riddance. {PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} no kind of parent.",
+      "When r_c is called to speak at m_c's vigil, {PRONOUN/r_c/subject} {VERB/r_c/cause/causes} a scene by recounting all the ways m_c failed {PRONOUN/r_c/object} as a parent.",
+      "r_c pretends to be sorry m_c is dead. At least now {PRONOUN/r_c/subject} can live {PRONOUN/r_c/poss} life without others associating {PRONOUN/r_c/object} with {PRONOUN/r_c/poss} parent.",
+      "r_c looks at m_c's body without much sorrow darkening {PRONOUN/r_c/poss} gaze. Kin means nothing without love, and their relationship had little of that.",
+      "r_c has half a mind to desecrate m_c's body. {PRONOUN/r_c/subject/CAP} {VERB/r_c/resist/resists}, for {PRONOUN/r_c/poss} Clanmates' sake, but {PRONOUN/r_c/subject} won't grieve {PRONOUN/r_c/poss} parent.",
+      "For all their differences, r_c cannot find it in {PRONOUN/r_c/self} to be glad m_c is dead. At least now {PRONOUN/r_c/subject} can move on from {PRONOUN/r_c/poss} troubled relationship with {PRONOUN/r_c/poss} parent.",
+      "The sight of {PRONOUN/r_c/poss} parent's body lying in the middle of camp fills r_c with a terrible, guilty relief.",
+      "No cat should feel glad that their parent is dead, r_c thinks. Unless that cat had a parent like m_c.",
+      "A Clanmate notices r_c's cold reaction to m_c's death and points out to {PRONOUN/r_c/object} that, for all their difficulties, m_c was still {PRONOUN/r_c/poss} parent. r_c rolls {PRONOUN/r_c/poss} eyes. m_c was no parent to {PRONOUN/r_c/object}.",
+      "r_c gathers {PRONOUN/r_c/poss} friends and suggests a celebratory hunt all together. When one of {PRONOUN/r_c/poss} Clanmates asks what the occasion is, r_c cheerfully replies that {PRONOUN/r_c/poss} parent is dead at last."
     ],
     "no_body": [
-      "It's sad, the vigil. More so because r_c knows {PRONOUN/r_c/subject} should care and doesn't, than any grief for m_c.",
-      "r_c refuses to sit vigil for m_c. {PRONOUN/m_c/subject/CAP} failed r_c as a parent, guardian, and mentor. Why should r_c honor {PRONOUN/m_c/object} now?",
+      "It's sad, the vigil. More because r_c knows {PRONOUN/r_c/subject} should care and {VERB/r_c/don't/doesn't}, than out of any grief for m_c.",
+      "r_c refuses to sit vigil for m_c. {PRONOUN/m_c/subject/CAP} failed {PRONOUN/r_c/object} as a parent, guardian, and mentor. Why should r_c honor {PRONOUN/m_c/object} now?",
       "r_c is called to m_c's vigil, but declines to speak. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} not sure {PRONOUN/r_c/subject}'d have anything good to say.",
       "They may have shared blood, but nothing more. r_c doesn't show up to m_c's vigil.",
       "Without m_c's sneering and berating anymore, r_c blows a sigh of relief; {PRONOUN/r_c/subject} {VERB/r_c/is/are} no longer under the control of {PRONOUN/r_c/poss} parent.",
       "Even if m_c's body was never found, lost within the secrets of what took {PRONOUN/m_c/object}, r_c couldn't help but sneak a glimpse over {PRONOUN/r_c/poss} shoulder, frightened that m_c is watching from the shadows...",
-      "r_c scoffs at the thought that m_c lays in an unknown grave out in the wilderness, insisting it was too good for {PRONOUN/m_c/object}. But at least for r_c, {PRONOUN/r_c/subject} don't have to pretend to weep over a body the Clan couldn't find."
+      "r_c scoffs at the thought that m_c lays in an unknown grave out in the wilderness, insisting it was too good for {PRONOUN/m_c/object}. But at least for r_c, {PRONOUN/r_c/subject} don't have to pretend to weep over a body the Clan couldn't find.",
+      "m_c, dead? r_c snorts. Good riddance. {PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} no kind of parent.",
+      "When r_c is called to speak at m_c's vigil, {PRONOUN/r_c/subject} {VERB/r_c/cause/causes} a scene by recounting all the ways m_c failed {PRONOUN/r_c/object} as a parent.",
+      "r_c pretends to be sorry m_c is dead. At least now {PRONOUN/r_c/subject} can live {PRONOUN/r_c/poss} life without others associating {PRONOUN/r_c/object} with {PRONOUN/r_c/poss} parent.",
+      "For all their differences, r_c cannot find it in {PRONOUN/r_c/self} to be glad m_c is dead. At least now {PRONOUN/r_c/subject} can move on from {PRONOUN/r_c/poss} troubled relationship with {PRONOUN/r_c/poss} parent.",
+      "No cat should feel glad that their parent is dead, r_c thinks. Unless that cat had a parent like m_c.",
+      "A Clanmate notices r_c's cold reaction to m_c's death and points out to {PRONOUN/r_c/object} that, for all their difficulties, m_c was still {PRONOUN/r_c/poss} parent. r_c rolls {PRONOUN/r_c/poss} eyes. m_c was no parent to {PRONOUN/r_c/object}.",
+      "r_c gathers {PRONOUN/r_c/poss} friends and suggests a celebratory hunt all together. When one of {PRONOUN/r_c/poss} Clanmates asks what the occasion is, r_c cheerfully replies that {PRONOUN/r_c/poss} parent is dead at last."
     ]
   },
   "adventurous": {

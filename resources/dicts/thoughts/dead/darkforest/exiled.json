@@ -1,23 +1,50 @@
 [
-	{
-		"id": "exiled_dark_forest_thoughts",
-		"thoughts": [
-            "Is wondering if {PRONOUN/m_c/poss} punishment will ever end",
-            "Claims that StarClan itself is against {PRONOUN/m_c/object}", 
-            "Hisses at {PRONOUN/m_c/poss} former Clanmates",
-            "Is used to being alone",
-            "Uses dirty tricks in battle",
-            "Has no sense of justice",
-            "Scowls while watching the Clan continue on as if {PRONOUN/m_c/subject} {VERB/m_c/were/was} never there at all",
-            "Counts {PRONOUN/m_c/poss} crimes against c_n", 
-            "Hopes c_n will collapse into chaos",
-            "Enjoys the darkness of the Place of No Stars",
-            "Is telling lies about c_n with a blank face",
-            "Knows what {PRONOUN/m_c/subject} did",
-            "Is daydreaming about killing the leader that banished {PRONOUN/m_c/object}", 
-            "Is trying to find ways to outsmart even the wittiest Clan cats",
-            "Can't even bare to look at the Clanmates {PRONOUN/m_c/subject} used to think of as friends",
-            "Finds {PRONOUN/m_c/self} thinking about {PRONOUN/m_c/poss} life in c_n "
-			]
-	}
+  {
+    "id": "exiled_df_dead_thoughts",
+    "thoughts": [
+      "Thinks of the disapproving glares of {PRONOUN/m_c/poss} ex-Clanmates while {PRONOUN/m_c/subject} {VERB/m_c/train/trains}",
+      "Will never forget the looks of scorn on {PRONOUN/m_c/poss} Clanmates faces",
+      "Resents the Clan that exiled {PRONOUN/m_c/object}"
+        ]
+    },
+    {
+        "id": "exiled_df_evil",
+        "thoughts": [
+            "Is imagining the tree {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} clawing at is one of {PRONOUN/m_c/poss} ex-Clanmates",
+            "Trains extra hard, waiting for an opportunity to get {PRONOUN/m_c/poss} revenge",
+            "Knows {PRONOUN/m_c/subject} {VERB/m_c/were/was} right to do what {PRONOUN/m_c/subject} did",
+            "Wants to make {PRONOUN/m_c/poss} old leader pay for exiling {PRONOUN/m_c/object}",
+            "Is watching {PRONOUN/m_c/poss} old Clan with scorn, hoping for an opportunity to get back at them",
+            "Is cursing {PRONOUN/m_c/poss} old Clan"
+        ],
+    "main_trait_constraint": [
+        "bloodthirsty",
+        "faithful",
+        "vengeful",
+        "cold",
+        "strict",
+        "fierce",
+        "arrogant",
+        "ambitious"
+        ]
+    },
+    {
+        "id": "exiled_df_kind",
+        "thoughts": [
+          "Truly believes {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} misunderstood",
+          "Wonders if what {PRONOUN/m_c/subject} did was truly right...",
+          "Is begging StarClan for forgiveness",
+          "Wishes {PRONOUN/m_c/subject} could apologize to c_n for everything {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} done",
+          "Is deeply regretting what {PRONOUN/m_c/subject} did to get exiled and end up here"
+        ],
+    "main_trait_constraint": [
+        "compassionate",
+        "faithful",
+        "loving",
+        "thoughtful",
+        "nervous",
+        "wise",
+        "sincere"
+        ]
+    }
 ]

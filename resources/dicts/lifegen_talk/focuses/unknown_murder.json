@@ -111,7 +111,7 @@
         ],
         [
             "I'm supposed to help clean out plove_fc_c's nest today, but I really don't want to.",
-            "It's not just that I don't want to see it gone... what if there's some kind of clue to what happened to {PRONOUN/plove_fc_c/object} in their nest, and we don't notice it, and we throw it out?",
+            "It's not just that I don't want to see it gone... what if there's some kind of clue to what happened to {PRONOUN/plove_fc_c/object} in {PRONOUN/plove_fc_c/poss} nest, and we don't notice it, and we throw it out?",
             "Wouldn't it be safer to wait? Just a little longer?"
         ]
     ],
@@ -399,7 +399,7 @@
             "focus"
         ],
         [
-            "dislike_fc_c_cool was always too busy gossipping and posturing to do {PRONOUN/dislike_fc_c_cool/poss} job. It was honestly infuriating.",
+            "dislike_fc_c_cool was always too busy gossiping and posturing to do {PRONOUN/dislike_fc_c_cool/poss} job. It was honestly infuriating.",
             "Don't look at me like that! Of <i>course</i> I didn't kill {PRONOUN/dislike_fc_c_cool/object}. I'm just saying, I understand why someone might."
         ]
     ],
@@ -440,7 +440,7 @@
         ],
         [
             "Would everycat stop accusing plove_rsh_c of killing fc_c? Just because {PRONOUN/plove_rsh_c/subject} made a mistake in the past doesn't mean {PRONOUN/plove_rsh_c/subject}{VERB/plove_rsh_c/'re/'s} suddenly responsible for every mysterious death!",
-            "Leave {PRONOUN/plove_rsh_c/object} alone and stop gossipping, for StarClan's sake!"
+            "Leave {PRONOUN/plove_rsh_c/object} alone and stop gossiping, for StarClan's sake!"
         ]
     ],
     "unkmurder_focus_SQ27": [
@@ -503,7 +503,7 @@
         ],
         [
             "plike_fc_c... one of our Clanmates... was murdered...",
-            "[t_c sits with {PRONOUN/t_c/poss} back to a tree, watching the camp. {PRONOUN/t_c/subject/CAP} sniffle.]",
+            "[t_c sits with {PRONOUN/t_c/poss} back to a tree, watching the camp. {PRONOUN/t_c/subject/CAP} {VERB/t_c/sniffle/sniffles}.]",
             "Isn't it my job to notice tensions and stop them before something bad happens?",
             "I should've seen something. I should've been a good enough mediator to keep plike_fc_c safe!"
         ]
@@ -566,7 +566,7 @@
             "focus"
         ],
         [
-            "One of the reasons I joined c_nClan was because I thought it\u00e2\u20ac\u2122d be safer than living on my own.",
+            "One of the reasons I joined c_nClan was because I thought it'd be safer than living on my own.",
             "It seems like I was wrong. Apparently it just lures cats like fc_c into a false sense of security so someone can kill them."
         ]
     ],
@@ -585,8 +585,8 @@
             "focus"
         ],
         [
-            "This is ridiculous. At least when rogues kill other cats, they\u00e2\u20ac\u2122re open about what they did.",
-            "plike_fc_c doesn\u00e2\u20ac\u2122t deserve to have {PRONOUN/plike_fc_c/poss} death be a mystery."
+            "This is ridiculous. At least when rogues kill other cats, they're open about what they did.",
+            "plike_fc_c doesn't deserve to have {PRONOUN/plike_fc_c/poss} death be a mystery."
         ]
     ],
     "unkmurder_focus_SQ36": [
@@ -600,9 +600,9 @@
         ],
         [
             "[t_c hisses in your ear.]",
-            "It was you, wasn\u00e2\u20ac\u2122t it? I saw your face when we first realized what happened to fc_c. You didn\u00e2\u20ac\u2122t look nearly surprised enough.",
-            "No, I don\u00e2\u20ac\u2122t have proof, but the whole Clan knows how you feel about me. If I\u00e2\u20ac\u2122m next, well...",
-            "...Let\u00e2\u20ac\u2122s just say that everycat will know it was you. And honestly, that might be worth dying for."
+            "It was you, wasn't it? I saw your face when we first realized what happened to fc_c. You didn't look nearly surprised enough.",
+            "No, I don't have proof, but the whole Clan knows how you feel about me. If I'm next, well...",
+            "...Let's just say that everycat will know it was you. And honestly, that might be worth dying for."
         ]
     ],
     "unkmurder_focus_SQ37": [
@@ -617,7 +617,7 @@
             "focus"
         ],
         [
-            "I know it was you. I don\u00e2\u20ac\u2122t have proof yet, but I <i>will</i> soon.",
+            "I know it was you. I don't have proof yet, but I <i>will</i> soon.",
             "Watch yourself."
         ]
     ],
@@ -633,7 +633,7 @@
         ],
         [
             "[t_c has been eying you all day. Any time you look over, {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} fixated on you. {VERB/t_c/Are/Is} {PRONOUN/t_c/subject} sliding {PRONOUN/t_c/poss} claws in and out?]",
-            "[If {PRONOUN/t_c/subject} {VERB/t_c/figure/figures} out that you were the one to kill plove_fc_c, you\u00e2\u20ac\u2122re pretty sure {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} the type to take action rather than wait for l_n to intervene. You\u00e2\u20ac\u2122ll have to be careful.]"
+            "[If {PRONOUN/t_c/subject} {VERB/t_c/figure/figures} out that you were the one to kill plove_fc_c, you're pretty sure {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} the type to take action rather than wait for l_n to intervene. You'll have to be careful.]"
         ]
     ],
     "unkmurder_focus_SQ39": [
@@ -650,7 +650,7 @@
         [
             "[t_c is practicing defensive moves over and over with r_a. When {PRONOUN/t_c/subject} {VERB/t_c/see/sees} you, {PRONOUN/t_c/subject} {VERB/t_c/call/calls} you over.]",
             "Hey, do you want to practice with us? tm_n taught me a technique to get away if someone pins you down.",
-            "I think everycat should learn it, in case whoever killed fc_c tries anything else. Come on, I\u00e2\u20ac\u2122ll teach you!"
+            "I think everycat should learn it, in case whoever killed fc_c tries anything else. Come on, I'll teach you!"
         ]
     ],
     "unkmurder_focus_SQ40": [
@@ -668,8 +668,8 @@
             "focus"
         ],
         [
-            "Of course I\u00e2\u20ac\u2122m not saying it\u00e2\u20ac\u2122s good that neutral_fc_c got killed, but it means tm_n\u00e2\u20ac\u2122s been teaching me some advanced fighting moves early.",
-            "Here, try to attack me! I\u00e2\u20ac\u2122ll show you!"
+            "Of course I'm not saying it's good that neutral_fc_c got killed, but it means tm_n's been teaching me some advanced fighting moves early.",
+            "Here, try to attack me! I'll show you!"
         ]
     ],
     "unkmurder_focus_SQ41": [
@@ -686,7 +686,7 @@
             "focus"
         ],
         [
-            "tm_n tried to take me hunting this morning. {PRONOUN/tm_n/subject/CAP} said it\u00e2\u20ac\u2122s important to keep the Clan well-fed, but I told {PRONOUN/tm_n/object} that after what happened to neutral_fc_c, I\u00e2\u20ac\u2122ve gotta learn to fight so I can defend myself.",
+            "tm_n tried to take me hunting this morning. {PRONOUN/tm_n/subject/CAP} said it's important to keep the Clan well-fed, but I told {PRONOUN/tm_n/object} that after what happened to neutral_fc_c, I've gotta learn to fight so I can defend myself.",
             "So we did that instead! It was fun."
         ]
     ],
@@ -703,8 +703,8 @@
         ],
         [
             "neutral_r_w1 and I were supposed to hunt as a pair today, but I asked if trust_r_w2 could come too.",
-            "It\u00e2\u20ac\u2122s not that I don\u00e2\u20ac\u2122t trust {PRONOUN/neutral_r_w1/object}! I just... I don\u00e2\u20ac\u2122t feel comfortable being alone with anyone right now.",
-            "I really hope I didn\u00e2\u20ac\u2122t hurt neutral_r_w1\u00e2\u20ac\u2122s feelings."
+            "It's not that I don't trust {PRONOUN/neutral_r_w1/object}! I just... I don't feel comfortable being alone with anyone right now.",
+            "I really hope I didn't hurt neutral_r_w1's feelings."
         ]
     ],
     "unkmurder_focus_SQ43": [
@@ -990,10 +990,10 @@
         ],
         [
             "y_c! y_c, do you have any enemies?",
-            "I'm just... being cautious. I didn't think fc_c_sweet had any enemies, but...",
+            "I'm just... Being cautious. I didn't think fc_c_sweet had any enemies, but...",
             "[You assure t_c that you would never let anyone kill you, and {PRONOUN/t_c/subject} {VERB/t_c/don't/doesn't} have to worry.]",
             "Okay. I'll take your word for it, y_c.",
-            "Just... be careful, okay?"
+            "Just... Be careful, okay?"
         ]
     ],
     "unknown_murder_J5": [
@@ -1098,7 +1098,7 @@
         [
             "[After hearing about the mystery death in the Clan, t_c has refused to leave the nursery.]",
             "No! No! I don't care! If I go out there, the monster's gonna get me like fc_c!",
-            "[You consider telling {PRONOUN/t_c/object} that fc_c was killed by a cat, not a monster, but... that would probably make it worse.]"
+            "[You consider telling {PRONOUN/t_c/object} that fc_c was killed by a cat, not a monster, but... That would probably make it worse.]"
         ]
     ],
     "unknown_murder_J10": [
@@ -1174,7 +1174,7 @@
             "cool"
         ],
         [
-            "[Since they were curious, you took t_c to the place you killed fc_c. They sniff around the area, inspecting the ground through squinting eyes.]",
+            "[Since {PRONOUN/t_c/subject} {VERB/t_c/were/was} curious, you took t_c to the place you killed fc_c. {PRONOUN/t_c/subject/CAP} {VERB/t_c/sniff/sniffs} around the area, inspecting the ground through squinting eyes.]",
             "You really covered your tracks well, huh...",
             "Impressive. Really.",
             "You gonna keep going?"
@@ -1285,7 +1285,7 @@
             "they_blind"
         ],
         [
-            "y_c, I can't understand why anyone would hate plove_fc_c enough to... to...",
+            "y_c, I can't understand why anyone would hate plove_fc_c enough to... To...",
             "[t_c buries {PRONOUN/t_c/poss} head into {PRONOUN/t_c/poss} paws.]",
             "It's awful! I keep thinking about it and nothing makes sense!"
         ]
@@ -1389,7 +1389,7 @@
         [
             "Hey, y_c? Can you promise me something?",
             "If you see plove_fc_c_introspective at the half-moon meeting, can you ask {PRONOUN/plove_fc_c_introspective/object} what story {PRONOUN/plove_fc_c/subject} {VERB/plove_fc_c_introspective/were/was} going to tell me before {PRONOUN/plove_fc_c_introspective/subject} {VERB/plove_fc_c_introspective/were/was}...",
-            "[t_c tears up and in pity, you cut them off with a nod of your head.]"
+            "[t_c tears up and in pity, you cut {PRONOUN/t_c/object} off with a nod of your head.]"
         ]
     ],
     "introspective_unkmur_H12": [
@@ -1420,7 +1420,7 @@
         ],
         [
             "[As you approach t_c, you hear {PRONOUN/t_c/object} mumbling to {PRONOUN/t_c/self}.]",
-            "rsh_c? No, no, {PRONOUN/rsh_c/subject} wouldn't dare do it so soon. What about dislike_r_c1_unlawful... gah {PRONOUN/dislike_r_c1_unlawful/subject} may be a handful, but I trust {PRONOUN/dislike_r_c1_unlawful/object} more than r_c2_brooding... but r_c2_brooding wouldn't do something like this either...",
+            "rsh_c? No, no, {PRONOUN/rsh_c/subject} wouldn't dare do it so soon. What about dislike_r_c1_unlawful... gah {PRONOUN/dislike_r_c1_unlawful/subject} may be a handful, but I trust {PRONOUN/dislike_r_c1_unlawful/object} more than r_c2_brooding... But r_c2_brooding wouldn't do something like this either...",
             "[You decide to leave t_c alone as {PRONOUN/t_c/poss} mumbles turn frustrated.]"
         ]
     ],

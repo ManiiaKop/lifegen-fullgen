@@ -62,7 +62,7 @@
 				],
 				"scar_text": "m_c got a scar after r_c2 challenged {PRONOUN/m_c/object}.",
 				"death_text": "Died after r_c2 challenged {PRONOUN/m_c/object}.",
-				"death_leader_text": "were challenged by r_c2"
+				"death_leader_text": "{VERB/m_c/were/was} challenged by r_c2"
 			},
 			"r_c1": {
 				"injury_names": [
@@ -70,7 +70,7 @@
 				],
 				"scar_text": "Got a scar while punishing r_c2 in the name of m_c.",
 				"death_text": "Died after punishing r_c2 in the name of m_c.",
-				"death_leader_text": "while punishing r_c2"
+				"death_leader_text": "{VERB/r_c1/were/was} punishing r_c2"
 			},
 			"r_c2": {
 				"injury_names": [
@@ -79,7 +79,7 @@
 				],
 				"scar_text": "r_c2 challenged m_c, was punished by r_c1 for this, and got a scar as a reminder of {PRONOUN/r_c2/poss} actions.",
 				"death_text": "{PRONOUN/r_c2/subject/CAP} challenged m_c, {VERB/r_c2/were/was} punished by r_c1, and died as a result.",
-				"death_leader_text": "after {PRONOUN/r_c2/subject} challenged m_c and got punished by r_c1"
+				"death_leader_text": "challenged m_c and got punished by r_c1 as a result"
 			}
 		},
 		"status_constraint": {
@@ -136,7 +136,7 @@
 		"id": "group_3_leader_neg2",
 		"cat_amount": 3,
 		"interactions": [
-			"m_c and r_c1 discuss where they should be marking the border. r_c2 overhears, and disagrees with their decision, causing m_c and r_c1 to sneer at them in distaste."
+			"m_c and r_c1 discuss where they should be marking the border. r_c2 overhears, and disagrees with their decision, causing m_c and r_c1 to sneer at {PRONOUN/r_c2/object} in distaste."
 		],
 		"status_constraint": {
 			"m_c": [
@@ -186,6 +186,29 @@
 				"dislike": "increase",
 				"comfortable": "decrease",
 				"trust": "decrease"
+			}
+		}
+	},
+	{
+		"id": "group_3_lifegen_queen_H1",
+		"cat_amount": 3,
+		"intensity": "low",
+		"interactions": [
+			"m_c and r_c1's conversation is cut short as m_c notices r_c2 is trying to eat an unknown plant.",
+			"r_c2 tries to eavesdrop on m_c and r_c1's conversation."
+		],
+		"status_constraint": {
+			"m_c": [
+				"queen"
+			],
+			"r_c2": [
+				"kitten"
+			]
+		},
+		"specific_reaction": {
+			"m_c_to_r_c2": {
+				"trust": "decrease",
+				"dislike": "increase"
 			}
 		}
 	}

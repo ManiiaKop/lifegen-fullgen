@@ -12,7 +12,8 @@
             "Is helping a cat work through complicated emotions",
             "Is practicing neutrality",
             "Is learning how to open channels of communication between two cats",
-            "Is clarifying issues"
+            "Is clarifying issues",
+            "Not looking forward to the newest misunderstanding brewing"
         ]
     },
     {
@@ -20,7 +21,7 @@
         "thoughts": [
             "Had an argument with another mediator apprentice",
             "Doesn't agree with r_c's style of mediation",
-            "Is planning a group mediation session with r_c and some troubling cats"
+            "Is planning a group mediation session with r_c and some troublemaking cats"
         ],
         "random_status_constraint": [
             "mediator apprentice"
@@ -34,7 +35,7 @@
             "Is amazed at how r_c talked {PRONOUN/r_c/poss} way out of a potential war",
             "Is asking r_c the best way to calm down an angry cat",
             "Is asking r_c about new ways to work through problems",
-            "Is following in r_c's pawsteps"
+            "Is following in r_c's paw steps"
         ],
         "random_status_constraint": [
             "mediator"
@@ -51,14 +52,13 @@
         ],
         "random_status_constraint": [
             "mediator apprentice",
-            "apprentice",
-            "healer apprentice"
+            "apprentice"
         ]
     },
     {
         "id": "righteous_mediator_apprentice",
         "thoughts": [
-            "Was scolded for taking sides in mediating arguments recently",
+            "Was scolded for taking sides while mediating arguments recently",
             "Is being reminded to be neutral in mediation",
             "Is having trouble remaining neutral when one cat is clearly in the wrong",
             "Is struggling between doing the right thing and keeping a secret",
@@ -81,24 +81,49 @@
     {
         "id": "flamboyant_mediator_app",
         "thoughts": [
-          "Learns to not gossip so much about what {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} told by Clanmates",
-          "Brings attention off a shyer Clanmate with wild skylarking through camp",
-          "Yowls about another Clan being unreasonable",
-          "Encourages a Clanmate to speak to their crush fearlessly",
-          "Doesn't understand {PRONOUN/m_c/poss} quieter Clanmates but tries to learn",
-          "Is understanding all sorts of personalities through games and acting",
-          "Starts to understand why certain styles are popular compared to others",
-          "Should tell r_c nicely to be more stylish",
-          "Was scolded after bluntly telling r_c {PRONOUN/r_c/subject} {VERB/r_c/weren't/wasn't} stylish enough",
-          "Is learning what makes everycat different",
-          "Encourages the kits to be themselves always",
-          "Yowls approval of r_c making a positive change",
-          "Tells r_c {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} slaying",
-          "Exclaims that being oneself is being their best self",
-          "Hollers support to r_c while 'hiding' across camp"
+            "Learns to not gossip so much about what {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} told by Clanmates",
+            "Brings attention off a shyer Clanmate with wild skylarking through camp",
+            "Yowls about another Clan being unreasonable",
+            "Encourages a Clanmate to speak to their crush fearlessly",
+            "Doesn't understand {PRONOUN/m_c/poss} quieter Clanmates but tries to learn",
+            "Is understanding all sorts of personalities through games and acting",
+            "Starts to understand why certain styles are popular compared to others",
+            "Should tell r_c nicely to be more stylish",
+            "Was scolded after bluntly telling r_c {PRONOUN/r_c/subject} {VERB/r_c/weren't/wasn't} stylish enough",
+            "Is learning what makes everycat different",
+            "Encourages the kits to be themselves always",
+            "Yowls approval of r_c making a positive change",
+            "Tells r_c {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} slaying",
+            "Exclaims that being oneself is being their best self",
+            "Hollers support to r_c while 'hiding' across camp"
         ],
         "main_trait_constraint": [
-          "flamboyant"
+            "flamboyant"
         ]
-      }
+    },
+    {
+        "id": "medi_app_to_app",
+        "thoughts": [
+            "Scoffs when r_c implies mediating is so easy",
+            "Asks r_c if they can switch roles for the moon",
+            "Teases r_c by offering to mediate {PRONOUN/r_c/object} with {PRONOUN/r_c/poss} crush",
+            "Had a petty argument with r_c and now regrets it",
+            "Thinks r_c's company is calming in {PRONOUN/r_c/poss} own way",
+            "Contemplates mediating r_c and {PRONOUN/r_c/poss} mentors relationship",
+            "Exaggerates the latest disagreement between two warriors to make r_c laugh",
+            "Shares some facts about o_c {PRONOUN/m_c/subject} probably shouldn't disclose to r_c",
+            "Gets r_c out of a tedious chore by choosing {PRONOUN/m_c/object} for 'mediation'",
+            "Grumbles that r_c needs a nap",
+            "Offers to do a chore for r_c so {PRONOUN/r_c/subject} can relax",
+            "Makes funny faces at r_c in the middle of a Clan announcement"
+        ],
+        "random_status_constraint": [
+            "apprentice",
+            "medicine cat apprentice",
+            "queen's apprentice"
+        ],
+        "random_living_constraint": [
+            "living"
+        ]
+    }
 ]

@@ -1,15 +1,34 @@
 [
     {
-        "id": "mediator_to_dead_mediator",
+        "id": "mediator_gen",
         "thoughts": [
-            "Wishes {PRONOUN/m_c/subject} could ask r_c for advice",
-          "Wonders how r_c would have handled c_n's most recent conflict"
-        ],
-        "random_status_constraint": [
-            "mediator"
-        ],
-        "random_living_status": [
-            "starclan"
+            "Is feeling a sense of pride after mediating a difficult argument",
+            "Wishes {PRONOUN/m_c/poss} Clanmates would just talk to each other",
+            "Is upset over a recent negotiation with a rival Clan",
+            "Negotiates an herb trade with another Clan",
+            "Is negotiating with a kittypet to make use of the herbs in their Twoleg garden",
+            "Is dismayed at how quickly {PRONOUN/m_c/poss} Clanmates get into arguments",
+            "Feels exhausted after mediating so many arguments",
+            "Feels pride for {PRONOUN/m_c/poss} work",
+            "Is mediating a couple's relationship",
+            "Is mediating a long time friendship between two Clanmates",
+            "Is feeling frustrated after a failed negotiation",
+            "Is feeling exhausted from resolving petty arguments",
+            "Wants to solve a dispute with another Clan",
+            "Wonders if mediating is meant to be so draining",
+            "Wonders if being a warrior would have been more fun",
+            "Is proud of how well {PRONOUN/m_c/subject} {VERB/m_c/are/is} doing as a mediator",
+            "Accidentally made an argument worse",
+            "Is proud of getting through a difficult mediation session",
+            "Feels exhausted from {PRONOUN/m_c/poss} Clanmates' bickering",
+            "Is listening to both sides of an argument",
+            "Is feeling a bit underappreciated for {PRONOUN/m_c/poss} mediation",
+            "Is wondering if {PRONOUN/m_c/subject} made the right decision in becoming a mediator",
+            "Is relieved {PRONOUN/m_c/subject} broke up an argument before it started",
+            "Is hoping the Clan can stay peaceful",
+            "Is contemplating teaching the Clan communication skills",
+            "Is mediating a small disagreement between two Clanmates",
+            "Wonders if c_n considers {PRONOUN/m_c/object} to be a good mediator"
         ]
     },
     {
@@ -36,7 +55,7 @@
     {
         "id": "mediator_to_alive_leader",
         "thoughts": [
-            "Is angry with the leader for a border dispute gone wrong",
+            "Is upset with the leader over a border dispute gone wrong",
             "Mediated a meeting between senior warriors and the leader over recent Clan decisions",
             "Thinks r_c should be more prudent regarding Clan relations"
         ],
@@ -54,43 +73,12 @@
         ]
     },
     {
-        "id": "mediator_gen",
-        "thoughts": [
-            "Is feeling a sense of pride after mediating a difficult argument",
-            "Wishes {PRONOUN/m_c/poss} Clanmates would just talk to each other",
-          "Is upset by a recent negotiation with a rival Clan",
-          "Negotiates a herb trade with another Clan",
-            "Is negotiating with a kittypet to make use of the herbs in their Twoleg garden",
-            "Is dismayed at how quickly {PRONOUN/m_c/poss} Clanmates get into arguments",
-            "Feels exhausted after mediating so many arguments",
-          "Feels pride for {PRONOUN/m_c/poss} work",
-            "Is mediating a couple's relationship",
-            "Is mediating a long time friendship between two Clanmates",
-            "Is feeling frustrated after a failed negotiation",
-            "Is feeling exhausted from resolving petty arguments",
-            "Wants to solve a dispute with another Clan",
-            "Wonders if mediating is meant to be so draining",
-            "Wonders if being a warrior would have been more fun",
-            "Is proud of how well {PRONOUN/m_c/subject} {VERB/m_c/are/is} doing as a mediator",
-            "Accidentally made an argument worse",
-            "Is proud of getting through a difficult mediation session",
-            "Feels exhausted from {PRONOUN/m_c/poss} Clanmates' bickering",
-            "Is listening to both sides of an argument",
-          "Is feeling a bit underappreciated for {PRONOUN/m_c/poss} mediation",
-            "Is wondering if {PRONOUN/m_c/subject} made the right decision to become a mediator",
-            "Is relieved {PRONOUN/m_c/subject} broke up an argument before it started",
-            "Is hoping the Clan can stay peaceful",
-            "Is contemplating teaching the Clan communication skills",
-            "Is mediating a small disagreement between two Clanmates",
-            "Wonders if c_n considers {PRONOUN/m_c/object} a good mediator"
-        ]
-    },
-    {
         "id": "bloodthirsty_mediator",
         "thoughts": [
             "Is wondering if {PRONOUN/m_c/subject} should sabotage a relationship that is going a bit too well",
             "Wishes to break up a sickeningly lovey-dovey couple",
-            "Chuckles to {PRONOUN/m_c/self} after sabotaging another relationship"
+            "Chuckles to {PRONOUN/m_c/self} after sabotaging another relationship",
+            "Encourages two cats to settle their differences in a 'friendly' spar"
         ],
         "main_trait_constraint": [
             "bloodthirsty"
@@ -99,30 +87,30 @@
     {
         "id": "flamboyant_mediator",
         "thoughts": [
-          "Is the loudest supporter of r_c",
-          "Tries to understand a clanmate that doesn't like to be a team player through acting",
-          "Helps r_c with an issue by playing out the moment with {PRONOUN/r_c/object}",
-          "Sets a new trend in communication",
-          "Has influenced another clan to follow {PRONOUN/m_c/poss} style trends",
-          "Enacts a recent mediation with another clan for all to watch",
-          "Is happy with all the attention {PRONOUN/m_c/subject} {VERB/m_c/get/gets} in this role",
-          "Was too loud in a talk and made r_c upset when {PRONOUN/r_c/subject} overheard",
-          "Is very, very, very, very, veryyyyyy sorry for speaking too loudly...",
-          "Enjoys being a pivotal part of Clan social life",
-          "Heckles a fellow mediator to be more bold and attention grabbing when speaking!",
-          "Says that there are fewer problems when {PRONOUN/m_c/subject} {VERB/m_c/have/has} the Clan's attention",
-          "Quotes a poetic kittypet {PRONOUN/m_c/subject} met once",
-          "Brings a new trend from another Clan."
+            "Is the loudest supporter of r_c",
+            "Tries to understand a clanmate that doesn't like to be a team player through acting",
+            "Helps r_c with an issue by playing out the moment with {PRONOUN/r_c/object}",
+            "Sets a new trend in communication",
+            "Has influenced another clan to follow {PRONOUN/m_c/poss} style trends",
+            "Enacts a recent mediation with another clan for all to watch",
+            "Is happy with all the attention {PRONOUN/m_c/subject} {VERB/m_c/get/gets} in this role",
+            "Was too loud in a talk and made r_c upset when {PRONOUN/r_c/subject} overheard",
+            "Is very, very, very, very, veryyyyyy sorry for speaking too loudly...",
+            "Enjoys being a pivotal part of Clan social life",
+            "Heckles a fellow mediator to be more bold and attention grabbing when speaking!",
+            "Says that there are fewer problems when {PRONOUN/m_c/subject} {VERB/m_c/have/has} the Clan's attention",
+            "Quotes a poetic kittypet {PRONOUN/m_c/subject} met once",
+            "Brings a new trend from another Clan."
         ],
         "main_trait_constraint": [
-          "flamboyant"
+            "flamboyant"
         ]
-      },
+    },
     {
         "id": "cold_mediator",
         "thoughts": [
             "Is judging two Clanmates for their foolish argument",
-          "Wishes to break up a sickeningly lovey-dovey couple",
+            "Wishes to break up a sickeningly lovey-dovey couple",
             "Is sitting back and watching an argument take place"
         ],
         "main_trait_constraint": [
@@ -153,7 +141,10 @@
         "id": "insecure_mediator",
         "thoughts": [
             "Finds mediating emotionally draining",
-            "Is worried {PRONOUN/m_c/subject} may have made things worse"
+            "Is worried {PRONOUN/m_c/subject} may have made things worse",
+            "Hesitates to step into disagreements",
+            "Backs out of mediating after becoming overwhelmed with the situation",
+            "Is emotionally drained from a recent fight"
         ],
         "main_trait_constraint": [
             "insecure"
@@ -163,7 +154,10 @@
         "id": "loving_mediator",
         "thoughts": [
             "Wonders why everycat can't just get along",
-            "Sees all sides of the argument"
+            "Sees all sides of the argument",
+            "Prioritizes every cats feelings",
+            "Is quick to comfort other cats and give advice",
+            "Tries {PRONOUN/m_c/poss} best to give relationship advice to a couple who's struggling"
         ],
         "main_trait_constraint": [
             "loving"
@@ -173,7 +167,13 @@
         "id": "nervous_mediator",
         "thoughts": [
             "Finds mediating emotionally draining",
-            "Is feeling worried with all the high tension lately"
+            "Is feeling worried with all the high tension lately",
+            "Has a headache from all {PRONOUN/m_c/poss} anxiety lately",
+            "Asks a medicine cat for a herb to calm {PRONOUN/m_c/poss} anxiety",
+            "Feels {PRONOUN/m_c/subject} {VERB/m_c/are/is} one loud disagreement away to just hiding in the elders' den",
+            "Wonders if {PRONOUN/m_c/subject} would do better as a queen",
+            "Contemplates asking for the day off away from unnecessary arguments",
+            "Hides away in {PRONOUN/m_c/poss} nest to avoid mediating"
         ],
         "main_trait_constraint": [
             "nervous"
@@ -182,7 +182,10 @@
     {
         "id": "righteous_mediator",
         "thoughts": [
-            "Is greatly annoyed by a Clanmate's inability to accept they were in the wrong"
+            "Is greatly annoyed by a Clanmate's inability to accept they were in the wrong",
+            "Doesn't hesitate to step into disagreements",
+            "Doesn't hesitate to tell a cat they're wrong",
+            "Carefully considers the facts instead of cats feelings"
         ],
         "main_trait_constraint": [
             "righteous"
@@ -192,7 +195,11 @@
         "id": "troublesome_mediator",
         "thoughts": [
             "Is looking for a pair to sabotage, out of boredom",
-            "Solves problems by starting them"
+            "Solves problems by starting them",
+            "Contemplates starting a few arguments to starve off boredom",
+            "Brainstorms on how to make {PRONOUN/m_c/poss} next mediating chore funnier",
+            "Hides {PRONOUN/m_c/poss} giggles away from cats who's having a ridiculous argument",
+            "Wishes {PRONOUN/m_c/subject} had a fresh-kill to munch on while cats argue"
         ],
         "main_trait_constraint": [
             "troublesome"
@@ -202,13 +209,82 @@
         "id": "vengeful_mediator",
         "thoughts": [
             "Is wondering if {PRONOUN/m_c/subject} should sabotage a relationship that is going a bit too well",
-          "Wishes to break up a sickeningly lovey-dovey couple",
-            "Is sitting back and watching an argument take place"
+            "Wishes to break up a sickeningly lovey-dovey couple",
+            "Is sitting back and watching an argument take place",
+            "Abuses {PRONOUN/m_c/poss} title as mediator to ruin a cats relationship",
+            "Has fun brainstorming how {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} going to make a cats day worse",
+            "Savors getting back to a cat who wronged {PRONOUN/m_c/object}",
+            "Plans to sabotage the Clan's relationship with o_n"
         ],
         "main_trait_constraint": [
             "vengeful"
         ]
+    },
+    {
+        "id": "mediator_to_dead_mediator",
+        "thoughts": [
+            "Wishes {PRONOUN/m_c/subject} could ask r_c for advice",
+            "Wonders how r_c would have handled c_n's most recent conflict",
+            "A bit jealous r_c doesn't have to deal with c_n's pointless arguments anymore"
+        ],
+        "random_status_constraint": [
+            "mediator"
+        ],
+        "random_living_status": [
+            "starclan"
+        ]
+    },
+    {
+        "id": "mediator_thoughtful",
+        "thoughts": [
+            "Watches the cats around {PRONOUN/m_c/object} for any suppressed emotional hardships",
+            "Always asking every cat if they're alright",
+            "Wonders if r_c would appreciate {PRONOUN/m_c/object} solving a few one-sided disagreements",
+            "Notices a lot of cats have been misunderstanding each other lately",
+            "Contemplates giving r_c some unsolicited advice {PRONOUN/m_c/subject} {VERB/m_c/know/knows} r_c needs",
+            "Lets r_c have {PRONOUN/m_c/poss} piece of prey since {PRONOUN/m_c/subject} {VERB/m_c/know/knows} r_c is having a bad day"
+        ],
+        "main_trait_constraint": [
+            "thoughtful"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "mediator_to_queen",
+        "thoughts": [
+            "Offers r_c a space in {PRONOUN/m_c/poss} den so r_c can have so time away from the noisy kittens",
+            "Asks how r_c is doing after seeing {PRONOUN/r_c/object} become overwhelmed with unruly kittens",
+            "Offers to take some of r_c's chores",
+            "Complains with r_c about unnecessary arguments while sunbathing",
+            "Listens to r_c's struggles",
+            "Offers some advice to r_c on how to calm an emotional kitten",
+            "Helps r_c clean the nursery",
+            "Helps r_c clean the elders' den"
+        ],
+        "random_status_constraint": [
+            "queen",
+            "queen's apprentice"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
+        "id": "mediator_to_deputy",
+        "thoughts": [
+            "Offers r_c insight on which warriors do not get along well",
+            "Wonders if r_c realizes {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} sending two rivals together on dawn patrols",
+            "Exclaims 'I told you so' when r_c admits {PRONOUN/r_c/poss} patrol pairings caused a fight or two",
+            "Is wondering if r_c is ever stressed from constantly dealing with c_n's warriors",
+            "Thinks r_c is doing a good job accessing warrior relationships"
+        ],
+        "random_status_constraint": [
+            "deputy"
+        ],
+        "random_living_status": [
+            "living"
+        ]
     }
 ]
-
-

@@ -125,7 +125,7 @@
         [
             "Look, look! t_m!",
             "I told you that {PRONOUN/y_c/subject} {VERB/y_c/were/was} safe, even when {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} so far away...",
-            "Now what did those nice cats name you again? y_c? Strange... but beautiful.",
+            "Now what did those nice cats name you again? y_c? Strange... But beautiful.",
             "Just like you, my kit."
         ]
     ],
@@ -141,7 +141,7 @@
             "[You assure the kittypet that you won't hurt {PRONOUN/t_c/object}.]",
             "Really? Isn't that what you 'Clan' cats do? I thought you all hated housecats...",
             "[You bring up the fact it doesn't make much sense to chase off a cat that's already dead.]",
-            "You're right, I suppose. Sometimes I swear others can see me, too, though. Not everycat is so kind... thank you, but I should leave.",
+            "You're right, I suppose. Sometimes I swear others can see me, too, though. Not everycat is so kind... Thank you, but I should leave.",
             "[You give t_c a light wave of your tail as {PRONOUN/t_c/subject} {VERB/t_c/disappear/disappears} into the horizon beyond, {PRONOUN/t_c/poss} wispy shape fading into nothing but a pale glow.]"
         ]
     ],
@@ -233,7 +233,7 @@
         [
             "[t_c is watching the Thunderpath.]",
             "Sometimes I just sit here and make sure that the cars don't hit any cats.",
-            "They're usually pretty smart and slow down when they see anyone crossing the road... but I watch just in case.",
+            "They're usually pretty smart and slow down when they see anyone crossing the road... But I watch just in case.",
             "[You don't understand most of the words that t_c is meowing.]"
         ]
     ],
@@ -345,35 +345,98 @@
         ]
     ],
     "neurotic_urtoliving_SQ1": [
-     [
-"no_kit",
-"they_neurotic",
-"they_ur",
-"they_kittypet",
-"you_injured",
-"you_blind"
-     ],
-     [
-"[t_c anxiously surveys your injuries.]",
-"I think my housefolk kept most dangerous stuff away from me. I didn't even realize it at the time.",
-"You Clan cats get hurt a lot. I really hope you recover soon, y_c."
-     ]
+        [
+            "no_kit",
+            "they_neurotic",
+            "they_ur",
+            "they_kittypet",
+            "you_injured",
+            "you_blind"
+        ],
+        [
+            "[t_c anxiously surveys your injuries.]",
+            "I think my housefolk kept most dangerous stuff away from me. I didn't even realize it at the time.",
+            "You Clan cats get hurt a lot. I really hope you recover soon, y_c."
+        ]
     ],
-
-"neurotic_urtoliving_SQ2": [
-     [
-"no_kit",
-"they_neurotic",
-"they_ur",
-"they_kittypet",
-"you_ill",
-"you_blind"
-     ],
-     [
-"You're really not looking great, y_c. Maybe... maybe you could find a Twoleg to take care of you, just for a bit?",
-"I'm sorry, I know you Clan cats don't like that! It's just... the Twolegs did a lot of scary things, but I think they were trying to help me.",
-"Whenever I was sick, they brought me to this place that smelled bad and had bright lights, and I really didn't like it but I felt better afterwards...",
-"Just... please think about it, okay? I really don't want to see you... you know."
-     ]
+    "neurotic_urtoliving_SQ2": [
+        [
+            "no_kit",
+            "they_neurotic",
+            "they_ur",
+            "they_kittypet",
+            "you_ill",
+            "you_blind"
+        ],
+        [
+            "You're really not looking great, y_c. Maybe... maybe you could find a Twoleg to take care of you, just for a bit?",
+            "I'm sorry, I know you Clan cats don't like that! It's just... The Twolegs did a lot of scary things, but I think they were trying to help me.",
+            "Whenever I was sick, they brought me to this place that smelled bad and had bright lights, and I really didn't like it but I felt better afterwards...",
+            "Just... please think about it, okay? I really don't want to see you... you know."
+        ]
+    ],
+    "kittypet_sc_H1": [
+        [
+            "they_kittypet",
+            "they_sc",
+            "they_deaf",
+            "you_deaf",
+            "max_they_deadfor_10",
+            "you_any"
+        ],
+        [
+            "[t_c looks around, unsure of {PRONOUN/t_c/poss} surroundings.]"
+        ]
+    ],
+    "kittypet_sc_H2": [
+        [
+            "they_kittypet",
+            "they_sc",
+            "any",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "All the cats in here keep talking about 'Clans' and 'StarClan' and the 'Dark Forest'.",
+            "I don't understand any of it. I just want to go home."
+        ]
+    ],
+    "kittypet_sc_H3": [
+        [
+            "they_kittypet",
+            "they_dead",
+            "they_deaf",
+            "you_deaf",
+            "max_they_deadfor_10",
+            "you_any"
+        ],
+        [
+            "[t_c looks around, unsure of {PRONOUN/t_c/poss} surroundings.]"
+        ]
+    ],
+    "kittypet_sc_H4": [
+        [
+            "they_kittypet",
+            "they_sc",
+            "any",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "I miss my napping place...",
+            "Don't get me wrong. Everything here is very fluffy. But. Everything is fluffy. I don't know where to lay!"
+        ]
+    ],
+    "kittypet_sc_H5": [
+        [
+            "they_kittypet",
+            "they_dead",
+            "any",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "I miss napping in the sun. I guess I just miss being alive in general."
+        ]
     ]
 }

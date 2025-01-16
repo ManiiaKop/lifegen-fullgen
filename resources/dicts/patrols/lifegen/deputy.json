@@ -22,7 +22,7 @@
         "success_outcomes": [
             {
                 "text": "Despite the shortage, you manage to assemble a strong and motivated patrol. Your leadership qualities shine through.",
-                "exp": 50,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -57,7 +57,7 @@
         "success_outcomes": [
             {
                 "text": "You mediate effectively, resolving the feud and restoring peace. Your fairness and authority are respected by the Clan.",
-                "exp": 45,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -92,7 +92,7 @@
         "success_outcomes": [
             {
                 "text": "You manage to encourage and help the apprentice, who shows great improvement. Your mentorship skills are admired by the Clan.",
-                "exp": 50,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -122,12 +122,12 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "A harsh leaf-bare is approaching, and you're tasked with devising a strategy for the Clan's survival.",
-        "decline_text": "Feeling the weight of this task, you decide to collaborate with the Clan's senior warriors and the healer. The Clan appreciates your wise decision.",
+        "decline_text": "Feeling the weight of this task, you decide to collaborate with the Clan's senior warriors and the medicine cat. The Clan appreciates your wise decision.",
         "chance_of_success": 50,
         "success_outcomes": [
             {
                 "text": "Your strategy of rationing and sharing heat proves effective, ensuring the Clan's survival through the leaf-bare. Your foresight is commended by the Clan.",
-                "exp": 55,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -162,7 +162,7 @@
         "success_outcomes": [
             {
                 "text": "Your training methods prove effective, and the new warriors are well-prepared. Your dedication to the Clan is recognized by all.",
-                "exp": 55,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -232,7 +232,7 @@
         "success_outcomes": [
             {
                 "text": "You speak with the mentor, explaining the apprentice's concerns. The mentor understands and promises to be more patient and understanding. The apprentice thanks you.",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -262,12 +262,12 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "A Clan member has fallen into the river during a fishing patrol and is afraid of water now. They seek your guidance.",
-        "decline_text": "You don't have time for this. You send the Clan member to the healer instead.",
+        "decline_text": "You don't have time for this. You send the Clan member to the medicine cat instead.",
         "chance_of_success": 70,
         "success_outcomes": [
             {
                 "text": "You spend some time with the Clan member, gradually easing their fear of water. Eventually, they regain their confidence and thank you.",
-                "exp": 20,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -302,7 +302,7 @@
         "success_outcomes": [
             {
                 "text": "You decide to send a patrol. The cats manage to chase the fox away without any casualties.",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -331,19 +331,19 @@
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "An apprentice has consumed some unknown berries and is feeling sick. The healer needs your help to find the right herbs while they monitor the apprentice's condition.",
-        "decline_text": "You decide to let the healer handle the situation on their own.",
+        "intro_text": "An apprentice has consumed some unknown berries and is feeling sick. The medicine cat needs your help to find the right herbs while they monitor the apprentice's condition.",
+        "decline_text": "You decide to let the medicine cat handle the situation on their own.",
         "chance_of_success": 60,
         "success_outcomes": [
             {
-                "text": "You successfully find the needed plants and the apprentice recovers quickly with you and the healer's help.",
-                "exp": 20,
+                "text": "You successfully find the needed plants and the apprentice recovers quickly with you and the medicine cat's help.",
+                "exp": 10,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You try your best but fail to find the right herbs. The apprentice's condition worsens before the healer finally identifies and finds the correct herbs.",
+                "text": "You try your best but fail to find the right herbs. The apprentice's condition worsens before the medicine cat finally identifies and finds the correct herbs.",
                 "exp": 0,
                 "weight": 20
             }
@@ -372,7 +372,7 @@
         "success_outcomes": [
             {
                 "text": "You decide to personally monitor the rogues, ensuring they leave the territory without causing trouble.",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -407,7 +407,7 @@
         "success_outcomes": [
             {
                 "text": "Your training sessions prove fruitful and the apprentice's fighting skills improve significantly.",
-                "exp": 20,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -442,7 +442,7 @@
         "success_outcomes": [
             {
                 "text": "You lead a patrol to investigate and find it's just a group of kittypets. You manage to chase them away.",
-                "exp": 20,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -479,7 +479,7 @@
         "success_outcomes": [
             {
                 "text": "When you voice your opinion, surprisingly, the deputy listens to you. Heeding your advice, they split up the pair and send them off into different groups.",
-                "exp": 20,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -515,8 +515,8 @@
         "chance_of_success": 40,
         "success_outcomes": [
             {
-                "text": "Excited for a chance to redeem yourself, you agree, and you recieve no objections from your leader as you pass to leave camp. You catch a good amount of prey with your Clanmates and feel pride for the first time in a while as you drop it on the fresh-kill pile.",
-                "exp": 20,
+                "text": "Excited for a chance to redeem yourself, you agree, and you receive no objections from your leader as you pass to leave camp. You catch a good amount of prey with your Clanmates and feel pride for the first time in a while as you drop it on the fresh-kill pile.",
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -525,6 +525,96 @@
                 "text": "You instantly stand up and agree, excited at the chance to redeem yourself, but when your leader hears this, they turn their head to glare at the two warriors. Your Clanmates sheepishly apologise for asking, and turn to join their leader, who looks ready to give them a scolding for ignoring your shun.",
                 "exp": 0,
                 "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_dep_J1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "DefaultDeputy",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "As you're leaving your den in the morning to assemble dawn patrols, r_w1_neurotic stops you, apologises for bothering you, and asks not to be put on patrol with r_w2_brooding this morning.",
+        "decline_text": "You wave r_w1_neurotic off. All Clanmates must learn to work together, and if they end up on patrol together, {PRONOUN/r_w1_neurotic/subject}'ll have to deal with it!",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You ask why, and r_w1_neurotic explains that r_w2_brooding is a bit intimidating, and tends to throw off {PRONOUN/r_w1_neurotic/poss} focus. You tell r_w1_neurotic you'll assign {PRONOUN/r_w1_neurotic/object} and r_w2_brooding to separate duties, but let {PRONOUN/r_w1_neurotic/object} know that r_w2_brooding isn't as scary as {PRONOUN/r_w2_brooding/subject} {VERB/r_w2_brooding/seem/seems}.",
+                "exp": 15,
+                "weight": 20
+            },
+            {
+                "text": "You tell r_w1_neurotic that {PRONOUN/r_w1_neurotic/subject} can't avoid {PRONOUN/r_w1_neurotic/poss} Clanmates, and in fact, you'll make sure {PRONOUN/r_w1_neurotic/subject}{VERB/r_w1_neurotic/'re/'s} put on a patrol with r_w2_brooding today. r_w1_neurotic looks upset, but when {PRONOUN/r_w1_neurotic/subject} {VERB/r_w1_neurotic/return/returns} from {PRONOUN/r_w1_neurotic/poss} dawn patrol later, you see {PRONOUN/r_w1_neurotic/object} laughing and joking around with r_w2_brooding. Looks like {PRONOUN/r_w2_brooding/subject} {VERB/r_w2_brooding/weren't/wasn't} so scary after all.",
+                "exp": 15,
+                "weight": 20,
+                "can_have_stat": ["p_l"],
+                "stat_trait": [
+                    "righteous",
+                    "ambitious",
+                    "strict",
+                    "responsible",
+                    "smug",
+                    "loyal",
+                    "justified",
+                    "methodical"
+                ],
+                "relationships": [
+                    {
+                        "cats_to": ["r_w1_neurotic"],
+                        "cats_from": ["r_w2_brooding"],
+                        "mutual": true,
+                        "values": ["platonic"],
+                        "amount": 10
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You're about to ask why, but just as you do, you notice r_w2_brooding emerging from {PRONOUN/r_w2_brooding/poss} den, blinking sleep from {PRONOUN/r_w2_brooding/poss} eyes. You give r_w1_neurotic a quick nod, approving of {PRONOUN/r_w1_neurotic/subject} request, and continue on your way to the front of camp.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "You dismiss r_w1_neurotic-- surely {PRONOUN/r_w1_neurotic/subject} can't be that intimidated by r_w2_brooding. You put the two on the dawn patrol together, but r_w1_neurotic returns home early, muttering that {PRONOUN/r_w1_neurotic/subject} {VERB/r_w1_neurotic/don't/doesn't} feel well as {PRONOUN/r_w1_neurotic/subject} {VERB/r_w1_neurotic/run/runs} past you to go back to sleep.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "You sympathise with r_w1_neurotic but deny {PRONOUN/r_w1_neurotic/poss} request. r_w2_brooding isn't a bad cat - surely there is no harm in patrolling with {PRONOUN/r_w2_brooding/object} once in a while. Though, you start to regret your decision as r_w1_neurotic falls further into {PRONOUN/r_w1_neurotic/poss} nerves when the patrol heads off.",
+                "exp": 0,
+                "weight": 20,
+                "stat_trait": [
+                    "thoughtful",
+                    "calm",
+                    "flexible",
+                    "wise",
+                    "righteous",
+                    "lonesome",
+                    "gloomy",
+                    "mellow"
+                ],
+                "can_have_stat": ["p_l"],
+                "relationship": [
+                    {
+                        "cats_to": ["p_l"],
+                        "cats_from": ["r_w1_neurotic"],
+                        "mutual": false,
+                        "values": ["comfort"],
+                        "amount": -5
+                    }
+                ]
             }
         ]
     }

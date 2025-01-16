@@ -38,7 +38,7 @@
             "Any"
         ],
         [
-            "[t_c sits alone at the edge of camp, grinning from ear to ear with a dreamy look in their eyes.]",
+            "[t_c sits alone at the edge of camp, grinning from ear to ear with a dreamy look in {PRONOUN/t_c/poss} eyes.]",
             "[You'd know that look anywhere, and if you had to guess, you could probably predict exactly who {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} thinking about.]",
             "[Just then, their_crush peeks in through the camp entrance, and t_c races over to greet {PRONOUN/their_crush/object}, apparently overjoyed.]",
             "[It seems your prediction was correct!]"
@@ -125,7 +125,7 @@
             "Any"
         ],
         [
-            "You talk in your sleep, y'know, y_c? It woke me up last night",
+            "You talk in your sleep, y'know, y_c? It woke me up last night.",
             "It sounded like you were mumbling about your_crush ...",
             "... Something you wanna announce to the Clan, y_c? *snrk*"
         ]
@@ -383,7 +383,7 @@
     ],
     "yourcrush_apprentice": [
         [
-            "apprentice",
+            "you_apprentice",
             "they_app",
             "unabashed",
             "assertive",
@@ -419,8 +419,8 @@
     ],
     "meddy_crush": [
         [
-            "medicine_cat",
-            "medicine_cat_apprentice",
+            "you_medicine_cat",
+            "you_medicine_cat_apprentice",
             "assertive",
             "silly",
             "cool",
@@ -490,6 +490,179 @@
             "[As you sit next to t_c, you smell your_crush approach and lay down next to you.]",
             "[{PRONOUN/your_crush/poss/CAP} scent is comforting, and when {PRONOUN/your_crush/poss} fur brushes yours, you feel your face grow hot.]",
             "[t_c smacks your haunches teasingly with {PRONOUN/t_c/poss} tail, and you reach out a hind leg to kick {PRONOUN/t_c/object}. Against you, your_crush's body shakes with laughter.]"
+        ]
+    ],
+    "gen_yourkit11": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "they_blind"
+        ],
+        [
+            "[You tease t_c about how much time {PRONOUN/t_c/subject}{VERB/t_c/'ve/'s} been spending with {PRONOUN/t_c/poss} crush, asking if there will maybe be an expansion to the family soon.]",
+            "Ah, come off it, y_c. their_crush is just a friend, that's all ...",
+            "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/sigh/sighs} wistfully and you can't suppress an eyeroll. If t_c and their_crush are 'just friends', then hedgehogs can fly.]",
+            "[Still, you just hope the kit has the sense not to get {PRONOUN/t_c/poss} heart broken ... Or else you might have to have a conversation with their_crush yourself.]"
+        ]
+    ],
+    "assertive_gen1": [
+        [
+            "Any",
+            "assertive",
+            "cool",
+            "they_blind",
+            "they_deaf"
+        ],
+        [
+            "[t_c is flexing, showing off {PRONOUN/t_c/poss} muscles for their_crush.]",
+            "[It almost seems like t_c is enjoying the whole display more than their_crush is.]"
+        ]
+    ],
+    "neurotic_abouttheircrush_SQ1": [
+        [
+            "they_neurotic",
+            "no_kit",
+            "min_platonic_20",
+            "min_trust_15",
+            "they_younger"
+        ],
+        [
+            "y_c, how do you impress a cat that you like? I can't help but...",
+            "[t_c trails off as their_crush passes by, giving a small chirp of greeting. t_c's whiskers twitch as {PRONOUN/t_c/subject} {VERB/t_c/watch/watches} {PRONOUN/their_crush/object} go.]",
+            "Um. I just feel like I'm not all that interesting? I'm not exactly the daring-show-of-skill sort of cat, or a clever talker... I'm just... me. And that's really disappointing, sometimes."
+        ]
+    ],
+    "neurotic_abouttheircrush_SQ2": [
+        [
+            "they_neurotic",
+            "no_kit",
+            "min_platonic_30"
+        ],
+        [
+            "Have you seen how pretty their_crush's fur looks today? Wow...",
+            "[t_c sneaks a wistful glance at their_crush but then quickly looks away, {PRONOUN/t_c/poss} whiskers twitching.]",
+            "*sigh* I wish I could compliment {PRONOUN/their_crush/object} on it, but my words all feel jumbled and wrong when I'm around {PRONOUN/their_crush/object}."
+        ]
+    ],
+    "neurotic_abouttheircrush_SQ3": [
+        [
+            "they_neurotic",
+            "no_kit",
+            "min_platonic_20",
+            "min_trust_15",
+            "greenleaf"
+        ],
+        [
+            "[t_c slips over to you, casting surreptitious glances towards their_crush.]",
+            "Psst, y_c. The heat is really messing with my fur... does it look bad?",
+            "[You point out a few patches that could use grooming and t_c quickly gets to work.]"
+        ]
+    ],
+    "neurotic_skillclimber_SQ1": [
+        [
+            "they_neurotic",
+            "they_climber",
+            "greenleaf",
+            "no_kit",
+            "min_platonic_20",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "I found a great place I want to take their_crush. There's a big tree with a branch big enough for the two of us to sit, and it's shaded by the leaves, and it has a great view of the territory.",
+            "I want to take {PRONOUN/their_crush/object} there, but I'm a bit worried... I'm pretty skilled at climbing, but I don't know how good {PRONOUN/their_crush/subject} {VERB/their_crush/are/is}, and it'd be terrible if {PRONOUN/their_crush/subject} slipped and fell.",
+            "From that height, their_crush could be really hurt! And then it would be hard for {PRONOUN/their_crush/object} to trust me again, and I'd feel terrible...",
+            "[You tell t_c to calm down. {PRONOUN/t_c/subject/CAP} {VERB/t_c/shake/shakes} {PRONOUN/t_c/poss} head to jolt {PRONOUN/t_c/self} out of {PRONOUN/t_c/poss} thoughts and {VERB/t_c/smile/smiles} weakly.]"
+        ]
+    ],
+    "TinyTeddy_stable_sibling_theyadult_youadult_02": [
+        [
+            "they_adult",
+            "they_stable",
+            "you_adult",
+            "sibling",
+            "adopted_sibling",
+            "half sibling"
+        ],
+        [
+            "Hey, y_c, could I please have some advice? Seeing as you're my sibling and all, I thought you would be one of the better cats to get an opinion from.",
+            "...",
+            "Every time I look at their_crush I can't help but feel lighter... And honestly, I'd love to get to know {PRONOUN/their_crush/object} more. I would really like to get to know {PRONOUN/their_crush/object} more... Maybe even one day, I could ask {PRONOUN/their_crush/object} to be...",
+            "I've never met someone like {PRONOUN/their_crush/object} before, y_c. Really, I never thought someone like me could ever find somebody... and maybe, I've found them.",
+            "{PRONOUN/their_crush/subject/CAP}{VERB/their_crush/'re/'s} just so kind, caring, loyal and the way the light bounces off {PRONOUN/their_crush/poss} fur~ My heart stops every time we speak.",
+            "Thank you for listening, y_c, you're the best sibling I could ever ask for.",
+            "[t_c bounds away, a dreamy look in {PRONOUN/t_c/poss} eyes... Wait, didn't {PRONOUN/t_c/subject} ask for your opinion??? You chuckle, your sibling is so lost in thought {PRONOUN/t_c/subject} forgot to wait for you to answer."
+        ]
+    ],
+    "neurotic_abouttheircrush_SQ4": [
+        [
+            "they_neurotic",
+            "no_kit",
+            "newleaf",
+            "greenleaf",
+            "you_deaf"
+        ],
+        [
+            "[You notice t_c sliding a bundle of tiny periwinkle flowers towards their_crush with a bashful smile.]",
+            "[their_crush's eyes widen, and {PRONOUN/their_crush/subject} {VERB/their_crush/start/starts} to say something, but t_c is already fleeing the scene.]"
+        ]
+    ],
+    "neurotic_abouttheircrush_SQ5": [
+        [
+            "they_neurotic",
+            "no_kit",
+            "min_platonic_15",
+            "leafbare"
+        ],
+        [
+            "[Flowers are a classic gift to give a crush, but now that it's leafbare, t_c seems at a loss for something to show their affection towards their_crush.]",
+            "[While you're on a walk together, {PRONOUN/t_c/subject} {VERB/t_c/stop/stops} and {VERB/t_c/stare/stares} at a scarlet lichen for a few seconds, then {VERB/t_c/sigh/sighs} and {VERB/t_c/turn/turns} away.]",
+            "I don't want to give {PRONOUN/their_crush/object} something weird, or useless, or silly. And I don't want to give {PRONOUN/their_crush/object} a random thing, just for the sake of giving {PRONOUN/their_crush/object} <i>something</i>.",
+            "I just don't know how to show {PRONOUN/their_crush/object} that I... you know... like {PRONOUN/their_crush/object}! And giving gifts is still scary, but it feels safer than talking to {PRONOUN/their_crush/object} about my feelings, and that sort of thing.",
+            "Maybe... a pinecone? A leaf from leaffall? Not an icicle... That would just melt..."
+        ]
+    ],
+    "neurotic_abouttheircrush_SQ6": [
+        [
+            "they_neurotic",
+            "no_kit",
+            "leafbare",
+            "you_deaf",
+            "they_deaf"
+        ],
+        [
+            "[You glimpse t_c sitting by their_crush, pointing out the way ice is feathering across a nearby rock.]",
+            "[t_c seems a bit nervous to be sitting so close to their_crush as the pair admire the way the sun glints off of the delicate pattern, but their_crush looks too entranced by the ice to notice.]"
+        ]
+    ],
+    "neurotic_abouttheircrush_SQ7": [
+        [
+            "they_neurotic",
+            "no_kit",
+            "leaffall",
+            "neutral",
+            "you_deaf",
+            "they_deaf"
+        ],
+        [
+            "[t_c sits beside their_crush, admiring the bright leaves tumbling from the sky. Several times, {PRONOUN/t_c/subject} {VERB/t_c/start/starts} to lean closer to their_crush, then {VERB/t_c/pull/pulls} away at the last moment.]",
+            "[When t_c notices you, {PRONOUN/t_c/subject} {VERB/t_c/lean/leans} even further away from their_crush, almost losing {PRONOUN/t_c/poss} balance. You leave before {PRONOUN/t_c/subject} {VERB/t_c/get/gets} even more nervous about being watched.]"
+        ]
+    ],
+    "neurotic_abouttheircrush_SQ8": [
+        [
+            "they_neurotic",
+            "no_kit",
+            "newleaf",
+            "greenleaf",
+            "min_platonic_30"
+        ],
+        [
+            "I was going to give their_crush some flowers, but I noticed {PRONOUN/their_crush/subject} already {VERB/their_crush/have/has} some in {PRONOUN/their_crush/poss} nest. Do you know... is someone else, you know, interested in {PRONOUN/their_crush/object}? I don't have a chance, do I?",
+            "I know that cats give each other things for different reasons, but I just... I'm super nervous about this...",
+            "Y-you know, on second thought, I don't want to know right now.",
+            "[t_c dashes off, leaving you alone.]"
         ]
     ]
 }

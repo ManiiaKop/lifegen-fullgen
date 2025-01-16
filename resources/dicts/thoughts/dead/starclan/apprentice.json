@@ -33,25 +33,26 @@
     {
         "id": "dead_app_to_dead_other_app",
         "thoughts": [
-                "Wants to show r_c a new technique {PRONOUN/m_c/subject} {VERB/m_c/have/has} learned",
-                "Was dared by r_c to venture near the Dark Forest but was too timid to even step a paw in the grass",
-                "Was dared by r_c to venture near the Dark Forest, managed to nip a slice of bladed grass, and was awed by the others",
-                "Was dared by r_c to venture near the Dark Forest, but was halted by a scowling cat",
-                "Is organizing a sublime ceremony for {PRONOUN/m_c/self} and r_c for others to cheer",
-                "Is creating heroic, fictional myths about {PRONOUN/m_c/self} with r_c",
-                "Is trading stories with r_c about meeting their legendary heroes in StarClan",
-                "Offers r_c to join {PRONOUN/m_c/object} on an epic StarClan patrol"
-            
+            "Wants to show r_c a new technique {PRONOUN/m_c/subject} {VERB/m_c/have/has} learned",
+            "Was dared by r_c to venture near the Dark Forest but was too timid to even step a paw in the grass",
+            "Was dared by r_c to venture near the Dark Forest, managed to nip a slice of bladed grass, and was awed by the others",
+            "Was dared by r_c to venture near the Dark Forest, but was halted by a scowling cat",
+            "Is organizing a sublime ceremony for {PRONOUN/m_c/self} and r_c for others to cheer",
+            "Is creating heroic, fictional myths about {PRONOUN/m_c/self} with r_c",
+            "Is trading stories with r_c about meeting their legendary heroes in StarClan",
+            "Offers r_c to join {PRONOUN/m_c/object} on an epic StarClan patrol"
         ],
         "main_status_constraint": [
             "apprentice",
-            "healer apprentice",
-            "mediator apprentice"
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice"
         ],
         "random_living_status": [
-            "aprentice",
-            "healer apprentice",
-            "mediator apprentice"
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice"
         ]
     }
 ]

@@ -1,9 +1,15 @@
 [
     {
         "patrol_id": "pln_bord_shortswim1",
-        "biome": ["plains"],
-        "season": ["greenleaf"],
-        "types": ["border"],
+        "biome": [
+            "plains"
+        ],
+        "season": [
+            "greenleaf"
+        ],
+        "types": [
+            "border"
+        ],
         "tags": [],
         "patrol_art": "pln_bord_shortswim1",
         "min_cats": 1,

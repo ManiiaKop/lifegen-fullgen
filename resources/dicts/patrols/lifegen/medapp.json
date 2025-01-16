@@ -22,13 +22,18 @@
         "success_outcomes": [
             {
                 "text": "You confidently identify each herb correctly. Your mentor praises your knowledge and dedication, encouraging you to keep practicing.",
-                "exp": 20,
+                "exp": 10,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
                 "text": "You mix up a couple of herbs, and your mentor corrects you sternly.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "Your mentor waits patiently with every herb identification, not giving away whether or not your answers are incorrect. When you're done, they point out which ones were wrong and go over how to identify the herbs once again.",
                 "exp": 0,
                 "weight": 20
             }
@@ -92,7 +97,7 @@
         "success_outcomes": [
             {
                 "text": "You successfully treat the scratch, using the proper herbs and methods. The kit thanks you, and your mentor compliments your skills.",
-                "exp": 25,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -127,7 +132,7 @@
         "success_outcomes": [
             {
                 "text": "You successfully locate and collect the special herbs, gaining valuable knowledge in the process. Your mentor seems pleased with your progress.",
-                "exp": 30,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -162,7 +167,7 @@
         "success_outcomes": [
             {
                 "text": "You prepare the remedy accurately, and it helps the elder sleep comfortably. You feel content, and your mentor praises your empathy and skill.",
-                "exp": 25,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -197,7 +202,7 @@
         "success_outcomes": [
             {
                 "text": "You treat the injuries efficiently under your mentor's watchful eyes, proving that you are progressing well in your training.",
-                "exp": 30,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -228,19 +233,19 @@
         "max_cats": 6,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "As an injured Clanmate receives treatment, you listen from just outside the den as the healer explains what they're doing. You have a question about their methods, eager to learn, but you wonder if they'd be willing to answer you while you're shunned.",
+        "intro_text": "As an injured Clanmate receives treatment, you listen from just outside the den as the medicine cat explains what they're doing. You have a question about their methods, eager to learn, but you wonder if they'd be willing to answer you while you're shunned.",
         "decline_text": "You decide against it. You can learn once you're forgiven, if you ever are.",
         "chance_of_success": 40,
         "success_outcomes": [
             {
-                "text": "When you poke your head into the den to ask about the healer's techniques, though they seem a bit hesitant, they answer your questions, and you feel happy that you've finally begun learning again!",
-                "exp": 15,
+                "text": "When you poke your head into the den to ask about the medicine cat's techniques, though they seem a bit hesitant, they answer your questions, and you feel happy that you've finally begun learning again!",
+                "exp": 10,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-                "text": "When you poke your head into the den, the healer doesn't seem very welcoming. They send you out before you can ask your question.",
+                "text": "When you poke your head into the den, the medicine cat doesn't seem very welcoming. They send you out before you can ask your question.",
                 "exp": 0,
                 "weight": 20
             }

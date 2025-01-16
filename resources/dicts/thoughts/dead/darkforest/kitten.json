@@ -16,7 +16,7 @@
             "Is frozen in fear",
             "Doesn't need to sharpen {PRONOUN/m_c/poss} claws",
             "Is begging the older cats to teach {PRONOUN/m_c/object} battle moves",
-            "Wishes they were still in the nursery", 
+            "Wishes they were still in the nursery",
             "Is running through {PRONOUN/m_c/poss} entire life in {PRONOUN/m_c/poss} mind, trying to figure out what {PRONOUN/m_c/subject} did wrong",
             "Misses being warm",
             "Thinks about what {PRONOUN/m_c/poss} warrior name might have been",
@@ -28,7 +28,7 @@
             "Is praying to StarClan to let {PRONOUN/m_c/object} join them",
             "Can't remember the words to the lullabies that were sung to {PRONOUN/m_c/object}",
             "Still wants to be a warrior",
-            "Wishes {PRONOUN/m_c/object} would stop having nightmares",
+            "Wishes {PRONOUN/m_c/subject} would stop having nightmares",
             "Hides from the shadows"
         ]
     },
@@ -43,7 +43,7 @@
             "Makes r_c play as {PRONOUN/m_c/poss} loyal deputy while {PRONOUN/m_c/subject} {VERB/m_c/get/gets} to be the terrible Tigerstar",
             "Still plays pretend with r_c",
             "Hopes that r_c doesn't leave {PRONOUN/m_c/object}",
-            "Accidently hurt r_c while playing",
+            "Accidentally hurt r_c while playing",
             "Hurts r_c while playing and claims it was an accident",
             "Knows r_c doesn't have a nest to hide thorns in",
             "Is sparring with r_c, despite neither knowing how to fight",
@@ -56,7 +56,7 @@
             "kitten"
         ]
     },
-     {
+    {
         "id": "dead_kit_to_dead_parent",
         "thoughts": [
             "Is upset with r_c for leaving {PRONOUN/m_c/object} to the dark",

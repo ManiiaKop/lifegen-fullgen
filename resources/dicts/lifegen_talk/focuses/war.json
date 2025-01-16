@@ -97,7 +97,7 @@
         ],
         [
             "[You find t_c mumbling to {PRONOUN/t_c/self} in the nursery.]",
-            "This is not scary, not at all! everycat is going to come back safe...",
+            "This is not scary, not at all! Everycat is going to come back safe...",
             "Breathe in and out, in and out, like r_q says."
         ]
     ],
@@ -177,7 +177,7 @@
         ],
         [
             "[t_c slashes at the ground menacingly, mumbling to {PRONOUN/t_c/self} about the war.]",
-            "If any of those fox-hearts put even <i>one</i> whisker over the border, I'll kill their leader myself as many times as it takes... they'll learn not to mess with c_nClan."
+            "If any of those fox-hearts put even <i>one</i> whisker over the border, I'll kill their leader myself as many times as it takes... They'll learn not to mess with c_nClan."
         ]
     ],
     "unlawful_warGuy1": [
@@ -262,7 +262,7 @@
         ],
         [
             "Oh, don't worry about the war!",
-            "I heard r_w got a promising prophecy from StarClan, that's all I need to know we're in good hands."
+            "I heard r_m got a promising prophecy from StarClan, that's all I need to know we're in good hands."
         ]
     ],
     "war_faith_H3": [
@@ -342,7 +342,7 @@
         [
             "Um, y_c?",
             "[t_c presses close to you, fidgeting with {PRONOUN/t_c/poss} tiny paws.]",
-            "The... the scary cats everycat's talking about? The ones they're fighting?",
+            "The... The scary cats everycat's talking about? The ones they're fighting?",
             "T-they won't come here, right?"
         ]
     ],
@@ -630,7 +630,7 @@
             "[t_c watches the healers rush to tend to the recent border patrol, deeply troubled.]",
             "Y'know, sometimes I wonder what our role is, in the midst of all this.",
             "Why should we get to stay in camp all day while our Clanmates have to struggle and die on the front lines?",
-            "I get that what we do is important, but ... there's a war going on. Is it really more important than the lives of our Clanmates? It just seems a little unfair."
+            "I get that what we do is important, but ... There's a war going on. Is it really more important than the lives of our Clanmates? It just seems a little unfair."
         ]
     ],
     "war_focus_AJ4": [
@@ -1068,7 +1068,7 @@
         ],
         [
             "It isn't fair! Why do we hafta sit around the nursery all day while the grownups get to go out and fight?",
-            "Everybody talks about kits like we're just helpless fluff balls ... but I'm not scared of w_cClan! I know I can fight!",
+            "Everybody talks about kits like we're just helpless fluff balls ... But I'm not scared of w_cClan! I know I can fight!",
             "If only we were apprentices already ..."
         ]
     ],
@@ -1721,7 +1721,7 @@
         [
             "[You find t_c slumped on the edge of camp, {PRONOUN/t_c/poss} tail flicking as {PRONOUN/t_c/subject} {VERB/t_c/watch/watches} l_n and d_n discuss the ongoing war.]",
             "It's my job to help end this war.",
-            "But... but I just started! I don't know anything! I really think I'll just make things worse."
+            "But... But I just started! I don't know anything! I really think I'll just make things worse."
         ]
     ],
     "neurotic_warfocus_SQ20": [
@@ -2056,22 +2056,22 @@
         ]
     ],
     "unabashed_war_SV1": [
-[
-"they_unabashed",
-"they_cool",
-"they_clean",
-"platonic_like",
-"platonic_love",
-"comfort",
-"focus",
-"no_kit",
-"you_blind"
-],
-[
-"Wow, you look like you've been in the center of a storm. Yeesh.",
-"Listen, I know we're all exhausted from the fighting and whatnot, but that's no excuse for you to look like a porcupine.",
-"[Without warning, t_c pulls you in and immediately starts tending to your fur.]",
-"Now hold still, I'm about to give you the makeover of your life. Resistance is futile!"
-]
-]
+        [
+            "they_unabashed",
+            "they_cool",
+            "they_clean",
+            "platonic_like",
+            "platonic_love",
+            "comfort",
+            "focus",
+            "no_kit",
+            "you_blind"
+        ],
+        [
+            "Wow, you look like you've been in the center of a storm. Yeesh.",
+            "Listen, I know we're all exhausted from the fighting and whatnot, but that's no excuse for you to look like a porcupine.",
+            "[Without warning, t_c pulls you in and immediately starts tending to your fur.]",
+            "Now hold still, I'm about to give you the makeover of your life. Resistance is futile!"
+        ]
+    ]
 }

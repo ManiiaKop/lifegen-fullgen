@@ -178,7 +178,7 @@
             "focus"
         ],
         [
-            "[At mealtime, t_c kindly leaves a portion of {PRONOUN/t_c/poss} prey outside the l_n's den, clearly sympathizing with the stress of {PRONOUN/l_n/poss} situation.]"
+            "[At mealtime, t_c kindly leaves a portion of {PRONOUN/t_c/poss} prey outside l_n's den, clearly sympathizing with the stress of {PRONOUN/l_n/poss} situation.]"
         ]
     ],
     "good_opinion_AJ12": [
@@ -357,7 +357,7 @@
         ],
         [
             "Everycat complaining about l_n around camp ... I'm just so sick of hearing about it.",
-            "If cats think they can do so much better, then why don't they just leave and start their own Clan? It would certainly give us a lot more peace around here."
+            "If those cats think they can do so much better, then why don't they just leave and start their own Clan? It would certainly give us a lot more peace around here."
         ]
     ],
     "good_opinion_AJ20": [
@@ -370,7 +370,7 @@
         [
             "I'm a mediator. I'm not supposed to feel any particular way about any conflicts around camp, period.",
             "... But, if you ask me, y_c, we couldn't ask for a much better leader than the one we've got.",
-            "l_n has never really given me any problems. The Clan could do a lot worse than them."
+            "l_n has never really given me any problems. The Clan could do a lot worse than {PRONOUN/l_n/object}."
         ]
     ],
     "good_opinion_AJ21": [
@@ -802,7 +802,7 @@
         [
             "All of this l_n drama is really ruffling my fur. It'll be a miracle if half my pelt isn't covered in gray hairs by the time I settle all of the arguments around camp.",
             "What do I think about l_n..?",
-            "Well... sure, {PRONOUN/l_n/subject}{VERB/t_c/'ve/'s} made some... rocky decisions in the past but {PRONOUN/l_n/subject}{VERB/t_c/'ve/'s} led the Clan this far {VERB/l_n/haven't/hasn't} {PRONOUN/l_n/subject}? How can we expect {PRONOUN/l_n/object} to improve if we tear {PRONOUN/l_n/object} down whenever {PRONOUN/l_n/subject} {VERB/l_n/slip/slips} up?",
+            "Well... sure, {PRONOUN/l_n/subject}{VERB/t_c/'ve/'s} made some... rocky decisions in the past but {PRONOUN/l_n/subject}{VERB/t_c/'ve/'s} led the Clan this far, {VERB/l_n/haven't/hasn't} {PRONOUN/l_n/subject}? How can we expect {PRONOUN/l_n/object} to improve if we tear {PRONOUN/l_n/object} down whenever {PRONOUN/l_n/subject} {VERB/l_n/slip/slips} up?",
             "I think things are fine just the way they are. l_n is learning, and that's just something the others will have to realize eventually."
         ]
     ],

@@ -26,10 +26,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic", "platonic"],
+                        "values": [
+                            "romantic",
+                            "platonic"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -63,7 +70,9 @@
         "intro_text": "You and r_c go on a patrol alone, and it has gone wonderfully thus far. However, you feel the need to ask if the other considers this a date.",
         "decline_text": "Your nerves get to you, and you find yourself unable to speak.",
         "chance_of_success": 50,
-        "relationship_constraint": ["not_mates"],
+        "relationship_constraint": [
+            "not_mates"
+        ],
         "success_outcomes": [
             {
                 "text": " r_c shies away from your gaze, but nods slowly and smiles.",
@@ -71,10 +80,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic", "comfort"],
+                        "values": [
+                            "romantic",
+                            "comfort"
+                        ],
                         "amount": 13
                     }
                 ]
@@ -87,10 +103,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["y_c"],
-                        "cats_from": ["r_c"],
+                        "cats_to": [
+                            "y_c"
+                        ],
+                        "cats_from": [
+                            "r_c"
+                        ],
                         "mutual": false,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": -5
                     }
                 ]
@@ -124,10 +146,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -135,15 +163,21 @@
         ],
         "fail_outcomes": [
             {
-                "text": "{PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} talking to another cat, when you find {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} gently inform you that {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} watching it with someone else. You slink off, embarrassed. You feel so bad that you don't even go to see it.",
+                "text": "{PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} talking to another cat, when you find {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} gently {VERB/r_c/inform/informs} you that {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} watching it with someone else. You slink off, embarrassed. You feel so bad that you don't even go to see it.",
                 "exp": 0,
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": false,
-                        "values": ["comfort"],
+                        "values": [
+                            "comfort"
+                        ],
                         "amount": -5
                     }
                 ]
@@ -177,10 +211,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["y_c"],
-                        "cats_from": ["r_c"],
+                        "cats_to": [
+                            "y_c"
+                        ],
+                        "cats_from": [
+                            "r_c"
+                        ],
                         "mutual": false,
-                        "values": ["comfort", "platonic"],
+                        "values": [
+                            "comfort",
+                            "platonic"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -221,10 +262,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic", "comfort"],
+                        "values": [
+                            "romantic",
+                            "comfort"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -232,15 +280,21 @@
         ],
         "fail_outcomes": [
             {
-                "text": "You slowly inch closer to r_c and lean your head on {PRONOUN/r_c/poss} shoulder, but {PRONOUN/r_c/subject} glare you down and scoot away uncomfortably. Ouch, that was awkward...",
+                "text": "You slowly inch closer to r_c and lean your head on {PRONOUN/r_c/poss} shoulder, but {PRONOUN/r_c/subject} {VERB/r_c/glare/glares} you down and {VERB/r_c/scoot/scoots} away uncomfortably. Ouch, that was awkward...",
                 "exp": 0,
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["y_c"],
-                        "cats_from": ["r_c"],
+                        "cats_to": [
+                            "y_c"
+                        ],
+                        "cats_from": [
+                            "r_c"
+                        ],
                         "mutual": false,
-                        "values": ["comfort"],
+                        "values": [
+                            "comfort"
+                        ],
                         "amount": -5
                     }
                 ]
@@ -274,10 +328,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic", "platonic"],
+                        "values": [
+                            "romantic",
+                            "platonic"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -328,10 +389,17 @@
                 ],
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic", "platonic"],
+                        "values": [
+                            "romantic",
+                            "platonic"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -365,7 +433,9 @@
         "intro_text": "You ponder whether you should ask r_c on an evening patrol with just the two of you. The warm breeze blowing may stir up some hidden feelings.",
         "decline_text": "You decide not to. The thought of rejection is too overwhelming.",
         "chance_of_success": 50,
-        "relationship_constraint": ["not_mates"],
+        "relationship_constraint": [
+            "not_mates"
+        ],
         "success_outcomes": [
             {
                 "text": "r_c happily agrees saying {PRONOUN/r_c/subject}'d love to go out with you. The two of you wander through c_n's territory and you find yourself staring at {PRONOUN/r_c/object} for extended periods of time. How have you never noticed {PRONOUN/r_c/poss} beauty?",
@@ -373,10 +443,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": false,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 13
                     }
                 ]
@@ -417,10 +493,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic", "comfort"],
+                        "values": [
+                            "romantic",
+                            "comfort"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -433,10 +516,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["comfort"],
+                        "values": [
+                            "comfort"
+                        ],
                         "amount": -8
                     }
                 ]
@@ -470,10 +559,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic", "comfort"],
+                        "values": [
+                            "romantic",
+                            "comfort"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -514,10 +610,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["comfort", "platonic"],
+                        "values": [
+                            "comfort",
+                            "platonic"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -558,10 +661,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["comfort", "platonic"],
+                        "values": [
+                            "comfort",
+                            "platonic"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -605,10 +715,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic", "platonic"],
+                        "values": [
+                            "romantic",
+                            "platonic"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -642,7 +759,9 @@
         "intro_text": "You decide to take r_c to a lovely view in the early hours of dawn. The cliffs provide a stunning vision of the sun rising. After a while of staring, your tail brushes against r_c's and you wonder if now would be the time to ask {PRONOUN/r_c/poss} if {PRONOUN/r_c/subject} {VERB/r_c/feel/feels} anything for you...",
         "decline_text": "No! No way in StarClan! You're too awkward for that! So you just sit in silence with {PRONOUN/r_c/object}.",
         "chance_of_success": 50,
-        "relationship_constraint": ["not_mates"],
+        "relationship_constraint": [
+            "not_mates"
+        ],
         "success_outcomes": [
             {
                 "text": "You nervously ask r_c and {PRONOUN/r_c/subject} look away, blushing a bit. {PRONOUN/r_c/subject/CAP} purr and tell you to just focus on the sky, though you can't help but notice {PRONOUN/r_c/object} glancing at you affectionately every now and then.",
@@ -650,10 +769,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 12
                     }
                 ]
@@ -694,10 +819,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["platonic"],
+                        "values": [
+                            "platonic"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -748,10 +879,17 @@
                 ],
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic", "platonic"],
+                        "values": [
+                            "romantic",
+                            "platonic"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -792,10 +930,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -836,10 +980,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic", "platonic"],
+                        "values": [
+                            "romantic",
+                            "platonic"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -870,7 +1021,7 @@
         "max_cats": 2,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "You and r_c take a walk along the edge of the territory, trees gently swaying and birds calling in the breeze overhead. You notice a scrap of leaf clinging to r_c's fur and consider brushing it off with your tail... but, no. Would that be too weird?",
+        "intro_text": "You and r_c take a walk along the edge of the territory, trees gently swaying and birds calling in the breeze overhead. You notice a scrap of leaf clinging to r_c's fur and consider brushing it off with your tail... But, no. Would that be too weird?",
         "decline_text": "You decide to play it safe and simply tell r_c about the leaf scrap instead. The rest of the walk goes smoothly enough, but you can't stop wondering what could have been.",
         "chance_of_success": 50,
         "success_outcomes": [
@@ -880,10 +1031,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -919,7 +1076,7 @@
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "You stand up and collect the prettiest of maple leaves, and after gathering a good load of them, you step over and show r_c the leaves. {PRONOUN/r_c/subject/CAP} {VERB/r_c/look/looks} joyous and gracefully {VERB/r_c/recieve/recieves} the maple leaves from your paw, putting them on {PRONOUN/r_c/poss} ear.",
+                "text": "You stand up and collect the prettiest of maple leaves, and after gathering a good load of them, you step over and show r_c the leaves. {PRONOUN/r_c/subject/CAP} {VERB/r_c/look/looks} joyous and gracefully {VERB/r_c/receive/receives} the maple leaves from your paw, putting them on {PRONOUN/r_c/poss} ear.",
                 "exp": 0,
                 "weight": 20,
                 "accessory": [
@@ -934,10 +1091,16 @@
                 ],
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -969,19 +1132,26 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "You were told about the blue supermoon, and decided it would be a good opportunity to ask r_c out. You pad up to {PRONOUN/r_c/object}, but hesitate. What if it doesn't go as planned?",
-        "decline_text": "You can't gather enough courage for this, so you stop and turned away. Guess tonight you'll be enjoying it by yourself.",
+        "decline_text": "You can't gather enough courage for this, so you stop and turn away. Guess tonight you'll be enjoying it by yourself.",
         "chance_of_success": 50,
         "success_outcomes": [
             {
                 "text": "{PRONOUN/r_c/subject/CAP} {VERB/r_c/turn/turns} back, looking at you- and you successfully ask {PRONOUN/r_c/object}-- without stuttering-- if {PRONOUN/r_c/subject} {VERB/r_c/want/wants} to go see the blue supermoon tonight with you. {PRONOUN/r_c/subject/CAP} happily {VERB/r_c/agree/agrees}, and when the time comes, you and {PRONOUN/r_c/subject} sit on top of a tall tree, gazing at the bright, massive, slightly blue-colored moon and the countless sparkly stars together. You feel extremely happy to hear r_c's soft purrs and see {PRONOUN/r_c/poss} face being lit up.",
-                "exp": 20,
+                "exp": 0,
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic", "platonic"],
+                        "values": [
+                            "romantic",
+                            "platonic"
+                        ],
                         "amount": 6
                     }
                 ]
@@ -1021,14 +1191,21 @@
         "success_outcomes": [
             {
                 "text": "You and r_c practice these forbidden moves together. You feel more confident and strong. Later, you and r_c later take a break in the muck, heavily breathing, lightly scratched, but your love and cooperation with {PRONOUN/r_c/object} slowly growing.",
-                "exp": 20,
+                "exp": 0,
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic", "platonic"],
+                        "values": [
+                            "romantic",
+                            "platonic"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -1068,14 +1245,20 @@
         "success_outcomes": [
             {
                 "text": "You decide to step up, and you approach the spirit who had been berating r_c. They angrily hiss at you and leap on you, and you give them a good fight before making them flee. r_c thanks you, and {PRONOUN/r_c/subject} {VERB/r_c/help/helps} lick your minor wounds clean, but you soon notice yourself leaning on {PRONOUN/r_c/object}, tails twining.",
-                "exp": 15,
+                "exp": 0,
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -1114,15 +1297,22 @@
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "You respond to the cat a simple thanks, and the cat introduces {PRONOUN/r_c/self} as r_c, who you instantly recognize from your Clan. You two talk for a bit, though you feel as if you are being watched behind your back by the residents of the Dark Forest.",
+                "text": "You respond to the cat with a simple thanks, and the cat introduces {PRONOUN/r_c/self} as r_c, who you instantly recognize from your Clan. You two talk for a bit, though you feel as if you are being watched behind your back by the residents of the Dark Forest.",
                 "exp": 0,
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic", "platonic"],
+                        "values": [
+                            "romantic",
+                            "platonic"
+                        ],
                         "amount": 5
                     }
                 ]
@@ -1156,7 +1346,9 @@
         "intro_text": "You and r_c end up on a patrol together. As you walk together through your Clan's territory, the smell of budding plants fills your nostrils and your attention is drawn to r_c. Did {PRONOUN/r_c/subject} always look so nice? You can't seem to look away, {PRONOUN/r_c/poss} luxurious fur, the way {PRONOUN/r_c/subject} {VERB/r_c/walk/walks}..",
         "decline_text": "You shake off the feeling. There are more important things to do than to swoon at a stupid crush.",
         "chance_of_success": 50,
-        "relationship_constraint": ["not_mates"],
+        "relationship_constraint": [
+            "not_mates"
+        ],
         "success_outcomes": [
             {
                 "text": "As you stare over at {PRONOUN/r_c/poss}, {PRONOUN/r_c/subject} slowly {VERB/r_c/swivel/swivels} {PRONOUN/r_c/poss} head to see you gawking, and {VERB/r_c/chuckle/chuckles} lightly before giving you a warm look. Your heart flutters!",
@@ -1164,10 +1356,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": false,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -1208,10 +1406,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic", "platonic"],
+                        "values": [
+                            "romantic",
+                            "platonic"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -1252,10 +1457,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic", "platonic"],
+                        "values": [
+                            "romantic",
+                            "platonic"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -1289,7 +1501,9 @@
         "intro_text": "You and r_c are assigned in a patrol together, knowing that this is your chance to express your feelings towards {PRONOUN/r_c/object}.",
         "decline_text": "You decide to focus on your task instead.",
         "chance_of_success": 45,
-        "relationship_constraint": ["not_mates"],
+        "relationship_constraint": [
+            "not_mates"
+        ],
         "success_outcomes": [
             {
                 "text": "As r_c and you gather moss, you sheepishly express your love towards {PRONOUN/r_c/object}, and {PRONOUN/r_c/subject} quickly {VERB/r_c/turn/turns} {PRONOUN/r_c/poss} head towards you and {VERB/r_c/giggle/giggles} a little, telling you how {PRONOUN/r_c/subject} {VERB/r_c/have/has} always known how you felt about {PRONOUN/r_c/object}, but your shocked expression is full of joy and love. r_c and you manage to gather moss while talking and making jokes together, and when you return to camp, a new aura emerges from {PRONOUN/r_c/object}.",
@@ -1297,10 +1511,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 15
                     }
                 ]
@@ -1327,8 +1547,7 @@
         "types": [
             "lifegen"
         ],
-        "tags": [
-        ],
+        "tags": [],
         "patrol_art": "cloudwatchingdate",
         "min_cats": 2,
         "max_cats": 2,
@@ -1337,7 +1556,9 @@
         "intro_text": "After a long stroll through the territory, you and r_c have settled in the grass to watch the clouds. You point out clouds to each other that look like flowers, rabbits and squirrels. The sun is beginning to set, and you know you should be getting back to camp soon, but you don't want to leave r_c's side yet.",
         "decline_text": "You stand up and decide to head back to camp. You don't want to be late.",
         "chance_of_success": 60,
-        "relationship_constraint": ["romantic_15"],
+        "relationship_constraint": [
+            "romantic_15"
+        ],
         "success_outcomes": [
             {
                 "text": "You decide that it shouldn't matter too much if you're a bit late back to camp, and r_c seems to agree. A pair of moths pay you a visit as the sun slips below the horizon, and you're beyond glad that you chose to stay out.",
@@ -1345,16 +1566,27 @@
                 "weight": 20,
                 "accessory": [
                     {
-                        "cats": ["r_c", "y_c"],
-                        "accessory": ["LUNAR MOTH"]
+                        "cats": [
+                            "r_c",
+                            "y_c"
+                        ],
+                        "accessory": [
+                            "LUNAR MOTH"
+                        ]
                     }
                 ],
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -1379,8 +1611,7 @@
         "types": [
             "lifegen"
         ],
-        "tags": [
-        ],
+        "tags": [],
         "patrol_art": "poly_date_default",
         "min_cats": 3,
         "max_cats": 3,
@@ -1396,10 +1627,18 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": false,
-                        "values": ["romantic", "platonic", "comfort"],
+                        "values": [
+                            "romantic",
+                            "platonic",
+                            "comfort"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -1442,10 +1681,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -1471,8 +1716,7 @@
         "types": [
             "lifegen"
         ],
-        "tags": [
-        ],
+        "tags": [],
         "patrol_art": "poly_date_default",
         "min_cats": 3,
         "max_cats": 3,
@@ -1488,16 +1732,29 @@
                 "weight": 20,
                 "accessory": [
                     {
-                        "cats": ["y_c","o_c1", "r_c"],
-                        "accessory": ["FLOWERCROWN"]
+                        "cats": [
+                            "y_c",
+                            "o_c1",
+                            "r_c"
+                        ],
+                        "accessory": [
+                            "FLOWERCROWN"
+                        ]
                     }
                 ],
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": false,
-                        "values": ["romantic", "trust"],
+                        "values": [
+                            "romantic",
+                            "trust"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -1540,10 +1797,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -1586,10 +1849,18 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": false,
-                        "values": ["romantic", "trust", "comfort"],
+                        "values": [
+                            "romantic",
+                            "trust",
+                            "comfort"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -1625,7 +1896,9 @@
         "intro_text": "In a rare moment of joy during your punishment, you and r_c are in the camp clearing, rolling around in the sun and laughing together. You think {PRONOUN/r_c/poss} fur is so beautiful when the sun hits it just right, but you think it might be weird to tell them that.",
         "decline_text": "You look away. Now isn't the time.",
         "chance_of_success": 60,
-        "relationship_constraint": ["not_mates"],
+        "relationship_constraint": [
+            "not_mates"
+        ],
         "success_outcomes": [
             {
                 "text": "When you tell r_c how beautiful {PRONOUN/r_c/subject} {VERB/r_c/look/looks}, {PRONOUN/r_c/subject} {VERB/r_c/laugh/laughs} flustered, and {VERB/r_c/tell/tells} you that you look the same.",
@@ -1633,10 +1906,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -1649,7 +1928,7 @@
                 "weight": 20
             },
             {
-                "text": "When you tell {PRONOUN/r_c/object} how you feel, r_c rolls away, suddenly avoiding eye contact. You can see {PRONOUN/r_c/object} hiding a smile, but, noticing the stares of a few nearby Clanmates, {PRONOUN/r_c/subject} {VERB/r_c/stand/stands} and {VERB/r_c/run/runs} away without a word. {PRONOUN/r_c/subject/CAP} must be embarrassed to be recieving affection from a killer.",
+                "text": "When you tell {PRONOUN/r_c/object} how you feel, r_c rolls away, suddenly avoiding eye contact. You can see {PRONOUN/r_c/object} hiding a smile, but, noticing the stares of a few nearby Clanmates, {PRONOUN/r_c/subject} {VERB/r_c/stand/stands} and {VERB/r_c/run/runs} away without a word. {PRONOUN/r_c/subject/CAP} must be embarrassed to be receiving affection from a killer.",
                 "exp": 0,
                 "weight": 20
             }
@@ -1675,12 +1954,14 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "Not a lot of cats will spend time with you these days, but r_c is still here. At the edge of camp, you've become a single bundle of fur as r_c licks the top of your head. No one has seen you here yet, but you're worried that, if they do, r_c will get in trouble for being so kind to you.",
-        "decline_text": "Though you appreciate the comfort, you seperate yourself from r_c from about a tail length so that {PRONOUN/r_c/subject} won't get in trouble if you're spotted. You're much colder now, and {PRONOUN/r_c/subject} {VERB/r_c/look/looks} a bit sad.",
+        "decline_text": "Though you appreciate the comfort, you separate yourself from r_c from about a tail length so that {PRONOUN/r_c/subject} won't get in trouble if you're spotted. You're much colder now, and {PRONOUN/r_c/subject} {VERB/r_c/look/looks} a bit sad.",
         "chance_of_success": 50,
-        "relationship_constraint": ["mates"],
+        "relationship_constraint": [
+            "mates"
+        ],
         "success_outcomes": [
             {
-                "text": "You can't bring yourself to tear yourself away from {PRONOUN/r_c/subject}. You fall asleep, cradled by r_c, and when you wake up again, it's been several hours and r_c is still here. None of your Clanmates must feel the need to seperate you.",
+                "text": "You can't bring yourself to tear yourself away from {PRONOUN/r_c/subject}. You fall asleep, cradled by r_c, and when you wake up again, it's been several hours and r_c is still here. None of your Clanmates must feel the need to separate you.",
                 "exp": 0,
                 "weight": 20
             }
@@ -1722,10 +2003,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -1740,7 +2027,7 @@
         ]
     },
     {
-        "patrol_id": "shunned_poly_date_J1",
+        "patrol_id": "shunned_poly_date_J3",
         "biome": [
             "Any"
         ],
@@ -1768,10 +2055,18 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": false,
-                        "values": ["romantic", "trust", "comfort"],
+                        "values": [
+                            "romantic",
+                            "trust",
+                            "comfort"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -1807,7 +2102,9 @@
         "intro_text": "While walking with r_c, you notice the small clearing in which you and r_c used to lay in to watch the stars. Blooming with wildflowers and the sun shining on the warm grass, you feel the urge to lay there and enjoy the sunset with r_c once more.",
         "decline_text": "You realize you'd rather not lay in a pile of bees and itchy grass, and trot away to find a place that wouldn't make you or r_c itch for an eternity.",
         "chance_of_success": 50,
-        "relationship_constraint": ["mates"],
+        "relationship_constraint": [
+            "mates"
+        ],
         "success_outcomes": [
             {
                 "text": "r_c accepts and before you know it, {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} playfully chasing you through the wildflower fields. Just as the sun sets against the horizon, r_c tackles you into the clearing and rolls, wildflower petals floating through the air in a beautiful arrangement of color. You and r_c share a moment of laughter, enjoying yourself before you have to travel back to c_n.",
@@ -1815,10 +2112,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -1829,17 +2132,27 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 10
                     }
                 ],
                 "accessory": [
                     {
-                        "cats": ["r_c"],
-                        "accessory": ["FLOWERCROWN"]
+                        "cats": [
+                            "r_c"
+                        ],
+                        "accessory": [
+                            "FLOWERCROWN"
+                        ]
                     }
                 ]
             }
@@ -1851,10 +2164,16 @@
                 "weight": 15,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": false,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": -5
                     }
                 ]
@@ -1865,17 +2184,27 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 5
                     }
                 ],
                 "injury": [
                     {
-                        "cats": ["r_c"],
-                        "injuries": ["bee sting"]
+                        "cats": [
+                            "r_c"
+                        ],
+                        "injuries": [
+                            "bee sting"
+                        ]
                     }
                 ]
             },
@@ -1885,17 +2214,27 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 5
                     }
                 ],
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["bee sting"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "bee sting"
+                        ]
                     }
                 ]
             }
@@ -1921,55 +2260,83 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "You watch from across camp as r_c works hard to help set a haunted den up for the kits. You wonder if {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} distracted enough to allow for you sneak out of camp to find {PRONOUN/r_c/object} a gift.",
-        "decline_text":"You dismiss the idea. You shouldn't be distracting {PRONOUN/r_c/object} from {PRONOUN/r_c/poss} work, anyway.",
+        "decline_text": "You dismiss the idea. You shouldn't be distracting {PRONOUN/r_c/object} from {PRONOUN/r_c/poss} work, anyway.",
         "chance_of_success": 40,
         "success_outcomes": [
             {
-                "text":"When r_k runs up to {PRONOUN/r_c/object}, you take the opportunity and slide out of the camp entrance while {PRONOUN/r_c/poss} head is turned. While you're out, you collect as many sweet things you can find-- some berries, catmint, and even some honeycombs-- and arrange them on a large rhubarb leaf. When you arrive back to camp, dragging the treats behind you, r_c is excited to receive the gift while {PRONOUN/r_c/poss} friends fawn about it behind {PRONOUN/r_c/object}.",
-                "exp": 20,
+                "text": "When r_k runs up to {PRONOUN/r_c/object}, you take the opportunity and slide out of the camp entrance while {PRONOUN/r_c/poss} head is turned. While you're out, you collect as many sweet things you can find-- some berries, catmint, and even some honeycombs-- and arrange them on a large rhubarb leaf. When you arrive back to camp, dragging the treats behind you, r_c is excited to receive the gift while {PRONOUN/r_c/poss} friends fawn about it behind {PRONOUN/r_c/object}.",
+                "exp": 10,
                 "weight": 10,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 10
                     }
                 ]
             },
             {
                 "text": "You decide to call out to r_c that you'll be leaving to collect some cobwebs for the den's decorations. {PRONOUN/r_c/subject/CAP} {VERB/r_c/give/gives} you a quick nod before getting back to work, so you head out. You gather some spooky cobwebs while you're out of camp, but make sure to grab a treat for r_c while you're there. You return to camp with the cobwebs and a small bundle of berries, both of which {PRONOUN/r_c/subject} {VERB/r_c/accept/accepts} gratefully.",
-                "exp": 20,
+                "exp": 10,
                 "weight": 10,
-                "herbs": ["cobwebs"],
+                "herbs": [
+                    "cobwebs"
+                ],
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 7
                     }
                 ]
             },
             {
                 "text": "r_k runs up to r_c, distracting {PRONOUN/r_c/object}, so you take the opportunity and slip out of camp. You're not able to find much, but you manage to snatch a pretty trinket from a display in front of a Twoleg nest. You surprise r_c with it back at camp, who thanks you enthusiastically!",
-                "exp": 20,
+                "exp": 10,
                 "weight": 20,
                 "accessory": [
                     {
-                        "cats": ["r_c"],
-                        "accessory": ["DRIEDORANGE", "CREAMWOOL", "SNAILSHELL", "PUMPKIN", "BIRDSKULL"],
+                        "cats": [
+                            "r_c"
+                        ],
+                        "accessory": [
+                            "DRIEDORANGE",
+                            "CREAMWOOL",
+                            "SNAILSHELL",
+                            "PUMPKIN",
+                            "BIRDSKULL"
+                        ],
                         "no_results": true
                     }
                 ],
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -1985,7 +2352,9 @@
                 "text": "You quickly slip out of camp, grab a bundle of raspberries, and return to camp before anycat can notice you've left. However, when you return to camp, you're told that r_c left to gather some cobwebs for the den decorations. You just give r_m the raspberries instead.",
                 "exp": 0,
                 "weight": 20,
-                "herbs": ["raspberry"]
+                "herbs": [
+                    "raspberry"
+                ]
             }
         ]
     },
@@ -2013,29 +2382,41 @@
         "chance_of_success": 40,
         "success_outcomes": [
             {
-                "text": "You listen for {PRONOUN/r_c/poss} footsteps, and when {PRONOUN/r_c/subject} {VERB/r_c/get/gets} close, you lunge towards {PRONOUN/r_c/object} with a yowl. r_c yelps and launches into the air, furr puffed up, but is laughing as soon as {PRONOUN/r_c/subject} {VERB/r_c/hit/hits} the ground. Good one!",
-                "exp": 20,
+                "text": "You listen for {PRONOUN/r_c/poss} footsteps, and when {PRONOUN/r_c/subject} {VERB/r_c/get/gets} close, you lunge towards {PRONOUN/r_c/object} with a yowl. r_c yelps and launches into the air, fur puffed up, but is laughing as soon as {PRONOUN/r_c/subject} {VERB/r_c/hit/hits} the ground. Good one!",
+                "exp": 10,
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 5
                     }
                 ]
             },
             {
                 "text": "As r_c passes through the camp entrance, you tackle {PRONOUN/r_c/object} with a shout. Caught off-guard, {PRONOUN/r_c/subject} {VERB/r_c/slap/slaps} at {PRONOUN/r_c/poss} assailant with frantic paws until {PRONOUN/r_c/subject} {VERB/r_c/realise/realises} it's you. {PRONOUN/r_c/subject/CAP} playfully {VERB/r_c/shove/shoves} you off and {VERB/r_c/tell/tells} you {PRONOUN/r_c/subject}'ll get you back soon before inviting you on a walk.",
-                "exp": 20,
+                "exp": 10,
                 "weight": 10,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": true,
-                        "values": ["romantic"],
+                        "values": [
+                            "romantic"
+                        ],
                         "amount": 8
                     }
                 ]
@@ -2053,5 +2434,5 @@
                 "weight": 20
             }
         ]
-    }    
+    }
 ]

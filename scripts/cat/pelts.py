@@ -126,7 +126,7 @@ class Pelt:
 
     crafted_accessories = ["WILLOWBARK BAG", "CLAY DAISY POT", "CLAY AMANITA POT", "CLAY BROWNCAP POT", "BIRD SKULL", "LEAF BOW", "RAINCOAT", "POPTABS", "FAZBEAR", "WHITEBEAR", "PANDA", "BEAR", "BROWNBEAR", "TIDE", "CELESTIALCHIMES", "LUNARCHIMES", "STARCHIMES", "SILVERLUNARCHIMES", "FIDDLEHEADS", "LANTERNS", "HEARTCHARMS", "BATHARNESS", "TOAST","TOASTBERRY", "TOASTGRAPE", "TOASTNUTELLA", "TOASTPB"]
 
-    tail2_accessories = ["SEAWEED", "DAISY CORSAGE", "SPRINGFLOWERCORSAGE"]
+    tail2_accessories = ["SEAWEED", "DAISY CORSAGE"]
 
 
     tabbies = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"]
@@ -396,15 +396,12 @@ class Pelt:
             num = 1
 
         if not random.randint(0, num):
-            if self.eye_colour in Pelt.yellow_eyes:
-                eye_choice = choice([Pelt.blue_eyes, Pelt.green_eyes])
-                self.eye_colour2 = choice(eye_choice)
-            elif self.eye_colour in Pelt.blue_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.green_eyes])
-                self.eye_colour2 = choice(eye_choice)
-            elif self.eye_colour in Pelt.green_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes])
-                self.eye_colour2 = choice(eye_choice)
+            colour_wheel = [Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes]
+            for colour in colour_wheel[:]:
+                if self.eye_colour in colour:
+                    colour_wheel.remove(colour) # removes the selected list from the options
+                    self.eye_colour2 = choice(choice(colour_wheel)) # choose from the remaining two lists
+                    break
 
     def pattern_color_inheritance(self, parents: tuple=(), gender="molly"):
         # setting parent pelt categories
@@ -692,7 +689,7 @@ class Pelt:
             'sick_young': 19,
             'sick_adult': 18
         }
-        self.reverse = choice([True, False])
+        self.reverse = bool(random.getrandbits(1))
         # skin chances
         self.skin = choice(Pelt.skin_sprites)
 
@@ -1054,8 +1051,10 @@ class Pelt:
                 if scar in scar_details and scar_details[scar] not in additional_details:
                     additional_details.append(scar_details[scar])
 
-            if len(additional_details) > 1:
-                color_name = f"{color_name} with {', '.join(additional_details[:-1])} and {additional_details[-1]}"
+            if len(additional_details) > 2:
+                color_name = f"{color_name} with {', '.join(additional_details[:-1])}, and {additional_details[-1]}"
+            elif len(additional_details) == 2:
+                color_name = f"{color_name} with {' and '.join(additional_details)}"
             elif additional_details:
                 color_name = f"{color_name} with {additional_details[0]}"
         

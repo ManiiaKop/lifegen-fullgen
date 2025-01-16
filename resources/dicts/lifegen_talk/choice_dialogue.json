@@ -7,7 +7,7 @@
         ],
         "intro": [
             "Oh, y_c! It's so good to see you. I hope you've been having a good evening!",
-            "Mm.. actually- do you think you could help me with something?",
+            "Mmm... actually, do you think you could help me with something?",
             "I've been trying to decorate the camp and I wanted to know which you prefer, purple flowers or golden flowers?"
         ],
         "intro_choices": {
@@ -328,7 +328,7 @@
         ],
         "intro": [
             "[t_c is sharing tongues with t_m in the clearing.]",
-            "[Who would have the heart to interrupt such a display of coupley bliss?]"
+            "[Who would have the heart to interrupt such a display of couple-y bliss?]"
         ],
         "intro_choices": {
             "choice1": {
@@ -909,8 +909,8 @@
     },
     "assertiveapp_medapp3": {
         "tags": [
-            "medicine_cat_apprentice",
-            "medicine_cat",
+            "you_medicine_cat_apprentice",
+            "you_medicine_cat",
             "assertive",
             "silly",
             "upstanding",
@@ -988,7 +988,7 @@
     },
     "assertiveapp_deputy": {
         "tags": [
-            "deputy",
+            "you_deputy",
             "assertive",
             "unlawful",
             "they_warrior",
@@ -1023,7 +1023,7 @@
     },
     "assertive_apprentice3": {
         "tags": [
-            "apprentice",
+            "you_apprentice",
             "assertive",
             "upstanding",
             "they_apprentice",
@@ -1058,10 +1058,7 @@
     },
     "assertive_apprentice5": {
         "tags": [
-            "apprentice",
-            "medicine_cat_apprentice",
-            "mediator_apprentice",
-            "queen's_apprentice",
+            "you_app",
             "platonic_like",
             "assertive",
             "they_apprentice",
@@ -1288,7 +1285,7 @@
     },
     "assertive_mentor7": {
         "tags": [
-            "apprentice",
+            "you_apprentice",
             "assertive",
             "from_mentor",
             "silly",
@@ -1330,7 +1327,7 @@
     },
     "assertive_mentor700": {
         "tags": [
-            "apprentice",
+            "you_apprentice",
             "assertive",
             "from_mentor",
             "silly",
@@ -1447,8 +1444,8 @@
     },
     "assertive_9": {
         "tags": [
-            "warrior",
-            "apprentice",
+            "you_warrior",
+            "you_apprentice",
             "assertive",
             "silly",
             "they_warrior",
@@ -1526,8 +1523,8 @@
     },
     "assertivemedcat_queen": {
         "tags": [
-            "queen's_apprentice",
-            "queen",
+            "you_queen's_apprentice",
+            "you_queen",
             "assertive",
             "cool",
             "silly",
@@ -1601,7 +1598,7 @@
     },
     "assertive_mentor8": {
         "tags": [
-            "medicine_cat_apprentice",
+            "you_medicine_cat_apprentice",
             "assertive",
             "from_mentor",
             "silly",
@@ -1962,7 +1959,7 @@
     },
     "broodingapp_toapp4": {
         "tags": [
-            "warrior",
+            "you_warrior",
             "brooding",
             "platonic_like",
             "from_your_apprentice",
@@ -2224,7 +2221,7 @@
             "Oh, wait, did you mean do for a <i>job?</i> I'm sorry, how silly of me. I'm just so multi-talented, y'know, there's so much more to me than meets the eye.",
             "I guess the more close-minded among us would call me a mediator. I consider myself a bringer of peace, an enactor of policy, a shaper of territories ...",
             "[d_n purrs that, just yesterday, t_c spent hours having to help r_w chase a bug out of {PRONOUN/r_w/poss} den that was scaring {PRONOUN/r_w/object}.]",
-            "Yeah, well, it can't all be glitz and glamor! And stop making me look bad in front of the kit! everycat knows I have an image to maintain~.",
+            "Yeah, well, it can't all be glitz and glamor! And stop making me look bad in front of the kit! Everycat knows I have an image to maintain~.",
             "Y'know, y_c, if the thankless, grueling life of hunting and fighting doesn't sound like your style, you could do a lot worse than the life of a mediator!",
             "Give it a try, if you're interested. I could always use another impressionable mind to show my ways to."
         ]
@@ -2299,8 +2296,8 @@
         },
         "leave": [
             "[At the head of the crowd, t_c looks so confident, so at ease in {PRONOUN/t_c/poss} own fur.]",
-            "[The world has already taken so much from {PRONOUN/t_c/object} ... All {PRONOUN/t_c/subject} {VERB/t_c/have/has} left are these stories. Could you really take those from PRONOUN/t_c/object}, too?]",
-            "[Someday, t_c will need to come to terms with {PRONOUN/t_c/poss} history ... but that day is not today.]",
+            "[The world has already taken so much from {PRONOUN/t_c/object} ... All {PRONOUN/t_c/subject} {VERB/t_c/have/has} left are these stories. Could you really take those from {PRONOUN/t_c/object}, too?]",
+            "[Someday, t_c will need to come to terms with {PRONOUN/t_c/poss} history ... But that day is not today.]",
             "[Until then, {PRONOUN/t_c/poss} secret is safe with you.]"
         ],
         "expose": [
@@ -2571,10 +2568,10 @@
     "upstanding_choice3": {
         "tags": [
             "upstanding",
-            "apprentice",
-            "medicine_cat_apprentice",
-            "mediator_apprentice",
-            "queen's_apprentice",
+            "you_apprentice",
+            "you_medicine_cat_apprentice",
+            "you_mediator_apprentice",
+            "you_queen's_apprentice",
             "they_kitten"
         ],
         "intro": [
@@ -2672,14 +2669,14 @@
             },
             "choice2": {
                 "text": "Are you ready for apprenticeship?",
-                "next_scene": "apprentice"
+                "next_scene": "you_apprentice"
             }
         },
         "mice": [
             "Ohhhh, okay!",
             "Mices!"
         ],
-        "apprentice": [
+        "you_apprentice": [
             "You bet!! I'm gonna be the best apprentice in the entire Clan; just you wait!"
         ]
     },
@@ -2827,10 +2824,10 @@
             "both_shunned",
             "they_leader",
             "any",
-            "warrior",
-            "deputy",
-            "elder",
-            "apprentice",
+            "you_warrior",
+            "you_deputy",
+            "you_elder",
+            "you_apprentice",
             "they_blind",
             "you_blind"
         ],
@@ -3179,7 +3176,7 @@
             "upstanding",
             "stable",
             "greenleaf",
-            "warrior",
+            "you_warrior",
             "no_kit"
         ],
         "intro": [
@@ -3718,10 +3715,10 @@
             "brooding",
             "introspective",
             "stable",
-            "apprentice",
-            "medicine_cat_apprentice",
-            "mediator_apprentice",
-            "queen's_apprentice",
+            "you_apprentice",
+            "you_medicine_cat_apprentice",
+            "you_mediator_apprentice",
+            "you_queen's_apprentice",
             "they_older"
         ],
         "intro": [
@@ -4071,7 +4068,7 @@
         },
         "ridiculous": [
             "[You deny the ridiculous rumor. The cat shuffles their {PRONOUN/t_c/poss} uncertainly.]",
-            "Really? But they were so sure... they told so many stories...",
+            "Really? But they were so sure... They told so many stories...",
             "S-sorry. I think I'm going to go now."
         ],
         "shrug": [
@@ -4206,7 +4203,7 @@
             "[t_c comes into the nursery with something bristly and red in {PRONOUN/t_c/poss} jaws. {PRONOUN/t_c/subject/CAP} {VERB/t_c/drop/drops} it next to you, and you jerk back at the strong, musky scent.]",
             "[You hesitantly bat at the tuft of scarlet fur. t_c watches, {PRONOUN/t_c/poss} tail twitching.]",
             "We found this caught in a bush while on patrol today. Can you remember this smell, y_c? That's what a fox smells like.",
-            "Foxes are dangerous. I don't want to scare you, but they, uh... they could really hurt a little scrap like you.",
+            "Foxes are dangerous. I don't want to scare you, but they, uh... They could really hurt a little scrap like you.",
             "So maybe stay close to the nursery for a bit? And if you smell anything like this, tell an adult and then hide."
         ],
         "intro_choices": {
@@ -4306,7 +4303,7 @@
         ],
         "mentor": [
             "[If there's an adult t_c really, really wants to be {PRONOUN/t_c/poss} mentor, then of course {PRONOUN/t_c/subject} should choose the role that cat has.]",
-            "I guess... but I don't know who I want as a mentor. There are so many cats I don't know, and they're all kind of scary.",
+            "I guess... But I don't know who I want as a mentor. There are so many cats I don't know, and they're all kind of scary.",
             "Maybe I should just ask t_p_positive if I can be {PRONOUN/t_p_positive/poss} apprentice... Then I don't have to meet anyone else."
         ],
         "your_choice": [
@@ -4544,7 +4541,7 @@
             "T-thanks, y_c. Hopefully everycat else was, uh, as distracted as you were."
         ],
         "camp_heard": [
-            "Ah... they probably did, huh.",
+            "Ah... They probably did, huh.",
             "[t_c looks around. No one is looking {PRONOUN/t_c/poss} way, but that doesn't quell {PRONOUN/t_c/poss} embarrassment.]",
             "Oh well. Hopefully they'll forget about it by... maybe next moon or so."
         ]
@@ -4801,7 +4798,7 @@
         },
         "compliment": [
             "[You tell t_c that {PRONOUN/t_c/poss} crouch looks great! {PRONOUN/t_c/poss/CAP} practice has clearly been paying off.]",
-            "Ah... thanks? But it's okay, you don't have to say that.",
+            "Ah... Thanks? But it's okay, you don't have to say that.",
             "I felt really awkward and unbalanced during training today. I know that I really need to improve... I don't want to fall behind.",
             "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/smile/smiles} hesitantly and {VERB/t_c/move/moves} behind a bush so it's harder for you to watch them, then {VERB/t_c/return/returns} to practicing.]"
         ],
@@ -4904,7 +4901,7 @@
             "I'm sorry, y_c. I know I have a lot of things to take care of, but I just... I can't right now.",
             "[t_c looks up at you from {PRONOUN/t_c/poss} nest and forces a smile, clearly trying to pull {PRONOUN/t_c/self} together.]",
             "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/manage/manages} to hold {PRONOUN/t_c/poss} expression for a full five seconds before {PRONOUN/t_c/subject} {VERB/t_c/cover/covers} {PRONOUN/t_c/poss} face with {PRONOUN/t_c/poss} paws and {VERB/t_c/sniffle/sniffles}.]",
-            "I'm sorry. I'm so sorry. I want to *sniff* be useful, and I want to be <i>enough</i>, and... and I... but..."
+            "I'm sorry. I'm so sorry. I want to *sniff* be useful, and I want to be <i>enough</i>, and... and I... But..."
         ],
         "intro_choices": {
             "choice1": {
@@ -5001,7 +4998,7 @@
             "[You imagine that their_crush_neurotic sees that, too. In fact, {PRONOUN/their_crush_neurotic/subject} probably {VERB/their_crush_neurotic/admire/admires} t_c for it.]",
             "[t_c looks away self-consciously, but you see {PRONOUN/t_c/object} smiling. {PRONOUN/t_c/subject/CAP} {VERB/t_c/nod/nods} hesitantly.]",
             "O-okay, y_c. Maybe I'll tell their_crush_neurotic how I feel, or at least I'll think about it...",
-            "Thanks. I think you're being nicer than I deserve but... thanks."
+            "Thanks. I think you're being nicer than I deserve but... Thanks."
         ],
         "try": [
             "[Maybe t_c isn't the bravest cat around, but there are many other things for their_crush_neurotic to love about {PRONOUN/t_c/object}. You list a few. t_c looks embarrassed.]",
@@ -5161,7 +5158,7 @@
         "intro": [
             "Did you hear neutral_r_w_introspective talking about... uh... stuff this morning?",
             "No, nothing bad! It was like... I don't think I'm smart enough to talk about it, but {PRONOUN/neutral_r_w_introspective/subject} {VERB/neutral_r_w_introspective/were/was} talking about the seasons, and why change is important, and what seasons... you know... <i>mean</i>?",
-            "And then {PRONOUN/neutral_r_w_introspective/subject} {VERB/neutral_r_w_introspective/were/was} talking about how the cycle of seasons has gone on forever, and honestly it made me feel kind of dizzy? Just... thinking about time, and all the seasons, and all the cats before us...",
+            "And then {PRONOUN/neutral_r_w_introspective/subject} {VERB/neutral_r_w_introspective/were/was} talking about how the cycle of seasons has gone on forever, and honestly it made me feel kind of dizzy? Just... Thinking about time, and all the seasons, and all the cats before us...",
             "Do you get like that, too? Do you ever feel kind of overwhelmed and small when you listen to neutral_r_w_introspective?"
         ],
         "intro_choices": {
@@ -5199,12 +5196,12 @@
     },
     "dfskill_choice_SQ1": {
         "tags": [
-	        "they_df",
-	        "no_kit",
-	        "they_artistian"
+            "they_df",
+            "no_kit",
+            "they_artistian"
         ],
         "intro": [
-            "[t_c is decorating a mucky rock overhang. You creep forward to inspect {PRONOUN/t_c/poss} creation.]", 
+            "[t_c is decorating a mucky rock overhang. You creep forward to inspect {PRONOUN/t_c/poss} creation.]",
             "[All of the foul-smelling components seem wrong. Is that a tuft of fur? Why is that piece of wood dripping?]",
             "[t_c notices you and narrows {PRONOUN/t_c/poss} eyes, daring you to comment.]"
         ],
@@ -5238,32 +5235,32 @@
     },
     "dfskill_choice_SQ2": {
         "tags": [
-	"they_artistan",
-"no_kit",
-"they_df",
-"any"
+            "they_artistan",
+            "no_kit",
+            "they_df",
+            "any"
         ],
         "intro": [
             "[t_c's made an arrangement of dried, crumbling flowers at the base of a tree. Muck on the ground is creeping up their stems, pulling the bouquet apart.]",
-"[t_c isn't around right now. You consider trying to clean {PRONOUN/t_c/poss} creation off.]"
+            "[t_c isn't around right now. You consider trying to clean {PRONOUN/t_c/poss} creation off.]"
         ],
         "intro_choices": {
             "choice1": {
                 "text": "[Leave it alone.]",
                 "next_scene": "leave"
             },
- "choice2": {
+            "choice2": {
                 "text": "[Try to clean it.]",
                 "next_scene": "clean"
             }
         },
         "leave": [
             "[You decide to leave t_c's arrangement alone. Those flowers look like they'd fall apart if you so much as breathed on them, and you don't need t_c coming by and accusing you of destroying {PRONOUN/t_c/poss} creation.]",
-"[You walk away, leaving the muck to devour the flowers bit by bit.]"
+            "[You walk away, leaving the muck to devour the flowers bit by bit.]"
         ],
         "clean": [
- 	"[You try your best to clean off the flowers, but you only succeed in getting muck all over your paws.]",
-"[When one of the flowers completely crumbles, you give up and quickly leave the scene.]"
+            "[You try your best to clean off the flowers, but you only succeed in getting muck all over your paws.]",
+            "[When one of the flowers completely crumbles, you give up and quickly leave the scene.]"
         ]
     }
 }

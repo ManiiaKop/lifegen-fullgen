@@ -13,11 +13,11 @@ from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
 
 import ujson
 
-from scripts.utility import event_text_adjust, scale, ACC_DISPLAY, process_text, chunks, get_cluster
+from scripts.utility import event_text_adjust, ACC_DISPLAY, process_text, chunks, get_cluster
 
 from .Screens import Screens
 
-from scripts.utility import get_text_box_theme, scale_dimentions, shorten_text_to_fit
+from scripts.utility import get_text_box_theme, shorten_text_to_fit
 from scripts.cat.cats import Cat, BACKSTORIES
 from scripts.cat.pelts import Pelt
 from scripts.game_structure import image_cache
@@ -27,7 +27,7 @@ from scripts.cat.skills import SkillPath
 
 import math
 from scripts.cat.sprites import sprites
-from scripts.game_structure.game_essentials import game, MANAGER
+from scripts.game_structure.game_essentials import game
 from random import choice
 from re import sub
 
@@ -42,14 +42,34 @@ from scripts.cat.cats import Cat, BACKSTORIES
 from scripts.cat.pelts import Pelt
 from scripts.clan_resources.freshkill import FRESHKILL_ACTIVE
 from scripts.game_structure import image_cache
-from scripts.game_structure.game_essentials import game, MANAGER
-from scripts.game_structure.ui_elements import UIImageButton, UITextBoxTweaked
-from scripts.utility import event_text_adjust, scale, ACC_DISPLAY, process_text, chunks
-from scripts.utility import get_text_box_theme, scale_dimentions, shorten_text_to_fit
+from scripts.game_structure.game_essentials import game
+from scripts.game_structure.ui_elements import (
+    UIImageButton,
+    UITextBoxTweaked,
+    UISurfaceImageButton,
+)
+from scripts.utility import (
+    event_text_adjust,
+    ui_scale,
+    ACC_DISPLAY,
+    process_text,
+    chunks,
+    get_text_box_theme,
+    ui_scale_dimensions,
+    shorten_text_to_fit,
+    ui_scale_offset,
+    adjust_list_text,
+    pronoun_repl,
+)
 from .Screens import Screens
 from ..cat.history import History
+from ..game_structure.screen_settings import MANAGER
 from ..game_structure.windows import ChangeCatName, KillCat, ChangeCatToggles
 from ..housekeeping.datadir import get_save_dir
+from ..ui.generate_box import get_box, BoxStyles
+from ..ui.generate_button import ButtonStyles, get_button_dict
+from ..ui.get_arrow import get_arrow
+from ..ui.icon import Icon
 
 
 # ---------------------------------------------------------------------------- #
@@ -113,6 +133,7 @@ def bs_blurb_text(cat):
 
     return backstory_text
 
+
 # ---------------------------------------------------------------------------- #
 #             change how backstory info displays on cat profiles               #
 # ---------------------------------------------------------------------------- #
@@ -121,7 +142,7 @@ def backstory_text(cat):
     if backstory is None:
         return ""
     bs_category = None
-    
+
     for category in BACKSTORIES["backstory_categories"]:
         if backstory in category:
             bs_category = category
@@ -130,19 +151,14 @@ def backstory_text(cat):
 
     return bs_display
 
+
 # ---------------------------------------------------------------------------- #
 #                               Profile Screen                                 #
 # ---------------------------------------------------------------------------- #
 class ProfileScreen(Screens):
     # UI Images
-    backstory_tab = image_cache.load_image(
-        "resources/images/backstory_bg.png"
-    ).convert_alpha()
     conditions_tab = image_cache.load_image(
         "resources/images/conditions_tab_backdrop.png"
-    ).convert_alpha()
-    condition_details_box = image_cache.load_image(
-        "resources/images/condition_details_box.png"
     ).convert_alpha()
 
     # Keep track of current tabs open. Can be used to keep tabs open when pages are switched, and
@@ -151,6 +167,7 @@ class ProfileScreen(Screens):
 
     def __init__(self, name=None):
         super().__init__(name)
+        self.condition_data = {}
         self.show_moons = None
         self.no_moons = None
         self.help_button = None
@@ -205,6 +222,7 @@ class ProfileScreen(Screens):
         self.page = 0
         self.max_pages = 1
         self.clear_accessories = None
+        self.delete_accessory = None
         self.search_bar_image = None
         self.search_bar = None
         self.previous_page_button = None
@@ -215,8 +233,10 @@ class ProfileScreen(Screens):
         self.search_inventory = []
         self.faith_text = None
 
-    def handle_event(self, event):
+        # LG: all accs
+        self.cat_inventory = []
 
+    def handle_event(self, event):
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
 
             if game.switches["window_open"]:
@@ -231,7 +251,7 @@ class ProfileScreen(Screens):
                 self.close_current_tab()
                 self.change_screen(game.last_screen_forProfile)
             elif event.ui_element == self.previous_cat_button:
-                if isinstance(Cat.fetch_cat(self.previous_cat), Cat):
+                if isinstance(Cat.fetch_cat(self.previous_cat), Cat) and Cat.fetch_cat(self.previous_cat).moons >= 0:
                     self.clear_profile()
                     game.switches["cat"] = self.previous_cat
                     self.build_profile()
@@ -240,9 +260,9 @@ class ProfileScreen(Screens):
 
                         inventory_len = 0
                         if self.search_bar.get_text() in ["", "search"]:
-                            inventory_len = len(self.the_cat.pelt.inventory)
+                            inventory_len = len(self.cat_inventory)
                         else:
-                            for ac in self.the_cat.pelt.inventory:
+                            for ac in self.cat_inventory:
                                 if self.search_bar.get_text().lower() in ac.lower():
                                     inventory_len+=1
                         self.max_pages = math.ceil(inventory_len/18)
@@ -262,7 +282,7 @@ class ProfileScreen(Screens):
                 else:
                     print("invalid previous cat", self.previous_cat)
             elif event.ui_element == self.next_cat_button:
-                if isinstance(Cat.fetch_cat(self.next_cat), Cat):
+                if isinstance(Cat.fetch_cat(self.next_cat), Cat) and Cat.fetch_cat(self.next_cat).moons >= 0:
                     self.clear_profile()
                     game.switches["cat"] = self.next_cat
                     self.build_profile()
@@ -272,9 +292,9 @@ class ProfileScreen(Screens):
                         self.next_page_button.enable()
                         inventory_len = 0
                         if self.search_bar.get_text() in ["", "search"]:
-                            inventory_len = len(self.the_cat.pelt.inventory)
+                            inventory_len = len(self.cat_inventory)
                         else:
-                            for ac in self.the_cat.pelt.inventory:
+                            for ac in self.cat_inventory:
                                 if self.search_bar.get_text().lower() in ac.lower():
                                     inventory_len+=1
                         self.max_pages = math.ceil(inventory_len/18)
@@ -353,12 +373,20 @@ class ProfileScreen(Screens):
                     self.previous_page_button.enable()
                     self.next_page_button.enable()
                 self.update_disabled_buttons_and_text()
+            elif event.ui_element == self.delete_accessory:
+                for acc in self.the_cat.pelt.accessories:
+                    self.the_cat.pelt.inventory.remove(acc)
+                    self.the_cat.pelt.accessories.remove(acc)
+                self.close_current_tab()
+                self.clear_profile()
+                self.build_profile()
+                self.toggle_accessories_tab()
             elif event.ui_element == self.clear_accessories:
                 self.the_cat.pelt.accessories.clear()
                 b_data = event.ui_element.blit_data[1]
                 b_2data = []
-                pos_x = 20
-                pos_y = 250
+                pos_x = 10
+                pos_y = 125
                 i = 0
                 cat = self.the_cat
                 age = cat.age
@@ -408,10 +436,10 @@ class ProfileScreen(Screens):
                     inventory_len = 0
                     new_inv = []
                     if self.search_bar.get_text() in ["", "search"]:
-                        inventory_len = len(cat.pelt.inventory)
-                        new_inv = cat.pelt.inventory
+                        inventory_len = len(self.cat_inventory)
+                        new_inv = self.cat_inventory
                     else:
-                        for ac in cat.pelt.inventory:
+                        for ac in self.cat_inventory:
                             if self.search_bar.get_text().lower() in ac.lower():
                                 inventory_len+=1
                                 new_inv.append(ac)
@@ -422,53 +450,55 @@ class ProfileScreen(Screens):
                     if self.page == 0:
                         self.previous_page_button.disable()
                     
-                    if cat.pelt.inventory:
+                    if self.cat_inventory:
                         for a, accessory in enumerate(new_inv[start_index:min(end_index, inventory_len + start_index)], start = start_index):
                             if accessory in cat.pelt.accessories:
-                                self.accessory_buttons[str(i)] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", tool_tip_text=accessory, object_id="#fav_marker")
+                                self.accessory_buttons[str(i)] = UIImageButton(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), "", tool_tip_text=accessory, object_id="#fav_marker")
                             else:
-                                self.accessory_buttons[str(i)] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", tool_tip_text=accessory, object_id="#blank_button")
+                                self.accessory_buttons[str(i)] = UIImageButton(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), "", tool_tip_text=accessory, object_id="#blank_button")
                             if accessory in cat.pelt.plant_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_herbs' + accessory + cat_sprite], manager=MANAGER)
+                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_herbs' + accessory + cat_sprite], manager=MANAGER)
                             elif accessory in cat.pelt.wild_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_wild' + accessory + cat_sprite], manager=MANAGER)
+                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_wild' + accessory + cat_sprite], manager=MANAGER)
                             elif accessory in cat.pelt.collars:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['collars' + accessory + cat_sprite], manager=MANAGER)
+                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['collars' + accessory + cat_sprite], manager=MANAGER)
                             elif accessory in cat.pelt.flower_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_flower' + accessory + cat_sprite], manager=MANAGER)
+                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_flower' + accessory + cat_sprite], manager=MANAGER)
                             elif accessory in cat.pelt.plant2_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_plant2' + accessory + cat_sprite], manager=MANAGER)
+                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_plant2' + accessory + cat_sprite], manager=MANAGER)
                             elif accessory in cat.pelt.snake_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_snake' + accessory + cat_sprite], manager=MANAGER)
+                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_snake' + accessory + cat_sprite], manager=MANAGER)
                             elif accessory in cat.pelt.smallAnimal_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_smallAnimal' + accessory + cat_sprite], manager=MANAGER)
+                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_smallAnimal' + accessory + cat_sprite], manager=MANAGER)
                             elif accessory in cat.pelt.deadInsect_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_deadInsect' + accessory + cat_sprite], manager=MANAGER)
+                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_deadInsect' + accessory + cat_sprite], manager=MANAGER)
                             elif accessory in cat.pelt.aliveInsect_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_aliveInsect' + accessory + cat_sprite], manager=MANAGER)
+                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_aliveInsect' + accessory + cat_sprite], manager=MANAGER)
                             elif accessory in cat.pelt.fruit_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_fruit' + accessory + cat_sprite], manager=MANAGER)
+                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_fruit' + accessory + cat_sprite], manager=MANAGER)
                             elif accessory in cat.pelt.crafted_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_crafted' + accessory + cat_sprite], manager=MANAGER)
+                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_crafted' + accessory + cat_sprite], manager=MANAGER)
                             elif accessory in cat.pelt.tail2_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_tail2' + accessory + cat_sprite], manager=MANAGER)
+                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_tail2' + accessory + cat_sprite], manager=MANAGER)
                             pos_x += 120
                             if pos_x >= 1100:
                                 pos_x = 0
                                 pos_y += 120
                             i += 1
                 self.profile_elements["cat_image"].kill()
-                self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((200, 400), (300, 300))),
+                self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100, 200), (150, 150))),
                                                                         pygame.transform.scale(
                                                                             self.the_cat.sprite,
-                                                                            (300, 300)), manager=MANAGER)
+                                                                            (150, 150)), manager=MANAGER)
                 self.profile_elements["cat_image"].disable()
                 self.profile_elements["cat_info_column1"].kill()
-                self.profile_elements["cat_info_column1"] = UITextBoxTweaked(self.generate_column1(self.the_cat),
-                                                                    scale(pygame.Rect((600, 460), (360, 380))),
-                                                                    object_id=get_text_box_theme(
-                                                                        "#text_box_22_horizleft"),
-                                                                    line_spacing=0.95, manager=MANAGER)
+                self.profile_elements["cat_info_column1"] = UITextBoxTweaked(
+                    self.generate_column1(self.the_cat),
+                    ui_scale(pygame.Rect((300, 220), (180, 200))),
+                    object_id=get_text_box_theme("#text_box_22_horizleft"),
+                    line_spacing=1,
+                    manager=MANAGER,
+                )
                 self.update_disabled_buttons_and_text()
             elif "leader_ceremony" in self.profile_elements and \
                     event.ui_element == self.profile_elements["leader_ceremony"]:
@@ -511,41 +541,18 @@ class ProfileScreen(Screens):
             elif "halfmoon" in self.profile_elements and event.ui_element == self.profile_elements["halfmoon"]:
                 self.change_screen('moonplace screen')
             elif event.ui_element == self.profile_elements["favourite_button"]:
-                self.profile_elements["favourite_button"].hide()
-                self.profile_elements["favourite_button_2"].show()
-                self.profile_elements["favourite_button_3"].hide()
-                self.profile_elements["not_favourite_button"].hide()
-                self.the_cat.favourite = 2
-            elif event.ui_element == self.profile_elements["favourite_button_2"]:
-                self.profile_elements["favourite_button"].hide()
-                self.profile_elements["favourite_button_2"].hide()
-                self.profile_elements["favourite_button_3"].show()
-                self.profile_elements["not_favourite_button"].hide()
-                self.the_cat.favourite = 3
-            elif event.ui_element == self.profile_elements["favourite_button_3"]:
-                self.profile_elements["favourite_button"].hide()
-                self.profile_elements["favourite_button_2"].hide()
-                self.profile_elements["favourite_button_3"].hide()
-                self.profile_elements["not_favourite_button"].show()
-                self.the_cat.favourite = 0
-            elif event.ui_element == self.profile_elements["not_favourite_button"]:
-                self.the_cat.favourite = 1
-                self.profile_elements["favourite_button"].show()
-                self.profile_elements["favourite_button_2"].hide()
-                self.profile_elements["favourite_button_3"].hide()
-                self.profile_elements["not_favourite_button"].hide()
+                if self.the_cat.favourite == 3:
+                    self.the_cat.favourite = 0
+                else:
+                    self.the_cat.favourite += 1
+                self.clear_profile()
+                self.build_profile()
             else:
                 self.handle_tab_events(event)
 
-            if game.switches["window_open"]:
-                pass
-
         elif event.type == pygame.KEYDOWN and game.settings["keybinds"]:
-            if game.switches["window_open"]:
-                pass
-
-            elif event.key == pygame.K_LEFT:
-                if isinstance(Cat.fetch_cat(self.previous_cat), Cat):
+            if event.key == pygame.K_LEFT:
+                if isinstance(Cat.fetch_cat(self.previous_cat), Cat) and Cat.fetch_cat(self.previous_cat).moons >= 0:
                     self.clear_profile()
                     game.switches["cat"] = self.previous_cat
                     self.build_profile()
@@ -553,14 +560,14 @@ class ProfileScreen(Screens):
                 else:
                     print("invalid previous cat", self.previous_cat)
             elif event.key == pygame.K_RIGHT:
-                if isinstance(Cat.fetch_cat(self.next_cat), Cat):
+                if isinstance(Cat.fetch_cat(self.next_cat), Cat) and Cat.fetch_cat(self.next_cat).moons >= 0:
                     self.clear_profile()
                     game.switches["cat"] = self.next_cat
                     self.build_profile()
                     self.update_disabled_buttons_and_text()
                 else:
                     print("invalid next cat", self.previous_cat)
-            
+
             elif event.key == pygame.K_ESCAPE:
                 self.close_current_tab()
                 self.change_screen(game.last_screen_forProfile)
@@ -569,7 +576,7 @@ class ProfileScreen(Screens):
         # Relations Tab
         if self.open_tab == "relations":
             if event.ui_element == self.family_tree_button:
-                self.change_screen("see kits screen")
+                self.change_screen("family tree screen")
             elif event.ui_element == self.see_relationships_button:
                 self.change_screen("relationship screen")
             elif event.ui_element == self.choose_mate_button:
@@ -803,8 +810,8 @@ class ProfileScreen(Screens):
         elif self.open_tab == 'accessories':
             b_data = event.ui_element.blit_data[1]
             b_2data = []
-            pos_x = 20
-            pos_y = 250
+            pos_x = 10
+            pos_y = 125
             i = 0
             cat = self.the_cat
             age = cat.age
@@ -855,10 +862,10 @@ class ProfileScreen(Screens):
                 inventory_len = 0
                 new_inv = []
                 if self.search_bar.get_text() in ["", "search"]:
-                    inventory_len = len(cat.pelt.inventory)
-                    new_inv = cat.pelt.inventory
+                    inventory_len = len(self.cat_inventory)
+                    new_inv = self.cat_inventory
                 else:
-                    for ac in cat.pelt.inventory:
+                    for ac in self.cat_inventory:
                         if self.search_bar.get_text().lower() in ac.lower():
                             inventory_len+=1
                             new_inv.append(ac)
@@ -868,121 +875,183 @@ class ProfileScreen(Screens):
                     self.next_page_button.disable()
                 if self.page == 0:
                     self.previous_page_button.disable()
-                if cat.pelt.inventory:
+                if self.cat_inventory:
                     for a, accessory in enumerate(new_inv[start_index:min(end_index, inventory_len + start_index)], start = start_index):
                         try:
                             if self.search_bar.get_text() in ["", "search"] or self.search_bar.get_text().lower() in accessory.lower():
                                 if accessory in cat.pelt.accessories:
-                                    self.accessory_buttons[str(i) + str(randint(0,5000))] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", tool_tip_text=accessory, object_id="#fav_marker")
+                                    self.accessory_buttons[str(i) + str(randint(0,5000))] = UIImageButton(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), "", tool_tip_text=accessory, object_id="#fav_marker")
                                 else:
-                                    self.accessory_buttons[str(i) + str(randint(0,5000))] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", tool_tip_text=accessory, object_id="#blank_button")
+                                    self.accessory_buttons[str(i) + str(randint(0,5000))] = UIImageButton(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), "", tool_tip_text=accessory, object_id="#blank_button")
                                 if accessory in cat.pelt.plant_accessories:
-                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_herbs' + accessory + cat_sprite], manager=MANAGER)
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_herbs' + accessory + cat_sprite], manager=MANAGER)
                                 elif accessory in cat.pelt.wild_accessories:
-                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_wild' + accessory + cat_sprite], manager=MANAGER)
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_wild' + accessory + cat_sprite], manager=MANAGER)
                                 elif accessory in cat.pelt.collars:
-                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['collars' + accessory + cat_sprite], manager=MANAGER)
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['collars' + accessory + cat_sprite], manager=MANAGER)
                                 elif accessory in cat.pelt.flower_accessories:
-                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_flower' + accessory + cat_sprite], manager=MANAGER)
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_flower' + accessory + cat_sprite], manager=MANAGER)
                                 elif accessory in cat.pelt.plant2_accessories:
-                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_plant2' + accessory + cat_sprite], manager=MANAGER)
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_plant2' + accessory + cat_sprite], manager=MANAGER)
                                 elif accessory in cat.pelt.snake_accessories:
-                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_snake' + accessory + cat_sprite], manager=MANAGER)
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_snake' + accessory + cat_sprite], manager=MANAGER)
                                 elif accessory in cat.pelt.smallAnimal_accessories:
-                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_smallAnimal' + accessory + cat_sprite], manager=MANAGER)
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_smallAnimal' + accessory + cat_sprite], manager=MANAGER)
                                 elif accessory in cat.pelt.deadInsect_accessories:
-                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_deadInsect' + accessory + cat_sprite], manager=MANAGER)
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_deadInsect' + accessory + cat_sprite], manager=MANAGER)
                                 elif accessory in cat.pelt.aliveInsect_accessories:
-                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_aliveInsect' + accessory + cat_sprite], manager=MANAGER)
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_aliveInsect' + accessory + cat_sprite], manager=MANAGER)
                                 elif accessory in cat.pelt.fruit_accessories:
-                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_fruit' + accessory + cat_sprite], manager=MANAGER)
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_fruit' + accessory + cat_sprite], manager=MANAGER)
                                 elif accessory in cat.pelt.crafted_accessories:
-                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_crafted' + accessory + cat_sprite], manager=MANAGER)
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_crafted' + accessory + cat_sprite], manager=MANAGER)
                                 elif accessory in cat.pelt.tail2_accessories:
-                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_tail2' + accessory + cat_sprite], manager=MANAGER)
-                                pos_x += 120
-                                if pos_x >= 1100:
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_tail2' + accessory + cat_sprite], manager=MANAGER)
+                                pos_x += 60
+                                if pos_x >= 550:
                                     pos_x = 0
-                                    pos_y += 120
+                                    pos_y += 60
                                 i += 1
                         except:
                             continue
                 self.profile_elements["cat_image"].kill()
-                self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((200, 400), (300, 300))),
+                self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100, 200), (150, 150))),
                                                                         pygame.transform.scale(
                                                                             self.the_cat.sprite,
-                                                                            (300, 300)), manager=MANAGER)
+                                                                            (150, 150)), manager=MANAGER)
                 self.profile_elements["cat_image"].disable()
                 self.profile_elements["cat_info_column1"].kill()
-                self.profile_elements["cat_info_column1"] = UITextBoxTweaked(self.generate_column1(self.the_cat),
-                                                                    scale(pygame.Rect((600, 460), (360, 380))),
-                                                                    object_id=get_text_box_theme(
-                                                                        "#text_box_22_horizleft"),
-                                                                    line_spacing=0.95, manager=MANAGER)
+                self.profile_elements["cat_info_column1"] = UITextBoxTweaked(
+                    self.generate_column1(self.the_cat),
+                    ui_scale(pygame.Rect((300, 220), (180, 200))),
+                    object_id=get_text_box_theme("#text_box_22_horizleft"),
+                    line_spacing=1,
+                    manager=MANAGER,
+                )
 
 
     def screen_switches(self):
+        super().screen_switches()
         self.the_cat = Cat.all_cats.get(game.switches['cat'])
         self.page = 0
 
         # Set up the menu buttons, which appear on all cat profile images.
-        self.next_cat_button = UIImageButton(scale(pygame.Rect((1244, 50), (306, 60))), "", object_id="#next_cat_button"
-                                            , manager=MANAGER)
-        self.previous_cat_button = UIImageButton(scale(pygame.Rect((50, 50), (306, 60))), "",
-                                                object_id="#previous_cat_button"
-                                                , manager=MANAGER)
-        self.back_button = UIImageButton(scale(pygame.Rect((50, 120), (210, 60))), "", object_id="#back_button"
-                                         , manager=MANAGER)
-        self.inspect_button = UIImageButton(scale(pygame.Rect((1482, 120), (68, 68))), "",
-                                            object_id="#magnify_button",
-                                            manager=MANAGER)
+        self.next_cat_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((622, 25), (153, 30))),
+            "Next Cat " + get_arrow(3, arrow_left=False),
+            get_button_dict(ButtonStyles.SQUOVAL, (153, 30)),
+            object_id="@buttonstyles_squoval",
+            sound_id="page_flip",
+            manager=MANAGER,
+        )
+        self.previous_cat_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((25, 25), (153, 30))),
+            get_arrow(2, arrow_left=True) + " Previous Cat",
+            get_button_dict(ButtonStyles.SQUOVAL, (153, 30)),
+            object_id="@buttonstyles_squoval",
+            sound_id="page_flip",
+            manager=MANAGER,
+        )
+        self.back_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((25, 60), (105, 30))),
+            get_arrow(2) + " Back",
+            get_button_dict(ButtonStyles.SQUOVAL, (105, 30)),
+            object_id="@buttonstyles_squoval",
+            manager=MANAGER,
+        )
+        self.inspect_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((741, 60), (34, 34))),
+            Icon.MAGNIFY,
+            get_button_dict(ButtonStyles.ICON, (34, 34)),
+            object_id="@buttonstyles_icon",
+        )
         
-        self.exile_return_button = UIImageButton(scale(pygame.Rect((746, 220), (68, 68))), "Return Home",
+        self.exile_return_button = UIImageButton(ui_scale(pygame.Rect((383, 119), (34, 34))), "",
                                                 object_id="#exile_return_button",  tool_tip_text='Ask your Clan for your nest back.', manager=MANAGER)
         
-        self.relations_tab_button = UIImageButton(scale(pygame.Rect((96, 840), (352, 60))), "",
-                                                object_id="#relations_tab_button", manager=MANAGER)
-        self.roles_tab_button = UIImageButton(scale(pygame.Rect((448, 840), (352, 60))), "",
-                                            object_id="#roles_tab_button"
-                                            , manager=MANAGER)
-        self.personal_tab_button = UIImageButton(scale(pygame.Rect((800, 840), (352, 60))), "",
-                                                object_id="#personal_tab_button", manager=MANAGER)
-        self.dangerous_tab_button = UIImageButton(scale(pygame.Rect((1152, 840), (352, 60))), "",
-                                                object_id="#dangerous_tab_button", manager=MANAGER)
-
-        self.backstory_tab_button = UIImageButton(scale(pygame.Rect((96, 1244), (352, 60))), "",
-                                                object_id="#backstory_tab_button", manager=MANAGER)
-
-        self.conditions_tab_button = UIImageButton(
-            scale(pygame.Rect((448, 1244), (352, 60))),
-            "",
-            object_id="#conditions_tab_button",
+        self.relations_tab_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((48, 420), (176, 30))),
+            "relations",
+            get_button_dict(ButtonStyles.PROFILE_LEFT, (176, 30)),
+            object_id="@buttonstyles_profile_left",
+            manager=MANAGER,
+        )
+        self.roles_tab_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((224, 420), (176, 30))),
+            "roles",
+            get_button_dict(ButtonStyles.PROFILE_MIDDLE, (176, 30)),
+            object_id="@buttonstyles_profile_middle",
+            manager=MANAGER,
+        )
+        self.personal_tab_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((400, 420), (176, 30))),
+            "personal",
+            get_button_dict(ButtonStyles.PROFILE_MIDDLE, (176, 30)),
+            object_id="@buttonstyles_profile_middle",
+            manager=MANAGER,
+        )
+        self.dangerous_tab_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((576, 420), (176, 30))),
+            "dangerous",
+            get_button_dict(ButtonStyles.PROFILE_RIGHT, (176, 30)),
+            object_id="@buttonstyles_profile_right",
             manager=MANAGER,
         )
 
+        self.backstory_tab_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((48, 622), (176, 30))),
+            "history",
+            get_button_dict(ButtonStyles.PROFILE_LEFT, (176, 30)),
+            object_id="@buttonstyles_profile_left",
+            manager=MANAGER,
+        )
 
-        self.placeholder_tab_3 = UIImageButton(scale(pygame.Rect((800, 1244), (352, 60))), "",
-                                            object_id="#faith_tab_button", starting_height=1, manager=MANAGER)
-        # self.placeholder_tab_3.disable()
+        self.conditions_tab_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((224, 622), (176, 30))),
+            "conditions",
+            get_button_dict(ButtonStyles.PROFILE_MIDDLE, (176, 30)),
+            object_id="@buttonstyles_profile_middle",
+            manager=MANAGER,
+        )
 
-        self.accessories_tab_button = UIImageButton(scale(pygame.Rect((1152, 1244), (352, 60))), "",
-                                            object_id="#accessories_tab_button", starting_height=1, manager=MANAGER)
+        self.placeholder_tab_3 = UISurfaceImageButton(
+            ui_scale(pygame.Rect((400, 622), (176, 30))),
+            "faith",
+            get_button_dict(ButtonStyles.PROFILE_MIDDLE, (176, 30)),
+            object_id="@buttonstyles_profile_middle",
+            manager=MANAGER,
+        )
+
+        self.accessories_tab_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((576, 622), (176, 30))),
+            "accessories",
+            get_button_dict(ButtonStyles.PROFILE_RIGHT, (176, 30)),
+            object_id="@buttonstyles_profile_right",
+            manager=MANAGER,
+        )
+
         if self.the_cat.moons == 0:
             self.accessories_tab_button.disable()
         else:
             self.accessories_tab_button.enable()
         self.build_profile()
 
+        self.hide_mute_buttons()  # no space for mute button on this screen
         self.hide_menu_buttons()  # Menu buttons don't appear on the profile screen
         if game.last_screen_forProfile == "med den screen":
             self.toggle_conditions_tab()
-        game.clan.load_accessories()
+        # game.clan.load_accessories()
+
+        self.set_cat_location_bg(self.the_cat)
 
     def clear_profile(self):
         """Clears all profile objects."""
         for ele in self.profile_elements:
             self.profile_elements[ele].kill()
         self.profile_elements = {}
+
+        if self.your_tab:
+            self.your_tab.kill()
 
         if self.user_notes:
             self.user_notes = "Click the check mark to enter notes about your cat!"
@@ -1004,6 +1073,8 @@ class ProfileScreen(Screens):
         self.dangerous_tab_button.kill()
         self.backstory_tab_button.kill()
         self.conditions_tab_button.kill()
+        if self.your_tab:
+            self.your_tab.kill()
         self.placeholder_tab_3.kill()
         self.accessories_tab_button.kill()
         self.inspect_button.kill()
@@ -1016,6 +1087,21 @@ class ProfileScreen(Screens):
         
         if self.the_cat.dead and game.clan.demon.ID == self.the_cat.ID:
             self.the_cat.df = True
+
+        # LG: accessory bull shit
+        if game.clan.clan_settings['all accessories']:
+            self.cat_inventory = game.clan.load_accessories()
+        else:
+            self.cat_inventory = self.the_cat.pelt.inventory
+        
+        if self.the_cat.pelt.accessory:
+            if self.the_cat.pelt.accessory not in self.the_cat.pelt.inventory:
+                self.the_cat.pelt.inventory.append(self.the_cat.pelt.accessory)
+
+        for acc in self.the_cat.pelt.accessories:
+            if acc not in self.the_cat.pelt.inventory:
+                self.the_cat.pelt.inventory.append(acc)
+        # ---
 
         if self.the_cat.dead and game.clan.demon.ID == self.the_cat.ID:
             self.the_cat.df = True
@@ -1036,7 +1122,7 @@ class ProfileScreen(Screens):
 
         # Info in string
         cat_name = str(self.the_cat.name)
-        cat_name = shorten_text_to_fit(cat_name, 425, 40)
+        cat_name = shorten_text_to_fit(cat_name, 500, 20)
         if self.the_cat.dead:
             cat_name += " (dead)"  # A dead cat will have the (dead) sign next to their name
 
@@ -1049,66 +1135,62 @@ class ProfileScreen(Screens):
 
         if is_df_instructor:
             if game.clan.followingsc == True:
-                self.the_cat.thought = "Wants to drag the cats of " + game.clan.name + "Clan into the Dark Forest"
+                self.the_cat.thought = "Hello. I am here to drag the cats of " + game.clan.name + "Clan into the Dark Forest"
                 self.the_cat.df
             else:
                 self.the_cat.thought = "Is picking more " + game.clan.name + "Clan cats to join them"
 
         self.profile_elements["cat_name"] = pygame_gui.elements.UITextBox(cat_name,
-                                                                        scale(pygame.Rect((50, 280), (-1, 80))),
+                                                                        ui_scale(pygame.Rect((50, 280), (-1, 105))),
                                                                         object_id=get_text_box_theme(
                                                                             "#text_box_40_horizcenter"),
                                                                         manager=MANAGER)
         name_text_size = self.profile_elements["cat_name"].get_relative_rect()
         self.profile_elements["cat_name"].kill()
 
-        # don't like having to do this, but for some reason the usual scaling is not working here
-        if game.settings["fullscreen"]:
-            self.profile_elements["cat_name"] = pygame_gui.elements.UITextBox(
-                cat_name,
-                scale(
-                    pygame.Rect(
-                        (800 - name_text_size.width, 280),
-                        (name_text_size.width * 2, 80),
-                    )
-                ),
-                object_id=get_text_box_theme("#text_box_40_horizcenter"),
-                manager=MANAGER,
-            )
-        else:
-            self.profile_elements["cat_name"] = pygame_gui.elements.UITextBox(
-                cat_name,
-                scale(pygame.Rect((800 - name_text_size.width, 280), (-1, 80))),
-                object_id=get_text_box_theme("#text_box_40_horizcenter"),
-                manager=MANAGER,
-            )
+        self.profile_elements["cat_name"] = pygame_gui.elements.UITextBox(
+            cat_name,
+            ui_scale(pygame.Rect((0, 0), (-1, 40))),
+            manager=MANAGER,
+            object_id=get_text_box_theme("#text_box_40_horizcenter"),
+            anchors={"centerx": "centerx"},
+        )
+        self.profile_elements["cat_name"].set_relative_position(
+            ui_scale_offset((0, 140))
+        )
 
         # Write cat thought
         self.profile_elements["cat_thought"] = pygame_gui.elements.UITextBox(
             self.the_cat.thought,
-            scale(pygame.Rect((200, 340), (1200, -1))),
+            ui_scale(pygame.Rect((0, 170), (600, -1))),
             wrap_to_height=True,
             object_id=get_text_box_theme("#text_box_30_horizcenter"),
             manager=MANAGER,
+            anchors={"centerx": "centerx"},
         )
 
-        self.profile_elements["cat_info_column1"] = UITextBoxTweaked(self.generate_column1(self.the_cat),
-                                                                    scale(pygame.Rect((600, 460), (360, 380))),
-                                                                    object_id=get_text_box_theme(
-                                                                        "#text_box_22_horizleft"),
-                                                                    line_spacing=0.95, manager=MANAGER)
-        self.profile_elements["cat_info_column2"] = UITextBoxTweaked(self.generate_column2(self.the_cat),
-                                                                    scale(pygame.Rect((980, 460), (500, 360))),
-                                                                    object_id=get_text_box_theme(
-                                                                        "#text_box_22_horizleft"),
-                                                                    line_spacing=0.95, manager=MANAGER)
+        self.profile_elements["cat_info_column1"] = UITextBoxTweaked(
+            self.generate_column1(self.the_cat),
+            ui_scale(pygame.Rect((300, 220), (180, 200))),
+            object_id=get_text_box_theme("#text_box_22_horizleft"),
+            line_spacing=1,
+            manager=MANAGER,
+        )
+    
+        self.profile_elements["cat_info_column2"] = UITextBoxTweaked(
+            self.generate_column2(self.the_cat),
+            ui_scale(pygame.Rect((490, 220), (250, 200))),
+            object_id=get_text_box_theme("#text_box_22_horizleft"),
+            line_spacing=1,
+            manager=MANAGER,
+        )
 
         # Set the cat backgrounds.
         if game.clan.clan_settings["backgrounds"]:
             self.profile_elements["background"] = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((110, 400), (480, 420))),
+                ui_scale(pygame.Rect((55, 200), (240, 210))),
                 pygame.transform.scale(
-                    self.get_platform(), scale_dimentions((480, 420))
+                    self.get_platform(), ui_scale_dimensions((240, 210))
                 ),
                 manager=MANAGER,
             )
@@ -1116,17 +1198,20 @@ class ProfileScreen(Screens):
 
         # Create cat image object
         self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(
-            scale(pygame.Rect((200, 400), (300, 300))),
-            pygame.transform.scale(self.the_cat.sprite, (300, 300)),
+            ui_scale(pygame.Rect((100, 200), (150, 150))),
+            pygame.transform.scale(
+                self.the_cat.sprite, ui_scale_dimensions((150, 150))
+            ),
             manager=MANAGER,
         )
         self.profile_elements["cat_image"].disable()
 
         # if cat is a med or med app, show button for their den
-        self.profile_elements["med_den"] = UIImageButton(
-            scale(pygame.Rect((200, 760), (302, 56))),
-            "",
-            object_id="#med_den_button",
+        self.profile_elements["med_den"] = UISurfaceImageButton(
+            ui_scale(pygame.Rect((100, 380), (151, 28))),
+            "medicine cat den",
+            get_button_dict(ButtonStyles.ROUNDED_RECT, (151, 28)),
+            object_id="@buttonstyles_rounded_rect",
             manager=MANAGER,
             starting_height=2,
         )
@@ -1139,64 +1224,35 @@ class ProfileScreen(Screens):
         else:
             self.profile_elements["med_den"].hide()
 
-        # Fullscreen
-        if game.settings["fullscreen"]:
-            x_pos = 745 - name_text_size.width // 2
-        else:
-            x_pos = 740 - name_text_size.width
+        favorite_button_rect = ui_scale(pygame.Rect((0, 0), (28, 28)))
+        favorite_button_rect.topright = ui_scale_offset((-5, 146))
 
-        self.profile_elements["favourite_button"] = UIImageButton(scale(pygame.Rect
-                                                                        ((x_pos, 287), (56, 56))),
-                                                                  "",
-                                                                  object_id="#fav_star",
-                                                                  manager=MANAGER,
-                                                                  tool_tip_text='Move to favourite group 2',
-                                                                  starting_height=2)
-        self.profile_elements["favourite_button_2"] = UIImageButton(scale(pygame.Rect
-                                                                        ((x_pos, 287), (56, 56))),
-                                                                  "",
-                                                                  object_id="#fav_star_2",
-                                                                  manager=MANAGER,
-                                                                  tool_tip_text='Move to favourite group 3',
-                                                                  starting_height=2)
-        self.profile_elements["favourite_button_3"] = UIImageButton(scale(pygame.Rect
-                                                                        ((x_pos, 287), (56, 56))),
-                                                                  "",
-                                                                  object_id="#fav_star_3",
-                                                                  manager=MANAGER,
-                                                                  tool_tip_text='Remove favorite status',
-                                                                  starting_height=2)
-
-        self.profile_elements["not_favourite_button"] = UIImageButton(
-            scale(pygame.Rect((x_pos, 287), (56, 56))),
-            "",
-            object_id="#not_fav_star",
-            manager=MANAGER,
-            tool_tip_text="Mark as favorite",
-            starting_height=2,
-        )
-
+        # LG changes
         if self.the_cat.favourite != 0:
             if self.the_cat.favourite == 1:
-                self.profile_elements["favourite_button"].show()
-                self.profile_elements["favourite_button_2"].hide()
-                self.profile_elements["favourite_button_3"].hide()
-                self.profile_elements["not_favourite_button"].hide()
-            elif self.the_cat.favourite == 2:
-                self.profile_elements["favourite_button"].hide()
-                self.profile_elements["favourite_button_2"].show()
-                self.profile_elements["favourite_button_3"].hide()
-                self.profile_elements["not_favourite_button"].hide()
-            elif self.the_cat.favourite == 3:
-                self.profile_elements["favourite_button"].hide()
-                self.profile_elements["favourite_button_2"].hide()
-                self.profile_elements["favourite_button_3"].show()
-                self.profile_elements["not_favourite_button"].hide()
+                fav_star_id = "#fav_star"
+            else:
+                fav_star_id = f"#fav_star_{str(self.the_cat.favourite)}"
         else:
-            self.profile_elements["favourite_button"].hide()
-            self.profile_elements["favourite_button_2"].hide()
-            self.profile_elements["favourite_button_3"].hide()
-            self.profile_elements["not_favourite_button"].show()
+            fav_star_id = "#not_fav_star"
+
+        self.profile_elements["favourite_button"] = UIImageButton(
+            favorite_button_rect,
+            "",
+            object_id=fav_star_id,
+            manager=MANAGER,
+            tool_tip_text=f"Move to {self.the_cat.favourite + 1}" if self.the_cat.favourite < 3 else "Remove favourite"
+            if self.the_cat.favourite != 0
+            else "Mark as favorite",
+            starting_height=2,
+            anchors={
+                "right": "right",
+                "right_target": self.profile_elements["cat_name"],
+            },
+        )
+        self.profile_elements["favourite_button"].rebuild()
+        del favorite_button_rect
+
 
         if self.accessory_tab_button:
             if self.the_cat.moons == 0:
@@ -1205,7 +1261,10 @@ class ProfileScreen(Screens):
                 self.accessory_tab_button.enable()
 
         # Determine where the next and previous cat buttons lead
-        self.determine_previous_and_next_cat()
+        (
+            self.next_cat,
+            self.previous_cat,
+        ) = self.the_cat.determine_next_and_previous_cats()
 
         # Disable and enable next and previous cat buttons as needed.
         if self.next_cat == 0:
@@ -1235,10 +1294,13 @@ class ProfileScreen(Screens):
             print("Chose " + str(game.clan.your_cat.name))
             
         if self.the_cat.ID == game.clan.your_cat.ID:
-            self.profile_elements["change_cat"] = UIImageButton(scale(pygame.Rect((1400, 120),(68,68))), "", 
-                                            object_id="#random_dice_button",
-                                            tool_tip_text='Switch MC',
-                                            manager=MANAGER)
+            self.profile_elements["change_cat"] = UISurfaceImageButton(
+                ui_scale(pygame.Rect((701, 60), (34, 34))),
+                Icon.DICE,
+                get_button_dict(ButtonStyles.ICON, (34, 34)),
+                tool_tip_text="Switch MC",
+                object_id="@buttonstyles_icon",
+            )
             
         # TALK BUTTONS
 
@@ -1257,8 +1319,8 @@ class ProfileScreen(Screens):
             ):
                 cant_talk = True
                 
-            self.profile_elements["talk"] = UIImageButton(scale(pygame.Rect(
-                (746, 220), (68, 68))),
+            self.profile_elements["talk"] = UIImageButton(ui_scale(pygame.Rect(
+                (383, 105), (34, 34))),
                 "",
                 object_id="#talk_button",
                 tool_tip_text="Talk to this Cat",
@@ -1285,8 +1347,8 @@ class ProfileScreen(Screens):
             ):
                 cant_insult = True
 
-            self.profile_elements["insult"] = UIImageButton(scale(pygame.Rect(
-                (826, 220), (68, 68))),
+            self.profile_elements["insult"] = UIImageButton(ui_scale(pygame.Rect(
+                (423, 105), (34, 34))),
                 "",
                 object_id="#insult_button",
                 tool_tip_text="Insult this Cat", manager=MANAGER
@@ -1313,8 +1375,8 @@ class ProfileScreen(Screens):
             ):
                 cant_flirt = True
 
-            self.profile_elements["flirt"] = UIImageButton(scale(pygame.Rect(
-                (666, 220), (68, 68))),
+            self.profile_elements["flirt"] = UIImageButton(ui_scale(pygame.Rect(
+                (343, 105), (34, 34))),
                 "",
                 object_id="#flirt_button",
                 tool_tip_text="Flirt with this Cat", manager=MANAGER
@@ -1325,7 +1387,7 @@ class ProfileScreen(Screens):
                 self.profile_elements["flirt"].kill()
 
                 self.profile_elements["flirt"] = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((666, 220), (68, 68))), image_cache.load_image(
+                ui_scale(pygame.Rect((343, 105), (34, 34))), image_cache.load_image(
                     "resources/images/flirt_impossible.png").convert_alpha())
 
                 self.profile_elements["flirt"].disable()
@@ -1336,21 +1398,21 @@ class ProfileScreen(Screens):
         # leader, mediator, queen, moonplace
 
         if self.the_cat.ID == game.clan.your_cat.ID:
-            y_pos = 220
+            y_pos = 105
         else:
-            y_pos = 142
+            y_pos = 65
 
         if self.the_cat.status == 'leader' and not self.the_cat.dead:
-            self.profile_elements["leader_ceremony"] = UIImageButton(scale(pygame.Rect(
-                (746, y_pos), (68, 68))),
+            self.profile_elements["leader_ceremony"] = UIImageButton(ui_scale(pygame.Rect(
+                (383, y_pos), (34, 34))),
                 "",
                 object_id="#leader_ceremony_button",
                 tool_tip_text="Leader Ceremony",
                 manager=MANAGER,
             )
         elif self.the_cat.status in ["mediator", "mediator apprentice"] and self.the_cat.moons >= 6:
-            self.profile_elements["mediation"] = UIImageButton(scale(pygame.Rect(
-                (746, y_pos), (68, 68))),
+            self.profile_elements["mediation"] = UIImageButton(
+                ui_scale(pygame.Rect((383, y_pos), (34, 34))),
                 "",
                 object_id="#mediation_button",
                 manager=MANAGER,
@@ -1358,8 +1420,8 @@ class ProfileScreen(Screens):
             if self.the_cat.dead or self.the_cat.outside or self.the_cat.shunned > 0:
                 self.profile_elements["mediation"].disable()
         elif self.the_cat.status in ["queen", "queen's apprentice"] and self.the_cat.moons >= 6:
-            self.profile_elements["queen"] = UIImageButton(scale(pygame.Rect(
-                (746, y_pos), (68, 68))),
+            self.profile_elements["queen"] = UIImageButton(ui_scale(pygame.Rect(
+                (383, y_pos), (34, 34))),
                 "",
                 object_id="#queen_activity_button", manager=MANAGER
             )
@@ -1367,9 +1429,9 @@ class ProfileScreen(Screens):
                 # check for not working because the queen screen doesnt have the "this cat is unable to work" thing
                 # like the mediator screen does
                 self.profile_elements["queen"].disable()
-        if self.the_cat.status in ["healer", "healer apprentice"] and self.the_cat.ID == game.clan.your_cat.ID and self.the_cat.moons >= 6:
-            self.profile_elements["halfmoon"] = UIImageButton(scale(pygame.Rect(
-                (746, y_pos), (68, 68))),
+        if self.the_cat.status in ["medicine cat", "medicine cat apprentice"] and self.the_cat.ID == game.clan.your_cat.ID and self.the_cat.moons >= 6:
+            self.profile_elements["halfmoon"] = UIImageButton(ui_scale(pygame.Rect(
+                (383, y_pos), (34, 34))),
                 "",
                 object_id="#half_moon_button", 
                 tool_tip_text= "You may attend the half-moon gathering every six moons",
@@ -1381,16 +1443,16 @@ class ProfileScreen(Screens):
                 self.profile_elements["halfmoon"].disable()
         elif self.the_cat.status in ["queen's apprentice", "mediator apprentice", "apprentice"] and self.the_cat.ID == game.clan.your_cat.ID and self.the_cat.moons >= 6:
             if self.the_cat.status == "apprentice":
-                self.profile_elements["halfmoon"] = UIImageButton(scale(pygame.Rect(
-                    (746, y_pos), (68, 68))),
+                self.profile_elements["halfmoon"] = UIImageButton(ui_scale(pygame.Rect(
+                    (383, y_pos), (34, 34))),
                     "",
                     object_id="#half_moon_button", 
                     tool_tip_text= "You may visit the Moonplace once during your apprenticeship.",
                     manager=MANAGER
                 )
             else:
-                self.profile_elements["halfmoon"] = UIImageButton(scale(pygame.Rect(
-                (662, y_pos), (68, 68))),
+                self.profile_elements["halfmoon"] = UIImageButton(ui_scale(pygame.Rect(
+                (323, y_pos), (34, 34))),
                 "",
                 object_id="#half_moon_button", 
                 tool_tip_text= "You may visit the Moonplace once during your apprenticeship.",
@@ -1401,13 +1463,18 @@ class ProfileScreen(Screens):
             elif "attended half-moon" in game.switches and game.switches["attended half-moon"]:
                 self.profile_elements["halfmoon"].disable()
         
-        if self.the_cat.ID == game.clan.your_cat.ID and not game.clan.your_cat.dead and not game.clan.your_cat.outside:
+        if self.the_cat.ID == game.clan.your_cat.ID and not game.clan.your_cat.dead:
             if self.open_tab == "faith":
                 self.close_current_tab()
             self.placeholder_tab_3.kill()
-            self.profile_elements['your_tab'] = UIImageButton(scale(pygame.Rect((800, 1244), (352, 60))), "",
-                                            object_id="#your_tab", starting_height=1, manager=MANAGER)
-            self.your_tab = self.profile_elements['your_tab']
+
+            self.your_tab = UISurfaceImageButton(
+                ui_scale(pygame.Rect((400, 622), (176, 30))),
+                "your tab",
+                get_button_dict(ButtonStyles.PROFILE_MIDDLE, (176, 30)),
+                object_id="@buttonstyles_profile_middle",
+                manager=MANAGER,
+            )
             
         else:
             if self.open_tab == 'your tab':
@@ -1416,8 +1483,14 @@ class ProfileScreen(Screens):
                 self.close_current_tab()
             self.placeholder_tab_3.kill()
             self.placeholder_tab_3 = None
-            self.placeholder_tab_3 = UIImageButton(scale(pygame.Rect((800, 1244), (352, 60))), "",
-                                            object_id="#faith_tab_button", starting_height=1, manager=MANAGER)
+
+            self.placeholder_tab_3 = UISurfaceImageButton(
+                ui_scale(pygame.Rect((400, 622), (176, 30))),
+                "faith",
+                get_button_dict(ButtonStyles.PROFILE_MIDDLE, (176, 30)),
+                object_id="@buttonstyles_profile_middle",
+                manager=MANAGER,
+            )
             if self.the_cat.dead or self.the_cat.outside or self.the_cat.moons < 6:
                 self.placeholder_tab_3.disable()
             else:
@@ -1436,70 +1509,6 @@ class ProfileScreen(Screens):
 
         # if self.the_cat.shunned == 0 and self.the_cat.revealed > 0 and not self.the_cat.outside and not self.the_cat.exiled:
         #     print("This cat has been forgiven for murder.")
-
-    def determine_previous_and_next_cat(self):
-        """'Determines where the next and previous buttons point too."""
-
-        is_instructor = False
-        if self.the_cat.dead and game.clan.instructor.ID == self.the_cat.ID:
-            is_instructor = True
-            
-        is_demon = False
-        
-        if self.the_cat.dead and game.clan.demon.ID == self.the_cat.ID:
-            is_demon = True
-            
-
-        is_demon = False
-
-        if self.the_cat.dead and game.clan.demon.ID == self.the_cat.ID:
-            is_demon = True
-
-
-        previous_cat = 0
-        next_cat = 0
-        current_cat_found = 0
-
-        if self.the_cat.dead and not is_instructor and not self.the_cat.df and \
-                not (self.the_cat.outside or self.the_cat.exiled):
-            previous_cat = game.clan.instructor.ID
-
-        if is_instructor:
-            current_cat_found = 1
-
-        if self.the_cat.dead and not is_demon and self.the_cat.df and \
-                not (self.the_cat.outside or self.the_cat.exiled):
-            previous_cat = game.clan.demon.ID
-
-        if is_demon:
-            current_cat_found = 1
-
-        if len(Cat.ordered_cat_list) == 0:
-            Cat.ordered_cat_list = Cat.all_cats_list
-
-        for check_cat in Cat.ordered_cat_list:
-            if check_cat.ID == self.the_cat.ID:
-                current_cat_found = 1
-            else:
-                if current_cat_found == 0 and check_cat.ID != self.the_cat.ID and check_cat.dead == self.the_cat.dead \
-                        and check_cat.ID != game.clan.instructor.ID and check_cat.ID != game.clan.demon.ID and check_cat.outside == self.the_cat.outside and \
-                        check_cat.df == self.the_cat.df and not check_cat.faded and check_cat.moons > -1:
-                    previous_cat = check_cat.ID
-
-                elif current_cat_found == 1 and check_cat != self.the_cat.ID and check_cat.dead == self.the_cat.dead \
-                        and check_cat.ID != game.clan.instructor.ID and check_cat.ID != game.clan.demon.ID and check_cat.outside == self.the_cat.outside and \
-                        check_cat.df == self.the_cat.df and not check_cat.faded and check_cat.moons > -1:
-                    next_cat = check_cat.ID
-                    break
-
-                elif int(next_cat) > 1:
-                    break
-
-        if next_cat == 1:
-            next_cat = 0
-
-        self.next_cat = next_cat
-        self.previous_cat = previous_cat
 
     def generate_column1(self, the_cat):
         """Generate the left column information"""
@@ -1571,7 +1580,7 @@ class ProfileScreen(Screens):
 
         # PARENTS
         all_parents = [Cat.fetch_cat(i) for i in the_cat.get_parents()]
-        if all_parents: 
+        if all_parents:
             output += "\n"
             if len(all_parents) == 1:
                 output += "parent: " + str(all_parents[0].name)
@@ -1589,7 +1598,6 @@ class ProfileScreen(Screens):
                 output += "parents: " + ", ".join([str(i.name) for i in all_parents if i])
 
 
-        
         # MOONS
         output += "\n"
         if the_cat.dead:
@@ -1617,8 +1625,7 @@ class ProfileScreen(Screens):
         # MATE
         if len(the_cat.mate) > 0:
             output += "\n"
-            
-            
+
             mate_names = []
             # Grab the names of only the first two, since that's all we will display
             for _m in the_cat.mate[:2]:
@@ -1630,20 +1637,20 @@ class ProfileScreen(Screens):
                         former_indicate = "(living)"
                     else:
                         former_indicate = "(dead)"
-                    
+
                     mate_names.append(f"{str(mate_ob.name)} {former_indicate}")
                 elif mate_ob.outside != self.the_cat.outside:
                     mate_names.append(f"{str(mate_ob.name)} (away)")
                 else:
                     mate_names.append(f"{str(mate_ob.name)}")
-                    
+
             if len(the_cat.mate) == 1:
-                output += "mate: " 
+                output += "mate: "
             else:
                 output += "mates: "
-            
+
             output += ", ".join(mate_names)
-            
+
             if len(the_cat.mate) > 2:
                 output += f", and {len(the_cat.mate) - 2}"
                 if len(the_cat.mate) - 2 > 1:
@@ -1664,11 +1671,22 @@ class ProfileScreen(Screens):
         elif the_cat.exiled:
             output += "<font color='#FF0000'>exiled</font>"
         elif the_cat.shunned > 0 and not the_cat.dead:
-            if the_cat.status != "former Clancat":
+            if not the_cat.outside:
+
+                # grabbing demoted statuses
+                murder_history = History.get_murders(the_cat)
+                history = None
+                status = the_cat.status
+                if "is_murderer" in murder_history:
+                    history = murder_history["is_murderer"]
+                if history:
+                    if "demoted_from" in history[-1] and history[-1]["demoted_from"]:
+                        status = history[-1]["demoted_from"]
+
                 if game.settings['dark mode']:
-                    output += "<font color='#FF9999'>shunned " + the_cat.status + "</font>"
+                    output += "<font color='#FF9999'>shunned " + status+ "</font>"
                 else:
-                    output += "<font color='#950000'>shunned " + the_cat.status + "</font>"
+                    output += "<font color='#950000'>shunned " + status + "</font>"
             else:
                 output += the_cat.status
         elif the_cat.df:
@@ -1727,7 +1745,6 @@ class ProfileScreen(Screens):
                         if Cat.fetch_cat(i)
                     ]
                 )
-
             # NEWLINE ----------
             output += "\n"
 
@@ -1886,47 +1903,56 @@ class ProfileScreen(Screens):
             pass
         else:
             self.open_tab = "history"
+            rect = ui_scale(pygame.Rect((0, 0), (620, 157)))
+            rect.bottomleft = ui_scale_offset((89, 0))
             self.backstory_background = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((178, 930), (1240, 314))), self.backstory_tab
+                rect,
+                get_box(
+                    BoxStyles.ROUNDED_BOX, (620, 157), sides=(True, True, False, True)
+                ),
+                anchors={
+                    "bottom": "bottom",
+                    "bottom_target": self.conditions_tab_button,
+                },
             )
             self.backstory_background.disable()
             self.sub_tab_1 = UIImageButton(
-                scale(pygame.Rect((1418, 950), (84, 60))),
+                ui_scale(pygame.Rect((709, 475), (42, 30))),
                 "",
                 object_id="#sub_tab_1_button",
                 manager=MANAGER,
             )
             self.sub_tab_1.disable()
             self.sub_tab_2 = UIImageButton(
-                scale(pygame.Rect((1418, 1024), (84, 60))),
+                ui_scale(pygame.Rect((709, 512), (42, 30))),
                 "",
                 object_id="#sub_tab_2_button",
                 manager=MANAGER,
             )
             self.sub_tab_2.disable()
             self.sub_tab_3 = UIImageButton(
-                scale(pygame.Rect((1418, 1098), (84, 60))),
+                ui_scale(pygame.Rect((709, 549), (42, 30))),
                 "",
                 object_id="#sub_tab_3_button",
                 manager=MANAGER,
             )
             self.sub_tab_3.disable()
             self.sub_tab_4 = UIImageButton(
-                scale(pygame.Rect((1418, 1172), (84, 60))),
+                ui_scale(pygame.Rect((709, 586), (42, 30))),
                 "",
                 object_id="#sub_tab_4_button",
                 manager=MANAGER,
             )
             self.sub_tab_4.disable()
             self.fav_tab = UIImageButton(
-                scale(pygame.Rect((105, 960), (56, 56))),
+                ui_scale(pygame.Rect((55, 480), (28, 28))),
                 "",
                 object_id="#fav_star",
                 tool_tip_text="un-favorite this sub tab",
                 manager=MANAGER,
             )
             self.not_fav_tab = UIImageButton(
-                scale(pygame.Rect((105, 960), (56, 56))),
+                ui_scale(pygame.Rect((55, 480), (28, 28))),
                 "",
                 object_id="#not_fav_star",
                 tool_tip_text="favorite this sub tab - it will be the default sub tab displayed when History is viewed",
@@ -1938,19 +1964,19 @@ class ProfileScreen(Screens):
             else:
                 # This will be overwritten in update_disabled_buttons_and_text()
                 self.history_text_box = pygame_gui.elements.UITextBox(
-                    "", scale(pygame.Rect((80, 480), (615, 142))), manager=MANAGER
+                    "", ui_scale(pygame.Rect((40, 240), (307, 71))), manager=MANAGER
                 )
                 self.no_moons = UIImageButton(
-                    scale(pygame.Rect((104, 1028), (68, 68))),
+                    ui_scale(pygame.Rect((52, 514), (34, 34))),
                     "",
-                    object_id="#unchecked_checkbox",
+                    object_id="@unchecked_checkbox",
                     tool_tip_text="Show the Moon that certain history events occurred on",
                     manager=MANAGER,
                 )
                 self.show_moons = UIImageButton(
-                    scale(pygame.Rect((104, 1028), (68, 68))),
+                    ui_scale(pygame.Rect((52, 514), (34, 34))),
                     "",
-                    object_id="#checked_checkbox",
+                    object_id="@checked_checkbox",
                     tool_tip_text="Stop showing the Moon that certain history events occurred on",
                     manager=MANAGER,
                 )
@@ -1965,7 +1991,7 @@ class ProfileScreen(Screens):
 
         
         self.notes_entry = pygame_gui.elements.UITextEntryBox(
-            scale(pygame.Rect((200, 946), (1200, 298))),
+            ui_scale(pygame.Rect((100, 473), (600, 149))),
             initial_text=self.user_notes,
             object_id="#text_box_26_horizleft_pad_10_14",
             manager=MANAGER,
@@ -1973,7 +1999,7 @@ class ProfileScreen(Screens):
 
         self.display_notes = UITextBoxTweaked(
             self.user_notes,
-            scale(pygame.Rect((200, 946), (120, 298))),
+            ui_scale(pygame.Rect((100, 473), (60, 149))),
             object_id="#text_box_26_horizleft_pad_10_14",
             line_spacing=1,
             manager=MANAGER,
@@ -2061,8 +2087,8 @@ class ProfileScreen(Screens):
             app_history = self.get_apprenticeship_text()
             if app_history:
                 life_history.append(app_history)
-                
-            #Get mentorship text if it exists
+
+            # Get mentorship text if it exists
             mentor_history = self.get_mentorship_text()
             if mentor_history:
                 life_history.append(mentor_history)
@@ -2181,10 +2207,12 @@ class ProfileScreen(Screens):
             i = 0
             for scar in scar_history:
                 # base adjustment to get the cat's name and moons if needed
-                new_text = (event_text_adjust(Cat,
-                                              scar["text"],
-                                              main_cat=self.the_cat,
-                                              random_cat=Cat.fetch_cat(scar["involved"])))
+                new_text = event_text_adjust(
+                    Cat,
+                    scar["text"],
+                    main_cat=self.the_cat,
+                    random_cat=Cat.fetch_cat(scar["involved"]),
+                )
 
                 if moons:
                     new_text += f" (Moon {scar['moon']})"
@@ -2258,22 +2286,22 @@ class ProfileScreen(Screens):
                     influence_history += str(valid_formor_mentors[0].name) + ". "
             else:
                 influence_history += "This cat either did not have a mentor, or {PRONOUN/m_c/poss} mentor is unknown. "
-            
+
             # Second, do the facet/personality effect
             trait_influence = []
             if "trait" in mentor_influence and isinstance(
                 mentor_influence["trait"], dict
             ):
                 for _mentor in mentor_influence["trait"]:
-                    #If the strings are not set (empty list), continue. 
+                    # If the strings are not set (empty list), continue.
                     if not mentor_influence["trait"][_mentor].get("strings"):
                         continue
-                    
+
                     ment_obj = Cat.fetch_cat(_mentor)
-                    #Continue of the mentor is invalid too.
+                    # Continue of the mentor is invalid too.
                     if not isinstance(ment_obj, Cat):
                         continue
-                    
+
                     if len(mentor_influence["trait"][_mentor].get("strings")) > 1:
                         string_snippet = (
                             ", ".join(
@@ -2295,22 +2323,21 @@ class ProfileScreen(Screens):
                     )
 
             influence_history += " ".join(trait_influence)
-            
-            
+
             skill_influence = []
             if "skill" in mentor_influence and isinstance(
                 mentor_influence["skill"], dict
             ):
                 for _mentor in mentor_influence["skill"]:
-                    #If the strings are not set (empty list), continue. 
+                    # If the strings are not set (empty list), continue.
                     if not mentor_influence["skill"][_mentor].get("strings"):
                         continue
-                    
+
                     ment_obj = Cat.fetch_cat(_mentor)
-                    #Continue of the mentor is invalid too.
+                    # Continue of the mentor is invalid too.
                     if not isinstance(ment_obj, Cat):
                         continue
-                    
+
                     if len(mentor_influence["skill"][_mentor].get("strings")) > 1:
                         string_snippet = (
                             ", ".join(
@@ -2370,14 +2397,13 @@ class ProfileScreen(Screens):
         apprenticeship_history = process_text(apprenticeship_history, cat_dict)
         return apprenticeship_history
 
-
     def get_mentorship_text(self):
         """
 
         returns full list of previously mentored apprentices.
 
         """
-        
+
         text = ""
         # Doing this is two steps
         all_real_apprentices = [
@@ -2407,14 +2433,13 @@ class ProfileScreen(Screens):
             cat_dict = {"m_c": (str(self.the_cat.name), choice(self.the_cat.pronouns))}
 
             text = process_text(text, cat_dict)
-        
+
         return text
-        
 
     def get_text_for_murder_event(self, event, death):
-        """ Returns the adjusted murder history text for the victim """
-        
-        if game.switches['show_history_moons']:
+        """Returns the adjusted murder history text for the victim"""
+
+        if game.switches["show_history_moons"]:
             moons = True
         else:
             moons = False
@@ -2425,7 +2450,8 @@ class ProfileScreen(Screens):
                     Cat,
                     event["text"],
                     main_cat=self.the_cat,
-                    random_cat=Cat.fetch_cat(death["involved"]))
+                    random_cat=Cat.fetch_cat(death["involved"]),
+                )
 
                 if event.get("revelation_text"):
                     final_text = f"{final_text} {event['revelation_text']}"
@@ -2438,10 +2464,10 @@ class ProfileScreen(Screens):
                     Cat,
                     event["text"],
                     main_cat=self.the_cat,
-                    random_cat=Cat.fetch_cat(death["involved"]))
+                    random_cat=Cat.fetch_cat(death["involved"]),
+                )
 
         return None
-
 
     def get_death_text(self):
         """
@@ -2460,6 +2486,7 @@ class ProfileScreen(Screens):
         if death_history:
             all_deaths = []
             death_number = len(death_history)
+            multi_life_count = 0
             for index, death in enumerate(death_history):
                 found_murder = (
                     False  # Add this line to track if a matching murder event is found
@@ -2477,15 +2504,20 @@ class ProfileScreen(Screens):
                                 Cat,
                                 event["text"],
                                 main_cat=self.the_cat,
-                                random_cat=Cat.fetch_cat(death["involved"]))
+                                random_cat=Cat.fetch_cat(death["involved"]),
+                            )
                 if not found_murder:
                     text = event_text_adjust(
                         Cat,
                         death["text"],
                         main_cat=self.the_cat,
-                        random_cat=Cat.fetch_cat(death["involved"]))
+                        random_cat=Cat.fetch_cat(death["involved"]),
+                    )
 
                 if self.the_cat.status == "leader":
+                    if text == "multi_lives":
+                        multi_life_count += 1
+                        continue
                     if index == death_number - 1 and self.the_cat.dead:
                         if death_number == 9:
                             life_text = "lost {PRONOUN/m_c/poss} final life"
@@ -2494,10 +2526,32 @@ class ProfileScreen(Screens):
                         else:
                             life_text = "lost the rest of {PRONOUN/m_c/poss} lives"
                     else:
-                        life_names = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eigth"]
-                        life_text = "lost {PRONOUN/m_c/poss} " + life_names[index] + " life"
+                        life_names = [
+                            "first",
+                            "second",
+                            "third",
+                            "fourth",
+                            "fifth",
+                            "sixth",
+                            "seventh",
+                            "eighth",
+                        ]
+                        if multi_life_count != 0:
+                            temp_index = index - multi_life_count
+                            lives = [life_names[temp_index]]
+                            while multi_life_count != 0:
+                                multi_life_count -= 1
+                                temp_index += 1
+                                lives.append(life_names[temp_index])
+                        else:
+                            lives = [life_names[index]]
+                        life_text = (
+                            "lost {PRONOUN/m_c/poss} "
+                            + adjust_list_text(lives)
+                            + (" life" if len(lives) == 1 else " lives")
+                        )
                 elif death_number > 1:
-                    #for retired leaders
+                    # for retired leaders
                     if index == death_number - 1 and self.the_cat.dead:
                         life_text = "lost {PRONOUN/m_c/poss} last remaining life"
                         # added code
@@ -2563,7 +2617,7 @@ class ProfileScreen(Screens):
 
             for victim in victims:
                 if not Cat.fetch_cat(victim["victim"]):
-                    continue 
+                    continue
                 name = str(Cat.fetch_cat(victim["victim"]).name)
 
                 if victim["revealed"]:
@@ -2573,7 +2627,9 @@ class ProfileScreen(Screens):
                     if moons:
                         victim_names[name].append(victim["moon"])
                         if victim.get("revelation_moon"):
-                            reveal_text = f"{reveal_text} (Moon {victim['revelation_moon']})"
+                            reveal_text = (
+                                f"{reveal_text} (Moon {victim['revelation_moon']})"
+                            )
 
             if victim_names:
                 for name in victim_names:
@@ -2611,31 +2667,53 @@ class ProfileScreen(Screens):
         else:
             self.open_tab = "conditions"
             self.conditions_page = 0
-            self.right_conditions_arrow = UIImageButton(
-                scale(pygame.Rect((1418, 1080), (68, 68))),
-                "",
-                object_id="#arrow_right_button",
-                manager=MANAGER,
-            )
-            self.left_conditions_arrow = UIImageButton(
-                scale(pygame.Rect((118, 1080), (68, 68))),
-                "",
-                object_id="#arrow_left_button",
-            )
+
+            rect = ui_scale(pygame.Rect((0, 0), (624, 151)))
+            rect.bottomleft = ui_scale_offset((0, 0))
             self.conditions_background = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((178, 942), (1248, 302))), self.conditions_tab
+                rect,
+                self.conditions_tab,
+                starting_height=2,
+                anchors={
+                    "bottom": "bottom",
+                    "bottom_target": self.conditions_tab_button,
+                    "centerx": "centerx",
+                },
             )
+            del rect
+
+            rect = ui_scale(pygame.Rect((-5, 537), (34, 34)))
+            self.right_conditions_arrow = UISurfaceImageButton(
+                rect,
+                Icon.ARROW_RIGHT,
+                get_button_dict(ButtonStyles.ICON, (34, 34)),
+                object_id="@buttonstyles_icon",
+                manager=MANAGER,
+                anchors={"left_target": self.conditions_background},
+            )
+            del rect
+
+            rect = ui_scale(pygame.Rect((0, 0), (34, 34)))
+            rect.topright = ui_scale_offset((5, 537))
+            self.left_conditions_arrow = UISurfaceImageButton(
+                rect,
+                Icon.ARROW_LEFT,
+                get_button_dict(ButtonStyles.ICON, (34, 34)),
+                object_id="@buttonstyles_icon",
+                anchors={"right": "right", "right_target": self.conditions_background},
+            )
+            del rect
 
             # This will be overwritten in update_disabled_buttons_and_text()
             self.update_disabled_buttons_and_text()
 
     def display_conditions_page(self):
         # tracks the position of the detail boxes
-        if self.condition_container: 
+        if self.condition_container:
             self.condition_container.kill()
-            
+
         self.condition_container = pygame_gui.core.UIContainer(
-            scale(pygame.Rect((178, 942), (1248, 302))), MANAGER
+            ui_scale(pygame.Rect((89, 471), (624, 151))), MANAGER
         )
 
         # gather a list of all the conditions and info needed.
@@ -2658,7 +2736,7 @@ class ProfileScreen(Screens):
             ]
         )
         all_illness_injuries = chunks(all_illness_injuries, 4)
-        
+
         if not all_illness_injuries:
             self.conditions_page = 0
             self.right_conditions_arrow.disable()
@@ -2670,57 +2748,59 @@ class ProfileScreen(Screens):
             self.conditions_page = 0
         elif self.conditions_page > len(all_illness_injuries) - 1:
             self.conditions_page = len(all_illness_injuries) - 1
-            
+
         # Disable the arrow buttons
         if self.conditions_page == 0:
             self.left_conditions_arrow.disable()
         else:
             self.left_conditions_arrow.enable()
-        
+
         if self.conditions_page >= len(all_illness_injuries) - 1:
             self.right_conditions_arrow.disable()
         else:
             self.right_conditions_arrow.enable()
 
-        x_pos = 30
+        x_pos = 13
+        for x in self.condition_data.values():
+            x.kill()
+        self.condition_data = {}
         for con in all_illness_injuries[self.conditions_page]:
-            
             # Background Box
-            pygame_gui.elements.UIImage(
-                scale(pygame.Rect((x_pos, 25), (280, 276))),
-                self.condition_details_box,
+            self.condition_data[f"bg_{con}"] = pygame_gui.elements.UIPanel(
+                ui_scale(pygame.Rect((x_pos, 13), (142, 142))),
                 manager=MANAGER,
                 container=self.condition_container,
+                object_id="#profile_condition_panel",
+                margins={"left": 0, "right": 0, "top": 0, "bottom": 0},
             )
 
-            y_adjust = 60
-            
-            name = UITextBoxTweaked(
+            self.condition_data[f"name_{con}"] = UITextBoxTweaked(
                 con[0],
-                scale(pygame.Rect((x_pos, 26), (272, -1))),
-                line_spacing=1,
+                ui_scale(pygame.Rect((0, 0), (120, -1))),
+                line_spacing=0.90,
                 object_id="#text_box_30_horizcenter",
-                container=self.condition_container,
+                container=self.condition_data[f"bg_{con}"],
                 manager=MANAGER,
+                anchors={"centerx": "centerx"},
             )
 
-            y_adjust = name.get_relative_rect().height
-            details_rect = scale(pygame.Rect((x_pos, 0), (276, -1)))
-            details_rect.y = y_adjust
-            
-            UITextBoxTweaked(
+            y_adjust = self.condition_data[f"name_{con}"].get_relative_rect().height
+            details_rect = ui_scale(pygame.Rect((0, 0), (142, 100)))
+            details_rect.bottomleft = (0, 0)
+
+            self.condition_data[f"desc_{con}"] = UITextBoxTweaked(
                 con[1],
                 details_rect,
-                line_spacing=0.90,
-                object_id="#text_box_22_horizcenter_pad_20_20",
-                container=self.condition_container,
+                line_spacing=0.75,
+                object_id="#text_box_22_horizcenter",
+                container=self.condition_data[f"bg_{con}"],
                 manager=MANAGER,
+                anchors={"bottom": "bottom", "centerx": "centerx"},
             )
 
-            x_pos += 304
-        
+            x_pos += 152
         return
-        
+
     def get_condition_details(self, name):
         """returns the relevant condition details as one string with line breaks"""
         text_list = []
@@ -2771,7 +2851,7 @@ class ProfileScreen(Screens):
                 text_list.append(f"{insert} {moons_with} moons")
             else:
                 text_list.append(f"{insert} 1 moon")
-            
+
             # infected or festering
             if "complication" in keys:
                 complication = self.the_cat.injuries[name]["complication"]
@@ -2800,7 +2880,7 @@ class ProfileScreen(Screens):
 
             if self.the_cat.illnesses[name]["infectiousness"] != 0:
                 text_list.append("infectious!")
-            
+
             # can or can't patrol
             if self.the_cat.illnesses[name]["severity"] != "minor":
                 text_list.append("Can't work with this condition")
@@ -2817,8 +2897,18 @@ class ProfileScreen(Screens):
             pass
         else:
             self.open_tab = "faith"
-            self.backstory_background = pygame_gui.elements.UIImage(scale(pygame.Rect((178, 930), (1240, 314))),
-                                                                    self.backstory_tab)
+            rect = ui_scale(pygame.Rect((0, 0), (620, 157)))
+            rect.bottomleft = ui_scale_offset((89, 0))
+            self.backstory_background = pygame_gui.elements.UIImage(
+                rect,
+                get_box(
+                    BoxStyles.ROUNDED_BOX, (620, 157), sides=(True, True, False, True)
+                ),
+                anchors={
+                    "bottom": "bottom",
+                    "bottom_target": self.conditions_tab_button,
+                },
+            )
             self.backstory_background.disable()
             self.open_faith_tab()
             self.update_disabled_buttons_and_text()
@@ -2850,11 +2940,11 @@ class ProfileScreen(Screens):
                 cat_faith = 3
             elif cat_faith < -3:
                 cat_faith = -3
-        self.faith_bar = pygame_gui.elements.UIImage(scale(pygame.Rect((350, 1000), (842, 78))),
+        self.faith_bar = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((175, 500), (421, 39))),
                                                                 image_cache.load_image(f"resources/images/faith{cat_faith}.png").convert_alpha())
         self.faith_bar.disable()
         self.faith_text = UITextBoxTweaked(self.get_faith_text(cat_faith),
-                                                        scale(pygame.Rect((370, 1070), (850, 298))),
+                                                        ui_scale(pygame.Rect((175, 535), (425,75))),
                                                         object_id="#text_box_26_horizleft_pad_10_14",
                                                         line_spacing=1, manager=MANAGER)
         
@@ -2863,9 +2953,21 @@ class ProfileScreen(Screens):
         with open("resources/dicts/faith_display.json", "r") as read_file:
             faith_dict = ujson.loads(read_file.read())
             cluster1, cluster2 = get_cluster(self.the_cat.personality.trait)
+
+        faith_text = ""
         if faith == 0:
-            return faith_dict[str(faith)]["All"]
-        return faith_dict[str(faith)][str(cluster1)]
+            faith_text = faith_dict[str(faith)]["All"]
+        else:
+            faith_text = faith_dict[str(faith)][str(cluster1)]
+
+        process_text_dict = {}
+        process_text_dict["m_c"] = self.the_cat
+        for abbrev in process_text_dict.keys():
+            abbrev_cat = process_text_dict[abbrev]
+            process_text_dict[abbrev] = (abbrev_cat, choice(abbrev_cat.pronouns))
+        faith_text = sub(r"\{(.*?)\}", lambda x: pronoun_repl(x, process_text_dict, False), faith_text)
+        
+        return faith_text
     
     def toggle_accessories_tab(self):
         """Opens accessories tab"""
@@ -2880,23 +2982,56 @@ class ProfileScreen(Screens):
             pass
         else:
             self.open_tab = "accessories"
-            self.backstory_background = pygame_gui.elements.UIImage(scale(pygame.Rect((178, 930), (1240, 314))),
-                                                                    self.backstory_tab)
+            rect = ui_scale(pygame.Rect((0, 0), (620, 157)))
+            rect.bottomleft = ui_scale_offset((89, 0))
+            self.backstory_background = pygame_gui.elements.UIImage(
+                rect,
+                get_box(
+                    BoxStyles.ROUNDED_BOX, (620, 157), sides=(True, True, False, True)
+                ),
+                anchors={
+                    "bottom": "bottom",
+                    "bottom_target": self.conditions_tab_button,
+                },
+            )
             self.backstory_background.disable()
 
-            self.previous_page_button = UIImageButton(scale(pygame.Rect((110, 1000), (68, 68))), "",
-                                              object_id="#arrow_left_button"
-                                              , manager=MANAGER)
-            self.next_page_button = UIImageButton(scale(pygame.Rect((1418, 1000), (68, 68))), "",
-                                                  object_id="#arrow_right_button", manager=MANAGER)
-            self.clear_accessories = UIImageButton(scale(pygame.Rect((1418, 1160), (68, 68))), "",
-                                                  object_id="#exit_window_button", tool_tip_text="Remove all worn accessories", manager=MANAGER)
+            self.clear_accessories = UIImageButton(
+                ui_scale(pygame.Rect((709, 580), (34, 34))),
+                "",
+                object_id="#exit_window_button",
+                tool_tip_text="Take off all worn accessories",
+                manager=MANAGER
+                )
 
-            self.search_bar_image = pygame_gui.elements.UIImage(scale(pygame.Rect((239, 910), (236, 68))),
+            self.delete_accessory = UIImageButton(
+                ui_scale(pygame.Rect((709, 542), (34, 34))),
+                "",
+                object_id="#exit_window_button",
+                tool_tip_text="Remove worn accessories from inventory",
+                manager=MANAGER
+                )
+            
+            self.next_page_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((709, 500), (34, 34))),
+                Icon.ARROW_RIGHT,
+                get_button_dict(ButtonStyles.ICON, (34, 34)),
+                object_id="@buttonstyles_icon",
+                manager=MANAGER,
+            )
+            self.previous_page_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((55, 500), (34, 34))),
+                Icon.ARROW_LEFT,
+                get_button_dict(ButtonStyles.ICON, (34, 34)),
+                object_id="@buttonstyles_icon",
+                manager=MANAGER,
+            )
+
+            self.search_bar_image = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((119, 455), (118, 34))),
                                                             pygame.image.load(
                                                                 "resources/images/search_bar.png").convert_alpha(),
                                                             manager=MANAGER)
-            self.search_bar = pygame_gui.elements.UITextEntryLine(scale(pygame.Rect((259, 915), (205, 55))),
+            self.search_bar = pygame_gui.elements.UITextEntryLine(ui_scale(pygame.Rect((129, 457), (102, 27))),
                                                               object_id="#search_entry_box",
                                                               initial_text="search",
                                                               manager=MANAGER)
@@ -2935,8 +3070,8 @@ class ProfileScreen(Screens):
             else:
                 cat_sprite = str(cat.pelt.cat_sprites[age])
 
-        pos_x = 20
-        pos_y = 250
+        pos_x = 10
+        pos_y = 125
         i = 0
         self.cat_list_buttons = {}
         self.accessory_buttons = {}
@@ -2944,21 +3079,13 @@ class ProfileScreen(Screens):
         start_index = self.page * 18
         end_index = start_index + 18
 
-        if cat.pelt.accessory:
-            if cat.pelt.accessory not in cat.pelt.inventory:
-                cat.pelt.inventory.append(cat.pelt.accessory)
-
-        for acc in cat.pelt.accessories:
-            if acc not in cat.pelt.inventory:
-                cat.pelt.inventory.append(acc)
-
         inventory_len = 0
         new_inv = []
         if self.search_bar.get_text() in ["", "search"]:
-            inventory_len = len(cat.pelt.inventory)
-            new_inv = cat.pelt.inventory
+            inventory_len = len(self.cat_inventory)
+            new_inv = self.cat_inventory
         else:
-            for ac in cat.pelt.inventory:
+            for ac in self.cat_inventory:
                 if ac and self.search_bar.get_text() and self.search_bar.get_text().lower() in ac.lower():
                     inventory_len+=1
                     new_inv.append(ac)
@@ -2969,45 +3096,45 @@ class ProfileScreen(Screens):
             self.next_page_button.disable()
         if self.page == 0:
             self.previous_page_button.disable()
-        if cat.pelt.inventory:
+        if self.cat_inventory:
             for a, accessory in enumerate(new_inv[start_index:min(end_index, inventory_len)], start = start_index):
                 try:
                     if self.search_bar.get_text() in ["", "search"] or self.search_bar.get_text().lower() in accessory.lower():
                         if accessory in cat.pelt.accessories:
-                            self.accessory_buttons[str(i)] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", tool_tip_text=accessory, object_id="#fav_marker")
+                            self.accessory_buttons[str(i)] = UIImageButton(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), "", tool_tip_text=accessory, object_id="#fav_marker")
                         else:
-                            self.accessory_buttons[str(i)] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", tool_tip_text=accessory, object_id="#blank_button")
+                            self.accessory_buttons[str(i)] = UIImageButton(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), "", tool_tip_text=accessory, object_id="#blank_button")
                         if accessory in cat.pelt.plant_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_herbs' + accessory + cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_herbs' + accessory + cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.wild_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_wild' + accessory + cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_wild' + accessory + cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.collars:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['collars' + accessory + cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['collars' + accessory + cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.flower_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_flower' + accessory + cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_flower' + accessory + cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.plant2_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_plant2' + accessory + cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_plant2' + accessory + cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.snake_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_snake' + accessory + cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_snake' + accessory + cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.smallAnimal_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_smallAnimal' + accessory + cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_smallAnimal' + accessory + cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.deadInsect_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_deadInsect' + accessory + cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_deadInsect' + accessory + cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.aliveInsect_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_aliveInsect' + accessory + cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_aliveInsect' + accessory + cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.fruit_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_fruit' + accessory + cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_fruit' + accessory + cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.crafted_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_crafted' + accessory + cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_crafted' + accessory + cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.tail2_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_tail2' + accessory + cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))), sprites.sprites['acc_tail2' + accessory + cat_sprite], manager=MANAGER)
 
 
                         self.accessories_list.append(accessory)
-                        pos_x += 120
-                        if pos_x >= 1100:
+                        pos_x += 60
+                        if pos_x >= 550:
                             pos_x = 0
-                            pos_y += 120
+                            pos_y += 60
                         i += 1
                 except:
                     continue
@@ -3025,32 +3152,36 @@ class ProfileScreen(Screens):
             pass
         else:
             self.open_tab = "relations"
-            self.family_tree_button = UIImageButton(
-                scale(pygame.Rect((100, 900), (344, 72))),
-                "",
+            self.family_tree_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((50, 450), (172, 36))),
+                "family tree",
+                get_button_dict(ButtonStyles.LADDER_TOP, (172, 36)),
+                object_id="@buttonstyles_ladder_top",
                 starting_height=2,
-                object_id="#family_tree_button",
                 manager=MANAGER,
             )
-            self.change_adoptive_parent_button = UIImageButton(
-                scale(pygame.Rect((100, 972), (344, 72))),
-                "",
+            self.change_adoptive_parent_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((50, 486), (172, 36))),
+                "adoptive parents",
+                get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 36)),
+                object_id="@buttonstyles_ladder_middle",
                 starting_height=2,
-                object_id="#adoptive_parents",
                 manager=MANAGER,
             )
-            self.see_relationships_button = UIImageButton(
-                scale(pygame.Rect((100, 1044), (344, 72))),
-                "",
+            self.see_relationships_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((50, 522), (172, 36))),
+                "see relationships",
+                get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 36)),
+                object_id="@buttonstyles_ladder_middle",
                 starting_height=2,
-                object_id="#see_relationships_button",
                 manager=MANAGER,
             )
-            self.choose_mate_button = UIImageButton(
-                scale(pygame.Rect((100, 1116), (344, 72))),
-                "",
+            self.choose_mate_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((50, 558), (172, 36))),
+                "choose mate",
+                get_button_dict(ButtonStyles.LADDER_BOTTOM, (172, 36)),
+                object_id="@buttonstyles_ladder_bottom",
                 starting_height=2,
-                object_id="#choose_mate_button",
                 manager=MANAGER,
             )
             self.update_disabled_buttons_and_text()
@@ -3086,18 +3217,20 @@ class ProfileScreen(Screens):
         else:
             self.open_tab = "roles"
 
-            self.manage_roles = UIImageButton(
-                scale(pygame.Rect((452, 900), (344, 72))),
-                "",
-                object_id="#manage_roles_button",
+            self.manage_roles = UISurfaceImageButton(
+                ui_scale(pygame.Rect((226, 450), (172, 36))),
+                "manage roles",
+                get_button_dict(ButtonStyles.LADDER_TOP, (172, 36)),
+                object_id="@buttonstyles_ladder_top",
                 starting_height=2,
                 manager=MANAGER,
             )
-            self.change_mentor_button = UIImageButton(
-                scale(pygame.Rect((452, 972), (344, 72))),
-                "",
+            self.change_mentor_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((226, 486), (172, 36))),
+                "change mentor",
+                get_button_dict(ButtonStyles.LADDER_BOTTOM, (172, 36)),
+                object_id="@buttonstyles_ladder_bottom",
                 starting_height=2,
-                object_id="#change_mentor_button",
                 manager=MANAGER,
             )
             self.update_disabled_buttons_and_text()
@@ -3114,32 +3247,44 @@ class ProfileScreen(Screens):
             pass
         else:
             self.open_tab = "personal"
-            self.change_name_button = UIImageButton(
-                scale(pygame.Rect((804, 900), (344, 72))),
-                "",
+            self.change_name_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((402, 450), (172, 36))),
+                "change name",
+                get_button_dict(ButtonStyles.LADDER_TOP, (172, 36)),
+                object_id="@buttonstyles_ladder_top",
                 starting_height=2,
-                object_id="#change_name_button",
                 manager=MANAGER,
             )
-            self.specify_gender_button = UIImageButton(
-                scale(pygame.Rect((804, 1076), (344, 72))),
-                "",
+            self.cis_trans_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((402, 0), (172, 52))),
+                "debug\nuwu",
+                get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 52)),
+                object_id="@buttonstyles_ladder_middle",
+                text_layer_object_id="@buttonstyles_ladder_multiline",
                 starting_height=2,
-                object_id="#specify_gender_button",
                 manager=MANAGER,
+                anchors={"top_target": self.change_name_button},
+                text_is_multiline=True,
             )
-            self.cat_toggles_button = UIImageButton(
-                scale(pygame.Rect((804, 1148), (344, 72))),
-                "",
+            self.specify_gender_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((402, 0), (172, 36))),
+                "specify gender",
+                get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 36)),
+                object_id="@buttonstyles_ladder_middle",
                 starting_height=2,
-                object_id="#cat_toggles_button",
                 manager=MANAGER,
+                anchors={"top_target": self.cis_trans_button},
+            )
+            self.cat_toggles_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((402, 0), (172, 36))),
+                "cat toggles",
+                get_button_dict(ButtonStyles.LADDER_BOTTOM, (172, 36)),
+                object_id="@buttonstyles_ladder_bottom",
+                starting_height=2,
+                manager=MANAGER,
+                anchors={"top_target": self.specify_gender_button},
             )
 
-            # These are a placeholders, to be killed and recreated in self.update_disabled_buttons().
-            #   This it due to the image switch depending on the cat's status, and the location switch the close button
-            #    If you can think of a better way to do this, please fix!
-            self.cis_trans_button = None
             self.update_disabled_buttons_and_text()
 
     def toggle_dangerous_tab(self):
@@ -3154,8 +3299,16 @@ class ProfileScreen(Screens):
             pass
         else:
             self.open_tab = "dangerous"
+            self.exile_cat_button = UIImageButton(
+                ui_scale(pygame.Rect((578, 450), (172, 36))),
+                "",
+                object_id="#exile_cat_button",
+                tool_tip_text="This cannot be reversed.",
+                starting_height=2,
+                manager=MANAGER,
+            )
             self.kill_cat_button = UIImageButton(
-                scale(pygame.Rect((1156, 972), (344, 72))),
+                ui_scale(pygame.Rect((578, 486), (172, 36))),
                 "",
                 object_id="#kill_cat_button",
                 tool_tip_text="This will open a confirmation window and allow you to input a death reason",
@@ -3163,18 +3316,21 @@ class ProfileScreen(Screens):
                 manager=MANAGER,
             )
             self.murder_cat_button = UIImageButton(
-                scale(pygame.Rect((1156, 1045), (344, 72))),
+                ui_scale(pygame.Rect((578, 522), (172, 36))),
                 "",
                 object_id="#murder_button",
                 tool_tip_text='Choose to murder one of your clanmates',
                 starting_height=2, manager=MANAGER
             )
-            if game.clan.murdered or game.clan.your_cat.moons == 0:
+            if game.clan.your_cat.moons == 0:
+                self.murder_cat_button.disable()
+            
+            if "moon" in game.clan.murdered and game.clan.murdered["moon"] == game.clan.age:
                 self.murder_cat_button.disable()
                 
             if game.clan.your_cat.joined_df:
                 self.exit_df_button = UIImageButton(
-                scale(pygame.Rect((1156, 1115), (344, 72))),
+                ui_scale(pygame.Rect((578, 558), (172, 36))),
                 "",
                 object_id="#exit_df_button",
                 tool_tip_text='Leave the Dark Forest',
@@ -3182,7 +3338,7 @@ class ProfileScreen(Screens):
                 )
             else:
                 self.join_df_button = UIImageButton(
-                scale(pygame.Rect((1156, 1115), (344, 72))),
+                ui_scale(pygame.Rect((578, 558), (172, 36))),
                 "",
                 object_id="#join_df_button",
                 tool_tip_text='Join the Dark Forest',
@@ -3191,7 +3347,7 @@ class ProfileScreen(Screens):
             if game.clan.your_cat.moons < 6:
                 self.join_df_button.disable()
             self.affair_button = UIImageButton(
-                scale(pygame.Rect((1156, 1188), (344, 72))),
+                ui_scale(pygame.Rect((578, 594), (172, 36))),
                 "",
                 object_id="#affair_button",
                 tool_tip_text='Have an affair with one of your clanmates',
@@ -3210,7 +3366,6 @@ class ProfileScreen(Screens):
             # These are a placeholders, to be killed and recreated in self.update_disabled_buttons_and_text().
             #   This it due to the image switch depending on the cat's status, and the location switch the close button
             #    If you can think of a better way to do this, please fix!
-            self.exile_cat_button = None
             self.update_disabled_buttons_and_text()
 
     def update_disabled_buttons_and_text(self):
@@ -3252,101 +3407,96 @@ class ProfileScreen(Screens):
                 self.change_mentor_button.enable()
 
         elif self.open_tab == "personal":
-
-              # Button to trans or cis the cats.
-            if self.cis_trans_button:
-                self.cis_trans_button.kill()
+            # Button to trans or cis the cats.
             if (self.the_cat.gender == "tom" or (self.the_cat.gender == 'intersex' and 'Y' in self.the_cat.genotype.sexgene)) and self.the_cat.genderalign.replace("intersex ", "") == "tom":
-                self.cis_trans_button = UIImageButton(scale(pygame.Rect((804, 972), (344, 104))), "",
-                                                      starting_height=2, object_id="#change_trans_female_button",
-                                                      manager=MANAGER)
-            elif (self.the_cat.gender == "molly" or (self.the_cat.gender == 'intersex' and 'Y' not in self.the_cat.genotype.sexgene)) and self.the_cat.genderalign.replace("intersex ", "") == "molly":
-                self.cis_trans_button = UIImageButton(scale(pygame.Rect((804, 972), (344, 104))), "",
-                                                      starting_height=2, object_id="#change_trans_male_button",
-                                                      manager=MANAGER)
+                self.cis_trans_button.set_text("change to trans\nfemale")
+            elif (
+                (self.the_cat.gender == "molly" or (self.the_cat.gender == 'intersex' and 'Y' not in self.the_cat.genotype.sexgene)) and self.the_cat.genderalign.replace("intersex ", "") == "molly"
+            ):
+                self.cis_trans_button.set_text("change to trans\nmale")
             elif self.the_cat.genderalign.replace("intersex ", "") in ['trans molly', 'trans tom']:
-                self.cis_trans_button = UIImageButton(scale(pygame.Rect((804, 972), (344, 104))), "",
-                                                      starting_height=2, object_id="#change_nonbi_button",
-                                                      manager=MANAGER)
+                self.cis_trans_button.set_text("change to\nnonbinary")
             elif self.the_cat.genderalign.replace("intersex ", "") not in ['molly', 'trans molly', 'tom', 'trans tom']:
-                self.cis_trans_button = UIImageButton(scale(pygame.Rect((804, 972), (344, 104))), "",
-                                                      starting_height=2, object_id="#change_cis_button",
-                                                      manager=MANAGER)
+                self.cis_trans_button.set_text("change to \ncisgender")
             elif (self.the_cat.gender == "tom" or (self.the_cat.gender == 'intersex' and 'Y' in self.the_cat.genotype.sexgene)) and self.the_cat.genderalign.replace("intersex ", "") == "molly":
-                self.cis_trans_button = UIImageButton(scale(pygame.Rect((804, 972), (344, 104))), "",
-                                                      starting_height=2, object_id="#change_cis_button",
-                                                      manager=MANAGER)
+                self.cis_trans_button.set_text("change to \ncisgender")
             elif (self.the_cat.gender == "molly" or (self.the_cat.gender == 'intersex' and 'Y' not in self.the_cat.genotype.sexgene)) and self.the_cat.genderalign.replace("intersex ", "") == "tom":
-                self.cis_trans_button = UIImageButton(scale(pygame.Rect((804, 972), (344, 104))), "",
-                                                      starting_height=2, object_id="#change_cis_button",
-                                                      manager=MANAGER)
+                self.cis_trans_button.set_text("change to \ncisgender")
             elif self.the_cat.genderalign:
-                self.cis_trans_button = UIImageButton(
-                    scale(pygame.Rect((804, 972), (344, 104))),
-                    "",
-                    starting_height=2,
-                    object_id="#change_cis_button",
-                    manager=MANAGER,
-                )
+                self.cis_trans_button.set_text("change to \ncisgender")
             else:
-                self.cis_trans_button = UIImageButton(
-                    scale(pygame.Rect((804, 972), (344, 104))),
-                    "",
-                    starting_height=2,
-                    object_id="#change_cis_button",
-                    manager=MANAGER,
-                )
+                self.cis_trans_button.set_text("change to \ncisgender")
                 self.cis_trans_button.disable()
         elif self.open_tab == 'your tab':
             if 'have kits' not in game.switches:
                     game.switches['have kits'] = True
+            self.have_kits_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((402, 580), (172, 36))),
+                "have kits",
+                get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 36)),
+                object_id="@buttonstyles_ladder_middle",
+                starting_height=2,
+                tool_tip_text='You will be more likely to have kits the next moon.',
+                manager=MANAGER,
+                anchors={
+                    "bottom_target": self.your_tab},
+            )
             if self.the_cat.age in ['young adult', 'adult', 'senior adult', 'senior'] and not self.the_cat.dead and not self.the_cat.outside and game.switches['have kits']:
-                self.have_kits_button = UIImageButton(scale(pygame.Rect((804, 1172), (344, 72))), "",
-                                                    starting_height=2, object_id="#have_kits_button", tool_tip_text='You will be more likely to have kits the next moon.',
-                                                    manager=MANAGER)
+                self.have_kits_button.enable()
             else:
-                self.have_kits_button = UIImageButton(scale(pygame.Rect((804, 1172), (344, 72))), "",
-                                                 starting_height=2, object_id="#have_kits_button",
-                                                 manager=MANAGER)
                 self.have_kits_button.disable()
-            # self.change_accessory_button = UIImageButton(scale(pygame.Rect((804, 1100), (344, 72))), "",
-            #                                      starting_height=2, object_id="#change_accessory_button",
-            #                                      manager=MANAGER)
-            if self.the_cat.status in ['leader', 'deputy', 'healer', 'mediator', 'queen', 'warrior'] and not self.the_cat.dead and not self.the_cat.outside:
-                self.request_apprentice_button = UIImageButton(scale(pygame.Rect((804, 1100), (344, 72))), "",
-                                                               tool_tip_text='You will be more likely to recieve an apprentice.',
-                                                    starting_height=2, object_id="#request_apprentice_button",
-                                                    manager=MANAGER)
+
+            self.request_apprentice_button = UISurfaceImageButton(
+                    ui_scale(pygame.Rect((402, 544), (172, 36))),
+                    "request apprentice",
+                    get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 36)),
+                    object_id="@buttonstyles_ladder_middle",
+                    starting_height=2,
+                    tool_tip_text='You will be more likely to receive an apprentice.', 
+                    manager=MANAGER,
+                    anchors={
+                        "bottom_target": self.have_kits_button},
+                )
+            
+            if self.the_cat.status in ['leader', 'deputy', 'medicine cat', 'mediator', 'queen', 'warrior'] and not self.the_cat.dead and not self.the_cat.outside:
+                self.request_apprentice_button.enable()
             else:
-                self.request_apprentice_button = UIImageButton(scale(pygame.Rect((804, 1100), (344, 72))), "",
-                                                    starting_height=2,
-                                                    tool_tip_text='You will be more likely to recieve an apprentice.', object_id="#request_apprentice_button",
-                                                    manager=MANAGER)
                 self.request_apprentice_button.disable()
             
+            self.gift_accessory_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((402, 508), (172, 36))),
+                "give a gift",
+                get_button_dict(ButtonStyles.LADDER_MIDDLE, (172, 36)),
+                object_id="@buttonstyles_ladder_middle",
+                starting_height=2,
+                manager=MANAGER,
+                anchors={
+                    "bottom_target": self.request_apprentice_button},
+            )
             if (
                 self.the_cat.moons > 0
                 and not self.the_cat.dead
                 and not self.the_cat.outside
-                and len(self.the_cat.pelt.inventory) > 0
+                and len(self.cat_inventory) > 0
                 ):
-                self.gift_accessory_button = UIImageButton(scale(pygame.Rect((804, 1028), (344, 72))), "",
-                                                    starting_height=2, object_id="#gift_clanmate_button",
-                                                    manager=MANAGER)
+               
+                self.gift_accessory_button.enable()
             else:
-                self.gift_accessory_button = UIImageButton(scale(pygame.Rect((804, 1028), (344, 72))), "",
-                                                    starting_height=2, object_id="#gift_clanmate_button",
-                                                    manager=MANAGER)
                 self.gift_accessory_button.disable()
 
+            self.your_faith_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((402, 472), (172, 36))),
+                "faith",
+                get_button_dict(ButtonStyles.LADDER_TOP, (172, 36)),
+                object_id="@buttonstyles_ladder_top",
+                starting_height=2,
+                manager=MANAGER,
+                anchors={
+                    "bottom_target": self.gift_accessory_button},
+            )
             if self.the_cat.status not in ["newborn", "kitten"] and not self.the_cat.dead and not self.the_cat.outside:
-                self.your_faith_button = UIImageButton(scale(pygame.Rect((804, 956), (352, 72))), "",
-                                                    starting_height=2, object_id="#your_faith_button",
-                                                    manager=MANAGER)
+                self.your_faith_button.enable()
             else:
-                self.your_faith_button = UIImageButton(scale(pygame.Rect((804, 956), (352, 72))), "",
-                                                    starting_height=2, object_id="#your_faith_button",
-                                                    manager=MANAGER)
                 self.your_faith_button.disable()
             
 
@@ -3355,13 +3505,12 @@ class ProfileScreen(Screens):
                     self.request_apprentice_button.disable()
         # Dangerous Tab
         elif self.open_tab == "dangerous":
-
-            # Exile/Guide/Follow button
+            # Button to exile cat
             if self.exile_cat_button:
                 self.exile_cat_button.kill()
             if not self.the_cat.dead:
                 self.exile_cat_button = UIImageButton(
-                    scale(pygame.Rect((1156, 900), (344, 72))),
+                    ui_scale(pygame.Rect((578, 450), (172, 36))),
                     "",
                     object_id="#exile_cat_button",
                     tool_tip_text="This cannot be reversed.",
@@ -3373,13 +3522,14 @@ class ProfileScreen(Screens):
 
             elif self.the_cat.dead:
                 if not self.the_cat.outside and not self.the_cat.df:
-                    object_id = "#exile_df_button"
+                    dead_button = "#exile_df_button"
                 elif self.the_cat.df and not self.the_cat.outside:
-                    object_id = "#send_ur_button"
+                    dead_button = "#send_ur_button"
                 else:
-                    object_id = "#guide_sc_button"
+                    dead_button = "#guide_sc_button"
+
                 if game.clan.instructor.ID == self.the_cat.ID:
-                    self.exile_cat_button = UIImageButton(scale(pygame.Rect((1156, 900), (344, 92))),
+                    self.exile_cat_button = UIImageButton(ui_scale(pygame.Rect((578, 450), (172, 46))),
                                                             "",
                                                           object_id= "#follow_sc_button",
                                                            tool_tip_text='Your Clan will go to StarClan'
@@ -3391,7 +3541,7 @@ class ProfileScreen(Screens):
                         self.exile_cat_button.disable()
 
                 elif game.clan.demon.ID == self.the_cat.ID:
-                    self.exile_cat_button = UIImageButton(scale(pygame.Rect((1156, 900), (344, 92))),
+                    self.exile_cat_button = UIImageButton(ui_scale(pygame.Rect((578, 450), (172, 46))),
                                                             "",
                                                           object_id= "#follow_df_button",
                                                           tool_tip_text='Your Clan will go to the Dark'
@@ -3401,22 +3551,10 @@ class ProfileScreen(Screens):
                         self.exile_cat_button.disable()
 
                 else:
-                    self.exile_cat_button = UIImageButton(scale(pygame.Rect((1156, 900), (344, 92))),
-                                                          "Error",
-                                                          object_id=object_id,
+                    self.exile_cat_button = UIImageButton(ui_scale(pygame.Rect((578, 450), (172, 46))),
+                                                          "",
+                                                          object_id=dead_button,
                                                           starting_height=2, manager=MANAGER)
-                    if object_id == "#send_ur_button":
-                        self.exile_cat_button.tool_tip_text = "Send to Unknown Residence"
-            else:
-                self.exile_cat_button = UIImageButton(
-                    scale(pygame.Rect((1156, 900), (344, 72))),
-                    "",
-                    object_id="#exile_cat_button",
-                    tool_tip_text="This cannot be reversed.",
-                    starting_height=2,
-                    manager=MANAGER,
-                )
-                self.exile_cat_button.disable()
 
             if not self.the_cat.dead:
                 self.kill_cat_button.enable()
@@ -3476,7 +3614,7 @@ class ProfileScreen(Screens):
                 self.history_text_box.kill()
                 self.history_text_box = UITextBoxTweaked(
                     self.get_all_history_text(),
-                    scale(pygame.Rect((200, 946), (1200, 298))),
+                    ui_scale(pygame.Rect((100, 473), (600, 149))),
                     object_id="#text_box_26_horizleft_pad_10_14",
                     line_spacing=1,
                     manager=MANAGER,
@@ -3485,16 +3623,16 @@ class ProfileScreen(Screens):
                 self.no_moons.kill()
                 self.show_moons.kill()
                 self.no_moons = UIImageButton(
-                    scale(pygame.Rect((104, 1028), (68, 68))),
+                    ui_scale(pygame.Rect((52, 514), (34, 34))),
                     "",
-                    object_id="#unchecked_checkbox",
+                    object_id="@unchecked_checkbox",
                     tool_tip_text="Show the Moon that certain history events occurred on",
                     manager=MANAGER,
                 )
                 self.show_moons = UIImageButton(
-                    scale(pygame.Rect((104, 1028), (68, 68))),
+                    ui_scale(pygame.Rect((52, 514), (34, 34))),
                     "",
-                    object_id="#checked_checkbox",
+                    object_id="@checked_checkbox",
                     tool_tip_text="Stop showing the Moon that certain history events occurred on",
                     manager=MANAGER,
                 )
@@ -3522,7 +3660,7 @@ class ProfileScreen(Screens):
                     self.help_button.kill()
 
                 self.help_button = UIImageButton(
-                    scale(pygame.Rect((104, 1168), (68, 68))),
+                    ui_scale(pygame.Rect((52, 584), (34, 34))),
                     "",
                     object_id="#help_button",
                     manager=MANAGER,
@@ -3540,32 +3678,34 @@ class ProfileScreen(Screens):
                 )
                 if self.editing_notes is True:
                     self.save_text = UIImageButton(
-                        scale(pygame.Rect((104, 1028), (68, 68))),
+                        ui_scale(pygame.Rect((52, 514), (34, 34))),
                         "",
-                        object_id="#unchecked_checkbox",
+                        object_id="@unchecked_checkbox",
                         tool_tip_text="lock and save text",
                         manager=MANAGER,
                     )
 
                     self.notes_entry = pygame_gui.elements.UITextEntryBox(
-                        scale(pygame.Rect((200, 946), (1200, 298))),
+                        ui_scale(pygame.Rect((100, 473), (600, 149))),
                         initial_text=self.user_notes,
                         object_id="#text_box_26_horizleft_pad_10_14",
                         manager=MANAGER,
                     )
                 else:
                     self.edit_text = UIImageButton(
-                        scale(pygame.Rect((104, 1028), (68, 68))),
+                        ui_scale(pygame.Rect((52, 514), (34, 34))),
                         "",
-                        object_id="#checked_checkbox_smalltooltip",
+                        object_id="@checked_checkbox_smalltooltip",
                         tool_tip_text="edit text",
                         manager=MANAGER,
                     )
-
-                    self.display_notes = UITextBoxTweaked(self.user_notes,
-                                                          scale(pygame.Rect((200, 946), (1200, 298))),
-                                                          object_id="#text_box_26_horizleft_pad_10_14",
-                                                          line_spacing=1, manager=MANAGER)
+                    self.display_notes = UITextBoxTweaked(
+                        self.user_notes,
+                        ui_scale(pygame.Rect((100, 473), (600, 149))),
+                        object_id="#text_box_26_horizleft_pad_10_14",
+                        line_spacing=1,
+                        manager=MANAGER,
+                    )
             elif self.open_sub_tab == 'genetics':
                 self.sub_tab_1.enable()
                 self.sub_tab_2.enable()
@@ -3583,7 +3723,7 @@ class ProfileScreen(Screens):
                     self.genelist += "\n\n" + str(chimpheno.PhenotypeOutput(self.the_cat.genotype.chimerageno.gender)) + "\n" + str(self.the_cat.genotype.chimerageno.ShowGenes())
 
                 self.genetic_text_box = UITextBoxTweaked(self.genelist,
-                                              scale(pygame.Rect((200, 946), (1200, 298))),
+                                              ui_scale(pygame.Rect((100, 473), (600, 148))),
                                               object_id="#text_box_26_horizleft_pad_10_14",
                                               line_spacing=1, manager=MANAGER)
 
@@ -3653,6 +3793,7 @@ class ProfileScreen(Screens):
             self.next_page_button.kill()
             self.previous_page_button.kill()
             self.clear_accessories.kill()
+            self.delete_accessory.kill()
             self.search_bar_image.kill()
             self.search_bar.kill()
         elif self.open_tab == "faith":
@@ -3673,6 +3814,9 @@ class ProfileScreen(Screens):
             self.right_conditions_arrow.kill()
             self.conditions_background.kill()
             self.condition_container.kill()
+            for data in self.condition_data.values():
+                data.kill()
+            self.condition_data = {}
 
         self.open_tab = None
 
@@ -3715,7 +3859,7 @@ class ProfileScreen(Screens):
         offset = 0
         if light_dark == "light":
             offset = 80
-                
+
         if the_cat.df:
             biome_platforms = platformsheet.subsurface(
                 pygame.Rect(0, order.index("SC/DF") * 70, 640, 70)
@@ -3852,6 +3996,7 @@ class ProfileScreen(Screens):
                 else:
                     return True
     def on_use(self):
+        super().on_use()
         if self.search_bar:
             if self.search_bar.is_focused and self.search_bar.get_text() == "search":
                 self.search_bar.set_text("")

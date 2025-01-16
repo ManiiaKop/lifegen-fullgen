@@ -20,12 +20,12 @@
 			"Misses taking care of the elders and hearing their stories",
 			"Is trying to find moss to make a nest for {PRONOUN/m_c/self}, but only finds thorns",
 			"Is sleeping in a puddle of muck"
-			]
+		]
 	},
 	{
-        "id": "flamboyant_df_warrior_apprentice",
-        "thoughts": [
-            "Makes a stylish crown of thorns to show off",
+		"id": "flamboyant_df_warrior_apprentice",
+		"thoughts": [
+			"Makes a stylish crown of thorns to show off",
 			"Is satisfied knowing {PRONOUN/m_c/subject} stuck to {PRONOUN/m_c/poss} true self no matter what",
 			"Creates complicated new moves that are beautiful and deadly",
 			"Tries to groom the muck out of {PRONOUN/m_c/poss} fur",
@@ -38,9 +38,9 @@
 			"Decides to create a warrior name for {PRONOUN/m_c/self}",
 			"Knows {PRONOUN/m_c/subject} shouldn't call attention to {PRONOUN/m_c/self} but craves it",
 			"Is enjoying showing off battle moves for others"
-        ],
-        "main_trait_constraint": [
-            "flamboyant"
-        ]    
-    }
+		],
+		"main_trait_constraint": [
+			"flamboyant"
+		]
+	}
 ]

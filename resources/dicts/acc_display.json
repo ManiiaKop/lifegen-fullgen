@@ -58,7 +58,7 @@
     "plural": "herbs",
     "singular": "bunch of herbs",
     "comment": [
-      "just 'herb' sounds wrong, since the acc is visually multiple leaves on the cat. so i've structured",
+      "just 'herb' sounds wrong, since the acc is visually multiple leaves on the cat. So i've structured",
       "this in a way that allows it to sound correct when used for the singular_acc abbreviation"
     ]
   },
@@ -67,7 +67,7 @@
     "plural": "petals",
     "singular": "bunch of petals",
     "comment": [
-      "just 'petal' sounds wrong, since the acc is visually multiple petals on the cat. so i've structured",
+      "just 'petal' sounds wrong, since the acc is visually multiple petals on the cat. So i've structured",
       "this in a way that allows it to sound correct when used for the singular_acc abbreviation"
     ]
   },
@@ -76,7 +76,7 @@
     "plural": "dry herbs",
     "singular": "bunch of dry herbs",
     "comment": [
-      "just 'dry herb' sounds wrong, since the acc is visually multiple leaves on the cat. so i've structured",
+      "just 'dry herb' sounds wrong, since the acc is visually multiple leaves on the cat. So i've structured",
       "this in a way that allows it to sound correct when used for the singular_acc abbreviation"
     ]
   },
@@ -1570,7 +1570,7 @@
     "plural": "silver lunar chimes",
     "singular": "silver lunar chimes"
   },
-  "FIDDLEHEADS" :{
+  "FIDDLEHEADS": {
     "default": "fiddleheads",
     "plural": "fiddleheads",
     "singular": "fiddleheads"

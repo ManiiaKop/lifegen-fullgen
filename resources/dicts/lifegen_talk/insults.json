@@ -1957,7 +1957,7 @@
             "you_blind"
         ],
         [
-            "That's mean, y_c. You're allowed to be upset, but please dont take it out on me."
+            "That's mean, y_c. You're allowed to be upset, but please don't take it out on me."
         ]
     ],
     "newborn_to_shunned_insult_J1": [
@@ -2040,7 +2040,7 @@
             "you_blind"
         ],
         [
-            "Well, you should... leave the shutting up... to you! Stupid!"
+            "Well, you should... leave the shutting up... To you! Stupid!"
         ]
     ],
     "kit_insult_3": [
@@ -2321,7 +2321,7 @@
             "they_mediator"
         ],
         [
-            "Hey! Wait... this is the perfect time to use my training!",
+            "Hey! Wait... This is the perfect time to use my training!",
             "What caused you to act this way?",
             "How about you take a deep breath. Inhale, then exhale.",
             "Now lets reflect on your actions... hey! Don't just walk away from me!"
@@ -2699,7 +2699,7 @@
             "you_blind"
         ],
         [
-            "I thought we were similar, y_c. Both kind of quiet... both a little too cautious.",
+            "I thought we were similar, y_c. Both kind of quiet... Both a little too cautious.",
             "But I don't ever want to be like you if you say things like that."
         ]
     ],
@@ -3085,7 +3085,7 @@
         [
             "I-",
             "I get that I make mistakes, but I'm trying y_c... I'm really trying I- *sniff* I'm sorry, I- *sniff*...",
-            "[t_c stands with wobbly legs, {PRONOUN/t_c/poss} eyes welling with tears. {PRONOUN/t_c/subject} brushes {PRONOUN/t_c/poss} paw over {PRONOUN/t_c/poss} eyes quickly and stumble backwards.]",
+            "[t_c stands with wobbly legs, {PRONOUN/t_c/poss} eyes welling with tears. {PRONOUN/t_c/subject/CAP} brushes {PRONOUN/t_c/poss} paw over {PRONOUN/t_c/poss} eyes quickly and stumble backwards.]",
             "I- I need to go!",
             "[You watch as {PRONOUN/t_c/subject} scampers off, tears rolling down {PRONOUN/t_c/poss} cheeks. Other cats watch as t_c runs away, then all eyes turn to face you. You can't help but flinch under the harsh gaze of the warriors or scowls of the queens.]"
         ]
@@ -3274,6 +3274,81 @@
             "... I have a bald spot on my back?",
             "...",
             "[t_c skitters off to the nearest reflective surface.]"
+        ]
+    ],
+    "shunned_insults_H1": [
+        [
+            "you_shunned",
+            "they_grieving",
+            "no_kit",
+            "insult",
+            "any",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "Back off! I'm already having a bad day - I don't need you to make it worse."
+        ]
+    ],
+    "shunned_insults_H2": [
+        [
+            "you_shunned",
+            "you_guilty",
+            "no_kit",
+            "insult",
+            "any",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "The guilt must be eating away at your intelligence to make such bold moves."
+        ]
+    ],
+    "shunned_insults_H3": [
+        [
+            "you_shunned",
+            "they_grieving",
+            "no_kit",
+            "insult",
+            "any",
+            "they_deaf",
+            "you_deaf",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "[t_c doesn't bother to acknowledge your presence.]"
+        ]
+    ],
+    "shunned_insults_H5": [
+        [
+            "you_shunned",
+            "no_kit",
+            "insult",
+            "any",
+            "they_deaf",
+            "you_deaf",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "[t_c doesn't bother to acknowledge your presence.]"
+        ]
+    ],
+    "shunned_insults_H4": [
+        [
+            "you_shunned",
+            "dislike",
+            "no_kit",
+            "insult",
+            "any",
+            "they_deaf",
+            "you_deaf",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "[t_c doesn't hesitate to swing {PRONOUN/t_c/poss} claws in your direction the moment you get close.]"
         ]
     ]
 }

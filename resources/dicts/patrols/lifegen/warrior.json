@@ -21,7 +21,7 @@
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "You locate the mouse and begins to stalk. The mouse nibbles on a seed, unaware of the hunting cat. You waggle your haunches and leap, pinning the mouse beneath a paw as you make the killing bite.",
+                "text": "You locate the mouse and begin to stalk. The mouse nibbles on a seed, unaware of the hunting cat. You waggle your haunches and leap, pinning the mouse beneath a paw as you make the killing bite.",
                 "exp": 10,
                 "weight": 20
             },
@@ -29,22 +29,40 @@
                 "text": "You start to stalk towards the smell, but pause when you realize it seems to be coming from multiple directions. You stop and focus. After a moment, you realize that the breeze is confusing you by dispersing the scent, and quickly pinpoint where the mouse <i>actually</i> is. You creep forward, and... yes! You easily catch the mouse and purr to yourself as you trot back towards camp.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["CLEVER,1", "HUNTER,1", "SENSE,1", "TRACKER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "CLEVER,1",
+                    "HUNTER,1",
+                    "SENSE,1",
+                    "TRACKER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You crouch and follow the scent, silently weaving around the undergrowth. You spot the mouse foraging on the ground and quickly spring, pinning it beneath your paw and killing it in one fluid motion. When you've finished, you realize another mouse is close by, and that you've been so impressively quiet that it's completely oblivious to your presence! You easily pounce on it, too, then trot back towards camp proud of your double-catch.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["GRACE,1", "HUNTER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "GRACE,1",
+                    "HUNTER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You follow the scent and encounter r_w, who is tracking the same mouse, in the process. You both locate the mouse not long after, completely unaware of the nearby cats. You direct r_w to sneak around it so you can approach from two directions at once, making it less likely for the mouse to escape. When you're both in position, you leap, frightening the creature right into r_w's paws. Teamwork!",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["CLEVER,1", "COOPERATIVE,1", "HUNTER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "CLEVER,1",
+                    "COOPERATIVE,1",
+                    "HUNTER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You follow the scent to the mouse, but when you find it, it's staring straight at you. It tilts its head, seemingly more curious than scared. Seeing an opportunity, you attempt to mimic some rodent squeaks in an encouraging, friendly way, and the mouse actually chitters back! You 'talk' for a while until the mouse, seemingly comfortable with you, scurries up your leg and perches on your back. You... suppose you have a new friend!",
@@ -52,29 +70,51 @@
                 "weight": 20,
                 "accessory": [
                     {
-                        "cats": ["p_l"],
-                        "accessory": ["MOUSE"]
+                        "cats": [
+                            "p_l"
+                        ],
+                        "accessory": [
+                            "MOUSE"
+                        ]
                     }
                 ],
-                "stat_skill": ["LANGUAGE,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "LANGUAGE,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
-                "text": "You easily track the mouse and find it... and an unfamiliar cat holding the rodent in their jaws. The cat bristles, ready to run or fight, though they relax when you don't immediately attack them. You tell them that they're in c_nClan territory, and it quickly becomes clear that this cat isn't from nearby. They readily agree to give you the mouse in exchange for information about the area.",
+                "text": "You easily track the mouse and find it... and an unfamiliar cat holding the rodent in their jaws. The cat bristles, ready to run or fight, though they relax when you don't immediately attack them. You tell them that they're in c_n territory, and it quickly becomes clear that this cat isn't from nearby. They readily agree to give you the mouse in exchange for information about the area.",
                 "exp": 10,
                 "weight": 20,
                 "new_cat": [
-                    ["meeting", "loner"]
+                    [
+                        "meeting",
+                        "loner"
+                    ]
                 ],
-                "stat_skill": ["COOPERATIVE,1", "MEDIATOR,1", "SPEAKER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "COOPERATIVE,1",
+                    "MEDIATOR,1",
+                    "SPEAKER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You follow the scent, but it leads you into a dense thicket that you can't pass through without making a lot of sound and also tearing up your pelt. Luckily, you know this area well, and are familiar with where this thicket is small enough for you to leap over. Hoping that the mouse passed through the thicket instead of staying within it, you cross to the other side and... spot the mouse! You easily catch it, proud of your navigational skills.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["EXPLORER,1", "NAVIGATOR,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "EXPLORER,1",
+                    "NAVIGATOR,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -94,12 +134,14 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly"
+                    "meek",
+                    "cowardly"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ]
     },
@@ -135,47 +177,75 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly"
+                    "meek",
+                    "cowardly"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "It's probably unwise to cross the border, but that doesn't mean you have to give up! You spot some large nuts nearby and roll them towards the squirrel, making a trail back across the border. After a few moments, the squirrel notices and hops closer, stopping at and inspecting each nut. As soon as it's on your territory, you leap forward and quickly kill it. Success!",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["CLEVER,1", "INNOVATOR,1", "SCHOLAR,1", "THINKER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "CLEVER,1",
+                    "INNOVATOR,1",
+                    "SCHOLAR,1",
+                    "THINKER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "As you sit by the border, debating whether to cross, a familiar cat pads up with a translucent, muck-matted pelt. rdf_c looks from you to the squirrel, purring in amusement when they understand the situation. They motion for you to cross the border, indicating that they'll watch for any o_cClan cats. You successfully catch the squirrel and return to your territory, unnoticed, and rdf_c chuckles as they slink away.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["DARK,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "DARK,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You scan your surroundings for signs of o_cClan cats and notice a recent scent marker. It seems like a patrol came by here not long ago, but that means it's unlikely another one will pass through soon. Confident in your logic, you spring for the squirrel, successfully catching it without anyone noticing.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["CLEVER,1", "SCHOLAR,1", "SENSE,1", "THINKER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "CLEVER,1",
+                    "SCHOLAR,1",
+                    "SENSE,1",
+                    "THINKER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "As you scan your surroundings, you have a sudden sense that everything will be okay if you just wait. You're uncertain why you feel this way, but your instincts haven't led you wrong before, so you hold your position. Sure enough, the squirrel hops back over the border, where you successfully catch it!",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["CLAIRVOYANT,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "CLAIRVOYANT,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You back up and hide in a bush, then make a few squirrel-like chitters. The squirrel looks up, sniffing the air. You repeat the noise, hoping it's close enough to squirrel-speak that the creature won't run off, and sure enough, it hops a bit closer to you. With a curious chirp, it takes a final leap back into your territory and you burst out of the bush, catching it without issue.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["LANGUAGE,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "LANGUAGE,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -190,12 +260,14 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly"
+                    "meek",
+                    "cowardly"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "Hmm... Maybe you could lure the squirrel back to your territory, and catch it without ever crossing the border yourself. You collect a few acorns scattered nearby and roll them towards the squirrel, hoping to lure it closer, but the squirrel gives them an unimpressed glance before bounding away. Fox-dung! You still keep the nuts in case they come in handy later.",
@@ -203,12 +275,24 @@
                 "weight": 20,
                 "accessory": [
                     {
-                        "cats": ["p_l"],
-                        "accessory": ["ACORN", "ACORN2"]
+                        "cats": [
+                            "p_l"
+                        ],
+                        "accessory": [
+                            "ACORN",
+                            "ACORN2"
+                        ]
                     }
                 ],
-                "stat_skill": ["CLEVER,1", "INNOVATOR,1", "SCHOLAR,1", "THINKER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "CLEVER,1",
+                    "INNOVATOR,1",
+                    "SCHOLAR,1",
+                    "THINKER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ]
     },
@@ -244,30 +328,46 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly",
-	                "lonesome"
+                    "meek",
+                    "cowardly",
+                    "lonesome"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You've barely entered the new hunting ground when a kittypet meows to you from inside the Twolegplace. They seem suspicious of Clan cats, but you take a few minutes to make light conversation, putting them at ease. When you part ways, they point out where their Twolegs leave seeds for the squirrels and birds, and you're able to catch quite a bit of prey there.",
                 "exp": 10,
                 "weight": 20,
                 "new_cat": [
-                    ["meeting", "kittypet"]
+                    [
+                        "meeting",
+                        "kittypet"
+                    ]
                 ],
-                "stat_skill": ["COOPERATIVE,1", "COMFORTER,1", "MEDIATOR,1", "SPEAKER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "COOPERATIVE,1",
+                    "COMFORTER,1",
+                    "MEDIATOR,1",
+                    "SPEAKER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "Not long after you begin hunting in the new area, a small dog races out of the Twolegplace and runs straight for you, yapping wildly. When you bark back as best you can, the dog stops, seemingly stunned and a little unnerved to hear a cat speaking their language. Although the sounds feel strange in your mouth, you successfully explain to the dog that you mean no harm and just want to hunt here for a bit. The dog backs off and lets you catch quite a lot of prey.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["LANGUAGE,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "LANGUAGE,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -282,12 +382,14 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly"
+                    "meek",
+                    "cowardly"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "Despite your caution, you've barely set paw in the new hunting grounds when  a pair of Twoleg kits spots you. They give chase, and you flee. It's easy to outrun them, but for the next few nights you're kept awake worrying that you've led Twolegs to your camp.",
@@ -295,13 +397,15 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "emotional",
-	                "cowardly"
+                    "meek",
+                    "emotional",
+                    "cowardly"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You creep into the hunting ground, alert for any sign of Twolegs. When a pair of Twoleg kits run out of the Twolegplace, you're quick enough to jump into a nearby bush before you're spotted! Unfortunately, the kits stay outside until the sun starts to set, so you have to uncomfortably crouch in the bush for several hours. You finally escape and make it back to camp, disappointed with your lack of prey.",
@@ -309,29 +413,43 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly"
+                    "meek",
+                    "cowardly"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You begin hunting in the new area, but it isn't long before a group of Twolegs emerges from the Twolegplace, forcing you to hide in a shrub. The Twolegs toss a strange disk back and forth, and several times it lands near your hiding place! It's only a matter of time before you're discovered, but as you prepare to make a wild dash back to the safety of familiar territory, an unfamiliar cat passes by. You explain your predicament and they're more than willing to distract the Twolegs for you, letting you make a clean getaway.",
                 "exp": 5,
                 "weight": 20,
                 "new_cat": [
-                    ["meeting", "loner"]
+                    [
+                        "meeting",
+                        "loner"
+                    ]
                 ],
-                "stat_skill": ["COOPERATIVE,1", "SPEAKER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "COOPERATIVE,1",
+                    "SPEAKER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "Not long after you begin hunting in the new area, a small dog races out of the Twolegplace and runs straight for you, yapping wildly. You try your best to bark back, trying to convince the dog you're just passing through, but the other animal doesn't seem to be listening. You're forced to flee before the situation escalates further.",
                 "exp": 0,
                 "weight": 20,
-                "stat_skill": ["LANGUAGE,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "LANGUAGE,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ]
     },
@@ -358,7 +476,7 @@
         "success_outcomes": [
             {
                 "text": "You join the patrol and do an excellent job securing the Clan's borders. Your vigilance is noted.",
-                "exp": 25,
+                "exp": 10,
                 "weight": 20
             },
             {
@@ -367,39 +485,60 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly",
-	                "reserved",
-	                "emotional",
-	                "lonesome"
+                    "meek",
+                    "cowardly",
+                    "reserved",
+                    "emotional",
+                    "lonesome"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You decide to volunteer. You haven't encountered any of your ghostly cat acquaintances recently, and since they seem to spend more time outside of your Clan's territory  than within it, joining a border patrol would be a good opportunity to see if anyone is around. It's a beautiful day, and your patrol doesn't encounter any trouble. You notice a translucent kittypet perched on a post beside the Thunderpath, mist spilling off of their pelt. They nod politely and bound away before you can introduce yourself.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["GHOST,1"],
-                "new_cat": [
-                    ["meeting","residence:ur"]
+                "stat_skill": [
+                    "GHOST,1"
                 ],
-                "can_have_stat": ["p_l"]
+                "new_cat": [
+                    [
+                        "meeting",
+                        "residence:ur"
+                    ]
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You volunteer and follow d_n,  r_w1, and r_w2 to the edge of the territory, but the patrol is derailed when you notice the scent of a dog crossing the border. Aware of your proficiency with tracking, d_n tells r_w1 and r_w2 to finish the patrol while you track the dog with {PRONOUN/d_n/object}. You successfully follow the scent trail through the territory until, to your relief, it crosses back over the border. Your Clanmates are grateful that you took the effort to make sure the territory was safe.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["TRACKER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "TRACKER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You set off with r_w1 and r_w2, and the first part of the patrol passes without incident. When the three of you reach the o_cClan border, however, you encounter another patrol. Its leader doesn't seem pleased to see your group. You break the silence and make small talk with the other patrol, breaking the tension and putting everycat a bit more at ease.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["COOPERATIVE,1", "COMFORTER,1", "INSIGHTFUL,1", "MEDIATOR,1", "SPEAKER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "COOPERATIVE,1",
+                    "COMFORTER,1",
+                    "INSIGHTFUL,1",
+                    "MEDIATOR,1",
+                    "SPEAKER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -414,15 +553,17 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly",
-	                "reserved",
-	                "emotional",
-	                "lonesome"
+                    "meek",
+                    "cowardly",
+                    "reserved",
+                    "emotional",
+                    "lonesome"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You join the patrol but feel especially jumpy today, and keep getting startled by the wind or your Clanmates' pawsteps. d_n, who's leading the patrol, repeatedly asks you to settle down. Unfortunately, you can't seem to calm your nerves, putting the rest of the group on edge.",
@@ -430,13 +571,15 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly",
-	                "emotional"
+                    "meek",
+                    "cowardly",
+                    "emotional"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ]
     },
@@ -463,7 +606,7 @@
         "success_outcomes": [
             {
                 "text": "You give the apprentice some tips and they quickly improve. They're grateful for your help.",
-                "exp": 20,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -497,7 +640,7 @@
         "chance_of_success": 80,
         "success_outcomes": [
             {
-                "text": "You remove the stale prey and prevent any potential sickness in the camp. The healer thanks you.",
+                "text": "You remove the stale prey and prevent any potential sickness in the camp. The medicine cat thanks you.",
                 "exp": 10,
                 "weight": 20
             },
@@ -507,13 +650,15 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly",
-	                "emotional"
+                    "meek",
+                    "cowardly",
+                    "emotional"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -528,12 +673,14 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly"
+                    "meek",
+                    "cowardly"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You begin reaching for the prey, but recoil at the thought of touching stale food. What if it's already old enough to cause illness? You want to help your Clan, but you also want to keep your paws clean. Unsure of what to do, you leave the issue for someone else to take care of.",
@@ -541,12 +688,14 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly"
+                    "meek",
+                    "cowardly"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ]
     },
@@ -573,7 +722,7 @@
         "success_outcomes": [
             {
                 "text": "You successfully stalk and catch the mouse. It will make a good addition to the fresh-kill pile.",
-                "exp": 25,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -608,7 +757,7 @@
         "success_outcomes": [
             {
                 "text": "You successfully lead the patrol, coordinating your team to bring down various prey. Your leadership is praised and the Clan appreciates the fresh-kill.",
-                "exp": 30,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -643,7 +792,7 @@
         "success_outcomes": [
             {
                 "text": "You accept and keep the kits entertained with stories of your adventures. The queen returns to find them asleep, grateful for your help.",
-                "exp": 20,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -678,7 +827,7 @@
         "success_outcomes": [
             {
                 "text": "You successfully track the scent to a lost loner. After guiding them away from your territory, you return to your duties, satisfied with your vigilance.",
-                "exp": 30,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -713,7 +862,7 @@
         "success_outcomes": [
             {
                 "text": "You captivate the Clan with your tale, filling their eyes with wonder. They appreciate your storytelling and the kits beg for more stories in the future.",
-                "exp": 20,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -742,13 +891,13 @@
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "The healer runs out of marigold and asks for your help to find some. It's a chance to help the Clan and learn more about herbs.",
-        "decline_text": "You respectfully decline, not feeling confident in your knowledge of herbs. The healer understands and decides to search themselves.",
+        "intro_text": "The medicine cat runs out of marigold and asks for your help to find some. It's a chance to help the Clan and learn more about herbs.",
+        "decline_text": "You respectfully decline, not feeling confident in your knowledge of herbs. The medicine cat understands and decides to search themselves.",
         "chance_of_success": 65,
         "success_outcomes": [
             {
-                "text": "You manage to find a patch of marigold and return it to the healer. They thank you, and you feel proud of your contribution.",
-                "exp": 20,
+                "text": "You manage to find a patch of marigold and return it to the medicine cat. They thank you, and you feel proud of your contribution.",
+                "exp": 10,
                 "weight": 20
             },
             {
@@ -757,13 +906,15 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly",
-	                "reserved"
+                    "meek",
+                    "cowardly",
+                    "reserved"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You want to help, but aren't confident that you can successfully identify marigold. You confess this to r_m, expecting disappointment, but instead they take you on a short walk to show you nearby herb patches and teach you how to identify plants! r_m tells you they'll be sure to ask for your help in the future.",
@@ -771,26 +922,36 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly",
-	                "reserved"
+                    "meek",
+                    "cowardly",
+                    "reserved"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
-                "text": "You might not be a healer, but for some reason, herb identification has always been easy for you. You remember seeing some flowers while on patrol yesterday, and sure enough, when you return to that spot, you find a thick patch of marigold! r_m is thrilled. There's even enough flowers for you to take one for yourself!",
+                "text": "You might not be a medicine cat, but for some reason, herb identification has always been easy for you. You remember seeing some flowers while on patrol yesterday, and sure enough, when you return to that spot, you find a thick patch of marigold! r_m is thrilled. There's even enough flowers for you to take one for yourself!",
                 "exp": 10,
                 "weight": 20,
                 "accessory": [
                     {
-                        "cats": ["p_l"],
-                        "accessory": ["MARIGOLD"]
+                        "cats": [
+                            "p_l"
+                        ],
+                        "accessory": [
+                            "MARIGOLD"
+                        ]
                     }
                 ],
-                "stat_skill": ["HEALER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "HEALER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -824,7 +985,7 @@
         "success_outcomes": [
             {
                 "text": "Summoning your courage, you express your feelings. To your relief, they confess they feel the same way. The two of you decide to spend more time together.",
-                "exp": 25,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -840,28 +1001,32 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly",
-	                "reserved",
-	                "emotional",
-	                "lonesome"
+                    "meek",
+                    "cowardly",
+                    "reserved",
+                    "emotional",
+                    "lonesome"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
-                "text": "You sit down beside the other warrior and try to express your feelings, but you realize you're trembling with nerves. When the other cat notices, they seem more concerned about your health than interested in listening to your confession. They end up escorting you to the healer den, and your words go unsaid.",
+                "text": "You sit down beside the other warrior and try to express your feelings, but you realize you're trembling with nerves. When the other cat notices, they seem more concerned about your health than interested in listening to your confession. They end up escorting you to the medicine den, and your words go unsaid.",
                 "exp": 0,
                 "weight": 20,
                 "stat_trait": [
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly",
-	                "emotional"
+                    "meek",
+                    "cowardly",
+                    "emotional"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ]
     },
@@ -888,7 +1053,7 @@
         "success_outcomes": [
             {
                 "text": "You offer them the stone and they seem genuinely touched by your thoughtfulness. Their appreciation makes you feel warm and happy inside.",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -923,7 +1088,7 @@
         "success_outcomes": [
             {
                 "text": "You accept their offer and spend a comfortable evening grooming each other. The intimacy strengthens your bond and you both go to sleep content.",
-                "exp": 20,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -958,15 +1123,20 @@
         "success_outcomes": [
             {
                 "text": "You decide to share a humorous story from your apprentice days. They listen attentively and by the end, their mood seems lifted. They thank you for making them smile.",
-                "exp": 20,
+                "exp": 10,
                 "weight": 20
             },
             {
-                "text": "You ask if your_crush wants to hear a story, and they accept. You relate a tale of a long-ago c_nClan healer going on a journey to find a legendary herb to save their mate from a terrible illness while your_crush listens, enraptured. Your storytelling is skillful enough to distract them from their worries, and when you're finished, they seem much lighter.",
+                "text": "You ask if your_crush wants to hear a story, and they accept. You relate a tale of a long-ago c_n medicine cat going on a journey to find a legendary herb to save their mate from a terrible illness while your_crush listens, enraptured. Your storytelling is skillful enough to distract them from their worries, and when you're finished, they seem much lighter.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["STORY,1", "LORE,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "STORY,1",
+                    "LORE,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -981,15 +1151,17 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly",
-	                "reserved",
-	                "emotional",
-	                "lonesome"
+                    "meek",
+                    "cowardly",
+                    "reserved",
+                    "emotional",
+                    "lonesome"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ]
     },
@@ -1016,7 +1188,7 @@
         "success_outcomes": [
             {
                 "text": "They agree, and you both enjoy a peaceful walk, chatting and sharing stories. By the end of the evening, you feel a stronger connection between you.",
-                "exp": 25,
+                "exp": 10,
                 "weight": 20
             },
             {
@@ -1025,15 +1197,17 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly",
-	                "reserved",
-	                "emotional",
-	                "lonesome"
+                    "meek",
+                    "cowardly",
+                    "reserved",
+                    "emotional",
+                    "lonesome"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "Of course you're nervous to take a walk with your_crush, but your anxiety slips away when you hear the river's familiar burbling. You take a deep breath, remembering other calm evenings at this very spot. The walk is peaceful, and you learn a lot about each other.",
@@ -1041,15 +1215,20 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly",
-	                "reserved",
-	                "lonesome"
+                    "meek",
+                    "cowardly",
+                    "reserved",
+                    "lonesome"
                 ],
-                "stat_skill": ["FISHER,1", "SWIMMER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "FISHER,1",
+                    "SWIMMER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -1064,15 +1243,17 @@
                 "weight": 20,
                 "stat_trait": [
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly",
-	                "reserved",
-	                "emotional",
-	                "lonesome"
+                    "meek",
+                    "cowardly",
+                    "reserved",
+                    "emotional",
+                    "lonesome"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ]
     },
@@ -1099,7 +1280,7 @@
         "success_outcomes": [
             {
                 "text": "You leap onto the path, snagging a bird with your claws- your Clanmates are impressed with your catch.",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -1134,18 +1315,20 @@
         "success_outcomes": [
             {
                 "text": "How fun! Seaweed has no actual use, but popping the bubbles on it is fun!",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             },
             {
-                "text": "Seaweed! You decide to gather some of the pieces to take it to the healer den. Wash it out to remove the salt and it could be beneficial as makeshift cobwebs to dress wounds.",
-                "exp": 15,
+                "text": "Seaweed! You decide to gather some of the pieces to take it to the medicine cat den. Wash it out to remove the salt and it could be beneficial as makeshift cobwebs to dress wounds.",
+                "exp": 10,
                 "weight": 20,
                 "stat_skill": [
                     "HEALER,1",
                     "INNOVATOR,1"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "Oh, seaweed! That in itself isn't too exciting, but you know that some small creatures hide under pieces of seaweed to keep wet. You carefully flip the plant over, and sure enough, you uncover a tiny crab. The crustacean doesn't scurry away as you would expect, so after a moment, you pick it up. It seems perfectly happy to come with you!",
@@ -1153,8 +1336,12 @@
                 "weight": 20,
                 "accessory": [
                     {
-                        "cats": ["p_l"],
-                        "accessory": ["CRAB"]
+                        "cats": [
+                            "p_l"
+                        ],
+                        "accessory": [
+                            "CRAB"
+                        ]
                     }
                 ]
             },
@@ -1164,8 +1351,12 @@
                 "weight": 20,
                 "accessory": [
                     {
-                        "cats": ["p_l"],
-                        "accessory": ["SEAWEED"]
+                        "cats": [
+                            "p_l"
+                        ],
+                        "accessory": [
+                            "SEAWEED"
+                        ]
                     }
                 ]
             },
@@ -1182,8 +1373,13 @@
                     "emotional",
                     "lonesome"
                 ],
-                "stat_skill": ["STORY,1", "LORE,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "STORY,1",
+                    "LORE,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -1196,8 +1392,13 @@
                 "text": "It's seaweed! You get close enough to inspect it, wrinkling your nose at the strong scent. It's strangely warm to the touch, and one of the edges is rippled, reminiscent of a fluffy cat's tail. Could this be an omen of some kind? You get closer, trying to figure out any possible meaning, but suddenly a wave hits you from the side! You sputter and scramble out of the water, shaking salty spray from your fur. When you've regained your bearings, the seaweed has been washed away.",
                 "exp": 0,
                 "weight": 20,
-                "stat_skill": ["OMEN,1", "PROPHET,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "OMEN,1",
+                    "PROPHET,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You curiously approach the shape and poke it, only to find that it's some kind of Twoleg trash. You wipe your paws off in distaste before continuing down the beach.",
@@ -1229,7 +1430,7 @@
         "success_outcomes": [
             {
                 "text": "You sneak towards the twolegs and their box. As you get closer, you realize the scent is of fish. You reach into the box while no one is looking and hook a fish with your claws, running away before anyone could spot you.",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -1264,7 +1465,7 @@
         "success_outcomes": [
             {
                 "text": "You dash towards it, hoping to grab it before the waves do. Luckily, you're able to swipe it just in time! You trot back to camp happily, glistening seashell in tow.",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -1299,7 +1500,7 @@
         "success_outcomes": [
             {
                 "text": "As you get closer, you begin to realize what it is- a jellyfish! It seemed to have drifted onto shore. While you don't touch it due to fear of stings, you can appreciate how cool it looks. Not often do you seen a transparent creature.",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -1336,7 +1537,7 @@
         "success_outcomes": [
             {
                 "text": "Thankfully, your nest is already at the edge of camp. It's no challenge to slip out, and when you do, you have to stop yourself from yelping with joy at the sight of live prey. The sleeping squirrel doesn't awaken until far too late, and it's the most delicious meal you've had since your punishment began.",
-                "exp": 20,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -1350,10 +1551,19 @@
     },
     {
         "patrol_id": "LG_halloween_H1",
-        "biome": ["Any"],
-        "season": ["Any"],
-        "types": ["lifegen"],
-        "tags": ["halloween","new_cat"],
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "halloween",
+            "new_cat"
+        ],
         "patrol_art": "LG_halloween_H1",
         "min_cats": 1,
         "max_cats": 6,
@@ -1387,15 +1597,24 @@
                 "text": "Along with Twolegs, you squint and see numerous types of ghosts alongside them. Twolegs, cats, dogs - they all sit around with the living and eat the given offerings. Sharing laughter, memories, and most importantly love - you feel proud to have the ability to see the moment from both the living and deads side.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["DARK,1","STAR,1","GHOST,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "DARK,1",
+                    "STAR,1",
+                    "GHOST,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You point out the Twolegs activity and express wanting to move closer, but the other warriors do not share your curiosity. You decide to wander by yourself, finding a kittypet in the surrounding area. Your curiosity must have shined through your expression and they take it upon themselves to explain the tradition before you leave.",
                 "exp": 0,
                 "weight": 5,
                 "new_cat": [
-                    ["meeting", "kittypet"]
+                    [
+                        "meeting",
+                        "kittypet"
+                    ]
                 ]
             }
         ],
@@ -1415,8 +1634,93 @@
                 "exp": 0,
                 "weight": 5,
                 "new_cat": [
-                    ["meeting", "kittypet"]
+                    [
+                        "meeting",
+                        "kittypet"
+                    ]
                 ]
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_warrior_J1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "life_warrior_J1",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You're sitting in camp in the afternoon when dislike_r_w returns home from a solo hunting patrol, carrying such a huge rabbit that {PRONOUN/dislike_r_w/subject}{VERB/dislike_r_w/'re/'s} tripping over it. You wonder if you should get up to help.",
+        "decline_text": "dislike_r_w is plenty capable. You sit and watch {PRONOUN/dislike_r_w/object} stumble to the fresh-kill pile, snickering to yourself at the trouble {PRONOUN/dislike_r_w/subject}{VERB/dislike_r_w/'re/'s} having. Though you can't deny it's an impressive catch.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "Despite dislike_r_w being one of your least favourite cats at the moment, you push aside your personal feelings and get up to ask dislike_r_w if {PRONOUN/dislike_r_w/subject}'d like any help. Thankfully, dislike_r_w accepts without any unnecessary fuss and you work as a team to get the huge rabbit to the freshkill pile.",
+                "exp": 15,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You stand up to give dislike_r_w a paw, but {PRONOUN/dislike_r_w/subject} {VERB/dislike_r_w/swat/swats} you away, hissing through a mouthful of rabbit fur that {PRONOUN/dislike_r_w/subject} {VERB/dislike_r_w/don't/doesn't} need any help. You return to your nest with a flick of your tail and make sure {PRONOUN/dislike_r_w/subject} can hear you laughing when {PRONOUN/dislike_r_w/subject} immediately {VERB/dislike_r_w/trip/trips} over the prey and {VERB/dislike_r_w/fall/falls} flat on {PRONOUN/dislike_r_w/poss} face.",
+                "exp": 0,
+                "weight": 20,
+                "stat_trait": [
+                        "cold",
+                        "vengeful",
+                        "grumpy",
+                        "aloof",
+                        "righteous",
+                        "competitive",
+                        "smug"
+                    ],
+                "can_have_stat": ["dislike_r_w"],
+                "relationships": [
+                    {
+                        "cats_to": ["dislike_r_w"],
+                        "cats_from": ["y_c"],
+                        "mutual": true,
+                        "values": ["dislike"],
+                        "amount": 10
+                    }
+                ]
+            },
+            {
+                "text": "You know that dislike_r_w doesn't like you that much, so you decide to start chatting with {PRONOUN/dislike_r_w/object}! You hope that this will motivate {PRONOUN/dislike_r_w/object} to move faster, but it turns out that chatting with {PRONOUN/dislike_r_w/object} made dislike_r_w move slower. You just wanted the rabbit to be brought to the fresh-kill pile faster, not to strike up an actual conversation with {PRONOUN/dislike_r_w/object}.",
+                "exp": 0,
+                "weight": 20,
+                "stat_trait": ["troublesome","childish","playful","strange","rebellious","spontaneous","energetic","bouncy"],
+                "can_have_stat": ["p_l"],
+                "relationships": [
+                    {
+                        "cats_to": ["p_l"],
+                        "cats_from": ["dislike_r_w"],
+                        "mutual": false,
+                        "values": ["comfort", "platonic"],
+                        "amount": 10
+                    },
+                    {
+                        "cats_to": ["p_l"],
+                        "cats_from": ["dislike_r_w"],
+                        "mutual": false,
+                        "values": ["dislike"],
+                        "amount": -5
+                    }
+                ]
+            },
+            {
+                "text": "You're nothing but awkward as you approach dislike_r_w, asking if {PRONOUN/dislike_r_w/subject} would like any help. Your awkwardness must have peeved dislike_r_w off and {PRONOUN/dislike_r_w/subject} {VERB/dislike_r_w/refuse/refuses} the offer, only to take one more step and fall directly on {PRONOUN/dislike_r_w/poss} face. It takes everything in you to not laugh.",
+                "exp": 0,
+                "weight": 20
             }
         ]
     }

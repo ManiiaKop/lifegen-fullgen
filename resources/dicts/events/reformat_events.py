@@ -26,6 +26,7 @@ misc_general = []
 misc_mountainous = []
 misc_plains = []
 
+
 def reformat(path):
     if "Copy" not in path:
         return
@@ -47,7 +48,8 @@ def reformat(path):
 
     try:
         if type(event_ujson[0]) != dict:
-            print(path, "is not in the correct event format. It may not be an event .json.")
+            print(
+                path, "is not in the correct event format. It may not be an event .json.")
             return
     except KeyError:
         return
@@ -257,7 +259,8 @@ def reformat(path):
                         new_format["r_c"]["status"].append("apprentice")
                     if "other_cat_med_app" in event["tags"]:
                         event["tags"].remove("other_cat_med_app")
-                        new_format["r_c"]["status"].append("healer apprentice")
+                        new_format["r_c"]["status"].append(
+                            "healer apprentice")
                     if "other_cat_warrior" in event["tags"]:
                         event["tags"].remove("other_cat_warrior")
                         new_format["r_c"]["status"].append("warrior")
@@ -545,7 +548,8 @@ def reformat(path):
         # print(new_format["tags"])
 
         dict_text = ujson.dumps(new_format, indent=4)
-        dict_text = dict_text.replace("\/", "/")  # ujson tries to escape "/", but doesn't end up doing a good job.
+        # ujson tries to escape "/", but doesn't end up doing a good job.
+        dict_text = dict_text.replace("\/", "/")
 
         if "injury" in path:
             if "beach" in path:
@@ -558,7 +562,6 @@ def reformat(path):
                 injury_mountainous.append(dict_text)
             if "plains" in path:
                 injury_plains.append(dict_text)
-
 
     if injury_beach:
         string = ""

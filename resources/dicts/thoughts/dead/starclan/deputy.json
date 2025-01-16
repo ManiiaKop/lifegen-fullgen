@@ -4,14 +4,24 @@
         "thoughts": [
             "Watches c_n proudly",
             "Wishes {PRONOUN/m_c/subject} could have served c_n for longer",
-            "Hopes {PRONOUN/m_c/subject} {VERB/m_c/were/was} a good deputy for c_n"
+            "Hopes {PRONOUN/m_c/subject} {VERB/m_c/were/was} a good deputy for c_n",
+            "Feels like {PRONOUN/m_c/subject} can finally rest in Starclan",
+            "Is ecstatic to learn {PRONOUN/m_c/subject} can nap whenever {PRONOUN/m_c/subject} {VERB/m_c/want/wants} now",
+            "Thanks {PRONOUN/m_c/poss} ancestors for sending {PRONOUN/m_c/object} to StarClan",
+            "Is still learning on how to relax",
+            "Tries not to freak out over a decision c_n made",
+            "Wishes {PRONOUN/m_c/subject} had more than one life so {PRONOUN/m_c/subject} could take over c_n",
+            "Doesn't think c_n is doing well without {PRONOUN/m_c/object}"
         ]
     },
     {
         "id": "dead_deputy_to_alive_deputy",
         "thoughts": [
             "Is proud of r_c for {PRONOUN/r_c/poss} leadership",
-            "Thinks the leader made a great choice by picking r_c as c_n's deputy"
+            "Thinks the leader made a great choice by picking r_c as c_n's deputy",
+            "A bit perplexed with r_c's most recent decision",
+            "Is a bit disappointed with the leaders choice in new deputy",
+            "Wishes {PRONOUN/m_c/subject} can give r_c advice"
         ],
         "random_status_constraint": [
             "deputy"

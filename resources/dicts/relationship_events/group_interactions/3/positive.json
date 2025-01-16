@@ -5,11 +5,10 @@
 		"intensity": "high",
 		"interactions": [
 			"m_c is convincing r_c1 that r_c2 isn't so bad once you get to know {PRONOUN/r_c2/object}.",
-			"m_c chats with r_c1 about how r_c2 is a nice cat.",
-			"r_c1 and r_c2 chatter quietly as they trail behind m_c, meowing softly to avoid catching {PRONOUN/m_c/poss} attention. 'Why do we always follow m_c like kits trailing after their mother?' they muse. As they express their vexation in whispers, m_c suddenly turns {PRONOUN/m_c/poss} head towards them, flashing a bright, sweet smile. Oh. The reason becomes clear, and the two cats blush embarrassingly as they realize why."
+			"m_c chats with r_c1 about how r_c2 is a nice cat."
 		],
 		"trait_constraint": {
-			"m_c": ["charismatic", "empathetic", "loyal", "charming"]
+			"m_c": ["charismatic", "loyal", "charming"]
 		},
 		"relationship_constraint": {
 			"m_c_to_r_c2": ["platonic_20"],
@@ -27,6 +26,27 @@
 				"trust": "increase"
 			},
 			"r_c1_to_r_c2": {
+				"dislike": "decrease"
+			}
+		}
+	},
+	{
+		"id": "lower_jel_lifegen_h1",
+		"cat_amount": 3,
+
+		"interactions": [
+			"r_c1 points out that maybe m_c's jealousy over r_c2 is caused by insecurity and envy rather than genuine hate. It gives m_c a lot to think about.",
+			"r_c1 asks a lot of questions about m_c jealousy over r_c2, and it's been an eye opening conversation.",
+			"r_c1 forces m_c to reevaluate {PRONOUN/m_c/poss} jealousy about r_c2.",
+			"r_c1 bluntly claims m_c is being childish over {PRONOUN/m_c/poss} relationship with r_c2."
+		],
+		"specific_reaction": {
+			"m_c_to_r_c1": {
+				"comfortable": "increase",
+				"platonic": "increase"
+			},
+			"m_c_to_r_c2": {
+				"jealousy": "decrease",
 				"dislike": "decrease"
 			}
 		}

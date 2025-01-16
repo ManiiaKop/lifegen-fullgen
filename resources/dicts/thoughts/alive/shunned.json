@@ -73,7 +73,7 @@
             "Misses being able to play freely",
             "Wonders if {PRONOUN/m_c/subject}'ll ever be an apprentice",
             "Pouts in the corner",
-            "Is sleeping more than {PRONOUN/m_c/subject} should", 
+            "Is sleeping more than {PRONOUN/m_c/subject} should",
             "Chokes down stale prey",
             "Got scolded, again.",
             "Is so, SO, SO bored!",
@@ -81,13 +81,11 @@
             "Sadly watches the other kits play",
             "Feels sickeningly guilty",
             "Is upset that {PRONOUN/m_c/subject} made {PRONOUN/m_c/poss} friends cry"
-
         ],
         "main_age_constraint": [
             "kitten"
         ]
-    }, 
-
+    },
     {
         "id": "shunned_app_general",
         "thoughts": [
@@ -96,49 +94,49 @@
             "Wonders if {PRONOUN/m_c/poss} mentor is disappointed in {PRONOUN/m_c/object}",
             "Doesn't know how to feel",
             "Is chased out of the elders' den while doing {PRONOUN/m_c/poss} chores",
-            "Thinks about {PRONOUN/m_c/poss} future", 
+            "Thinks about {PRONOUN/m_c/poss} future",
             "Is being made to dig out a new dirtplace",
-            "Feels sticky after sleeping outside", 
+            "Feels sticky after sleeping outside",
             "Is thinking about leaving the Clan",
-            "Wonders if anycat ever liked {PRONOUN/m_c/object}", 
-            "Doesn't care what {PRONOUN/m_c/poss} Clanmates think", 
-            "Tries to think of a full name for {PRONOUN/m_c/self}", 
+            "Wonders if anycat ever liked {PRONOUN/m_c/object}",
+            "Doesn't care what {PRONOUN/m_c/poss} Clanmates think",
+            "Tries to think of a full name for {PRONOUN/m_c/self}",
             "Is feeling sick",
             "Regrets everything",
-            "Is feeling angry", 
-            "Wishes {PRONOUN/m_c/subject} could go back", 
+            "Is feeling angry",
+            "Wishes {PRONOUN/m_c/subject} could go back",
             "Spits at a cat who glares at {PRONOUN/m_c/object}",
-            "Is trying to think of better times", 
-            "Found {PRONOUN/m_c/poss} nest destroyed. Again.", 
+            "Is trying to think of better times",
+            "Found {PRONOUN/m_c/poss} nest destroyed. Again.",
             "Is upset at {PRONOUN/m_c/poss} friends for leaving {PRONOUN/m_c/object}"
         ],
-     "main_status_constraint": [
-        "apprentice",
-        "healer apprentice",
-        "mediator apprentice"
+        "main_status_constraint": [
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice"
         ]
-    }, 
+    },
     {
         "id": "shunned_meddie_sc",
         "thoughts": [
             "Wonders if StarClan will ever speak to {PRONOUN/m_c/object} again",
-            "Tells {PRONOUN/m_c/self} that {PRONOUN/m_c/subject} were just trying to help the Clan",
+            "Tells {PRONOUN/m_c/self} that {PRONOUN/m_c/subject} {VERB/m_c/were/was} just trying to help the Clan",
             "Questions if {PRONOUN/m_c/poss} nightmares are actually visions",
             "Hadn't realized how much {PRONOUN/m_c/subject} relied on StarClan until they went silent",
-            "Feels as if {PRONOUN/m_c/subject} have no where to go",  
+            "Feels as if {PRONOUN/m_c/subject} {VERB/m_c/have/has} nowhere to go",  
             "Shivers in the uneasy silence of being alone", 
-            "Can't help but wonder if {PRONOUN/m_c/subject}'ll still be allowed to be a healer",
+            "Can't help but wonder if {PRONOUN/m_c/subject}'ll still be allowed to be a medicine cat",
             "Thinks that, maybe, another Clan would take {PRONOUN/m_c/object} in",
             "Wishes {PRONOUN/m_c/subject} could apologize to {PRONOUN/m_c/poss} ancestors"
         ],
-     "main_faith_constraint": [
-        "low_sc",
-        "mid_sc", 
-        "high_sc"
+        "main_faith_constraint": [
+            "low_sc",
+            "mid_sc",
+            "high_sc"
         ],
-     "main_status_constraint": [
-        "healer", 
-        "healer apprentice"
+        "main_status_constraint": [
+            "medicine cat",
+            "medicine cat apprentice"
         ]
     },
     {
@@ -147,29 +145,29 @@
             "Is spending more time than usual asleep ... for no particular reason.",
             "Knows this is just part of getting to the glory the Dark Forest promises",
             "Is used to the silence of being alone",
-            "Wonders if {PRONOUN/m_c/poss}'ll have to become a warrior", 
-            "Questions the place of a healer in the Dark Forest", 
-            "Is regretting {PRONOUN/m_c/poss} actions", 
+            "Wonders if {PRONOUN/m_c/poss}'ll have to become a warrior",
+            "Questions the place of a Medicine Cat in the Dark Forest",
+            "Is regretting {PRONOUN/m_c/poss} actions",
             "Is hissing about how this wasn't what {PRONOUN/m_c/subject} planned",
             "Knows the Clan will never understand {PRONOUN/m_c/poss} motive",
             "Is starting to question {PRONOUN/m_c/poss} Clanmates' loyalties",
             "Misses being able to take care of c_n",
             "Thinks about what {PRONOUN/m_c/poss} actions have caused"
         ],
-     "main_faith_constraint": [
-        "low_df",
-        "mid_df", 
-        "high_df"
+        "main_faith_constraint": [
+            "low_df",
+            "mid_df",
+            "high_df"
         ],
-     "main_status_constraint": [
-        "healer", 
-        "healer apprentice"
+        "main_status_constraint": [
+            "medicine cat",
+            "medicine cat apprentice"
         ]
     },
     {
         "id": "shunned_meddie_general",
         "thoughts": [
-            "Misses the healer den",
+            "Misses the medicine den",
             "Wonders what it'll take to make the Clan trust {PRONOUN/m_c/object} again",
             "Frowns when {PRONOUN/m_c/subject} {VERB/m_c/realize/realizes} the scent of herbs has faded from {PRONOUN/m_c/poss} coat",
             "Is starting to miss even the whiniest of patients",
@@ -178,9 +176,9 @@
             "Is hoping to receive an omen to explain why {PRONOUN/m_c/subject} did it to {PRONOUN/m_c/poss} Clanmates",
             "Stares at the stars above with a solemn expression"
         ],
-     "main_status_constraint": [
-        "healer", 
-        "healer apprentice"
+        "main_status_constraint": [
+            "medicine cat",
+            "medicine cat apprentice"
         ]
     },
     {
@@ -215,7 +213,7 @@
         "id": "sneaky_shunned",
         "thoughts": [
             "Manages to steal a piece of fresh prey from an incoming patrol",
-            "Knows they could leave without anycat noticing until the next morning",
+            "Knows {PRONOUN/m_c/subject} could leave without anycat noticing until the next morning",
             "Is acting suspicious", 
             "Wasn't caught sneaking out of camp!", 
             "Is watching {PRONOUN/m_c/poss} Clan from the shadows", 
@@ -229,15 +227,15 @@
     {
         "id": "adventurous_shunned",
         "thoughts": [
-            "Can't wait to be free again", 
-            "Guesses {PRONOUN/m_c/subject} could consider this a new experience", 
+            "Can't wait to be free again",
+            "Guesses {PRONOUN/m_c/subject} could consider this a new experience",
             "Rolls around, bored out of {PRONOUN/m_c/poss} mind",
             "Questions if leaving the Clan would, at this point, offer a better life",
-            "Considers sneaking out of camp to explore for a while", 
-            "Definitely didn't leave camp last night. Why would {PRONOUN/m_c/subject} do that?", 
-            "Is missing the thrill of Clan life", 
-            "Has a trinket to mess with today! With no explanation of where it came from.", 
-            "Walks around in circles", 
+            "Considers sneaking out of camp to explore for a while",
+            "Definitely didn't leave camp last night. Why would {PRONOUN/m_c/subject} do that?",
+            "Is missing the thrill of Clan life",
+            "Has a trinket to mess with today! With no explanation of where it came from.",
+            "Walks around in circles",
             "Thinks about what sort of life {PRONOUN/m_c/subject} could live outside of the Clan"
         ],
         "main_trait_constraint": [

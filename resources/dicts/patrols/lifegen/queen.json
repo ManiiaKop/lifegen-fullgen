@@ -39,7 +39,9 @@
                     "gloomy",
                     "mellow"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "It is not the first time water pooled into the nursery, and you reckon it will not be the last. The older kittens know the drill and wander away to find dry ground, while you pick up the younger kittens to follow. You feel a prideful swell in your heart as the older kittens play a game of 'don't touch the water!' to distract the younglings.",
@@ -59,8 +61,12 @@
                 "weight": 5,
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["running nose"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "running nose"
+                        ]
                     }
                 ]
             },
@@ -74,7 +80,9 @@
                     "flamboyant",
                     "childish"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "A little water doesn't hurt anyone! You decide to take advantage of the opportunity and jump into the overflowing puddles, showing a spout of joyful fun. Some of the kittens decide to join you, and what was once a scary experience, turns into a water fight!",
@@ -123,17 +131,26 @@
                     "gloomy",
                     "mellow"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
-                "text": "Instead of organizing a search party, you calmly wander around the camp until you see a ghosty cat floating in the distance. Approaching, you ask if the cat has seen the kitten anywhere and they point you in the direct of the elder's den. You thank the ghost and walk off with a smile - sometimes it's more beneficial to ask than to panic.",
+                "text": "Instead of organizing a search party, you calmly wander around the camp until you see a ghosty cat floating in the distance. Approaching, you ask if the cat has seen the kitten anywhere and they point you in the direction of the elder's den. You thank the ghost and walk off with a smile - sometimes it's more beneficial to ask than to panic.",
                 "exp": 10,
                 "weight": 15,
-                "stat_skill": ["GHOST,1"],
-                "new_cat": [
-                    ["meeting", "residence:ur"]
+                "stat_skill": [
+                    "GHOST,1"
                 ],
-                "can_have_stat": ["p_l"]
+                "new_cat": [
+                    [
+                        "meeting",
+                        "residence:ur"
+                    ]
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "As the search party is undergoing investigation, you practically turn all the camps dens upside down. Soon enough, you hear laughter near the warriors den and find the kitten... playing by themself? You call out and they scramble to stop what they're doing with a nervous expression. You shake it off as only an imaginary friend.",
@@ -194,8 +211,12 @@
                 "text": "You immediately recognize the symptoms and decide the cough is not bad enough to consult the healer. Instead, you search around the nursery for herbs and treat the kitten yourself with much success.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["HEALER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "HEALER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "Despite being a queen, you trained for this! It's not uncommon for a kitten to fall sick because of spreading diseases, and in your humble opinion all queens should know basic remedies for simple health issues. You give the kitten a basic remedy for their cough and your preparation for such a situation is praised.",
@@ -211,7 +232,9 @@
                     "gloomy",
                     "mellow"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -226,10 +249,14 @@
                 "weight": 5,
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["running nose"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "running nose"
+                        ]
                     }
-                ] 
+                ]
             },
             {
                 "text": "You're not willing to become sick this time, nope! Nope, nope nope! You keep yourself a safe distance away and tell the kitten to find a healer for their cough, even though you can feel the judgemental eyes of other queen's upon you.",
@@ -265,7 +292,7 @@
                 "weight": 20
             },
             {
-                "text": "The kittens curiosity gives you an idea, and you consult with the deputy about training the warriors in something else - perception and initiative! A game of hide and seek where warriors need to find kittens while also avoiding other warriors. The deputy is impressed with your idea and introduce it straight away!",
+                "text": "The kitten's curiosity gives you an idea, and you consult with the deputy about training the warriors in something else - perception and initiative! A game of hide and seek where warriors need to find kittens while also avoiding other warriors. The deputy is impressed with your idea and introduce it straight away!",
                 "exp": 10,
                 "weight": 15
             },
@@ -282,10 +309,14 @@
                 "weight": 5,
                 "injury": [
                     {
-                        "cats": ["r_k"],
-                        "injuries": ["small cut"]
+                        "cats": [
+                            "r_k"
+                        ],
+                        "injuries": [
+                            "small cut"
+                        ]
                     }
-                ] 
+                ]
             },
             {
                 "text": "Despite your best efforts, r_k still sneaks under your nose and gets {PRONOUN/r_k/self} too close to an intense spar. Thankfully the warriors stop straight away and give you the room to pull r_k out of the training arena. That was too close!",
@@ -329,8 +360,12 @@
                 "text": "Before you can even approach, the two kittens stop their fighting to cry to you about their argument. Apparently, the two kittens can't share the same toys and today was the last straw! You quietly and efficiently find a compromise to their issue.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["MEDIATOR,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "MEDIATOR,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You huff and approach the kittens, questioning the cause of the fight but get no answer. Though, with an adult now present, the kittens reluctantly stop fighting and sulk off to separate sides of the clearing. That was a little too easy.",
@@ -396,7 +431,9 @@
                     "gloomy",
                     "mellow"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -464,7 +501,9 @@
                     "gloomy",
                     "mellow"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You admit to not knowing a lot about kitting and direct the queen to your mentor, who quietly coaxes the pregnant cat to a secluded spot in the nursery for conversation.",
@@ -500,7 +539,7 @@
                 "weight": 20
             },
             {
-                "text": "You've been admittedly waiting for this day to come, and start going on a very long rant about each kittens pros and cons in every role available to them. The leader stops you half-way with a chuckle, saying they appreciate the enthusiasm but has very little time for all the details.",
+                "text": "You've been admittedly waiting for this day to come, and start going on a very long rant about each kitten's pros and cons in every role available to them. The leader stops you half-way with a chuckle, saying they appreciate the enthusiasm but has very little time for all the details.",
                 "exp": 10,
                 "weight": 20,
                 "stat_trait": [
@@ -513,7 +552,9 @@
                     "gloomy",
                     "mellow"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -536,12 +577,14 @@
                     "gloomy",
                     "mellow",
                     "careful",
-	                "nervous",
+                    "nervous",
                     "insecure",
-	                "meek",
-	                "cowardly"
+                    "meek",
+                    "cowardly"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ]
     },
@@ -575,14 +618,28 @@
                 "text": "You decide to try to make a silly face, hoping it'll make them laugh. Luckily, it worked and they collapsed into a fit of giggles and stopped crying right away.",
                 "exp": 15,
                 "weight": 20,
-                "stat_trait": ["troublesome","childish","playful","strange","rebellious","spontaneous","energetic","bouncy"],
-                "can_have_stat": ["p_l"]
+                "stat_trait": [
+                    "troublesome",
+                    "childish",
+                    "playful",
+                    "strange",
+                    "rebellious",
+                    "spontaneous",
+                    "energetic",
+                    "bouncy"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You wrack your brain for any knowledge about continuous crying, refusing to simply brush it off as the kitten being unconscionable. After a moment, you remember a healer mentioning a spread of ear mites and direct the parents to ask about it just in case.",
                 "exp": 15,
                 "weight": 20,
-                "stat_skill": ["CLAIRVOYANT,1", "INSIGHTFUL,1"]
+                "stat_skill": [
+                    "CLAIRVOYANT,1",
+                    "INSIGHTFUL,1"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -595,8 +652,19 @@
                 "text": "You decide to try to make a silly face, in the hopes it'll make them laugh and stop crying. Unfortunately, your 'silly' face ended up being more scary than silly. Apparently, you need to practice your silly face more often.",
                 "exp": 0,
                 "weight": 20,
-                "stat_trait": ["troublesome","childish","playful","strange","rebellious","spontaneous","energetic","bouncy"],
-                "can_have_stat": ["p_l"]
+                "stat_trait": [
+                    "troublesome",
+                    "childish",
+                    "playful",
+                    "strange",
+                    "rebellious",
+                    "spontaneous",
+                    "energetic",
+                    "bouncy"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ]
     },
@@ -681,7 +749,9 @@
                     "gloomy",
                     "mellow"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [

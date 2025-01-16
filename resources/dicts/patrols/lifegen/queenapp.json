@@ -24,8 +24,12 @@
                 "text": "Your soothing lullaby calms the distressed kits, allowing them to sleep peacefully. The Clan praises your caring nature.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["SINGER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "SINGER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You start to hum a lullaby, only to realize singing will not calm down the anxious kits this time. With quick thinking, you decide to tell the kits a story instead to distract them from their nightmares. Soon enough, you find yourself telling story after story until all the kittens are fast asleep.",
@@ -41,7 +45,9 @@
                     "gloomy",
                     "mellow"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "Filled with nerves, you lay down with the kits and start to hum a lullaby you once heard a fellow queen sing. Your singing isn't the greatest but the kits don't seem to care, falling asleep one by one until the lullaby comes to an end. You see m_n in the corner of your eye giving you a nod of prideful approval.",
@@ -56,7 +62,9 @@
                     "cowardly",
                     "emotional"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You lay down with the kittens and try your best to sing them to sleep, but instead find yourself simply lying with them as the kittens found comfort in your presence instead. Despite the situation not ending how you thought, at least the problem was solved for the night.",
@@ -83,7 +91,9 @@
                     "cowardly",
                     "emotional"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You try to sing a lullaby, but unfortunately, your voice is not as soothing as you hoped. r_k is quick to point out how detrimental your singing is to {PRONOUN/r_k/poss} ears. You spend the rest of the night sulking in the corner of the nursery.",
@@ -94,8 +104,12 @@
                 "text": "You sing the lullaby, yet after a few moments of quiet, you find yourself nodding off with the rest of the kits. m_n finds you later snoring away and scolds you for falling asleep when you're supposed to be watching the kittens. Whoops.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["SLEEPER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "SLEEPER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ]
     },
@@ -139,7 +153,9 @@
                     "gloomy",
                     "mellow"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -162,7 +178,9 @@
                     "gloomy",
                     "mellow"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "Being sought after for guidance surprises you, and you find yourself blurting out nonsense you don't even fully understand out of nerves. You shift where you stand as the parent gives you a careful eye and states they'll ask for help from r_q next time they need knowledge.",
@@ -177,7 +195,9 @@
                     "cowardly",
                     "emotional"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ]
     },
@@ -199,7 +219,7 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "With more kits in the nursery, the queens realize the nursery is getting cramped. They hold a meeting to discuss a new arrangement, hoping to combat the issue. You wish to propose some of your ideas within the meeting.",
-        "decline_text": "You hesitate and decide not to propose your ideas, believing the more experienced queens are able to fixed the issue themselves. You are just an apprentice, after all.",
+        "decline_text": "You hesitate and decide not to propose your ideas, believing the more experienced queens are able to fix the issue themselves. You are just an apprentice, after all.",
         "chance_of_success": 50,
         "success_outcomes": [
             {
@@ -208,7 +228,7 @@
                 "weight": 20
             },
             {
-                "text": "You perk up and propose the idea to expand the nursery instead of brainstorming a new layout. With an expansion, it would give the kits more space to play and would lessen the possibility of spreading diseases. The queens ponder the decision for a moment, and r_q states they'll speak to l_n about the potential expansion. Success!",
+                "text": "You perk up and propose the idea to expand the nursery instead of brainstorming a new layout. With an expansion, it would give the kits more space to play and would lessen the possibility of spreading diseases. The queens ponder the decision for a moment, and r_q states {PRONOUN/r_q/subject}'ll speak to l_n about the potential expansion. Success!",
                 "exp": 10,
                 "weight": 20,
                 "stat_trait": [
@@ -221,7 +241,9 @@
                     "gloomy",
                     "mellow"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -249,7 +271,9 @@
                     "gloomy",
                     "mellow"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ]
     },
@@ -270,7 +294,7 @@
         "max_cats": 3,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "r_k has become fussy and refuses to eat. {PRONOUN/r_k/subject}{VERB/r_k/'ve/'s} turned {PRONOUN/r_k/poss} back on m_n, so you're called in to assist. It's up to you to try to get through to r_k - and get {PRONOUN/r_k/object} to enjoy some prey.",
+        "intro_text": "r_k has become fussy and refuses to eat. {PRONOUN/r_k/subject/CAP}{VERB/r_k/'ve/'s} turned {PRONOUN/r_k/poss} back on m_n, so you're called in to assist. It's up to you to try to get through to r_k - and get {PRONOUN/r_k/object} to enjoy some prey.",
         "decline_text": "You assure the kit's parents r_k will eat eventually and you do not need to intervene.",
         "chance_of_success": 55,
         "success_outcomes": [
@@ -283,8 +307,12 @@
                 "text": "You hum and state the issue could be more serious than a fussy kit. Although it takes you a few tries and a lot of screaming from r_k, you examine the kit's mouth and determine something is wrong with r_k's teeth. You refer the parent's to r_m for further evaluation. m_n jokes you should have became a healer apprentice instead with a fond look.",
                 "exp": 10,
                 "weight": 20,
-                "stat_skill": ["HEALER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "HEALER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You loudly and dramatically sigh, stating you guess r_k doesn't want to have a competition anymore! r_k gets curious and you challenge {PRONOUN/r_k/object} to a competition. Whoever eats a fresh-kill faster gets a badger ride! r_k brightens up and immediately starts eating. You allow r_k to win, as a reward, of course.",
@@ -300,7 +328,9 @@
                     "energetic",
                     "bouncy"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You lay down with r_k and happily offer to chew r_k's food for {PRONOUN/r_k/object}! r_k gives you a grossed out look and denies the offer, warily pulling the fresh-kill toward {PRONOUN/r_k/self} and eats it before you can chew {PRONOUN/r_k/poss} food like suggested. m_n snorts at your antics, but hey, it worked!",
@@ -309,7 +339,9 @@
                 "stat_trait": [
                     "strange"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -341,7 +373,9 @@
                     "cowardly",
                     "emotional"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ]
     },
@@ -477,7 +511,9 @@
                     "gloomy",
                     "mellow"
                 ],
-                "can_have_stat": ["p_l"]
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [

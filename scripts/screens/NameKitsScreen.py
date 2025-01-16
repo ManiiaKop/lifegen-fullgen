@@ -9,22 +9,27 @@ from scripts.event_class import Single_Event
 from scripts.events import events_class
 from .Screens import Screens
 
-from scripts.utility import get_personality_compatibility, get_text_box_theme, scale, scale_dimentions, shorten_text_to_fit
+from scripts.utility import get_personality_compatibility, get_text_box_theme, shorten_text_to_fit
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 from scripts.cat.pelts import Pelt
 from scripts.game_structure.windows import GameOver, PickPath, DeathScreen
-from scripts.game_structure.game_essentials import game, screen, screen_x, screen_y, MANAGER
+from scripts.game_structure.game_essentials import game
 from scripts.game_structure.windows import RelationshipLog
 from scripts.game_structure.propagating_thread import PropagatingThread
-from scripts.game_structure.ui_elements import UIImageButton, UITextBoxTweaked, UISpriteButton
+from scripts.game_structure.ui_elements import UIImageButton, UITextBoxTweaked, UISpriteButton, UISurfaceImageButton
+from ..ui.generate_box import BoxStyles, get_box
+from scripts.utility import get_text_box_theme, ui_scale, ui_scale_blit, ui_scale_offset
+from scripts.game_structure.screen_settings import MANAGER
+from ..ui.generate_button import get_button_dict, ButtonStyles
+from ..ui.get_arrow import get_arrow
+from ..ui.icon import Icon
 
 
 class NameKitsScreen(Screens):
     selected_cat = None
     current_page = 1
-    list_frame = pygame.transform.scale(image_cache.load_image("resources/images/choosing_frame.png").convert_alpha(),
-                                        (1300 / 1600 * screen_x, 452 / 1400 * screen_y))
+    list_frame = None
     apprentice_details = {}
     selected_details = {}
     cat_list_buttons = {}
@@ -69,7 +74,7 @@ class NameKitsScreen(Screens):
                             short_name = str(name)[0:9]
                             name = short_name + '...'
                         self.selected_details["mentor_name"] = pygame_gui.elements.ui_label.UILabel(
-                            scale(pygame.Rect((690, 230), (220, 60))),
+                            ui_scale(pygame.Rect((345, 115), (110, 30))),
                             name,
                             object_id="#text_box_34_horizcenter", manager=MANAGER)
                     # self.update_buttons()
@@ -102,29 +107,66 @@ class NameKitsScreen(Screens):
                 self.update_cat_list()
 
     def screen_switches(self):
+        super().screen_switches()
         self.the_cat = game.clan.your_cat
-        self.mentor = Cat.fetch_cat(self.the_cat.mentor)
+        list_frame = get_box(BoxStyles.ROUNDED_BOX, (650, 194))
+        self.list_frame = pygame_gui.elements.UIImage(
+            ui_scale(pygame.Rect((75, 360), (650, 194))), list_frame, starting_height=1
+        )
 
         self.heading = pygame_gui.elements.UITextBox("",
-                                                     scale(pygame.Rect((300, 50), (1000, 80))),
+                                                     ui_scale(pygame.Rect((150, 25), (500, 40))),
                                                      object_id=get_text_box_theme("#text_box_34_horizcenter"),
                                                      manager=MANAGER)
         
         # Layout Images:
-        self.mentor_frame = pygame_gui.elements.UIImage(scale(pygame.Rect((630, 226), (562, 394))),
+        self.mentor_frame = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((315, 113), (281, 197))),
                                                         pygame.transform.scale(
                                                             image_cache.load_image(
                                                                 "resources/images/choosing_cat1_frame_ment.png").convert_alpha(),
-                                                            (562, 394)), manager=MANAGER)
+                                                            (281, 197)), manager=MANAGER)
+        
+        self.questionmarks = pygame_gui.elements.UITextBox(
+            "???",
+            ui_scale(pygame.Rect((110, 192), (100, 25))),
+            object_id="#text_box_30_horizcenter",
+            manager=MANAGER)
+        self.placeholder_kit = pygame_gui.elements.UITextBox(
+            "-kit",
+            ui_scale(pygame.Rect((160, 192), (100, 25))),
+            object_id=get_text_box_theme("#text_box_30_horizcenter"),
+            manager=MANAGER)
        
-        self.back_button = UIImageButton(scale(pygame.Rect((690, 1290), (154, 60))), "", object_id="#done_button")
-        self.confirm_mentor = UIImageButton(scale(pygame.Rect((200, 400), (306, 60))), "",
-                                            object_id="#confirm_mate_button")
+        self.back_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((25, 25), (105, 30))),
+            get_arrow(2) + " Back",
+            get_button_dict(ButtonStyles.SQUOVAL, (105, 30)),
+            object_id="@buttonstyles_squoval",
+            manager=MANAGER,
+        )
+        
+        self.confirm_mentor = UISurfaceImageButton(
+            ui_scale(pygame.Rect((92, 240), (153, 30))),
+            "it's official!",
+            get_button_dict(ButtonStyles.SQUOVAL, (153, 30)),
+            object_id="@buttonstyles_squoval",
+        )
+        self.confirm_mentor.disable()
 
-        self.previous_page_button = UIImageButton(scale(pygame.Rect((630, 1160), (68, 68))), "",
-                                                  object_id="#relation_list_previous", manager=MANAGER)
-        self.next_page_button = UIImageButton(scale(pygame.Rect((902, 1160), (68, 68))), "",
-                                              object_id="#relation_list_next", manager=MANAGER)
+        self.previous_page_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((315, 579), (34, 34))),
+            Icon.ARROW_LEFT,
+            get_button_dict(ButtonStyles.ICON, (34, 34)),
+            object_id="@buttonstyles_icon",
+            starting_height=0,
+        )
+        self.next_page_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((451, 579), (34, 34))),
+            Icon.ARROW_RIGHT,
+            get_button_dict(ButtonStyles.ICON, (34, 34)),
+            object_id="@buttonstyles_icon",
+            starting_height=0,
+        )
         self.selected_cat = None
         self.update_selected_cat()  # Updates the image and details of selected cat
         self.update_cat_list()
@@ -161,6 +203,9 @@ class NameKitsScreen(Screens):
         del self.previous_page_button
         self.next_page_button.kill()
         del self.next_page_button
+
+        self.list_frame.kill()
+        del self.list_frame
 
 
    
@@ -208,21 +253,23 @@ class NameKitsScreen(Screens):
         for ele in self.selected_details:
             self.selected_details[ele].kill()
         self.selected_details = {}
+
         if self.selected_cat:
+            self.confirm_mentor.enable()
             name = str(self.selected_cat.name)  # get name
             if self.selected_cat.name.prefix.strip() != "":
                 if 11 <= len(name):  # check name length
                     short_name = str(name)[0:9]
                     name = short_name + '...'
                 self.selected_details["mentor_name"] = pygame_gui.elements.ui_label.UILabel(
-                    scale(pygame.Rect((690, 230), (220, 60))),
+                    ui_scale(pygame.Rect((345, 115), (110, 30))),
                     name,
                     object_id="#text_box_34_horizcenter", manager=MANAGER)
             self.selected_details["selected_image"] = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((650, 300), (300, 300))),
+                ui_scale(pygame.Rect((325, 150), (150, 150))),
                 pygame.transform.scale(
                     self.selected_cat.sprite,
-                    (300, 300)), manager=MANAGER)
+                    (150, 150)), manager=MANAGER)
 
             info = self.selected_cat.status + "\n" + \
                    self.selected_cat.genderalign + "\n" + self.selected_cat.personality.trait + "\n"
@@ -232,27 +279,30 @@ class NameKitsScreen(Screens):
             else:
                 info += self.selected_cat.skills.skill_string(short=True)
 
-            self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(info,
-                                                                                   scale(pygame.Rect((980, 325),
-                                                                                                     (210, 250))),
-                                                                                   object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
-                                                                                   manager=MANAGER)
-            self.selected_details["name_entry"] = pygame_gui.elements.UITextEntryLine(scale(pygame.Rect((200, 325), (280, 58)))
-                                                                          , manager=MANAGER, initial_text="")
+            self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(
+                info,
+                ui_scale(pygame.Rect((490, 162), (105, 125))),
+                object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
+                manager=MANAGER
+                )
+            self.selected_details["name_entry"] = pygame_gui.elements.UITextEntryLine(
+                ui_scale(pygame.Rect((100, 192), (140, 29))),
+                manager=MANAGER,
+                initial_text=""
+                )
+
             self.selected_details["name_entry"].set_allowed_characters(
                 list("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_- "))
             self.selected_details["name_entry"].set_text_length_limit(11)
-            if game.settings['dark mode']:
-                self.selected_details["clan"] = pygame_gui.elements.UITextBox("-kit",
-                                                              scale(pygame.Rect((320, 325), (200, 50))),
-                                                              object_id="#text_box_30_horizcenter",
-                                                              manager=MANAGER)
+            self.selected_details["clan"] = pygame_gui.elements.UITextBox(
+                "-kit",
+                ui_scale(pygame.Rect((160, 192), (100, 25))),
+                object_id="#text_box_30_horizcenter",
+                manager=MANAGER)
+        else:
+            self.questionmarks.hide()
         
-            else:
-                self.selected_details["clan"] = pygame_gui.elements.UITextBox("-kit",
-                                                              scale(pygame.Rect((320, 325), (200, 50))),
-                                                              object_id="#text_box_30_horizcenter",
-                                                              manager=MANAGER)
+            self.placeholder_kit.hide()
 
     def update_cat_list(self):
         """Updates the cat sprite buttons. """
@@ -286,16 +336,16 @@ class NameKitsScreen(Screens):
         self.cat_list_buttons = {}
 
         pos_x = 0
-        pos_y = 40
+        pos_y = 20
         i = 0
         for cat in display_cats:
             self.cat_list_buttons["cat" + str(i)] = UISpriteButton(
-                scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))),
+                ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))),
                 cat.sprite, cat_object=cat, manager=MANAGER)
-            pos_x += 120
-            if pos_x >= 1100:
+            pos_x += 60
+            if pos_x >= 550:
                 pos_x = 0
-                pos_y += 120
+                pos_y += 60
             i += 1
 
     def get_valid_cats(self):
@@ -310,7 +360,8 @@ class NameKitsScreen(Screens):
 
     def on_use(self):
         # Due to a bug in pygame, any image with buttons over it must be blited
-        screen.blit(self.list_frame, (150 / 1600 * screen_x, 720 / 1400 * screen_y))
+        # screen.blit(self.list_frame, (150 / 1600 * screen_x, 720 / 1400 * screen_y))
+        super().on_use()
 
     def chunks(self, L, n):
         return [L[x: x + n] for x in range(0, len(L), n)]

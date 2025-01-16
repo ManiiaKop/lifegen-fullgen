@@ -29,11 +29,16 @@
                 "weight": 20
             },
             {
-                "text": "A shadow shoots out of the trees, right towards you. But you're quick-- you spin around, ducking underneath your assailant and jumping up to pin them to the ground. Claws on your attackers throat, you snarl, but the attacker just blinks up at you, amused. {PRONOUN/n_c:0/subject} {VERB/n_c:0/compliment/compliments} you on your skills, {VERB/n_c:0/introduce/introduces} {PRONOUN/n_c:0/self}, and {VERB/n_c:0/remark/remarks} that the two of you should train together sometime.",
+                "text": "A shadow shoots out of the trees, right towards you. But you're quick-- you spin around, ducking underneath your assailant and jumping up to pin them to the ground. Claws on your attackers throat, you snarl, but the attacker just blinks up at you, amused. {PRONOUN/n_c:0/subject/CAP} {VERB/n_c:0/compliment/compliments} you on your skills, {VERB/n_c:0/introduce/introduces} {PRONOUN/n_c:0/self}, and {VERB/n_c:0/remark/remarks} that the two of you should train together sometime.",
                 "exp": 30,
                 "weight": 5,
                 "new_cat": [
-                    ["meeting", "residence:df", "clan_status", "status:warrior"]
+                    [
+                        "meeting",
+                        "residence:df",
+                        "clan_status",
+                        "status:warrior"
+                    ]
                 ],
                 "stat_trait": [
                     "ambitious",
@@ -46,11 +51,18 @@
                     "flexible",
                     "careful"
                 ],
-                "stat_skill": ["FIGHTER,1", "GUARDIAN,1", "INSIGHTFUL,1", "SENSE,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "FIGHTER,1",
+                    "GUARDIAN,1",
+                    "INSIGHTFUL,1",
+                    "SENSE,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
-                "text": "You swerve around, just as a cat lunges from the shadows and aims their claws at your pelt. You react faster than the attacker can, ducking the blow, before retailiating with a rake to their belly. You watch as they tumble to the ground from the attack. It seems you've learned a thing or two here.",
+                "text": "You swerve around, just as a cat lunges from the shadows and aims their claws at your pelt. You react faster than the attacker can, ducking the blow, before retaliating with a rake to their belly. You watch as they tumble to the ground from the attack. It seems you've learned a thing or two here.",
                 "exp": 30,
                 "weight": 20,
                 "stat_trait": [
@@ -64,8 +76,15 @@
                     "flexible",
                     "careful"
                 ],
-                "stat_skill": ["FIGHTER,1", "GUARDIAN,1", "INSIGHTFUL,1", "SENSE,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "FIGHTER,1",
+                    "GUARDIAN,1",
+                    "INSIGHTFUL,1",
+                    "SENSE,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -73,11 +92,17 @@
                 "text": "You swerve around, just as a cat lunges from the shadows. You don't react quickly enough and they pin you down, hissing that you have a lot more training to do.",
                 "exp": 0,
                 "weight": 20,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["battle_injury"],
-                        "scars": ["ONE"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "battle_injury"
+                        ],
+                        "scars": [
+                            "ONE"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -92,8 +117,12 @@
                 "weight": 20,
                 "injury": [
                     {
-                        "cats": ["y_c"], 
-                        "injuries": ["minor_injury"],
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "minor_injury"
+                        ],
                         "scars": []
                     }
                 ]
@@ -104,12 +133,17 @@
                 "text": "You're not going to let someone sneak up on you. Stalking under the shadowy trees, you look for the source. You never see your attacker coming as they drop from the branches above and hiss that you need more training.",
                 "exp": 0,
                 "weight": 20,
-                
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["battle_injury"],
-                        "scars": ["ONE"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "battle_injury"
+                        ],
+                        "scars": [
+                            "ONE"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -119,7 +153,7 @@
                 }
             },
             {
-                "text":"You're not going to let someone sneak up on you. Stalking under the shadowy trees, you look for the source. Your search leads to nothing however.",
+                "text": "You're not going to let someone sneak up on you. Stalking under the shadowy trees, you look for the source. Your search leads to nothing however.",
                 "exp": 0,
                 "weight": 20
             }
@@ -161,8 +195,12 @@
                 "weight": 10,
                 "injury": [
                     {
-                        "cats": ["y_c"], 
-                        "injuries": ["minor_injury"],
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "minor_injury"
+                        ],
                         "scars": []
                     }
                 ]
@@ -177,7 +215,12 @@
                 "exp": 15,
                 "weight": 5,
                 "new_cat": [
-                    ["meeting", "residence:df", "clan_status", "status:warrior"]
+                    [
+                        "meeting",
+                        "residence:df",
+                        "clan_status",
+                        "status:warrior"
+                    ]
                 ],
                 "stat_trait": [
                     "ambitious",
@@ -188,8 +231,13 @@
                     "fierce",
                     "vengeful"
                 ],
-                "stat_skill": ["FIGHTER,1", "SENSE,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "FIGHTER,1",
+                    "SENSE,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You accept the training, but when you show more skill than the ghostly warrior themselves, deflecting every one of their attacks, they hiss and stalk back into the trees.",
@@ -204,10 +252,14 @@
                     "fierce",
                     "vengeful"
                 ],
-                "stat_skill": ["FIGHTER,1", "SENSE,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "FIGHTER,1",
+                    "SENSE,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
-        
         ],
         "fail_outcomes": [
             {
@@ -221,9 +273,15 @@
                 "weight": 20,
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["battle_injury"],
-                        "scars": ["TWO"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "battle_injury"
+                        ],
+                        "scars": [
+                            "TWO"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -258,7 +316,7 @@
         "chance_of_success": 55,
         "success_outcomes": [
             {
-                "text": "You agree to their terms and upon waking, you relay the message to your Clan's healer. The prophecy, however, you keep to yourself. The ancient words could give away your training...",
+                "text": "You agree to their terms and upon waking, you relay the message to your Clan's medicine cat. The prophecy, however, you keep to yourself. The ancient words could give away your training...",
                 "exp": 30,
                 "weight": 20,
                 "stat_trait": [
@@ -272,11 +330,22 @@
                     "righteous",
                     "rebellious"
                 ],
-                "stat_skill": ["CLAIRVOYANT,1", "CLEVER,1", "GHOST,1", "LORE,1","PROPHET,1", "OMEN,1", "SCHOLAR,1", "STAR,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "CLAIRVOYANT,1",
+                    "CLEVER,1",
+                    "GHOST,1",
+                    "LORE,1",
+                    "PROPHET,1",
+                    "OMEN,1",
+                    "SCHOLAR,1",
+                    "STAR,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
-                "text": "You agree to their terms and upon waking, you relay the message to your Clan's healer along with the prophecy.",
+                "text": "You agree to their terms and upon waking, you relay the message to your Clan's medicine cat along with the prophecy.",
                 "exp": 15,
                 "weight": 20
             }
@@ -322,7 +391,12 @@
                 "exp": 5,
                 "weight": 20,
                 "new_cat": [
-                    ["meeting", "residence:df", "clan_status", "age:adolescent"]
+                    [
+                        "meeting",
+                        "residence:df",
+                        "clan_status",
+                        "age:adolescent"
+                    ]
                 ]
             },
             {
@@ -371,15 +445,30 @@
                 "text": "You guide the cat through the eerie forest, successfully leading them out. They wake up grateful for your help.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["COMFORTER,1", "DREAM,1", "GUARDIAN,1", "NAVIGATOR,1", "STAR, 1", "TRACKER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "COMFORTER,1",
+                    "DREAM,1",
+                    "GUARDIAN,1",
+                    "NAVIGATOR,1",
+                    "STAR, 1",
+                    "TRACKER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "There's no need for {PRONOUN/n_c:0/object} to be afraid. You coax {PRONOUN/n_c:0/object} into joining you and your mentor. Although {PRONOUN/n_c:0/subject}{VERB/n_c:0/'re/'s} hesitant at first, you soon meet {PRONOUN/n_c:0/object} on more and more nights, now confident with a pelt of muck.",
                 "exp": 20,
                 "weight": 20,
                 "new_cat": [
-                    ["meeting", "residence:df", "clan_status", "status:warrior", "backstory:oldstarclan1"]
+                    [
+                        "meeting",
+                        "residence:df",
+                        "clan_status",
+                        "status:warrior",
+                        "backstory:oldstarclan1"
+                    ]
                 ]
             }
         ],
@@ -434,13 +523,16 @@
                 "exp": 10,
                 "weight": 20
             },
-
             {
                 "text": "You try to pull yourself up, but the inky depths are stronger than you. Your head slips under, and your limbs start to burn. Just as you decide to give in and accept your fate, you feel a tug from above and air hits your fur once more. The cat lays you on solid ground once more, and when you open your eyes, {PRONOUN/n_c:0/subject} {VERB/n_c:0/introduce/introduces} {PRONOUN/n_c:0/self} with a smile.",
                 "exp": 10,
                 "weight": 5,
                 "new_cat": [
-                    ["meeting", "residence:df", "clan_status"]
+                    [
+                        "meeting",
+                        "residence:df",
+                        "clan_status"
+                    ]
                 ]
             },
             {
@@ -458,8 +550,16 @@
                     "cunning",
                     "adventurous"
                 ],
-                "stat_skill": ["SWIMMER,1", "THINKER,1", "SENSE,1", "NAVIGATOR,1", "CLEVER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "SWIMMER,1",
+                    "THINKER,1",
+                    "SENSE,1",
+                    "NAVIGATOR,1",
+                    "CLEVER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You stay calm, holding your breath and treading water until you reach the surface again. Some of the water was swallowed, however, and by morning your Clanmates find you ill without clear cause.",
@@ -467,8 +567,12 @@
                 "weight": 20,
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["poisoned"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "poisoned"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -482,8 +586,12 @@
                 "weight": 20,
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["water in their lungs"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "water in their lungs"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -499,8 +607,13 @@
                 "weight": 20,
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["water in their lungs", "poisoned"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "water in their lungs",
+                            "poisoned"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -512,7 +625,9 @@
                 "text": "It's no use. You can't tell which way is up or down, and fall deeper into the depths. Your body is cold in your nest when your Clanmates go to wake you, pelt soaked in black liquid.",
                 "exp": 0,
                 "weight": 10,
-                "dead_cats": ["y_c"],
+                "dead_cats": [
+                    "y_c"
+                ],
                 "history_text": {
                     "reg_death": "m_c died after ingesting too much Dark Forest water.",
                     "lead_death": "ingested too much Dark Forest water"
@@ -588,10 +703,17 @@
                 "weight": 10,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["respect", "trust"],
+                        "values": [
+                            "respect",
+                            "trust"
+                        ],
                         "amount": 2
                     }
                 ]
@@ -600,15 +722,42 @@
                 "text": "You and r_c make good progress on some advanced battle moves. You take the time to teach them a few new ones as well, and r_c is thrilled to learn from you.",
                 "exp": 30,
                 "weight": 20,
-                "stat_trait": ["cunning", "wise","ambitious","bold","daring","calm","careful","loyal","compassionate","thoughtful","flexible","trusting"],
-                "stat_skill": ["FIGHTER,1", "TEACHER,1", "INSIGHTFUL,1","SCHOLAR,1"],
-                "can_have_stat": ["p_l"],
+                "stat_trait": [
+                    "cunning",
+                    "wise",
+                    "ambitious",
+                    "bold",
+                    "daring",
+                    "calm",
+                    "careful",
+                    "loyal",
+                    "compassionate",
+                    "thoughtful",
+                    "flexible",
+                    "trusting"
+                ],
+                "stat_skill": [
+                    "FIGHTER,1",
+                    "TEACHER,1",
+                    "INSIGHTFUL,1",
+                    "SCHOLAR,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ],
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["respect", "trust"],
+                        "values": [
+                            "respect",
+                            "trust"
+                        ],
                         "amount": 5
                     }
                 ]
@@ -619,10 +768,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["respect", "trust"],
+                        "values": [
+                            "respect",
+                            "trust"
+                        ],
                         "amount": 5
                     }
                 ]
@@ -657,10 +813,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": false,
-                        "values": ["dislike"],
+                        "values": [
+                            "dislike"
+                        ],
                         "amount": 5
                     }
                 ]
@@ -671,10 +833,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": false,
-                        "values": ["dislike", "jealousy"],
+                        "values": [
+                            "dislike",
+                            "jealousy"
+                        ],
                         "amount": 5
                     }
                 ]
@@ -710,17 +879,28 @@
                 "weight": 15,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": false,
-                        "values": ["comfort", "trust"],
+                        "values": [
+                            "comfort",
+                            "trust"
+                        ],
                         "amount": 2
                     }
                 ],
-                "convert": ["r_c"],
+                "convert": [
+                    "r_c"
+                ],
                 "faith_effects": [
                     {
-                        "faith_cat": ["r_c"],
+                        "faith_cat": [
+                            "r_c"
+                        ],
                         "amount": -1
                     }
                 ]
@@ -729,21 +909,46 @@
                 "text": "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring {PRONOUN/r_c/object} to the training area if {PRONOUN/r_c/subject}'d like to join you. r_c trusts you, so {PRONOUN/r_c/subject} eagerly {VERB/r_c/follow/follows} your lead.",
                 "exp": 25,
                 "weight": 20,
-                "stat_trait":["cunning", "sincere", "confident","responsible", "loving","loyal", "charismatic", "trusting", "playful", "compassionate","thoughtful"],
-                "can_have_stat": ["p_l"],
+                "stat_trait": [
+                    "cunning",
+                    "sincere",
+                    "confident",
+                    "responsible",
+                    "loving",
+                    "loyal",
+                    "charismatic",
+                    "trusting",
+                    "playful",
+                    "compassionate",
+                    "thoughtful"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ],
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["comfort", "trust"],
+                        "values": [
+                            "comfort",
+                            "trust"
+                        ],
                         "amount": 5
                     }
                 ],
-                "convert": ["r_c"],
+                "convert": [
+                    "r_c"
+                ],
                 "faith_effects": [
                     {
-                        "faith_cat": ["r_c"],
+                        "faith_cat": [
+                            "r_c"
+                        ],
                         "amount": -2
                     }
                 ]
@@ -754,10 +959,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["dislike"],
+                        "values": [
+                            "dislike"
+                        ],
                         "amount": 5
                     }
                 ]
@@ -770,10 +981,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": false,
-                        "values": ["dislike"],
+                        "values": [
+                            "dislike"
+                        ],
                         "amount": 2
                     }
                 ]
@@ -784,10 +1001,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["dislike"],
+                        "values": [
+                            "dislike"
+                        ],
                         "amount": 5
                     }
                 ],
@@ -805,28 +1028,33 @@
                     }
                 ],
                 "history_text": {
-                    "scar": "This cat was scarred by a Clanmate in the Dark Forest"}
+                    "scar": "This cat was scarred by a Clanmate in the Dark Forest"
+                }
             },
             {
                 "text": "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring {PRONOUN/r_c/object} to the training area, if {PRONOUN/r_c/subject} {VERB/r_c/wish/wishes} to join you. r_c calls you a traitor as {PRONOUN/r_c/subject} {VERB/r_c/refuse/refuses}, swinging {PRONOUN/r_c/poss} claws at you, though missing, as you gracefully dodge {PRONOUN/r_c/poss} attack. You can't let r_c expose your training like this. Your claws open r_c's throat, and you leave {PRONOUN/r_c/object} to fade into the muck. The Clan discovers the horrifying scene in the morning.",
                 "exp": 20,
                 "weight": 10,
-                "dead_cats": ["r_c"],
+                "dead_cats": [
+                    "r_c"
+                ],
                 "murder": [
                     {
-                        "murderer": ["y_c"],
-                        "victim": ["r_c"]
+                        "murderer": [
+                            "y_c"
+                        ],
+                        "victim": [
+                            "r_c"
+                        ]
                     }
                 ],
                 "history_text": {
                     "reg_death": "m_c was murdered in the Dark Forest.",
                     "lead_death": "murdered in the Dark Forest"
                 }
-                
             }
-        ]    
+        ]
     },
-
     {
         "patrol_id": "life_df_og10",
         "biome": [
@@ -857,10 +1085,18 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["respect","trust", "platonic_love"],
+                        "values": [
+                            "respect",
+                            "trust",
+                            "platonic_love"
+                        ],
                         "amount": 2
                     }
                 ]
@@ -871,10 +1107,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": false,
-                        "values": ["respect"],
+                        "values": [
+                            "respect"
+                        ],
                         "amount": 2
                     }
                 ]
@@ -887,10 +1129,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": false,
-                        "values": ["dislike"],
+                        "values": [
+                            "dislike"
+                        ],
                         "amount": 5
                     }
                 ]
@@ -922,29 +1170,44 @@
         "chance_of_success": 10,
         "success_outcomes": [
             {
-                "text": "You quickly turn around, only to come eyes to eyes with r_c! {PRONOUN/r_c/subject/CAP} {VERB/r_c/don't/doesn't} seem bothered by your presence, bounding over to you with a welcoming sparkle in {PRONOUN/r_c/poss} eyes. {PRONOUN/r_c/subject/CAP} {VERB/r_c/seem/seems}.. Happy? {PRONOUN/r_c/subject/CAP} {VERB/r_c/explain/explains} to you that {PRONOUN/r_c/subject}{VERB/r_c/'ve/'s} been needing a place to gossip, and when {PRONOUN/r_c/subject} stumbled over the shadows of the Dark Forest, {PRONOUN/r_c/subject} couldn't help {PRONOUN/r_c/self}! Apparently the Clan hasn't been very accepting of {PRONOUN/r_c/poss} rumors.. But here you are! When you return home from the ever-lasting darkness, you have more secrets than you can carry.",
+                "text": "You quickly turn around, only to come eyes to eyes with r_c! {PRONOUN/r_c/subject/CAP} {VERB/r_c/don't/doesn't} seem bothered by your presence, bounding over to you with a welcoming sparkle in {PRONOUN/r_c/poss} eyes. {PRONOUN/r_c/subject/CAP} {VERB/r_c/seem/seems}... Happy? {PRONOUN/r_c/subject/CAP} {VERB/r_c/explain/explains} to you that {PRONOUN/r_c/subject}{VERB/r_c/'ve/'s} been needing a place to gossip, and when {PRONOUN/r_c/subject} stumbled over the shadows of the Dark Forest, {PRONOUN/r_c/subject} couldn't help {PRONOUN/r_c/self}! Apparently the Clan hasn't been very accepting of {PRONOUN/r_c/poss} rumors... But here you are! When you return home from the ever-lasting darkness, you have more secrets than you can carry.",
                 "exp": 15,
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": false,
-                        "values": ["trust"],
+                        "values": [
+                            "trust"
+                        ],
                         "amount": 2
                     }
                 ]
             },
             {
-                "text": "You quickly turn around, only to come eyes to eyes with r_c! {PRONOUN/r_c/subject/CAP} {VERB/r_c/don't/doesn't} seem bothered by your presence, bounding over to you with a welcoming sparkle in {PRONOUN/r_c/poss} eyes. {PRONOUN/r_c/subject/CAP} {VERB/r_c/seem/seems}.. Happy? {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} thrilled to know that you train here as well and {VERB/r_c/ask/asks} to spar. You agree, and when you see {PRONOUN/r_c/object} next in camp, it's clear your friendship has grown.",
+                "text": "You quickly turn around, only to come eyes to eyes with r_c! {PRONOUN/r_c/subject/CAP} {VERB/r_c/don't/doesn't} seem bothered by your presence, bounding over to you with a welcoming sparkle in {PRONOUN/r_c/poss} eyes. {PRONOUN/r_c/subject/CAP} {VERB/r_c/seem/seems}.. Happy? {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} thrilled to know that you train here as well and {VERB/r_c/ask/asks} to spar. You agree, and when you see {PRONOUN/r_c/object} next in camp, it's clear your friendship has grown.",
                 "exp": 20,
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": false,
-                        "values": ["trust", "respect", "comfort", "platonic_love"],
+                        "values": [
+                            "trust",
+                            "respect",
+                            "comfort",
+                            "platonic_love"
+                        ],
                         "amount": 2
                     }
                 ]
@@ -955,17 +1218,29 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": false,
-                        "values": ["trust", "respect", "comfort"],
+                        "values": [
+                            "trust",
+                            "respect",
+                            "comfort"
+                        ],
                         "amount": 5
                     }
                 ],
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["poisoned"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "poisoned"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -981,8 +1256,12 @@
                 "weight": 20,
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["shock"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "shock"
+                        ]
                     }
                 ]
             },
@@ -992,17 +1271,27 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["dislike"],
+                        "values": [
+                            "dislike"
+                        ],
                         "amount": 5
                     }
                 ],
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["poisoned"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "poisoned"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -1014,11 +1303,17 @@
                 "text": "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} merely standing there watching as the mud starts to swallow you. There's nothing you can do as you sink down and see r_c disappearing into the darkness. Mud cakes your pelt when the Clan makes the horrifying discovery in the morning.",
                 "exp": 0,
                 "weight": 10,
-                "dead_cats": ["y_c"],
+                "dead_cats": [
+                    "y_c"
+                ],
                 "murder": [
                     {
-                        "murderer": ["r_c"],
-                        "victim": ["y_c"]
+                        "murderer": [
+                            "r_c"
+                        ],
+                        "victim": [
+                            "y_c"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -1057,7 +1352,12 @@
                 "exp": 30,
                 "weight": 5,
                 "new_cat": [
-                    ["meeting", "residence:df", "clan_status", "status:kitten"]
+                    [
+                        "meeting",
+                        "residence:df",
+                        "clan_status",
+                        "status:kitten"
+                    ]
                 ]
             },
             {
@@ -1081,10 +1381,14 @@
                 "text": "With your head to the ground, you don't notice the Dark Forest warrior attacking from above. They clamp your jaws shut with a paw as you try to scream and hiss a quick and malicious warning in your ear before letting you go. It seems that, next time, you may not be so lucky.",
                 "exp": 0,
                 "weight": 20,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["minor_injury"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "minor_injury"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -1107,15 +1411,16 @@
                 "text": "You turn a corner to keep exploring, and your eyes land on a large group of Dark Forest cats in a huddle. Feeling unwelcome, you instantly turn to run, but the group has already noticed you. The ghostly warriors are on your heels in an instant, and the last thing you feel is a dozen pairs of claws tearing into your fur. When your Clanmates find you in the morning, your nest is in tatters and your body cannot be salvaged.",
                 "exp": 0,
                 "weight": 3,
-                "dead_cats": ["y_c"],
+                "dead_cats": [
+                    "y_c"
+                ],
                 "history_text": {
                     "reg_death": "{VERB/m_c/were/was} murdered in the Dark Forest.",
                     "lead_death": "{VERB/m_c/were/was} murdered in the Dark Forest."
                 }
-                
             }
         ]
-    }, 
+    },
     {
         "patrol_id": "life_df_J2",
         "biome": [
@@ -1135,12 +1440,18 @@
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {
-            "healer apprentice": [1, 6],
-            "healer": [1, 6]
+            "medicine cat apprentice": [
+                1,
+                6
+            ],
+            "medicine cat": [
+                1,
+                6
+            ]
         },
         "weight": 20,
         "intro_text": "While wandering the Dark Forest, you hear a hiss of pain from within a thick clump of trees. You wonder if it's safe to investigate.",
-        "decline_text": "You can't risk it. Though your heart urges you to do otherwise as a healer, you turn away from the noise, pretending you heard nothing.",
+        "decline_text": "You can't risk it. Though your heart urges you to do otherwise as a medicine cat, you turn away from the noise, pretending you heard nothing.",
         "chance_of_success": 30,
         "success_outcomes": [
             {
@@ -1148,7 +1459,11 @@
                 "exp": 30,
                 "weight": 5,
                 "new_cat": [
-                    ["meeting", "residence:df", "clan_status"]
+                    [
+                        "meeting",
+                        "residence:df",
+                        "clan_status"
+                    ]
                 ]
             },
             {
@@ -1161,7 +1476,11 @@
                 "exp": 30,
                 "weight": 10,
                 "new_cat": [
-                    ["meeting", "residence:df", "clan_status"]
+                    [
+                        "meeting",
+                        "residence:df",
+                        "clan_status"
+                    ]
                 ]
             },
             {
@@ -1175,11 +1494,17 @@
                 "text": "You duck into the trees to investigate the noise. After a few moments of gingerly looking around you stumble upon a Dark Forest cat crouched over the body of another. They turn, blood staining their jaws, and they lash a paw out at you just before you're able to turn around and run. As you escape, you hear them yowling after you that you'll be next if you continue to poke your nose where it doesn't belong.",
                 "exp": 0,
                 "weight": 20,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["claw-wound"],
-                        "scars": ["CHEEK"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "claw-wound"
+                        ],
+                        "scars": [
+                            "CHEEK"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -1230,7 +1555,11 @@
                 "exp": 30,
                 "weight": 10,
                 "new_cat": [
-                    ["meeting", "residence:df", "clan_status"]
+                    [
+                        "meeting",
+                        "residence:df",
+                        "clan_status"
+                    ]
                 ]
             },
             {
@@ -1249,11 +1578,17 @@
                 "text": "You step forward to introduce yourself to r_c's new friend, but as you do, a pair of enthusiastically sparring Dark Forest cats launches into you. As you scramble to your paws, the pair hisses at you not to be so stupid, and you're left with a wound from the scuffle.",
                 "exp": 0,
                 "weight": 20,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["claw-wound"],
-                        "scars": ["FACE"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "claw-wound"
+                        ],
+                        "scars": [
+                            "FACE"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -1271,10 +1606,14 @@
                 "text": "You take a step forward to approach your Clanmate, but you feel a swipe at your haunches. Your sparring partner hisses at you to get back to your training. It looks like you won't have any time to go visit r_c. When your sparring session is complete, you can't find {PRONOUN/r_c/object} or {PRONOUN/r_c/poss} new friend anywhere.",
                 "exp": 0,
                 "weight": 40,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["minor_injury"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "minor_injury"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -1287,7 +1626,9 @@
                 "text": "You slip away from your training partner, and just as you're able to catch another glimpse of r_c, {PRONOUN/r_c/poss} Dark Forest friend tackles {PRONOUN/r_c/object} to the ground. You figure that they're busy in a training session of their own and leave them be. It isn't until tomorrow morning, when you're awoken by a wail of horror, that you realise what you'd witnessed.",
                 "exp": 20,
                 "weight": 5,
-                "dead_cats": ["r_c"]
+                "dead_cats": [
+                    "r_c"
+                ]
             }
         ]
     },
@@ -1327,10 +1668,17 @@
                 "weight": 10,
                 "relationships": [
                     {
-                        "cats_to": ["y_c"],
-                        "cats_from": ["r_c"],
+                        "cats_to": [
+                            "y_c"
+                        ],
+                        "cats_from": [
+                            "r_c"
+                        ],
                         "mutual": false,
-                        "values": ["trust", "comfort"],
+                        "values": [
+                            "trust",
+                            "comfort"
+                        ],
                         "amount": 15
                     }
                 ]
@@ -1341,11 +1689,17 @@
                 "text": "r_c gives you a good scratch before you can wriggle away, and your fresh wound is sore in the morning.",
                 "exp": 0,
                 "weight": 20,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["claw-wound"],
-                        "scars": ["FACE"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "claw-wound"
+                        ],
+                        "scars": [
+                            "FACE"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -1360,10 +1714,16 @@
                 "weight": 30,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["dislike"],
+                        "values": [
+                            "dislike"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -1376,28 +1736,43 @@
                 "weight": 20,
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["big_bite_injury"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "big_bite_injury"
+                        ]
                     }
                 ]
             },
             {
-                "text":"You know you should fight back, but you're equally surprised to see them as r_c is to see you. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} able to get over {PRONOUN/r_c/poss} shock quicker, though, and {PRONOUN/r_c/subject} quickly {VERB/r_c/shove/shoves} you into the water. A paw lands on the back of your head, driving your muzzle into the wet sand. You fight and scream, but you can't reach {PRONOUN/r_c/object}. It must be by some grace of StarClan that you manage to startle awake just as your vision starts to flicker.",
+                "text": "You know you should fight back, but you're equally surprised to see them as r_c is to see you. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} able to get over {PRONOUN/r_c/poss} shock quicker, though, and {PRONOUN/r_c/subject} quickly {VERB/r_c/shove/shoves} you into the water. A paw lands on the back of your head, driving your muzzle into the wet sand. You fight and scream, but you can't reach {PRONOUN/r_c/object}. It must be by some grace of StarClan that you manage to startle awake just as your vision starts to flicker.",
                 "exp": 0,
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["trust", "platonic_love"],
+                        "values": [
+                            "trust",
+                            "platonic_love"
+                        ],
                         "amount": -20
                     }
                 ],
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["water in their lungs"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "water in their lungs"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -1413,9 +1788,15 @@
                 "weight": 30,
                 "injury": [
                     {
-                        "cats": ["r_c"],
-                        "injuries": ["claw-wound"],
-                        "scars": ["THROAT"]
+                        "cats": [
+                            "r_c"
+                        ],
+                        "injuries": [
+                            "claw-wound"
+                        ],
+                        "scars": [
+                            "THROAT"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -1428,11 +1809,17 @@
                 "text": "Angry that r_c was able to catch you off-guard, and knowing that you can't risk {PRONOUN/r_c/object} knowing that you train here, you know there's only one way to take care of the situation. You're stronger than your Clanmate-- you know it. Taking advantage of {PRONOUN/r_c/poss} surprise upon seeing you, you quickly overpower {PRONOUN/r_c/object} and sink your teeth into {PRONOUN/r_c/poss} throat. When the Clan wakes up tomorrow, no one can explain the gorey scene left in r_c's nest.",
                 "exp": 40,
                 "weight": 10,
-                "dead_cats": ["r_c"],
+                "dead_cats": [
+                    "r_c"
+                ],
                 "murder": [
                     {
-                        "murderer": ["y_c"],
-                        "victim": ["r_c"]
+                        "murderer": [
+                            "y_c"
+                        ],
+                        "victim": [
+                            "r_c"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -1496,10 +1883,14 @@
                 "text": "When you reach forward to try to pull {PRONOUN/r_c/object} out, r_c swats your paws away, mistaking you for a threat. As {PRONOUN/r_c/subject} {VERB/r_c/try/tries} to climb up onto the bank {PRONOUN/r_c/self}, eyes blinded by the filthy lakewater, the ground crumbles away, sending {PRONOUN/r_c/object} back into the lake. It takes you longer than you'd like to will yourself awake, and when it finally works, you can already hear r_c hacking and coughing from {PRONOUN/r_c/poss} nest.",
                 "exp": 0,
                 "weight": 40,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["r_c"],
-                        "injuries": ["water in their lungs"]
+                        "cats": [
+                            "r_c"
+                        ],
+                        "injuries": [
+                            "water in their lungs"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -1511,7 +1902,9 @@
                 "text": "You rush forward to help your Clanmate out of the water, but {PRONOUN/r_c/subject} {VERB/r_c/grab/grabs} onto your forelegs as {PRONOUN/r_c/subject} {VERB/r_c/struggle/struggles}, threatening to pull you down with {PRONOUN/r_c/object}. All you can do is loosen {PRONOUN/r_c/poss} grip on your legs to save your own life, and with nothing to hold on to, r_c quickly slips back underneath the surface. You don't attempt to reach for {PRONOUN/r_c/object} again, knowing that the thick muck of the lake is inescapable. You're proven right when you're awoken the next morning by a grief-stricken wail.",
                 "exp": 0,
                 "weight": 5,
-                "dead_cats": ["r_c"],
+                "dead_cats": [
+                    "r_c"
+                ],
                 "history_text": {
                     "reg_death": "m_c drowned in the Dark Forest",
                     "lead_death": "drowned in the Dark Forest"
@@ -1553,10 +1946,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": false,
-                        "values": ["trust", "comfort"],
+                        "values": [
+                            "trust",
+                            "comfort"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -1565,10 +1965,14 @@
                 "text": "You tell r_c that you're in the Dark Forest, where Clan cats can train to grow stronger. Though anxious at first, {PRONOUN/r_c/subject} {VERB/r_c/begin/begins} to grow more comfortable as you show {PRONOUN/r_c/object} around. After meeting with your mentor and several other Dark Forest warriors, {PRONOUN/r_c/subject} {VERB/r_c/decide/decides} to stay!",
                 "exp": 20,
                 "weight": 10,
-                "convert": ["r_c"],
+                "convert": [
+                    "r_c"
+                ],
                 "faith_effects": [
                     {
-                        "faith_cat": ["r_c"],
+                        "faith_cat": [
+                            "r_c"
+                        ],
                         "amount": -2
                     }
                 ]
@@ -1579,11 +1983,17 @@
                 "text": "When you tell r_c that you're in the Dark Forest, {PRONOUN/r_c/subject} {VERB/r_c/hiss/hisses} and {VERB/r_c/call/calls} you a traitor. Before you can try to remedy the situation, {PRONOUN/r_c/subject} {VERB/r_c/run/runs} off, passing a group of Dark Forest warriors, who instantly give chase.",
                 "exp": 0,
                 "weight": 20,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["r_c"],
-                        "injuries": ["claw-wound"],
-                        "scars": ["SIDE"]
+                        "cats": [
+                            "r_c"
+                        ],
+                        "injuries": [
+                            "claw-wound"
+                        ],
+                        "scars": [
+                            "SIDE"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -1591,10 +2001,17 @@
                 },
                 "relationships": [
                     {
-                        "cats_to": ["y_c"],
-                        "cats_from": ["r_c"],
+                        "cats_to": [
+                            "y_c"
+                        ],
+                        "cats_from": [
+                            "r_c"
+                        ],
                         "mutual": false,
-                        "values": ["trust", "comfort"],
+                        "values": [
+                            "trust",
+                            "comfort"
+                        ],
                         "amount": -15
                     }
                 ]
@@ -1605,10 +2022,16 @@
                 "weight": 30,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["dislike"],
+                        "values": [
+                            "dislike"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -1621,16 +2044,23 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["y_c"],
-                        "cats_from": ["r_c"],
+                        "cats_to": [
+                            "y_c"
+                        ],
+                        "cats_from": [
+                            "r_c"
+                        ],
                         "mutual": false,
-                        "values": ["trust", "comfort"],
+                        "values": [
+                            "trust",
+                            "comfort"
+                        ],
                         "amount": -15
                     }
                 ]
             },
             {
-                "text":"You growl at r_c not to ask such stupid questions, but {PRONOUN/r_c/subject} {VERB/r_c/don't/doesn't} seem intimidated. Hardly taking notice of your threat, {PRONOUN/r_c/subject} {VERB/r_c/stumble/stumbles} off into the shadows in a panicked daze.",
+                "text": "You growl at r_c not to ask such stupid questions, but {PRONOUN/r_c/subject} {VERB/r_c/don't/doesn't} seem intimidated. Hardly taking notice of your threat, {PRONOUN/r_c/subject} {VERB/r_c/stumble/stumbles} off into the shadows in a panicked daze.",
                 "exp": 0,
                 "weight": 20
             }
@@ -1647,9 +2077,15 @@
                 "weight": 10,
                 "injury": [
                     {
-                        "cats": ["r_c"],
-                        "injuries": ["claw-wound"],
-                        "scars": ["RIGHTBLIND"]
+                        "cats": [
+                            "r_c"
+                        ],
+                        "injuries": [
+                            "claw-wound"
+                        ],
+                        "scars": [
+                            "RIGHTBLIND"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -1676,7 +2112,10 @@
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {
-            "all apprentices": [-1, 0]
+            "all apprentices": [
+                -1,
+                0
+            ]
         },
         "weight": 1,
         "intro_text": "You slip into the dark depths of the forest alone. Training can wait - you have more important matters to attend to tonight. A single pair of eyes flash ahead in the darkness, affixed on you.",
@@ -1688,12 +2127,26 @@
                 "exp": 15,
                 "weight": 1,
                 "new_cat": [
-                    ["meeting", "residence:df", "age:has_kits", "mate:p_l", "clan_status"],
-                    ["clan_status", "meeting", "litter", "residence:df", "parent:0", "backstory:dfkit1", "status:kitten"]
+                    [
+                        "meeting",
+                        "residence:df",
+                        "age:has_kits",
+                        "mate:p_l",
+                        "clan_status"
+                    ],
+                    [
+                        "clan_status",
+                        "meeting",
+                        "litter",
+                        "residence:df",
+                        "parent:0",
+                        "backstory:dfkit1",
+                        "status:kitten"
+                    ]
                 ]
             },
             {
-                "text": "You don't hesitate. You've met this cat before, emotions having blossomed into something more between you as you spent more and more nights within this place. Yet... There is still time. Still time to decide whether or not you should take the leap. Your heart is heavy as you part ways with a final twine of tails - before dispersing into the darkness once again alone.",
+                "text": "You don't hesitate. You've met this cat before, emotions having blossomed into something more between you as you spent more and more nights within this place. Yet... There is still time. Still time to decide whether or not you should take the leap. Your heart is heavy as you part ways with a final twine of tails - before dispersing into the darkness once again, alone.",
                 "exp": 15,
                 "weight": 20
             },
@@ -1707,24 +2160,49 @@
                 "exp": 15,
                 "weight": 1,
                 "new_cat": [
-                    ["meeting", "residence:df", "age:mate", "mate:p_l", "clan_status"],
-                    ["clan_status", "litter", "parent:0", "backstory:dfkit2", "status:kitten"]
+                    [
+                        "meeting",
+                        "residence:df",
+                        "age:mate",
+                        "mate:p_l",
+                        "clan_status"
+                    ],
+                    [
+                        "clan_status",
+                        "litter",
+                        "parent:0",
+                        "backstory:dfkit2",
+                        "status:kitten"
+                    ]
                 ]
             },
             {
-                "text": "Before you is a cat you've loved for some time. Forbidden as it is - you can't help but to confess the depths of your feelings. There is a beat of quiet in the Dark Forest before {PRONOUN/n_c:0/subject} {VERB/n_c:0/surge/surges} forward to bunt heads with a purr. Perhaps it isn't meant to be in the waking world... but in this place it is true and real to both of you.",
+                "text": "Before you is a cat you've loved for some time. Forbidden as it is - you can't help but to confess the depths of your feelings. There is a beat of quiet in the Dark Forest before {PRONOUN/n_c:0/subject} {VERB/n_c:0/surge/surges} forward to bunts heads with a purr. Perhaps it isn't meant to be in the waking world... But in this place it is true and real to both of you.",
                 "exp": 15,
                 "weight": 5,
                 "new_cat": [
-                    ["residence:df", "meeting", "clan_status", "age:mate", "mate:p_l", "backstory:ostracized_warrior"]
+                    [
+                        "residence:df",
+                        "meeting",
+                        "clan_status",
+                        "age:mate",
+                        "mate:p_l",
+                        "backstory:ostracized_warrior"
+                    ]
                 ]
             },
             {
-                "text": "Before you is a cat you've loved for some time. Forbidden as it is - you can't help but to confess the depths of your feelings. There is a beat of quiet in the Dark Forest before {PRONOUN/n_c:0/subject} {VERB/n_c:0/surge/surges} forward to bunt heads with a purr. Perhaps it could never be in the waking world... but in this place it is true and real to both of you whilst you sleep.",
+                "text": "Before you is a cat you've loved for some time. Forbidden as it is - you can't help but to confess the depths of your feelings. There is a beat of quiet in the Dark Forest before {PRONOUN/n_c:0/subject} {VERB/n_c:0/surge/surges} forward to bunts heads with a purr. Perhaps it could never be in the waking world... But in this place it is true and real to both of you whilst you sleep.",
                 "exp": 15,
                 "weight": 5,
                 "new_cat": [
-                    ["meeting", "residence:df", "clan_status", "age:mate", "mate:p_l"]
+                    [
+                        "meeting",
+                        "residence:df",
+                        "clan_status",
+                        "age:mate",
+                        "mate:p_l"
+                    ]
                 ]
             }
         ],
@@ -1735,13 +2213,17 @@
                 "weight": 10
             },
             {
-                "text": "Ambush! You're forced to fight off two cats a once. It's a whirlwind of blood, fur, claws, and teeth, but somehow you escape with your life.",
+                "text": "Ambush! You're forced to fight off two cats at once. It's a whirlwind of blood, fur, claws, and teeth, but somehow you escape with your life.",
                 "exp": 0,
                 "weight": 20,
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["battle_injury"],
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "battle_injury"
+                        ],
                         "scars": []
                     }
                 ],
@@ -1767,8 +2249,15 @@
                     "fierce",
                     "vengeful"
                 ],
-                "stat_skill": ["FIGHTER,1", "GUARDIAN,1", "DARK,1","CLEVER,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "FIGHTER,1",
+                    "GUARDIAN,1",
+                    "DARK,1",
+                    "CLEVER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "Nothing but a trick of the light... There's no one there, even though there should be... ",
@@ -1805,10 +2294,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["respect"],
+                        "values": [
+                            "respect"
+                        ],
                         "amount": 5
                     }
                 ]
@@ -1819,10 +2314,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["respect"],
+                        "values": [
+                            "respect"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -1833,10 +2334,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["y_c"],
-                        "cats_from": ["r_c"],
+                        "cats_to": [
+                            "y_c"
+                        ],
+                        "cats_from": [
+                            "r_c"
+                        ],
                         "mutual": false,
-                        "values": ["trust"],
+                        "values": [
+                            "trust"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -1847,10 +2354,14 @@
                 "text": "When you get the chance to ask, r_c lands a swipe across your face, {PRONOUN/r_c/poss} face neutral. You stumble back to recover as your fur bristles up in surprise. That's going to leave a mark... r_c barks at you to focus and the sparring continues.",
                 "exp": 0,
                 "weight": 20,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["minor_injury"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "minor_injury"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -1865,22 +2376,32 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["r_c"],
-                        "cats_from": ["y_c"],
+                        "cats_to": [
+                            "r_c"
+                        ],
+                        "cats_from": [
+                            "y_c"
+                        ],
                         "mutual": false,
-                        "values": ["dislike"],
+                        "values": [
+                            "dislike"
+                        ],
                         "amount": 5
                     }
                 ]
             },
             {
-                "text": "You don't get the chance to ponder any longer as r_c takes you by surprise due to your inattention. {PRONOUN/r_c/subject/CAP} {VERB/r_c/land/lands} a harsh blow as the two of you roll across the clearing. Before you know it, you're awake in your nest, a Clanmate frantically calling for the healer.",
+                "text": "You don't get the chance to ponder any longer as r_c takes you by surprise due to your inattention. {PRONOUN/r_c/subject/CAP} {VERB/r_c/land/lands} a harsh blow as the two of you roll across the clearing. Before you know it, you're awake in your nest, a Clanmate frantically calling for the medicine cat.",
                 "exp": 0,
                 "weight": 20,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["battle_injury"],
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "battle_injury"
+                        ],
                         "scars": []
                     }
                 ],
@@ -1915,15 +2436,22 @@
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "You jump out of your fur as r_c lands beside you and narrowly avoid attacking {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} {VERB/r_c/appologize/appologizes} profusely and {VERB/r_c/say/says} {PRONOUN/r_c/subject}{VERB/r_c/'ve/'s} been following you from the trees so that {PRONOUN/r_c/subject} could speak to you without watching eyes. r_c does get a laugh out of the accidental scare however, before the two of you spend time talking in the quiet of the forest.",
+                "text": "You jump out of your fur as r_c lands beside you and narrowly avoid attacking {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} {VERB/r_c/apologize/apologizes} profusely and {VERB/r_c/say/says} {PRONOUN/r_c/subject}{VERB/r_c/'ve/'s} been following you from the trees so that {PRONOUN/r_c/subject} could speak to you without watching eyes. r_c does get a laugh out of the accidental scare however, before the two of you spend time talking in the quiet of the forest.",
                 "exp": 10,
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["respect","comfort"],
+                        "values": [
+                            "respect",
+                            "comfort"
+                        ],
                         "amount": 5
                     }
                 ]
@@ -1934,10 +2462,19 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["respect","comfort","trust","platonic_love"],
+                        "values": [
+                            "respect",
+                            "comfort",
+                            "trust",
+                            "platonic_love"
+                        ],
                         "amount": 5
                     }
                 ]
@@ -1950,10 +2487,16 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["dislike"],
+                        "values": [
+                            "dislike"
+                        ],
                         "amount": 5
                     }
                 ]
@@ -1964,17 +2507,27 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["trust"],
+                        "values": [
+                            "trust"
+                        ],
                         "amount": 5
                     }
                 ],
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["mangled_tail"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "mangled_tail"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -1986,15 +2539,21 @@
         ],
         "antag_success_outcomes": [
             {
-                "text": "Courage surges in you. You're not going to be cowed by a mere unsettling feeling! You yowl your challenge into the dark mists of the forest. As your gaze scans up you realize, with embarassment hot on your pelt, that it's just r_c. You remember that {PRONOUN/r_c/subject} wanted to speak to you now that you see {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} clearly {VERB/r_c/aren't/isn't} interested anymore, however, as {PRONOUN/r_c/subject} {VERB/r_c/hold/holds} back mirth at your paranoia...",
+                "text": "Courage surges in you. You're not going to be cowed by a mere unsettling feeling! You yowl your challenge into the dark mists of the forest. As your gaze scans up you realize, with embarrassment hot on your pelt, that it's just r_c. You remember that {PRONOUN/r_c/subject} wanted to speak to you now that you see {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} clearly {VERB/r_c/aren't/isn't} interested anymore, however, as {PRONOUN/r_c/subject} {VERB/r_c/hold/holds} back mirth at your paranoia...",
                 "exp": 10,
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["y_c"],
-                        "cats_from": ["r_c"],
+                        "cats_to": [
+                            "y_c"
+                        ],
+                        "cats_from": [
+                            "r_c"
+                        ],
                         "mutual": false,
-                        "values": ["respect"],
+                        "values": [
+                            "respect"
+                        ],
                         "amount": -5
                     }
                 ]
@@ -2005,10 +2564,17 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["respect","trust"],
+                        "values": [
+                            "respect",
+                            "trust"
+                        ],
                         "amount": 10
                     }
                 ]
@@ -2021,17 +2587,27 @@
                 "weight": 20,
                 "relationships": [
                     {
-                        "cats_to": ["patrol"],
-                        "cats_from": ["patrol"],
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
                         "mutual": true,
-                        "values": ["dislike"],
+                        "values": [
+                            "dislike"
+                        ],
                         "amount": 10
                     }
                 ],
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["r_c"],
-                        "injuries": ["battle_injury"],
+                        "cats": [
+                            "r_c"
+                        ],
+                        "injuries": [
+                            "battle_injury"
+                        ],
                         "scars": []
                     }
                 ],
@@ -2045,11 +2621,17 @@
                 "text": "Your claws unsheathe as you prepare. It's too late - you hear the whistle of wind above you and try to move from your position. You're too slow. Your attacker lands upon you as your yowl is cut off. Your gaze manages to catch on your assailant. r_c's eyes gleam in the low light before {PRONOUN/r_c/poss} fangs meet your throat. In the morning, the Clan is horrified to find your cold body in your nest...",
                 "exp": 0,
                 "weight": 20,
-                "dead cats": ["p_l"],
+                "dead cats": [
+                    "p_l"
+                ],
                 "murder": [
                     {
-                        "murderer": ["r_c"],
-                        "victim": ["y_c"]
+                        "murderer": [
+                            "r_c"
+                        ],
+                        "victim": [
+                            "y_c"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -2093,11 +2675,17 @@
                 "text": "You march down one of the paths, knowing surefire where you're going. The tug of thorns against your pelt a few minutes later makes you realize your mistake all too late--you chose the wrong path. After a couple moments of thrashing, thorns digging into your pelt, you finally free yourself and stumble away. Maybe it's best to hold off on training until you're more confident about your abilities...",
                 "exp": 0,
                 "weight": 20,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["torn_pelt"],
-                        "scars": ["SNAKETWO"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "torn_pelt"
+                        ],
+                        "scars": [
+                            "SNAKETWO"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -2107,7 +2695,7 @@
         ]
     },
     {
-        "patrol_id": "life_df_ant2", 
+        "patrol_id": "life_df_ant2",
         "biome": [
             "Any"
         ],
@@ -2133,8 +2721,12 @@
                 "text": "You flick your tail politely to the figure. {PRONOUN/n_c:0/subject/CAP} {VERB/n_c:0/step/steps} out of the foliage and into your view, inclining {PRONOUN/n_c:0/poss} head to you in return. Before {PRONOUN/n_c:0/subject} {VERB/n_c:0/turn/turns} and {VERB/n_c:0/leap/leaps} back into the bushes-- presumably to go find someone else to observe -- you even catch a small smile on {PRONOUN/n_c:0/poss} face. As it turns out, Dark Forest cats appreciate niceties too!",
                 "exp": 15,
                 "weight": 20,
-	            "new_cat": [
-                    ["meeting", "residence:df", "clan_status"]
+                "new_cat": [
+                    [
+                        "meeting",
+                        "residence:df",
+                        "clan_status"
+                    ]
                 ]
             }
         ],
@@ -2152,9 +2744,15 @@
                 "weight": 20,
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["battle_injury"],
-                        "scars": ["BELLY"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "battle_injury"
+                        ],
+                        "scars": [
+                            "BELLY"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -2198,7 +2796,7 @@
                 "exp": 15,
                 "weight": 20
             },
-           {
+            {
                 "text": "You ignore the brambles that catch at your fur as you push your way into the clearing. Everycat else seems too focused to have noticed you, so you take a moment to rid your pelt of thorns. Once you've finished that, you pad over to the nearest pair of cats sparring and ask for a turn after them.",
                 "exp": 10,
                 "weight": 20
@@ -2209,22 +2807,32 @@
                 "text": "Your paws are barely touching the floor as you fly through the forest. You know you can make it on time if you're fast enough. Maybe you're going a little <i>too</i> fast, because a few seconds later your paws catch on a particularly long root and you tumble to the ground. You hiss and recoil as you try to set your paw down, wondering how you'll explain this to r_m when you wake up.",
                 "exp": 0,
                 "weight": 20,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["sprain"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "sprain"
+                        ]
                     }
                 ]
-             },
-             {
+            },
+            {
                 "text": "You're going as quickly as you can, but it's no use. You didn't look at where you were running and tumbled down a small slope, landing in a patch of brambles. Thorns clutch you in a vice-like grip as you wriggle to free yourself. By the time you emerge, you're in no mood for training.",
                 "exp": 0,
                 "weight": 20,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["torn_pelt"],
-                        "scars": ["NECKBITE"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "torn_pelt"
+                        ],
+                        "scars": [
+                            "NECKBITE"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -2235,7 +2843,7 @@
     },
     {
         "patrol_id": "life_df_sam1",
-        "biome" : [
+        "biome": [
             "any"
         ],
         "season": [
@@ -2264,8 +2872,12 @@
                 "text": "You use your affinity for StarClan cats to your advantage, thinking one step ahead. df_m_n praises your skill afterwards, stating that {PRONOUN/df_m_n/subject} never thought your gift could be used that way.",
                 "exp": 20,
                 "weight": 20,
-                "stat_skill": ["STAR,1"],
-                "can_have_stat": ["p_l"]
+                "stat_skill": [
+                    "STAR,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             },
             {
                 "text": "You quickly run away, already forming a plan. The StarClan cat catches up to you just for you to jump off of a tree and pounce on them. df_m_n nods proudly.",
@@ -2280,8 +2892,17 @@
                 "weight": 20,
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["sore", "claw-wound", "broken bone", "bruises", "scrapes", "torn ear"],
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "sore",
+                            "claw-wound",
+                            "broken bone",
+                            "bruises",
+                            "scrapes",
+                            "torn ear"
+                        ],
                         "no_results": false
                     }
                 ]
@@ -2292,8 +2913,15 @@
                 "weight": 20,
                 "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["sore", "bruises", "scrapes", "torn ear"],
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "sore",
+                            "bruises",
+                            "scrapes",
+                            "torn ear"
+                        ],
                         "no_results": false
                     }
                 ]
@@ -2302,7 +2930,9 @@
                 "text": "You try your best to beat the StarClan cat, but as you're about to get the upper paw, they finish you off. As you succumb to your injuries, you realize you bit off more than you could chew. Your cold body is found covered in wounds the next morning.",
                 "exp": 0,
                 "weight": 10,
-                "dead_cats": ["y_c"],
+                "dead_cats": [
+                    "y_c"
+                ],
                 "history_text": {
                     "reg_death": "m_c died trying to attack a StarClan cat.",
                     "lead_death": "failed to win in a battle against a StarClan cat"
@@ -2321,19 +2951,16 @@
         "types": [
             "df"
         ],
-        "tags": [
-        ],
+        "tags": [],
         "patrol_art": "df_default",
         "min_cats": 1,
         "max_cats": 1,
-        "min_max_status": {
-        },
+        "min_max_status": {},
         "weight": 20,
         "intro_text": "You slink through the shadows, whiskers twitching as you track a particularly interesting scent. df_m_n had claimed that there was no prey in the Dark Forest, but you recognize the smell from your meals in the waking world. Surely it can't hurt to try and find a quick snack?",
         "decline_text": "Your mentor wouldn't be happy with you skipping out on training, or wandering the dark forest alone. Deciding it's not worth the risk, you slink back to where your mentor is waiting for you, ghostly claws sunk into the mud.",
         "chance_of_success": 20,
         "success_outcomes": [
-     
             {
                 "text": "All you can hear is your heartbeat, beating quickly as you open your mouth, drawing the scent of blood and muck over your jaws. The warm prey-scent is tempting, especially in the midst of all of the unsavory smells, but you're careful to stay hidden as you stalk. Your caution pays off as you reach the end of the trail, stopping just in time to avoid a furious blow from a bloodied spirit. Unsheathing your claws, you leap into battle, waking in your nest with your mentor's pleased growl ringing in your ears.",
                 "exp": 30,
@@ -2350,11 +2977,17 @@
                 "text": "Nose to the ground, you track the scent, barely managing to keep track of it among all of the muck and rot. When you finally find a proper scent trail, you forget all caution, and race forward. But, instead of prey, you run straight into a furious spirit, who manages to land a heavy blow, shocking you right into the waking world.",
                 "exp": 0,
                 "weight": 10,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["claw-wound"],
-                        "scars": ["ONE"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "claw-wound"
+                        ],
+                        "scars": [
+                            "ONE"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -2376,24 +3009,21 @@
         "types": [
             "df"
         ],
-        "tags": [
-        ],
+        "tags": [],
         "patrol_art": "df_default",
         "min_cats": 1,
         "max_cats": 1,
-        "min_max_status": {
-        },
+        "min_max_status": {},
         "weight": 20,
         "intro_text": "As you walk towards the training fields, a soft sound in the undergrowth catches your attention. It sounds almost like crackling flames, but this is the Dark Forest. Surely there isn't fire here?",
         "decline_text": "Fire or not, the mere thought of flames devouring the mud covered landscape is enough to send shivers down your spine. Ignoring the sound, you keep walking, fur spiking with fear.",
         "chance_of_success": 30,
         "success_outcomes": [
-{
+            {
                 "text": "It makes you nervous, but your mentor would want you to check it out. Making sure to keep a safe distance, you stare down at the flames, watching for a moment to make sure the fire doesn't get any larger, before you walk back to df_m_n, leaving just as a few other Dark Forest cats go to check out the already sputtering flames.  ",
                 "exp": 20,
                 "weight": 50
             },
-
             {
                 "text": "Even though the idea of a fire in a place like the Dark Forest sets you on edge, it's difficult to deny your curiosity. Following the noise, you soon catch sight of the small, flickering flames, somehow burning, even here. You settle nearby, the normal fear a fire would bring receding somewhat. Once the fire dies down, you go to investigate, waking up in your nest, paws covered in still-warm ash.",
                 "exp": 10,
@@ -2415,11 +3045,17 @@
                 "text": "Interested, you decide to follow the sound, ears pricked. It's much bigger than you expected, and fear quickly takes hold as you see how quickly it's growing. Turning, you race away, desperately trying to escape the flames. You leap from your nest to the smell of burning fur, wondering how you'll even start to explain this.",
                 "exp": 0,
                 "weight": 20,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["burn"],
-                        "scars": ["BURNTAIL"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "burn"
+                        ],
+                        "scars": [
+                            "BURNTAIL"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -2446,13 +3082,11 @@
         "types": [
             "df"
         ],
-        "tags": [
-        ],
+        "tags": [],
         "patrol_art": "df_default",
         "min_cats": 1,
         "max_cats": 1,
-        "min_max_status": {
-        },
+        "min_max_status": {},
         "weight": 20,
         "intro_text": "The Dark Forest has been... quiet, lately. Usually, you can always make out the glinting eyes of df_m_n peering out at you, wreathed in mud and mist, but tonight, the forest is dark.",
         "decline_text": "df_m_n must not be in the mood for training today. Pacing the training grounds, you wait until you eventually wake up.",
@@ -2468,19 +3102,23 @@
                 "exp": 10,
                 "weight": 40
             }
-
-
         ],
         "fail_outcomes": [
             {
-                "text": "You plunge deeper into the mist, but you've only gone a few pawsteps when you start coughing, the sharp scent beginning to overwhelm you. Distantly, you can hear df_m_n's calls, but you're suddenly unsteady on your paws. You wake in your nest, still coughing, wondering if the healer will be able to fix whatever the mist's done to you. ",
+                "text": "You plunge deeper into the mist, but you've only gone a few pawsteps when you start coughing, the sharp scent beginning to overwhelm you. Distantly, you can hear df_m_n's calls, but you're suddenly unsteady on your paws. You wake in your nest, still coughing, wondering if the medicine cat will be able to fix whatever the mist's done to you. ",
                 "exp": 0,
                 "weight": 10,
-                "injury": [ 
+                "injury": [
                     {
-                        "cats": ["y_c"],
-                        "injuries": ["raspy lungs"],
-                        "scars": ["none"]
+                        "cats": [
+                            "y_c"
+                        ],
+                        "injuries": [
+                            "raspy lungs"
+                        ],
+                        "scars": [
+                            "none"
+                        ]
                     }
                 ],
                 "history_text": {
@@ -2499,5 +3137,294 @@
                 "weight": 40
             }
         ]
-    }
-] 
+    },
+    {
+        "patrol_id": "life_df_ant4",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "df"
+        ],
+        "patrol_art": "life_df_og11",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You stalk along the edge of a murky river, examining the water closely. One of your Clanmates told you about a rumour that there were fish in the Dark Forest that could eat a cat whole.",
+        "decline_text": "You cast a doubtful look at the shadowy goop. There's no way anything would be able to live there! You shake your head and bound back into the forest, reminding yourself not to believe everything you hear.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "As you inch closer, your paws slip off of the rocks and you tumble towards the spooky river. There's a muffled splash as you hit the water, and you flail frantically to get out. Suddenly, your claws snag onto a large chunk of driftwood on the bank. With sheer grit and determination, you claw your way out of the frigid water and back to the shore. Your fur sticks to your pelt where the water was gripping you, but hey, at least you made it out!",
+                "exp": 0,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "As you inch closer, your paws slip off of the rocks and you tumble towards the spooky river. You reach out for something to grab onto, but your paws just miss the driftwood on the shore. You give a frustrated hiss as you struggle for the bank. However, the freezing water is soon too much for you to bear, and you sink under.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [ 
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["frostbite"],
+                        "scars": ["FROSTSOCK"]
+                    }
+                ],
+                "history_text": {
+                    "scar": "m_c fell into a river in the Dark Forest and earned a scar after their frostbite bit too hard."
+                    }
+                }
+            ]
+        },
+        {
+            "patrol_id": "life_df_ant5",
+            "biome": [
+                "Any"
+            ],
+            "season": [
+                "Any"
+            ],
+            "types": [
+                "lifegen"
+            ],
+            "tags": [
+                "df"
+            ],
+            "patrol_art": "life_df_og11",
+            "min_cats": 1,
+            "max_cats": 1,
+            "min_max_status": {},
+            "weight": 20,
+            "intro_text": "As you venture out into the Dark Forest, you look curiously at a path you've never been down before. You walk towards it before stopping abruptly, wondering whether exploring is worth the risk.",
+            "decline_text": "You contemplate for a moment more before heading back towards the areas you know. Anything could be lurking under the shadowy trees out there, and it's better to be safe than sorry.",
+            "chance_of_success": 60,
+            "success_outcomes": [
+                {
+                    "text": "You raise your head fearlessly as you begin to confidently walk down the path. It's unusually cold here compared to the rest of the forest, and the fur along your neck begins to prickle. Before long, you come across a quiet, frosty clearing, which, by the smell of it, no one has been to in a while. You take a moment to admire the few poppies that have sprung up and enjoy the reposeful atmosphere from curled up under tree.",
+                    "exp": 0,
+                    "weight": 20
+                },
+                {
+                    "text": "You decide to brave the unknown--after all, what's the worst that can happen? You wander through this new part of the forest, feeling underwhelmed when everything looks similar, before coming to a small field. Here, a surprising number of poppies have sprung up, which is something you've never seen anywhere else in the Dark Forest. Delighted, you grab one, and when you wake up the next morning, it's still tucked behind your ear.",
+                    "exp": 0,
+                    "weight": 20,
+                    "accessory": [
+                        {
+                            "cats": [
+                                "y_c"
+                            ],
+                            "accessory": [
+                                "WHITE POPPY"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "fail_outcomes": [
+                {
+                    "text": "Your fur prickles as you walk down the path. It's unnaturally cold here, and you're not sure if you like it. After walking a few steps, a cold frost nips at your paws, causing you to stumble back in surprise. You try to move forward again, but the cold bites back harder. It seems not even the forest wants you to go this way.",
+                    "exp": 0,
+                    "weight": 20,
+                    "injury": [ 
+                        {
+                            "cats": ["y_c"],
+                            "injuries": ["frostbite"],
+                            "scars": ["FROSTMITT"]
+                        }
+                    ],
+                    "history_text": {
+                        "scar": "m_c received a scar after {PRONOUN/y_c/poss} frostbite took a turn for the worse."
+                        }
+                },
+                {
+                    "text": "The magnetic feeling of wanting to explore is too much to overcome, and you set off down the path without a second thought.You're too focused on admiring how the trees in this part of the forest are taller and fail to notice the rapidly plummeting temperatures around you. You surprise yourself a few minutes later when you see a cloud of breath appear as you exhale. Before you can turn back, the cold is too much to bear. Maybe curiosity <i>did</i> kill the cat.",
+                    "exp": 0,
+                    "weight": 20,
+                    "dead_cats": ["y_c"],
+                    "history_text": {
+                        "death": "m_c died after {PRONOUN/y_c/subject} froze to death in the Dark Forest."
+                        }
+                }
+            ]
+        },
+        {
+            "patrol_id": "life_df_ant6",
+            "biome": [
+                "Any"
+            ],
+            "season": [
+                "Any"
+            ],
+            "types": [
+                "lifegen"
+            ],
+            "tags": [
+                "df",
+                "fellowtrainee"
+            ],
+            "patrol_art": "life_df_og11",
+            "min_cats": 2,
+            "max_cats": 2,
+            "min_max_status": {},
+            "weight": 20,
+            "intro_text": "You race through the Dark Forest, bounding with all the speed you can muster. r_c is just a few paw steps ahead of you, having challenged you to a race to the training grounds and taking off before you could answer. You push yourself harder, wanting to beat r_c there.",
+            "decline_text": "You sigh frustratedly as r_c disappears ahead of you. It seems {PRONOUN/r_c/subject} had too much of a head start, and there's no way you can catch up to {PRONOUN/r_c/object}. You frown and drag your paws as you walk towards the training grounds after {PRONOUN/r_c/object}, not liking the feeling of being defeated... even if the race was unfair.",
+            "chance_of_success": 60,
+            "success_outcomes": [
+                {
+                    "text": "r_c might be ahead right now, but {PRONOUN/r_c/subject} {VERB/r_c/don't/doesn't} know about the shortcut through a tunnel that you found the other day. You scoff as r_c races past it, laughing to yourself as you dart into the tunnel's dark opening. You quickly make your way to the training grounds, smiling smugly as r_c breathlessly enters the clearing a couple minutes later.",
+                    "exp": 10,
+                    "weight": 20
+                },
+                {
+                    "text": "You push forward, dodging spindly trees and hopping murky puddles. By the time you arrive at the training grounds, r_c is still right next to you, and you both collapse to the ground, laughing breathlessly. It's a tie!",
+                    "exp": 10,
+                    "weight": 20,
+                    "relationships": [
+                        {
+                            "cats_to": ["r_c"],
+                            "cats_from": ["p_l"],
+                            "mutual": true,
+                            "values": ["platonic"],
+                            "amount": 8
+                        }
+                    ]
+                }
+            ],
+            "fail_outcomes": [
+                {
+                    "text": "You power ahead, knowing that you can beat r_c if you go just a little faster. After attempting to serve around {PRONOUN/r_c/object}, your paws trip out from under you and you tumble to the floor in a heap of arms and legs. With a frown, you pick yourself up and chase after r_c, but {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} already gone.",
+                    "exp": 0,
+                    "weight": 20
+                }
+            ]
+        },
+        {
+            "patrol_id": "life_df_ant7",
+            "biome": [
+                "Any"
+            ],
+            "season": [
+                "Any"
+            ],
+            "types": [
+                "lifegen"
+            ],
+            "tags": [
+                "df"
+            ],
+            "patrol_art": "life_df_og11",
+            "min_cats": 2,
+            "max_cats": 2,
+            "min_max_status": {},
+            "weight": 20,
+            "intro_text": "You pant heavily as you stalk out of the training grounds, declaring that you need to take a break. After padding down a path for a little bit, your whiskers flick in surprise as you see one of your Clanmates up ahead. r_c doesn't seem to see you, and you crouch down low, unsure of how to proceed.",
+            "decline_text": "You carefully, quietly, slink away from r_c. Everycat has their own reasons for being here, and it's probably better to not pry to closely into anyone else's business.",
+            "chance_of_success": 60,
+            "success_outcomes": [
+                {
+                    "text": "You approach r_c cautiously, and ask {PRONOUN/r_c/object} what {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} doing here. r_c's eyes widen as {PRONOUN/r_c/subject} {VERB/r_c/explain/explains} how {PRONOUN/r_c/subject} thought {PRONOUN/r_c/subject} could use some extra training. You both run through some additional moves, giving each other tips and tricks on how to improve.",
+                    "exp": 10,
+                    "weight": 20,
+                    "convert": ["r_c"],
+                    "faith_effects": [
+                        {
+                            "faith_cat": ["r_c"],
+                            "amount": -1
+                        }
+                    ]
+    
+                },
+                {
+                    "text": "When you approach r_c to ask what {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} doing here, {PRONOUN/r_c/subject} {VERB/r_c/seem/seems} relieved to come across a familiar face. {PRONOUN/r_c/subject/CAP} {VERB/r_c/explain/explains} that {PRONOUN/r_c/subject} {VERB/r_c/were/was} told the training here was effective, but now that {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} here, it's very scary, and {PRONOUN/r_c/subject}'d like to go home. You lead {PRONOUN/r_c/object} to a good napping spot, where {PRONOUN/r_c/subject} can drift off and wake up back in camp.",
+                    "exp": 10,
+                    "weight": 20,
+                    "faith_effects": [
+                        {
+                            "faith_cat": ["r_c"],
+                            "amount": -1
+                        }
+                    ]
+                }
+            ],
+            "fail_outcomes": [
+                {
+                    "text": "As you approach r_c, {PRONOUN/r_c/poss} eyes darken a little. {PRONOUN/r_c/subject/CAP} {VERB/r_c/hiss/hisses} out that {PRONOUN/r_c/poss} reason for being here is none of your business and you should keep to yourself. As {PRONOUN/r_c/subject} {VERB/r_c/slink/slinks} into the forest, you can't help but wonder what that was all about.",
+                    "exp": 0,
+                    "weight": 20
+                },
+                {
+                    "text": "r_c startles as you pad up to {PRONOUN/r_c/object}, the fur along {PRONOUN/r_c/poss} neck and back prickling. Before you can say anything, {PRONOUN/r_c/subject} {VERB/r_c/mutter/mutters} something about training before bolting out into the forest. Your head tilts to the side as you watch {PRONOUN/r_c/object} go, wondering why {PRONOUN/r_c/subject} {VERB/r_c/were/was} acting so strangely.",
+                    "exp": 0,
+                    "weight": 20
+                },
+                {
+                    "text": "You approach r_c curiously, but before you can say or do anything, {PRONOUN/r_c/subject} {VERB/r_c/lunge/lunges} at you, {PRONOUN/r_c/poss} claws catching in your pelt. You jump away from {PRONOUN/r_c/object} and blink in surprise as {PRONOUN/r_c/subject} {VERB/r_c/turn/turns} and {VERB/r_c/race/races} into the forest. You're sure {PRONOUN/r_c/subject} wouldn't have done that if {PRONOUN/r_c/subject} knew who you were, meaning the dimly lit forest must've shrouded your identity.",
+                    "exp": 0,
+                    "weight": 20,
+                    "injury": [
+                        {
+                           "cats": ["y_c"],
+                           "injuries": ["claw_wound"],
+                           "scars": ["NECKBITE"]
+                        }
+                    ],
+                    "history_text": {
+                        "scar": "m_c was scarred after one of {PRONOUN/y_c/poss} Clanmates attacked {PRONOUN/m_c/object} in the Dark Forest."
+                    }
+                }
+            ]
+        },
+        {
+            "patrol_id": "life_df_ant8",
+            "biome": [
+                "Any"
+            ],
+            "season": [
+                "Any"
+            ],
+            "types": [
+                "lifegen"
+            ],
+            "tags": [
+                "df",
+                "shunned"
+            ],
+            "patrol_art": "life_df_og11",
+            "min_cats": 1,
+            "max_cats": 1,
+            "min_max_status": {},
+            "weight": 20,
+            "intro_text": "Your fur raises uncomfortably as you follow a path towards the training grounds. By now, word of you being shunned probably got out, and you're not sure how everyone will react. Tension builds in your muscles as you approach the clearing.",
+            "decline_text": "This was a silly idea, and you turn and run back into the forest. Maybe next moon you'll feel a little braver.",
+            "chance_of_success": 60,
+            "success_outcomes": [
+                {
+                    "text": "There are a few murmurs as you push your way through the underbrush, but they're silenced after df_m_n hisses at everyone to resume training. You pad over to your usual sparring partner and begin a match. After the session is over, df_m_n nods at you, a hint of respect in {PRONOUN/df_m_n/poss} eyes.",
+                    "exp": 10,
+                    "weight": 20
+                },
+                {
+                    "text": "You enter the clearing with your head held high, cats watching you as you make your way over to the cat you usually spar with, rdf_c. Curiosity lights their eyes as they ask you all about what happened, and soon you're retelling the story to a small crowd of cats.",
+                    "exp": 10,
+                    "weight": 20
+                }
+            ],
+            "fail_outcomes": [
+                {
+                    "text": "As you walk into the clearing, you try to ignore the murmurs and pointed stares that follow you. However, as you begin to spar with rdf_c, who keeps looking at you nervously, it's soon too much to handle. You mumble a lame excuse about being tired and flee the scene without a glance back.",
+                    "exp": 0,
+                    "weight": 20
+                }
+            ]
+        }       
+    ]

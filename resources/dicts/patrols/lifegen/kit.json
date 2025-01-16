@@ -57,7 +57,7 @@
         "success_outcomes": [
             {
                 "text": "You abandon the leaf in an instant and start bouncing around the patrol, asking a flurry of questions; How did they catch the prey? Was it difficult? The patrol leader seems amused by your enthusiasm and promises to tell you more about the hunt later.",
-                "exp": 10,
+                "exp": 0,
                 "weight": 20
             }
         ],
@@ -648,7 +648,7 @@
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "A couple of other kits are batting a moss-ball back and forth when it accidentally rolls towards you. You decide to roll it back, but consider taking the opprtunity to attempt to join their game.",
+        "intro_text": "A couple of other kits are batting a moss-ball back and forth when it accidentally rolls towards you. You decide to roll it back, but consider taking the opportunity to attempt to join their game.",
         "decline_text": "You pass the ball back without standing, and they get back to their game without another thought.",
         "chance_of_success": 95,
         "success_outcomes": [
@@ -667,7 +667,7 @@
         ]
     },
     {
-        "patrol_id": "life_shunkit_Guy1", 
+        "patrol_id": "life_shunkit_Guy1",
         "biome": [
             "Any"
         ],
@@ -692,12 +692,12 @@
         "success_outcomes": [
             {
                 "text": "You creep past the guard and scamper off into the clearing, where you hunt all kinds of bugs!",
-                "exp": 10,
+                "exp": 0,
                 "weight": 20
             },
             {
                 "text": "You just barely get past the guard without waking them.",
-                "exp": 5,
+                "exp": 0,
                 "weight": 20
             }
         ],
@@ -708,8 +708,12 @@
                 "weight": 20,
                 "injury": [
                     {
-                        "cats": ["r_c"],
-                        "injuries": ["bruises"]
+                        "cats": [
+                            "r_c"
+                        ],
+                        "injuries": [
+                            "bruises"
+                        ]
                     }
                 ]
             },
@@ -720,5 +724,4 @@
             }
         ]
     }
-
 ]

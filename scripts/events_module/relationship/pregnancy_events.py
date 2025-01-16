@@ -11,7 +11,7 @@ from scripts.cat.genotype import Genotype
 from scripts.cat.names import names, Name
 from scripts.cat_relations.relationship import Relationship
 from scripts.event_class import Single_Event
-from scripts.events_module.condition_events import Condition_Events
+from scripts.events_module.short.condition_events import Condition_Events
 from scripts.game_structure.game_essentials import game
 from scripts.utility import (
     create_new_cat,
@@ -20,7 +20,7 @@ from scripts.utility import (
     get_personality_compatibility,
     BACKSTORIES,
     change_relationship_values,
-    get_alive_status_cats
+    get_alive_status_cats,
 )
 
 
@@ -394,8 +394,9 @@ class Pregnancy_Events:
             pregnant_cat.get_injured("pregnant", severity=severity[0])
             text += choice(Pregnancy_Events.PREGNANT_STRINGS[f"{severity[0]}_severity"])
             text = event_text_adjust(Cat, text, main_cat=pregnant_cat, clan=clan)
-            game.cur_events_list.append(Single_Event(text, "birth_death", pregnant_cat.ID))
-
+            game.cur_events_list.append(
+                Single_Event(text, "birth_death", pregnant_cat.ID)
+            )
 
     @staticmethod
     def handle_one_moon_pregnant(cat: Cat, clan=game.clan):
@@ -666,8 +667,12 @@ class Pregnancy_Events:
             involved_cats.append(RandomAffair.ID)
             RandomChoice = RandomAffair
             event_list.append(choice(events["birth"]["affair"]))
+            if len(cat.mate) > 0:
+                event_list.append(choice(events["birth"]["affair_mated"]))
         else:
             event_list.append(choice(events["birth"]["unmated_parent"]))
+
+        involved_cats += [k.ID for k in kits]
 
         if clan.game_mode != "classic":
             try:
@@ -720,8 +725,8 @@ class Pregnancy_Events:
                             possible_events.remove(event)
 
                 event_list.append(choice(possible_events))
-        if not cat.dead: 
-            #If they are dead in childbirth above, all condition are cleared anyway. 
+        if not cat.dead:
+            # If they are dead in childbirth above, all condition are cleared anyway.
             try:
                 cat.injuries.pop("pregnant")
             except:
@@ -1055,7 +1060,6 @@ class Pregnancy_Events:
 
         #### GENERATE THE KITS ######
         for kit in range(kits_amount):
-            kit = None
             if not cat:
                 # No parents provided, give a blood parent - this is an adoption.
                 if not blood_parent:
@@ -1145,12 +1149,9 @@ class Pregnancy_Events:
 
             # try to give them a permanent condition. 1/90 chance
             # don't delete the game.clan condition, this is needed for a test
-            if (
-                game.clan
-                and not int(
-                    random.random()
-                    * game.config["cat_generation"]["base_permanent_condition"]
-                )
+            if game.clan and not int(
+                random.random()
+                * game.config["cat_generation"]["base_permanent_condition"]
             ):
                 kit.congenital_condition(kit)
                 for condition in kit.permanent_condition:

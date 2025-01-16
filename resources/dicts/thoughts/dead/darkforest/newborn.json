@@ -12,27 +12,27 @@
             "Hears menacing whispers around {PRONOUN/m_c/object}",
             "Is clouded in confusion and fear",
             "Feels trapped in the sticky mud",
-            "Is feeling incredibly lonely", 
+            "Is feeling incredibly lonely",
             "Feels swallowed by the abyss",
             "Feels nothing but fear",
             "Is blindly spitting and hissing",
             "Never got to hear {PRONOUN/m_c/poss} name",
             "Doesn't understand what's going on",
-            "Barely keeps {PRONOUN/m_c/poss} head out of the mud", 
-            "Rolls around in the muck", 
+            "Barely keeps {PRONOUN/m_c/poss} head out of the mud",
+            "Rolls around in the muck",
             "Tries to open {PRONOUN/m_c/poss} eyes, but has {PRONOUN/m_c/poss} face covered in mud",
-            "Snuggles against the shadows", 
+            "Snuggles against the shadows",
             "Is wailing",
-            "Paws at a puddle of goop", 
-            "Finds no comfort in the endless shadows", 
+            "Paws at a puddle of goop",
+            "Finds no comfort in the endless shadows",
             "Toddles around, trying to find {PRONOUN/m_c/poss} parent to nurse",
-            "Sputters and coughs in {PRONOUN/m_c/poss} sleep", 
+            "Sputters and coughs in {PRONOUN/m_c/poss} sleep",
             "Feels so lost all the time"
         ]
     },
     {
         "id": "gen_dead_newborn_to_alive_parent",
-        "thoughts":[
+        "thoughts": [
             "Desperately misses r_c",
             "Misses the fleeting feeling of warmth at r_c's belly",
             "Wishes that r_c could bathe {PRONOUN/m_c/object} again"

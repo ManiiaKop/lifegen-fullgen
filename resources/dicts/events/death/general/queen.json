@@ -1,3 +1,56 @@
 [
-    
+    {
+        "event_id": "lifegen_death_queen_H1",
+        "location": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "weight": 5,
+        "event_text": "m_c was walking around the camp when they saw r_c being attacked by a coyote! m_c, despite {PRONOUN/m_c/poss} lack of training, tries fighting the coyote off r_c and succeeds. However, r_c perished from the attack and m_c is left scarred.",
+        "m_c": {
+            "status": [
+                "queen",
+                "queen's apprentice"
+            ]
+        },
+        "r_c": {
+            "dies": true
+        },
+        "injury": [
+            {
+                "cats": [
+                    "m_c"
+                ],
+                "injuries": [
+                    "bite-wound",
+                    "blood loss",
+                    "torn pelt"
+                ],
+                "scars": [
+                    "NECKBITE",
+                    "LEGBITE",
+                    "HINDLEG"
+                ]
+            }
+        ],
+        "history": [
+            {
+                "cats": [
+                    "m_c"
+                ],
+                "scar": "m_c was scarred while trying to save r_c from a coyote.",
+                "reg_death": "m_c died from {PRONOUN/m_c/poss} wounds after trying to save r_c from a coyote.",
+                "lead_death": "died from {PRONOUN/m_c/poss} wounds given to {PRONOUN/m_c/object} by a coyote"
+            },
+            {
+                "cats": [
+                    "r_c"
+                ],
+                "reg_death": "m_c died from {PRONOUN/m_c/poss} wounds after being attacked by a coyote.",
+                "lead_death": "killed by a coyote"
+            }
+        ]
+    }
 ]

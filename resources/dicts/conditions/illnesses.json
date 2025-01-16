@@ -22,9 +22,7 @@
         "duration": 1,
         "medicine_duration": 1,
         "infectiousness": 0,
-        "risks": [
-
-        ],
+        "risks": [],
         "herbs": [
             "juniper",
             "poppy",
@@ -554,8 +552,7 @@
         "duration": 2,
         "medicine_duration": 1,
         "infectiousness": 0,
-        "risks": [
-        ],
+        "risks": [],
         "herbs": [
             "juniper",
             "thyme",
@@ -755,8 +752,7 @@
         "duration": 5,
         "medicine_duration": 3,
         "infectiousness": 0,
-        "risks": [
-        ],
+        "risks": [],
         "herbs": [
             "juniper",
             "thyme",

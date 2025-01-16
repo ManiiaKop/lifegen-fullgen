@@ -22,7 +22,7 @@
         "success_outcomes": [
             {
                 "text": "You gather everycat's input and propose a plan that takes into account the various perspectives. The Clan agrees on your plan, commending your mediation skills.",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -92,7 +92,7 @@
         "success_outcomes": [
             {
                 "text": "You hear both sides and suggest a compromise that satisfies everycat. Your skills as a mediator are commended by the Clan.",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -199,7 +199,7 @@
         "success_outcomes": [
             {
                 "text": "You decide to listen to your Clanmates' problem, and once they've begun to see each other's point of view, you ask why they chose to come to you, given your situation. They say that they still respect your opinion as a mediator, despite everything, and you can't help but feel some fondness for the both of them.",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -234,7 +234,7 @@
         "success_outcomes": [
             {
                 "text": "As the apprentice stays on the side lines as the Clan shares tongues and freshkill, you pick up a juicy bit of prey to bring over to them. It doesn't take much for them to open up about how worried they are about their training progress. Nor does it take much to soothe their fears and reassure them that they are still learning. By the time the prey is gone the apprentice's spirits are high again as they head to their nest.",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             }
         ],
@@ -279,7 +279,7 @@
             },
             {
                 "text": "You sit to speak with the pair. It is no simple matter to parse through with misunderstandings on both sides. With some effort and careful words, however, you bridge the gap and the two have reached understanding. Over the next few days you watch them work together better than ever with a smile on your face.",
-                "exp": 15,
+                "exp": 10,
                 "weight": 20
             }
         ],

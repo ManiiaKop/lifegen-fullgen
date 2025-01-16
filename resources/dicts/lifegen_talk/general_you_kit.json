@@ -22,7 +22,7 @@
             "you_blind"
         ],
         [
-            "Aw. hello there, little one.",
+            "Aw. Hello there, little one.",
             "How did you get so far away from the nursery? Where's your {PRONOUN/t_p/parent}?",
             "Hm... You need to go back there, {PRONOUN/t_p/subject} will be worrying about you."
         ]
@@ -183,7 +183,7 @@
         ],
         [
             "O- Oh! Oh, you want a story, little one? A... About d_c...",
-            "Okay.. I'm.. I'm sorry if I get a little... teary... but I don't want {PRONOUN/d_c/object} to be forgotten. Let me tell you about one of the most wonderful cats in the Clans..."
+            "Okay.. I'm.. I'm sorry if I get a little... Teary... But I don't want {PRONOUN/d_c/object} to be forgotten. Let me tell you about one of the most wonderful cats in the Clans..."
         ]
     ],
     "assertive_murder4_2": [
@@ -219,7 +219,7 @@
             "Ahem ...",
             "Stop right there, Clan cat! Where do you think you're going? I, leader of the rogues, will stop you! Muahahaha!",
             "Wait, stop! What are you doing? AHHH!!!!",
-            "Too ... powerful ... bleeegh!",
+            "Too ... powerful ... Bleeegh!",
             "[t_c flops over on the ground dramatically. You clamber up onto {PRONOUN/t_c/poss} body and tug on {PRONOUN/t_c/poss} ears, giggling hysterically.]"
         ]
     ],
@@ -453,7 +453,7 @@
             "[When you ask t_c what happened to d_c, and if you'll ever see {PRONOUN/d_c/object} again, something on {PRONOUN/t_c/poss} face breaks.]",
             "Ah ... Ah, kid, I'm so sorry ...",
             "It ain't right, what happened to d_c ...",
-            "But, mark my words, you haven't seen the last of {PRONOUN/d_c/object}. Though, it may be a while. {PRONOUN/d_c/subject} {VERB/d_c/are/is} up in StarClan now, with our warrior ancestors.",
+            "But, mark my words, you haven't seen the last of {PRONOUN/d_c/object}. Though, it may be a while. {PRONOUN/d_c/subject/CAP} {VERB/d_c/are/is} up in StarClan now, with our warrior ancestors.",
             "One day, you'll reunite again. But until then, just know {PRONOUN/d_c/subject} {VERB/d_c/are/is} up there watching over you, helping you grow strong and healthy.",
             "Can you try to grow up strong and healthy for {PRONOUN/d_c/object}?"
         ]
@@ -633,7 +633,7 @@
         [
             "The forest hides many secrets, y_c.",
             "You might think it's all fun and games now, but there's a darkness out there.",
-            "Just... be careful. Not everything is as it seems."
+            "Just... Be careful. Not everything is as it seems."
         ]
     ],
     "you_kitten_brooding": [
@@ -813,7 +813,7 @@
             "Hey, y_c. Watch this.",
             "[t_c places their paw over a small pebble and blows on it. When {PRONOUN/t_c/subject} {VERB/t_c/take/takes} {PRONOUN/t_c/poss} paw off, it's gone!]",
             "[Amazed, you beg t_c to reveal {PRONOUN/t_c/poss} secrets.]",
-            "Just a little slight of paw. Heh."
+            "Just a little sleight of paw. Heh."
         ]
     ],
     "cool_you_kit_5": [
@@ -907,7 +907,7 @@
             "they_blind"
         ],
         [
-            "[One of the warriors brings you back a rabbit's foot from the hunting patrol. You bat it around in the clearing, where t_c is trying to sunbathe]",
+            "[One of the warriors brings you back a rabbit's foot from the hunting patrol. You bat it around in the clearing, where t_c is trying to sunbathe.]",
             "[After one too many times trampling {PRONOUN/t_c/poss} tail, {PRONOUN/t_c/subject} finally {VERB/t_c/snap/snaps}, trapping the rabbit's foot beneath {PRONOUN/t_c/poss} paw.]",
             "Hey, kit. This is a pretty cool toy, huh? Wanna hear a fun story about rabbits' feet?",
             "Once upon a time there was a kit named y_c. No relation to you, of course.",
@@ -974,7 +974,7 @@
             "they_blind"
         ],
         [
-            "[After a small accident while playing, you wait hours for t_c to come and pick you up from the healer den.]",
+            "[After a small accident while playing, you wait hours for t_c to come and pick you up from the medicine den.]",
             "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/don't/doesn't} come until long after dusk has fallen, and even then, {PRONOUN/t_c/subject} {VERB/t_c/seem/seems} distracted.]",
             "Sorry, squirt. Got busy catching up with a bunch of friends.",
             "What happened? Scrape yourself a little? Tch, that's no big deal, don't worry. It'll heal itself up in no time.",
@@ -990,15 +990,15 @@
             "any"
         ],
         [
-            "[After getting caught making mischief in the healer den, r_m chides you in front of your parent, t_c, who nods along sternly.]",
+            "[After getting caught making mischief in the medicine den, r_m chides you in front of your parent, t_c, who nods along sternly.]",
             "Of course, r_m, I completely understand. Needless to say, transgressions like this are not taken lightly in our family.",
             "Come along, y_c. We'll deal with this back at the nursery.",
-            "[As t_c shepherds you away from the healer den, {PRONOUN/t_c/poss} 'disapproving parent' act slowly slips away into giddy excitement.]",
+            "[As t_c shepherds you away from the medicine den, {PRONOUN/t_c/poss} 'disapproving parent' act slowly slips away into giddy excitement.]",
             "Wow, kid! Your first act of rebellion. I was starting to think you didn't have it in you!",
             "What was it that caught your attention?",
             "[You offer up a sprig of pretty yellow flowers that you managed to sneak away from r_m.]",
             "Haha, that's great! We'll make a little rebel out of you, yet.",
-            "Just ... try not to get caught next time. Hehehe."
+            "Just ... Try not to get caught next time. Hehehe."
         ]
     ],
     "cool_you_kit_11_AJ": [
@@ -1311,7 +1311,7 @@
             "You ... called r_c a mange-face because {PRONOUN/r_c/subject} {VERB/t_c/were/was} ignoring you?",
             "*Snrk*",
             "I mean, uh -- That was very bad of you, y_c! Never do it again!",
-            "[t_c leads you away giggling uncontrollably]",
+            "[t_c leads you away giggling uncontrollably.]",
             "Mange-face ... Hehehe!"
         ]
     ],
@@ -1639,7 +1639,7 @@
             "[t_c descends upon you in an instant, frantic.]",
             "y_c! y_c, speak to me! Are you okay?",
             "Oh, StarClan, oh, StarClan, oh StarClan ... r_m! Come quick! Hurry!",
-            "[You're checked over by the healer, who confirms that there's not a scratch on you. t_c breathes a sigh of relief.]",
+            "[You're checked over by the medicine cat, who confirms that there's not a scratch on you. t_c breathes a sigh of relief.]",
             "Thank StarClan ... Still, no more games for you today, y_c.",
             "Let's get you back to the nursery, where you'll be safe."
         ]
@@ -2296,7 +2296,7 @@
         [
             "Huh. I never expected that from you, little kit...",
             "I think we should be friends. What do you say?",
-            "[You give t_c a tenative nod. {PRONOUN/t_c/subject/CAP} {VERB/t_c/smile/smiles}.]",
+            "[You give t_c a tentative nod. {PRONOUN/t_c/subject/CAP} {VERB/t_c/smile/smiles}.]",
             "Great, great..."
         ]
     ],
@@ -2356,7 +2356,7 @@
             "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/lift/lifts} {PRONOUN/t_c/poss} head to the stars and {VERB/t_c/scream/screams} to the Clan.]",
             "We lost a Clanmate! To a kit, nonetheless! And yet we stand here and protect the killer?! EVIL WILL SPREAD!",
             "Make no mistake! {PRONOUN/y_c/subject/CAP} killed once, {PRONOUN/y_c/subject}'ll kill again! And I <b>won't</b> let that happen!",
-            "[r_q tells t_c to go to the healer den and stay there. The Clan will not harm you. t_c shows brief confusion before hissing {PRONOUN/t_c/poss} response.]",
+            "[r_q tells t_c to go to the medicine den and stay there. The Clan will not harm you. t_c shows brief confusion before hissing {PRONOUN/t_c/poss} response.]",
             "Just know, you can't protect {PRONOUN/y_c/object} forever! One day, when you're not there, I will banish this evil myself! I don't care if blood stains my paws. Because at least I'll know StarClan will forgive me. They will never forgive you.",
             "[A chill wracks through your body as you meet t_c's cold and heartless stare. {PRONOUN/t_c/subject/CAP} no longer {VERB/t_c/have/has} the warmth that they used to. Since your actions, you begin to wonder...]",
             "[Maybe that cat you killed wasn't the only one who died that day.]"
@@ -3079,7 +3079,7 @@
         [
             "I've... I've gone so mad that I'm hallucinating y_c...",
             "Oh, StarClan...",
-            "[t_c stumbles away from you and towards the healer den.]"
+            "[t_c stumbles away from you and towards the medicine den.]"
         ]
     ],
     "revived_grievingyou2": [
@@ -3363,7 +3363,7 @@
             "you_blind"
         ],
         [
-            "I still can't believe a little thing like you did... that."
+            "I still can't believe a little thing like you did... That."
         ]
     ],
     "youforgiven_J2": [
@@ -3848,7 +3848,7 @@
             "they_deaf"
         ],
         [
-            "[You feel the presence of another ghost. But they smell slightly different. Slightly more sinister]",
+            "[You feel the presence of another ghost. But they smell slightly different. Slightly more sinister.]",
             "[It must be a Dark Forest cat! You turn to greet the cat, but you're left spinning as the scent dissipates. They must have left.]"
         ]
     ],
@@ -3861,7 +3861,7 @@
             "they_blind"
         ],
         [
-            "[You feel the presence of another ghost. But they smell slightly different. Slightly more sinister]",
+            "[You feel the presence of another ghost. But they smell slightly different. Slightly more sinister.]",
             "[It must be a Dark Forest cat! You turn to greet the cat, but you're left spinning as the scent dissipates. They must have left.]"
         ]
     ],
@@ -3876,7 +3876,7 @@
             "they_deaf"
         ],
         [
-            "[You feel the presence of another ghost. But they smell slightly different. Slightly more sinister]",
+            "[You feel the presence of another ghost. But they smell slightly different. Slightly more sinister.]",
             "[It must be a Dark Forest cat! You turn to greet the cat, but you're left spinning as the scent dissipates. They must have left.]"
         ]
     ],
@@ -3890,7 +3890,7 @@
         ],
         [
             "I wish I could live down here like you, sometimes.",
-            "It is fun to watch the Clan from so closely? I usually have to do so from above.",
+            "Is it fun to watch the Clan from so closely? I usually have to do so from above.",
             "[You can't help but feel a bit sour at t_c's remarks. You don't like being a ghost at all.]",
             "What?"
         ]
@@ -3955,7 +3955,7 @@
             "you_blind"
         ],
         [
-            "Whoa ... this is {PRONOUN/y_c/object}? {PRONOUN/y_c/subject/CAP}{VERB/y_c/'re/'s} so small!",
+            "Whoa ... This is {PRONOUN/y_c/object}? {PRONOUN/y_c/subject/CAP}{VERB/y_c/'re/'s} so small!",
             "Hard to believe I was that small once ...",
             "Hm ..."
         ]
@@ -3969,9 +3969,9 @@
             "you_blind"
         ],
         [
-            "Oh, that's y_c! {PRONOUN/y_c/subject}{VERB/y_c/'ve/'s} grown so quickly.",
+            "Oh, that's y_c! {PRONOUN/y_c/subject/CAP}{VERB/y_c/'ve/'s} grown so quickly.",
             "I remember you being born, you know, even if it wasn't that long ago. It'll be amazing watching you grow to provide for the Clan. I wonder what you'll grow up to do.",
-            "A big strong warrior, a gentle healer, a wise mediator... or you could become a queen like I'm learning to right now.",
+            "A big strong warrior, a gentle medicine cat, a wise mediator... or you could become a queen like I'm learning to right now.",
             "But that doesn't matter right now. Just focus on enjoying your life. That's what I think."
         ]
     ],
@@ -4966,7 +4966,7 @@
         ],
         [
             "t_p says I've gotta go to see r_m 'cause I tripped and now my paw kind of hurts.",
-            "C-could you come with, please? The healer den's big and scary and I really, really don't want to go alone."
+            "C-could you come with, please? The medicine den's big and scary and I really, really don't want to go alone."
         ]
     ],
     "neurotic_kitten_SQ20": [
@@ -5012,7 +5012,7 @@
         ],
         [
             "[t_c is sitting out of the nursery chores today, sick with a stomachache.]",
-            "[You go to visit {PRONOUN/t_c/object} with some herbs you collected from the healer den.]",
+            "[You go to visit {PRONOUN/t_c/object} with some herbs you collected from the medicine den.]",
             "Oughh - Ahh, the pain! The pain! It's -- Ack -- excruciating!",
             "[You drop the herbs at t_c's paws and gently lick {PRONOUN/t_c/poss} ear, asking if there's anything you can to to make {PRONOUN/t_c/object} better.]",
             "... Psst, y_c. I'm not really sick, dummy. I'm just faking to get out of cleaning my nest.",
@@ -5120,7 +5120,7 @@
         [
             "Oh, y_c! Be careful, watch out for the...",
             "[t_c looks around, blinking at the expanse of stars.]",
-            "W-well, for nothing in particular, I guess. Just... be careful."
+            "W-well, for nothing in particular, I guess. Just... Be careful."
         ]
     ],
     "neurotic_sc_to_sc_SQ9": [
@@ -5318,7 +5318,7 @@
             "[You haven't seen t_c for a few hours, so you make another attempt at climbing to the top of the nursery.]",
             "[Like the first time, you're amazed by how far you can see! You can even see past the edge of camp!]",
             "[But just as you're reaching the top, you see a flash of fur below you. t_c scrambles up, grabs you by the scruff, and once again brings you to the ground. Foiled again!]",
-            "I'm sorry, y_c, but that really is dangerous! You're too little to have to spend time in the healer den!"
+            "I'm sorry, y_c, but that really is dangerous! You're too little to have to spend time in the medicine den!"
         ]
     ],
     "neurotic_tokit_SQ7~3": [
@@ -5332,7 +5332,7 @@
         [
             "[t_c sighs as {PRONOUN/t_c/subject} {VERB/t_c/see/sees} you eyeing the nursery roof again. {PRONOUN/t_c/subject/CAP} {VERB/t_c/pad/pads} over and {VERB/t_c/sit/sits} beside you.]",
             "I know it's exciting, y_c, I really do. And I know a lot of cats will let you get into trouble, thinking that you'll never get seriously hurt.",
-            "I... I can't be like that. I've seen cats get badly injured before, and even if there's only a tiny chance of that happening to you, I feel like I have to step in. Does... that make sense?",
+            "I... I can't be like that. I've seen cats get badly injured before, and even if there's only a tiny chance of that happening to you, I feel like I have to step in. Does... That make sense?",
             "[You keep your eyes fixed on the top of the nursery. t_c sighs again.]",
             "...You're just going to try, over and over, if I keep stopping you, right?",
             "Okay. How about this? How about... you can climb it, just this once, with me watching to make sure nothing happens?",
@@ -5441,9 +5441,9 @@
         ],
         [
             "[t_c watches you intently even with the queen's keen gazes. It seems {PRONOUN/t_c/subject} {VERB/t_c/are/is} more wary given that you can't hear dangers and are still learning signs.]",
-            "[When you spot a bird's shadow on the ground, however, you're swift to race under t_c... Before looking up to see a little finch. {PRONOUN/t_c/subject} {VERB/t_c/laugh/laughs} softly, making your whiskers twitch and ears heat in embarrassment.]",
+            "[When you spot a bird's shadow on the ground, however, you're swift to race under t_c... Before looking up to see a little finch. {PRONOUN/t_c/subject/CAP} {VERB/t_c/laugh/laughs} softly, making your whiskers twitch and ears heat in embarrassment.]",
             "[False alarm, but t_c is quite pleased that you've been keeping up with your lessons. {PRONOUN/t_c/subject/CAP} {VERB/t_c/lick/licks} the top of your head as {PRONOUN/t_c/poss} body rumbles with a deep purr.]",
-            "[Eventually, {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} content to leave you to the queens given your level of vigilance]"
+            "[Eventually, {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} content to leave you to the queens given your level of vigilance.]"
         ]
     ],
     "skill_J4": [
@@ -5562,9 +5562,9 @@
             "High paw!",
             "[You bounce up and slap {PRONOUN/t_c/poss} paw, {PRONOUN/t_c/subject} smirks slightly- little did you know you fell right into {PRONOUN/t_c/poss} trap.]",
             "To the side! To the left! Up high again! Now down low!",
-            "[You go to hit {PRONOUN/t_c/poss} paw but {PRONOUN/t_c/subject} snap it back, causing you to miss, you stumble losing balance. t_c's eyes widen in fear as you hit the ground with a soft thud... there's a moment of silence until-]",
+            "[You go to hit {PRONOUN/t_c/poss} paw but {PRONOUN/t_c/subject} snap it back, causing you to miss, you stumble losing balance. t_c's eyes widen in fear as you hit the ground with a soft thud... There's a moment of silence until-]",
             "y_c- wait... NO!",
-            "[You burst into tears and flail on the ground catching the attention of r_q. {PRONOUN/r_q/subject} glance over to see a bundle of fur and t_c standing above, trying to shush your cries. A sharp voice cuts through the camp as r_q storms your way.]",
+            "[You burst into tears and flail on the ground catching the attention of r_q. {PRONOUN/r_q/subject/CAP} {VERB/r_q/glance/glances} over to see a bundle of fur and t_c standing above, trying to shush your cries. A sharp voice cuts through the camp as r_q storms your way.]",
             "NO! r_q I didn't mean it! Hold on! I CAN EXPLAIN!",
             "[r_q cuts {PRONOUN/t_c/object} off and begins chewing out t_c, you giggle, your plan worked!]",
             "Wait a- y_c... Did you- fake it???",
@@ -5615,16 +5615,16 @@
         ],
         [
             "y_c.",
-            "[t_c walks through the healer den, {PRONOUN/t_c/poss} shoulders tense and {PRONOUN/t_c/poss} ears held back slightly. A frown creases {PRONOUN/t_c/poss} features as {PRONOUN/t_c/subject} stares you down. {PRONOUN/t_c/subject} calmly looks back to r_m who's fuming.]",
+            "[t_c walks through the medicine den, {PRONOUN/t_c/poss} shoulders tense and {PRONOUN/t_c/poss} ears held back slightly. A frown creases {PRONOUN/t_c/poss} features as {PRONOUN/t_c/subject} stares you down. {PRONOUN/t_c/subject/CAP} calmly looks back to r_m who's fuming.]",
             "[You flinch as r_m coldly states that you tore up the fresh herbs {PRONOUN/r_m/subject} dug up this morning. t_c looks angry but eventually sighs and apologises, promising to find replacements and promising you'll be dealt with accordingly.]",
             "[You turn to go back to the nursery, t_c cuts in front of you and shakes {PRONOUN/t_c/poss} head.]",
             "No, you caused this mess, you're helping me clean it up. Come on, let's get a move on.",
-            "What were you even doing in the healer den? Looking for honey? y_c, I've told you countless times, that if you want some, all you have to do is ask.",
+            "What were you even doing in the medicine den? Looking for honey? y_c, I've told you countless times, that if you want some, all you have to do is ask.",
             "Look, I get it, kits your age are full of boundless energy and accidents can happen, I'm guessing you didn't mean to tear up those herbs, they're pretty fragile.",
             "['Am I going outside the camp? Is that safe?']",
             "Yes, whilst I'm here, it will be fine, besides, we're not going too far, I know exactly where to look.",
-            "[t_c quickly informs the guards and then picks you up by the scruff, {PRONOUN/t_c/poss} grip firm. As {PRONOUN/t_c/subject} walks, it's silent, not even the birds or trees dared to move. {PRONOUN/t_c/subject} eventually sits you down and loom above you, {PRONOUN/t_c/poss} gaze full of love and worry.]",
-            "Let me be clear, I don't want you in there without supervision, but it's done now. What we can do is learn from it and I trust that you will remember that. The healer den can be a very dangerous place.",
+            "[t_c quickly informs the guards and then picks you up by the scruff, {PRONOUN/t_c/poss} grip firm. As {PRONOUN/t_c/subject} walks, it's silent, not even the birds or trees dared to move. {PRONOUN/t_c/subject/CAP} eventually sits you down and loom above you, {PRONOUN/t_c/poss} gaze full of love and worry.]",
+            "Let me be clear, I don't want you in there without supervision, but it's done now. What we can do is learn from it and I trust that you will remember that. The medicine den can be a very dangerous place.",
             "[{PRONOUN/t_c/subject} nudges you forwards, {PRONOUN/t_c/poss} shadow cast over you to protect you from the sky. The two of you walk in silence once more.]",
             "The last thing I want is for you to get hurt. I love you, you're my kit. It's my job to protect you however, I can't always be there. What if you slipped? What if there was a poisonous herb?",
             "y_c, please be careful. I can't afford to lose you. Oh! There we are, this is the herb we're looking for, here, this is how you extract it.",
@@ -5699,24 +5699,24 @@
         ]
     ],
     "blinddeafnewborn_to_griefingkitten_H1": [
-         [
-             "they_grieving",
-             "any",
-             "newborn",
-             "you_blind",
-             "you_deaf",
-             "they_deaf",
-             "they_blind",
-             "min_platonic_10",
-             "sibling",
-             "adopted_sibling",
-             "half sibling"
-         ],
-         [
-             "[You can feel t_c curl into your nest around you, looking for any sort of comfort.]"
-         ]
-     ],
-     "introspective_crushto_H3": [
+        [
+            "they_grieving",
+            "any",
+            "newborn",
+            "you_blind",
+            "you_deaf",
+            "they_deaf",
+            "they_blind",
+            "min_platonic_10",
+            "sibling",
+            "adopted_sibling",
+            "half sibling"
+        ],
+        [
+            "[You can feel t_c curl into your nest around you, looking for any sort of comfort.]"
+        ]
+    ],
+    "introspective_crushto_H3": [
         [
             "they_introspective",
             "you_kitten",
@@ -5725,12 +5725,12 @@
         [
             "Who do I have a crush on? Don't you know not to ask something so personal?",
             "[t_c sighs exasperatedly and humors your questioning.]",
-            "Well... they're a bit rough around the edges, closed off, no nonsense type of cat, <i>maybe</i> secretly a softy...",
+            "Well... They're a bit rough around the edges, closed off, no nonsense type of cat, <i>maybe</i> secretly a softy...",
             "[t_c voice drifts and {PRONOUN/t_c/subject} go silent for a moment, lost in {PRONOUN/t_c/poss} thoughts.]",
             "Ah, that's enough for today. Any more detail and you'll know who I have a crush on! Ha... Haha..."
         ]
     ],
-   "faith_to_newborn_H1": [
+    "faith_to_newborn_H1": [
         [
             "sc_faith",
             "no_kit",
@@ -5757,25 +5757,25 @@
     ],
     "neurotic_choice_starkit_SQ36": {
         "tags": [
-	"they_neurotic",
-"you_kitten",
-"they_sc",
-"they_adult"
+            "they_neurotic",
+            "you_kitten",
+            "they_sc",
+            "they_adult"
         ],
         "intro": [
             "Ohh... you have to choose what kind of apprentice you want to be soon, right? I almost forgot about how stressful that was.",
-"Um... I don't know if anyone's implied this, but you know you don't have to be a healer just because you can talk to us, right?"
+            "Um... I don't know if anyone's implied this, but you know you don't have to be a medicine cat just because you can talk to us, right?"
         ],
         "intro_choices": {
             "choice1": {
                 "text": "I know!",
                 "next_scene": "know"
             },
- "choice2": {
+            "choice2": {
                 "text": "I feel like I should.",
                 "next_scene": "should"
             },
- "choice3": {
+            "choice3": {
                 "text": "But I want to be!",
                 "next_scene": "want"
             },
@@ -5786,39 +5786,67 @@
         },
         "know": [
             "[Of course you know! You can be whatever you want to be, and either way your StarClan friends will guide your steps.]",
-"Oh, good! I just wanted to say... because if I were you, I'd be thinking...",
-"Ah, never mind. You're doing great, y_c."
+            "Oh, good! I just wanted to say... Because if I were you, I'd be thinking...",
+            "Ah, never mind. You're doing great, y_c."
         ],
         "should": [
-            "[Talking to StarClan is part of a healer's job, right? So... so you'd be good at being a healer, and doesn't that mean you're supposed to be one?]",
-"[Puzzling through all that stuff makes you kind of dizzy.]",
-"[t_c tries to protest, but {PRONOUN/t_c/subject} {VERB/t_c/seem/seems} unsure of what exactly to say. Maybe thinking about it makes {PRONOUN/t_c/object} dizzy, too.]"
+            "[Talking to StarClan is part of a medicine cat's job, right? So... so you'd be good at being a medicine cat, and doesn't that mean you're supposed to be one?]",
+            "[Puzzling through all that stuff makes you kind of dizzy.]",
+            "[t_c tries to protest, but {PRONOUN/t_c/subject} {VERB/t_c/seem/seems} unsure of what exactly to say. Maybe thinking about it makes {PRONOUN/t_c/object} dizzy, too.]"
         ],
         "want": [
-            "[You know that, but you want to be a healer! And if your connection to StarClan can help with that, then that's even better.]",
-"Oh! Okay, in that case... good! You'll make a great healer."
+            "[You know that, but you want to be a medicine cat! And if your connection to StarClan can help with that, then that's even better.]",
+            "Oh! Okay, in that case... good! You'll make a great medicine cat."
         ],
         "huh": [
- 	"[Choices? Implied stuff? Being a healer because you can talk to cats like t_c? You're not really sure what t_c is trying to say.]",
-"Ah... never mind, then. Don't think about it too much!"
+            "[Choices? Implied stuff? Being a medicine cat because you can talk to cats like t_c? You're not really sure what t_c is trying to say.]",
+            "Ah... never mind, then. Don't think about it too much!"
         ]
     },
     "neurotic_tokit_SQ10": [
-     [
-"they_neurotic",
-"you_kitten",
-"they_adult",
-"max_platonic_10",
-"you_assertive",
-"you_upstanding",
-"you_silly",
-"you_unabashed",
-"you_unlawful",
-"they_blind"
-     ],
-     [
-"[You bounce up to t_c, jabbering about everything you've noticed today: a cool bird, and a weird smell, and r_w1 making a funny face when talking to r_w2...]",
-"[You look away from t_c for just a moment, but when you look back, {PRONOUN/t_c/subject}{VERB/t_c/'ve/'s} slipped away.]"
-     ]
+        [
+            "they_neurotic",
+            "you_kitten",
+            "they_adult",
+            "max_platonic_10",
+            "you_assertive",
+            "you_upstanding",
+            "you_silly",
+            "you_unabashed",
+            "you_unlawful",
+            "they_blind"
+        ],
+        [
+            "[You bounce up to t_c, jabbering about everything you've noticed today: a cool bird, and a weird smell, and r_w1 making a funny face when talking to r_w2...]",
+            "[You look away from t_c for just a moment, but when you look back, {PRONOUN/t_c/subject}{VERB/t_c/'ve/'s} slipped away.]"
+        ]
+    ],
+    "unlawful_theypregGuy2": [
+        [
+            "unlawful",
+            "they_pregnant",
+            "you_kitten"
+        ],
+        [
+            "[t_c looks lovingly at {PRONOUN/t_c/poss} belly. {PRONOUN/t_c/subject/CAP}  {VERB/t_c/notice/notices} you and {VERB/t_c/smile/smiles}.]",
+            "I think they'll be cuter than you.",
+            "[t_c cackles when y_p's head snaps up.]"
+        ]
+    ],
+    "neurotic_theypregnant_SQ3": [
+        [
+            "they_neurotic",
+            "they_adult",
+            "they_pregnant",
+            "you_kitten",
+            "min_platonic_20",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "What do you think about having new kits in the nursery with you soon?",
+            "No, I don't know how many there'll be, or what they'll be like. I don't know much of anything, really...",
+            "But I hope you'll be good friends! Or at least, I really hope you'll get along."
+        ]
     ]
 }

@@ -295,7 +295,7 @@
         [
             "[You're sitting staring at a piece of fresh kill, when you feel something nudge into your shoulder, you turn your head to see t_c.]",
             "y_c? ... Are you okay?",
-            "You look a little... out of it. Are you feeling unwell? Do you want me to take you over to the healer den?",
+            "You look a little... out of it. Are you feeling unwell? Do you want me to take you over to the medicine den?",
             "... You heard a cat you have a crush on flirting with someone else? Oh, y_c. I'm so, so sorry.",
             "I think you're a wonderful cat, anyone would be truly lucky to be with you. If they can't see how great you are, that's their loss.",
             "... I could talk to them, give them a poke into your direction, but I don't want to get too involved in your love life, you're plenty capable on your own.",
@@ -321,7 +321,7 @@
             "you_blind"
         ],
         [
-            "[t_c is sitting in the corner of camp, staring off into space]",
+            "[t_c is sitting in the corner of camp, staring off into space.]",
             "...",
             "y_c...? How long have you been there for?",
             "What's wrong? It's nothing. Really.",
@@ -360,7 +360,7 @@
             "... No, no. I'm okay. Just preparing to go to o_cClan. My mentor asked me to go discuss with their mediator about an agreement we've been having about borders.",
             "I know they sent me, because they know I'm completely capable, and o_cClan is mostly willing to cooperate in this manner, but I'm still worried about it.",
             "I just need to do it. I need to go do my job as a mediator, and go solve this problem. Take the sparrow by the wings, so to speak.",
-            "Standing here wearing my paws into the floor is only giving me sore paw pads and a future trip to the healer den. I'll see you later, y_c."
+            "Standing here wearing my paws into the floor is only giving me sore paw pads and a future trip to the medicine den. I'll see you later, y_c."
         ]
     ],
     "introspective_MdtorApp_4": [
@@ -597,7 +597,7 @@
             "Ah, well, that's easy ... Mediation is full of adventure!",
             "I get to explore far and wide, collaborating with mediators across territories, and get to know all sorts of different cats! That's plenty of excitement, no?",
             "You might think you know life-or-death situations on the battlefield, but when you're a mediator, the stakes are even higher. My decisions could be the difference between peace among the Clans, or bloody mayhem.",
-            "It's terrifying ... but thrilling, too!",
+            "It's terrifying ... But thrilling, too!",
             "There's lots of different paths a cat can take in this world, but I know this is the path for me. Can you say the same?"
         ]
     ],
@@ -740,7 +740,7 @@
         ],
         [
             "*Sigh* StarClan, today was hard ...",
-            "Arguments in the nursery, healer den, and warriors' den, all at the same time ... Is there something in the air?",
+            "Arguments in the nursery, medicine den, and warriors' den, all at the same time ... Is there something in the air?",
             "Without you here, y_c, I genuinely don't know what I would've done. Died, probably. Like, actually died.",
             "... Thanks for having my back."
         ]
@@ -769,7 +769,7 @@
         [
             "y_c! Hey!",
             "I was thinking, like... we're kind of the same right?",
-            "Our roles. healer and mediator.",
+            "Our roles. Medicine cat and mediator.",
             "You guys just heal the body, and we heal the brain!",
             "Cool, right?"
         ]
@@ -891,7 +891,7 @@
             "you_blind"
         ],
         [
-            "[t_c lets out a loud sigh, laying down right in the entrance of the healer den. {PRONOUN/t_c/subject/CAP} {VERB/t_c/seem/seems} exhausted.]",
+            "[t_c lets out a loud sigh, laying down right in the entrance of the medicine den. {PRONOUN/t_c/subject/CAP} {VERB/t_c/seem/seems} exhausted.]",
             "H- Hey, y_c? If you wouldn't mind... I think I need something for a headache...",
             "I've been running back and forth throughout the camp all day... it's not been a good day for most of the Clan... and my head is starting to really hurt, but I have to go back out there.",
             "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/give/gives} you a weak smile as you agree, {PRONOUN/t_c/subject} {VERB/t_c/seem/seems} very appreciative.]",
@@ -997,7 +997,7 @@
             "[t_c wanders into the Nursery, a very tired kitten in {PRONOUN/t_c/poss} jaws. {PRONOUN/t_c/subject/CAP} {VERB/t_c/place/places} the kitten at your paws, a concerned look on {PRONOUN/t_c/poss} otherwise kind expression.]",
             "Hey y_c... Today was pretty eventful.",
             "Some of the other kits were pressuring r_k into sneaking out of the camp... I was pretty lucky I found {PRONOUN/r_k/object} just as {PRONOUN/r_k/subject} {VERB/r_k/were/was} going out.",
-            "I feel like we need to talk to the other kits about this... this isn't okay. Oh- if you'd be alright if I tagged along, of course! I just... I feel <i>really</i> bad about this..."
+            "I feel like we need to talk to the other kits about this... This isn't okay. Oh- if you'd be alright if I tagged along, of course! I just... I feel <i>really</i> bad about this..."
         ]
     ],
     "sweet_mediapp_17": [
@@ -1140,7 +1140,7 @@
             "Why was I talking to myself ...?",
             "*Sigh* It's, like, the dumbest thing ever. t_mn gave me this surprise assessment today, and I totally flunked it!",
             "How could I have answered that the fastest way to o_cClan is by swimming up to the border? It doesn't even make any sense!",
-            "I just know that t_mn is still laughing at me ... the whole Clan probably is.",
+            "I just know that t_mn is still laughing at me ... The whole Clan probably is.",
             "[You tell t_c not to be so hard on {PRONOUN/t_c/self}.]",
             "But, if I'm not hard on myself, then how will I ever become stronger?",
             "I refuse to be an embarrassment to my Clan and mentor. I'll pass that assessment next time ... Whatever it takes!"
@@ -1280,7 +1280,7 @@
             "[You ask t_c why {PRONOUN/t_c/subject} chose to become a mediator, given {PRONOUN/t_c/poss} adventurous personality.]",
             "Ah, well, that's easy ... Mediation is full of adventure!",
             "I get to explore far and wide, collaborating with mediators across territories, and get to know all sorts of different cats! That's plenty of excitement, no?",
-            "You might think you know life-or-death situations on the battlefield, but when you're a mediator, the stakes are even higher. My decisions could be the difference between peace among the Clans, or bloody mayhem. It's terrifying ... but thrilling, too!",
+            "You might think you know life-or-death situations on the battlefield, but when you're a mediator, the stakes are even higher. My decisions could be the difference between peace among the Clans, or bloody mayhem. It's terrifying ... But thrilling, too!",
             "There's lots of different paths a cat can take in this world, but I know this is the path for me. Can you say the same?"
         ]
     ],
@@ -1398,7 +1398,7 @@
         ],
         [
             "*Sigh* StarClan, today was hard ...",
-            "Arguments in the nursery, healer den, and warriors' den, all at the same time ... Is there something in the air?",
+            "Arguments in the nursery, medicine den, and warriors' den, all at the same time ... Is there something in the air?",
             "Without you here, y_c, I genuinely don't know what I would've done. Died, probably. Like, actually died.",
             "... Thanks for having my back."
         ]
@@ -1454,7 +1454,7 @@
             "d_n is having this issue with r_c and I don't wanna tell you exactly what it is but I'm stuck between offering them two different solutions...",
             "One of them is a little less conventional but I think it would work better. But they'd probably accept the more conventional one more easily.",
             "[After thinking for a moment, you offer t_c your best advice.]",
-            "Oh... thank you, y_c! I'll try that, then."
+            "Oh... Thank you, y_c! I'll try that, then."
         ]
     ],
     "mediator_to_newborn_H1": [
@@ -1473,43 +1473,83 @@
         ]
     ],
     "neurotic_skillhealer_SQ2": [
-     [
-"they_neurotic",
-"they_healer",
-"they_warrior",
-"they_deputy",
-"they_apprentice",
-"they_mediator",
-"they_mediator_apprentice",
-"they_queen",
-"they_queen's_apprentice",
-"you_medicine_cat",
-"you_medicine_cat_apprentice",
-	"they_blind",
-	"you_blind"
-     ],
-     [
-"Um... sorry, y_c? I don't mean to bother you, but plove_r_c has a bit of a sore throat. Could I have some honey from your stores to give them?",
-"O-of course, you could give it to them, too! I don't mean to overstep.",
-"[There's not much that can go terribly wrong with honey. Since t_c seems to know {PRONOUN/t_c/poss} way around medicine despite not being a healer, you give {PRONOUN/t_c/object} a dollop of honey on a stick and send {PRONOUN/t_c/object} on {PRONOUN/t_c/poss} way.]" 
-     ]
+        [
+            "they_neurotic",
+            "they_healer",
+            "they_warrior",
+            "they_deputy",
+            "they_apprentice",
+            "they_mediator",
+            "they_mediator_apprentice",
+            "they_queen",
+            "they_queen's_apprentice",
+            "you_medicine_cat",
+            "you_medicine_cat_apprentice",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "Um... sorry, y_c? I don't mean to bother you, but plove_r_c has a bit of a sore throat. Could I have some honey from your stores to give them?",
+            "O-of course, you could give it to them, too! I don't mean to overstep.",
+            "[There's not much that can go terribly wrong with honey. Since t_c seems to know {PRONOUN/t_c/poss} way around medicine despite not being a medicine cat, you give {PRONOUN/t_c/object} a dollop of honey on a stick and send {PRONOUN/t_c/object} on {PRONOUN/t_c/poss} way.]"
+        ]
     ],
     "neurotic_fromyourkit_SQ2": [
-     [
-"they_neurotic",
-"they_apprentice",
-"they_mediator_apprentice",
-"they_medicine_cat_apprentice",
-"you_adult",
-"from_your_kit",
-"from_adopted_kit",
-"min_platonic_20",
-"you_deaf",
-"they_deaf"
-     ],
-     [
-"[As t_c follows tm_n_neutral out of camp, {PRONOUN/t_c/subject} {VERB/t_c/look/looks} back at you with a nervous smile.]",
-"[You wave in farewell, wishing {PRONOUN/t_c/subject} could feel your pride. t_c waves back.]"
-     ]
+        [
+            "they_neurotic",
+            "they_apprentice",
+            "they_mediator_apprentice",
+            "they_medicine_cat_apprentice",
+            "you_adult",
+            "from_your_kit",
+            "from_adopted_kit",
+            "min_platonic_20",
+            "you_deaf",
+            "they_deaf"
+        ],
+        [
+            "[As t_c follows tm_n_neutral out of camp, {PRONOUN/t_c/subject} {VERB/t_c/look/looks} back at you with a nervous smile.]",
+            "[You wave in farewell, wishing {PRONOUN/t_c/subject} could feel your pride. t_c waves back.]"
+        ]
+    ],
+    "assertive_elder2": [
+        [
+            "you_warrior",
+            "you_apprentice",
+            "they_medicine_cat",
+            "they_mediator",
+            "they_mediator_apprentice",
+            "they_medicine_cat_apprentice",
+            "they_queen",
+            "they_queen's_apprentice",
+            "assertive",
+            "upstanding",
+            "stable",
+            "neutral",
+            "no_kit"
+        ],
+        [
+            "*Sigh* Can't you see I have important things to do, y_c?",
+            "Go back to catching mice, or whatever it is you warriors do."
+        ]
+    ],
+    "brooding_mediator_AJ": [
+        [
+            "no_kit",
+            "brooding",
+            "they_mediator",
+            "they_mediator_apprentice",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "[You finish a rant to t_c, the mediator, about how you annoyed you are at something that r_c did earlier.]",
+            "... Okay. Have you tried talking to {PRONOUN/r_c/object} about it?",
+            "[... You concede that you have yet to.]",
+            "*Sigh*. Useless. Everycat in this Clan is so terrified of confrontation all of a sudden.",
+            "r_c is never going to change if {PRONOUN/r_c/subject}{VERB/r_c/don't/doesn't} know how you feel, y_c. You need to be direct. No cat has ever been killed by some brutal honesty.",
+            "If you spend your whole life worrying about trodding on the toes of others, you'll never get anything done.",
+            "Now, do you want me to help you work out what you'll say?"
+        ]
     ]
 }

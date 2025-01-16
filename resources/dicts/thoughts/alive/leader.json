@@ -49,6 +49,23 @@
         ]
     },
     {
+        "id": "leader_alive_kits",
+        "thoughts": [
+            "Has recently picked up the scent of mischievous kits in {PRONOUN/m_c/poss} den...",
+            "Is pondering the next mentors for the kits of the Clan",
+            "Thinks about who should mentor new apprentices",
+            "Bats a moss ball back to r_c when it hits {PRONOUN/m_c/object}, chuckling at the wide-eyed kit",
+            "Is looking over the kits, pleased the Clan is thriving",
+            "Is visiting the nursery to check on the kits, the future of the Clan"
+        ],
+        "random_status_constraint": [
+            "kitten"
+        ],
+        "random_living_status": [
+            "living"
+        ]
+    },
+    {
         "id": "leader_alive_apprentices",
         "thoughts": [
             "Is assessing some apprentices",
@@ -83,7 +100,10 @@
             "Listening intently to r_c's latest reports of the Clan's borders",
             "Adjure r_c to visit a neighboring Clan to deliver a message to their leader",
             "Is putting {PRONOUN/m_c/poss} trust in r_c whenever difficult events appear",
-            "In choosing r_c as deputy, hopes {PRONOUN/r_c/subject} will make a fine leader"
+            "In choosing r_c as deputy, hopes {PRONOUN/r_c/subject} will make a fine leader",
+            "Wonders if r_c would ever look at {PRONOUN/r_c/object} as more than a leader",
+            "Insists r_c takes a break sometimes",
+            "Fakes being offended as r_c demands {PRONOUN/m_c/subject} {VERB/m_c/take/takes} a break"
         ],
         "random_status_constraint": [
             "deputy"
@@ -99,7 +119,9 @@
             "Is pondering recent dreams {PRONOUN/m_c/subject} {VERB/m_c/have/has} had... perhaps from the Dark Forest?",
             "Can hear the venomous voice of Dark Forest cats in {PRONOUN/m_c/poss} ears, whispering concerning events yet to come",
             "Was thrusted into a sunless landscape in {PRONOUN/m_c/poss} dreams, luminous, uncanny eyes watching {PRONOUN/m_c/object}",
-            "Was startled awake when a black, smokey creature launched from the shadows and tried to claw at {PRONOUN/m_c/poss} throat"
+            "Was startled awake when a black, smokey creature launched from the shadows and tried to claw at {PRONOUN/m_c/poss} throat",
+            "Wonders if Dark Forest cats are tempering with {PRONOUN/m_c/poss} thoughts",
+            "Blames a recent mistake on the Dark Forest cats"
         ],
         "random_living_status": [
             "darkforest"
@@ -196,7 +218,7 @@
             "Hopes to postpone the retirement of {PRONOUN/m_c/poss} Clanmates",
             "Doesn't understand StarClan's resentment towards {PRONOUN/m_c/object}",
             "Is thinking about taking kits from another Clan",
-            "Encourages warriors to destroy other Clan's herb supplies",
+            "Encourages warriors to destroy other Clans' herb supplies",
             "Demands the warriors train with their claws unsheathed",
             "Considers exiling elders from now on",
             "Thinks about driving out an opposing Clan",
@@ -207,6 +229,21 @@
             "During a skirmish, sinks {PRONOUN/m_c/subject} fangs into a rival cat until {PRONOUN/m_c/subject} {VERB/m_c/taste/tastes} blood",
             "Rakes a claw across a cat's muzzle for debating against {PRONOUN/m_c/object}",
             "Is ready to tear off a cat's coat for c_n"
+        ],
+        "main_trait_constraint": [
+            "bloodthirsty"
+        ]
+    },
+    {
+        "id": "leader_bloodthirsty_goodintentions",
+        "thoughts": [
+            "Insists violence is just another method to future peace",
+            "Doesn't realize {PRONOUN/m_c/poss} stories are scaring the kittens and apprentices",
+            "Instructs mentors to be strict and harsher on their apprentices to make them prepared for any future battles",
+            "Instils a need to train until utter perfection",
+            "Teaches {PRONOUN/m_c/poss} warriors how to fight dirty if absolutely necessary",
+            "Teaches kittens how to fight an older cat... just in case",
+            "Believes aggression is a great political tactic"
         ],
         "main_trait_constraint": [
             "bloodthirsty"
@@ -327,19 +364,19 @@
         "thoughts": [
             "Is giving others {PRONOUN/m_c/poss} insightful knowledge to boost their confidence",
             "Was too busy chatting to even begin a Clan meeting",
-            "Confidently proclaims c_nClan is StarClan's favorite!",
+            "Confidently proclaims c_n is StarClan's favorite!",
             "Is strutting throughout the camp with {PRONOUN/m_c/poss} head held high",
             "Has an trendsetting style",
             "Recounts the day {PRONOUN/m_c/subject} became leader in great detail",
             "Tells r_c that this is the best clan because {PRONOUN/m_c/subject} {VERB/m_c/lead/leads} it",
             "Gossips about the other clan leaders being dull and boring compared to {PRONOUN/m_c/object}",
-            "Declares blue butterflies to be banned from c_nClan territory!",
+            "Declares blue butterflies to be banned from c_n territory!",
             "Was given nine lines from StarClan because {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} the best, obviously!",
             "Languishes dramatically because {PRONOUN/m_c/subject} made a poor decision {PRONOUN/m_c/subject} can't take back",
             "Has a favorite cat and it isn't {PRONOUN/m_c/poss} deputy",
             "Boasts about all sorts of accomplishments that may or may not be embellished a little... Or a lot",
             "Tears up as some kits pretend to be {PRONOUN/m_c/object}",
-            "Knows they're the best leader c_nClan could ever have!",
+            "Knows they're the best leader c_n could ever have!",
             "Boldly states that r_c is no longer {PRONOUN/m_c/poss} a favorite Clanmate of {PRONOUN/m_c/inposs}",
             "Startles theatrically high into the air when spooked by a laughing r_c",
             "Knows they're all that and then some!",
@@ -438,7 +475,13 @@
             "Wonders how many cats would agree to changing the Clan's name...",
             "Is mimicking a stone standing still",
             "Has been staring at {PRONOUN/m_c/poss} Clanmates for awhile without fluttering an eye",
-            "Told {PRONOUN/m_c/poss} Clanmates to get ready for something that appeared in a dream, but doesn't elaborate"
+            "Told {PRONOUN/m_c/poss} Clanmates to get ready for something that appeared in a dream, but doesn't elaborate",
+            "Has crazy ideas no cat is willing to follow",
+            "Complains that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} boreddddddd",
+            "Believes c_n can befriend the cougars if they try hard enough",
+            "Thinks outlandish thoughts out loud",
+            "Insists cats can survive on greenery if they really, really wanted to!",
+            "Insists an apprentice can lead the border patrol just fine"
         ],
         "main_trait_constraint": [
             "strange"
@@ -495,7 +538,7 @@
             "Is a bit iffy about being looked down upon for being soft",
             "Is a another parent to {PRONOUN/m_c/poss} Clanmates",
             "Is overbearing, wanting to be included in everything",
-            "Knows, shamefully, that {PRONOUN/m_c/poss} overprotectiveness prevented work from being done",
+            "Knows, shamefully, that {PRONOUN/m_c/poss} over-protectiveness prevented work from being done",
             "Has prioritized defending more than fighting",
             "Is pondering about promoting kits to apprentices when they're a <i>bit</i> older",
             "Can't help but question if the other Clans' kits are unloved and need to be brought to c_n instead"
@@ -522,6 +565,9 @@
         ],
         "main_trait_constraint": [
             "troublesome"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -545,6 +591,9 @@
         ],
         "main_trait_constraint": [
             "sneaky"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -604,6 +653,9 @@
         ],
         "main_trait_constraint": [
             "oblivious"
+        ],
+        "random_living_status": [
+            "living"
         ]
     },
     {
@@ -632,7 +684,7 @@
             "Shows r_c how to lead with fear and demand respect",
             "Tells r_c to take care of any disloyal warriors",
             "Trusts r_c to continue to keep the Clan in line",
-            "Threatens to drag r_c to the dark forest with {PRONOUN/m_c/object}",
+            "Threatens to drag r_c to the Dark Forest with {PRONOUN/m_c/object}",
             "Is teaching r_c how to rat out spies and dissenting warriors",
             "Shows r_c how to lead by pain and suffering"
         ],

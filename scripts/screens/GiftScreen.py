@@ -6,27 +6,33 @@ import math
 import re
 
 from .Screens import Screens
-from scripts.utility import get_text_box_theme, scale, get_cluster, pronoun_repl
+from scripts.utility import get_text_box_theme, get_cluster, pronoun_repl
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
-from scripts.game_structure.game_essentials import game, screen, screen_x, screen_y, MANAGER
-from scripts.game_structure.ui_elements import UIImageButton, UISpriteButton
+from scripts.game_structure.game_essentials import game
+from scripts.game_structure.ui_elements import UIImageButton, UISpriteButton, UISurfaceImageButton
 from scripts.cat.sprites import sprites
+from ..ui.generate_box import BoxStyles, get_box
+from scripts.utility import get_text_box_theme, ui_scale
+from scripts.game_structure.screen_settings import MANAGER
+from ..ui.generate_button import get_button_dict, ButtonStyles
+from ..ui.get_arrow import get_arrow
+from ..ui.icon import Icon
 
-with open(f"resources/dicts/acc_display.json", "r") as read_file:
+
+with open("resources/dicts/acc_display.json", "r") as read_file:
     ACC_DISPLAY = ujson.loads(read_file.read())
 
-with open(f"resources/dicts/events/lifegen_events/gift.json", "r") as read_file:
+with open("resources/dicts/events/lifegen_events/gift.json", "r") as read_file:
     ACC_REACTION_TXT = ujson.loads(read_file.read())
 
-with open(f"resources/dicts/accessory_preferences.json", "r") as read_file:
+with open("resources/dicts/accessory_preferences.json", "r") as read_file:
     ACC_REACTION = ujson.loads(read_file.read())
 
 class GiftScreen(Screens):
     selected_cat = None
     current_page = 1
-    list_frame = pygame.transform.scale(image_cache.load_image("resources/images/choosing_frame.png").convert_alpha(),
-                                        (1300 / 1600 * screen_x, 452 / 1400 * screen_y))
+    list_frame = None
     apprentice_details = {}
     selected_details = {}
     selected_acc_details = {}
@@ -43,8 +49,6 @@ class GiftScreen(Screens):
         self.select_button = None
         self.gift_again_button = None
         self.back_button = None
-        self.next_cat_button = None
-        self.previous_cat_button = None
         self.mentor_frame = None
         self.reaction_box = None
         self.reaction_icon = None
@@ -52,7 +56,6 @@ class GiftScreen(Screens):
         self.reaction = None
         self.info = None
         self.heading = None
-        self.mentor = None
         self.the_cat = None
         self.next = None
         self.screen_art = None
@@ -104,20 +107,6 @@ class GiftScreen(Screens):
                 self.selected_accessory = None
                 self.cat_sprite = None
 
-            elif event.ui_element == self.next_cat_button:
-                if isinstance(Cat.fetch_cat(self.next_cat), Cat):
-                    game.switches['cat'] = self.next_cat
-                    self.update_cat_list()
-                    self.update_selected_cat()
-                else:
-                    print("invalid next cat", self.next_cat)
-            elif event.ui_element == self.previous_cat_button:
-                if isinstance(Cat.fetch_cat(self.previous_cat), Cat):
-                    game.switches['cat'] = self.previous_cat
-                    self.update_cat_list()
-                    self.update_selected_cat()
-                else:
-                    print("invalid previous cat", self.previous_cat)
             elif event.ui_element == self.next_page_button:
                 if self.stage == "choose gift cat":
                     self.current_page += 1
@@ -169,6 +158,19 @@ class GiftScreen(Screens):
                     self.update_accessory_list()
 
     def screen_switches(self):
+        super().screen_switches()
+
+        list_frame = get_box(BoxStyles.ROUNDED_BOX, (650, 226))
+        self.list_frame = pygame_gui.elements.UIImage(
+            ui_scale(pygame.Rect((75, 360), (650, 226))), list_frame, starting_height=1
+        )
+        self.back_button = UISurfaceImageButton(
+            ui_scale(pygame.Rect((25, 25), (105, 30))),
+            get_arrow(2) + " Back",
+            get_button_dict(ButtonStyles.SQUOVAL, (105, 30)),
+            object_id="@buttonstyles_squoval",
+            manager=MANAGER,
+        )
 
         if self.stage == 'choose gift cat':
             self.the_cat = game.clan.your_cat
@@ -181,12 +183,12 @@ class GiftScreen(Screens):
 
             self.heading = pygame_gui.elements.UITextBox(
                 "Choose who to gift",
-                scale(pygame.Rect((300, 50), (1000, 80))),
+                ui_scale(pygame.Rect((150, 25), (500, 40))),
                 object_id=get_text_box_theme("#text_box_34_horizcenter"),
                 manager=MANAGER
             )
             self.mentor_frame = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((180, 180), (344, 399))),
+                ui_scale(pygame.Rect((90, 90), (172, 200))),
                 pygame.transform.scale(
                 image_cache.load_image(
                 "resources/images/gift_frame.png").convert_alpha(),
@@ -194,7 +196,7 @@ class GiftScreen(Screens):
             )
 
             self.reaction_box = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((560, 490), (500, 150))),
+                ui_scale(pygame.Rect((280, 245), (250, 75))),
                 pygame.transform.scale(
                 image_cache.load_image(
                 "resources/images/gift_reaction_frame.png").convert_alpha(),
@@ -203,7 +205,7 @@ class GiftScreen(Screens):
                 )
             
             self.screen_art = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((1100, 190), (340, 394))),
+                ui_scale(pygame.Rect((550, 95), (170, 197))),
                 pygame.transform.scale(
                 image_cache.load_image(
                 "resources/images/gift_artwork.png").convert_alpha(),
@@ -211,33 +213,30 @@ class GiftScreen(Screens):
                 manager=MANAGER
                 )
 
-            self.back_button = UIImageButton(
-                scale(pygame.Rect((50, 1290), (210, 60))),
-                "",
-                object_id="#back_button"
-            )
             self.select_button = UIImageButton(
-                scale(pygame.Rect((250, 610), (208, 52))),
+                ui_scale(pygame.Rect((125, 305), (104, 26))),
                 "",
                 object_id="#gift_select_button"
             )
             self.gift_again_button = UIImageButton(
-                scale(pygame.Rect((1160, 610), (208, 52))),
+                ui_scale(pygame.Rect((580, 305), (104, 26))),
                 "",
                 object_id="#gift_again_button"
             )
-
-            self.previous_page_button = UIImageButton(
-                scale(pygame.Rect((630, 1155), (68, 68))),
-                "",
-                object_id="#relation_list_previous",
-                manager=MANAGER
+            
+            self.previous_page_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((315, 579), (34, 34))),
+                Icon.ARROW_LEFT,
+                get_button_dict(ButtonStyles.ICON, (34, 34)),
+                object_id="@buttonstyles_icon",
+                starting_height=0,
             )
-            self.next_page_button = UIImageButton(
-                scale(pygame.Rect((902, 1155), (68, 68))),
-                "",
-                object_id="#relation_list_next",
-                manager=MANAGER
+            self.next_page_button = UISurfaceImageButton(
+                ui_scale(pygame.Rect((451, 579), (34, 34))),
+                Icon.ARROW_RIGHT,
+                get_button_dict(ButtonStyles.ICON, (34, 34)),
+                object_id="@buttonstyles_icon",
+                starting_height=0,
             )
 
             self.update_selected_cat()  # Updates the image and details of selected cat
@@ -253,14 +252,14 @@ class GiftScreen(Screens):
 
             self.heading = pygame_gui.elements.UITextBox(
                 "Choose what to gift",
-                scale(pygame.Rect((300, 50), (1000, 80))),
+                ui_scale(pygame.Rect((150, 25), (500, 40))),
                 object_id=get_text_box_theme("#text_box_34_horizcenter"),
                 manager=MANAGER
             )
 
             # Layout Images:
             self.mentor_frame = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((180, 180), (344, 399))),
+                ui_scale(pygame.Rect((90, 90), (172, 200))),
                 pygame.transform.scale(
                 image_cache.load_image(
                 "resources/images/gift_frame.png").convert_alpha(),
@@ -268,55 +267,50 @@ class GiftScreen(Screens):
             )
 
             self.reaction_box = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((560, 490), (500, 150))),
+                ui_scale(pygame.Rect((280, 245), (250, 75))),
                 pygame.transform.scale(
                 image_cache.load_image(
                 "resources/images/gift_reaction_frame.png").convert_alpha(),
                 (569, 399)), manager=MANAGER
             )
             self.screen_art = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((1100, 190), (340, 394))),
+                ui_scale(pygame.Rect((550, 95), (170, 197))),
                 pygame.transform.scale(
                 image_cache.load_image(
                 "resources/images/gift_artwork.png").convert_alpha(),
                 (569, 399)),
                 manager=MANAGER
             )
-            self.back_button = UIImageButton(
-                scale(pygame.Rect((50, 1290), (210, 60))),
-                "",
-                object_id="#back_button"
-            )
             self.select_button = UIImageButton(
-                scale(pygame.Rect((250, 610), (208, 52))),
+                ui_scale(pygame.Rect((125, 305), (104, 26))),
                 "",
                 object_id="#give_gift_button"
             )
             self.gift_again_button = UIImageButton(
-                scale(pygame.Rect((1160, 610), (208, 52))),
+                ui_scale(pygame.Rect((580, 305), (104, 26))),
                 "",
                 object_id="#gift_again_button"
             )
             self.previous_page_button = UIImageButton(
-                scale(pygame.Rect((630, 1155), (68, 68))),
+                ui_scale(pygame.Rect((315, 576), (34, 34))),
                 "",
                 object_id="#relation_list_previous",
                 manager=MANAGER
             )
             self.next_page_button = UIImageButton(
-                scale(pygame.Rect((902, 1155), (68, 68))),
+                ui_scale(pygame.Rect((451, 576), (34, 34))),
                 "",
                 object_id="#relation_list_next",
                 manager=MANAGER
             )
             self.search_bar_image = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((219, 680), (236, 68))),
+                ui_scale(pygame.Rect((109, 340), (118, 34))),
                 pygame.image.load(
                 "resources/images/search_bar.png").convert_alpha(),
                 manager=MANAGER
             )
             self.search_bar = pygame_gui.elements.UITextEntryLine(
-                scale(pygame.Rect((239, 685), (205, 55))),
+                ui_scale(pygame.Rect((120, 342), (102, 27))),
                 object_id="#search_entry_box",
                 initial_text="search",
                 manager=MANAGER
@@ -331,20 +325,20 @@ class GiftScreen(Screens):
 
             self.heading = pygame_gui.elements.UITextBox(
                 "Choose what to gift",
-                scale(pygame.Rect((300, 50), (1000, 80))),
+                ui_scale(pygame.Rect((150, 25), (500, 40))),
                 object_id=get_text_box_theme("#text_box_34_horizcenter"),
                 manager=MANAGER
             )
 
             self.mentor_frame = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((180, 180), (344, 399))),
+                ui_scale(pygame.Rect((90, 90), (172, 200))),
                 pygame.transform.scale(
                 image_cache.load_image(
                 "resources/images/gift_frame.png").convert_alpha(),
                 (569, 399)), manager=MANAGER
             )
             self.screen_art = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((1100, 190), (340, 394))),
+                ui_scale(pygame.Rect((550, 95), (170, 197))),
                 pygame.transform.scale(
                 image_cache.load_image(
                 "resources/images/gift_artwork.png").convert_alpha(),
@@ -356,7 +350,7 @@ class GiftScreen(Screens):
 
             self.reaction_text = pygame_gui.elements.UITextBox(
                 self.adjust_txt(reaction_txt),
-                scale(pygame.Rect((580, 500), (460, 120))),
+                ui_scale(pygame.Rect((290, 250), (230, 60))),
                 object_id=get_text_box_theme("#text_box_22_horizcenter_vertcenter_spacing_95"),
                 manager=MANAGER
             )
@@ -379,7 +373,7 @@ class GiftScreen(Screens):
             result = self.get_reaction_display(pos, neutral, neg)
 
             self.reaction_icon = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((650, 655), (40, 40))),
+                ui_scale(pygame.Rect((325, 327), (20, 20))),
                 pygame.transform.scale(
                 image_cache.load_image(
                 f"resources/images/{icon_png}.png").convert_alpha(),
@@ -387,53 +381,48 @@ class GiftScreen(Screens):
             )
 
             self.reaction = pygame_gui.elements.UITextBox(result,
-                scale(pygame.Rect((700, 650), (460, 50))),
+                ui_scale(pygame.Rect((350, 325), (230, 25))),
                 object_id=get_text_box_theme("#text_box_22_horizleft"),
                 manager=MANAGER
             )
 
             self.reaction_box = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((560, 490), (500, 150))),
+                ui_scale(pygame.Rect((280, 245), (250, 75))),
                 pygame.transform.scale(
                 image_cache.load_image(
                 "resources/images/gift_reaction_frame.png").convert_alpha(),
                 (569, 399)), manager=MANAGER
             )
 
-            self.back_button = UIImageButton(
-                scale(pygame.Rect((50, 1290), (210, 60))),
-                "",
-                object_id="#back_button"
-            )
             self.select_button = UIImageButton(
-                scale(pygame.Rect((250, 610), (208, 52))),
+                ui_scale(pygame.Rect((125, 305), (104, 26))),
                 "",
                 object_id="#give_gift_button"
             )
             self.gift_again_button = UIImageButton(
-                scale(pygame.Rect((1160, 610), (208, 52))),
+                ui_scale(pygame.Rect((580, 305), (104, 26))),
                 "",
                 object_id="#gift_again_button"
             )
             self.previous_page_button = UIImageButton(
-                scale(pygame.Rect((630, 1155), (68, 68))),
+                ui_scale(pygame.Rect((315, 572), (34, 34))),
                 "",
                 object_id="#relation_list_previous", manager=MANAGER
             )
             self.next_page_button = UIImageButton(
-                scale(pygame.Rect((902, 1155), (68, 68))),
+                ui_scale(pygame.Rect((451, 572), (34, 34))),
                 "",
                 object_id="#relation_list_next",
                 manager=MANAGER
             )
             self.search_bar_image = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((219, 680), (236, 68))),
+                ui_scale(pygame.Rect((109, 340), (118, 34))),
                 pygame.image.load(
                 "resources/images/search_bar.png").convert_alpha(),
                 manager=MANAGER
             )
             self.search_bar = pygame_gui.elements.UITextEntryLine(
-                scale(pygame.Rect((239, 685), (205, 55))),
+                ui_scale(pygame.Rect((120, 342), (102, 27))),
                 object_id="#search_entry_box",
                 initial_text="search",
                 manager=MANAGER
@@ -466,6 +455,8 @@ class GiftScreen(Screens):
         for ele in self.accessory_buttons:
             self.accessory_buttons[ele].kill()
         self.accessory_buttons = {}
+
+        self.list_frame.kill()
 
         if self.heading:
             self.heading.kill()
@@ -662,10 +653,10 @@ class GiftScreen(Screens):
         if self.selected_cat:
 
             self.selected_details["selected_image"] = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((565, 195), (270, 270))),
+                ui_scale(pygame.Rect((280, 97), (135, 135))),
                 pygame.transform.scale(
                 self.selected_cat.sprite,
-                (270, 270)), manager=MANAGER
+                (135, 135)), manager=MANAGER
             )
 
             info = self.selected_cat.status + "\n" + \
@@ -678,7 +669,7 @@ class GiftScreen(Screens):
 
             self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(
                 info,
-                scale(pygame.Rect((860, 225),(210, 250))),
+                ui_scale(pygame.Rect((430, 112),(105, 125))),
                 object_id=get_text_box_theme("#text_box_22_horizleft"),
                 manager=MANAGER
             )
@@ -690,7 +681,7 @@ class GiftScreen(Screens):
 
             self.selected_details["cat_name"] = pygame_gui.elements.UITextBox(
                 name,
-                scale(pygame.Rect((300, 130), (1000, 80))),
+                ui_scale(pygame.Rect((150, 65), (500, 40))),
                 object_id=get_text_box_theme("#text_box_34_horizcenter"),
             )
 
@@ -705,35 +696,29 @@ class GiftScreen(Screens):
             cat = game.clan.your_cat
             accessory = self.selected_accessory.tool_tip_text
 
-            dimensions = [300,300]
+            dimensions = [150,150]
 
-            x_pos = 202
-            y_pos = 258
+            x_pos = 101
+            y_pos = 129
 
-            if accessory in cat.pelt.plant_accessories:
-                self.selected_acc_details["selected_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((x_pos, y_pos), (dimensions))), pygame.transform.scale(sprites.sprites['acc_herbs' + accessory + self.cat_sprite], (dimensions)), manager=MANAGER)
-            elif accessory in cat.pelt.wild_accessories:
-                self.selected_acc_details["selected_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((x_pos, y_pos), (dimensions))), pygame.transform.scale(sprites.sprites['acc_wild' + accessory + self.cat_sprite], (dimensions)), manager=MANAGER)
-            elif accessory in cat.pelt.collars:
-                self.selected_acc_details["selected_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((x_pos, y_pos), (dimensions))), pygame.transform.scale(sprites.sprites['collars' + accessory + self.cat_sprite], (dimensions)), manager=MANAGER)
-            elif accessory in cat.pelt.flower_accessories:
-                self.selected_acc_details["selected_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((x_pos, y_pos), (dimensions))), pygame.transform.scale(sprites.sprites['acc_flower' + accessory + self.cat_sprite], (dimensions)), manager=MANAGER)
-            elif accessory in cat.pelt.plant2_accessories:
-                self.selected_acc_details["selected_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((x_pos, y_pos), (dimensions))), pygame.transform.scale(sprites.sprites['acc_plant2' + accessory + self.cat_sprite], (dimensions)), manager=MANAGER)
-            elif accessory in cat.pelt.snake_accessories:
-                self.selected_acc_details["selected_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((x_pos, y_pos), (dimensions))), pygame.transform.scale(sprites.sprites['acc_snake' + accessory + self.cat_sprite], (dimensions)), manager=MANAGER)
-            elif accessory in cat.pelt.smallAnimal_accessories:
-                self.selected_acc_details["selected_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((x_pos, y_pos), (dimensions))), pygame.transform.scale(sprites.sprites['acc_smallAnimal' + accessory + self.cat_sprite], (dimensions)), manager=MANAGER)
-            elif accessory in cat.pelt.deadInsect_accessories:
-                self.selected_acc_details["selected_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((x_pos, y_pos), (dimensions))), pygame.transform.scale(sprites.sprites['acc_deadInsect' + accessory + self.cat_sprite], (dimensions)), manager=MANAGER)
-            elif accessory in cat.pelt.aliveInsect_accessories:
-                self.selected_acc_details["selected_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((x_pos, y_pos), (dimensions))), pygame.transform.scale(sprites.sprites['acc_aliveInsect' + accessory + self.cat_sprite], (dimensions)), manager=MANAGER)
-            elif accessory in cat.pelt.fruit_accessories:
-                self.selected_acc_details["selected_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((x_pos, y_pos), (dimensions))), pygame.transform.scale(sprites.sprites['acc_fruit' + accessory + self.cat_sprite], (dimensions)), manager=MANAGER)
-            elif accessory in cat.pelt.crafted_accessories:
-                self.selected_acc_details["selected_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((x_pos, y_pos), (dimensions))), pygame.transform.scale(sprites.sprites['acc_crafted' + accessory + self.cat_sprite], (dimensions)), manager=MANAGER)
-            elif accessory in cat.pelt.tail2_accessories:
-                self.selected_acc_details["selected_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((x_pos, y_pos), (dimensions))), pygame.transform.scale(sprites.sprites['acc_tail2' + accessory + self.cat_sprite], (dimensions)), manager=MANAGER)
+            accessory_lists = {
+                "acc_herbs": cat.pelt.plant_accessories,
+                "acc_wild": cat.pelt.wild_accessories,
+                "collars": cat.pelt.collars,
+                "acc_flower": cat.pelt.flower_accessories,
+                "acc_plant2": cat.pelt.plant2_accessories,
+                "acc_snake": cat.pelt.snake_accessories,
+                "acc_smallAnimal": cat.pelt.smallAnimal_accessories,
+                "acc_deadInsect": cat.pelt.deadInsect_accessories,
+                "acc_aliveInsect": cat.pelt.aliveInsect_accessories,
+                "acc_fruit": cat.pelt.fruit_accessories,
+                "acc_crafted": cat.pelt.crafted_accessories,
+                "acc_tail2": cat.pelt.tail2_accessories 
+            }
+
+            for acclist in accessory_lists.items():
+                if accessory in acclist[1]:
+                    self.selected_acc_details["selected_image"] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((x_pos, y_pos), (dimensions))), pygame.transform.scale(sprites.sprites[acclist[0] + accessory + self.cat_sprite], (dimensions)), manager=MANAGER)
 
             info = ""
             if self.selected_accessory.tool_tip_text in game.clan.your_cat.pelt.accessories:
@@ -741,7 +726,7 @@ class GiftScreen(Screens):
 
             self.selected_acc_details["selected_info"] = pygame_gui.elements.UITextBox(
                 info,
-                scale(pygame.Rect((195, 105),(300, 80))),
+                ui_scale(pygame.Rect((97, 52),(150, 40))),
                 object_id=get_text_box_theme("#text_box_22_horizcenter_vertcenter_spacing_95"),
                 manager=MANAGER
             )
@@ -753,7 +738,7 @@ class GiftScreen(Screens):
 
             self.selected_acc_details["acc name"] = pygame_gui.elements.UITextBox(
                 accname,
-                scale(pygame.Rect((185, 175), (330, 80))),
+                ui_scale(pygame.Rect((110, 88), (145, 40))),
                 object_id="#text_box_34_horizcenter", manager=MANAGER)
 
 
@@ -789,19 +774,19 @@ class GiftScreen(Screens):
         self.cat_list_buttons = {}
 
         pos_x = 0
-        pos_y = 40
+        pos_y = 20
         i = 0
         for cat in display_cats:
             self.cat_list_buttons["cat" + str(i)] = UISpriteButton(
-                scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))),
+                ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))),
                 cat.sprite,
                 cat_object=cat,
                 manager=MANAGER
             )
-            pos_x += 120
-            if pos_x >= 1100:
+            pos_x += 60
+            if pos_x >= 550:
                 pos_x = 0
-                pos_y += 120
+                pos_y += 60
             i += 1
 
     def update_accessory_list(self):
@@ -833,8 +818,8 @@ class GiftScreen(Screens):
             else:
                 self.cat_sprite = str(cat.pelt.cat_sprites[age])
 
-        pos_x = 20
-        pos_y = 250
+        pos_x = 10
+        pos_y = 125
         i = 0
 
         self.cat_list_buttons = {}
@@ -872,36 +857,36 @@ class GiftScreen(Screens):
             for a, accessory in enumerate(new_inv[start_index:min(end_index, inventory_len)], start = start_index):
                 try:
                     if self.search_bar.get_text() in ["", "search"] or self.search_bar.get_text().lower() in accessory.lower():
-                        self.accessory_buttons[str(i)] = UIImageButton(scale(pygame.Rect((200 + pos_x, 500 + pos_y), (100, 100))), "", tool_tip_text=accessory, object_id="#blank_button")
+                        self.accessory_buttons[str(i)] = UIImageButton(ui_scale(pygame.Rect((100 + pos_x, 250 + pos_y), (50, 50))), "", tool_tip_text=accessory, object_id="#blank_button")
                         if accessory in cat.pelt.plant_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 500 + pos_y), (100, 100))), sprites.sprites['acc_herbs' + accessory + self.cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 250 + pos_y), (50, 50))), sprites.sprites['acc_herbs' + accessory + self.cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.wild_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 500 + pos_y), (100, 100))), sprites.sprites['acc_wild' + accessory + self.cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 250 + pos_y), (50, 50))), sprites.sprites['acc_wild' + accessory + self.cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.collars:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 500 + pos_y), (100, 100))), sprites.sprites['collars' + accessory + self.cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 250 + pos_y), (50, 50))), sprites.sprites['collars' + accessory + self.cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.flower_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 500 + pos_y), (100, 100))), sprites.sprites['acc_flower' + accessory + self.cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 250 + pos_y), (50, 50))), sprites.sprites['acc_flower' + accessory + self.cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.plant2_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 500 + pos_y), (100, 100))), sprites.sprites['acc_plant2' + accessory + self.cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 250 + pos_y), (50, 50))), sprites.sprites['acc_plant2' + accessory + self.cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.snake_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 500 + pos_y), (100, 100))), sprites.sprites['acc_snake' + accessory + self.cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 250 + pos_y), (50, 50))), sprites.sprites['acc_snake' + accessory + self.cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.smallAnimal_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 500 + pos_y), (100, 100))), sprites.sprites['acc_smallAnimal' + accessory + self.cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 250 + pos_y), (50, 50))), sprites.sprites['acc_smallAnimal' + accessory + self.cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.deadInsect_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 500 + pos_y), (100, 100))), sprites.sprites['acc_deadInsect' + accessory + self.cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 250 + pos_y), (50, 50))), sprites.sprites['acc_deadInsect' + accessory + self.cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.aliveInsect_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 500 + pos_y), (100, 100))), sprites.sprites['acc_aliveInsect' + accessory + self.cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 250 + pos_y), (50, 50))), sprites.sprites['acc_aliveInsect' + accessory + self.cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.fruit_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 500 + pos_y), (100, 100))), sprites.sprites['acc_fruit' + accessory + self.cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 250 + pos_y), (50, 50))), sprites.sprites['acc_fruit' + accessory + self.cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.crafted_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 500 + pos_y), (100, 100))), sprites.sprites['acc_crafted' + accessory + self.cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 250 + pos_y), (50, 50))), sprites.sprites['acc_crafted' + accessory + self.cat_sprite], manager=MANAGER)
                         elif accessory in cat.pelt.tail2_accessories:
-                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 500 + pos_y), (100, 100))), sprites.sprites['acc_tail2' + accessory + self.cat_sprite], manager=MANAGER)
+                            self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100 + pos_x, 250 + pos_y), (50, 50))), sprites.sprites['acc_tail2' + accessory + self.cat_sprite], manager=MANAGER)
                         self.accessories_list.append(accessory)
-                        pos_x += 120
-                        if pos_x >= 1200:
+                        pos_x += 60
+                        if pos_x >= 600:
                             pos_x = 0
-                            pos_y += 120
+                            pos_y += 60
                         i += 1
                 except:
                     continue
@@ -916,8 +901,7 @@ class GiftScreen(Screens):
         return valid_cats
 
     def on_use(self):
-        # Due to a bug in pygame, any image with buttons over it must be blited
-        screen.blit(self.list_frame, (150 / 1600 * screen_x, 720 / 1400 * screen_y))
+        super().on_use()
         if self.search_bar and self.stage == "choose gift":
             if self.search_bar.is_focused and self.search_bar.get_text() == "search":
                 self.search_bar.set_text("")
