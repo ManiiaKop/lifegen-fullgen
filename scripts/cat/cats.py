@@ -237,24 +237,9 @@ class Cat:
             else:
                 second_parent = None
                 try:
-                    if parent2 is None:
-                        print("parent2 is none-- making a new guy")
-                        second_parent = create_new_cat(
-                            Cat,
-                            loner=True,
-                            status="loner",
-                            alive=True,
-                            thought=f"Hopes {Cat.all_cats[parent1].name} is doing okay",
-                            age=Cat.all_cats[parent1].moons,
-                            outside=True)[0]
-                        parent2 = second_parent.ID
-                        print("Second Parent:", second_parent.name, second_parent)
                     self.genotype.KitGenerator(Cat.all_cats[parent1].genotype, Cat.all_cats.get(parent2, extrapar))
-                    if second_parent:
-                        game.clan.remove_cat(second_parent.ID)
                 except Exception as e:
-                    print("KitGenerator error")
-                    print(e)
+                    print("KitGenerator:", e)
                     self.genotype.Generator()
 
             if(randint(1, game.config['genetics_config']['intersex']) == 1):
@@ -3290,7 +3275,7 @@ class Cat:
             return False
 
         # Inheritance check
-        if self.is_related(other_cat, game.clan.clan_settings["first cousin mates"]):
+        if self.is_related(other_cat, first_cousin_mates):
             return False
 
 
