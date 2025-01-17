@@ -228,7 +228,7 @@ def get_random_moon_cat(
         if mentor_app_modifier:
             if (
                 main_cat.status
-                in ["apprentice", "mediator apprentice", "medicine cat apprentice", "queen's apprentice"]
+                in ["apprentice", "mediator apprentice", "healer apprentice", "queen's apprentice"]
                 and main_cat.mentor
                 and not int(random() * 3)
             ):
@@ -754,8 +754,8 @@ def create_new_cat_block(
             parent1=parent1.ID if parent1 else None,
             parent2=parent2.ID if parent2 else None,
             extrapar=generated_parents[2] if not parent2 and generated_parents else None,
-            is_parent= "age:has_kits" in attribute_list
-            adoptive_parents=adoptive_parents if adoptive_parents else None,
+            is_parent= "age:has_kits" in attribute_list,
+            adoptive_parents=adoptive_parents if adoptive_parents else None
         )
 
         # NEXT
@@ -892,7 +892,7 @@ def create_new_cat(
         parent1: str = None,
         parent2: str = None,
         extrapar: Genotype = None,
-        adoptive_parent: list = None,
+        adoptive_parents: list = None,
         is_parent: bool = False
 ) -> list:
     """

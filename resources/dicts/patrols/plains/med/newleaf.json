@@ -17,7 +17,7 @@
         "min_cats": 2,
         "max_cats": 6,
         "min_max_status": {
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -168,7 +168,7 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -182,7 +182,7 @@
             ]
         },
         "weight": 20,
-        "intro_text": "p_l heads out, leading a patrol of medicine cats to go find the buds of newleaf.",
+        "intro_text": "p_l heads out, leading a patrol of healers to go find the buds of newleaf.",
         "decline_text": "... And they're called back almost immediately, as one of the elders has started hacking something up.",
         "chance_of_success": 60,
         "success_outcomes": [
@@ -390,11 +390,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -850,11 +850,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -873,7 +873,7 @@
         "chance_of_success": 70,
         "success_outcomes": [
             {
-                "text": "Sure enough, all along the trailing branches of the blackberry brambles, new leaves poke towards the sun. p_l carefully plucks them, not taking too many - {PRONOUN/p_l/subject} {VERB/p_l/want/wants} this plant to supply the Clan in future moons, too. app1 hasn't considered plant pruning as a medicine cat skill before now, and they have a good conversation about why it's important.",
+                "text": "Sure enough, all along the trailing branches of the blackberry brambles, new leaves poke towards the sun. p_l carefully plucks them, not taking too many - {PRONOUN/p_l/subject} {VERB/p_l/want/wants} this plant to supply the Clan in future moons, too. app1 hasn't considered plant pruning as a healer skill before now, and they have a good conversation about why it's important.",
                 "exp": 20,
                 "weight": 20,
                 "herbs": [
@@ -1065,7 +1065,7 @@
         "chance_of_success": 30,
         "success_outcomes": [
             {
-                "text": "Sure enough, all along the trailing branches of the blackberry brambles, new leaves are poking towards the sun. p_l carefully plucks them, not taking too many - {PRONOUN/p_l/subject} {VERB/p_l/want/wants} this plant to supply the Clan in future moons too. The rest of the patrol listens to {PRONOUN/p_l/object} describe how a medicine cat must predict the Clan's future need, respect for p_l growing.",
+                "text": "Sure enough, all along the trailing branches of the blackberry brambles, new leaves are poking towards the sun. p_l carefully plucks them, not taking too many - {PRONOUN/p_l/subject} {VERB/p_l/want/wants} this plant to supply the Clan in future moons too. The rest of the patrol listens to {PRONOUN/p_l/object} describe how a healer must predict the Clan's future need, respect for p_l growing.",
                 "exp": 10,
                 "weight": 20,
                 "herbs": [
@@ -1310,11 +1310,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -1562,7 +1562,7 @@
                 ]
             },
             {
-                "text": "Luck is on p_l's side today - the burdock is both plentiful and easy to find. As {PRONOUN/p_l/subject} {VERB/p_l/lay/lays} the fat roots out in a towering but neat pile in the herb stores, p_l's entire body thrums with a contented purr, and {PRONOUN/p_l/poss} Clanmates smile, happy to help out their hardworking medicine cat.",
+                "text": "Luck is on p_l's side today - the burdock is both plentiful and easy to find. As {PRONOUN/p_l/subject} {VERB/p_l/lay/lays} the fat roots out in a towering but neat pile in the herb stores, p_l's entire body thrums with a contented purr, and {PRONOUN/p_l/poss} Clanmates smile, happy to help out their hardworking healer.",
                 "exp": 10,
                 "weight": 5,
                 "herbs": [
@@ -1698,7 +1698,7 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -1773,11 +1773,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -1796,7 +1796,7 @@
         "chance_of_success": 40,
         "success_outcomes": [
             {
-                "text": "As they walk, p_l teaches app1 about how crucial catmint is for coughs, and how, although its scent can be very alluring, part of the responsibility of being a medicine cat is avoiding becoming caught in its haze. The medicine cats carefully pick out catmint from its known hiding places, carrying it back to camp where it will be stored away from excitable warriors.",
+                "text": "As they walk, p_l teaches app1 about how crucial catmint is for coughs, and how, although its scent can be very alluring, part of the responsibility of being a healer is avoiding becoming caught in its haze. The healers carefully pick out catmint from its known hiding places, carrying it back to camp where it will be stored away from excitable warriors.",
                 "exp": 30,
                 "weight": 20,
                 "herbs": [
@@ -1972,7 +1972,7 @@
         "min_cats": 3,
         "max_cats": 6,
         "min_max_status": {
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -1991,7 +1991,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "The warriors keep their heads, with the more experienced of p_l's helpers making themselves useful by keeping those that are young or more impulsive focused on their task. The medicine cat and {PRONOUN/p_l/poss} team carefully pick out catmint from its known hiding places, carrying it back to camp where it will be put to use healing the Clan.",
+                "text": "The warriors keep their heads, with the more experienced of p_l's helpers making themselves useful by keeping those that are young or more impulsive focused on their task. The healer and {PRONOUN/p_l/poss} team carefully pick out catmint from its known hiding places, carrying it back to camp where it will be put to use healing the Clan.",
                 "exp": 10,
                 "weight": 20,
                 "herbs": [
@@ -2167,7 +2167,7 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -2243,11 +2243,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -2443,7 +2443,7 @@
         "min_cats": 3,
         "max_cats": 6,
         "min_max_status": {
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -2499,7 +2499,7 @@
                 ]
             },
             {
-                "text": "It always amazes p_l how quickly the goldenrod bushes sprout back up after leaf-bare, and they collect more goldenrod than they were anticipating, loading up every cat until everyone agrees the medicine cat den can't possibly fit any more.",
+                "text": "It always amazes p_l how quickly the goldenrod bushes sprout back up after leaf-bare, and they collect more goldenrod than they were anticipating, loading up every cat until everyone agrees the healer den can't possibly fit any more.",
                 "exp": 10,
                 "weight": 5,
                 "herbs": [
@@ -2707,11 +2707,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -3095,11 +3095,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -3194,7 +3194,7 @@
                 ]
             },
             {
-                "text": "It takes all of s_c's considerable talent for such things to hunt down the lungwort within their borders, the medicine cats visiting each likely nook and cranny in a carefully planned search pattern until, finally, those telltale speckled leaves are found.",
+                "text": "It takes all of s_c's considerable talent for such things to hunt down the lungwort within their borders, the healers visiting each likely nook and cranny in a carefully planned search pattern until, finally, those telltale speckled leaves are found.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": [
@@ -3236,7 +3236,7 @@
                 ]
             },
             {
-                "text": "Night falls, and still s_c insists they keep going. Lungwort is the only reliable cure for yellowcough, and they just can't let c_n go without. Exhausted, but determined, the medicine cats persist patiently until they finally find the precious, speckled leaves.",
+                "text": "Night falls, and still s_c insists they keep going. Lungwort is the only reliable cure for yellowcough, and they just can't let c_n go without. Exhausted, but determined, the healers persist patiently until they finally find the precious, speckled leaves.",
                 "exp": 20,
                 "weight": 20,
                 "stat_trait": [
@@ -3335,7 +3335,7 @@
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -3400,7 +3400,7 @@
                 ]
             },
             {
-                "text": "It takes all of s_c's considerable talent for such things to hunt down the lungwort within their borders. The medicine cat visits each likely nook and cranny in a carefully planned search pattern until, finally, those telltale speckled leaves are found.",
+                "text": "It takes all of s_c's considerable talent for such things to hunt down the lungwort within their borders. The healer visits each likely nook and cranny in a carefully planned search pattern until, finally, those telltale speckled leaves are found.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": [
@@ -3427,7 +3427,7 @@
                 ]
             },
             {
-                "text": "Night falls, and still s_c insists on continuing - {PRONOUN/s_c/subject} just can't let c_n go without. Exhausted, but determined, the medicine cat persists patiently until {PRONOUN/s_c/subject} {VERB/s_c/find/finds} the precious, speckled leaves.",
+                "text": "Night falls, and still s_c insists on continuing - {PRONOUN/s_c/subject} just can't let c_n go without. Exhausted, but determined, the healer persists patiently until {PRONOUN/s_c/subject} {VERB/s_c/find/finds} the precious, speckled leaves.",
                 "exp": 20,
                 "weight": 20,
                 "stat_trait": [
@@ -3507,7 +3507,7 @@
         "min_cats": 2,
         "max_cats": 3,
         "min_max_status": {
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -3572,7 +3572,7 @@
                 ]
             },
             {
-                "text": "It takes all of s_c's considerable talent for such things to hunt down the lungwort within their borders. The medicine cat visits each likely nook and cranny in a carefully planned search pattern until, finally, those telltale speckled leaves are found.",
+                "text": "It takes all of s_c's considerable talent for such things to hunt down the lungwort within their borders. The healer visits each likely nook and cranny in a carefully planned search pattern until, finally, those telltale speckled leaves are found.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": [
@@ -3602,7 +3602,7 @@
                 ]
             },
             {
-                "text": "Night falls, but still s_c continues - {PRONOUN/s_c/subject} just can't let c_n go without. Exhausted, but determined, the medicine cat persists until {PRONOUN/s_c/subject} {VERB/s_c/find/finds} the precious, speckled leaves.",
+                "text": "Night falls, but still s_c continues - {PRONOUN/s_c/subject} just can't let c_n go without. Exhausted, but determined, the healer persists until {PRONOUN/s_c/subject} {VERB/s_c/find/finds} the precious, speckled leaves.",
                 "exp": 20,
                 "weight": 20,
                 "stat_trait": [
@@ -3788,11 +3788,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -3811,7 +3811,7 @@
         "chance_of_success": 70,
         "success_outcomes": [
             {
-                "text": "The soft, rose-like scent of the mallow bushes drifts around p_l and app1 as they work. They snip off clumps of large, fuzzy, three-nubbed leaves, and the occasional pink flower, to be taken back to camp. Bees hum through the air, not trying to bother the medicine cats, and p_l points out where {PRONOUN/p_l/subject} {VERB/p_l/think/thinks} the hive might be to app1.",
+                "text": "The soft, rose-like scent of the mallow bushes drifts around p_l and app1 as they work. They snip off clumps of large, fuzzy, three-nubbed leaves, and the occasional pink flower, to be taken back to camp. Bees hum through the air, not trying to bother the healers, and p_l points out where {PRONOUN/p_l/subject} {VERB/p_l/think/thinks} the hive might be to app1.",
                 "exp": 20,
                 "weight": 20,
                 "herbs": [
@@ -4176,7 +4176,7 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -4203,7 +4203,7 @@
                 ]
             },
             {
-                "text": "It stops infection, bleeding, <i>and</i> sore joints - why would any medicine cat ever want to risk running out of it? p_l brings back as much marigold as {PRONOUN/p_l/subject} can stuff into {PRONOUN/p_l/poss} mouth.",
+                "text": "It stops infection, bleeding, <i>and</i> sore joints - why would any healer ever want to risk running out of it? p_l brings back as much marigold as {PRONOUN/p_l/subject} can stuff into {PRONOUN/p_l/poss} mouth.",
                 "exp": 10,
                 "weight": 5,
                 "herbs": [
@@ -4252,11 +4252,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -4314,7 +4314,7 @@
                 ]
             },
             {
-                "text": "It stops infection, bleeding, <i>and</i> sore joints - why would any medicine cat ever want to risk running out of it? p_l brings back as much marigold as {PRONOUN/p_l/subject} can stuff into {PRONOUN/p_l/poss} mouth, and app1 actually drops some of the leaves {PRONOUN/app1/subject} {VERB/app1/carry/carries} on the way back to camp, a little over-ambitious with how much {PRONOUN/app1/subject} can carry.",
+                "text": "It stops infection, bleeding, <i>and</i> sore joints - why would any healer ever want to risk running out of it? p_l brings back as much marigold as {PRONOUN/p_l/subject} can stuff into {PRONOUN/p_l/poss} mouth, and app1 actually drops some of the leaves {PRONOUN/app1/subject} {VERB/app1/carry/carries} on the way back to camp, a little over-ambitious with how much {PRONOUN/app1/subject} can carry.",
                 "exp": 20,
                 "weight": 5,
                 "herbs": [
@@ -4452,7 +4452,7 @@
         "min_cats": 3,
         "max_cats": 6,
         "min_max_status": {
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -4471,7 +4471,7 @@
         "chance_of_success": 30,
         "success_outcomes": [
             {
-                "text": "The low-growing marigold creeps across the ground, recognizable by its strange leaves that look like they're pretending to be small fern fronds from a distance. The non-medicine cats wander straight past them, and have to be gently called back by p_l to harvest them.",
+                "text": "The low-growing marigold creeps across the ground, recognizable by its strange leaves that look like they're pretending to be small fern fronds from a distance. The non-healers wander straight past them, and have to be gently called back by p_l to harvest them.",
                 "exp": 10,
                 "weight": 20,
                 "herbs": [
@@ -4508,7 +4508,7 @@
                 ]
             },
             {
-                "text": "It stops infection, bleeding, <i>and</i> sore joints - why would any medicine cat ever want to risk running out of it? p_l brings back as much marigold as {PRONOUN/p_l/subject} can stuff into {PRONOUN/p_l/poss} mouth. The warriors helping {PRONOUN/p_l/object} don't understand the importance, but obligingly follow p_l's example.",
+                "text": "It stops infection, bleeding, <i>and</i> sore joints - why would any healer ever want to risk running out of it? p_l brings back as much marigold as {PRONOUN/p_l/subject} can stuff into {PRONOUN/p_l/poss} mouth. The warriors helping {PRONOUN/p_l/object} don't understand the importance, but obligingly follow p_l's example.",
                 "exp": 10,
                 "weight": 5,
                 "herbs": [
@@ -4546,7 +4546,7 @@
                 ]
             },
             {
-                "text": "s_c finds a patch of marigold, harvests its best leaves, and pads home, unaware of how much of {PRONOUN/s_c/poss} success rests on {PRONOUN/s_c/poss} talent for herb gathering. The patrol, too, is unaware, but it certainly bolsters their faith in their medicine cat to see {PRONOUN/s_c/object} succeed so effortlessly.",
+                "text": "s_c finds a patch of marigold, harvests its best leaves, and pads home, unaware of how much of {PRONOUN/s_c/poss} success rests on {PRONOUN/s_c/poss} talent for herb gathering. The patrol, too, is unaware, but it certainly bolsters their faith in their healer to see {PRONOUN/s_c/object} succeed so effortlessly.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": [
@@ -4716,11 +4716,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -5176,11 +5176,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -5652,11 +5652,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -5754,7 +5754,7 @@
                 ]
             },
             {
-                "text": "s_c has discovered with time and experience that elder-leaf-picking is best handled by chewing off several low-hanging, thin branches and carrying those back to camp instead. {PRONOUN/s_c/subject/CAP} {VERB/s_c/pass/passes} on the trick to app1, and once they're back at camp both medicine cats strip off the leaves and give them a quick wash.",
+                "text": "s_c has discovered with time and experience that elder-leaf-picking is best handled by chewing off several low-hanging, thin branches and carrying those back to camp instead. {PRONOUN/s_c/subject/CAP} {VERB/s_c/pass/passes} on the trick to app1, and once they're back at camp both healers strip off the leaves and give them a quick wash.",
                 "exp": 20,
                 "weight": 20,
                 "stat_skill": [
@@ -6132,7 +6132,7 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -6208,11 +6208,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -6408,7 +6408,7 @@
         "min_cats": 3,
         "max_cats": 6,
         "min_max_status": {
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -6600,7 +6600,7 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -6627,7 +6627,7 @@
                 ]
             },
             {
-                "text": "As a basic infection-preventing herb, oak leaves are useful for nearly all of the various scrapes, cuts, and injuries p_l sees in the medicine cat den. {PRONOUN/p_l/subject/CAP}{VERB/p_l/'re/'s} always happy to bring a good crop of them back to the herb stores.",
+                "text": "As a basic infection-preventing herb, oak leaves are useful for nearly all of the various scrapes, cuts, and injuries p_l sees in the healer den. {PRONOUN/p_l/subject/CAP}{VERB/p_l/'re/'s} always happy to bring a good crop of them back to the herb stores.",
                 "exp": 10,
                 "weight": 5,
                 "herbs": [
@@ -6676,11 +6676,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -6738,7 +6738,7 @@
                 ]
             },
             {
-                "text": "As a basic infection-preventing herb, oak leaves are useful for nearly all of the various scrapes, cuts, and injuries p_l sees in the medicine cat den. {PRONOUN/p_l/subject/CAP}{VERB/p_l/'re/'s} always happy to bring a good crop of them back to the herb stores. {PRONOUN/p_l/subject/CAP} {VERB/p_l/use/uses} the afternoon to give app1 the chance to lead their expedition, which makes the apprentice to puff up with confidence.",
+                "text": "As a basic infection-preventing herb, oak leaves are useful for nearly all of the various scrapes, cuts, and injuries p_l sees in the healer den. {PRONOUN/p_l/subject/CAP}{VERB/p_l/'re/'s} always happy to bring a good crop of them back to the herb stores. {PRONOUN/p_l/subject/CAP} {VERB/p_l/use/uses} the afternoon to give app1 the chance to lead their expedition, which makes the apprentice to puff up with confidence.",
                 "exp": 20,
                 "weight": 5,
                 "herbs": [
@@ -6876,7 +6876,7 @@
         "min_cats": 3,
         "max_cats": 6,
         "min_max_status": {
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -6932,7 +6932,7 @@
                 ]
             },
             {
-                "text": "As a basic infection-preventing herb, oak leaves are useful for nearly all of the various scrapes, cuts, and injuries p_l sees in the medicine cat den. {PRONOUN/p_l/subject/CAP}{VERB/p_l/'re/'s} always happy to bring a good crop of them back to the herb stores. {PRONOUN/p_l/poss/CAP} Clanmates are, as expected, a huge help carrying everything back home.",
+                "text": "As a basic infection-preventing herb, oak leaves are useful for nearly all of the various scrapes, cuts, and injuries p_l sees in the healer den. {PRONOUN/p_l/subject/CAP}{VERB/p_l/'re/'s} always happy to bring a good crop of them back to the herb stores. {PRONOUN/p_l/poss/CAP} Clanmates are, as expected, a huge help carrying everything back home.",
                 "exp": 10,
                 "weight": 5,
                 "herbs": [
@@ -7068,7 +7068,7 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -7144,11 +7144,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -7206,7 +7206,7 @@
                 ]
             },
             {
-                "text": "Suitable for soothing throat and pelt irritation, and with a welcome - albeit weird - habit of consistently sprouting up on well-trodden paths, plantain is a basic but valuable herb to keep stocks of, and always taught early in the herbal lore each medicine cat must memorize.",
+                "text": "Suitable for soothing throat and pelt irritation, and with a welcome - albeit weird - habit of consistently sprouting up on well-trodden paths, plantain is a basic but valuable herb to keep stocks of, and always taught early in the herbal lore each healer must memorize.",
                 "exp": 20,
                 "weight": 5,
                 "herbs": [
@@ -7344,7 +7344,7 @@
         "min_cats": 3,
         "max_cats": 6,
         "min_max_status": {
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
@@ -7608,11 +7608,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -8068,11 +8068,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -8528,11 +8528,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -8988,11 +8988,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -9203,7 +9203,7 @@
         "chance_of_success": 30,
         "success_outcomes": [
             {
-                "text": "With the drizzle hiding scents, p_l almost walks straight past the thyme plant - but one of the warriors calls them over. Thanks to its calming, well-loved scent, medicine cats aren't the only Clan cats who can identify this plant, a fact that p_l is grateful for right about now.",
+                "text": "With the drizzle hiding scents, p_l almost walks straight past the thyme plant - but one of the warriors calls them over. Thanks to its calming, well-loved scent, healers aren't the only Clan cats who can identify this plant, a fact that p_l is grateful for right about now.",
                 "exp": 10,
                 "weight": 20,
                 "herbs": [
@@ -9448,11 +9448,11 @@
                 -1,
                 -1
             ],
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -9953,7 +9953,7 @@
         "chance_of_success": 60,
         "success_outcomes": [
             {
-                "text": "It's at least a little funny, how elder leaves are so suited for easing the pains of the Clan's elders. The tree isn't named for that - there's an old myth about a medicine cat asking an ancient tree for advice - but sometimes the coincidence amuses p_l.",
+                "text": "It's at least a little funny, how elder leaves are so suited for easing the pains of the Clan's elders. The tree isn't named for that - there's an old myth about a healer asking an ancient tree for advice - but sometimes the coincidence amuses p_l.",
                 "exp": 30,
                 "weight": 20,
                 "herbs": [
@@ -10469,7 +10469,7 @@
         "chance_of_success": 30,
         "success_outcomes": [
             {
-                "text": "Once upon a time there was a plant that, unusually, loved not the midday sun's strength, but the sunset's quiet beauty. When it came time to bloom itself, it chose those colors, keeping a hint of the sunset's warmth for itself. When a medicine cat uses marigold to treat stiff joints, that warmth is gifted to their patients.",
+                "text": "Once upon a time there was a plant that, unusually, loved not the midday sun's strength, but the sunset's quiet beauty. When it came time to bloom itself, it chose those colors, keeping a hint of the sunset's warmth for itself. When a healer uses marigold to treat stiff joints, that warmth is gifted to their patients.",
                 "exp": 30,
                 "weight": 20,
                 "herbs": [
@@ -11119,11 +11119,11 @@
         "min_cats": 2,
         "max_cats": 6,
         "min_max_status": {
-            "medicine cat": [
+            "healer": [
                 1,
                 6
             ],
-            "medicine cat apprentice": [
+            "healer apprentice": [
                 1,
                 6
             ],
@@ -11137,7 +11137,7 @@
             ]
         },
         "weight": 20,
-        "intro_text": "Listen to the wisdom of the sages, p_l meows. app1 doesn't just need to learn to set bones and clean wounds; being a medicine cat is so much more than blood and bodies.",
+        "intro_text": "Listen to the wisdom of the sages, p_l meows. app1 doesn't just need to learn to set bones and clean wounds; being a healer is so much more than blood and bodies.",
         "decline_text": "They're interrupted by a Clanmate who needs them. It halts the lesson, but also reinforces p_l's point.",
         "chance_of_success": 30,
         "success_outcomes": [

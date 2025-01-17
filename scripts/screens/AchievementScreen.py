@@ -54,6 +54,7 @@ class AchievementScreen(Screens):
         """
         TODO: DOCS
         """
+        super().screen_switches()
         
         self.set_disabled_menu_buttons(["stats"])
         self.show_menu_buttons()
@@ -69,12 +70,10 @@ class AchievementScreen(Screens):
         stats_text = f"Achievements:"
         for i in game.clan.achievements:
             stats_text += "\n" + a_txt[i]
-            
-            
 
         self.stats_box = pygame_gui.elements.UITextBox(
             stats_text,
-            ui_scale(pygame.Rect((200, 300), (1200, 1000))),
+            ui_scale(pygame.Rect((100, 150), (600, 500))),
             manager=MANAGER,
             object_id=get_text_box_theme("#text_box_30_horizcenter"))
 

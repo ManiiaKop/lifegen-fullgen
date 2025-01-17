@@ -927,7 +927,7 @@
             "any"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "relationship": [],
         "strategy": [
@@ -1124,7 +1124,7 @@
     },
     "murder_event_ant4": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "any"
@@ -1142,7 +1142,7 @@
     },
     "murder_event63": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "any"
@@ -1154,12 +1154,12 @@
         "biome": [],
         "tags": [],
         "texts": [
-            "You attack and kill v_c, who never saw it coming. No one will suspect the medicine cat of such a violent attack, will they?"
+            "You attack and kill v_c, who never saw it coming. No one will suspect the healer of such a violent attack, will they?"
         ]
     },
     "murder_event64": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "any"
@@ -1176,7 +1176,7 @@
     },
     "murder_event65": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "any"
@@ -1193,7 +1193,7 @@
     },
     "murder_event66": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "any"
@@ -1213,7 +1213,7 @@
     },
     "murder_event67": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "any"
@@ -1225,12 +1225,12 @@
         "biome": [],
         "tags": [],
         "texts": [
-            "You attack and kill v_c, who never saw it coming. No one will suspect the medicine cat of such a violent attack, will they?"
+            "You attack and kill v_c, who never saw it coming. No one will suspect the healer of such a violent attack, will they?"
         ]
     },
     "murder_event68": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "any"
@@ -1330,7 +1330,7 @@
         "tags": [],
         "texts": [
             "After taking a piece of poisoned prey from the fresh-kill pile, you run back to the nursery to present it to v_c, claiming that it's from a super special kind of squirrel. You then challenge {PRONOUN/v_c/object} to eat it. v_c doesn't wake up later after being rushed to the medicine den.",
-            "You and v_c have often tried sneaking into the medicine den, every time getting shooed away with a scolding. This time you are successful. While the medicine cat is gone, the two of you have the perfect opportunity to make a mess of {PRONOUN/v_c/poss} herbs. You challenge v_c to eat one, and {PRONOUN/v_c/subject} {VERB/v_c/oblige/obliges}, {PRONOUN/v_c/poss} lack of knowledge sealing {PRONOUN/v_c/poss} fate."
+            "You and v_c have often tried sneaking into the medicine den, every time getting shooed away with a scolding. This time you are successful. While the healer is gone, the two of you have the perfect opportunity to make a mess of {PRONOUN/v_c/poss} herbs. You challenge v_c to eat one, and {PRONOUN/v_c/subject} {VERB/v_c/oblige/obliges}, {PRONOUN/v_c/poss} lack of knowledge sealing {PRONOUN/v_c/poss} fate."
         ]
     },
     "murder_event74": {
@@ -1448,7 +1448,7 @@
             "kitten"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "relationship": [],
         "strategy": [
@@ -1458,7 +1458,7 @@
         "biome": [],
         "tags": [],
         "texts": [
-            "You bring a strange flower you found growing in the camp to v_c, asking {PRONOUN/v_c/object} to identify it with wide eyes. v_c observes it for a moment, before determining that it's comfrey and taking a bite to check. {PRONOUN/v_c/subject/CAP}{VERB/v_c/'re/'s} stuck in the medicine den for a few days afterwards, eventually dying from eating what the medicine cat determines to be foxglove."
+            "You bring a strange flower you found growing in the camp to v_c, asking {PRONOUN/v_c/object} to identify it with wide eyes. v_c observes it for a moment, before determining that it's comfrey and taking a bite to check. {PRONOUN/v_c/subject/CAP}{VERB/v_c/'re/'s} stuck in the medicine den for a few days afterwards, eventually dying from eating what the healer determines to be foxglove."
         ]
     },
     "murder_event82": {
@@ -1466,7 +1466,7 @@
             "kitten"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "relationship": [],
         "strategy": [
@@ -1885,7 +1885,7 @@
             "apprentice"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -1908,7 +1908,7 @@
             "apprentice"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "relationship": [],
         "strategy": [
@@ -1926,7 +1926,7 @@
             "apprentice"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "relationship": [],
         "strategy": [
@@ -2056,7 +2056,7 @@
             "apprentice"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -2065,8 +2065,8 @@
         "biome": [],
         "tags": [],
         "texts": [
-            "You've never truly cared about how important medicine cats are to a Clan. Not only that, but you also openly mock medicine cats and {PRONOUN/v_c/poss} apprentices, calling {PRONOUN/v_c/object} cowards. When v_c finally confronts you, having had enough of your nonsense, {PRONOUN/v_c/subject} {VERB/v_c/tell/tells} you that a true warrior would know the importance of each role in the Clan. Outraged, you decide to teach v_c about how important battle training is by killing {PRONOUN/v_c/object}. As {PRONOUN/v_c/subject} lay there dying, you tell v_c that maybe learning how to fight IS more important than collecting stupid herbs, huh?",
-            "v_c is always muttering under {PRONOUN/v_c/poss} breath how inferior warriors are to medicine cats, how brutish and empty-headed {PRONOUN/v_c/subject} {VERB/v_c/are/is} in comparison to the grace and wisdom of healing. When you stand over {PRONOUN/v_c/poss} limp body, blood dripping from your jaws, you wonder if {PRONOUN/v_c/subject} now {VERB/v_c/appreciate/appreciates} the utility of battle training a little more."
+            "You've never truly cared about how important healers are to a Clan. Not only that, but you also openly mock healers and {PRONOUN/v_c/poss} apprentices, calling {PRONOUN/v_c/object} cowards. When v_c finally confronts you, having had enough of your nonsense, {PRONOUN/v_c/subject} {VERB/v_c/tell/tells} you that a true warrior would know the importance of each role in the Clan. Outraged, you decide to teach v_c about how important battle training is by killing {PRONOUN/v_c/object}. As {PRONOUN/v_c/subject} lay there dying, you tell v_c that maybe learning how to fight IS more important than collecting stupid herbs, huh?",
+            "v_c is always muttering under {PRONOUN/v_c/poss} breath how inferior warriors are to healers, how brutish and empty-headed {PRONOUN/v_c/subject} {VERB/v_c/are/is} in comparison to the grace and wisdom of healing. When you stand over {PRONOUN/v_c/poss} limp body, blood dripping from your jaws, you wonder if {PRONOUN/v_c/subject} now {VERB/v_c/appreciate/appreciates} the utility of battle training a little more."
         ]
     },
     "murder_event119": {
@@ -2074,7 +2074,7 @@
             "apprentice"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -2083,7 +2083,7 @@
         "biome": [],
         "tags": [],
         "texts": [
-            "v_c... You end up in {PRONOUN/v_c/poss} den a lot due to training accidents, and {PRONOUN/v_c/subject} always {VERB/v_c/scold/scolds} you for it! Always... Can't {PRONOUN/v_c/subject} see how hard you've been working? No, {PRONOUN/v_c/subject} can't, because {PRONOUN/v_c/subject}{VERB/v_c/'re/'s} just a stupid medicine cat and that's all {PRONOUN/v_c/subject} will be! Or, that's all {PRONOUN/v_c/subject} would've been, if you hadn't just thrown {PRONOUN/v_c/object} off the nearest cliff. That'll show {PRONOUN/v_c/object}."
+            "v_c... You end up in {PRONOUN/v_c/poss} den a lot due to training accidents, and {PRONOUN/v_c/subject} always {VERB/v_c/scold/scolds} you for it! Always... Can't {PRONOUN/v_c/subject} see how hard you've been working? No, {PRONOUN/v_c/subject} can't, because {PRONOUN/v_c/subject}{VERB/v_c/'re/'s} just a stupid healer and that's all {PRONOUN/v_c/subject} will be! Or, that's all {PRONOUN/v_c/subject} would've been, if you hadn't just thrown {PRONOUN/v_c/object} off the nearest cliff. That'll show {PRONOUN/v_c/object}."
         ]
     },
     "murder_event120": {
@@ -2153,7 +2153,7 @@
         "biome": [],
         "tags": [],
         "texts": [
-            "You have big dreams of becoming leader one day ... But for that to happen, you need v_c out of the way first. A routine trip to the medicine cat, and a few foxglove seeds up the paw take care of just that. v_c is slain."
+            "You have big dreams of becoming leader one day ... But for that to happen, you need v_c out of the way first. A routine trip to the healer, and a few foxglove seeds up the paw take care of just that. v_c is slain."
         ]
     },
     "murder_event125": {
@@ -2211,7 +2211,7 @@
     },
     "murder_event129": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "kitten"
@@ -2230,7 +2230,7 @@
     },
     "murder_event130": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "apprentice"
@@ -2244,17 +2244,17 @@
         "tags": [],
         "texts": [
             "You convince v_c to take a 'muscle-strengthening' herb before training. The herb is actually foxglove, and the apprentice's heart stops forever.",
-            "You're sick and tired of v_c looking down on you, so when v_c mocks you once more, you decide enough is enough. Later that day, v_c comes to you, saying {PRONOUN/v_c/subject} {VERB/v_c/have/has} a stomachache. You give v_c some herbs that you claim are meant to be for treating stomach aches. You tell v_c you have something important you need to do, so you leave {PRONOUN/v_c/object} to consume the herbs alone. You come back to find the medicine cat trying to revive v_c. You hide your smile as you think about how {PRONOUN/v_c/subject} can never laugh at you again.",
+            "You're sick and tired of v_c looking down on you, so when v_c mocks you once more, you decide enough is enough. Later that day, v_c comes to you, saying {PRONOUN/v_c/subject} {VERB/v_c/have/has} a stomachache. You give v_c some herbs that you claim are meant to be for treating stomach aches. You tell v_c you have something important you need to do, so you leave {PRONOUN/v_c/object} to consume the herbs alone. You come back to find the healer trying to revive v_c. You hide your smile as you think about how {PRONOUN/v_c/subject} can never laugh at you again.",
             "You have always looked out for v_c, even when {PRONOUN/v_c/subject} said {PRONOUN/v_c/subject}{VERB/v_c/'re/'s} fine. However, {PRONOUN/v_c/subject} {VERB/v_c/have/has} always ignored your advice, much to your anger. It doesn't take long before {PRONOUN/v_c/subject}{VERB/v_c/'re/'s} stuck in the medicine den again, protesting and refusing to eat your bitter herbs. The stink of infection grows on {PRONOUN/v_c/object}, but {PRONOUN/v_c/subject} {VERB/v_c/continue/continues} to scorn your skills. When v_c starts complaining about sores and aches, you quietly create another poultice, promising v_c that it'll help with the pain. Much to {PRONOUN/v_c/poss} surprise, {PRONOUN/v_c/subject} {VERB/v_c/don't/doesn't} choke down poppy, but deathberries, spitting and sputtering for help. You turn away. v_c has never listened to you, so why should you listen to {PRONOUN/v_c/object}? When the warriors find {PRONOUN/v_c/object} dead in {PRONOUN/v_c/poss} nest, you tearfully tell {PRONOUN/v_c/object} that the infection had gotten too bad... You had tried everything to save v_c, but it was too late.",
-            "You roll your eyes as you hear v_c's taunting cries echo out to you from across camp. Ever since {PRONOUN/v_c/subject} {VERB/v_c/were/was} made an apprentice, {PRONOUN/v_c/subject}{VERB/v_c/'ve/'s} been bothering you about your medicine cat duties. You grit your teeth as {PRONOUN/v_c/subject} {VERB/v_c/trot/trots} over and {VERB/v_c/sweep/sweeps} {PRONOUN/v_c/poss} tail over the neat rows of herbs you just organized, successfully making a mess. When {PRONOUN/v_c/subject} {VERB/v_c/pad/pads} into the medicine den the next morning asking for blackberries for {PRONOUN/v_c/poss} fever, you dutifully jump up to help {PRONOUN/v_c/object}. You roll a couple blackberries onto a leaf... along with something extra. v_c eats everything you give {PRONOUN/v_c/object}, not even questioning the red deathberries you mixed in alongside the blackberries. If {PRONOUN/v_c/subject}'d paid more attention in <i>{PRONOUN/v_c/poss}</i> training, {PRONOUN/v_c/subject} might have realised."
+            "You roll your eyes as you hear v_c's taunting cries echo out to you from across camp. Ever since {PRONOUN/v_c/subject} {VERB/v_c/were/was} made an apprentice, {PRONOUN/v_c/subject}{VERB/v_c/'ve/'s} been bothering you about your healer duties. You grit your teeth as {PRONOUN/v_c/subject} {VERB/v_c/trot/trots} over and {VERB/v_c/sweep/sweeps} {PRONOUN/v_c/poss} tail over the neat rows of herbs you just organized, successfully making a mess. When {PRONOUN/v_c/subject} {VERB/v_c/pad/pads} into the medicine den the next morning asking for blackberries for {PRONOUN/v_c/poss} fever, you dutifully jump up to help {PRONOUN/v_c/object}. You roll a couple blackberries onto a leaf... along with something extra. v_c eats everything you give {PRONOUN/v_c/object}, not even questioning the red deathberries you mixed in alongside the blackberries. If {PRONOUN/v_c/subject}'d paid more attention in <i>{PRONOUN/v_c/poss}</i> training, {PRONOUN/v_c/subject} might have realised."
         ]
     },
     "murder_event131": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "relationship": [],
         "strategy": [
@@ -2265,13 +2265,13 @@
         "tags": [],
         "texts": [
             "v_c approaches you to see if you recognize an herb {PRONOUN/v_c/subject} found. You tell {PRONOUN/v_c/object} it's completely safe to eat and watch {PRONOUN/v_c/object} have it as a snack. It's yew berries and v_c is later found dead from the poison.",
-            "Everycat always seemed to favor v_c over you, even StarClan  ... {PRONOUN/v_c/subject/CAP} {VERB/v_c/get/gets} all the important omens, the most interesting dreams, the best prophecies. When you slip poison into v_c's prey, you're almost glad you have yet to hear word from any StarClan cats. You don't need the dead medicine cat apprentice appearing in your dreams to guilt you later.",
-            "v_c is nothing like a proper medicine cat apprentice should be. {PRONOUN/v_c/subject/CAP}{VERB/v_c/'re/'s} always late, always lazy, always disrespecting {PRONOUN/v_c/poss} patients. When you sprinkle foxglove seeds over {PRONOUN/v_c/poss} food, you tell yourself you're doing the Clan a favor. One who so flagrantly disrespects {PRONOUN/v_c/poss} duties doesn't deserve to live."
+            "Everycat always seemed to favor v_c over you, even StarClan  ... {PRONOUN/v_c/subject/CAP} {VERB/v_c/get/gets} all the important omens, the most interesting dreams, the best prophecies. When you slip poison into v_c's prey, you're almost glad you have yet to hear word from any StarClan cats. You don't need the dead healer apprentice appearing in your dreams to guilt you later.",
+            "v_c is nothing like a proper healer apprentice should be. {PRONOUN/v_c/subject/CAP}{VERB/v_c/'re/'s} always late, always lazy, always disrespecting {PRONOUN/v_c/poss} patients. When you sprinkle foxglove seeds over {PRONOUN/v_c/poss} food, you tell yourself you're doing the Clan a favor. One who so flagrantly disrespects {PRONOUN/v_c/poss} duties doesn't deserve to live."
         ]
     },
     "murder_event132": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "mediator apprentice"
@@ -2288,7 +2288,7 @@
     },
     "murder_event133": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "mediator apprentice"
@@ -2306,7 +2306,7 @@
     },
     "murder_event134": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [],
         "relationship": [],
@@ -2322,7 +2322,7 @@
     },
     "murder_event135": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [],
         "relationship": [],
@@ -2338,10 +2338,10 @@
     },
     "murder_event136": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -2357,7 +2357,7 @@
     },
     "murder_event137": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "mediator"
@@ -2375,7 +2375,7 @@
     },
     "murder_event138": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "deputy"
@@ -2394,7 +2394,7 @@
     },
     "murder_event139": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "deputy"
@@ -2412,7 +2412,7 @@
     },
     "murder_event140": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "leader"
@@ -2431,7 +2431,7 @@
     },
     "murder_event141": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "leader"
@@ -2451,7 +2451,7 @@
     },
     "murder_event142": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "leader"
@@ -2469,7 +2469,7 @@
     },
     "murder_event143": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "elder"
@@ -2483,12 +2483,12 @@
         "tags": [],
         "texts": [
             "You tell v_c about a new herb to ease {PRONOUN/v_c/poss} aches and ask {PRONOUN/v_c/object} to try it. It's actually water hemlock. Within hours, v_c succumbs to the poison.",
-            "Sure, v_c had the right to be a tad bit crabby after {PRONOUN/v_c/poss} service to the Clan, but you just couldn't stand it anymore. Always being snapped for herbs being 'too bitter' or treatment not 'working fast enough', there's only so much a cat can take. The final straw was when v_c demanded to have a 'real' medicine cat tend to {PRONOUN/v_c/object} instead of a half-trained apprentice. Later, v_c's body is found in {PRONOUN/v_c/poss} nest, deemed to have passed from mysterious circumstances."
+            "Sure, v_c had the right to be a tad bit crabby after {PRONOUN/v_c/poss} service to the Clan, but you just couldn't stand it anymore. Always being snapped for herbs being 'too bitter' or treatment not 'working fast enough', there's only so much a cat can take. The final straw was when v_c demanded to have a 'real' healer tend to {PRONOUN/v_c/object} instead of a half-trained apprentice. Later, v_c's body is found in {PRONOUN/v_c/poss} nest, deemed to have passed from mysterious circumstances."
         ]
     },
     "murder_event144": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "elder"
@@ -2506,7 +2506,7 @@
     },
     "murder_event145": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "elder"
@@ -2519,12 +2519,12 @@
         "biome": [],
         "tags": [],
         "texts": [
-            "Sure, v_c had the right to be a tad bit crabby after {PRONOUN/v_c/poss} service to the Clan, but you just couldn't stand it anymore. Always being snapped for herbs being 'too bitter' or treatment not 'working fast enough', there's only so much a cat can take. The final straw was when v_c demanded to have a 'real' medicine cat tend to {PRONOUN/v_c/object} instead of a half-trained apprentice. Later, v_c's body is found in {PRONOUN/v_c/poss} nest, deemed to have passed from mysterious circumstances."
+            "Sure, v_c had the right to be a tad bit crabby after {PRONOUN/v_c/poss} service to the Clan, but you just couldn't stand it anymore. Always being snapped for herbs being 'too bitter' or treatment not 'working fast enough', there's only so much a cat can take. The final straw was when v_c demanded to have a 'real' healer tend to {PRONOUN/v_c/object} instead of a half-trained apprentice. Later, v_c's body is found in {PRONOUN/v_c/poss} nest, deemed to have passed from mysterious circumstances."
         ]
     },
     "murder_event_ant15": {
         "your_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "victim_status": [
             "queen's apprentice"
@@ -2623,7 +2623,7 @@
             "mediator apprentice"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "relationship": [],
         "strategy": [
@@ -2641,7 +2641,7 @@
             "mediator apprentice"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "relationship": [],
         "strategy": [
@@ -2709,7 +2709,7 @@
             "mediator apprentice"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -2727,7 +2727,7 @@
             "mediator apprentice"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -3084,7 +3084,7 @@
         "tags": [],
         "texts": [
             "You ask v_c if {PRONOUN/v_c/subject} {VERB/v_c/need/needs} any help with {PRONOUN/v_c/poss} herb gathering duties. {PRONOUN/v_c/subject/CAP} gratefully {VERB/v_c/accept/accepts} your offer, and the two of you head out of camp together. As {PRONOUN/v_c/subject}{VERB/v_c/'re/'s} chattering away about what to keep an eye out for, you spot a bush of little red berries. You leap at v_c and pin {PRONOUN/v_c/object} down easily, since {PRONOUN/v_c/subject} didn't have any warrior training. You force {PRONOUN/v_c/object} to swallow deathberries even as {PRONOUN/v_c/subject} {VERB/v_c/lash/lashes} out blindly at you. When {PRONOUN/v_c/poss} body goes cold and still, you drag {PRONOUN/v_c/poss} corpse back to camp and sorrowfully explain that {PRONOUN/v_c/poss} mentor mistook the berries for something else and ate {PRONOUN/v_c/object}.",
-            "v_c is nothing like a proper medicine cat apprentice should be. {PRONOUN/v_c/subject/CAP}{VERB/v_c/'re/'s} always late, always lazy, always disrespectful. When you take {PRONOUN/v_c/object} out to a remote part of the territory, you tell yourself you're doing the Clan a favor. One who so flagrantly disrespects {PRONOUN/v_c/poss} duties isn't worth the mouth to feed."
+            "v_c is nothing like a proper healer apprentice should be. {PRONOUN/v_c/subject/CAP}{VERB/v_c/'re/'s} always late, always lazy, always disrespectful. When you take {PRONOUN/v_c/object} out to a remote part of the territory, you tell yourself you're doing the Clan a favor. One who so flagrantly disrespects {PRONOUN/v_c/poss} duties isn't worth the mouth to feed."
         ]
     },
     "murder_event185": {
@@ -3275,7 +3275,7 @@
     "murder_event196": {
         "your_status": [],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -3291,7 +3291,7 @@
     "murder_event197": {
         "your_status": [],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -3307,7 +3307,7 @@
     "murder_event198": {
         "your_status": [],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -3323,7 +3323,7 @@
     "murder_event199": {
         "your_status": [],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -3586,7 +3586,7 @@
     },
     "murder_event215": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "kitten"
@@ -3605,7 +3605,7 @@
     },
     "murder_event216": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "kitten"
@@ -3622,7 +3622,7 @@
     },
     "murder_event217": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "kitten"
@@ -3640,7 +3640,7 @@
     },
     "murder_event218": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "kitten"
@@ -3657,7 +3657,7 @@
     },
     "murder_event219": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "kitten"
@@ -3676,10 +3676,10 @@
     },
     "murder_event220": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "relationship": [],
         "strategy": [
@@ -3693,7 +3693,7 @@
     },
     "murder_event222": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [],
         "relationship": [],
@@ -3705,15 +3705,15 @@
         "biome": [],
         "tags": [],
         "texts": [
-            "Most warriors know how important the role of a medicine cat is, but not v_c. v_c always mutters about how useless you are, or when the two of you are alone, {PRONOUN/v_c/subject} {VERB/v_c/tell/tells} you that you'd die without {PRONOUN/v_c/object} and the rest of the Clan. Fed up, you decide to teach {PRONOUN/v_c/object} how important your role is by taking {PRONOUN/v_c/object} on an herb gathering patrol, persuading {PRONOUN/v_c/object} to eat death berries by telling v_c that the berries, despite {PRONOUN/v_c/poss} name, actually lengthen a cat's lifespan. When you know {PRONOUN/v_c/subject}{VERB/v_c/'re/'s} too far gone to save, you rush {PRONOUN/v_c/object} to camp to make it look like you're trying to save {PRONOUN/v_c/object}. Maybe now v_c will know just how important you are."
+            "Most warriors know how important the role of a healer is, but not v_c. v_c always mutters about how useless you are, or when the two of you are alone, {PRONOUN/v_c/subject} {VERB/v_c/tell/tells} you that you'd die without {PRONOUN/v_c/object} and the rest of the Clan. Fed up, you decide to teach {PRONOUN/v_c/object} how important your role is by taking {PRONOUN/v_c/object} on an herb gathering patrol, persuading {PRONOUN/v_c/object} to eat death berries by telling v_c that the berries, despite {PRONOUN/v_c/poss} name, actually lengthen a cat's lifespan. When you know {PRONOUN/v_c/subject}{VERB/v_c/'re/'s} too far gone to save, you rush {PRONOUN/v_c/object} to camp to make it look like you're trying to save {PRONOUN/v_c/object}. Maybe now v_c will know just how important you are."
         ]
     },
     "murder_event224": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -3723,15 +3723,15 @@
         "biome": [],
         "tags": [],
         "texts": [
-            "After a childish argument with your fellow medicine cat, you challenge v_c to a light-hearted contest: who can eat {PRONOUN/v_c/poss} prey the quickest. Little {VERB/v_c/do/does} {PRONOUN/v_c/subject} know, you've managed to sneak a few deathberries into {PRONOUN/v_c/poss} meal. v_c is later found lifeless, with deathberry juice dripping from {PRONOUN/v_c/poss} mouth."
+            "After a childish argument with your fellow healer, you challenge v_c to a light-hearted contest: who can eat {PRONOUN/v_c/poss} prey the quickest. Little {VERB/v_c/do/does} {PRONOUN/v_c/subject} know, you've managed to sneak a few deathberries into {PRONOUN/v_c/poss} meal. v_c is later found lifeless, with deathberry juice dripping from {PRONOUN/v_c/poss} mouth."
         ]
     },
     "murder_event225": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -3741,15 +3741,15 @@
         "biome": [],
         "tags": [],
         "texts": [
-            "v_c has always been the most beloved medicine cat, the one that everycat comes in to see. There's only one way to end this in your mind. You take v_c on a routine herb-gathering expedition. Medicine cats aren't known for {PRONOUN/v_c/poss} fighting, but there's something satisfying about personally taking the life of v_c. You return alone, ducking into the medicine den as if on an urgent errand so that you can clean up."
+            "v_c has always been the most beloved healer, the one that everycat comes in to see. There's only one way to end this in your mind. You take v_c on a routine herb-gathering expedition. healers aren't known for {PRONOUN/v_c/poss} fighting, but there's something satisfying about personally taking the life of v_c. You return alone, ducking into the medicine den as if on an urgent errand so that you can clean up."
         ]
     },
     "murder_event226": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -3759,12 +3759,12 @@
         "biome": [],
         "tags": [],
         "texts": [
-            "v_c has always been the most beloved medicine cat, the one that everycat comes in to see. There's only one way to end this in your mind. You take v_c on a routine herb-gathering expedition. Medicine cats aren't known for {PRONOUN/v_c/poss} fighting, but there's something satisfying about personally taking the life of v_c. You return alone, ducking into the medicine den as if on an urgent errand so that you can clean up."
+            "v_c has always been the most beloved healer, the one that everycat comes in to see. There's only one way to end this in your mind. You take v_c on a routine herb-gathering expedition. healers aren't known for {PRONOUN/v_c/poss} fighting, but there's something satisfying about personally taking the life of v_c. You return alone, ducking into the medicine den as if on an urgent errand so that you can clean up."
         ]
     },
     "murder_event227": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "mediator"
@@ -3781,7 +3781,7 @@
     },
     "murder_event228": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "mediator",
@@ -3801,7 +3801,7 @@
     },
     "murder_event229": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "deputy"
@@ -3818,7 +3818,7 @@
     },
     "murder_event230": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "leader"
@@ -3833,12 +3833,12 @@
         ],
         "texts": [
             "After an intense border skirmish, v_c comes to you asking for something to help with {PRONOUN/v_c/poss} pain. Instead of giving v_c poppy seeds, you gave {PRONOUN/v_c/object} foxglove seeds. Later, {PRONOUN/v_c/subject} are found dead in {PRONOUN/v_c/poss} nest, stripped of all {PRONOUN/v_c/poss} remaining lives.",
-            "You have listened to v_c rant and meow about how medicine cats aren't that important to Clan-life and that {PRONOUN/v_c/subject} wouldn't need {PRONOUN/v_c/object} because of {PRONOUN/v_c/poss} nine lives it infuriated you, till the point you gave v_c poisoned freshkill, {PRONOUN/v_c/subject} ate it failing to notice the shiny red berries and foxglove seeds, to make sure {PRONOUN/v_c/subject} {VERB/v_c/don't/doesn't} wake up. Later v_c is found in {PRONOUN/v_c/poss} den in the morning, cold and lifeless, all of {PRONOUN/v_c/poss} lives taken from {PRONOUN/v_c/object}."
+            "You have listened to v_c rant and meow about how healers aren't that important to Clan-life and that {PRONOUN/v_c/subject} wouldn't need {PRONOUN/v_c/object} because of {PRONOUN/v_c/poss} nine lives it infuriated you, till the point you gave v_c poisoned freshkill, {PRONOUN/v_c/subject} ate it failing to notice the shiny red berries and foxglove seeds, to make sure {PRONOUN/v_c/subject} {VERB/v_c/don't/doesn't} wake up. Later v_c is found in {PRONOUN/v_c/poss} den in the morning, cold and lifeless, all of {PRONOUN/v_c/poss} lives taken from {PRONOUN/v_c/object}."
         ]
     },
     "murder_event231": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "elder"
@@ -3856,7 +3856,7 @@
     },
     "murder_event232": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
             "elder"
@@ -4254,7 +4254,7 @@
             "deputy"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "relationship": [],
         "strategy": [
@@ -4263,8 +4263,8 @@
         "biome": [],
         "tags": [],
         "texts": [
-            "You had a long argument with your leader about who v_c should be apprenticed to. Ultimately, your pleading is shut down, and the kit is even made into a medicine cat apprentice! Odd, what happens when you don't get your way - perhaps if v_c was a warrior's apprentice, {PRONOUN/v_c/subject} could have survived.",
-            "You don't understand why v_c would choose to become a medicine cat apprentice, rather than your own. You decide to make sure {PRONOUN/v_c/subject} {VERB/v_c/regret/regrets} it, and come morning, v_c is found dead in {PRONOUN/v_c/poss} nest."
+            "You had a long argument with your leader about who v_c should be apprenticed to. Ultimately, your pleading is shut down, and the kit is even made into a healer apprentice! Odd, what happens when you don't get your way - perhaps if v_c was a warrior's apprentice, {PRONOUN/v_c/subject} could have survived.",
+            "You don't understand why v_c would choose to become a healer apprentice, rather than your own. You decide to make sure {PRONOUN/v_c/subject} {VERB/v_c/regret/regrets} it, and come morning, v_c is found dead in {PRONOUN/v_c/poss} nest."
         ]
     },
     "murder_event261": {
@@ -4389,7 +4389,7 @@
             "deputy"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [],
@@ -4404,7 +4404,7 @@
             "deputy"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -4706,7 +4706,7 @@
             "leader"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "relationship": [],
         "strategy": [
@@ -4724,7 +4724,7 @@
             "leader"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "relationship": [],
         "strategy": [
@@ -4741,7 +4741,7 @@
             "leader"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "relationship": [],
         "strategy": [
@@ -4922,7 +4922,7 @@
             "leader"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -4940,7 +4940,7 @@
             "leader"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -5283,7 +5283,7 @@
             "elder"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -5300,7 +5300,7 @@
             "elder"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -5310,7 +5310,7 @@
         "biome": [],
         "tags": [],
         "texts": [
-            "The medicine cats used to be better, back in the good ol' days. v_c just doesn't cut it. One night, you sneak into {PRONOUN/v_c/poss} den, ending {PRONOUN/v_c/poss} life quickly. Perhaps the new medicine cat will be up to par.",
+            "The healers used to be better, back in the good ol' days. v_c just doesn't cut it. One night, you sneak into {PRONOUN/v_c/poss} den, ending {PRONOUN/v_c/poss} life quickly. Perhaps the new healer will be up to par.",
             "v_c asks you to help {PRONOUN/v_c/object} sort herbs on a day while {PRONOUN/v_c/subject}{VERB/v_c/'re/'s} quite busy. You slip a pawful of poppy seeds towards the cat while {PRONOUN/v_c/subject}{VERB/v_c/'re/'s} not completely looking, and watch as v_c lap {PRONOUN/v_c/object} up unknowingly."
         ]
     },
@@ -5319,7 +5319,7 @@
             "elder"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "relationship": [],
         "strategy": [
@@ -5329,7 +5329,7 @@
         "biome": [],
         "tags": [],
         "texts": [
-            "As you visit the medicine cat's den for a check-up, you swipe deathberries off of one of the many shelves and hide {PRONOUN/v_c/object} under your paws. You tell v_c that you're feeling under the weather, and {PRONOUN/v_c/subject} {VERB/v_c/give/gives} you some feverfew for it. You eat it before spitting it out- screeching and accusing the medicine cat of poisoning it. v_c sighs and insists it's fine, and you slip deathberries into the remaining bundle before {PRONOUN/v_c/subject} {VERB/v_c/eat/eats} it to prove it wasn't poisoned. You watch as {PRONOUN/v_c/subject} {VERB/v_c/realise/realises} what's happening, and leave the den feeling smug about what you've done."
+            "As you visit the healer's den for a check-up, you swipe deathberries off of one of the many shelves and hide {PRONOUN/v_c/object} under your paws. You tell v_c that you're feeling under the weather, and {PRONOUN/v_c/subject} {VERB/v_c/give/gives} you some feverfew for it. You eat it before spitting it out- screeching and accusing the healer of poisoning it. v_c sighs and insists it's fine, and you slip deathberries into the remaining bundle before {PRONOUN/v_c/subject} {VERB/v_c/eat/eats} it to prove it wasn't poisoned. You watch as {PRONOUN/v_c/subject} {VERB/v_c/realise/realises} what's happening, and leave the den feeling smug about what you've done."
         ]
     },
     "murder_event323": {
@@ -5368,7 +5368,7 @@
         "tags": [],
         "texts": [
             "The Clan's reverence towards v_c baffles you. As mediator, {PRONOUN/v_c/subject}{VERB/v_c/'ve/'s} shown nothing but ineptitude. {PRONOUN/v_c/poss/CAP} false wisdom and showy humility are an affront to all the true mediators before {PRONOUN/v_c/object}. With swift, silent action, you do what you believe is right. The next sunrise, v_c won't see. There's no peace for {PRONOUN/v_c/object} to broker now.",
-            "Mediators were different, back in your day. It was a role that was respected, on par with medicine cats, and dare you say, the deputy. However, v_c puts that role to shame. At some point, you're convinced {PRONOUN/v_c/subject} took upon the role to get out of patrols. You decide to take care of {PRONOUN/v_c/object}, the good old-fashioned way. v_c is found dead the next morning. Try to mediate that.",
+            "Mediators were different, back in your day. It was a role that was respected, on par with healers, and dare you say, the deputy. However, v_c puts that role to shame. At some point, you're convinced {PRONOUN/v_c/subject} took upon the role to get out of patrols. You decide to take care of {PRONOUN/v_c/object}, the good old-fashioned way. v_c is found dead the next morning. Try to mediate that.",
             "Get over it? Get OVER it? v_c's poor choice of words burn a hole into your belly, and it would be uncharacteristic for you to not act on it. You're going to show v_c just how stubborn an old cat can be. You're so stubborn, in fact, that you don't release v_c's throat until you're completely and utterly sure there's no chance of {PRONOUN/v_c/object} ever saying another word again."
         ]
     },
@@ -5564,7 +5564,7 @@
         ],
         "tags": [],
         "texts": [
-            "You've been talking quietly with v_c for some time, forced to listen to {PRONOUN/v_c/poss} incessant rambling as the sun beats down on the mostly empty camp. Finally, you've had enough. Trotting over to the prey-pile, you're careful to pick out a particularly bony fish. v_c looks like {PRONOUN/v_c/subject} {VERB/v_c/want/wants} to refuse, but {PRONOUN/v_c/subject} {VERB/v_c/gulp/gulps} it down quickly. All of a sudden, {PRONOUN/v_c/subject} {VERB/v_c/begin/begins} to choke, a fishbone clearly lodged in {PRONOUN/v_c/poss} throat. Instead of leaping up to help, you watch as {PRONOUN/v_c/subject} {VERB/v_c/gasp/gasps}, struggling to breathe. You wait until it's far too late before you race for the medicine cat, explaining how you were walking out of the elder's den, when you noticed v_c choking. It's not too difficult to feign sadness when {PRONOUN/v_c/poss} is pronounced dead."
+            "You've been talking quietly with v_c for some time, forced to listen to {PRONOUN/v_c/poss} incessant rambling as the sun beats down on the mostly empty camp. Finally, you've had enough. Trotting over to the prey-pile, you're careful to pick out a particularly bony fish. v_c looks like {PRONOUN/v_c/subject} {VERB/v_c/want/wants} to refuse, but {PRONOUN/v_c/subject} {VERB/v_c/gulp/gulps} it down quickly. All of a sudden, {PRONOUN/v_c/subject} {VERB/v_c/begin/begins} to choke, a fishbone clearly lodged in {PRONOUN/v_c/poss} throat. Instead of leaping up to help, you watch as {PRONOUN/v_c/subject} {VERB/v_c/gasp/gasps}, struggling to breathe. You wait until it's far too late before you race for the healer, explaining how you were walking out of the elder's den, when you noticed v_c choking. It's not too difficult to feign sadness when {PRONOUN/v_c/poss} is pronounced dead."
         ]
     },
     "murder_event337": {
@@ -6057,7 +6057,7 @@
         ],
         "tags": [],
         "texts": [
-            "v_c is probably one of the most infuriating medicine cats around. Always tailing the warriors with unneeded words of caution, but somehow managing to always be out of camp at the exact moment v_c is actually needed. Feigning interest in one of {PRONOUN/v_c/poss} lectures, you draw {PRONOUN/v_c/object} closer to a secluded corner of camp. There isn't much to worry about, with most of the Clan out patrolling during the day, but it doesn't hurt to be cautious. With a quick lunge, you slam into one of the looser bits of the ship's hull, bringing the piece of wood down onto v_c's head with a sharp crack."
+            "v_c is probably one of the most infuriating healers around. Always tailing the warriors with unneeded words of caution, but somehow managing to always be out of camp at the exact moment v_c is actually needed. Feigning interest in one of {PRONOUN/v_c/poss} lectures, you draw {PRONOUN/v_c/object} closer to a secluded corner of camp. There isn't much to worry about, with most of the Clan out patrolling during the day, but it doesn't hurt to be cautious. With a quick lunge, you slam into one of the looser bits of the ship's hull, bringing the piece of wood down onto v_c's head with a sharp crack."
         ]
     },
     "murder_TBS9": {
@@ -6190,7 +6190,7 @@
             "warrior"
         ],
         "victim_status": [
-            "medicine cat"
+            "healer"
         ],
         "strategy": [
             "poison",
@@ -6210,10 +6210,10 @@
     },
     "murder_TBS16": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "strategy": [
             "poison",
@@ -6409,15 +6409,15 @@
         ],
         "tags": [],
         "texts": [
-            "Such a shame that v_c was never quite able to live up to expectations. You move away from the fallen branch, trying to ignore v_c's body trapped beneath it. You had brought {PRONOUN/v_c/object} out onto the territory, late at night, vaguely referencing some kind of extra training. v_c had eagerly agreed, following you out onto some of the most unstable trees in the territory. Persuading {PRONOUN/v_c/object} out onto a particularly weak branch, it was all too easy for {PRONOUN/v_c/object} to slip and fall. You drag {PRONOUN/v_c/object} back to camp just as the sun begins to rise, shouting for a medicine cat even though you know it's already too late."
+            "Such a shame that v_c was never quite able to live up to expectations. You move away from the fallen branch, trying to ignore v_c's body trapped beneath it. You had brought {PRONOUN/v_c/object} out onto the territory, late at night, vaguely referencing some kind of extra training. v_c had eagerly agreed, following you out onto some of the most unstable trees in the territory. Persuading {PRONOUN/v_c/object} out onto a particularly weak branch, it was all too easy for {PRONOUN/v_c/object} to slip and fall. You drag {PRONOUN/v_c/object} back to camp just as the sun begins to rise, shouting for a healer even though you know it's already too late."
         ]
     },
     "murder_event_ant18": {
         "your_status": [
-            "medicine cat"
+            "healer"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "relationship": [],
         "strategy": [
@@ -6428,7 +6428,7 @@
         "biome": [],
         "tags": [],
         "texts": [
-            "v_c doesn't deserve the title of medicine cat apprentice--{PRONOUN/v_c/subject} barely {VERB/v_c/do/does}{PRONOUN/v_c/poss} job! Honestly, you'd be surprised if {PRONOUN/v_c/subject} even knew what deathberries did. But then... That gives you an idea. You decide to teach {PRONOUN/v_c/object}a lesson {PRONOUN/v_c/subject}'ll never forget as you eagerly push a pile of deathberries toward {PRONOUN/v_c/object}. You insist {PRONOUN/v_c/subject} {VERB/v_c/need/needs} to know the effects of holly berries and how they can give some cats stomach aches. v_c begins to eat the deathberries--wholly believing that they're holly berries--before {PRONOUN/v_c/subject} {VERB/v_c/start/starts} seizing up. Within a minute, {PRONOUN/v_c/subject}{VERB/v_c/'re/'s} dead, and you have to keep yourself from prancing out of the medicine den to tell your clan all about how v_c mistook deathberries for holly berries."
+            "v_c doesn't deserve the title of healer apprentice--{PRONOUN/v_c/subject} barely {VERB/v_c/do/does}{PRONOUN/v_c/poss} job! Honestly, you'd be surprised if {PRONOUN/v_c/subject} even knew what deathberries did. But then... That gives you an idea. You decide to teach {PRONOUN/v_c/object}a lesson {PRONOUN/v_c/subject}'ll never forget as you eagerly push a pile of deathberries toward {PRONOUN/v_c/object}. You insist {PRONOUN/v_c/subject} {VERB/v_c/need/needs} to know the effects of holly berries and how they can give some cats stomach aches. v_c begins to eat the deathberries--wholly believing that they're holly berries--before {PRONOUN/v_c/subject} {VERB/v_c/start/starts} seizing up. Within a minute, {PRONOUN/v_c/subject}{VERB/v_c/'re/'s} dead, and you have to keep yourself from prancing out of the medicine den to tell your clan all about how v_c mistook deathberries for holly berries."
         ]
     },
     "murder_event_ant19": {
@@ -6478,7 +6478,7 @@
             "apprentice"
         ],
         "victim_status": [
-            "medicine cat apprentice"
+            "healer apprentice"
         ],
         "relationship": [],
         "strategy": [
@@ -6494,7 +6494,7 @@
             "death"
         ],
         "texts": [
-            "v_c has been getting on your nerves since the dawn of time. {PRONOUN/v_c/subject/CAP} {VERB/v_c/think/thinks} {PRONOUN/v_c/subject}{VERB/v_c/'re/'s} so much better than you because {PRONOUN/v_c/subject}{VERB/v_c/'re/'s} a medicine cat apprentice and you're not. One day you lead {PRONOUN/v_c/object} out of camp with the alluring promise of having seen borage growing near the river. When you get to the rapids, you inform v_c that you've arrived. v_c turns and starts sniffing around for the borage--a mistake. You lunge forward, shoving {PRONOUN/v_c/object} onto the slippery, moss covered rocks near the rapids. v_c scrambles for a moment, {PRONOUN/v_c/poss} paws flying out from under {PRONOUN/v_c/object}, before {PRONOUN/v_c/poss} gaze darkens. {PRONOUN/v_c/subject/CAP} {VERB/v_c/latch/latches} {PRONOUN/v_c/poss} claws onto your pelt and {VERB/v_c/drag/drags} you into the river with {PRONOUN/v_c/object}. You thrash, desperately fighting v_c for air, but it's already too late for both of you."
+            "v_c has been getting on your nerves since the dawn of time. {PRONOUN/v_c/subject/CAP} {VERB/v_c/think/thinks} {PRONOUN/v_c/subject}{VERB/v_c/'re/'s} so much better than you because {PRONOUN/v_c/subject}{VERB/v_c/'re/'s} a healer apprentice and you're not. One day you lead {PRONOUN/v_c/object} out of camp with the alluring promise of having seen borage growing near the river. When you get to the rapids, you inform v_c that you've arrived. v_c turns and starts sniffing around for the borage--a mistake. You lunge forward, shoving {PRONOUN/v_c/object} onto the slippery, moss covered rocks near the rapids. v_c scrambles for a moment, {PRONOUN/v_c/poss} paws flying out from under {PRONOUN/v_c/object}, before {PRONOUN/v_c/poss} gaze darkens. {PRONOUN/v_c/subject/CAP} {VERB/v_c/latch/latches} {PRONOUN/v_c/poss} claws onto your pelt and {VERB/v_c/drag/drags} you into the river with {PRONOUN/v_c/object}. You thrash, desperately fighting v_c for air, but it's already too late for both of you."
         ]
     },
     "murder_event_ant22": {
@@ -6553,7 +6553,7 @@
         "victim_status": [
             "warrior",
             "queen",
-            "medicine cat",
+            "healer",
             "mediator"
         ],
         "relationship": [
@@ -6577,13 +6577,13 @@
         "your_status": [
             "warrior",
             "queen",
-            "medicine cat",
+            "healer",
             "mediator"
         ],
         "victim_status": [
             "apprentice",
             "queen's apprentice",
-            "medicine cat apprentice",
+            "healer apprentice",
             "mediator apprentice"
         ],
         "relationship": [
@@ -6606,13 +6606,13 @@
         "your_status": [
             "warrior",
             "queen",
-            "medicine cat",
+            "healer",
             "mediator"
         ],
         "victim_status": [
             "apprentice",
             "queen's apprentice",
-            "medicine cat apprentice",
+            "healer apprentice",
             "mediator apprentice"
         ],
         "relationship": [

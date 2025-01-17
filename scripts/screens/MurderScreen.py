@@ -1947,7 +1947,7 @@ class MurderScreen(Screens):
                                 "You are assigned a mentor who will better educate you about the Warrior Code and the sacredness of life."]
             # demote_leader = ["Your lives will be stripped away and you will be demoted to a warrior, no longer trusted to be the Clan's leader."]
             # demote_deputy = ["The Clan decides that you will be demoted to a warrior, no longer trusting you as their deputy."]
-            # demote_medicine_cat = ["The Clan decides that you will be demoted to a warrior, no longer trusting you as their healer."]
+            # demote_healer = ["The Clan decides that you will be demoted to a warrior, no longer trusting you as their healer."]
             # exiled = ["The Clan decides that they no longer feel safe with you as a Clanmate. You will be exiled from the Clan."]
             
             if you.status == 'kitten' or you.status == 'newborn':
@@ -1969,7 +1969,7 @@ class MurderScreen(Screens):
                         choice(gen_punishment),
                         ["alert"],
                         [game.clan.your_cat.ID]))
-            elif you.status == 'medicine cat':
+            elif you.status == 'healer':
                 lead_choice = randint(1,3)
                 if lead_choice == 1:
                     game.cur_events_list.insert(3, Single_Event(
@@ -1995,7 +1995,7 @@ class MurderScreen(Screens):
             
             # demote_leader = [f"{a_n}'s lives will be stripped away and they will be demoted to a warrior, no longer trusted to be the Clan's leader."]
             # demote_deputy = [f"The Clan decides that {a_n} will be demoted to a warrior, no longer trusting them as their deputy."]
-            # demote_medicine_cat = [f"The Clan decides that {a_n} will be demoted to a warrior, no longer trusting them as their healer."]
+            # demote_healer = [f"The Clan decides that {a_n} will be demoted to a warrior, no longer trusting them as their healer."]
             # exiled = [f"The Clan decides that they no longer feel safe with {a_n} as a Clanmate. They will be exiled from the Clan."]
 
             if accomplice.status == 'kitten' or accomplice.status == 'newborn':
@@ -2095,7 +2095,7 @@ class MurderScreen(Screens):
             if self.method == "attack":
                 chance += 8
             if self.method == "poison":
-                if game.clan.your_cat.status == "medicine cat":
+                if game.clan.your_cat.status == "healer":
                     chance += 15
                 else:
                     chance += 20
@@ -2130,7 +2130,7 @@ class MurderScreen(Screens):
             if self.method == "attack":
                 chance += 30
             if self.method == "poison":
-                if game.clan.your_cat.status != "medicine cat":
+                if game.clan.your_cat.status != "healer":
                     chance += 20
             if self.method == "accident":
                 chance += 8

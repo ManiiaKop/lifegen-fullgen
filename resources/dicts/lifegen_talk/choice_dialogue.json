@@ -909,8 +909,8 @@
     },
     "assertiveapp_medapp3": {
         "tags": [
-            "you_medicine_cat_apprentice",
-            "you_medicine_cat",
+            "you_healer_apprentice",
+            "you_healer",
             "assertive",
             "silly",
             "upstanding",
@@ -1161,7 +1161,7 @@
             "sibling",
             "adopted_sibling",
             "they_apprentice",
-            "they_medicine_cat_apprentice",
+            "they_healer_apprentice",
             "they_mediator_apprentice",
             "they_queen's_apprentice"
         ],
@@ -1528,8 +1528,8 @@
             "assertive",
             "cool",
             "silly",
-            "they_medicine_cat",
-            "they_medicine_cat_apprentice",
+            "they_healer",
+            "they_healer_apprentice",
             "you_blind"
         ],
         "intro": [
@@ -1568,8 +1568,8 @@
             "any",
             "assertive",
             "romantic_like",
-            "they_medicine_cat",
-            "they_medicine_cat_apprentice",
+            "they_healer",
+            "they_healer_apprentice",
             "non-mates",
             "they_blind",
             "you_blind"
@@ -1598,7 +1598,7 @@
     },
     "assertive_mentor8": {
         "tags": [
-            "you_medicine_cat_apprentice",
+            "you_healer_apprentice",
             "assertive",
             "from_mentor",
             "silly",
@@ -2138,8 +2138,8 @@
             "cool",
             "they_apprentice",
             "they_warrior",
-            "they_medicine_cat",
-            "they_medicine_cat_apprentice",
+            "they_healer",
+            "they_healer_apprentice",
             "they_mediator",
             "they_mediator_apprentice"
         ],
@@ -2569,7 +2569,7 @@
         "tags": [
             "upstanding",
             "you_apprentice",
-            "you_medicine_cat_apprentice",
+            "you_healer_apprentice",
             "you_mediator_apprentice",
             "you_queen's_apprentice",
             "they_kitten"
@@ -3245,8 +3245,8 @@
             "they_mediator",
             "they_deputy",
             "they_leader",
-            "you_medicine_cat_apprentice",
-            "you_medicine_cat",
+            "you_healer_apprentice",
+            "you_healer",
             "brooding",
             "they_blind",
             "you_blind"
@@ -3601,8 +3601,8 @@
     "brooding_tomedAJ": {
         "tags": [
             "no_kit",
-            "you_medicine_cat_apprentice",
-            "you_medicine_cat",
+            "you_healer_apprentice",
+            "you_healer",
             "brooding"
         ],
         "intro": [
@@ -3716,7 +3716,7 @@
             "introspective",
             "stable",
             "you_apprentice",
-            "you_medicine_cat_apprentice",
+            "you_healer_apprentice",
             "you_mediator_apprentice",
             "you_queen's_apprentice",
             "they_older"
@@ -4473,8 +4473,8 @@
         "tags": [
             "they_neurotic",
             "they_sc",
-            "they_medicine_cat",
-            "they_medicine_cat_apprentice",
+            "they_healer",
+            "they_healer_apprentice",
             "you_sc",
             "no_kit",
             "max_they_deadfor_10"
@@ -4727,7 +4727,7 @@
         "tags": [
             "they_neurotic",
             "they_warrior",
-            "they_medicine_cat",
+            "they_healer",
             "they_queen",
             "they_mediator",
             "you_deputy",

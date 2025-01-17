@@ -543,8 +543,8 @@
     ],
     "Grief_medicine_H1": [
         [
-            "they_medicine_cat",
-            "they_medicine_cat_apprentice",
+            "they_healer",
+            "they_healer_apprentice",
             "they_grieving",
             "neurotic",
             "sweet",
@@ -556,7 +556,7 @@
         ],
         [
             "Is it strange that I'm afraid to see d_c at the moonpool?",
-            "Not- not afraid, necessarily. But... I'm worried about how I'll react. A medicine cat shouldn't be bawling their eyes out at the half-moon meeting.",
+            "Not- not afraid, necessarily. But... I'm worried about how I'll react. A healer shouldn't be bawling their eyes out at the half-moon meeting.",
             "Or worse, will I freeze up? Forget what to say? Oh, StarClan, would I forget the prophecy {PRONOUN/d_c/subject}'d bless c_nClan with?",
             "[You gently remind t_c that {PRONOUN/t_c/subject}'ll do great, even with d_c present.]",
             "Do you think so? I hope you're right, y_c."
@@ -564,7 +564,7 @@
     ],
     "Grief_medicine_H2": [
         [
-            "they_medicine_cat",
+            "they_healer",
             "they_grieving",
             "dead_close",
             "no_kit",
@@ -911,7 +911,7 @@
         [
             "they_warrior",
             "you_warrior",
-            "you_medicine cat"
+            "you_healer"
         ],
         [
             "y_c, weird question, but...",
@@ -1191,7 +1191,7 @@
     "cool_older": [
         [
             "apprentice",
-            "medicine_cat_apprentice",
+            "healer_apprentice",
             "queen's_apprentice",
             "mediator_apprentice",
             "cool",
@@ -1753,7 +1753,7 @@
         [
             "you_shunned",
             "they_sc",
-            "you_medicinecat"
+            "you_healer"
         ],
         [
             "We watched over you. We guided you. We <i>chose</i> you.",
@@ -3080,8 +3080,8 @@
     "about_brooding_AJ": [
         [
             "no_kit",
-            "they_medicine_cat",
-            "they_medicine_cat_apprentice",
+            "they_healer",
+            "they_healer_apprentice",
             "min_trust_15"
         ],
         [

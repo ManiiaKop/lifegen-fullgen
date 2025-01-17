@@ -219,7 +219,7 @@
 			"m_c makes r_c {PRONOUN/m_c/poss} deputy in a game of KittenClan.",
 			"m_c and r_c play a prank on an older cat together.",
 			"The Clan looks all over for m_c and r_c and find out they have a secret hiding place.",
-			"m_c and r_c are playing KittenClan. r_c's dying of a hundred diseases, but m_c is the best medicine cat ever.",
+			"m_c and r_c are playing KittenClan. r_c's dying of a hundred diseases, but m_c is the best healer ever.",
 			"m_c and r_c spend the whole day playing hide-n-seek.",
 			"m_c takes a nap with r_c after a long day playing moss-ball."
 		],
@@ -265,8 +265,8 @@
 			"After a rough storm gets into the medicine den, m_c helps r_c pick up herbs."
 		],
 		"random_status_constraint": [
-			"medicine cat",
-			"medicine cat apprentice"
+			"healer",
+			"healer apprentice"
 		],
 		"reaction_random_cat": {
 			"comfortable": "increase",

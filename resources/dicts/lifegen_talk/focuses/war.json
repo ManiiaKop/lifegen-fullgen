@@ -3,7 +3,7 @@
         [
             "apprentice",
             "mediator apprentice",
-            "medicine_cat_apprentice",
+            "healer_apprentice",
             "queen's apprentice",
             "silly",
             "war",
@@ -297,7 +297,7 @@
             "they_neurotic",
             "you_queen",
             "you_mediator",
-            "you_medicine_cat"
+            "you_healer"
         ],
         [
             "You're going to be fine while I'm gone on patrol, right? Don't get too close to the border, make sure to stay in the dens, stay around r_w--",
@@ -351,8 +351,8 @@
             "focus",
             "they_kitten",
             "they_neurotic",
-            "you_medicine_cat",
-            "you_medicine_cat_apprentice",
+            "you_healer",
+            "you_healer_apprentice",
             "platonic_like"
         ],
         [
@@ -1031,10 +1031,10 @@
     "war_focus_AJ21": [
         [
             "focus",
-            "medicine_cat_apprentice",
-            "medicine_cat",
-            "they_medicine_cat",
-            "they_medicine_cat_apprentice"
+            "healer_apprentice",
+            "healer",
+            "they_healer",
+            "they_healer_apprentice"
         ],
         [
             "Herb stores are running low ...",
@@ -1481,8 +1481,8 @@
     "war_focus_Guy4": [
         [
             "focus",
-            "you_medicine_cat_apprentice",
-            "they_medicine_cat"
+            "you_healer_apprentice",
+            "they_healer"
         ],
         [
             "Well, on the bright side, you're going to get a lot of training.",
@@ -1492,7 +1492,7 @@
     "war_focus_Guy5": [
         [
             "focus",
-            "they_medicine_cat",
+            "they_healer",
             "you_blind",
             "they_blind"
         ],
@@ -1505,7 +1505,7 @@
             "focus",
             "no_kit",
             "sweet",
-            "you_medicine_cat",
+            "you_healer",
             "they_warrior",
             "sweet",
             "you_blind",
@@ -1668,8 +1668,8 @@
             "they_queen",
             "they_queen's_apprentice",
             "they_neurotic",
-            "you_medicine_cat",
-            "you_medicine_cat_apprentice",
+            "you_healer",
+            "you_healer_apprentice",
             "you_blind",
             "they_blind"
         ],
@@ -1766,7 +1766,7 @@
         [
             "focus",
             "you_shunned",
-            "you_medicine_cat",
+            "you_healer",
             "they_warrior",
             "they_deputy",
             "they_apprentice",
@@ -1854,10 +1854,10 @@
             "they_adult",
             "you_warrior",
             "you_deputy",
-            "you_medicine_cat",
+            "you_healer",
             "they_warrior",
             "they_deputy",
-            "they_medicine_cat",
+            "they_healer",
             "brooding",
             "cool",
             "introspective",
@@ -2041,10 +2041,10 @@
             "no_kit",
             "any",
             "you_warrior",
-            "you_medicine_cat",
+            "you_healer",
             "you_queen",
             "you_apprentice",
-            "you_medicine_cat_apprentice",
+            "you_healer_apprentice",
             "you_queen's_apprentice",
             "you_blind",
             "they_blind"

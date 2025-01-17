@@ -1325,7 +1325,7 @@
     "unlawful_tomedcatapp_negGuy1": [
         [
             "insult",
-            "you_medicine_cat_apprentice",
+            "you_healer_apprentice",
             "unlawful",
             "they_not_kit"
         ],
@@ -1336,7 +1336,7 @@
     "unlawful_tomedcat_negGuy1": [
         [
             "insult",
-            "you_medicine_cat",
+            "you_healer",
             "unlawful"
         ],
         [
@@ -2291,8 +2291,8 @@
             "no_kit",
             "they_blind",
             "you_blind",
-            "they_medicine_cat",
-            "they_medicine_cat_apprentice"
+            "they_healer",
+            "they_healer_apprentice"
         ],
         [
             "Is something the matter?"
@@ -2345,14 +2345,14 @@
             "insult",
             "you_blind",
             "they_blind",
-            "they_medicine_cat",
-            "they_medicine_cat_apprentice"
+            "they_healer",
+            "they_healer_apprentice"
         ],
         [
             "Such a sharp tongue you have. Little kit, know that some words have the power to hurt as much as a sharp claw."
         ]
     ],
-    "upstanding_medicinecat3": [
+    "upstanding_healer3": [
         [
             "upstanding",
             "from_mentor",
@@ -2360,8 +2360,8 @@
             "any",
             "you_blind",
             "they_blind",
-            "they_medicine_cat",
-            "they_medicine_cat_apprentice"
+            "they_healer",
+            "they_healer_apprentice"
         ],
         [
             "Looks like someone is one step closer to missing out on the upcoming Gathering."

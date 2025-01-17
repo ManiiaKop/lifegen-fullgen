@@ -461,7 +461,7 @@
             "warrior",
             "mediator",
             "queen",
-            "medicine_cat",
+            "healer",
             "deputy",
             "assertive",
             "trust",
@@ -482,7 +482,7 @@
             "warrior",
             "mediator",
             "queen",
-            "medicine_cat",
+            "healer",
             "deputy",
             "assertive",
             "trust",
@@ -519,7 +519,7 @@
     "assertive_elder_13": [
         [
             "apprentice",
-            "medicine_cat_apprentice",
+            "healer_apprentice",
             "queen's_apprentice",
             "mediator_apprentice",
             "assertive",
@@ -612,7 +612,7 @@
     "assertive_elder_19": [
         [
             "apprentice",
-            "medicine_cat_apprentice",
+            "healer_apprentice",
             "mediator_apprentice",
             "queen's_apprentice",
             "platonic_like",
@@ -632,7 +632,7 @@
             "assertive",
             "deputy",
             "warrior",
-            "medicine_cat",
+            "healer",
             "queen",
             "trust",
             "comfort",
@@ -649,8 +649,8 @@
     ],
     "assertive_elder_21": [
         [
-            "medicine_cat_apprentice",
-            "medicine_cat",
+            "healer_apprentice",
+            "healer",
             "you_blind",
             "they_blind"
         ],
@@ -749,8 +749,8 @@
     ],
     "assertivewarrior_med7": [
         [
-            "medicine_cat",
-            "medicine_cat_apprentice",
+            "healer",
+            "healer_apprentice",
             "platonic_like",
             "assertive",
             "cool",
@@ -769,8 +769,8 @@
     ],
     "assertive_med6": [
         [
-            "medicine_cat",
-            "medicine_cat_apprentice",
+            "healer",
+            "healer_apprentice",
             "assertive",
             "you_blind"
         ],
@@ -786,8 +786,8 @@
     ],
     "assertivewarrior_med5": [
         [
-            "medicine_cat",
-            "medicine_cat_apprentice",
+            "healer",
+            "healer_apprentice",
             "mediator_apprentice",
             "mediator",
             "queen's_apprentice",
@@ -805,8 +805,8 @@
     ],
     "assertiveapp_medapp1": [
         [
-            "medicine_cat_apprentice",
-            "medicine_cat",
+            "healer_apprentice",
+            "healer",
             "platonic_like",
             "assertive",
             "unabashed",
@@ -821,7 +821,7 @@
     ],
     "assertive_medapp": [
         [
-            "you_medicine_cat_apprentice",
+            "you_healer_apprentice",
             "they_any",
             "they_older",
             "assertive",
@@ -831,7 +831,7 @@
             "they_blind"
         ],
         [
-            "How's it going, mini-medicine cat? Herbal life treating you well?",
+            "How's it going, mini-healer? Herbal life treating you well?",
             "Don't worry, I'm not going to run headfirst into trouble and injure myself today.",
             "As for tomorrow? Who knows!"
         ]
@@ -882,7 +882,7 @@
             "Yaknow, y_c, I never really found you all that convincing as a warrior.",
             "Real warriors are strong! We're fearless! We never back down from a fight!",
             "But in you, I sense ... uncertainty.",
-            "Maybe you should see the medicine cat about it."
+            "Maybe you should see the healer about it."
         ]
     ],
     "assertive_rom": [
@@ -894,7 +894,7 @@
         ],
         [
             "Hey, y_c! I just got a new scar today! Wanna come take a look?",
-            "Yeah, I ran into a little dog out at the edge of a territory. Wasn't too hard to chase off, but it gave me a little nick. Medicine cat says it's probably never going away.",
+            "Yeah, I ran into a little dog out at the edge of a territory. Wasn't too hard to chase off, but it gave me a little nick. healer says it's probably never going away.",
             "[You brush your tail over t_c's scar, and {PRONOUN/t_c/subject} {VERB/t_c/seem/seems} a little too thrilled by the gesture for it to just be friendly.]"
         ]
     ],
@@ -1216,7 +1216,7 @@
     "brooding_deputy19": [
         [
             "apprentice",
-            "medicine_cat_apprentice",
+            "healer_apprentice",
             "queen's_apprentice",
             "mediator_apprentice",
             "brooding",
@@ -1278,7 +1278,7 @@
     "brooding_deputy16": [
         [
             "warrior",
-            "medicine_cat",
+            "healer",
             "mediator",
             "queen",
             "brooding",
@@ -1295,7 +1295,7 @@
     "brooding_deputy17": [
         [
             "warrior",
-            "medicine_cat",
+            "healer",
             "mediator",
             "queen",
             "brooding",
@@ -1329,8 +1329,8 @@
     ],
     "brooding_leader1": [
         [
-            "medicine_cat",
-            "medicine_cat_apprentice",
+            "healer",
+            "healer_apprentice",
             "you_blind",
             "they_blind"
         ],
@@ -1342,8 +1342,8 @@
     ],
     "brooding_leader2": [
         [
-            "medicine_cat",
-            "medicine_cat_apprentice",
+            "healer",
+            "healer_apprentice",
             "dislike",
             "you_blind",
             "they_blind"
@@ -1473,7 +1473,7 @@
         [
             "apprentice",
             "queen's_apprentice",
-            "medicine_cat_apprentice",
+            "healer_apprentice",
             "mediator_apprentice",
             "sweet",
             "you_blind",
@@ -1488,7 +1488,7 @@
         [
             "apprentice",
             "queen's_apprentice",
-            "medicine_cat_apprentice",
+            "healer_apprentice",
             "mediator_apprentice",
             "sweet",
             "you_blind",
@@ -1528,13 +1528,13 @@
     ],
     "sweet_leader_9": [
         [
-            "medicine_cat_apprentice",
+            "healer_apprentice",
             "sweet",
             "you_blind",
             "they_blind"
         ],
         [
-            "How's medicine cat training been going for you? I was told you're learning about signs and dreams today.",
+            "How's healer training been going for you? I was told you're learning about signs and dreams today.",
             "Finding the role you're meant to do matters, and sometimes we find out what we're meant to do moons later than you'd expect.",
             "Ah... You haven't been able to get those dreams... I understand. It's not an easy thing to do.",
             "I have had one though, if you'd like to hear about it. It wasn't pleasant, but if it helps you in any way, I'm more than happy to talk about it.",
@@ -1547,7 +1547,7 @@
             "The kit's fur turned starry, and I realized...",
             "This was during a time where my faith was shaken... They gently guided me back to the stars.",
             "It was pretty scary at first, but after I got used to it, it was almost comforting being out there.",
-            "Finding your way as a medicine cat will be the same."
+            "Finding your way as a healer will be the same."
         ]
     ],
     "sweet_leader_10": [
@@ -1571,7 +1571,7 @@
     "sweet_leader_11": [
         [
             "warrior",
-            "medicine_cat",
+            "healer",
             "mediator",
             "queen",
             "sweet"
@@ -1585,7 +1585,7 @@
     "sweet_leader_12": [
         [
             "warrior",
-            "medicine_cat",
+            "healer",
             "mediator",
             "queen",
             "sweet"
@@ -1617,7 +1617,7 @@
     ],
     "sweet_leader_14": [
         [
-            "medicine_cat",
+            "healer",
             "sweet"
         ],
         [
@@ -2394,7 +2394,7 @@
             "they_warrior",
             "they_deputy",
             "they_leader",
-            "they_medicine_cat"
+            "they_healer"
         ],
         [
             "Hey, love. I saved you this from out on patrol.",
@@ -2413,7 +2413,7 @@
             "they_leader",
             "they_deputy",
             "they_warrior",
-            "they_medicine_cat"
+            "they_healer"
         ],
         [
             "Hey there, beautiful. I brought this flower back for you from patrol.",
@@ -2445,8 +2445,8 @@
             "they_apprentice",
             "they_deputy",
             "they_leader",
-            "they_medicine_cat",
-            "they_medicine_cat_apprentice"
+            "they_healer",
+            "they_healer_apprentice"
         ],
         [
             "I miss d_c. Every time I go out on patrol, I find myself looking at all the flowers and rocks and plump prey and wishing d_c were still here to see it all.",

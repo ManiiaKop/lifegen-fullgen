@@ -399,7 +399,7 @@ class Patrol:
 
                 if status == 'apprentice':
                     possible_patrols.extend(self.generate_patrol_events(self.app_lifegen))
-                elif status == 'medicine cat apprentice':
+                elif status == 'healer apprentice':
                     possible_patrols.extend(self.generate_patrol_events(self.medapp_lifegen))
                 elif status == 'mediator apprentice':
                     possible_patrols.extend(self.generate_patrol_events(self.mediatorapp_lifegen))
@@ -407,7 +407,7 @@ class Patrol:
                     possible_patrols.extend(self.generate_patrol_events(self.queenapp_lifegen))
                 elif status == "queen":
                     possible_patrols.extend(self.generate_patrol_events(self.queen_lifegen))
-                elif status == 'medicine cat':
+                elif status == 'healer':
                     possible_patrols.extend(self.generate_patrol_events(self.med_lifegen))
                 elif status == 'mediator':
                     possible_patrols.extend(self.generate_patrol_events(self.mediator_lifegen))

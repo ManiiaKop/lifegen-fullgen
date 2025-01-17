@@ -899,9 +899,9 @@ class TalkScreen(Screens):
                 continue
             
             roles = [
-                "you_kitten", "you_apprentice", "you_medicine_cat_apprentice",
+                "you_kitten", "you_apprentice", "you_healer_apprentice",
                 "you_mediator_apprentice", "you_queen's_apprentice", "you_warrior",
-                "you_mediator", "you_medicine_cat", "you_queen", "you_deputy",
+                "you_mediator", "you_healer", "you_queen", "you_deputy",
                 "you_leader", "you_elder", "you_newborn"
             ]
 
@@ -913,7 +913,7 @@ class TalkScreen(Screens):
                     has_role = True
                 elif "you_apprentice" in tags and your_status == "apprentice":
                     has_role = True
-                elif "you_medicine_cat_apprentice" in tags and you.status == "healer apprentice":
+                elif "you_healer_apprentice" in tags and you.status == "healer apprentice":
                     has_role = True
                 elif "you_mediator_apprentice" in tags and your_status == "mediator apprentice":
                     has_role = True
@@ -923,7 +923,7 @@ class TalkScreen(Screens):
                     has_role = True
                 elif "you_mediator" in tags and your_status == "mediator":
                     has_role = True
-                elif "you_medicine_cat" in tags and you.status == "healer":
+                elif "you_healer" in tags and you.status == "healer":
                     has_role = True
                 elif "you_queen" in tags and your_status == "queen":
                     has_role = True
@@ -939,9 +939,9 @@ class TalkScreen(Screens):
                     continue
 
             roles = [
-                "they_kitten", "they_apprentice", "they_medicine_cat_apprentice",
+                "they_kitten", "they_apprentice", "they_healer_apprentice",
                 "they_mediator_apprentice", "they_queen's_apprentice", "they_warrior",
-                "they_mediator", "they_medicine_cat", "they_queen", "they_deputy",
+                "they_mediator", "they_healer", "they_queen", "they_deputy",
                 "they_leader", "they_elder", "they_newborn", "they_guide"
             ]
             if any(r in roles for r in tags):
@@ -950,7 +950,7 @@ class TalkScreen(Screens):
                     has_role = True
                 elif "they_apprentice" in tags and cat.status == "apprentice":
                     has_role = True
-                elif "they_medicine_cat_apprentice" in tags and cat.status == "healer apprentice":
+                elif "they_healer_apprentice" in tags and cat.status == "healer apprentice":
                     has_role = True
                 elif "they_mediator_apprentice" in tags and cat.status == "mediator apprentice":
                     has_role = True
@@ -960,7 +960,7 @@ class TalkScreen(Screens):
                     has_role = True
                 elif "they_mediator" in tags and cat.status == "mediator":
                     has_role = True
-                elif "they_medicine_cat" in tags and cat.status == "healer":
+                elif "they_healer" in tags and cat.status == "healer":
                     has_role = True
                 elif "they_queen" in tags and cat.status == "queen":
                     has_role = True

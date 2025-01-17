@@ -394,7 +394,7 @@
     {
         "id": "daring_elder",
         "thoughts": [
-            "Is stubbornly refusing the medicine cat's herbs, claiming {PRONOUN/m_c/subject} {VERB/m_c/do/does}n't need them",
+            "Is stubbornly refusing the healer's herbs, claiming {PRONOUN/m_c/subject} {VERB/m_c/do/does}n't need them",
             "Is telling exciting tales from {PRONOUN/m_c/poss} youth",
             "Insists {PRONOUN/m_c/subject} can race just as well as the warriors"
         ],
@@ -487,7 +487,7 @@
         "random_status_constraint": [
             "apprentice",
             "queen's apprentice",
-            "medicine cat apprentice",
+            "healer apprentice",
             "mediator apprentice"
         ]
     },
@@ -807,9 +807,9 @@
         ]
     },
     {
-        "id": "sincere_elder_to_medicine_cat",
+        "id": "sincere_elder_to_healer",
         "thoughts": [
-            "Is grateful of all the medicine cat does to help {PRONOUN/m_c/object}, and makes sure they know it"
+            "Is grateful of all the healer does to help {PRONOUN/m_c/object}, and makes sure they know it"
         ],
         "main_age_constraint": [
             "senior adult",
@@ -819,7 +819,7 @@
             "sincere"
         ],
         "random_status_constraint": [
-            "medicine cat"
+            "healer"
         ]
     },
     {
@@ -893,7 +893,7 @@
             "Is always quick to give r_c ideas on how to combat problems in the Clan",
             "Always asking if {PRONOUN/m_c/subject} can help with anything",
             "Sorts the fresh-kill pile without having to be asked",
-            "Advices the medicine cats to be prepared when a patrol comes back to camp"
+            "Advices the healers to be prepared when a patrol comes back to camp"
         ],
         "main_age_constraint": [
             "senior adult",
@@ -1204,9 +1204,9 @@
     {
         "id": "gen_retired_disabled_to_med_thoughts",
         "thoughts": [
-            "Wonders if the medicine cat needs any help today",
+            "Wonders if the healer needs any help today",
             "Offers to help r_c sort herbs",
-            "Wonders if {PRONOUN/m_c/subject} could've been a medicine cat with r_c instead of retiring",
+            "Wonders if {PRONOUN/m_c/subject} could've been a healer with r_c instead of retiring",
             "Brought r_c some fresh-kill"
         ],
         "perm_conditions": {
@@ -1218,7 +1218,7 @@
             "elder"
         ],
         "random_status_constraint": [
-            "medicine cat"
+            "healer"
         ],
         "random_living_status": [
             "living"
@@ -1262,8 +1262,8 @@
             "elder"
         ],
         "random_status_constraint": [
-            "medicine cat apprentice",
-            "medicine cat"
+            "healer apprentice",
+            "healer"
         ],
         "random_living_status": [
             "living"
@@ -1367,8 +1367,8 @@
             "adolescent"
         ],
         "random_status_constraint": [
-            "medicine cat apprentice",
-            "medicine cat"
+            "healer apprentice",
+            "healer"
         ],
         "random_living_status": [
             "living"
@@ -1418,7 +1418,7 @@
         ],
         "random_status_constraint": [
             "apprentice",
-            "medicine cat apprentice",
+            "healer apprentice",
             "mediator apprentice"
         ],
         "random_living_status": [
@@ -1442,8 +1442,8 @@
             "adolescent"
         ],
         "random_status_constraint": [
-            "medicine cat apprentice",
-            "medicine cat"
+            "healer apprentice",
+            "healer"
         ],
         "random_living_status": [
             "living"
@@ -1470,7 +1470,7 @@
         "id": "wasting_disease_gen_retired_to_alive_med",
         "thoughts": [
             "Thanks r_c for {PRONOUN/r_c/poss} patience",
-            "Feels confined to the medicine cat den"
+            "Feels confined to the healer den"
         ],
         "perm_conditions": {
             "m_c": [
@@ -1481,8 +1481,8 @@
             "elder"
         ],
         "random_status_constraint": [
-            "medicine cat apprentice",
-            "medicine cat"
+            "healer apprentice",
+            "healer"
         ],
         "random_living_status": [
             "living"
@@ -1529,7 +1529,7 @@
         ],
         "random_status_constraint": [
             "apprentice",
-            "medicine cat apprentice",
+            "healer apprentice",
             "mediator apprentice"
         ]
     },
@@ -1577,7 +1577,7 @@
         ],
         "random_status_constraint": [
             "apprentice",
-            "medicine cat apprentice",
+            "healer apprentice",
             "mediator apprentice"
         ]
     },
@@ -1585,7 +1585,7 @@
         "id": "missing_leg/tail_gen_retired_to_alive_gen",
         "thoughts": [
             "Is training {PRONOUN/m_c/poss} balance with r_c",
-            "Is heading to the medicine cat den because {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} starting to feel phantom pain"
+            "Is heading to the healer den because {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} starting to feel phantom pain"
         ],
         "perm_conditions": {
             "m_c": [
@@ -1883,8 +1883,8 @@
             "elder"
         ],
         "random_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
+            "healer",
+            "healer apprentice"
         ],
         "random_living_status": [
             "living"

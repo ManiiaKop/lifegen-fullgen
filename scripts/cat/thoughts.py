@@ -336,9 +336,9 @@ class Thoughts:
 
         status = status.replace(" ", "_")
         if status == "healer_apprentice":
-            status = "medicine_cat_apprentice"
+            status = "healer_apprentice"
         elif status == "healer":
-            status = "medicine_cat"
+            status = "healer"
 
         if not main_cat.dead:
             life_dir = "alive"
@@ -366,8 +366,16 @@ class Thoughts:
                 with open(f"{base_path}{life_dir}{spec_dir}/shunned.json", 'r') as read_file:
                     loaded_thoughts = ujson.loads(read_file.read())
             else:
-                with open(f"{base_path}{life_dir}{spec_dir}/{status}.json", 'r') as read_file:
-                    thoughts = ujson.loads(read_file.read())
+                # life/fullgen change: i dont wanna rename the jsons
+                if main_cat.status == "healer":
+                    with open(f"{base_path}{life_dir}{spec_dir}/medicine_cat.json", 'r') as read_file:
+                        thoughts = ujson.loads(read_file.read())
+                elif main_cat.status == "healer apprentice":
+                    with open(f"{base_path}{life_dir}{spec_dir}/medicine_cat_apprentice.json", 'r') as read_file:
+                        thoughts = ujson.loads(read_file.read())
+                else:
+                    with open(f"{base_path}{life_dir}{spec_dir}/{status}.json", 'r') as read_file:
+                        thoughts = ujson.loads(read_file.read())
                 with open(f"{base_path}{life_dir}{spec_dir}/general.json", 'r') as read_file:
                     genthoughts = ujson.loads(read_file.read())
                 loaded_thoughts = thoughts + genthoughts

@@ -102,7 +102,7 @@ class Clan:
                 name="",
                 leader=None,
                 deputy=None,
-                medicine_cat=None,
+                healer=None,
                 biome='Forest',
                 camp_bg=None,
                 symbol=None,
@@ -131,7 +131,7 @@ class Clan:
             self.deputy.status_change('deputy')
             # self.clan_cats.append(self.deputy.ID)
         self.deputy_predecessors = 0
-        self.medicine_cat = medicine_cat
+        self.healer = healer
         self.med_cat_list = []
         self.med_cat_predecessors = 0
         self.med_cat_number = len(
@@ -225,11 +225,11 @@ class Clan:
             self.leader.status_change("leader")
             self.clan_cats.append(self.leader.ID)
 
-        if self.medicine_cat is not None:
-            self.clan_cats.append(self.medicine_cat.ID)
-            self.med_cat_list.append(self.medicine_cat.ID)
-            if self.medicine_cat.status != 'healer':
-                Cat.all_cats[self.medicine_cat.ID].status_change('healer')
+        if self.healer is not None:
+            self.clan_cats.append(self.healer.ID)
+            self.med_cat_list.append(self.healer.ID)
+            if self.healer.status != 'healer':
+                Cat.all_cats[self.healer.ID].status_change('healer')
     def create_clan(self):
         """
         This function is only called once a new clan is
@@ -270,12 +270,12 @@ class Clan:
         for i in key_copy:  # Going through all currently existing cats
             # cat_class is a Cat-object
             not_found = True
-            for x in [self.leader, self.deputy, self.medicine_cat] + self.starting_members:
+            for x in [self.leader, self.deputy, self.healer] + self.starting_members:
                 if Cat.all_cats[i] == x:
                     self.add_cat(Cat.all_cats[i])
                     not_found = False
             if Cat.all_cats[i] != self.leader and Cat.all_cats[i] != \
-                    self.medicine_cat and Cat.all_cats[i] != \
+                    self.healer and Cat.all_cats[i] != \
                     self.deputy and Cat.all_cats[i] != \
                     self.instructor and Cat.all_cats[i] != \
                     self.demon and Cat.all_cats[i] != self.focus_cat \
@@ -732,7 +732,7 @@ class Clan:
         if self.name is not None:
             _ = (
                 f"{self.name}: led by {self.leader.name}"
-                f"with {self.medicine_cat.name} as med. cat"
+                f"with {self.healer.name} as med. cat"
             )
             return _
 
@@ -767,36 +767,36 @@ class Clan:
             Cat.all_cats[deputy.ID].status_change("deputy")
             self.deputy_predecessors += 1
 
-    def new_medicine_cat(self, medicine_cat):
+    def new_healer(self, healer):
         """
         TODO: DOCS
         """
-        if medicine_cat:
-            if medicine_cat.status != 'healer':
-                Cat.all_cats[medicine_cat.ID].status_change('healer')
-            if medicine_cat.ID not in self.med_cat_list:
-                self.med_cat_list.append(medicine_cat.ID)
-            medicine_cat = self.med_cat_list[0]
-            self.medicine_cat = Cat.all_cats[medicine_cat]
+        if healer:
+            if healer.status != 'healer':
+                Cat.all_cats[healer.ID].status_change('healer')
+            if healer.ID not in self.med_cat_list:
+                self.med_cat_list.append(healer.ID)
+            healer = self.med_cat_list[0]
+            self.healer = Cat.all_cats[healer]
             self.med_cat_number = len(self.med_cat_list)
 
-    def remove_med_cat(self, medicine_cat):
+    def remove_med_cat(self, healer):
         """
         Removes a med cat. Use when retiring, or switching to warrior
         """
-        if medicine_cat:
-            if medicine_cat.ID in game.clan.med_cat_list:
-                game.clan.med_cat_list.remove(medicine_cat.ID)
+        if healer:
+            if healer.ID in game.clan.med_cat_list:
+                game.clan.med_cat_list.remove(healer.ID)
                 game.clan.med_cat_number = len(game.clan.med_cat_list)
-            if self.medicine_cat:
-                if medicine_cat.ID == self.medicine_cat.ID:
+            if self.healer:
+                if healer.ID == self.healer.ID:
                     if game.clan.med_cat_list:
-                        game.clan.medicine_cat = Cat.fetch_cat(
+                        game.clan.healer = Cat.fetch_cat(
                             game.clan.med_cat_list[0]
                         )
                         game.clan.med_cat_number = len(game.clan.med_cat_list)
                     else:
-                        game.clan.medicine_cat = None
+                        game.clan.healer = None
 
     @staticmethod
     def switch_clans(clan):
@@ -856,8 +856,8 @@ class Clan:
         clan_data["deputy_predecessors"] = self.deputy_predecessors
 
         # MED CAT DATA
-        if self.medicine_cat:
-            clan_data["med_cat"] = self.medicine_cat.ID
+        if self.healer:
+            clan_data["med_cat"] = self.healer.ID
         else:
             clan_data["med_cat"] = None
         clan_data["med_cat_number"] = self.med_cat_number
@@ -1018,7 +1018,7 @@ class Clan:
                 name=general[0],
                 leader=Cat.all_cats[leader_info[0]],
                 deputy=Cat.all_cats.get(deputy_info[0], None),
-                medicine_cat=Cat.all_cats.get(med_cat_info[0], None),
+                healer=Cat.all_cats.get(med_cat_info[0], None),
                 biome=general[2],
                 camp_bg=general[3],
                 game_mode=general[7],
@@ -1037,7 +1037,7 @@ class Clan:
                 name=general[0],
                 leader=Cat.all_cats[leader_info[0]],
                 deputy=Cat.all_cats.get(deputy_info[0], None),
-                medicine_cat=Cat.all_cats.get(med_cat_info[0], None),
+                healer=Cat.all_cats.get(med_cat_info[0], None),
                 biome=general[2],
                 camp_bg=general[3],
                 game_mode=general[7],
@@ -1053,7 +1053,7 @@ class Clan:
                 name=general[0],
                 leader=Cat.all_cats[leader_info[0]],
                 deputy=Cat.all_cats.get(deputy_info[0], None),
-                medicine_cat=Cat.all_cats.get(med_cat_info[0], None),
+                healer=Cat.all_cats.get(med_cat_info[0], None),
                 biome=general[2],
                 camp_bg=general[3],
                 self_run_init_functions=False,
@@ -1064,7 +1064,7 @@ class Clan:
                 name=general[0],
                 leader=Cat.all_cats[leader_info[0]],
                 deputy=Cat.all_cats.get(deputy_info[0], None),
-                medicine_cat=Cat.all_cats.get(med_cat_info[0], None),
+                healer=Cat.all_cats.get(med_cat_info[0], None),
                 biome=general[2],
                 self_run_init_functions=False,
             )
@@ -1187,7 +1187,7 @@ class Clan:
             name=clan_data["clanname"],
             leader=leader,
             deputy=deputy,
-            medicine_cat=med_cat,
+            healer=med_cat,
             biome=clan_data["biome"],
             camp_bg=clan_data["camp_bg"],
             game_mode=clan_data["gamemode"],

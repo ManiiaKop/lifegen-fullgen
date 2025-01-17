@@ -238,6 +238,7 @@ class Cat:
                 try:    
                     self.genotype.KitGenerator(Cat.all_cats[parent1].genotype, Cat.all_cats.get(parent2, extrapar))
                 except Exception as e:
+                    print("KitGenerator error")
                     print(e)
                     self.genotype.Generator()
 
@@ -732,10 +733,10 @@ class Cat:
                 else:
                     self.genderalign += self.gender
 
-            # """if self.genderalign in ["molly", "trans molly"]:
-            #     self.pronouns = [self.default_pronouns[1].copy()]
-            # elif self.genderalign in ["tom", "trans tom"]:
-            #     self.pronouns = [self.default_pronouns[2].copy()]"""
+            if self.genderalign in ["molly", "trans molly"]:
+                self.pronouns = [self.default_pronouns[1].copy()]
+            elif self.genderalign in ["tom", "trans tom"]:
+                self.pronouns = [self.default_pronouns[2].copy()]
 
             # APPEARANCE
             self.pelt = Pelt.generate_new_pelt(self.genotype, self.phenotype, self.gender, [Cat.fetch_cat(i) for i in (self.parent1, self.parent2) if i], self.age)
@@ -795,7 +796,6 @@ class Cat:
                 status,
                 prefix,
                 suffix,
-                eyes=self.pelt.eye_colour,
                 specsuffix_hidden=self.specsuffix_hidden,
                 load_existing_name=loading_cat,
                 cat=self,
@@ -1679,7 +1679,7 @@ class Cat:
 
         elif self.status == 'healer':
             if game.clan is not None:
-                game.clan.new_medicine_cat(self)
+                game.clan.new_healer(self)
 
         elif self.status == "elder":
             if (
@@ -1901,9 +1901,9 @@ class Cat:
             self.status_change("apprentice")
             text = f"{self.name} can no longer be trusted with cross-Clan relations and has forfeit the role of a mediator apprentice."
 
-        elif self.status == "medicine cat apprentice":
+        elif self.status == "healer apprentice":
             self.status_change("apprentice")
-            text = f"{self.name} can no longer be trusted around dangerous herbs and has forfeit the role of a medicine cat apprentice."
+            text = f"{self.name} can no longer be trusted around dangerous herbs and has forfeit the role of a healer apprentice."
 
         elif self.status == "queen":
             self.status_change("warrior")
@@ -1914,9 +1914,9 @@ class Cat:
             self.status_change("warrior")
             text = f"{self.name} can no longer be trusted with cross-Clan relations and has forfeit the role of a mediator."
         
-        elif self.status == "medicine cat":
+        elif self.status == "healer":
             self.status_change("warrior")
-            text = f"{self.name} can no longer be trusted around dangerous herbs and has forfeit the role of a medicine cat."
+            text = f"{self.name} can no longer be trusted around dangerous herbs and has forfeit the role of a healer."
         
         return text
 

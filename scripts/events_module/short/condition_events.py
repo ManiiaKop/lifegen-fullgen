@@ -1042,7 +1042,7 @@ class Condition_Events:
                 Cat.all_cats.values(), get_amount_cat_for_one_medic(game.clan)
             ):
                 chance += 10  # lower risk if enough meds
-            if game.clan.medicine_cat is None and chance != 0:
+            if game.clan.healer is None and chance != 0:
                 chance = int(
                     chance * 0.75
                 )  # higher risk if no meds and risk chance wasn't 0

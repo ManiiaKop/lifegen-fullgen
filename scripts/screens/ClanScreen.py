@@ -135,6 +135,7 @@ class ClanScreen(Screens):
             if (
                 not Cat.all_cats[x].dead
                 and Cat.all_cats[x].in_camp
+                and Cat.all_cats[x].moons >= 1
                 and not (Cat.all_cats[x].exiled or Cat.all_cats[x].outside)
                 and (
                     Cat.all_cats[x].status != "newborn"
@@ -474,7 +475,7 @@ class ClanScreen(Screens):
                 Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(
                     first_choices, all_dens, [60, 8, 1, 1, 1, 1, 1]
                 )
-            elif Cat.all_cats[x].status in ["medicine cat apprentice", "medicine cat"]:
+            elif Cat.all_cats[x].status in ["healer apprentice", "healer"]:
                 Cat.all_cats[x].placement = self.choose_nonoverlapping_positions(
                     first_choices, all_dens, [20, 20, 20, 400, 1, 1, 1]
                 )

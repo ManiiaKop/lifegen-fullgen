@@ -178,7 +178,7 @@
 			"elder",
 			"warrior",
 			"mediator",
-			"medicine cat",
+			"healer",
 			"deputy",
 			"leader",
 			"queen"
@@ -187,7 +187,7 @@
 			"kitten",
 			"apprentice",
 			"mediator apprentice",
-			"medicine cat apprentice",
+			"healer apprentice",
 			"queen's apprentice"
 		],
 		"reaction_random_cat": {
@@ -209,15 +209,15 @@
 			"mediator apprentice",
 			"mediator",
 			"queen's apprentice",
-			"medicine cat apprentice",
-			"medicine cat",
+			"healer apprentice",
+			"healer",
 			"deputy",
 			"leader"
 		],
 		"random_status_constraint": [
 			"elder",
 			"mediator",
-			"medicine cat",
+			"healer",
 			"leader",
 			"queen"
 		],
@@ -273,19 +273,19 @@
 			"apprentice",
 			"warrior",
 			"mediator",
-			"medicine cat",
+			"healer",
 			"deputy",
-			"medicine cat apprentice",
+			"healer apprentice",
 			"leader"
 		],
 		"random_status_constraint": [
 			"apprentice",
 			"warrior",
 			"mediator",
-			"medicine cat",
+			"healer",
 			"deputy",
 			"leader",
-			"medicine cat apprentice"
+			"healer apprentice"
 		],
 		"reaction_random_cat": {
 			"trust": "increase"
@@ -333,8 +333,8 @@
 			"r_c has a lot of faith in m_c's skill."
 		],
 		"main_status_constraint": [
-			"medicine cat apprentice",
-			"medicine cat",
+			"healer apprentice",
+			"healer",
 			"leader"
 		],
 		"relationship_constraint": [
@@ -344,8 +344,8 @@
 			"elder",
 			"warrior",
 			"mediator",
-			"medicine cat apprentice",
-			"medicine cat",
+			"healer apprentice",
+			"healer",
 			"deputy",
 			"leader"
 		],
@@ -367,7 +367,7 @@
 		"random_status_constraint": [
 			"deputy",
 			"elder",
-			"medicine cat"
+			"healer"
 		],
 		"reaction_random_cat": {
 			"trust": "increase"
@@ -389,7 +389,7 @@
 		],
 		"random_status_constraint": [
 			"deputy",
-			"medicine cat"
+			"healer"
 		],
 		"reaction_random_cat": {
 			"trust": "increase"
@@ -407,12 +407,12 @@
 			"m_c asks r_c about a specific treatment method."
 		],
 		"main_status_constraint": [
-			"medicine cat apprentice",
-			"medicine cat"
+			"healer apprentice",
+			"healer"
 		],
 		"random_status_constraint": [
-			"medicine cat apprentice",
-			"medicine cat"
+			"healer apprentice",
+			"healer"
 		],
 		"reaction_random_cat": {
 			"trust": "increase"
@@ -425,8 +425,8 @@
 			"m_c feels like {PRONOUN/m_c/subject} can count on r_c to give {PRONOUN/m_c/object} the best treatment possible."
 		],
 		"random_status_constraint": [
-			"medicine cat apprentice",
-			"medicine cat"
+			"healer apprentice",
+			"healer"
 		]
 	},
 	{

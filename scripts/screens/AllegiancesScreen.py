@@ -3,19 +3,11 @@ import pygame_gui
 
 from scripts.cat.cats import Cat
 from scripts.game_structure.game_essentials import game
+from scripts.game_structure.ui_elements import AllegiancesCat
 from scripts.game_structure.screen_settings import MANAGER
-from scripts.game_structure.ui_elements import (
-    UISpriteButton,
-    UIImageButton,
-    UITextBoxTweaked, 
-    AllegiancesCat
-)
 from scripts.utility import (
-    get_text_box_theme, 
-    get_button_theme,
+    get_text_box_theme,
     ui_scale,
-    get_alive_status_cats,
-    shorten_text_to_fit,
     get_alive_clan_queens,
     ui_scale_offset,
 )
@@ -39,6 +31,7 @@ class AllegiancesScreen(Screens):
                 self.change_screen('profile screen')
             else:
                 self.menu_button_pressed(event)
+                self.mute_button_pressed(event)
 
     def on_use(self):
         super().on_use()
@@ -72,33 +65,54 @@ class AllegiancesScreen(Screens):
         self.names_buttons = []
         y_pos = 0
         for x in allegiance_list:
-            #print(x)
-            if(x[0] != ""):
-                self.ranks_boxes.append(pygame_gui.elements.UITextBox(x[0],
-                                   ui_scale(pygame.Rect((0, y_pos), (150, -1))),
-                                   object_id=get_text_box_theme("#text_box_30_horizleft"),
-                                   container=self.scroll_container, manager=MANAGER))
-                self.ranks_boxes[-1].disable()
-            offset = 5
-            x_pos = 145
-            self.names_buttons.append(AllegiancesCat(ui_scale(pygame.Rect((x_pos, y_pos+offset), (530, -1))),
-                                    x[1],
-                                    object_id=get_button_theme(),
-                                    container=self.scroll_container, manager=MANAGER))
+            self.ranks_boxes.append(
+                pygame_gui.elements.UITextBox(
+                    x[0],
+                    ui_scale(pygame.Rect((0, 0), (150, -1))),
+                    object_id=get_text_box_theme("#text_box_30_horizleft"),
+                    container=self.scroll_container,
+                    manager=MANAGER,
+                    anchors={"top_target": self.names_boxes[-1]}
+                    if len(self.names_boxes) > 0
+                    else None,
+                )
+            )
+            self.ranks_boxes[-1].disable()
+            offset = 7
+            self.names_buttons.append(AllegiancesCat(
+                                    pygame.Rect(
+                                    (offset, -self.ranks_boxes[-1].get_relative_rect()[3]+offset),
+                                    ui_scale_offset((565, -1))),
+                                    "",
+                                    # x[1],
+                                    object_id=get_text_box_theme("#allegiance"),
+                                    container=self.scroll_container, manager=MANAGER,
+                                    anchors={
+                                        "top_target": self.ranks_boxes[-1],
+                                        "left_target": self.ranks_boxes[-1],
+                                        "left": "left",
+                                        "right": "right",
+                                    }))
             self.names_buttons[-1].set_cat_id(x[2])
-            self.names_boxes.append(pygame_gui.elements.UITextBox(x[3],
-                                ui_scale(pygame.Rect((150, y_pos), (530, -1))),
-                                object_id=get_text_box_theme("#text_box_30_horizleft"),
-                                container=self.scroll_container, manager=MANAGER))
+            self.names_boxes.append(
+                pygame_gui.elements.UITextBox(
+                    x[3],
+                    pygame.Rect(
+                        (0, -self.ranks_boxes[-1].get_relative_rect()[3]),
+                        ui_scale_offset((565, -1)),
+                    ),
+                    object_id=get_text_box_theme("#text_box_30_horizleft"),
+                    container=self.scroll_container,
+                    manager=MANAGER,
+                    anchors={
+                        "top_target": self.ranks_boxes[-1],
+                        "left_target": self.ranks_boxes[-1],
+                        "left": "left",
+                        "right": "right",
+                    },
+                )
+            )
             self.names_boxes[-1].disable()
-            
-            #self.names_boxes[-1].process_event(pygame_gui.UI_ELEMENT_PRESSED)
-            
-            y_pos += 1400 * self.names_boxes[-1].get_relative_rect()[3] / 700
-
-        self.scroll_container.set_scrollable_area_dimensions(
-            (1360 / 1600 * 800, y_pos / 1400 * 700)
-        )
 
     def exit_screen(self):
         for x in self.ranks_boxes:
@@ -120,33 +134,31 @@ class AllegiancesScreen(Screens):
         """Extra Details will be placed after the cat description, but before the apprentice (if they have one)."""
         output = f"{str(cat.name).upper()} - {cat.describe_cat()} {extra_details}"
 
-        if len(cat.apprentice) == 0:
-            return output
+        if len(cat.apprentice) > 0:
 
-        output += (
-            "\n      APPRENTICE: "
-            if len(cat.apprentice) == 1
-            else "\n      APPRENTICES: "
-        )
-        output += ", ".join(
-            [
-                str(Cat.fetch_cat(i).name).upper()
-                for i in cat.apprentice
-                if Cat.fetch_cat(i)
-            ]
-        )
+            output += (
+                "\n      APPRENTICE: "
+                if len(cat.apprentice) == 1
+                else "\n      APPRENTICES: "
+            )
+            output += ", ".join(
+                [
+                    str(Cat.fetch_cat(i).name).upper()
+                    for i in cat.apprentice
+                    if Cat.fetch_cat(i)
+                ]
+            )
 
         return [str(cat.name).upper(), cat.ID, output]
 
     def get_allegiances_text(self):
         """Determine Text. Ouputs list of tuples."""
 
-        living_cats = [i for i in Cat.all_cats.values() if not (i.dead or i.outside)]
+        living_cats = [i for i in Cat.all_cats.values() if not (i.dead or i.outside or i.moons < 0)]
         living_meds = []
         living_mediators = []
         living_warriors = []
         living_apprentices = []
-        living_queens = []
         living_kits = []
         living_elders = []
         for cat in living_cats:
@@ -156,7 +168,7 @@ class AllegiancesScreen(Screens):
                 living_warriors.append(cat)
             elif cat.status == "mediator":
                 living_mediators.append(cat)
-            elif cat.status in ["apprentice", "healer apprentice", "mediator apprentice", "queen's apprentice"]:
+            elif cat.status in ["apprentice", "healer apprentice", "mediator apprentice"]:
                 living_apprentices.append(cat)
             elif cat.status in ["kitten", "newborn"]:
                 living_kits.append(cat)
@@ -311,12 +323,10 @@ class AllegiancesScreen(Screens):
                     _box[3] = x[2]
                     outputs.append(_box)
         
-        # Queens and Kits Box:
-        if queen_dict or living_kits or living_queens:
-            _box = ["", ""]
-            _box[0] = "<b><u>QUEENS AND KITS</u></b>"
-
-            # This one is a bit different.  First all the queens, and the kits they are caring for.
+         # Queens and Kits Box:
+        if queen_dict or living_kits:
+            
+            # This one is a bit different.  First all the queens, and the kits they are caring for. 
             all_entries = []
             for q in queen_dict:
                 queen = Cat.fetch_cat(q)
@@ -332,10 +342,7 @@ class AllegiancesScreen(Screens):
 
                 all_entries.append(self.generate_one_entry(queen, kittens))
 
-            for k in living_queens:
-                if k.ID not in queen_dict.keys():
-                    all_entries.append(self.generate_one_entry(k))
-            #Now kittens without carers
+            # Now kittens without carers
             for k in living_kits:
                 all_entries.append([str(k.name).upper(), k.ID, f"{str(k.name).upper()} - {k.describe_cat(short=True)}"])
             

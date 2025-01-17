@@ -141,7 +141,7 @@
     "assertive_tonewborn_2": [
         [
             "you_newborn",
-            "they_medicine_cat",
+            "they_healer",
             "assertive",
             "they_blind",
             "you_blind"
@@ -1639,7 +1639,7 @@
             "[t_c descends upon you in an instant, frantic.]",
             "y_c! y_c, speak to me! Are you okay?",
             "Oh, StarClan, oh, StarClan, oh StarClan ... r_m! Come quick! Hurry!",
-            "[You're checked over by the medicine cat, who confirms that there's not a scratch on you. t_c breathes a sigh of relief.]",
+            "[You're checked over by the healer, who confirms that there's not a scratch on you. t_c breathes a sigh of relief.]",
             "Thank StarClan ... Still, no more games for you today, y_c.",
             "Let's get you back to the nursery, where you'll be safe."
         ]
@@ -3971,7 +3971,7 @@
         [
             "Oh, that's y_c! {PRONOUN/y_c/subject/CAP}{VERB/y_c/'ve/'s} grown so quickly.",
             "I remember you being born, you know, even if it wasn't that long ago. It'll be amazing watching you grow to provide for the Clan. I wonder what you'll grow up to do.",
-            "A big strong warrior, a gentle medicine cat, a wise mediator... or you could become a queen like I'm learning to right now.",
+            "A big strong warrior, a gentle healer, a wise mediator... or you could become a queen like I'm learning to right now.",
             "But that doesn't matter right now. Just focus on enjoying your life. That's what I think."
         ]
     ],
@@ -4759,7 +4759,7 @@
         [
             "only_you_deaf",
             "you_newborn",
-            "they_medicine_cat"
+            "they_healer"
         ],
         [
             "[You mew as t_c bothers you. {PRONOUN/t_c/subject/CAP}{VERB/t_c/'re/'s} poking and prodding you!]",
@@ -5248,7 +5248,7 @@
             "they_neurotic",
             "they_warrior",
             "they_mediator",
-            "they_medicine_cat",
+            "they_healer",
             "they_deputy",
             "they_leader",
             "neutral",
@@ -5276,8 +5276,8 @@
         [
             "you_kitten",
             "they_neurotic",
-            "they_medicine_cat",
-            "they_medicine_cat_apprentice",
+            "they_healer",
+            "they_healer_apprentice",
             "neutral"
         ],
         [
@@ -5764,7 +5764,7 @@
         ],
         "intro": [
             "Ohh... you have to choose what kind of apprentice you want to be soon, right? I almost forgot about how stressful that was.",
-            "Um... I don't know if anyone's implied this, but you know you don't have to be a medicine cat just because you can talk to us, right?"
+            "Um... I don't know if anyone's implied this, but you know you don't have to be a healer just because you can talk to us, right?"
         ],
         "intro_choices": {
             "choice1": {
@@ -5790,16 +5790,16 @@
             "Ah, never mind. You're doing great, y_c."
         ],
         "should": [
-            "[Talking to StarClan is part of a medicine cat's job, right? So... so you'd be good at being a medicine cat, and doesn't that mean you're supposed to be one?]",
+            "[Talking to StarClan is part of a healer's job, right? So... so you'd be good at being a healer, and doesn't that mean you're supposed to be one?]",
             "[Puzzling through all that stuff makes you kind of dizzy.]",
             "[t_c tries to protest, but {PRONOUN/t_c/subject} {VERB/t_c/seem/seems} unsure of what exactly to say. Maybe thinking about it makes {PRONOUN/t_c/object} dizzy, too.]"
         ],
         "want": [
-            "[You know that, but you want to be a medicine cat! And if your connection to StarClan can help with that, then that's even better.]",
-            "Oh! Okay, in that case... good! You'll make a great medicine cat."
+            "[You know that, but you want to be a healer! And if your connection to StarClan can help with that, then that's even better.]",
+            "Oh! Okay, in that case... good! You'll make a great healer."
         ],
         "huh": [
-            "[Choices? Implied stuff? Being a medicine cat because you can talk to cats like t_c? You're not really sure what t_c is trying to say.]",
+            "[Choices? Implied stuff? Being a healer because you can talk to cats like t_c? You're not really sure what t_c is trying to say.]",
             "Ah... never mind, then. Don't think about it too much!"
         ]
     },

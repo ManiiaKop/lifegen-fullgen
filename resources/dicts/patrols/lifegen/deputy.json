@@ -122,7 +122,7 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "A harsh leaf-bare is approaching, and you're tasked with devising a strategy for the Clan's survival.",
-        "decline_text": "Feeling the weight of this task, you decide to collaborate with the Clan's senior warriors and the medicine cat. The Clan appreciates your wise decision.",
+        "decline_text": "Feeling the weight of this task, you decide to collaborate with the Clan's senior warriors and the healer. The Clan appreciates your wise decision.",
         "chance_of_success": 50,
         "success_outcomes": [
             {
@@ -262,7 +262,7 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "A Clan member has fallen into the river during a fishing patrol and is afraid of water now. They seek your guidance.",
-        "decline_text": "You don't have time for this. You send the Clan member to the medicine cat instead.",
+        "decline_text": "You don't have time for this. You send the Clan member to the healer instead.",
         "chance_of_success": 70,
         "success_outcomes": [
             {
@@ -331,19 +331,19 @@
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "An apprentice has consumed some unknown berries and is feeling sick. The medicine cat needs your help to find the right herbs while they monitor the apprentice's condition.",
-        "decline_text": "You decide to let the medicine cat handle the situation on their own.",
+        "intro_text": "An apprentice has consumed some unknown berries and is feeling sick. The healer needs your help to find the right herbs while they monitor the apprentice's condition.",
+        "decline_text": "You decide to let the healer handle the situation on their own.",
         "chance_of_success": 60,
         "success_outcomes": [
             {
-                "text": "You successfully find the needed plants and the apprentice recovers quickly with you and the medicine cat's help.",
+                "text": "You successfully find the needed plants and the apprentice recovers quickly with you and the healer's help.",
                 "exp": 10,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You try your best but fail to find the right herbs. The apprentice's condition worsens before the medicine cat finally identifies and finds the correct herbs.",
+                "text": "You try your best but fail to find the right herbs. The apprentice's condition worsens before the healer finally identifies and finds the correct herbs.",
                 "exp": 0,
                 "weight": 20
             }

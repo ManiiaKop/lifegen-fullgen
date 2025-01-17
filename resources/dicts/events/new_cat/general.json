@@ -268,9 +268,9 @@
                 "leader",
                 "deputy",
                 "warrior",
-                "medicine cat",
+                "healer",
                 "apprentice",
-                "medicine cat apprentice",
+                "healer apprentice",
                 "mediator",
                 "mediator apprentice"
             ]
@@ -311,9 +311,9 @@
                 "leader",
                 "deputy",
                 "warrior",
-                "medicine cat",
+                "healer",
                 "apprentice",
-                "medicine cat apprentice",
+                "healer apprentice",
                 "mediator",
                 "mediator apprentice"
             ]
@@ -354,9 +354,9 @@
                 "leader",
                 "deputy",
                 "warrior",
-                "medicine cat",
+                "healer",
                 "apprentice",
-                "medicine cat apprentice",
+                "healer apprentice",
                 "mediator",
                 "mediator apprentice"
             ]
@@ -537,7 +537,7 @@
                 "warrior",
                 "deputy",
                 "leader",
-                "medicine cat"
+                "healer"
             ]
         },
         "new_cat": [
@@ -571,7 +571,7 @@
                 "leader",
                 "deputy",
                 "warrior",
-                "medicine cat"
+                "healer"
             ]
         },
         "new_cat": [
@@ -750,7 +750,7 @@
                 "leader",
                 "deputy",
                 "warrior",
-                "medicine cat"
+                "healer"
             ]
         },
         "new_cat": [
@@ -783,7 +783,7 @@
                 "leader",
                 "deputy",
                 "warrior",
-                "medicine cat"
+                "healer"
             ]
         },
         "new_cat": [
@@ -892,7 +892,7 @@
                 "leader",
                 "deputy",
                 "warrior",
-                "medicine cat"
+                "healer"
             ]
         },
         "new_cat": [
@@ -925,7 +925,7 @@
                 "leader",
                 "deputy",
                 "warrior",
-                "medicine cat"
+                "healer"
             ]
         },
         "new_cat": [
@@ -992,12 +992,12 @@
         "event_text": "m_c meets an injured warrior from o_c_n who asks to join the Clan, in exchange for healing.",
         "m_c": {
             "status": [
-                "medicine cat",
+                "healer",
                 "leader",
                 "warrior",
                 "deputy",
                 "apprentice",
-                "medicine cat apprentice",
+                "healer apprentice",
                 "mediator",
                 "mediator apprentice"
             ]
@@ -1046,9 +1046,9 @@
                 "leader",
                 "deputy",
                 "warrior",
-                "medicine cat",
+                "healer",
                 "apprentice",
-                "medicine cat apprentice",
+                "healer apprentice",
                 "mediator",
                 "mediator apprentice"
             ]
@@ -1085,9 +1085,9 @@
                 "leader",
                 "deputy",
                 "warrior",
-                "medicine cat",
+                "healer",
                 "apprentice",
-                "medicine cat apprentice",
+                "healer apprentice",
                 "mediator",
                 "mediator apprentice"
             ]
@@ -1118,15 +1118,15 @@
             "war"
         ],
         "weight": 15,
-        "event_text": "n_c:0, the medicine cat of o_c_n, has defected to c_n in the war, {PRONOUN/n_c:0/subject} {VERB/n_c:0/meet/meets} m_c at the border. {PRONOUN/n_c:0/subject/CAP} {VERB/n_c:0/decide/decides} to keep {PRONOUN/n_c:0/poss} name.",
+        "event_text": "n_c:0, the healer of o_c_n, has defected to c_n in the war, {PRONOUN/n_c:0/subject} {VERB/n_c:0/meet/meets} m_c at the border. {PRONOUN/n_c:0/subject/CAP} {VERB/n_c:0/decide/decides} to keep {PRONOUN/n_c:0/poss} name.",
         "m_c": {
             "status": [
                 "leader",
                 "deputy",
                 "warrior",
-                "medicine cat",
+                "healer",
                 "apprentice",
-                "medicine cat apprentice",
+                "healer apprentice",
                 "mediator",
                 "mediator apprentice"
             ]
@@ -1134,8 +1134,8 @@
         "new_cat": [
             [
                 "old_name",
-                "backstory:medicine_cat",
-                "status:medicine_cat"
+                "backstory:healer",
+                "status:healer"
             ]
         ],
         "other_clan": {

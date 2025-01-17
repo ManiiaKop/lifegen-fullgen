@@ -473,7 +473,7 @@
             "neutral",
             "you_apprentice",
             "you_queen's_apprentice",
-            "you_medicine_cat_apprentice",
+            "you_healer_apprentice",
             "you_mediator_apprentice"
         ],
         [
@@ -488,7 +488,7 @@
             "neutral",
             "you_apprentice",
             "you_queen's_apprentice",
-            "you_medicine_cat_apprentice",
+            "you_healer_apprentice",
             "you_mediator_apprentice"
         ],
         [
@@ -647,7 +647,7 @@
     ],
     "assertive_medapp": [
         [
-            "you_medicine_cat_apprentice",
+            "you_healer_apprentice",
             "assertive",
             "unlawful",
             "unabashed",
@@ -763,8 +763,8 @@
         [
             "you_kitten",
             "you_apprentice",
-            "you_medicine_cat_apprentice",
-            "you_medicine_cat",
+            "you_healer_apprentice",
+            "you_healer",
             "you_mediator_apprentice",
             "you_mediator",
             "you_queen's_apprentice",
@@ -786,7 +786,7 @@
     "assertive_elder_10": [
         [
             "you_apprentice",
-            "you_medicine_cat_apprentice",
+            "you_healer_apprentice",
             "you_mediator_apprentice",
             "you_queen's_apprentice",
             "you_warrior",
@@ -803,7 +803,7 @@
         [
             "you_kitten",
             "you_apprentice",
-            "you_medicine_cat_apprentice",
+            "you_healer_apprentice",
             "you_mediator_apprentice",
             "you_queen's_apprentice",
             "assertive",
@@ -819,8 +819,8 @@
     ],
     "assertive_elder_12": [
         [
-            "you_medicine_cat_apprentice",
-            "you_medicine_cat",
+            "you_healer_apprentice",
+            "you_healer",
             "assertive",
             "they_blind",
             "you_blind"
@@ -1065,7 +1065,7 @@
     "brooding_elder4": [
         [
             "you_apprentice",
-            "you_medicine_cat_apprentice",
+            "you_healer_apprentice",
             "you_mediator_apprentice",
             "you_queen's_apprentice",
             "brooding",
@@ -1253,7 +1253,7 @@
     "sweet_elder_10": [
         [
             "you_warrior",
-            "you_medicine_cat",
+            "you_healer",
             "you_mediator",
             "you_queen",
             "sweet"
@@ -1270,7 +1270,7 @@
     "sweet_elder_11": [
         [
             "you_warrior",
-            "you_medicine_cat",
+            "you_healer",
             "you_mediator",
             "you_queen",
             "sweet"
@@ -1298,7 +1298,7 @@
     ],
     "sweet_elder_13": [
         [
-            "you_medicine_cat",
+            "you_healer",
             "comfort",
             "sweet"
         ],

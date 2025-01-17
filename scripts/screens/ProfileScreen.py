@@ -1209,7 +1209,7 @@ class ProfileScreen(Screens):
         # if cat is a med or med app, show button for their den
         self.profile_elements["med_den"] = UISurfaceImageButton(
             ui_scale(pygame.Rect((100, 380), (151, 28))),
-            "medicine cat den",
+            "healer den",
             get_button_dict(ButtonStyles.ROUNDED_RECT, (151, 28)),
             object_id="@buttonstyles_rounded_rect",
             manager=MANAGER,
@@ -1429,7 +1429,7 @@ class ProfileScreen(Screens):
                 # check for not working because the queen screen doesnt have the "this cat is unable to work" thing
                 # like the mediator screen does
                 self.profile_elements["queen"].disable()
-        if self.the_cat.status in ["medicine cat", "medicine cat apprentice"] and self.the_cat.ID == game.clan.your_cat.ID and self.the_cat.moons >= 6:
+        if self.the_cat.status in ["healer", "healer apprentice"] and self.the_cat.ID == game.clan.your_cat.ID and self.the_cat.moons >= 6:
             self.profile_elements["halfmoon"] = UIImageButton(ui_scale(pygame.Rect(
                 (383, y_pos), (34, 34))),
                 "",
@@ -1999,7 +1999,7 @@ class ProfileScreen(Screens):
 
         self.display_notes = UITextBoxTweaked(
             self.user_notes,
-            ui_scale(pygame.Rect((100, 473), (60, 149))),
+            ui_scale(pygame.Rect((100, 473), (600, 149))),
             object_id="#text_box_26_horizleft_pad_10_14",
             line_spacing=1,
             manager=MANAGER,
@@ -2014,7 +2014,7 @@ class ProfileScreen(Screens):
             self.genelist += "\n\n" + str(self.the_cat.genotype.chimerageno.ShowGenes())
         
         self.genetic_text_box = UITextBoxTweaked(self.genelist,
-                                              scale(pygame.Rect((200, 946), (1200, 298))),
+                                              ui_scale(pygame.Rect((100, 473), (600, 148))),
                                               object_id="#text_box_26_horizleft_pad_10_14",
                                               line_spacing=1, manager=MANAGER)
 
@@ -3458,7 +3458,7 @@ class ProfileScreen(Screens):
                         "bottom_target": self.have_kits_button},
                 )
             
-            if self.the_cat.status in ['leader', 'deputy', 'medicine cat', 'mediator', 'queen', 'warrior'] and not self.the_cat.dead and not self.the_cat.outside:
+            if self.the_cat.status in ['leader', 'deputy', 'healer', 'mediator', 'queen', 'warrior'] and not self.the_cat.dead and not self.the_cat.outside:
                 self.request_apprentice_button.enable()
             else:
                 self.request_apprentice_button.disable()
@@ -3594,6 +3594,12 @@ class ProfileScreen(Screens):
                 self.cat_list_buttons[i].kill()
             for i in self.accessory_buttons:
                 self.accessory_buttons[i].kill()
+
+            if game.clan.clan_settings['all accessories']:
+                self.delete_accessory.disable()
+            else:
+                self.delete_accessory.enable()
+
             self.open_accessories()
         elif self.open_tab == "faith":
             self.open_faith_tab()

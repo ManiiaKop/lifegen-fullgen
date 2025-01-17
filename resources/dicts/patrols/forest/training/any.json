@@ -1587,7 +1587,7 @@
                 "art": "fst_train_stuck_outcome"
             },
             {
-                "text": "r_c eventually manages to pull {PRONOUN/r_c/self} free, but {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} battered and injured. It's all {PRONOUN/r_c/subject} can do to find a bush to shelter under through the night in the cold forest until a patrol finds {PRONOUN/r_c/object} the next morning and helps {PRONOUN/r_c/object} to the medicine cat den.",
+                "text": "r_c eventually manages to pull {PRONOUN/r_c/self} free, but {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} battered and injured. It's all {PRONOUN/r_c/subject} can do to find a bush to shelter under through the night in the cold forest until a patrol finds {PRONOUN/r_c/object} the next morning and helps {PRONOUN/r_c/object} to the healer den.",
                 "exp": 0,
                 "weight": 10,
                 "injury": [
@@ -1687,7 +1687,7 @@
                 ]
             },
             {
-                "text": "The apprentice wanders along obliviously and slips, tumbling right down a well-hidden gully. Bruised and sore, r_c has to report to the medicine cat den when {PRONOUN/r_c/subject} {VERB/r_c/return/returns} to camp.",
+                "text": "The apprentice wanders along obliviously and slips, tumbling right down a well-hidden gully. Bruised and sore, r_c has to report to the healer den when {PRONOUN/r_c/subject} {VERB/r_c/return/returns} to camp.",
                 "exp": 0,
                 "weight": 10,
                 "injury": [

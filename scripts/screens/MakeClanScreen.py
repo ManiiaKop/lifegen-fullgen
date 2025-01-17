@@ -18,6 +18,7 @@ from scripts.cat.names import names
 from scripts.cat.genotype import Genotype
 from scripts.cat.phenotype import Phenotype
 from re import sub
+from scripts.clan import Clan
 from scripts.game_structure import image_cache
 from scripts.game_structure.game_essentials import (
     game,
@@ -489,7 +490,7 @@ class MakeClanScreen(Screens):
             self.open_choose_leader()
         elif event.ui_element == self.elements["previous_step"]:
             self.clan_name = ""
-            self.open_clan_count()
+            self.change_screen('start screen')
         elif event.ui_element == self.elements['small']:
             self.elements['small'].disable()
             self.elements['medium'].enable()
@@ -1633,46 +1634,6 @@ class MakeClanScreen(Screens):
         """Get tooltip for cat. Tooltip displays name, sex, age group, and trait."""
 
         return f"<b>{cat.name}</b><br>{cat.genderalign}<br>{cat.age}<br>{cat.personality.trait}"
-
-    def open_clan_count(self):
-        # Clear previous screen
-        self.clear_all_page()
-        self.sub_screen = 'clan count mode'
-
-        text_box = image_cache.load_image(
-            'resources/images/game_mode_text_box.png').convert_alpha()
-
-        self.elements['game_mode_background'] = pygame_gui.elements.UIImage(scale(pygame.Rect((650, 260), (798, 922))),
-                                                                            pygame.transform.scale(text_box, (798, 922))
-                                                                            , manager=MANAGER)
-        self.elements['permi_warning'] = pygame_gui.elements.UITextBox(
-            "Your Clan count is permanent and cannot be changed after Clan creation.",
-            scale(pygame.Rect((200, 1162), (1200, 80))),
-            object_id=get_text_box_theme("#text_box_30_horizcenter"),
-            manager=MANAGER
-        )
-
-        # Create all the elements.
-        self.elements['classic_mode_button'] = UIImageButton(scale(pygame.Rect((218, 480), (264, 60))), "",
-                                                             object_id="#classic_mode_button",
-                                                             manager=MANAGER)
-        self.elements['expanded_mode_button'] = UIImageButton(scale(pygame.Rect((188, 640), (324, 68))), "",
-                                                              object_id="#expanded_mode_button",
-                                                              manager=MANAGER)
-        self.elements['previous_step'] = UIImageButton(scale(pygame.Rect((506, 1240), (294, 60))), "",
-                                                       object_id="#previous_step_button",
-                                                       manager=MANAGER)
-        self.elements['next_step'] = UIImageButton(scale(pygame.Rect((800, 1240), (294, 60))), "",
-                                                   object_id="#next_step_button",
-                                                   manager=MANAGER)
-        self.elements['mode_details'] = pygame_gui.elements.UITextBox("", scale(pygame.Rect((650, 320), (810, 922))),
-                                                                      object_id="#text_box_30_horizleft_pad_40_40",
-                                                                      manager=MANAGER)
-        self.elements['mode_name'] = pygame_gui.elements.UITextBox("", scale(pygame.Rect((850, 270), (400, 55))),
-                                                                   object_id="#text_box_30_horizcenter_light",
-                                                                   manager=MANAGER)
-
-        self.refresh_text_and_buttons()
 
     def open_name_cat(self):
         """Opens the name clan screen"""
@@ -3250,7 +3211,7 @@ class MakeClanScreen(Screens):
             game.clan = Clan(name = self.clan_name,
                             leader = self.leader,
                             deputy = self.deputy,
-                            medicine_cat = self.med_cat,
+                            healer = self.med_cat,
                             biome = self.biome_selected,
                             camp_bg = convert_camp[self.selected_camp_tab],
                             symbol=self.symbol_selected,

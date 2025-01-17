@@ -447,8 +447,8 @@ class ClanSettingsScreen(Screens):
         f"StarClan Cats: {starclan}\n" \
         f"Dark Forest Cats: {df}\n" \
         f"Unknown Residence Cats: {ur}\n" \
-        f"Medicine Cats: {med_cats}\n" \
-        f"Medicine Cat Apprentices: {med_cat_apprentices}\n" \
+        f"healers: {med_cats}\n" \
+        f"healer Apprentices: {med_cat_apprentices}\n" \
         f"Warriors: {warriors}\n" \
         f"Warrior Apprentices: {warrior_apprentices}\n" \
         f"Mediators: {mediators}\n" \
@@ -464,12 +464,14 @@ class ClanSettingsScreen(Screens):
             ui_scale(pygame.Rect((150, 200), (530, 345))),
             object_id=get_text_box_theme("#text_box_30_horizcenter"),
         )
-        
-        self.checkboxes_text["achievements"] = UIImageButton(
-            ui_scale(pygame.Rect((670, 1290), (240, 60))),
-            "",
-            object_id="#achivements_button",
-            manager=MANAGER)
+
+        self.checkboxes_text["achievements"] = UISurfaceImageButton(
+            ui_scale(pygame.Rect((335, 615), (120, 30))),
+            "achievements",
+            get_button_dict(ButtonStyles.SQUOVAL, (120, 30)),
+            object_id="@buttonstyles_squoval",
+            manager=MANAGER,
+        )
 
     def refresh_checkboxes(self):
         """

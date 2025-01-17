@@ -640,7 +640,7 @@
         "chance_of_success": 80,
         "success_outcomes": [
             {
-                "text": "You remove the stale prey and prevent any potential sickness in the camp. The medicine cat thanks you.",
+                "text": "You remove the stale prey and prevent any potential sickness in the camp. The healer thanks you.",
                 "exp": 10,
                 "weight": 20
             },
@@ -891,12 +891,12 @@
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "The medicine cat runs out of marigold and asks for your help to find some. It's a chance to help the Clan and learn more about herbs.",
-        "decline_text": "You respectfully decline, not feeling confident in your knowledge of herbs. The medicine cat understands and decides to search themselves.",
+        "intro_text": "The healer runs out of marigold and asks for your help to find some. It's a chance to help the Clan and learn more about herbs.",
+        "decline_text": "You respectfully decline, not feeling confident in your knowledge of herbs. The healer understands and decides to search themselves.",
         "chance_of_success": 65,
         "success_outcomes": [
             {
-                "text": "You manage to find a patch of marigold and return it to the medicine cat. They thank you, and you feel proud of your contribution.",
+                "text": "You manage to find a patch of marigold and return it to the healer. They thank you, and you feel proud of your contribution.",
                 "exp": 10,
                 "weight": 20
             },
@@ -933,7 +933,7 @@
                 ]
             },
             {
-                "text": "You might not be a medicine cat, but for some reason, herb identification has always been easy for you. You remember seeing some flowers while on patrol yesterday, and sure enough, when you return to that spot, you find a thick patch of marigold! r_m is thrilled. There's even enough flowers for you to take one for yourself!",
+                "text": "You might not be a healer, but for some reason, herb identification has always been easy for you. You remember seeing some flowers while on patrol yesterday, and sure enough, when you return to that spot, you find a thick patch of marigold! r_m is thrilled. There's even enough flowers for you to take one for yourself!",
                 "exp": 10,
                 "weight": 20,
                 "accessory": [
@@ -1127,7 +1127,7 @@
                 "weight": 20
             },
             {
-                "text": "You ask if your_crush wants to hear a story, and they accept. You relate a tale of a long-ago c_n medicine cat going on a journey to find a legendary herb to save their mate from a terrible illness while your_crush listens, enraptured. Your storytelling is skillful enough to distract them from their worries, and when you're finished, they seem much lighter.",
+                "text": "You ask if your_crush wants to hear a story, and they accept. You relate a tale of a long-ago c_n healer going on a journey to find a legendary herb to save their mate from a terrible illness while your_crush listens, enraptured. Your storytelling is skillful enough to distract them from their worries, and when you're finished, they seem much lighter.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": [
@@ -1319,7 +1319,7 @@
                 "weight": 20
             },
             {
-                "text": "Seaweed! You decide to gather some of the pieces to take it to the medicine cat den. Wash it out to remove the salt and it could be beneficial as makeshift cobwebs to dress wounds.",
+                "text": "Seaweed! You decide to gather some of the pieces to take it to the healer den. Wash it out to remove the salt and it could be beneficial as makeshift cobwebs to dress wounds.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": [

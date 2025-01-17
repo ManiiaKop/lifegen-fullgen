@@ -110,8 +110,8 @@
 			"mediator apprentice",
 			"mediator",
 			"queen's apprentice",
-			"medicine cat apprentice",
-			"medicine cat",
+			"healer apprentice",
+			"healer",
 			"deputy",
 			"leader"
 		],
@@ -121,9 +121,9 @@
 			"warrior",
 			"mediator apprentice",
 			"mediator",
-			"medicine cat apprentice",
+			"healer apprentice",
 			"queen's apprentice",
-			"medicine cat",
+			"healer",
 			"deputy",
 			"leader"
 		]
@@ -176,7 +176,7 @@
 			"warrior",
 			"deputy",
 			"leader",
-			"medicine cat",
+			"healer",
 			"mediator"
 		],
 		"random_status_constraint": [
@@ -184,8 +184,8 @@
 			"warrior",
 			"mediator apprentice",
 			"mediator",
-			"medicine cat apprentice",
-			"medicine cat",
+			"healer apprentice",
+			"healer",
 			"deputy",
 			"leader"
 		]

@@ -427,7 +427,7 @@ class MedDenScreen(Screens):
 
         # get the med cats
         self.meds = get_alive_status_cats(
-            Cat, ["medicine cat", "medicine cat apprentice"], sort=True
+            Cat, ["healer", "healer apprentice"], sort=True
         )
 
         if not self.meds:
@@ -680,8 +680,6 @@ class MedDenScreen(Screens):
                 ),
                 manager=MANAGER,
             )
-            except:
-                continue
 
     def exit_screen(self):
         self.meds_messages.kill()

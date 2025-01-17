@@ -122,7 +122,7 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "A new kit has been born in the camp. It's your responsibility to check the kit's health and assure the queen everything is alright.",
-        "decline_text": "Feeling unsure, you decide to seek advice from an older medicine cat before conducting the check-up. The queen is patient and trusts your caution.",
+        "decline_text": "Feeling unsure, you decide to seek advice from an older healer before conducting the check-up. The queen is patient and trusts your caution.",
         "chance_of_success": 50,
         "success_outcomes": [
             {
@@ -263,8 +263,8 @@
         "max_cats": 6,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "The Clan's medicine cats have gone out to fetch herbs, leaving a couple of sick and injured Clanmates in the medicine den. You notice a patient in pain, and you know exactly how to treat them, but you don't want to get in trouble for touching the herbs.",
-        "decline_text": "You decide to sit back and wait for the unshunned medicine cats to return.",
+        "intro_text": "The Clan's healers have gone out to fetch herbs, leaving a couple of sick and injured Clanmates in the medicine den. You notice a patient in pain, and you know exactly how to treat them, but you don't want to get in trouble for touching the herbs.",
+        "decline_text": "You decide to sit back and wait for the unshunned healers to return.",
         "chance_of_success": 50,
         "success_outcomes": [
             {
@@ -465,7 +465,7 @@
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "o_c_n's medicine cat comes to you after a halfmoon meeting, requesting advice.",
+        "intro_text": "o_c_n's healer comes to you after a halfmoon meeting, requesting advice.",
         "decline_text": "You don't have the time to care for cats from another Clan.",
         "chance_of_success": 50,
         "success_outcomes": [
@@ -493,12 +493,12 @@
         ],
         "fail_outcomes": [
             {
-                "text": "After a few minutes of pointless complaining, you tell the medicine cat to shut up. It's a part of the job to mend unruly Clanmates, and it is a mediator's job to settle the arguments.",
+                "text": "After a few minutes of pointless complaining, you tell the healer to shut up. It's a part of the job to mend unruly Clanmates, and it is a mediator's job to settle the arguments.",
                 "exp": 0,
                 "weight": 20
             },
             {
-                "text": "You tell the medicine cat that they can talk to a mediator about it.",
+                "text": "You tell the healer that they can talk to a mediator about it.",
                 "exp": 0,
                 "weight": 20
             }

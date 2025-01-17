@@ -171,8 +171,8 @@
     ],
     "introspective_warrior_4": [
         [
-            "medicine_cat",
-            "medicine_cat_apprentice",
+            "healer",
+            "healer_apprentice",
             "introspective",
             "you_blind"
         ],
@@ -310,7 +310,7 @@
     "assertive_mentor": [
         [
             "apprentice",
-            "medicine_cat_apprentice",
+            "healer_apprentice",
             "mediator_apprentice",
             "assertive",
             "unlawful",
@@ -487,8 +487,8 @@
     ],
     "assertive_medapp1": [
         [
-            "medicine_cat_apprentice",
-            "medicine_cat",
+            "healer_apprentice",
+            "healer",
             "assertive",
             "unlawful",
             "silly",
@@ -673,8 +673,8 @@
     ],
     "assertive_13": [
         [
-            "medicine_cat_apprentice",
-            "medicine_cat",
+            "healer_apprentice",
+            "healer",
             "assertive",
             "you_blind",
             "they_went_blind"
@@ -882,8 +882,8 @@
     ],
     "assertivewarrior_med7": [
         [
-            "medicine_cat",
-            "medicine_cat_apprentice",
+            "healer",
+            "healer_apprentice",
             "platonic_like",
             "assertive",
             "cool",
@@ -902,8 +902,8 @@
     ],
     "assertive_med6": [
         [
-            "medicine_cat",
-            "medicine_cat_apprentice",
+            "healer",
+            "healer_apprentice",
             "assertive",
             "you_blind"
         ],
@@ -919,8 +919,8 @@
     ],
     "assertivewarrior_med5": [
         [
-            "medicine_cat",
-            "medicine_cat_apprentice",
+            "healer",
+            "healer_apprentice",
             "mediator_apprentice",
             "mediator",
             "queen's_apprentice",
@@ -938,8 +938,8 @@
     ],
     "assertiveapp_medapp1": [
         [
-            "medicine_cat_apprentice",
-            "medicine_cat",
+            "healer_apprentice",
+            "healer",
             "platonic_like",
             "assertive",
             "unabashed",
@@ -954,7 +954,7 @@
     ],
     "assertive_medapp": [
         [
-            "you_medicine_cat_apprentice",
+            "you_healer_apprentice",
             "they_any",
             "they_older",
             "assertive",
@@ -964,7 +964,7 @@
             "they_blind"
         ],
         [
-            "How's it going, mini-medicine cat? Herbal life treating you well?",
+            "How's it going, mini-healer? Herbal life treating you well?",
             "Don't worry, I'm not going to run headfirst into trouble and injure myself today.",
             "As for tomorrow? Who knows!"
         ]
@@ -1033,7 +1033,7 @@
         [
             "apprentice",
             "queen's_apprentice",
-            "medicine_cat_apprentice",
+            "healer_apprentice",
             "mediator_apprentice",
             "sweet",
             "you_blind",
@@ -1048,7 +1048,7 @@
         [
             "apprentice",
             "queen's_apprentice",
-            "medicine_cat_apprentice",
+            "healer_apprentice",
             "mediator_apprentice",
             "sweet",
             "you_blind",
@@ -1087,7 +1087,7 @@
     ],
     "sweet_warrior_9": [
         [
-            "medicine_cat_apprentice",
+            "healer_apprentice",
             "sweet",
             "you_blind",
             "they_blind"
@@ -1113,7 +1113,7 @@
     "sweet_warrior_11": [
         [
             "warrior",
-            "medicine_cat",
+            "healer",
             "mediator",
             "queen",
             "sweet",
@@ -1129,7 +1129,7 @@
     "sweet_warrior_12": [
         [
             "warrior",
-            "medicine_cat",
+            "healer",
             "mediator",
             "queen",
             "sweet",
@@ -1155,7 +1155,7 @@
     ],
     "sweet_warrior_14": [
         [
-            "medicine_cat",
+            "healer",
             "sweet",
             "you_blind",
             "they_blind"
@@ -1584,8 +1584,8 @@
     "upstanding_warrior4": [
         [
             "upstanding",
-            "medicine_cat",
-            "medicine_cat_apprentice",
+            "healer",
+            "healer_apprentice",
             "you_blind",
             "they_blind",
             "they_hearing"
@@ -1783,7 +1783,7 @@
         [
             "upstanding",
             "warrior",
-            "medicine_cat",
+            "healer",
             "mediator",
             "queen",
             "you_blind",
@@ -1798,8 +1798,8 @@
     "upstanding_warrior13": [
         [
             "upstanding",
-            "medicine_cat",
-            "medicine_cat_apprentice",
+            "healer",
+            "healer_apprentice",
             "leafbare",
             "they_blind"
         ],
@@ -2201,7 +2201,7 @@
             "they_blind"
         ],
         [
-            "Why me? I mean seriously? I'm t_c, the strong independent warrior! Not some medicine cat patient.",
+            "Why me? I mean seriously? I'm t_c, the strong independent warrior! Not some healer patient.",
             "Oh- uh, sorry r_m, no offense...",
             "Mouse-dung- I think {PRONOUN/r_m/subject}{VERB/t_c/'re/'s} offended, y_c... Can you go talk to {PRONOUN/r_m/object}? So I don't have to?"
         ]
@@ -2900,7 +2900,7 @@
             "Ouch, probably shouldn't walk- oh, y_c, I didn't see you here. What are you doing in the medicine den?",
             "[You show t_c your paw, there's a thorn buried deeply in the pad. You sniff quietly as r_q grooms your fur in an attempt to soothe your sorrows.]",
             "Oh, that looks nasty, I'm so sorry. I'm guessing r_m will have to pull that out for you. It's okay, don't worry, I'll be here.",
-            "[You breathe in deeply as the medicine cat begins to pull on the thorn, the queen beside you is offering strong words of support while t_c watches with a soft smile.]",
+            "[You breathe in deeply as the healer begins to pull on the thorn, the queen beside you is offering strong words of support while t_c watches with a soft smile.]",
             "[You shut your eyes fiercely. There's a moment of pain. Then nothing. You open your eyes and look down, the thorn is gone!]",
             "Well done, y_c! That takes some real strength! Between us, you're tougher than some warriors I know. Foster that strength and there's no limit on what you can do."
         ]
@@ -2946,7 +2946,7 @@
         [
             "Hey y_c! How is my favourite little {PRONOUN/y_c/sibling}?",
             "Guess what? Guess! C'mon, I would never trick you- don't look at me like that! Just guess!",
-            "NOPE! We got chores! Yippee! I've got to go with the medicine cats while they gather herbs and I thought, hey, perfect opportunity to put you to work!",
+            "NOPE! We got chores! Yippee! I've got to go with the healers while they gather herbs and I thought, hey, perfect opportunity to put you to work!",
             "Nah! Just playing! But seriously, you wanna get out of camp for a bit? C'mon it's my treat, I'll give you a badger ride the whole time. Let's go!"
         ]
     ],
@@ -3023,7 +3023,7 @@
     ],
     "stable_warrior_To_Med_Apprentice_01": [
         [
-            "medicine_cat_apprentice",
+            "healer_apprentice",
             "stable",
             "you_blind",
             "they_blind"
@@ -3087,7 +3087,7 @@
         ],
         [
             "[You're currently on patrol with r_w when r_m comes through, in {PRONOUN/r_m/poss} mouth holding bundles of herbs. {PRONOUN/r_m/subject/CAP} {VERB/r_m/look/looks} up and {VERB/r_m/see/sees} you and {VERB/r_m/run/runs} over, panic in every step. Your eyes widen in fear-]",
-            "[{PRONOUN/r_m/subject/CAP} {VERB/r_m/explain/explains} your mate is currently in the medicine den and {PRONOUN/t_c/poss} condition is concerning. You quickly mumble an apology to both the medicine cat and warrior who are left in your dust.]",
+            "[{PRONOUN/r_m/subject/CAP} {VERB/r_m/explain/explains} your mate is currently in the medicine den and {PRONOUN/t_c/poss} condition is concerning. You quickly mumble an apology to both the healer and warrior who are left in your dust.]",
             "[You bolt into the medicine den to find t_c curled in a tight ball, {PRONOUN/t_c/subject} {VERB/t_c/look/looks} up and {PRONOUN/t_c/poss} eyes soften. Despite looking ill and frail, {PRONOUN/t_c/poss} warmth always returns at the sight of you.]",
             "y_c, hello... Heh... Yeah not doing so well. I'm sorry Love, I don't mean to upset you.",
             "[You lay down next to {PRONOUN/t_c/object} and rest your head on {PRONOUN/t_c/poss} back, the two of you warm and hopeful in each other's company.]",
@@ -3114,25 +3114,25 @@
     "stable_mate_16": [
         [
             "from_mate",
-            "medicine_cat",
+            "healer",
             "you_pregnant",
             "stable",
             "you_blind",
             "they_blind"
         ],
         [
-            "Look at you dear, you look so tired taking care of everycat else- no... no! Please lay down, even medicine cats need a break.",
+            "Look at you dear, you look so tired taking care of everycat else- no... no! Please lay down, even healers need a break.",
             "Especially you. You're so hardworking and dedicated in everything you do. Our kits are going to be so lucky they have you to look up to.",
             "I love you dear, and I know our kits will too. So, what can I do to help you? Without you getting up- please don't look at me like that- you'll be back on your paws soon enough.",
             "Tell you what, you teach the kits to be hardworking, strong, and independent. You teach them they can always talk to their parents and we'll love them no matter what.",
             "I'll teach them to nag you to have a break from time to time. If you won't listen to me, maybe you'll listen to them. Work isn't everything, Love.",
-            "Resting is just as important. You're a medicine cat, isn't this something you tell the warriors~?"
+            "Resting is just as important. You're a healer, isn't this something you tell the warriors~?"
         ]
     ],
     "stable_mate_17": [
         [
             "from_mate",
-            "medicine_cat",
+            "healer",
             "they_pregnant",
             "stable"
         ],
@@ -3140,7 +3140,7 @@
             "I'm so thankful to have a mate like you, y_c. You already know what happens, how this is going to work and... I guess, I'll be trusting you to make the decisions.",
             "[You freeze and whip around to face your mate. t_c lays in your moss bedding in the medicine den, watching you as you sort through your herb supply.]",
             "[You frown slightly, 'what do you mean by that?']",
-            "Well, you're a medicine cat. You've seen cats give birth, assisted in some cases and are there to guide the parents. I just- well... I'm so excited to be a parent but I'm worried.",
+            "Well, you're a healer. You've seen cats give birth, assisted in some cases and are there to guide the parents. I just- well... I'm so excited to be a parent but I'm worried.",
             "I'm worried that once the kits are here, I'll have no plan. I won't know what to do- I don't want to make mistakes, I don't want to do anything that could- that could hurt them...",
             "I just, I guess I want to do this right.",
             "[You lay down in front of your mate and hold {PRONOUN/t_c/poss} paws with your own. You look at {PRONOUN/t_c/object} and smile reassuringly.]",
@@ -3307,7 +3307,7 @@
             "they_warrior",
             "you_queen",
             "you_mediator",
-            "you_medicine_cat"
+            "you_healer"
         ],
         [
             "Hi, y_c! StarClan, it's scorching outside!",
@@ -3483,8 +3483,8 @@
         [
             "they_neurotic",
             "they_warrior",
-            "you_medicine_cat",
-            "you_medicine_cat_apprentice",
+            "you_healer",
+            "you_healer_apprentice",
             "min_platonic_10"
         ],
         [
@@ -3512,13 +3512,13 @@
     "youdeaf_R88": [
         [
             "only_you_deaf",
-            "you_medicine_cat",
+            "you_healer",
             "they_warrior",
             "they_deaf",
             "max_dislike_10"
         ],
         [
-            "[t_c stops in the entryway of the medicine cat den, stomping twice to get your attention. In {PRONOUN/t_c/poss} mouth is a bundle of moss.]",
+            "[t_c stops in the entryway of the healer den, stomping twice to get your attention. In {PRONOUN/t_c/poss} mouth is a bundle of moss.]",
             "[You can feel a thankful trill bubble up in your throat before you carefully take the offering.]",
             "[Your confusion must have been on your face, since {PRONOUN/t_c/subject} {VERB/t_c/motion/motions} with a tap to {PRONOUN/t_c/poss} chest once, then once to {PRONOUN/t_c/poss} shoulder. Then, {PRONOUN/t_c/subject} {VERB/t_c/move/moves} the forepaw up to flex {PRONOUN/t_c/poss} claws.]",
             "[It was training for the warrior apprentices it seems!]",
@@ -3528,7 +3528,7 @@
     "youdeaf_R90": [
         [
             "only_you_deaf",
-            "you_medicine_cat",
+            "you_healer",
             "they_warrior",
             "they_deaf",
             "min_platonic_20"
@@ -3909,11 +3909,11 @@
             "Hello, hello, y_c. I'm heading out, is there anything you would like me to grab for the nursery? I've got plenty of time on my paws today so whatever you need, just say the words."
         ]
     ],
-    "TinyTeddy_stable_theywarrior_youmedicinecat_01": [
+    "TinyTeddy_stable_theywarrior_youhealer_01": [
         [
             "they_warrior",
             "they_stable",
-            "you_medicine_cat"
+            "you_healer"
         ],
         [
             "[You stumble into camp, your mouth full with bundles of herbs. t_c spots you from across the clearing- right in the middle of being handed instructions from d_n and l_n. {PRONOUN/t_c/subject/CAP} quickly forget the meeting and bolt in your direction.]",
@@ -3975,9 +3975,9 @@
             "no_kit",
             "they_silly",
             "they_apprentice",
-            "they_medicine_cat_apprentice",
+            "they_healer_apprentice",
             "they_warrior",
-            "they_medicine_cat",
+            "they_healer",
             "min_platonic_20",
             "connected"
         ],
@@ -4269,15 +4269,15 @@
             "they_mediator_apprentice",
             "they_queen",
             "they_queen's_apprentice",
-            "you_medicine_cat",
-            "you_medicine_cat_apprentice",
+            "you_healer",
+            "you_healer_apprentice",
             "they_blind",
             "you_blind"
         ],
         [
             "Um... sorry, y_c? I don't mean to bother you, but plove_r_c has a bit of a sore throat. Could I have some honey from your stores to give them?",
             "O-of course, you could give it to them, too! I don't mean to overstep.",
-            "[There's not much that can go terribly wrong with honey. Since t_c seems to know {PRONOUN/t_c/poss} way around medicine despite not being a medicine cat, you give {PRONOUN/t_c/object} a dollop of honey on a stick and send {PRONOUN/t_c/object} on {PRONOUN/t_c/poss} way.]"
+            "[There's not much that can go terribly wrong with honey. Since t_c seems to know {PRONOUN/t_c/poss} way around medicine despite not being a healer, you give {PRONOUN/t_c/object} a dollop of honey on a stick and send {PRONOUN/t_c/object} on {PRONOUN/t_c/poss} way.]"
         ]
     ],
     "neurotic_skillsleeper_SQ6": [
@@ -4739,7 +4739,7 @@
             "they_warrior",
             "they_deputy",
             "they_leader",
-            "they_medicine_cat"
+            "they_healer"
         ],
         [
             "Hey, love. I saved you this from out on patrol.",
@@ -4788,7 +4788,7 @@
             "they_leader",
             "they_deputy",
             "they_warrior",
-            "they_medicine_cat"
+            "they_healer"
         ],
         [
             "Hey there, beautiful. I brought this flower back for you from patrol.",
@@ -4848,7 +4848,7 @@
             "no_kit",
             "they_neurotic",
             "they_warrior",
-            "you_medicine_cat",
+            "you_healer",
             "you_mediator",
             "you_queen",
             "you_elder",
@@ -4887,8 +4887,8 @@
             "they_apprentice",
             "they_deputy",
             "they_leader",
-            "they_medicine_cat",
-            "they_medicine_cat_apprentice"
+            "they_healer",
+            "they_healer_apprentice"
         ],
         [
             "I miss d_c. Every time I go out on patrol, I find myself looking at all the flowers and rocks and plump prey and wishing d_c were still here to see it all.",
@@ -4914,7 +4914,7 @@
     "youdeaf_R58": [
         [
             "only_you_deaf",
-            "you_medicine_cat",
+            "you_healer",
             "they_deaf",
             "they_warrior",
             "they_apprentice",
@@ -5088,7 +5088,7 @@
     ],
     "brooding_tomedapp1_AJ": [
         [
-            "you_medicine_cat_apprentice",
+            "you_healer_apprentice",
             "brooding",
             "they_warrior",
             "they_apprentice",
@@ -5098,7 +5098,7 @@
             "they_blind"
         ],
         [
-            "Hmph. Looks like they're just letting any cat become a medicine cat, now.",
+            "Hmph. Looks like they're just letting any cat become a healer, now.",
             "Aren't you supposed to have some kind of special connection to StarClan?",
             "Even I could probably sit around sorting herbs all day ..."
         ]
@@ -5110,8 +5110,8 @@
             "brooding",
             "they_apprentice",
             "they_warrior",
-            "they_medicine_cat",
-            "they_medicine_cat_apprentice",
+            "they_healer",
+            "they_healer_apprentice",
             "they_deputy",
             "they_blind"
         ],
@@ -5129,8 +5129,8 @@
             "brooding",
             "they_apprentice",
             "they_warrior",
-            "they_medicine_cat",
-            "they_medicine_cat_apprentice",
+            "they_healer",
+            "they_healer_apprentice",
             "they_deputy",
             "clan_has_kits"
         ],
@@ -5148,8 +5148,8 @@
             "they_apprentice",
             "they_warrior",
             "they_neurotic",
-            "you_medicine_cat",
-            "you_medicine_cat_apprentice",
+            "you_healer",
+            "you_healer_apprentice",
             "platonic_like",
             "trust",
             "they_blind"
@@ -5213,7 +5213,7 @@
             "Yaknow, y_c, I never really found you all that convincing as a warrior.",
             "Real warriors are strong! We're fearless! We never back down from a fight!",
             "But in you, I sense ... uncertainty.",
-            "Maybe you should see the medicine cat about it."
+            "Maybe you should see the healer about it."
         ]
     ],
     "stable_16": [

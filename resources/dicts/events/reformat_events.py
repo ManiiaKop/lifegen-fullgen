@@ -117,13 +117,13 @@ def reformat(path):
 
         if "kitten" in path:
             new_format["m_c"]["age"].append("kitten")
-        if "apprentice" in path or "medicine_cat_app" in event["tags"] or "mediator" in path:
+        if "apprentice" in path or "healer_app" in event["tags"] or "mediator" in path:
             new_format["m_c"]["age"].append("adolescent")
         if "warrior" in path or "deputy" in path or "leader" in path or "mediator" in path:
             new_format["m_c"]["age"].append("young adult")
             new_format["m_c"]["age"].append("adult")
             new_format["m_c"]["age"].append("senior adult")
-        if "medicine" in path and "medicine_cat_app" not in event["tags"]:
+        if "medicine" in path and "healer_app" not in event["tags"]:
             new_format["m_c"]["age"].append("young adult")
             new_format["m_c"]["age"].append("adult")
             new_format["m_c"]["age"].append("senior adult")
@@ -141,9 +141,9 @@ def reformat(path):
             new_format["m_c"]["status"].append("kitten")
         if "apprentice" in path:
             new_format["m_c"]["status"].append("apprentice")
-        if "medicine_cat_app" in event["tags"]:
+        if "healer_app" in event["tags"]:
             new_format["m_c"]["status"].append("healer apprentice")
-            event["tags"].remove("medicine_cat_app")
+            event["tags"].remove("healer_app")
         if "warrior" in path:
             new_format["m_c"]["status"].append("warrior")
             new_format["m_c"]["status"].append("deputy")
@@ -152,10 +152,10 @@ def reformat(path):
             new_format["m_c"]["status"].append("deputy")
         if "leader" in path and "leader" not in new_format["m_c"]["status"]:
             new_format["m_c"]["status"].append("leader")
-        if "medicine" in path and "medicine_cat_app" not in event["tags"]:
+        if "medicine" in path and "healer_app" not in event["tags"]:
             new_format["m_c"]["status"].append("healer")
-            if "medicine_cat" in event["tags"]:
-                event["tags"].remove("medicine_cat")
+            if "healer" in event["tags"]:
+                event["tags"].remove("healer")
         if "mediator" in path:
             new_format["m_c"]["status"].append("mediator")
             new_format["m_c"]["status"].append("mediator apprentice")

@@ -1073,15 +1073,17 @@ class Genotype:
         except:
             par2 = par2
         
-        for breed in par1.breeds:
-            if par1.breeds[breed] >= 0.1:
-                self.breeds[breed] = par1.breeds[breed] / 2 
-        for breed in par2.breeds:
-            if par2.breeds[breed] >= 0.1:
-                if self.breeds.get(breed, False):
-                    self.breeds[breed] += par2.breeds[breed] / 2
-                else:
-                    self.breeds[breed] = par2.breeds[breed] / 2 
+        if par1:
+            for breed in par1.breeds:
+                if par1.breeds[breed] >= 0.1:
+                    self.breeds[breed] = par1.breeds[breed] / 2
+        if par2:
+            for breed in par2.breeds:
+                if par2.breeds[breed] >= 0.1:
+                    if self.breeds.get(breed, False):
+                        self.breeds[breed] += par2.breeds[breed] / 2
+                    else:
+                        self.breeds[breed] = par2.breeds[breed] / 2 
         
         self.KitEyes(par1, par2)
 

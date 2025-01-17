@@ -1410,10 +1410,10 @@
             "status": [
                 "apprentice",
                 "mediator apprentice",
-                "medicine cat apprentice",
+                "healer apprentice",
                 "warrior",
                 "mediator",
-                "medicine cat",
+                "healer",
                 "deputy",
                 "leader",
                 "elder"
@@ -5989,7 +5989,7 @@
             "any"
         ],
         "weight": 20,
-        "event_text": "m_c fought a rogue and, while {PRONOUN/m_c/subject} drove the trespasser away, {PRONOUN/m_c/subject} needed to be rushed to the medicine cat den afterwards.",
+        "event_text": "m_c fought a rogue and, while {PRONOUN/m_c/subject} drove the trespasser away, {PRONOUN/m_c/subject} needed to be rushed to the healer den afterwards.",
         "m_c": {
             "age": [
                 "senior",
@@ -6302,8 +6302,8 @@
                 "warrior",
                 "mediator",
                 "mediator apprentice",
-                "medicine cat",
-                "medicine cat apprentice"
+                "healer",
+                "healer apprentice"
             ],
             "not_trait": [
                 "loyal",
@@ -6396,8 +6396,8 @@
                 "warrior",
                 "mediator",
                 "mediator apprentice",
-                "medicine cat",
-                "medicine cat apprentice"
+                "healer",
+                "healer apprentice"
             ],
             "not_trait": [
                 "loyal"
@@ -6688,8 +6688,8 @@
                 "deputy",
                 "leader",
                 "warrior",
-                "medicine cat",
-                "medicine cat apprentice"
+                "healer",
+                "healer apprentice"
             ]
         },
         "injury": [
@@ -6742,8 +6742,8 @@
                 "warrior",
                 "leader",
                 "deputy",
-                "medicine cat",
-                "medicine cat apprentice"
+                "healer",
+                "healer apprentice"
             ]
         },
         "injury": [
@@ -6793,8 +6793,8 @@
                 "warrior",
                 "mediator",
                 "mediator apprentice",
-                "medicine cat",
-                "medicine cat apprentice"
+                "healer",
+                "healer apprentice"
             ]
         },
         "injury": [
@@ -6981,8 +6981,8 @@
             "status": [
                 "apprentice",
                 "warrior",
-                "medicine cat",
-                "medicine cat apprentice",
+                "healer",
+                "healer apprentice",
                 "leader",
                 "deputy"
             ],

@@ -975,6 +975,10 @@ class Events:
                 replacements["parent2"] = str(Cat.all_cats.get(adoptive_parents[1]).name)
             if siblings:
                 birth_value += "_siblings"
+                print("Siblings list:", siblings)
+                if None in siblings:
+                    siblings.remove(None)
+                    print("Removed None from siblings.")
                 num_siblings = len(siblings)
                 if num_siblings == 1:
                     replacements["insert_siblings"] = f"{siblings[0].name}"
@@ -2328,14 +2332,14 @@ class Events:
                 if game.clan.deputy:
                     if game.clan.deputy.ID == cat.ID:
                         game.clan.deputy = None
-                if game.clan.medicine_cat:
-                    if game.clan.medicine_cat.ID == cat.ID:
+                if game.clan.healer:
+                    if game.clan.healer.ID == cat.ID:
                         if game.clan.med_cat_list:  # If there are other med cats
-                            game.clan.medicine_cat = Cat.fetch_cat(
+                            game.clan.healer = Cat.fetch_cat(
                                 game.clan.med_cat_list[0]
                             )
                         else:
-                            game.clan.medicine_cat = None
+                            game.clan.healer = None
 
                 game.cat_to_fade.append(cat.ID)
                 cat.set_faded()
@@ -2679,13 +2683,13 @@ class Events:
         if not war_events or not enemy_clan:
             return
 
-        if not game.clan.leader or not game.clan.deputy or not game.clan.medicine_cat:
+        if not game.clan.leader or not game.clan.deputy or not game.clan.healer:
             for event in war_events:
                 if not game.clan.leader and "lead_name" in event:
                     war_events.remove(event)
                 if not game.clan.deputy and "dep_name" in event:
                     war_events.remove(event)
-                if not game.clan.medicine_cat and "med_name" in event:
+                if not game.clan.healer and "med_name" in event:
                     war_events.remove(event)
 
         event = random.choice(war_events)
@@ -2778,8 +2782,8 @@ class Events:
         if not cat_dead:
             if cat.status == "deputy" and game.clan.deputy is None:
                 game.clan.deputy = cat
-            if cat.status == 'healer' and game.clan.medicine_cat is None:
-                game.clan.medicine_cat = cat
+            if cat.status == 'healer' and game.clan.healer is None:
+                game.clan.healer = cat
 
             # retiring to elder den
             if (
