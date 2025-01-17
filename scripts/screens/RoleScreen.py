@@ -615,7 +615,7 @@ class RoleScreen(Screens):
             )
         elif self.the_cat.status == "healer":
             output = (
-                f"{self.the_cat.name} is a <b>healer</b>. healers are the healers of the Clan. "
+                f"{self.the_cat.name} is a <b>healer</b>. Healers are the healers of the Clan. "
                 f"They treat "
                 f"injuries and illnesses with herbal remedies. Unlike warriors, healers are not expected "
                 f"to hunt and fight for the Clan. In addition to their healing duties, healers also have "
@@ -657,7 +657,7 @@ class RoleScreen(Screens):
             output = (
                 f"{self.the_cat.name} is a <b>healer apprentice</b>, training to become a full healer. "
                 f"Kits can be made healer apprentices at six moons of age, where they will learn how to "
-                f"heal their Clanmates and commune with StarClan. healer apprentices are typically chosen "
+                f"heal their Clanmates and commune with StarClan. Healer apprentices are typically chosen "
                 f"for their interest in healing and/or their connecting to StarClan. Apprentices take the suffix "
                 f"-paw, to represent the path their paws take towards adulthood."
             )

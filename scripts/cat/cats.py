@@ -24,7 +24,7 @@ from scripts.conditions import Illness, Injury, PermanentCondition, get_amount_c
 import bisect
 
 from scripts.utility import get_personality_compatibility, event_text_adjust, update_sprite, \
-    leader_ceremony_text_adjust, get_cluster
+    leader_ceremony_text_adjust, get_cluster, create_new_cat
 from scripts.game_structure.game_essentials import game
 from scripts.cat_relations.relationship import Relationship
 from scripts.game_structure import image_cache
@@ -235,8 +235,23 @@ class Cat:
             if not parent1:
                 self.genotype.KitGenerator(Cat.all_cats[parent2].genotype, extrapar)
             else:
-                try:    
+                second_parent = None
+                try:
+                    if parent2 is None:
+                        print("parent2 is none-- making a new guy")
+                        second_parent = create_new_cat(
+                            Cat,
+                            loner=True,
+                            status="loner",
+                            alive=True,
+                            thought=f"Hopes {Cat.all_cats[parent1].name} is doing okay",
+                            age=Cat.all_cats[parent1].moons,
+                            outside=True)[0]
+                        parent2 = second_parent.ID
+                        print("Second Parent:", second_parent.name, second_parent)
                     self.genotype.KitGenerator(Cat.all_cats[parent1].genotype, Cat.all_cats.get(parent2, extrapar))
+                    if second_parent:
+                        game.clan.remove_cat(second_parent.ID)
                 except Exception as e:
                     print("KitGenerator error")
                     print(e)
@@ -1631,7 +1646,7 @@ class Cat:
                     only be true for non-timeskip status changes. """
         old_status = self.status
         self.status = new_status
-        self.name.status = new_status
+        # self.name.status = new_status
 
         self.update_mentor()
         for app in self.apprentice.copy():
@@ -4348,10 +4363,6 @@ class Cat:
                 "dead": self.dead,
                 "paralyzed": self.pelt.paralyzed,
                 "no_kits": self.no_kits,
-                "exiled": self.exiled,
-                "genotype": self.genotype.toJSON(),
-                "white_pattern" : self.genotype.white_pattern,
-                "chim_white" : self.genotype.chimerageno.white_pattern if self.genotype.chimerageno else "No",
                 "no_retire": self.no_retire,
                 "no_mates": self.no_mates,
                 "exiled": self.exiled,

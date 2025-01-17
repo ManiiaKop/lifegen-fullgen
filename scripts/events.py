@@ -272,6 +272,9 @@ class Events:
             insert = ""
             if ghost_names:
                 insert = adjust_list_text(ghost_names)
+            if not isinstance(faded_kits, list):
+                print("correcting faded_kits to a list. what the hell")
+                faded_kits = []
 
             if len(Cat.dead_cats) > 1 and insert:
                 event = f"The past moon, {insert} have taken their place in StarClan. {game.clan.name}Clan mourns their " \
@@ -975,10 +978,13 @@ class Events:
                 replacements["parent2"] = str(Cat.all_cats.get(adoptive_parents[1]).name)
             if siblings:
                 birth_value += "_siblings"
-                print("Siblings list:", siblings)
-                if None in siblings:
-                    siblings.remove(None)
-                    print("Removed None from siblings.")
+                for sib in siblings:
+                    try:
+                        print(sib.name)
+                    except AttributeError as e:
+                        print(e)
+                        print("Removing", sib, "from siblings. Nonetype bullshit")
+                        siblings.remove(sib)
                 num_siblings = len(siblings)
                 if num_siblings == 1:
                     replacements["insert_siblings"] = f"{siblings[0].name}"

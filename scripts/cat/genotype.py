@@ -1092,7 +1092,7 @@ class Genotype:
     
         if randint(1, 5) == 1:
             self.whitegrade = par1.whitegrade
-        elif randint(1, 5) == 1:
+        elif randint(1, 5) == 1 and par2:
             self.whitegrade = par2.whitegrade
 
         if (par1.vitiligo and par2.vitiligo):

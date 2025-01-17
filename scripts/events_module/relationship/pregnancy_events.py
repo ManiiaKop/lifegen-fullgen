@@ -604,7 +604,7 @@ class Pregnancy_Events:
                 if cat.exiled:
                     kit.status = "loner"
                     name = choice(names.names_dict["normal_prefixes"])
-                    kit.name = Name('loner', prefix=name, suffix="")
+                    kit.name = Name(prefix=name, suffix="")
                 if other_cat and not other_cat[0].outside:
                     kit.backstory = "outsider2"
                 if cat.outside and not cat.exiled:
@@ -1138,7 +1138,7 @@ class Pregnancy_Events:
             # Prevent duplicate prefixes in Clan
             tries = 0
             while tries < 20 and kit.name.prefix in [kitty.name.prefix for kitty in Cat.all_cats.values() if not kitty.dead and not kitty.outside and kitty.ID != kit.ID]:
-                kit.name = Name("newborn")
+                kit.name = Name()
                 tries += 1
 
             all_kitten.append(kit)
