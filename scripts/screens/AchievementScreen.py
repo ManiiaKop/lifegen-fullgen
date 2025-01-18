@@ -230,3 +230,4 @@ class AchievementScreen(Screens):
         """
         TODO: DOCS
         """
+        super().on_use()

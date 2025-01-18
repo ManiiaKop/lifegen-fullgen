@@ -195,7 +195,7 @@ class SpriteInspectScreen(Screens):
             starting_height=2,
         )
         self.acc_shown_text = pygame_gui.elements.UITextBox(
-            "Show Accessory",
+            "Show Accessories",
             ui_scale(pygame.Rect((545, 580), (-1, 50))),
             object_id=get_text_box_theme("#text_box_34_horizcenter"),
             starting_height=2,
@@ -328,7 +328,7 @@ class SpriteInspectScreen(Screens):
             ui_scale_offset((500, 575)),
             "acc_shown",
             self.acc_shown,
-            self.the_cat.pelt.accessory,
+            self.the_cat.pelt.accessories,
         )
 
         # "Show as living"
