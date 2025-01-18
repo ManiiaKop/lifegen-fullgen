@@ -1095,31 +1095,33 @@ class Genotype:
         elif randint(1, 5) == 1 and par2:
             self.whitegrade = par2.whitegrade
 
-        if (par1.vitiligo and par2.vitiligo):
+        if (par1.vitiligo and (par2 and par2.vitiligo)):
             a = randint(1, round((self.odds['vitiligo']/4)))
-        elif(par1.vitiligo or par2.vitiligo):
+        elif(par1.vitiligo or (par2 and par2.vitiligo)):
             a = randint(1, round((self.odds['vitiligo']/2)))
         else:
             a = randint(1, self.odds['vitiligo'])
 
         if(a == 1):
-            self.vitiligo = True    
+            self.vitiligo = True
         
+        self.furLength = [choice(par1.furLength), (choice(par2.furLength) if par2 else "l")]
         
-        self.furLength = [choice(par1.furLength), choice(par2.furLength)]
-        
-        self.eumelanin = [choice(par1.eumelanin), choice(par2.eumelanin)]
+        self.eumelanin = [choice(par1.eumelanin), (choice(par2.eumelanin) if par2 else "b")]
 
         mum = ["", ""]
         pap = ["", "Y"]
-        if not xor('Y' in par1.sexgene, 'Y' in par2.sexgene):
+
+        par2sex = par2.sexgene if par2 else choice([['o', 'Y'], ['o', 'o']])
+
+        if not xor('Y' in par1.sexgene, ('Y' in par2sex)):
             if('Y' in par1.sexgene):
                 if(randint(1, 2) == 1):
                     mum[0] = par1.sexgene[0]
                     mum[1] = mum[0]
-                    pap[0] = par2.sexgene[0]
+                    pap[0] = par2.sexgene[0] if par2 else "o"
                 else:
-                    mum[0] = par2.sexgene[0]
+                    mum[0] = par2.sexgene[0] if par2 else "o"
                     mum[1] = mum[0]
                     pap[0] = par1.sexgene[0]
             else:
@@ -1127,8 +1129,8 @@ class Genotype:
                     mum[0] = par1.sexgene[0]
                     mum[1] = par1.sexgene[1]
                     mum.append(par1.sexgene[2])
-                    pap[0] = par2.sexgene[0]
-                elif len(par2.sexgene) > 2:
+                    pap[0] = par2.sexgene[0] if par2 else "o"
+                elif par2 and len(par2.sexgene) > 2:
                     mum[0] = par2.sexgene[0]
                     mum[1] = par2.sexgene[1]
                     mum.append(par2.sexgene[2])
@@ -1137,27 +1139,27 @@ class Genotype:
                     if('O' in par1.sexgene and 'o' in par1.sexgene):
                         mum[0] = par1.sexgene[0]
                         mum[1] = par1.sexgene[1]
-                        pap[0] = par2.sexgene[0]
-                    elif ('O' in par2.sexgene and 'o' in par2.sexgene):
+                        pap[0] = par2.sexgene[0] if par2 else "o"
+                    elif par2 and ('O' in par2.sexgene and 'o' in par2.sexgene):
                         mum[0] = par2.sexgene[0]
                         mum[1] = par2.sexgene[1]
                         pap[0] = par1.sexgene[0]
                     else:
                         if(random() < 0.5):
-                            mum[0] = par2.sexgene[0]
-                            mum[1] = par2.sexgene[1]
+                            mum[0] = par2.sexgene[0] if par2 else "o"
+                            mum[1] = par2.sexgene[1] if par2 else "o"
                             pap[0] = par1.sexgene[0]
                         else:
                             mum[0] = par1.sexgene[0]
                             mum[1] = par1.sexgene[1]
-                            pap[0] = par2.sexgene[0]
+                            pap[0] = par2.sexgene[0] if par2 else "o"
 
         elif('Y' in par1.sexgene):
-            mum = par2.sexgene
+            mum = par2.sexgene if par2 else ["o", "o"]
             pap = par1.sexgene
         else:
             mum = par1.sexgene
-            pap = par2.sexgene
+            pap = par2.sexgene if par2 else ["o", "Y"]
         
 
         if randint(1, self.odds['XXX/XXY']) == 1:
@@ -1211,63 +1213,63 @@ class Genotype:
         
         if(par1.specialred and random() < 0.2):
             self.specialred = par1.specialred
-        if(par2.specialred and random() < 0.2):
+        if par2 and (par2.specialred and random() < 0.2):
             self.specialred = par2.specialred
         elif(random() < 0.05):
             self.specialred = choice(['cameo', 'cameo', 'cameo', 'cameo', 'cameo', 'cameo', 'merle', 'merle', 'merle', 'merle', 'merle', 'blue-red', 'blue-tipped', 'blue-tipped', 'cinnamon'])
 
-        self.dilute = [choice(par1.dilute), choice(par2.dilute)]
-        self.white = [choice(par1.white), choice(par2.white)]
-        self.pointgene = [choice(par1.pointgene), choice(par2.pointgene)]
+        self.dilute = [choice(par1.dilute), (choice(par2.dilute) if par2 else "d")]
+        self.white = [choice(par1.white), (choice(par2.white) if par2 else "w")]
+        self.pointgene = [choice(par1.pointgene), (choice(par2.pointgene) if par2 else "C")]
 
-        self.silver = [choice(par1.silver), choice(par2.silver)]
-        self.agouti = [choice(par1.agouti), choice(par2.agouti)]
-        self.mack = [choice(par1.mack), choice(par2.mack)]
-        self.ticked = [choice(par1.ticked), choice(par2.ticked)]
+        self.silver = [choice(par1.silver), (choice(par2.silver) if par2 else "i")]
+        self.agouti = [choice(par1.agouti), (choice(par2.agouti) if par2 else "a")]
+        self.mack = [choice(par1.mack), (choice(par2.mack) if par2 else "mc")]
+        self.ticked = [choice(par1.ticked), (choice(par2.ticked) if par2 else "ta")]
 
         if self.ticked[0] != self.ticked[1] and randint(1, 25) == 1:
             self.breakthrough = True
 
-        self.wirehair = [choice(par1.wirehair), choice(par2.wirehair)]
-        self.laperm = [choice(par1.laperm), choice(par2.laperm)]
-        self.cornish = [choice(par1.cornish), choice(par2.cornish)]
-        self.urals = [choice(par1.urals), choice(par2.urals)]
-        self.tenn = [choice(par1.tenn), choice(par2.tenn)]
-        self.fleece = [choice(par1.fleece), choice(par2.fleece)]
-        self.sedesp = [choice(par1.sedesp), choice(par2.sedesp)]
-        self.ruhr = [choice(par1.ruhr), choice(par2.ruhr)]
-        self.ruhrmod = [choice(par1.ruhrmod), choice(par2.ruhrmod)]
+        self.wirehair = [choice(par1.wirehair), (choice(par2.wirehair) if par2 else "wh")]
+        self.laperm = [choice(par1.laperm), (choice(par2.laperm) if par2 else "lp")]
+        self.cornish = [choice(par1.cornish), (choice(par2.cornish) if par2 else "R")]
+        self.urals = [choice(par1.urals), (choice(par2.urals) if par2 else "Ru")]
+        self.tenn = [choice(par1.tenn), (choice(par2.tenn) if par2 else "Tr")]
+        self.fleece = [choice(par1.fleece), (choice(par2.fleece) if par2 else "Fc")]
+        self.sedesp = [choice(par1.sedesp), (choice(par2.sedesp) if par2 else "Hr")]
+        self.ruhr = [choice(par1.ruhr), (choice(par2.ruhr) if par2 else "hrbd")]
+        self.ruhrmod = [choice(par1.ruhrmod), (choice(par2.ruhrmod) if par2 else "ha")]
 
         if(self.ruhrmod[0] == "ha"):
             x = self.ruhrmod[1]
             self.ruhrmod[1] = self.ruhrmod[0]
             self.ruhrmod[0] = x
 
-        self.lykoi = [choice(par1.lykoi), choice(par2.lykoi)]
+        self.lykoi = [choice(par1.lykoi), (choice(par2.lykoi) if par2 else "Ly")]
 
-        self.pinkdilute = [choice(par1.pinkdilute), choice(par2.pinkdilute)]
-        self.dilutemd = [choice(par1.dilutemd), choice(par2.dilutemd)]
-        self.ext = [choice(par1.ext), choice(par2.ext)]
-        self.corin = [choice(par1.corin), choice(par2.corin)]
+        self.pinkdilute = [choice(par1.pinkdilute), (choice(par2.pinkdilute) if par2 else "Dp")]
+        self.dilutemd = [choice(par1.dilutemd), (choice(par2.dilutemd) if par2 else "dm")]
+        self.ext = [choice(par1.ext), (choice(par2.ext) if par2 else "E")]
+        self.corin = [choice(par1.corin), (choice(par2.corin) if par2 else "N")]
         
-        self.karp = [choice(par1.karp), choice(par2.karp)]
-        self.bleach = [choice(par1.bleach), choice(par2.bleach)]
-        self.ghosting = [choice(par1.ghosting), choice(par2.ghosting)]
-        self.satin = [choice(par1.satin), choice(par2.satin)]
-        self.glitter = [choice(par1.glitter), choice(par2.glitter)]
+        self.karp = [choice(par1.karp), (choice(par2.karp) if par2 else "k")]
+        self.bleach = [choice(par1.bleach), (choice(par2.bleach) if par2 else "Lb")]
+        self.ghosting = [choice(par1.ghosting), (choice(par2.ghosting) if par2 else "gh")]
+        self.satin = [choice(par1.satin), (choice(par2.satin) if par2 else "St")]
+        self.glitter = [choice(par1.glitter), (choice(par2.glitter) if par2 else "Gl")]
 
-        self.curl = [choice(par1.curl), choice(par2.curl)]
-        self.fold = [choice(par1.fold), choice(par2.fold)]
+        self.curl = [choice(par1.curl), (choice(par2.curl) if par2 else "cu")]
+        self.fold = [choice(par1.fold), (choice(par2.fold) if par2 else "fd")]
         
-        self.manx = [choice(par1.manx), choice(par2.manx)]
-        self.kab = [choice(par1.kab), choice(par2.kab)]
-        self.toybob = [choice(par1.toybob), choice(par2.toybob)]
-        self.jbob = [choice(par1.jbob), choice(par2.jbob)]
-        self.kub = [choice(par1.kub), choice(par2.kub)]
-        self.ring = [choice(par1.ring), choice(par2.ring)]
-        self.munch = [choice(par1.munch), choice(par2.munch)]
-        self.poly = [choice(par1.poly), choice(par2.poly)]
-        self.pax3 = [choice(par1.pax3), choice(par2.pax3)]
+        self.manx = [choice(par1.manx), (choice(par2.manx) if par2 else "ab")]
+        self.kab = [choice(par1.kab), (choice(par2.kab) if par2 else "Kab")]
+        self.toybob = [choice(par1.toybob), (choice(par2.toybob) if par2 else "tb")]
+        self.jbob = [choice(par1.jbob), (choice(par2.jbob) if par2 else "Jb")]
+        self.kub = [choice(par1.kub), (choice(par2.kub) if par2 else "kub")]
+        self.ring = [choice(par1.ring), (choice(par2.ring) if par2 else "Rt")]
+        self.munch = [choice(par1.munch), (choice(par2.munch) if par2 else "mk")]
+        self.poly = [choice(par1.poly), (choice(par2.poly) if par2 else "pd")]
+        self.pax3 = [choice(par1.pax3), (choice(par2.pax3) if par2 else "NoDBE")]
 
         self.wideband = ""
         for i in range(8):
@@ -1275,7 +1277,7 @@ class Genotype:
             if par1.wideband[i] == "2" or (par1.wideband[i] == "1" and randint(1, 2) == 1):
                 tempwb = tempwb+1
                 self.wbsum +=1
-            if par2.wideband[i] == "2" or (par2.wideband[i] == "1" and randint(1, 2) == 1):
+            if par2 and par2.wideband[i] == "2" or (par2 and (par2.wideband[i] == "1" and randint(1, 2) == 1)):
                 tempwb = tempwb+1
                 self.wbsum +=1
             self.wideband += str(tempwb)
@@ -1286,7 +1288,7 @@ class Genotype:
             if par1.rufousing[i] == "2" or (par1.rufousing[i] == "1" and randint(1, 2) == 1):
                 tempruf = tempruf+1
                 self.rufsum +=1
-            if par2.rufousing[i] == "2" or (par2.rufousing[i] == "1" and randint(1, 2) == 1):
+            if par2 and par2.rufousing[i] == "2" or (par2 and (par2.rufousing[i] == "1" and randint(1, 2) == 1)):
                 tempruf = tempruf+1
                 self.rufsum +=1
             self.rufousing += str(tempruf)
@@ -1297,7 +1299,7 @@ class Genotype:
             if par1.bengal[i] == "2" or (par1.bengal[i] == "1" and randint(1, 2) == 1):
                 tempbeng = tempbeng+1
                 self.bengsum +=1
-            if par2.bengal[i] == "2" or (par2.bengal[i] == "1" and randint(1, 2) == 1):
+            if par2 and par2.bengal[i] == "2" or (par2 and (par2.bengal[i] == "1" and randint(1, 2) == 1)):
                 tempbeng = tempbeng+1
                 self.bengsum +=1
             self.bengal += str(tempbeng)
@@ -1308,7 +1310,7 @@ class Genotype:
             if par1.sokoke[i] == "2" or (par1.sokoke[i] == "1" and randint(1, 2) == 1):
                 tempsok = tempsok+1
                 self.soksum +=1
-            if par2.sokoke[i] == "2" or (par2.sokoke[i] == "1" and randint(1, 2) == 1):
+            if par2 and par2.sokoke[i] == "2" or (par2 and (par2.sokoke[i] == "1" and randint(1, 2) == 1)):
                 tempsok = tempsok+1
                 self.soksum +=1
             self.sokoke += str(tempsok)
@@ -1319,7 +1321,7 @@ class Genotype:
             if par1.spotted[i] == "2" or (par1.spotted[i] == "1" and randint(1, 2) == 1):
                 tempspot = tempspot+1
                 self.spotsum +=1
-            if par2.spotted[i] == "2" or (par2.spotted[i] == "1" and randint(1, 2) == 1):
+            if par2 and par2.spotted[i] == "2" or (par2 and (par2.spotted[i] == "1" and randint(1, 2) == 1)):
                 tempspot = tempspot+1
                 self.spotsum +=1
             self.spotted += str(tempspot)
@@ -1330,17 +1332,20 @@ class Genotype:
             if par1.tickgenes[i] == "2" or (par1.tickgenes[i] == "1" and randint(1, 2) == 1):
                 temptick = temptick+1
                 self.ticksum +=1
-            if par2.tickgenes[i] == "2" or (par2.tickgenes[i] == "1" and randint(1, 2) == 1):
+            if par2 and par2.tickgenes[i] == "2" or (par2 and (par2.tickgenes[i] == "1" and randint(1, 2) == 1)):
                 temptick = temptick+1
                 self.ticksum +=1
             self.tickgenes += str(temptick)
 
+        par2body = par2.body_value if par2 else randint(30,80)
+        par2height = par2.height_value if par2 else randint(10,300)
+
         wobble = randint(1, int(sum(self.body_ranges) / 25))
-        self.body_value = randint(min(par1.body_value-wobble, par2.body_value-wobble), max(par1.body_value+wobble, par2.body_value+wobble))
+        self.body_value = randint(min(par1.body_value-wobble, par2body-wobble), max(par1.body_value+wobble, par2body+wobble))
         
         int(sum(self.height_ranges) / 25)
         wobble = randint(1, int(sum(self.height_ranges) / 25))
-        self.height_value = randint(min(par1.height_value-wobble, par2.height_value-wobble), max(par1.height_value+wobble, par2.height_value+wobble))
+        self.height_value = randint(min(par1.height_value-wobble, par2height-wobble), max(par1.height_value+wobble, par2height+wobble))
 
         if self.body_value < 1:
             self.body_value = 1
@@ -1378,11 +1383,13 @@ class Genotype:
             return m
     
         multipliers = maths(par1.refraction, multipliers)
-        multipliers = maths(par2.refraction, multipliers)
-        multipliers = maths(math.floor((int(par1.refraction) + int(par2.refraction))/2), multipliers)
+        if par2:
+            multipliers = maths(par2.refraction, multipliers)
+            multipliers = maths(math.floor((int(par1.refraction) + int(par2.refraction))/2), multipliers)
         multipliers2 = maths(par1.pigmentation, multipliers2)
-        multipliers2 = maths(par2.pigmentation, multipliers2)
-        multipliers2 = maths(math.floor((int(par1.pigmentation) + int(par2.pigmentation))/2), multipliers2)
+        if par2:
+            multipliers2 = maths(par2.pigmentation, multipliers2)
+            multipliers2 = maths(math.floor((int(par1.pigmentation) + int(par2.pigmentation))/2), multipliers2)
 
         x = sum(multipliers)
         x2 = sum(multipliers2)

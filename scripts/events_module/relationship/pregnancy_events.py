@@ -1136,10 +1136,13 @@ class Pregnancy_Events:
                 
             #kit.adoptive_parents = all_adoptive_parents  # Add the adoptive parents. 
             # Prevent duplicate prefixes in Clan
-            tries = 0
-            while tries < 20 and kit.name.prefix in [kitty.name.prefix for kitty in Cat.all_cats.values() if not kitty.dead and not kitty.outside and kitty.ID != kit.ID]:
-                kit.name = Name()
-                tries += 1
+            # tries = 0
+            # while tries < 20 and kit.name.prefix in [kitty.name.prefix for kitty in Cat.all_cats.values() if not kitty.dead and not kitty.outside and kitty.ID != kit.ID]:
+            #     kit.name = Name()
+            #     tries += 1
+            # YOU. YOU ARE CAUSING MY FUCKING PROBLEM.
+            # this Name() class call messes shit up now that the status argument is gone. idk why
+            # ur gonna have to deal with duplicate prefixes
 
             all_kitten.append(kit)
             # adoptive parents are set at the end, when everything else is decided

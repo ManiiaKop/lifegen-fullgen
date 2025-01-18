@@ -234,8 +234,11 @@ class Cat:
         elif parent1 or parent2:
             if not parent1:
                 self.genotype.KitGenerator(Cat.all_cats[parent2].genotype, extrapar)
+            elif not parent2:
+                self.genotype.KitGenerator(Cat.all_cats[parent1].genotype, extrapar)
+            if not parent1 and not parent2:
+                self.genotype.KitGenerator(extrapar)
             else:
-                second_parent = None
                 try:
                     self.genotype.KitGenerator(Cat.all_cats[parent1].genotype, Cat.all_cats.get(parent2, extrapar))
                 except Exception as e:
@@ -793,7 +796,6 @@ class Cat:
             )
         else:
             self.name = Name(
-                status,
                 prefix,
                 suffix,
                 specsuffix_hidden=self.specsuffix_hidden,

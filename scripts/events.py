@@ -921,6 +921,8 @@ class Events:
                     parent2.init_all_relationships()
                     parent1.set_mate(parent2)
 
+                print("BIRTH TYPE:", birth_type)
+
                 return birth_type, parent1, parent2, adoptive_parents
             except Exception as e:
                 birth_type = random.choice(list(BirthType))
@@ -978,13 +980,6 @@ class Events:
                 replacements["parent2"] = str(Cat.all_cats.get(adoptive_parents[1]).name)
             if siblings:
                 birth_value += "_siblings"
-                for sib in siblings:
-                    try:
-                        print(sib.name)
-                    except AttributeError as e:
-                        print(e)
-                        print("Removing", sib, "from siblings. Nonetype bullshit")
-                        siblings.remove(sib)
                 num_siblings = len(siblings)
                 if num_siblings == 1:
                     replacements["insert_siblings"] = f"{siblings[0].name}"
