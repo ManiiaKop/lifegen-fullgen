@@ -921,8 +921,6 @@ class Events:
                     parent2.init_all_relationships()
                     parent1.set_mate(parent2)
 
-                print("BIRTH TYPE:", birth_type)
-
                 return birth_type, parent1, parent2, adoptive_parents
             except Exception as e:
                 birth_type = random.choice(list(BirthType))
