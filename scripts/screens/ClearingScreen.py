@@ -331,7 +331,7 @@ class ClearingScreen(Screens):
         )
         self.tactic_tab = UISurfaceImageButton(
             ui_scale(pygame.Rect((40, 540), (100, 30))),
-            Icon.MAGNIFY + " Tactics",
+            Icon.MAGNIFY + "Tactics",
             get_button_dict(ButtonStyles.VERTICAL_TAB, (100, 30)),
             object_id="@buttonstyles_vertical_tab",
             manager=MANAGER,

@@ -238,7 +238,7 @@
         ],
         [
             "Well- war is, um...",
-            "[Your {PRONOUN/y_c/parent} seems to stiffen up, looking awfully uncomfortable.]",
+            "[Your {PRONOUN/t_c/parent} seems to stiffen up, looking awfully uncomfortable.]",
             "War is uhh...",
             "You're too young to know!"
         ]
@@ -1443,7 +1443,7 @@
             "they_blind"
         ],
         [
-            "Can you believe this y_c? They won't let me fight!",
+            "Can you believe this, y_c? They won't let me fight!",
             "It was almost perfect too. I was going to win the war, just like in those stories the queens told us.",
             "You gotta help me... go tell r_m to fix me faster!"
         ]
@@ -1674,8 +1674,8 @@
             "they_blind"
         ],
         [
-            "I'm really sorry, but could you come check on r_k? They tripped when playing and got a bit scraped up.",
-            "I know you're busy and saving your supplies for the war, but I want to make sure they're okay."
+            "I'm really sorry, but could you come check on r_k? {PRONOUN/r_k/subject/CAP} tripped when playing and got a bit scraped up.",
+            "I know you're busy and saving your supplies for the war, but I want to make sure {PRONOUN/r_k/subject}{VERB/r_k/'re/'s} okay."
         ]
     ],
     "neurotic_warfocus_SQ17": [

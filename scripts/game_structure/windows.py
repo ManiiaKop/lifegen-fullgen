@@ -5,36 +5,19 @@ import threading
 import time
 from platform import system
 from random import choice
-from re import search as re_search
-import platform
 import ujson
 import pygame
 import pygame_gui
-from sys import exit
 from re import sub
-from platform import system
-from random import choice
-import logging
-import subprocess
 import random
-
-from re import sub
 from typing import TYPE_CHECKING
-
-import pygame
-import pygame_gui
 from pygame_gui.elements import UIWindow
 from pygame_gui.windows import UIMessageWindow
-
 from scripts.cat.history import History
 from scripts.cat.names import Name
 from scripts.game_structure import image_cache
 from scripts.housekeeping.progress_bar_updater import UIUpdateProgressBar
-from scripts.housekeeping.update import self_update, UpdateChannel, get_latest_version_number
 from scripts.event_class import Single_Event
-from scripts.utility import quit, update_sprite, logger, process_text
-from scripts.game_structure.game_essentials import game
-from scripts.game_structure.ui_elements import UIImageButton, UITextBoxTweaked
 from scripts.game_structure.game_essentials import game
 from scripts.game_structure.screen_settings import MANAGER
 from scripts.game_structure.ui_elements import (
@@ -48,7 +31,6 @@ from scripts.housekeeping.datadir import (
     get_saved_images_dir,
     get_data_dir,
 )
-from scripts.housekeeping.progress_bar_updater import UIUpdateProgressBar
 from scripts.housekeeping.update import (
     self_update,
     UpdateChannel,
@@ -497,7 +479,7 @@ class ChangeCatName(UIWindow):
 
         self.heading = pygame_gui.elements.UITextBox(
             f"-Change {self.the_cat.name}'s Name-",
-            ui_scale(pygame.Rect((0, 10), (400, 40))),
+            ui_scale(pygame.Rect((50, 10), (300, 40))),
             object_id="#text_box_30_horizcenter",
             manager=MANAGER,
             container=self,
@@ -747,8 +729,8 @@ class PronounCreation(UIWindow):
         # Add UITextBox for the sample text to the sub-container
         self.sample_text_box = pygame_gui.elements.UITextBox(
             self.get_sample_text(self.the_cat.pronouns[0]),
-            ui_scale(pygame.Rect((9, 60), (197, 278))),
-            object_id="#text_box_30_horizcenter",
+            ui_scale(pygame.Rect((7, 60), (197, 278))),
+            object_id="#text_box_30_horizcenter_spacing_95",
             manager=MANAGER,
             container=self.demo_container,
         )
@@ -1127,7 +1109,7 @@ class KillCat(UIWindow):
         cat_dict = {"m_c": (str(self.the_cat.name), choice(self.the_cat.pronouns))}
         self.heading = pygame_gui.elements.UITextBox(
             f"<b>-- How did this cat die? --</b>",
-            ui_scale(pygame.Rect((10, 10), (430, 75))),
+            ui_scale(pygame.Rect((10, 10), (400, 75))),
             object_id="#text_box_30_horizcenter_spacing_95",
             manager=MANAGER,
             container=self,
@@ -1176,7 +1158,7 @@ class KillCat(UIWindow):
             self.all_lives_check.hide()
             self.life_text = pygame_gui.elements.UITextBox(
                 "Take all the leader's lives",
-                ui_scale(pygame.Rect((60, 147), (450, 40))),
+                ui_scale(pygame.Rect((60, 147), (300, 40))),
                 object_id="#text_box_30_horizleft",
                 manager=MANAGER,
                 container=self,
@@ -1466,6 +1448,7 @@ class UpdateAvailablePopup(UIWindow):
             object_id="@buttonstyles_squoval",
             container=self,
         )
+        self.continue_button.disable()
 
         self.cancel_button = UISurfaceImageButton(
             ui_scale(pygame.Rect((187, 185), (78, 30))),
@@ -1920,7 +1903,7 @@ class EventLoading(UIWindow):
         self.end_animation = True
         game.switches['window_open'] = False
         super().kill()
-    
+
 class PickPath(UIWindow):
     def __init__(self, last_screen):
         super().__init__(ui_scale(pygame.Rect((220, 175), (400, 250))),
@@ -2025,8 +2008,8 @@ class PickPath(UIWindow):
                 self.kill()
         except:
             print('Error with PickPath window!')
-            
-                
+
+
 class DeathScreen(UIWindow):
     def __init__(self, last_screen):
         super().__init__(ui_scale(pygame.Rect((155, 175), (490, 250))),
@@ -2197,10 +2180,10 @@ class DeathScreen(UIWindow):
                 self.mediator_button4.kill()
                 self.kill()
                 game.all_screens['events screen'].exit_screen()
-                
+
 class DeputyScreen(UIWindow):
     def __init__(self, last_screen):
-        super().__init__(ui_scale(pygame.Rect((250, 200), (300, 250))),
+        super().__init__(ui_scale(pygame.Rect((250, 200), (300, 180))),
                         window_display_title='Choose your deputy',
                         object_id='#game_over_window',
                         resizable=False)
@@ -2256,7 +2239,7 @@ class DeputyScreen(UIWindow):
                 self.mediator_button.kill()
                 self.kill()
                 game.all_screens['events screen'].exit_screen()
-                
+
 class NameKitsWindow(UIWindow):
     def __init__(self, last_screen):
         super().__init__(ui_scale(pygame.Rect((250, 200), (300, 150))),
@@ -2320,7 +2303,7 @@ class NameKitsWindow(UIWindow):
             except:
                 print("failure with kits window")
 
-                
+
 class MateScreen(UIWindow):
     def __init__(self, last_screen):
         super().__init__(ui_scale(pygame.Rect((250, 200), (300, 150))),

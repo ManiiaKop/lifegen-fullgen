@@ -54,9 +54,11 @@ class AllegiancesScreen(Screens):
         self.update_heading_text(f"{game.clan.name}Clan")
         allegiance_list = self.get_allegiances_text()
 
+
         self.scroll_container = pygame_gui.elements.UIScrollingContainer(
             ui_scale(pygame.Rect((50, 165), (715, 470))),
             allow_scroll_x=False,
+            allow_scroll_y=True,
             manager=MANAGER,
         )
 
@@ -64,6 +66,7 @@ class AllegiancesScreen(Screens):
         self.names_boxes = []
         self.names_buttons = []
         y_pos = 0
+        allegiances_height = 0
         for x in allegiance_list:
             self.ranks_boxes.append(
                 pygame_gui.elements.UITextBox(
@@ -113,6 +116,10 @@ class AllegiancesScreen(Screens):
                 )
             )
             self.names_boxes[-1].disable()
+            allegiances_height += 1
+        
+        self.scroll_container.set_scrollable_area_dimensions((715, 470 + allegiances_height*20))
+
 
     def exit_screen(self):
         for x in self.ranks_boxes:

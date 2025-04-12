@@ -921,6 +921,7 @@ class ChooseAdoptiveParentScreen(Screens):
             not in self.the_cat.mate  # Can't set your mate your adoptive parent.
             and inter_cat.ID
             not in self.the_cat.get_parents()  # Adoptive parents can't already be their parent
+            and not inter_cat.no_kits
             and self.not_related_to_mate(
                 inter_cat
             )  # quick fix TODO: change / remove later

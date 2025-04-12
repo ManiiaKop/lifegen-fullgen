@@ -617,5 +617,114 @@
                 ]
             }
         ]
+    },
+    {
+        "patrol_id": "lifegen_deputy_SQ1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "leafbare"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "patrol_art_png_name",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "It's frigid this morning. Your Clanmates wake with numb paws and drops of their breath frozen to their whiskers. You've organized a morning border patrol, but you're not sure whether to tell its members to stay home for their safety.",
+        "decline_text": "You decide to let l_n figure out this one. You have a lot of other things to do today.",
+        "chance_of_success": 60,
+        "success_outcomes": [
+            {
+                "text": "You remember r_m warning you that at these temperatures, frostbite is a real risk. Leafbare is difficult enough without cats getting hurt, so you call off the patrol. You doubt any threats will be out in this weather anyways, and sure enough, nothing unusual happens in the following days.",
+                "exp": 15,
+                "weight": 20
+            },
+            {
+                "text": "You ask r_w, the patrol's leader, for {PRONOUN/r_w/poss} opinion on whether {PRONOUN/r_w/subject} {VERB/r_w/want/wants} to patrol today. r_w seems to appreciate you asking, and after a brief discussion, decides to take a shorter route. You help {PRONOUN/r_w/object} plan the specific path, and remind {PRONOUN/r_w/object} to come back early if any cats are having trouble. ",
+                "exp": 15,
+                "weight": 20
+            },
+            {
+                "text": "Cats have noticed signs of rogues along one of the borders, so you think it's important to keep up your patrols regardless of the weather. However, you decide to join the group instead, so one of your Clanmates can stay out of the cold. The patrol passes without incident, and while your paws are numb for a while afterwards, no one suffers any long-term effects.",
+                "exp": 15,
+                "weight": 20
+            },
+            {
+                "text": "It's important to keep patrols going, even in bad weather, but you don't want your Clanmates to get frostbitten. After a bit of thought, you suggest the patrol members wrap moss around their paws to keep them warm, and volunteer some of your bedding for the task. While the moss wrappings are falling apart by the time your Clanmates return, it seems they were successful in protecting their paws from the cold!",
+                "exp": 15,
+                "weight": 20,
+                "stat_skill": [
+                    "INNOVATOR,1",
+                    "THINKER,1",
+                    "CLEVER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
+            },
+            {
+                "text": "You decide that it would be a good idea to send a patrol out anyways, but as you start to let r_w, the patrol's leader, know, a chill shoots up your spine. You have the sudden feeling that sending cats out in this weather is a terrible decision. Though you're unsure of the cause for your unease, you tell r_w to stay in camp instead. Shortly afterwards, a blizzard hits the territory, turning the world white and dropping the temperatures even further. You're thankful that you kept the patrol in camp, not wanting to think about what could have happened to any cats caught in the storm.",
+                "exp": 15,
+                "weight": 20,
+                "stat_skill": [
+                    "CLAIRVOYANT,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You decide to send the patrol out anyways, but regret it when a blizzard sweeps through the territory shortly afterwards. Just after the storm settles, though, your disoriented Clanmates stumble back into camp, chilled but otherwise unharmed. r_w explains that they were lost in the snow, but a starry cat led them to shelter, and then back home...",
+                "exp": 0,
+                "weight": 20,
+                "faith_effects": [
+                    {
+                        "faith_cat": [
+                            "r_w"
+                        ],
+                        "amount": 1
+                    }
+                ]
+            },
+            {
+                "text": "You decide to send the patrol out anyways, but regret it when a blizzard sweeps through the territory shortly afterwards. Your Clanmates don't return to camp on time, so l_n and you go looking for them as soon as the storm clears. You find them huddled together beneath a bush, shivering violently. r_w is particularly cold and wind-battered.",
+                "exp": 0,
+                "weight": 10,
+                "injury": [
+                    {
+                        "cats": [
+                            "r_w"
+                        ],
+                        "injuries": [
+                            "shivering"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "You can think of so many things that could go wrong if you send the patrol out, and so many things that could go wrong if you instead tell them to stay in camp. Paralyzed by the potential consequences, you're unable to make a decision. l_n steps in and decides to run the patrols like usual despite the weather, and then tells you to take a break for the rest of the day.",
+                "exp": 0,
+                "weight": 20,
+                "stat_trait": [
+                    "careful",
+                    "nervous",
+                    "insecure",
+                    "meek",
+                    "cowardly",
+                    "reserved",
+                    "emotional"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
+            }
+        ]
     }
 ]

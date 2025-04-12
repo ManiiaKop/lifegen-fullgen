@@ -76,6 +76,7 @@ class Game:
     }"""
     patrol_cats = {}
     patrolled = []
+    dated_cats = []
 
     # store changing parts of the game that the user can toggle with buttons
     switches = {
@@ -442,7 +443,7 @@ class Game:
                 inter_cat.save_history(directory + "/history")
                 # after saving, dump the history info
                 inter_cat.history = None
-            if not inter_cat.dead:
+            if not inter_cat.dead or inter_cat.ID == game.clan.your_cat.ID:
                 inter_cat.save_relationship_of_cat(directory + "/relationships")
 
         self.safe_save(f"{get_save_dir()}/{clanname}/clan_cats.json", clan_cats)

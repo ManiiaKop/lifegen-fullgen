@@ -59,11 +59,37 @@
                 "text": "You weigh the situation and provide a fair resolution. The leader appreciates your wisdom, and the warriors agree to your solution.",
                 "exp": 10,
                 "weight": 20
+            },
+            {
+                "text": "As you listen to the details of the conflict, you recall a similar dispute that took place many moons ago, one that neither of the warriors are old enough to remember. You describe the prior conflict and its eventual solution to l_n and the warriors. While it doesn't immediately settle the dispute, you can tell by their quiet discussion afterwards that your memories and experiences have provided valuable insight that will hopefully lead to a quick resolution.",
+                "exp": 10,
+                "weight": 20
+            },
+            {
+                "text": "You've always had a knack for smoothing out your Clanmates' conflicts. You listen closely to both warriors' perspectives, asking questions where necessary to gain better understanding, and eventually manage to guide the two towards a resolution that both are happy with. l_n later praises you for how well you handled the dispute - apparently even the Clan mediators were having trouble getting the warriors to see eye-to-eye.",
+                "exp": 10,
+                "weight": 20,
+                "stat_skill": [
+                    "MEDIATOR,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [
             {
                 "text": "You attempt to mediate, but the warriors seem unconvinced. The leader decides to handle the matter personally.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "Was mediating always this difficult? Despite paying close attention, you keep making mistakes: mixing up which cat said what, misunderstanding the conflict, and asking questions that the warriors have already answered. l_n eventually suggests you return to the elder's den for a nap, much to your embarrassment.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "It turns out that in your old age, you've become more short-tempered than anycat realized. When the two warriors begin bickering over the recollection of events, you snap at them to just tell you the facts rather than getting into another ridiculous spat over it. It shocks the two into silence, but that's clearly not the solution l_n was looking for, as {PRONOUN/l_n/subject}{VERB/l_n/'re/'s} very quick to dismiss you to the elder's den after that.",
                 "exp": 0,
                 "weight": 20
             }
@@ -234,6 +260,17 @@
                 "text": "You move into action, quickly grabbing the snake by its tail. You drag it out of the camp where you let it free, watching it slither into the grasses as your Clanmates let out a loud sigh of relief..",
                 "exp": 10,
                 "weight": 20
+            },
+            {
+                "text": "Your interspecies communication skills are rusty, but you can still tell the snake in no uncertain terms that it's unwelcome in the camp. Problem solved: it glares at you and flicks its tail in annoyance, but makes its way out of the camp. New problem: now your awestruck Clanmates won't stop asking how you learned to speak snake.",
+                "exp": 10,
+                "weight": 20,
+                "stat_skill": [
+                    "LANGUAGE,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
             }
         ],
         "fail_outcomes": [

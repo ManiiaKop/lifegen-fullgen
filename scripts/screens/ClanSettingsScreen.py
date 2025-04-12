@@ -464,7 +464,7 @@ class ClanSettingsScreen(Screens):
             ui_scale(pygame.Rect((150, 200), (530, 345))),
             object_id=get_text_box_theme("#text_box_30_horizcenter"),
         )
-
+        
         self.checkboxes_text["achievements"] = UISurfaceImageButton(
             ui_scale(pygame.Rect((335, 615), (120, 30))),
             "achievements",

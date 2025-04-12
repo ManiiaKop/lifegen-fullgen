@@ -368,10 +368,10 @@ class Thoughts:
             else:
                 # life/fullgen change: i dont wanna rename the jsons
                 if main_cat.status == "healer":
-                    with open(f"{base_path}{life_dir}{spec_dir}/medicine_cat.json", 'r') as read_file:
+                    with open(f"{base_path}{life_dir}{spec_dir}/healer.json", 'r') as read_file:
                         thoughts = ujson.loads(read_file.read())
                 elif main_cat.status == "healer apprentice":
-                    with open(f"{base_path}{life_dir}{spec_dir}/medicine_cat_apprentice.json", 'r') as read_file:
+                    with open(f"{base_path}{life_dir}{spec_dir}/healer_apprentice.json", 'r') as read_file:
                         thoughts = ujson.loads(read_file.read())
                 else:
                     with open(f"{base_path}{life_dir}{spec_dir}/{status}.json", 'r') as read_file:

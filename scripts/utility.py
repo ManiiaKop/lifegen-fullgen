@@ -7,13 +7,14 @@ TODO: Docs
 """  # pylint: enable=line-too-long
 
 import logging
+import os
 import re
 from itertools import combinations
 from math import floor
 from random import choice, choices, randint, random, sample, randrange, getrandbits, gauss
 from sys import exit as sys_exit
 from copy import deepcopy
-from typing import List, Tuple
+from typing import List, Tuple, TYPE_CHECKING, Type, Union
 
 import pygame
 
@@ -31,6 +32,9 @@ from scripts.cat.pelts import Pelt
 from scripts.cat.sprites import sprites
 from scripts.game_structure.game_essentials import game
 import scripts.game_structure.screen_settings  # must be done like this to get updates when we change screen size etc
+
+if TYPE_CHECKING:
+    from scripts.cat.cats import Cat
 
 
 # ---------------------------------------------------------------------------- #
@@ -582,17 +586,21 @@ def create_new_cat_block(
     # CHOOSE DEFAULT BACKSTORY BASED ON CAT TYPE, STATUS
    
     if status in ("kitten", "newborn"):
-        chosen_backstory = choice(BACKSTORIES["backstory_categories"]["abandoned_backstories"])
-    if status == "healer":
-        if cat_type == "former Clancat":
-            chosen_backstory = choice(["healer", "disgraced1"])
-        else:
-            chosen_backstory = choice(["wandering_healer1", "wandering_healer2"])
-    if cat_type == "former Clancat":
-        x = "former_clancat"
+        chosen_backstory = choice(
+            BACKSTORIES["backstory_categories"]["abandoned_backstories"]
+        )
+    elif status == "healer" and cat_type == "former Clancat":
+        chosen_backstory = choice(["healer", "disgraced1"])
+    elif status == "healer":
+        chosen_backstory = choice(["wandering_healer1", "wandering_healer2"])
     else:
-        x = cat_type
-    chosen_backstory = choice(BACKSTORIES["backstory_categories"].get(f"{x}_backstories", ["outsider1"]))
+        if cat_type == "former Clancat":
+            x = "former_clancat"
+        else:
+            x = cat_type
+        chosen_backstory = choice(
+            BACKSTORIES["backstory_categories"].get(f"{x}_backstories", ["outsider1"])
+        )
 
     # OPTION TO OVERRIDE DEFAULT BACKSTORY
     bs_override = False
@@ -600,15 +608,25 @@ def create_new_cat_block(
     for _tag in attribute_list:
         match = re.match(r"backstory:(.+)", _tag)
         if match:
-            bs_list = [x for x in match.group(1).split(",")]
+            bs_list = [x for x in re.split(r", ?", match.group(1))]
             stor = []
             for story in bs_list:
-                if story in BACKSTORIES["backstories"]:
+                if story in set(
+                        [
+                            backstory
+                            for backstory_block in BACKSTORIES[
+                            "backstory_categories"
+                        ].values()
+                            for backstory in backstory_block
+                        ]
+                ):
                     stor.append(story)
                 elif story in BACKSTORIES["backstory_categories"]:
                     stor.extend(BACKSTORIES["backstory_categories"][story])
             bs_override = True
             break
+    if bs_override:
+        chosen_backstory = choice(stor)
 
     # KITTEN THOUGHT
     if status in ["kitten", "newborn"]:
@@ -1050,6 +1068,7 @@ def create_new_cat(
             # give em a collar if they got one
             if accessory:
                 new_cat.pelt.accessories.append(accessory)
+                new_cat.pelt.inventory.append(accessory)
         # give apprentice aged cat a mentor
         if new_cat.age == "adolescent":
             new_cat.update_mentor()
@@ -5486,15 +5505,15 @@ def adjust_txt(Cat, text, cat, cat_dict, r_c_allowed, o_c_allowed):
                 text = add_to_cat_dict("r_c", cluster, x, rel, r, random_cat, text, cat_dict)
     # Other Clan
     if o_c_allowed is True:
-        if "o_c" in text:
-            if "o_c" in other_dict:
-                text = re.sub(r'(?<!\/)o_c(?!\/)', str(other_dict["o_c"].name), text)
+        if "o_c_n" in text:
+            if "o_c_n" in other_dict:
+                text = re.sub(r'(?<!\/)o_c_n(?!\/)', str(other_dict["o_c_n"].name) + "Clan", text)
             else:
                 other_clan = choice(game.clan.all_clans)
                 if not other_clan:
                     return ""
-                other_dict["o_c"] = other_clan
-                text = re.sub(r'(?<!\/)o_c(?!\/)', str(other_clan.name), text)
+                other_dict["o_c_n"] = other_clan
+                text = re.sub(r'(?<!\/)o_c_n(?!\/)', str(other_clan.name) + "Clan", text)
 
     # Your DF Mentor
     if "df_m_n" in text:
@@ -5648,7 +5667,7 @@ def adjust_txt(Cat, text, cat, cat_dict, r_c_allowed, o_c_allowed):
         text = add_to_cat_dict("d_n", cluster, x, rel, r, game.clan.deputy, text, cat_dict)
 
     # Dead cat
-    # if cat is grieving, will their grief cat. otherwise will be arandom starclan cat
+    # random starclan cat
     if "d_c" in text:
         cluster = False
         rel = False
@@ -5669,35 +5688,105 @@ def adjust_txt(Cat, text, cat, cat_dict, r_c_allowed, o_c_allowed):
         
 
         if in_dict is False:
-            if "grief stricken" in cat.illnesses:
-                try:
-                    dead_cat = Cat.all_cats.get(cat.illnesses['grief stricken'].get("grief_cat"))
-                    if dead_cat is None:
-                        if "lasting grief" not in cat.permanent_condition:
-                            print("Warning:", cat.name, "is grieving + has no grief cat?")
-                        dead_cat = Cat.all_cats.get(choice(game.clan.starclan_cats))
-                except:
-                    dead_cat = Cat.all_cats.get(choice(game.clan.starclan_cats))
-            else:
-                dead_cat = Cat.all_cats.get(choice(game.clan.starclan_cats))
+            dead_cat = Cat.all_cats.get(choice(game.clan.starclan_cats))
 
             addon_check = abbrev_addons(cat, dead_cat, cluster, x, rel, r)
 
             counter = 0
-            while (dead_cat.ID == you.ID or dead_cat.ID == cat.ID or dead_cat.ID in [game.clan.instructor.ID, game.clan.demon.ID] or addon_check is False):
+            while not dead_cat or (dead_cat.ID == you.ID or dead_cat.ID == cat.ID or dead_cat.ID in [game.clan.instructor.ID, game.clan.demon.ID] or addon_check is False):
                 if counter == 30:
                     return ""
                 dead_cat = Cat.all_cats.get(choice(game.clan.starclan_cats))
                 addon_check = abbrev_addons(cat, dead_cat, cluster, x, rel, r)
                 counter += 1
             cat_dict["d_c"] = dead_cat
-            # words = text.split()
-            # for i, word in enumerate(words):
-            #     if word == "d_c" and (i == 0 or words[i-1][-1] != "{"):
-            #         words[i] = str(dead_cat.name)
-            # text = " ".join(words)
 
             text = add_to_cat_dict("d_c", cluster, x, rel, r, dead_cat, text, cat_dict)
+    
+    # grief cat
+    if "tg_c" in text:
+        cluster = False
+        rel = False
+        match = re.search(r'tg_c(\w+)', text)
+        if match:
+            x = match.group(1).strip("_")
+            cluster = True
+        else:
+            x = ""
+        match2 = re.search(r'(\w+)tg_c', text)
+        if match2:
+            r = match2.group(1).strip("_")
+            rel = True
+        else:
+            r = ""
+
+        text, in_dict = cat_dict_check("tg_c", cluster, x, rel, r, text, cat_dict)
+
+        if in_dict is False:
+            dead_cat = None
+            if "grief stricken" in cat.illnesses:
+                if cat.illnesses['grief stricken'].get("grief_cat"):
+                    dead_cat = Cat.fetch_cat(cat.illnesses['grief stricken'].get("grief_cat"))
+                    addon_check = abbrev_addons(cat, dead_cat, cluster, x, rel, r)
+                else:
+                    if "lasting grief" not in cat.permanent_condition:
+                        print("Warning:", cat.name, "is grieving + has no grief cat?")
+                    return ""
+            else:
+                return ""
+
+            counter = 0
+            while not dead_cat or (dead_cat.ID == you.ID or dead_cat.ID == cat.ID or dead_cat.ID in [game.clan.instructor.ID, game.clan.demon.ID] or addon_check is False):
+                if counter == 30:
+                    return ""
+                dead_cat = Cat.all_cats.get(choice(game.clan.starclan_cats))
+                addon_check = abbrev_addons(cat, dead_cat, cluster, x, rel, r)
+                counter += 1
+
+            if dead_cat:
+                cat_dict["tg_c"] = dead_cat
+                text = add_to_cat_dict("tg_c", cluster, x, rel, r, dead_cat, text, cat_dict)
+    
+    # your grief cat
+    if "yg_c" in text:
+        cluster = False
+        rel = False
+        match = re.search(r'yg_c(\w+)', text)
+        if match:
+            x = match.group(1).strip("_")
+            cluster = True
+        else:
+            x = ""
+        match2 = re.search(r'(\w+)yg_c', text)
+        if match2:
+            r = match2.group(1).strip("_")
+            rel = True
+        else:
+            r = ""
+
+        text, in_dict = cat_dict_check("yg_c", cluster, x, rel, r, text, cat_dict)
+
+        if in_dict is False:
+            if "grief stricken" in game.clan.your_cat.illnesses:
+                if game.clan.your_cat.illnesses['grief stricken'].get("grief_cat"):
+                    dead_cat = Cat.fetch_cat(game.clan.your_cat.illnesses['grief stricken'].get("grief_cat"))
+                else:
+                    if "lasting grief" not in game.clan.your_cat.permanent_condition:
+                        print("Warning:", game.clan.your_cat.name, "is grieving + has no grief cat?")
+                    return ""
+
+            addon_check = abbrev_addons(cat, dead_cat, cluster, x, rel, r)
+
+            counter = 0
+            while not dead_cat or (dead_cat.ID == you.ID or dead_cat.ID == cat.ID or dead_cat.ID in [game.clan.instructor.ID, game.clan.demon.ID] or addon_check is False):
+                if counter == 30:
+                    return ""
+                dead_cat = Cat.all_cats.get(choice(game.clan.starclan_cats))
+                addon_check = abbrev_addons(cat, dead_cat, cluster, x, rel, r)
+                counter += 1
+            cat_dict["yg_c"] = dead_cat
+
+            text = add_to_cat_dict("yg_c", cluster, x, rel, r, dead_cat, text, cat_dict)
 
     # Random dark forest cat
     if "rdf_c" in text:
@@ -5732,6 +5821,39 @@ def adjust_txt(Cat, text, cat, cat_dict, r_c_allowed, o_c_allowed):
                 counter +=1
 
             text = add_to_cat_dict("rdf_c", cluster, x, rel, r, random_cat, text, cat_dict)
+
+    if "rur_c" in text:
+        cluster = False
+        rel = False
+        match = re.search(r'rur_c(\w+)', text)
+        if match:
+            x = match.group(1).strip("_")
+            cluster = True
+        else:
+            x = ""
+        match2 = re.search(r'(\w+)rur_c', text)
+        if match2:
+            r = match2.group(1).strip("_")
+            rel = True
+        else:
+            r = ""
+
+        text, in_dict = cat_dict_check("rur_c", cluster, x, rel, r, text, cat_dict)
+        
+
+        if in_dict is False:
+            random_cat = Cat.all_cats.get(choice(game.clan.unknown_cats))
+            addon_check = abbrev_addons(cat, random_cat, cluster, x, rel, r)
+
+            counter = 0
+            while random_cat.ID == you.ID or random_cat.ID == cat.ID or addon_check is False:
+                if counter == 30:
+                    return ""
+                random_cat = Cat.all_cats.get(choice(game.clan.unknown_cats))
+                addon_check = abbrev_addons(cat, random_cat, cluster, x, rel, r)
+                counter +=1
+
+            text = add_to_cat_dict("rur_c", cluster, x, rel, r, random_cat, text, cat_dict)
     
     # Random shunned cat
     if "rsh_c" in text:
@@ -6253,5 +6375,7 @@ with open(f"resources/dicts/snippet_collections.json", "r") as read_file:
 with open(f"resources/dicts/prey_text_replacements.json", "r") as read_file:
     PREY_LISTS = ujson.loads(read_file.read())
 
-with open(f"resources/dicts/backstories.json", "r") as read_file:
+with open(
+        os.path.normpath("resources/dicts/backstories.json"), "r", encoding="utf-8"
+) as read_file:
     BACKSTORIES = ujson.loads(read_file.read())

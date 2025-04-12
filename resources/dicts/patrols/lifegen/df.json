@@ -2526,7 +2526,7 @@
                             "y_c"
                         ],
                         "injuries": [
-                            "mangled_tail"
+                            "mangled tail"
                         ]
                     }
                 ],
@@ -3426,5 +3426,98 @@
                     "weight": 20
                 }
             ]
-        }       
+        },
+        {
+            "patrol_id": "life_df_J7",
+            "biome": [
+                "Any"
+            ],
+            "season": [
+                "Any"
+            ],
+            "types": [
+                "lifegen",
+                "shunned"
+            ],
+            "tags": [],
+            "patrol_art": "df_default",
+            "min_cats": 1,
+            "max_cats": 1,
+            "min_max_status": {
+                "all apprentice": [
+                    -1,
+                    0
+                ]
+            },
+            "weight": 20,
+            "intro_text": "An apprentice trainee from o_c_n does a battle move wrong, unknowingly leaving their throat vulnerable to retaliation. When you try to correct them, the small cat snaps at you, scoffing and asking why they should listen to a cat that their own Clan doesn't even trust anymore.",
+            "decline_text": "You brush off your frustration and walk away. If that cat wants to battle incorrectly, they'll remain an easy enemy for you, anyway.",
+            "chance_of_success": 50,
+            "success_outcomes": [
+                {
+                    "text": "Your whiskers flick as you lean in close, noses almost touching. You explain to them that you were shunned for a reason, and crossing you would be an... unfortunate idea. By the time you finish - and much to your surprise - they seem to have earned a sort of respect for you, and when the training session finishes they've mastered the move.",
+                    "exp": 15,
+                    "weight": 20
+                },
+                {
+                    "text": "You grind your teeth and tell the apprentice that it's their loss if they don't want to learn anything meaningful, and you'll be on your way. However, as you turn to head deeper into the Dark Forest, the apprentice quickly calls out and asks for you to stay with an anxious flick of their ear. You smile cockily. You had an inkling o_c_n's apprentice doesn't have the guts to train alone.",
+                    "exp": 10,
+                    "weight": 20
+                }
+            ],
+            "fail_outcomes": [
+                {
+                    "text": "You hum and back away with an unamused expression. If the o_c_n apprentice doesn't want your advice, it's as simple as that. It is no loss of yours, of course - it just makes it easier for the apprentice to be killed. You spend the rest of the session meticulously watching their training, storing their common mistakes to the back of your mind.",
+                    "exp": 10,
+                    "weight": 10,
+                    "stat_trait": [
+                        "thoughtful",
+                        "calm",
+                        "flexible",
+                        "wise",
+                        "righteous",
+                        "lonesome",
+                        "gloomy",
+                        "mellow"
+                    ],
+                    "can_have_stat": [
+                        "p_l"
+                    ]
+                },
+                {
+                    "text": "As much as it annoys you, the o_c_n apprentice has a point. You back off, allowing them to train on their own. Although being shunned from your Clan does not apply in the Dark Forest, the apprentice is right to not trust you. Like right now, when the o_c_n apprentice is showing you just how many mistakes they make.",
+                    "exp": 0,
+                    "weight": 10
+                }
+            ],
+            "antag_success_outcomes": [
+                {
+                    "text": "You lunge forward, leaving a wound across the apprentice's eye before they can even react. Even if you've been shunned in your own Clan, you harshly remind them that that doesn't apply here, and they'd better not talk back to you, or else. The Dark Forest cat, rdf_c_brooding, catches your eye from afar and gives you a small nod of approval.",
+                    "exp": 30,
+                    "weight": 20
+                }
+            ],
+            "antag_fail_outcomes": [
+                {
+                    "text": "You raise your paw to strike them, but the apprentice blocks your attack. They tell you that, for a grown cat, you sure are stupid, and maybe you shouldn't get caught so easily next time. You flex your claws into the mud as they stalk away.",
+                    "exp": 0,
+                    "weight": 20
+                },
+                {
+                    "text": "Clearly, the o_c_n apprentice is looking for a fight - so you give it to them. You lunge forward, going for the throat, but it seems like the apprentice was anticipating your movement and quickly dodges out of the way. They sink their claws into your pelt, and you're forced to flee quickly as the apprentice laughs at your impulsive mistake.",
+                    "exp": 0,
+                    "weight": 20,
+                    "injury": [
+                        {
+                            "cats": [
+                                "p_l"
+                            ],
+                            "injuries": [
+                                "torn pelt"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
     ]

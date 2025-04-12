@@ -2033,5 +2033,218 @@
                 "weight": 20
             }
         ]
+    },
+    {
+        "patrol_id": "normalpatrol_app_H1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "app_default",
+        "min_cats": 1,
+        "max_cats": 2,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You find yourself alone one moon without clear direction or duties. It's a bit awkward as you try to think of ways to pass the time.",
+        "decline_text": "The only fulfilling way to pass the time is to have a nice, cozy nap. So you do!",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You look back to the apprentices' den and scrunch up your nose. Well, you guess it was due for a cleaning anyway... You spend your day cleaning and rearranging the nests, fixing the occasional broken object as you go. By the time you're done, the sun is setting and you fall into your nest in a heap of exhaustion.",
+                "exp": 10,
+                "weight": 20,
+                "stat_skill": [
+                    "ARTISTAN,1",
+                    "CAMP,1",
+                    "CLEAN,1",
+                    "TIME,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
+            },
+            {
+                "text": "Well, if no cat is going to give you instructions for the day, may as well train! You find the nearest tree and practice climbing on and off the bark, energized by the wind in your fur. You only stop when you see the sun go down and feel too sore to continue.",
+                "exp": 10,
+                "weight": 20,
+                "stat_skill": [
+                    "CLIMBER,1",
+                    "RUNNER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
+            },
+            {
+                "text": "No one will complain if you took a short trip out of camp! You follow a path around the territory you know is relatively safe, searching for a quick meal. Soon enough, you find a rabbit's nest with a few rabbit kits hidden away. With little difficulty, you're successful in your short hunt!",
+                "exp": 10,
+                "weight": 20,
+                "stat_skill": [
+                    "HUNTER,1",
+                    "FIGHTER,1",
+                    "NAVIGATOR,1",
+                    "TRACKER,1"
+                ],
+                "prey": [
+                    "small"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
+            },
+            {
+                "text": "With nothing else to do, this is the perfect opportunity to fish. You travel out into the territory to the nearest body of water, and with a moment to look into the water, you take a dive as soon as a decently sized fish is spotted. It is a bit difficult swimming up to the surface with the wiggling fish, but you succeeded in fishing!",
+                "exp": 10,
+                "weight": 20,
+                "stat_skill": [
+                    "FISHER,1",
+                    "SWIMMER,1",
+                    "CLEVER,1",
+                    "HUNTER,1"
+                ],
+                "prey": [
+                    "medium"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
+            },
+            {
+                "text": "With the lack of eyes on you, you grin mischievously. No one is going to stop you from finding more pretty things now! With little hesitance, you walk out near the borders in hopes of finding more 'treasures' and lo-and-behold, there is... something! You're not too sure what it is, but it's yours now. Finders keepers!",
+                "exp": 5,
+                "weight": 20,
+                "stat_skill": [
+                    "TREASURE,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ],
+                "accessory": [
+                    {
+                        "cats": [
+                            "y_c"
+                        ],
+                        "accessory": [
+                            "POP TABS",
+                            "WILLOWBARK BAG",
+                            "CLAY DAISY POT",
+                            "CLAY AMANITA POT",
+                            "CLAY BROWNCAP POT",
+                            "ROESKULL",
+                            "RADIO",
+                            "CELESTIALCHIMES",
+                            "LUNARCHIMES",
+                            "STARCHIMES",
+                            "SILVERLUNARCHIMES",
+                            "LANTERNS",
+                            "HEARTCHARMS"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "You may as well do something useful. The rain has been pouring heavily for the past moon and it's on the verge of flooding the elders' den. With some contemplating, you decide digging a trench around that area of the camp would be beneficial to keep it from flooding. It takes you hours, but it's a proud accomplishment.",
+                "exp": 10,
+                "weight": 20,
+                "stat_skill": [
+                    "TUNNELER,1",
+                    "THINKER,1",
+                    "INNOVATOR,1",
+                    "SCHOLAR,1",
+                    "CAMP,1"
+                ],
+                "accessory": [
+                    {
+                        "cats": [
+                            "y_c"
+                        ],
+                        "accessory": [
+                            "MUD",
+                            "MUD PAWS"
+                        ]
+                    }
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
+            },
+            {
+                "text": "If you can't do anything as a warrior, may as well fill in for another role! You wander to the mediators' den and spend your day talking cats through their issues, even though you have no proper experience in mediating. You leave the den with a new found skill and a few praises lifting your spirits.",
+                "exp": 10,
+                "weight": 20,
+                "stat_skill": [
+                    "MATCHMAKER,1",
+                    "MEDIATOR,1",
+                    "COMFORTER,1",
+                    "INSIGHTFUL,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
+            },
+            {
+                "text": "If you can't do anything as a warrior, may as well fill in for another role! You wander over to the nursery and spend your day entertaining the kits while the queen's take a well-needed break. You spin tales of a world underneath the ground filled with monsters that were sealed away by Twolegs. When you leave, the kits are a little terrified of holes of the ground, but you argue that's a necessary fear.",
+                "exp": 10,
+                "weight": 20,
+                "stat_skill": [
+                    "KIT,1",
+                    "COMFORTER,1",
+                    "SPEAKER,1",
+                    "STORY,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
+            },
+            {
+                "text": "If you can't do anything as a warrior, may as well fill in for another role! You wander over to the medicine den and start sorting through the herb pile. It's a mediating task that helps you relax your nerves, and by the time you're done, you think you are deserving of a nice, well deserving nap.",
+                "exp": 10,
+                "weight": 20,
+                "stat_skill": [
+                    "HEALER,1",
+                    "CLEVER,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
+            },
+            {
+                "text": "Suddenly having nothing to do makes you restless, and the lack of direction gets you in the mood to do <i>everything</i>. Cleaning out dens, checking on the elders' den, conversing with random cats, watching the clouds... but nothing you do seems to pass the time! At least you were able to accomplish some things...",
+                "exp": 10,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You think long and hard about what you should do, but nothing comes to mind.",
+                "exp": 0,
+                "weight": 10
+            },
+            {
+                "text": "To your credit, you try to do something to pass the time. Cleaning dens, making up games, attempting to catch the occasional bird on the border of camp, but boredom prevails. You lay down underneath a shaded area, and before you know it, slowly your eyes shut and you're gone from the waking world.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "If you're not given instructions or duties for the day, that means you're allowed to do anything, right? With that logic in mind, you happily stroll into your nest and fall asleep. While deep asleep, you dream of rivers, flowers, and joyful laughter underneath the sun. It's a welcome peace, but inevitably you get nothing done today.",
+                "exp": 0,
+                "weight": 20,
+                "stat_skill": [
+                    "DREAM,1",
+                    "SLEEPER,1",
+                    "OMEN,1",
+                    "PROPHET,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
+            }
+        ]
     }
 ]

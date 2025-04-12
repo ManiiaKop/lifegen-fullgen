@@ -93,7 +93,7 @@
         ],
         [
             "[You notice t_c playing with some kits, a rare smile on {PRONOUN/t_c/poss} face.]",
-            "[{PRONOUN/t_c/subject} {VERB/t_c/seem/seems} to notice your gaze, pausing and accidentally stumbling over a kit.]",
+            "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/seem/seems} to notice your gaze, pausing and accidentally stumbling over a kit.]",
             "[Nodding, you look away. It's good to see {PRONOUN/t_c/object} having fun every once in a while.]"
         ]
     ],
@@ -374,7 +374,7 @@
         [
             "Is it really true that you're allowed to just ... Travel between the Clans as you please?",
             "Whoa! That's so cool!!! I've always wanted to explore the other territories, but I've never been allowed.",
-            "Is it true that o_cClan cats can swim like fish? Or that their territory is full of snakes?",
+            "Is it true that o_c_n cats can swim like fish? Or that their territory is full of snakes?",
             "[You and t_c have a long conversation about the other Clans. With each detail you share, {PRONOUN/t_c/poss} eyes grow bigger and bigger.]"
         ]
     ],
@@ -914,7 +914,7 @@
             "[You spot t_c with r_k, their paws are covered in colors and smashed berries are off to the side.]",
             "[You approach, asking what {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} doing.]",
             "Oh! You see, r_k was playing a bit too rough, so I tried to find a different outlet for {PRONOUN/r_k/poss} energy.",
-            "{PRONOUN/r_k/subject} {VERB/r_k/seem/seems} to be enjoying making colorful rocks and I can't blame {PRONOUN/r_k/object}, I'm having fun too!"
+            "{PRONOUN/r_k/subject/CAP} {VERB/r_k/seem/seems} to be enjoying making colorful rocks and I can't blame {PRONOUN/r_k/object}, I'm having fun too!"
         ]
     ],
     "sweet_queenapp_22": [
@@ -1138,7 +1138,7 @@
         ],
         [
             "r_k_unlawful said {PRONOUN/r_k_unlawful/subject} didn't have to listen to me, because I'm basically still a kit too...",
-            "I didn't know what to say. {PRONOUN/r_k_unlawful/subject}{VERB/r_k_unlawful/'re/'s} kind of right. I'm not that much older than {PRONOUN/r_k_unlawful/object}, and I have no idea what I'm doing.",
+            "I didn't know what to say. {PRONOUN/r_k_unlawful/subject/CAP}{VERB/r_k_unlawful/'re/'s} kind of right. I'm not that much older than {PRONOUN/r_k_unlawful/object}, and I have no idea what I'm doing.",
             "I guess I just... hoped {PRONOUN/r_k_unlawful/subject}'d still respect me? That sounds stupid when I say it out loud."
         ]
     ],
@@ -1226,6 +1226,179 @@
         [
             "r_k_unlawful is such a troublemaker. I swear to StarClan, I look away for one moment, and {PRONOUN/r_k_unlawful/subject}{VERB/r_k_unlawful/'ve/'s} already shredded my nest or snuck into the medicine den.",
             "Whoever becomes {PRONOUN/r_k_unlawful/poss} mentor will have {PRONOUN/r_k_unlawful/poss} paws full!"
+        ]
+    ],
+    "about_brooding_AJ2": [
+        [
+            "no_kit",
+            "they_queen",
+            "they_queen's_apprentice",
+            "min_trust_15"
+        ],
+        [
+            "Oh, StarClan, did r_q_brooding chase you out of the nursery again? *Sigh* {PRONOUN/r_q_brooding/subject/CAP} sure {VERB/r_q_brooding/tend/tends} to do that a lot ...",
+            "Try not to take it too personally, y_c. I know {PRONOUN/r_q_brooding/poss} methods may seem ... unorthodox, but r_q_brooding really isn't a bad Queen. {PRONOUN/r_q_brooding/subject/CAP} just {VERB/r_q_brooding/want/wants} to keep everycat safe.",
+            "And if scaring cats stiff into leaving the kits alone is what it takes ... Well, then that's just what {PRONOUN/r_q_brooding/subject}'ll do."
+        ]
+    ],
+    "Introspective_queenapp_to_NB": [
+        [
+            "you_newborn",
+            "they_queen's_apprentice",
+            "introspective",
+            "you_blind",
+            "you_blind"
+        ],
+        [
+            "Oh, that's y_c! {PRONOUN/y_c/subject/CAP}{VERB/y_c/'ve/'s} grown so quickly.",
+            "I remember you being born, you know, even if it wasn't that long ago. It'll be amazing watching you grow to provide for the Clan. I wonder what you'll grow up to do.",
+            "A big strong warrior, a gentle healer, a wise mediator... or you could become a queen like I'm learning to right now.",
+            "But that doesn't matter right now. Just focus on enjoying your life. That's what I think."
+        ]
+    ],
+    "youkit_deaf_J6": [
+        [
+            "only_you_deaf",
+            "you_kitten",
+            "they_queen",
+            "they_queen'sapprentice"
+        ],
+        [
+            "[t_c is teaching some signs to the warriors so they can communicate with you better.]",
+            "[But {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} signing so fast, you can't even keep up!]"
+        ]
+    ],
+    "youdeaf_R71": [
+        [
+            "only_you_deaf",
+            "you_kitten",
+            "they_queen",
+            "they_queen'sapprentice",
+            "they_deaf"
+        ],
+        [
+            "[t_c works with you on learning a few new signs. Today is prey!]",
+            "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/quiz/quizzes} you with a smile on each type from the freshkill pile.]",
+            "[When {PRONOUN/t_c/subject} {VERB/t_c/wiggle/wiggles} {PRONOUN/t_c/poss} ears up and down, you swiftly point to the first bird you see before mimicking the sign.]",
+            "[Then, t_c taps {PRONOUN/t_c/poss} forepaws together before moving one paw back while shaking it. This one stumps you a moment before you think about what it resembles.]",
+            "[Squirrel! You quickly point to the prey on the pile and once again sign for it yourself.]",
+            "[t_c seems pleased before wiggling a forepaw side to side. This one isn't familiar.]",
+            "[It doesn't seem to bother {PRONOUN/t_c/object} that you don't know as you shrug your shoulders in defeat. {PRONOUN/t_c/subject/CAP} {VERB/t_c/point/points} to a fish, and you feel a bit silly for not catching on.]",
+            "[That ends the lesson for the day, though, as t_c signs that {PRONOUN/t_c/subject} {VERB/t_c/need/needs} to go.]"
+        ]
+    ],
+    "queen_yourapp_theyshunned_gen_rad1": [
+        [
+            "you_queen",
+            "they_queen_apprentice",
+            "from_your_apprentice",
+            "min_platonic_15",
+            "max_trust_10",
+            "they_shunned",
+            "they_deaf",
+            "you_deaf",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "[You shoo t_c away from the nursery with a pang of guilt in your heart.]",
+            "[{PRONOUN/t_c/subject/CAP}{VERB/t_c/'re/'s} always so good with the kits, and you can't imagine {PRONOUN/t_c/object} doing anything to them.]",
+            "[But you clearly didn't know your apprentice as well as you thought, and you're not going to take any chances.]"
+        ]
+    ],
+    "neg_from_appqueen_youshunned_H1": [
+        [
+            "you_shunned",
+            "they_queen's_apprentice",
+            "from_your_apprentice",
+            "max_platonic_30",
+            "max_trust_30",
+            "they_introspective",
+            "they_deaf",
+            "you_deaf"
+        ],
+        [
+            "[You almost bump into t_c at the entrance of the nursery.]",
+            "[{PRONOUN/t_c/poss/CAP} eyes widen when {PRONOUN/t_c/subject} {VERB/t_c/realize/realizes} who you are, and hastily {VERB/t_c/backtrack/backtracks} into the nursery.]",
+            "[Before t_c leaves your sight, {PRONOUN/t_c/subject} {VERB/t_c/give/gives} you an unsure yet stern glare. Seems like even t_c is ordered to keep you out.]"
+        ]
+    ],
+    "pos_from_appqueen_youshunned_H1": {
+        "tags": [
+            "you_shunned",
+            "you_healer",
+            "they_queen's_apprentice",
+            "from_your_apprentice",
+            "max_dislike_30",
+            "max_trust_30",
+            "min_platonic_40",
+            "they_introspective",
+            "they_neurotic",
+            "clan_has_kits"
+        ],
+        "intro_text": [
+            "... y_c?",
+            "[t_c's unsure voice is heard from behind you. {PRONOUN/t_c/subject/CAP} awkwardly {VERB/t_c/shift/shifts} {PRONOUN/t_c/poss} paws as {PRONOUN/t_c/subject} {VERB/t_c/work/works} up the courage to speak to you.]"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "You're not supposed to talk to me.",
+                "next_scene": "not_supposed_H"
+            },
+            "choice2": {
+                "text": "[Ignore {PRONOUN/t_c/object}.]",
+                "next_scene": "ignore_H"
+            }
+        },
+        "not_supposed_H": [
+            "I know I'm not supposed to talk to you. Everycat knows that.",
+            "It's just-- Uh... Well, r_k has been having really bad ear pain and r_m has been too busy to check on {PRONOUN/r_k/object}.",
+            "You always had the knack of finding out what's going on, even if you're not a healer and, well, I was hoping you'd agree to help?"
+        ],
+        "ignore_H": [
+            "[You choose to ignore the apprentice, unwilling to strike up any conversation with {PRONOUN/t_c/object}.]",
+            "[After a few seconds of awkward silence, you can hear t_c walk away without another word.]"
+        ],
+        "not_supposed_H_choices": {
+            "choice1": {
+                "text": "Lazy healers...",
+                "next_scene": "lazy_meds_H"
+            },
+            "choice2": {
+                "text": "[Refuse to help.]",
+                "next_scene": "refuse_help_H"
+            },
+            "choice3": {
+                "text": "[Accept.]",
+                "next_scene": "accept_H"
+            }
+        },
+        "lazy_meds_H": [
+            "Uh... Is that a yes? I am going to assume that is a really reluctant yes."
+        ],
+        "refuse_help_H": [
+            "Oh, okay. That's fine.",
+            "We'll wait for r_m, then. Have a good day, y_c."
+        ],
+        "accept_H": [
+            "Awesome!!",
+            "I mean, uh... You don't need to if you don't want to, but I am relieved you're willing to help.",
+            "I'll get back to you with r_k soon!"
+        ]
+    },
+    "neg_from_appqueen_youshunned_H2": [
+        [
+            "you_shunned",
+            "they_queen's_apprentice",
+            "from_your_apprentice",
+            "max_platonic_30",
+            "min_dislike_25",
+            "max_trust_30",
+            "they_introspective"
+        ],
+        [
+            "Uhh... I have duties at the nursery.",
+            "[t_c hastily runs away toward the nursery. {PRONOUN/t_c/subject/CAP}{VERB/t_c/'re/'s} avoiding you, it seems.]"
         ]
     ]
 }

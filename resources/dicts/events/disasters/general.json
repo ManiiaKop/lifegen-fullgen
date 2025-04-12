@@ -36,5 +36,424 @@
             "The Clan has been closely monitoring the state of the river. Finally, lead_name has announced that the contamination is gone, and the water is once more safe to drink. Thirsty warriors rush to the camp entrance, clearing the medicine den of their moss stores, to fetch water for the ill."
         ],
         "collateral_damage": {}
+    },
+    "Great Blizzard": {
+        "event": "Great Blizzard",
+        "camp": [
+            "any"
+        ],
+        "season": [
+            "Leaf-bare"
+        ],
+        "tags": [],
+        "priority": "primary",
+        "duration": 3,
+        "rarity": "uncommon",
+        "trigger_events": [
+            "The first few flakes of snow drift down delicately in the yellowish light, some of the younger cats of c_n chasing them down playfully. Within a day, no cat can see past their whiskers and the territory blanketed in a blizzard.",
+            "The snow is falling heavily this leaf-bare, thought cats are oblivious to the incoming danger as they play in the blanket of white flakes.",
+            "Leaf-bare is harsh, just like any other year. However, this time c_n strangely struggles with the never-ending flow of white flakes. Worry spreads through the Clan as they wonder how they'll keep themselves warm."
+        ],
+        "progress_events": {
+            "moon1": [
+                "The snow doesn't seem to have an end to it. The nights and days have the same dreary shade of white. All c_n can do is dig themselves out of their nests each morning.",
+                "Cats make a collective effort to try to push the snow away from the Clan, but the snow is falling too quickly for anything to get done, despite their efforts.",
+                "The snow falls and falls and falls... In no time, everything is covered in a thick blanket of cold snow. Cats try their best to keep the dens cleared, yet it feels hopeless as the snow just keeps piling."
+            ],
+            "moon2": [
+                "Cats continue to huddle for warmth, even as the snow slowly melts across the territory. It is still too dangerous for any cat to travel or patrol by themselves, and the lack of fresh-kill is becoming far too noticeable.",
+                "Warmth is fickle and prey even more so. c_n struggles to survive the unbearable and unpredictable leaf-bare. The cold seeps into their pelts with no mercy."
+            ]
+        },
+        "conclusion_events": [
+            "The dazzling light of the sun shines brightly on white, still snow. The blizzard has ended, though leaf-bare still continues.",
+            "c_n wakes one moon to see the ground of their territory once more, the snow less dominant in their surroundings. They take a breath of relief, and start to work on replenishing everything the blizzard starved them from.",
+            "The cold passes and the snow melts into the ground, finally lifting their cold grip off c_n's territory. The struggle has just begun."
+        ],
+        "secondary_disasters": {
+            "Barren Land": {
+                "disaster": "Barren Land",
+                "triggers_during": "during",
+                "chance": 5,
+                "trigger_events": [
+                    "The snow has hidden all plants and trails, everything that c_n has relied on. Herbs, favorite moss gathering spots, best cobweb collections, all of it has been obliterated by white, icy flakes.",
+                    "Everything the clan has relied on has been vanquished by the never-ending snow. healers panic as herb supplies run dangerously low."
+                ]
+            },
+            "Famine": {
+                "disaster": "Famine",
+                "triggers_during": "during",
+                "chance": 3,
+                "trigger_events": [
+                    "No cat can smell any prey scent past the snow. There could be mice right under their paws, but no warrior of c_n can track them, and those lucky enough to see one, slip more often than not."
+                ]
+            },
+            "Terrible Cold": {
+                "disaster": "Terrible Cold",
+                "triggers_during": "during",
+                "chance": 5,
+                "trigger_events": [
+                    "Any cat with a thin pelt can't seem to get warm with all the snow falling in the forest. Sneezing and coughing wake up many a cat in the muffled silence of the blizzard."
+                ]
+            }
+        },
+        "collateral_damage": {
+            "injuries": [
+                "frostbite",
+                "shivering"
+            ],
+            "deaths": {
+                "death_text": [
+                    "Despite their efforts to find shelter, m_c was overwhelmed by the snow and cold.",
+                    "The blizzard buried m_c so quickly under the snow that rescue efforts were futile."
+                ],
+                "history_text": {
+                    "reg_death": "m_c froze to death during a blizzard."
+                }
+            }
+        }
+    },
+    "Terrible Cold": {
+        "event": "Terrible Cold",
+        "camp": [
+            "any"
+        ],
+        "season": [
+            "Leaf-fall",
+            "Leaf-bare"
+        ],
+        "tags": [],
+        "priority": "both",
+        "duration": 2,
+        "rarity": "uncommon",
+        "trigger_events": [
+            "The air has sharper claws than any enemy warrior. Even the rising sun cannot make it gentler, only causing the new frozen land to glitter in grim beauty. A terrible cold has come, and sickness will soon follow.",
+            "It hurts to breathe, the cold air like daggers in their lungs. The Clan hunkers down in their dens, curling tightly around each other in shivering piles. This terrible cold will pass, they tell each other, it won't be for forever.",
+            "The land is crying. lead_name's fur spikes with alarm, trying to keep calm and prevent panic as the terrible cold makes the trees creak and crack."
+        ],
+        "progress_events": {
+            "moon1": [
+                "The younger cats have forgotten the warmth of greenleaf, some believe that they may never get warm again, and the older cats suffer the cold even more because of their memory of hot days. Both young and old curl around each other for warmth, and hope, despite the chill of these long nights.",
+                "It feels never ending, the cold. The wind doesn't even dare disturb it, the air so still it feels as though it could cut. Noses are covered by tails and paws are tucked tightly away as the Clan does all they can to avoid freezing.",
+                "Whispers are beginning to spread through camp, rumors of what they might have done for StarClan to turn their backs and freeze c_n into never ending stillness."
+            ]
+        },
+        "conclusion_events": [
+            "The sun rises one day, rainbow shards of ice glinting on the ground like so many days before, but as the day goes on... They melt and turn to mud. While everycat soon gets dirty, the sunlight feels so good on everycat's fur, no one can complain too much through their purrs.",
+            "When the Clan steps from their dens and finds the world no longer freezing, they're almost shocked by the change. It had been so cold for so long, they'd forgotten warmth's embrace.",
+            "As the cold loses its grip on their throats, the forest of c_n weeps with relief, trees oozing sap from their damaged trunks."
+        ],
+        "secondary_disasters": [],
+        "collateral_damage": {
+            "injuries": [
+                "shivering",
+                "frostbite"
+            ],
+            "deaths": {
+                "death_text": [
+                    "m_c's shivering soon stops and it becomes much too hard for them to move. They curl up and close their eyes one final time.",
+                    "m_c paces back and forth for warmth until their paws go numb and their vision blurs. Eventually, they sink to the frozen ground, and are unable to be roused."
+                ],
+                "history_text": {
+                    "reg_death": "m_c froze to death during a terrible cold."
+                }
+            }
+        }
+    },
+    "Prey Sickness": {
+        "event": "Prey Sickness",
+        "camp": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "tags": [],
+        "priority": "both",
+        "duration": 2,
+        "rarity": "uncommon",
+        "trigger_events": [
+            "The objects the Twolegs bring smell so enticing, but the cats of c_n avoid them as much as possible. It only occurs to them that the prey they so rely on for food might not do the same when the first cats start getting sick.",
+            "The prey has been easy to catch lately, though even the freshest of fresh-kill has seemed a little... off. The healer den has more work than usual, and bellyaches are now very common.",
+            "A group of Twolegs have settled in white, flimsy dens a little ways away from the territory. c_n can hear booms in the night and the ever growing unease of the animals around them. Prey and predator, big and small, are found deceased at dawn."
+        ],
+        "progress_events": {
+            "moon1": [
+                "There's something wrong with the prey in the territory. No matter how hard the warriors try to catch healthy prey, the fresh-kill still causes bellyaches or worse, and anything that smells even a little wrong is taken away and buried, far, far away from hungry mouths.",
+                "The warriors report back from their hunts without prey to feed the Clan. They state the animals they find were sick, and in some cases, already deceased. lead_name shakes {PRONOUN/lead_name/poss} head and glances to the ever lowering fresh-kill pile, worried about the Clan's survival.",
+                "The warriors rarely are able to bring animals of bigger sizes to the Clan. When they find one already deceased in the territory, they take the opportunity and drag the animal back to camp. However, the smell of smoke and sickness settle in the Clan's senses. The warriors big catch soon becomes buried far, far away."
+            ]
+        },
+        "conclusion_events": [
+            "Fresh-kill tastes a little better, a little brighter, like it's cleaner. While the Clan might be a little thinner than they used to be, it seems as if they can now eat anything they catch again - if they can catch it!",
+            "The Twolegs have moved on from their claim and c_n can rest a little easier knowing the foul beasts and their booming objects are gone. And on the plus side, the prey smells cleaner!"
+        ],
+        "secondary_disasters": [],
+        "collateral_damage": {
+            "injuries": [
+                "poisoned"
+            ],
+            "deaths": {
+                "death_text": [
+                    "The prey smelled fine, and m_c's stomach had been rumbling the whole day. After taking a bite, its clear that something was wrong. m_c succumbed to the poison later that day.",
+                    "m_c bites into some sour smelling fresh-kill just to ease the pain of hunger. They are found dead in their nest later that day."
+                ],
+                "history_text": {
+                    "reg_death": "m_c died during a prey sickness."
+                }
+            }
+        }
+    },
+    "Famine": {
+        "event": "Famine",
+        "camp": [
+            "any"
+        ],
+        "season": [
+            "Newleaf",
+            "Greenleaf",
+            "Leaf-fall",
+            "Leaf-bare"
+        ],
+        "tags": [],
+        "priority": "secondary",
+        "duration": 3,
+        "rarity": null,
+        "trigger_events": [],
+        "progress_events": {
+            "moon1": [
+                "The Clan hunts and scrounges for any hint of possible food, but they never seem to find enough.",
+                "As famine hunts the Clan, none of their own hunts seem enough to drive it from haunting their paws.",
+                "Everycat in the Clan seems a little sadder, a little more serious as the situation dawns on them all. They have to try find more prey, before it becomes too late."
+            ],
+            "moon2": [
+                "c_n has started wandering past their borders to find prey. While it might not be as much as they hoped for, any catch is considered a blessing from StarClan, even if some prey might smell like a rival Clan. No questions are asked if it means not going hungry.",
+                "Every scrap, everycatch, every piece brought back to the Clan, it all carries such weight. With prey so scarce, every mouthful is critical.",
+                "Never before has the whispered prayers to StarClan over everycatch seemed so heartful. All the cats of Clan can do with hunger dogging their pawsteps is their best. The rest is in the paws of the stars."
+            ]
+        },
+        "conclusion_events": [
+            "Prey has returned to the forest, the famine finally over.",
+            "Though the prey has started to run well again, some of the warriors still seem to be taking every missed pounce as a claw-wound. It's a hard mindset to recover from.",
+            "The forest is once again humming with life, and slowly the Clan starts too as well, making up for the hard times with jokes and sharing tongues and basking together in the bright sun."
+        ],
+        "secondary_disasters": [],
+        "collateral_damage": {
+            "injuries": [],
+            "deaths": {
+                "death_text": [
+                    "As food dwindled, m_c's strength ebbed away quietly. They never complained, never let on just how dire their condition was, until it was too late.",
+                    "The famine weakened m_c to the core, and the cold seeped into their bones. One night, m_c curled up tighter in their nest and never woke up again."
+                ],
+                "history_text": {
+                    "reg_death": "m_c died during a famine."
+                }
+            }
+        }
+    },
+    "Earthquake": {
+        "event": "Earthquake",
+        "camp": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "tags": [],
+        "priority": "both",
+        "duration": 2,
+        "rarity": "uncommon",
+        "trigger_events": [
+            "On a day like any other, you emerge from your den with a yawn. Just as you approach the fresh-kill pile to eat breakfast, the ground trembles underneath you. As the shaking intensifies, lead_name yowls an order for everyone to take shelter."
+        ],
+        "progress_events": {
+            "moon1": [
+                "Every morning, the cats of c_n leave their dens expecting the stability of the earth to betray them. Ever since the earthquake, everyone has been very uneasy. You can't get the sounds out of your head-- trees uprooting themselves, pebbles jumping across the clearing, kits crying as their dens violently shook. c_n, warily, has started to rebuild.",
+                "Ever since the earthquake, prey has been harder to find. It seems that no one wants to leave their dens-- not even a mouse. You can't blame them, but with the camp crumbled and full of debris, you'd like to at least have a good meal.",
+                "It's been hard for c_n since the earthquake. Every cat is exhausted from dealing with fallen trees, broken dens, and a lack of prey."
+            ]
+        },
+        "conclusion_events": [
+             "Since the earthquake, c_n has been rebuilt. Warriors have put all of their time into getting dens refortified, trees hauled out of the clearing, and fresh-kill pile restocked. The ground is still underpaw, and the camp is safe."
+        ],
+        "collateral_damage": {
+            "injuries": [
+                "sprain",
+                "bruises",
+                "scrapes",
+                "small cuts"
+            ]
+        }
+    },
+    "Heatwave": {
+        "event": "Heatwave",
+        "camp": [
+            "any"
+        ],
+        "season": [
+            "greenleaf"
+        ],
+        "tags": [],
+        "priority": "primary",
+        "duration": 2,
+        "rarity": "common",
+        "trigger_events": [
+            "Greenleaf is as hot as ever, but this morning just seems unbearable. The ground is hot, the air is hot, and even the slight breeze does nothing to relieve cats from the beaming sun.",
+            "Cats are waking up in the middle of the night, complaining about the sudden unbearable heat of Greenleaf. Warriors are weary and exhausted from the lack of sleep, and healers are worried about herbs and heat stroke."
+        ],
+        "progress_events": {
+            "moon1": [
+                "lead_name is worried about the rise in temperature and advises cats to say within shaded areas for now until it passes. Patrols will be done earlier in the morning when it's cooler and kittens are to strictly play inside the dens to avoid the sun.",
+                "The healers are rushing to preserve herbs, worried the heat would damage them before they're able to be used. A decent portion of herbs has already dried up, thankfully still usable under the right conditions but worrying nonetheless.",
+                "Cats from all roles remind each other to drink water and take breaks to avoid dehydration as the days just get hotter. Elders and kittens are watched carefully for any signs of sickness, and the healers are always on edge."
+            ]
+        },
+        "conclusion_events": [
+             "It's the first time in moons where cats sleep through the night without waking up from the uncomfortable heat. It is a small thing to celebrate, but at least c_n can work without exhaustion.",
+             "The ancestors answered! Clouds block the sun and the wind is cool against fur, giving well-needed relief from the days of excessive heat. Cats can play and patrol freely like they could once before."
+        ],
+        "collateral_damage": {
+            "injuries": [
+                "heat exhaustion",
+                "heat stroke",
+                "dehydrated"
+            ],
+            "deaths": {
+                "death_text": [
+                    "After days of unrelenting heat and limited water, m_c's strength finally gave out.",
+                    "m_c's body was unable to handle the extreme temperatures, and despite fighting to survive, {PRONOUN/m_c/subject} slowly faded away."
+                ],
+                "history_text": {
+                    "reg_death": "m_c succumbed to the unbearable heat created by a heat wave."
+                }
+            }
+        }
+    },
+    "Severe Thunderstorm": {
+        "event": "Severe Thunderstorm",
+        "camp": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "tags": [],
+        "priority": "primary",
+        "duration": 2,
+        "rarity": "uncommon",
+        "trigger_events": [
+            "As dusk falls, a distant rumbling from the sky disrupts c_n's nighttime routine. Black clouds with flashing light cover the sky and moon, casting a blanket of cold, wet air to fall upon the camp. Something big is coming.",
+            "Whispers of a prophecy of howling wind, shivering clouds, and a blanket of cool darkness fill the ears of c_n. Every cat is on edge as they wait anxiously on what is to come."
+        ],
+        "progress_events": {
+            "moon1": [
+                "Rain plummets from the sky suddenly, drenching anything in its path. c_n flees to shelter as the sky roars and screams, flashing with streams of light that quakes the ground. Cats huddle together away from the rain, terrified of the loud noises.",
+                "As the storm appears on the horizon, blackening the sky and sending rivers of rain, lead_name orders cats to seek shelter in the dens. The thunder roars and quakes the ground as water pours into the dens, but at least cats are away from the worst of it.",
+                "c_n is startled awake as the sky roars and trembles with bright light, rain pooling into the dens with no sign of stopping."
+            ]
+        },
+        "conclusion_events": [
+             "After what seemed like hours of nonstop rain, the sky parts their clouds to allow light to shine through. The storms anger is finally over.",
+             "The storm passed as quickly as it came, but it left behind a flooded camp and broken foliage. c_n works together to restore what they can, relieved the storm didn't destroy too much in its anger."
+        ],
+        "collateral_damage": {
+            "injuries": [
+                "shivering",
+                "running nose"
+            ]
+        },
+        "secondary_disasters": {
+            "Floods": {
+                "disaster": "Floods",
+                "triggers_during": "end",
+                "chance": 0,
+                "trigger_events": [
+                    "The sky has brought with it swelling rivers that fight their embankments. Water flows freely without a path, and everycat has to keep their claws on the ground to keep themselves from floating away."
+                ]
+            }
+        }
+    },
+    "Drought": {
+        "event": "Drought",
+        "camp": [
+            "any"
+        ],
+        "season": [
+            "Greenleaf"
+        ],
+        "tags": [],
+        "priority": "primary",
+        "duration": 3,
+        "rarity": "uncommon",
+        "trigger_events": [
+            "lead_name scuffs a paw in the dirt, clawing it to show dep_name and med_name. There's an alarming lack of moisture there, the soil dusty and dry. It may be time to declare this hot weather a drought, and start planning for the future.",
+            "med_name pulls aside lead_name. They've noticed some of the herbs that grow within their territory are beginning to wilt in this heat, and the roots are drying rather quickly.",
+            "The leaves on the trees wilt and droop, heavy with the exhaustion that the hot weather brings. In camp, cats lounge in the shade, waiting impatiently for the cool of night and the chance to hunt. It hasn't rained all moon."
+        ],
+        "progress_events": {
+            "moon1": [
+                "Even the air tastes dry. The cats of c_n cart moss between camp and their water source, bringing back vital liquid to their youngest and oldest Clanmates. But there are murmurs of discontented gossip - what will they do if their water dries up?",
+                "The prey that cats bring back to the fresh-kill pile is beginning to look weak. Difficult to say what's taking its toll - the heat, or the difficulty of finding water.",
+                "The warriors have noticed the ground breaking and drying underneath their paws, creating cracks from the beaming heat. med_name hides {PRONOUN/med_name/poss} nerves and counts the herbs, hoping c_n has enough to fight the inevitable heat stroke and exhaustion."
+            ],
+            "moon2": [
+                "The drought continues. The cats of c_n pant in the shade, too hot to move, their tongues dry and tacky.",
+                "Not even night brings cool anymore. No cat can sleep through this, the power of the heat removing even the relief of rest.",
+                "lead_name looks out over their Clan, huddled in the meager relief of the shade of their dens. How are they supposed to fight a foe like heat? This drought is wasting away the heart of the forest like a disease.",
+                "The heat has been proven unbearable as c_n struggles to find the many creeks and streams that once flowed through the territory. Pleading whispers for a miracle fill the camp as cats drop like flies from exhaustion and lack of water."
+            ]
+        },
+        "conclusion_events": [
+            "The cats of c_n turn their faces to the skies, collecting in the clearing at the heart of camp, thrumming with joy as rain washes their pelts sodden and dings off the drought-hardened ground. With water, life returns to c_n.",
+            "The shade of the canopy, so often their only protection from the heat haunting their woods, now shelters c_n from a different sky. Rain patters off the ground before them as the cats bow their heads in thanks. StarClan has heard their prayers, and the drought has broken.",
+            "lead_name watches the clouds gather, trembling in anticipation and hope. When the skies open, the ground sucks away the water, as thirsty as the Clan that turns their heads towards the stars and lets the life-giving rain fill their throats."
+        ],
+        "secondary_disasters": {
+            "Barren Land": {
+                "disaster": "Barren Land",
+                "triggers_during": "during",
+                "chance": 1,
+                "trigger_events": [
+                    "It's to no one's surprise that the territory is losing their plants, the undergrowth drooping and wilted as the drought takes its toll.",
+                    "med_name has been anticipating this, but it's still a huge blow to watch what should be peak herb gathering season turn into a desperate search for wilted dusty leaves.",
+                    "The land, suffering under the heat of the drought, just can't support the normal plant life that should be growing. Without water to their roots and moist air on their leaves, med_name fears the worst."
+                ]
+            },
+            "Famine": {
+                "disaster": "Famine",
+                "triggers_during": "during",
+                "chance": 0,
+                "trigger_events": [
+                    "dep_name sighs, organizing another hunting patrol. {PRONOUN/dep_name/subject/CAP} can't fix the drought that's driving away and killing c_n's prey, all {PRONOUN/dep_name/subject} can do is send out more warriors, and hope the skill of c_n's hunters can keep famine at bay.",
+                    "c_n should be growing fat on the fruits of the season, or fat on the prey that's eaten those fruits, at least. But the drought brings only dust and thin pickings.",
+                    "The territory is silent - silent like the depths of winter. But this is caused by heat, not cold. How will c_n cope, in what should be a season of plenty?"
+                ]
+            },
+            "Wildfire": {
+                "disaster": "Wildfire",
+                "triggers_during": "during",
+                "chance": 0,
+                "trigger_events": [
+                    "Deep in the trees, in a dried, dusty bed of leaves, a piece of glass catches the hot sunlight, and the leaf litter begins to smolder. A wildfire is born, hissing and crackling, racing through woods bone dry with the drought to become a towering, unstoppable inferno.",
+                    "As drought stalks c_n, fire follows on its heels. No cat knows how it was born, but the Clan scatters before it, gathering their vulnerable and running, running for their lives as red glowing death hunts them, the woods of their home falling as prey to wildfire's jaws.",
+                    "The smoke reaches c_n first - but fire is hot on its heels. Their territory tinder-dry and dusty, c_n are forced to run before the flames, fleeing to the safety of the last scant water sources within the woods, warriors grabbing and hauling anyone who starts to fall behind."
+                ]
+            }
+        },
+        "collateral_damage": {
+            "injuries": [
+                "dehydrated"
+            ],
+            "deaths": {
+                "death_text": [
+                    "After days of unrelenting heat and no sign of water, m_c's strength finally gave out.",
+                    "The sun had been merciless, and despite their determination, m_c succumbed to dehydration.",
+                    "The search for water became m_c's final quest. With the territory suffering from a severe drought, {PRONOUN/m_c/subject} ventured beyond familiar lands. Sadly, {PRONOUN/m_c/subject} was found too late, collapsed near a dried-up riverbed, the earth cracked and dry beneath their outstretched paws"
+                ],
+                "history_text": {
+                    "reg_death": "m_c died from dehydration."
+                }
+            }
+        }
     }
 }

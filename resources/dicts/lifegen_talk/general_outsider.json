@@ -596,5 +596,33 @@
         [
             "[t_c raises {PRONOUN/t_c/poss} sparkling tail in welcome.]"
         ]
+    ],
+    "they_ur_sam1": [
+        [
+            "they_ur",
+            "you_sc",
+            "you_deaf",
+            "only_you_blind",
+            "they_deaf",
+            "they_blind",
+            "Any"
+        ],
+        [
+            "[You feel a cold ghostly presence nearby. It must be one of those 'lost cats' you've heard about, since it doesn't feel like another StarClan cat.]"
+        ]
+    ],
+    "they_ur_sam2": [
+        [
+            "they_ur",
+            "you_df",
+            "you_deaf",
+            "only_you_blind",
+            "they_deaf",
+            "they_blind",
+            "Any"
+        ],
+        [
+            "[You feel a cold ghostly presence nearby. It must be one of those 'lost cats' you've heard about, since it doesn't feel like another Dark Forest cat.]"
+        ]
     ]
 }

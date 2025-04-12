@@ -11,7 +11,7 @@
             "Leaf-bare"
         ],
         "tags": [],
-        "priority": "both",
+        "priority": "primary",
         "duration": 3,
         "rarity": "rare",
         "trigger_events": [
@@ -46,6 +46,63 @@
                 ],
                 "history_text": {
                     "reg_death": "m_c died in a tornado."
+                }
+            }
+        }
+    },
+    "Twoleg Invasion": {
+        "event": "Twoleg Invasion",
+        "camp": [
+            "any"
+        ],
+        "season": [
+            "Greenleaf"
+        ],
+        "tags": [],
+        "priority": "both",
+        "duration": 2,
+        "rarity": "common",
+        "trigger_events": [
+            "Twolegs have been spotted everywhere around c_n's territory, crawling in and out of brightly colored nests that have appeared out of nowhere, scaring off all the prey and trampling all the plants in the area. Some of the Twolegs even have fire! Patrols will have to be organized to keep an eye on them."
+        ],
+        "progress_events": {
+            "moon1": [
+                "The abundance of Twolegs in the area doesn't seem to be lessening no matter how many days have passed. Odd colored objects have been found where Twolegs have been, and some have been leaking odd liquids into the ground, spreading strange smells that linger."
+            ]
+        },
+        "conclusion_events": [
+            "The last Twoleg left yesterday, leaving behind strange objects, but thankfully taking the large, scary things with them. It seems for the time being, life can go back to normal."
+        ],
+        "secondary_disasters": {
+            "Wildfire": {
+                "disaster": "Wildfire",
+                "triggers_during": "end",
+                "chance": 0,
+                "trigger_events": [
+                    "A Twoleg was seen playing with fire, seemingly enjoying the dangerous plaything like a kit does a moss ball and, just like a kit, they lost control of it. The forest is too dry in greenleaf to stop the fire, and it quickly spreads, the cats of c_n only able to run with the rest of the animals in the forest.",
+                    "The Twolegs seem to enjoy gathering around large fires, much to the terror of the Clan.  Though the fires seem to be put out before the Twolegs leave, it's no surprise when some embers persist and the forest begins to go up in flames."
+                ]
+            },
+            "Prey Sickness": {
+                "disaster": "Prey Sickness",
+                "triggers_during": "during",
+                "chance": 0,
+                "trigger_events": [
+                    "The objects the Twolegs bring smell so enticing, but the cats of c_n avoid them as much as possible. It only occurs to them that the prey they so rely on for food might not do the same when the first cats start getting sick."
+                ]
+            }
+        },
+        "collateral_damage": {
+            "injuries": [
+                "poisoned"
+            ],
+            "deaths": {
+                "death_text": [
+                    "Monsters travel through c_n's territory more frequently, and sometimes they do not stick to the Thunderpath. m_c is struck and killed by one such monster.",
+                    "m_c died after eating a mouse that had been poisoned by Twolegs."
+                ],
+                "history_text": {
+                    "reg_death": "m_c was killed during a Twoleg invasion."
                 }
             }
         }

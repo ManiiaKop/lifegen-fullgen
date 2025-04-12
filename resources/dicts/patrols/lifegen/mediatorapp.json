@@ -399,7 +399,7 @@
         "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "As you plan to pounce on a moth, you hear two fellow apprentices arguing loudly. The elders are complaining, but the two ignore them and continue on. You look over too see a young warrior frantically trying to end the argument with no luck.",
+        "intro_text": "As you plan to pounce on a moth, you hear two fellow apprentices arguing loudly. The elders are complaining, but the two ignore them and continue on. You look over to see a young warrior frantically trying to end the argument with no luck.",
         "decline_text": "You turn your head back at the moth, ignoring the loud arguing. You attempt to pounce on it, but end up stumbling over. Thankfully, no one was watching.",
         "chance_of_success": 60,
         "success_outcomes": [
@@ -466,29 +466,29 @@
         "max_cats": 2,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "Your mentor and the leader are in an argument. The leader seems angry, and your mentor is trying to calm them down.",
-        "decline_text": "After a bit of thought, you decide it's better to let your mentor handle that and you back off.",
+        "intro_text": "m_n and l_n are in an argument. l_n seems angry, and m_n is trying to calm them down.",
+        "decline_text": "After a bit of thought, you decide it's better to let m_n handle that and you back off.",
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "You step in and after a few calming words, you manage to get through to the leader, and they can come to a compromise. Your mentor is proud of how you handled the situation.",
+                "text": "You step in and after a few calming words, you manage to get through to l_n, and they can come to a compromise. m_n is proud of how you handled the situation.",
                 "exp": 10,
                 "weight": 20
             },
             {
-                "text": "The leader calms down reluctantly as you try to intervene, and they apologize for allowing their anger to get to them. This allows your mentor room to successfully mediate a little bit before the leader has to attend to other duties.",
+                "text": "l_n calms down reluctantly as you try to intervene, and {PRONOUN/l_n/subject} {VERB/l_n/apologize/apologizes} for allowing {PRONOUN/l_n/poss} anger to get to {PRONOUN/l_n/object}. This allows your mentor room to successfully mediate a little bit before l_n has to attend to other duties.",
                 "exp": 10,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You step in to try and calm the leader down, but you just escalate the situation further, leading them to leave. Your mentor thanks you for the attempt, and tells you the leader would calm down eventually.",
+                "text": "You step in to try and calm l_n down, but you just escalate the situation further, leading {PRONOUN/l_n/object} to leave. Your mentor thanks you for the attempt, and tells you the leader will calm down eventually.",
                 "exp": 0,
                 "weight": 20
             },
             {
-                "text": "l_n_introspective is never angry without reason and you back away slowly, unwilling to get into that mess. Your mentor must have messed up big time, and you're not staying around to find out what they did to anger l_n_introspective.",
+                "text": "l_n_introspective is never angry without reason and you back away slowly, unwilling to get into that mess. Your mentor must have messed up big time, and you're not staying around to find out what {PRONOUN/m_n/subject} did to anger l_n_introspective.",
                 "exp": 0,
                 "weight": 20
             },

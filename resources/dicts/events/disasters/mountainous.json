@@ -30,5 +30,116 @@
             "The snow is a cruel jailer, keeping the Clan confined to a fraction of their territory. Food is scarce, and the cold is unyielding. med_name works tirelessly to treat frostbite and injuries, while dep_name leads foraging patrols to scavenge what they can."
         ],
         "collateral_damage": {}
+    },
+    "Volcanic Eruption": {
+        "event": "Volcanic Eruption",
+        "camp": [
+            "mountainous"
+        ],
+        "season": [
+            "any"
+        ],
+        "tags": [],
+        "priority": "primary",
+        "duration": 3,
+        "rarity": "rare",
+        "trigger_events": [
+            "The ground trembles suddenly and knocks a few cats off their paws, but it ends as soon as it begins. The Camp is filled with whispers as they speculate what caused the rumble.",
+            "Warriors come back from their patrols, claiming the territory has changed. The earth is cracking, swelling, and sinking along the edge of the mountains. Even the elders are clueless.",
+            "Cats have been complaining that the groundwaters are becoming unbearably hot, and the water is even starting to steam! med_name is concerned about the future wellbeing of c_n and the injuries the temperature may cause.",
+            "A patrol of warriors run back to the Camp shaken. Whispers around Camp say the warriors encountered fire-water burning everything in its path within the territory."
+        ],
+        "progress_events": {
+            "moon1": [
+                "The trembles have started again, this time lasting longer than the last. Trees shake, rocks fall, and the dens threaten to crumble where they stand. Thankfully, the rumbling stops before anything got too damaged.",
+                "lead_name visits the shifting grounds the warriors speak of, perplexed by the state the earth has become. {PRONOUN/lead_name/subject/CAP} {VERB/lead_name/tell/tells} the warriors to notify {PRONOUN/lead_name/object} if they come across anything similar.",
+                "In the middle of the night, a boom shakes the ground underneath c_n's paws. Cats run out of their dens to investigate the source of the noise, only to look up and see fire-water pouring out of the mountain side.",
+                "lead_name makes a sudden announcement, stating cats need to stay within the Camp for the time being. {PRONOUN/lead_name/subject/CAP} {VERB/lead_name/are/is} vague as to why, but the Camp fills with rumors of fire-water destroying the land anyway."
+            ],
+            "moon2": [
+                "Suddenly hot fire-water makes its way into Camp. Warriors are instructed to get cats to high ground to avoid the strange phenomena. The trees and grass are melting within the red destruction, and cats are getting hurt from even being near it.",
+                "The moon was like any other, until r_w notifies lead_name about fire-water coming out of the earth. It reaches Camp, burning everything in its path as c_n scrambles to find a place to flee to. Cats watch as their Camp is engulfed in flames.",
+                "It's every cat for themselves as fire-water runs through Camp at alarming speeds. c_n is filled with screams, horror, and devastation as their home is destroyed before their very eyes.",
+                "lead_name can recognize the warnings given. {PRONOUN/lead_name/subject/CAP} {VERB/lead_name/gather/gathers} any cat {PRONOUN/lead_name/subject} can and {VERB/lead_name/lead/leads} them away from the Camp, hoping to minimize the injuries. l_c can only hope the Camp is still standing when c_n travels back."
+            ]
+        },
+        "conclusion_events": [
+             "The fire-water passes on, but it leaves the rest charcoaled, destroyed, and still unbearably hot. Some cats pray for rain or a miracle while others try to think of solutions around the disaster before them.",
+             "lead_name is at an all-time stress as {PRONOUN/lead_name/subject} {VERB/lead_name/try/tries} to find a solution to the ever-growing issue before {PRONOUN/lead_name/object}. The Camp is destroyed and c_n can't do anything but wait for the fire-water to harden or get cooler."
+        ],
+        "collateral_damage": {
+            "injuries": [
+                "burn",
+                "severe burn",
+                "poisoned"
+            ],
+            "deaths": {
+                "death_text": [
+                    "During {PRONOUN/m_c/poss} panic, m_c wasn't paying attention and headed straight into the fire-water.",
+                    "The Clan finds desperate claw-marks up a blackened tree, leading up to where m_c was overcome by the fire-water.",
+                    "The Clan finds desperate claw-marks up a blackened cliffside, leading up to where m_c was overcome by the fire-water.",
+                    "The toxins emanating from the fire-water slowed m_c down from {PRONOUN/m_c/poss} attempt to flee, making it easier for the fire-water to engulf {PRONOUN/m_c/object}."
+                ],
+                "history_text": {
+                    "reg_death": "m_c died from fire-water during a volcanic eruption.",
+                    "lead_dead": "died during a volcanic eruption."
+                }
+            }
+        },
+        "secondary_disasters": {
+            "Wildfire": {
+                "disaster": "Wildfire",
+                "triggers_during": "end",
+                "chance": 0,
+                "trigger_events": [
+                    "Due to the hot fire-water, the trees and grass start to ablaze in uncontrollable heat. Cats do not know what to do as the disaster just keeps getting worse."
+                ]
+            }
+        }
+    },
+    "Hydrothermal Explosions": {
+        "event": "Hydrothermal Explosions",
+        "camp": [
+            "mountainous"
+        ],
+        "season": [
+            "any"
+        ],
+        "tags": [],
+        "priority": "primary",
+        "duration": 2,
+        "rarity": "rare",
+        "trigger_events": [
+            "r_w comments that the ground is steaming at the edge of Camp. {PRONOUN/r_w/subject/CAP} {VERB/r_w/express/expresses} worry over what it is, and lead_name suggests cats be cautious while exploring the specific area."
+        ],
+        "progress_events": {
+            "moon1": [
+                "In the middle of the day, c_n is startled by a sudden boom in the distance. Cats can see dirt, rock, and mud exploding into the sky dangerously close to Camp.",
+                "c_n is terrified as the ground sizzles and explodes, pulling up dust, rock, and mud into the air. Cats scatter as they try to find shelter to save them from the flying earth."
+            ]
+        },
+        "conclusion_events": [
+             "Cats cautiously peek out from their shelters when the rock seems to stop falling from the air. Whispers of terrier fill the Camp as c_n wonders if this is a warning for something bigger, or just another unsolved phenomena?",
+             "After the explosion passes and the earth hits ground once more, c_n is covered in mud and scattered debris. lead_name is thankful that there doesn't seem to be any major visible damage and starts counting heads. 1, 2, 3, 4..."
+        ],
+        "collateral_damage": {
+            "injuries": [
+                "scrapes",
+                "sprain",
+                "small cuts",
+                "broken back",
+                "broken bone"
+            ],
+            "deaths": {
+                "death_text": [
+                    "m_c was not able to take cover from the flying debris, and was, unfortunately, squashed.",
+                    "After the explosion, c_n looked desperately for m_c but {PRONOUN/m_c/subject} {VERB/m_c/were/was} never found."
+                ],
+                "history_text": {
+                    "lead_dead": "m_c died from being squashed by flying rock.",
+                    "reg_death": "died from being squashed by flying rock."
+                }
+            }
+        }
     }
 }

@@ -15,7 +15,8 @@ from scripts.game_structure.ui_elements import (
 from scripts.utility import (
     get_text_box_theme,
     ui_scale,
-    ui_scale_offset
+    ui_scale_offset,
+    ui_scale_dimensions
 )
 from ..ui.generate_box import get_box, BoxStyles
 from ..ui.generate_button import get_button_dict, ButtonStyles
@@ -378,10 +379,12 @@ class ChooseRebornScreen(Screens):
         if self.selected_cat:
 
             self.selected_details["selected_image"] = pygame_gui.elements.UIImage(
-                ui_scale(pygame.Rect((325, 150), (150, 150))),
-                pygame.transform.scale(
-                    self.selected_cat.sprite,
-                    (150, 150)), manager=MANAGER)
+                    ui_scale(pygame.Rect((325, 150), (150, 150))),
+                    pygame.transform.scale(
+                        self.selected_cat.sprite, ui_scale_dimensions((150, 150))
+                    ),
+                    manager=MANAGER,
+                )
 
             info = self.selected_cat.status + "\n" + \
                    self.selected_cat.genderalign + "\n" + self.selected_cat.personality.trait + "\n"

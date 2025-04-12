@@ -635,6 +635,11 @@ class ListScreen(Screens):
                 self.full_cat_list.remove(game.clan.instructor)
             self.full_cat_list.insert(0, game.clan.instructor)
 
+        elif self.current_group == "df":
+            if game.clan.demon in self.full_cat_list:
+                self.full_cat_list.remove(game.clan.demon)
+            self.full_cat_list.insert(0, game.clan.demon)
+
         search_text = search_text.strip()
         if search_text not in ["", "name search"]:
             self.current_listed_cats = [
@@ -796,6 +801,7 @@ class ListScreen(Screens):
             if (
                 the_cat.dead
                 and the_cat.ID != game.clan.instructor.ID
+                and the_cat.ID != game.clan.demon.ID
                 and not the_cat.outside
                 and not the_cat.df
                 and not the_cat.faded
@@ -815,6 +821,7 @@ class ListScreen(Screens):
             if (
                 the_cat.dead
                 and the_cat.ID != game.clan.instructor.ID
+                and the_cat.ID != game.clan.demon.ID
                 and the_cat.df
                 and not the_cat.faded
                 and the_cat.moons >= 0

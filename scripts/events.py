@@ -30,21 +30,20 @@ from scripts.conditions import (
     get_amount_cat_for_one_medic,
 )
 from scripts.events_module.generate_events import GenerateEvents, generate_events
-from scripts.clan_resources.freshkill import FreshkillPile, Nutrition
+from scripts.clan_resources.freshkill import FreshkillPile
 from scripts.events_module.short.condition_events import Condition_Events
 from scripts.events_module.short.handle_short_events import handle_short_events
 from scripts.events_module.relationship.relation_events import Relation_Events
 from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
 from scripts.game_structure.windows import SaveError
-from scripts.game_structure.windows import RetireScreen, DeputyScreen, NameKitsWindow, PickPath
-from enum import Enum, auto
+from scripts.game_structure.windows import RetireScreen, DeputyScreen, NameKitsWindow
+from enum import Enum
 
 from scripts.events_module.patrol.patrol import Patrol
 from scripts.utility import (
     change_clan_relations,
     change_clan_reputation,
     get_alive_status_cats,
-    get_living_clan_cat_count,
     get_random_moon_cat,
     ceremony_text_adjust,
     get_current_season,
@@ -116,6 +115,7 @@ class Events:
         Patrol.used_patrols.clear()
         game.patrolled.clear()
         game.just_died.clear()
+        game.dated_cats.clear()
         # 1 = reg patrol 2 = lifegen patrol 3 = df patrol 4 = date
         game.switches['patrolled'] = []
         game.switches['window_open'] = False
@@ -1209,18 +1209,31 @@ class Events:
             if game.clan.your_cat.shunned != 0:
                 ceremony_txt = ceremony_txt = random.choice(self.b_txt['apprentice ceremony shunned'])
             else:
-                if game.clan.your_cat.mentor:
-                    ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + ' ceremony'])
-                else:
-                    ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + ' ceremony no mentor'])
+                add_on_lead = ""
+                if len(game.clan.clan_cats) == 1:
+                    add_on_lead = " no one"
+                elif (not game.clan.leader or game.clan.leader.dead or game.clan.leader.outside) and (not game.clan.deputy or game.clan.deputy.dead or game.clan.deputy.outside) and len(get_alive_status_cats(Cat, ["healer", "healer apprentice"], sort=True)) == 0:
+                    add_on_lead = " no leader no deputy no med"
+                elif (not game.clan.leader or game.clan.leader.dead or game.clan.leader.outside) and (not game.clan.deputy or game.clan.deputy.dead or game.clan.deputy.outside) and len(get_alive_status_cats(Cat, ["healer", "healer apprentice"], sort=True)) > 0:
+                    add_on_lead = " no leader no deputy"
+                elif (not game.clan.leader or game.clan.leader.dead or game.clan.leader.outside):
+                    add_on_lead = " no leader"
+
+                add_on_mentor = " no mentor" if not game.clan.your_cat.mentor else ""
+                ceremony_txt = random.choice(self.b_txt[f"{game.clan.your_cat.status} ceremony{add_on_lead}{add_on_mentor}"])
+
             ceremony_txt = ceremony_txt.replace('c_n', str(game.clan.name))
             ceremony_txt = ceremony_txt.replace('y_c', str(game.clan.your_cat.name))
             if game.clan.leader and not game.clan.leader.dead and not game.clan.leader.outside:
                 ceremony_txt = re.sub(r'(?<!\/)l_n(?!\/)', str(game.clan.leader.name), ceremony_txt)
                 self.cat_dict["l_n"] = game.clan.leader
-            elif game.clan.deputy and not game.clan.deputy.dead and not game.clan.deputy.outside:
-                ceremony_txt = re.sub(r'(?<!\/)l_n(?!\/)', str(game.clan.deputy.name), ceremony_txt)
+            if game.clan.deputy and not game.clan.deputy.dead and not game.clan.deputy.outside:
+                ceremony_txt = re.sub(r'(?<!\/)d_n(?!\/)', str(game.clan.deputy.name), ceremony_txt)
                 self.cat_dict["d_n"] = game.clan.deputy
+            if len(get_alive_status_cats(Cat, ["healer", "healer apprentice"], sort=True)) > 0:
+                random_med = random.choice(get_alive_status_cats(Cat, ["healer", "healer apprentice"], sort=True))
+                ceremony_txt = re.sub(r'(?<!\/)r_m(?!\/)', str(random_med.name), ceremony_txt)
+                self.cat_dict["r_m"] = random_med
             if game.clan.your_cat.mentor:
                 ceremony_txt = re.sub(r'(?<!\/)m_n(?!\/)', str(Cat.all_cats[game.clan.your_cat.mentor].name), ceremony_txt)
                 self.cat_dict["m_n"] = Cat.all_cats[game.clan.your_cat.mentor]
@@ -1232,8 +1245,8 @@ class Events:
             ceremony_txt = re.sub(r"\{(.*?)\}", lambda x: pronoun_repl(x, process_text_dict, False), ceremony_txt)
             
             game.cur_events_list.insert(0, Single_Event(ceremony_txt, ["alert", "ceremony"], game.clan.your_cat.ID))
-        except:
-            print("ERROR with app ceremony")
+        except Exception as e:
+            print("ERROR with app ceremony" + str(e))
                 
     def generate_ceremony(self):
         if game.clan.your_cat.former_mentor:

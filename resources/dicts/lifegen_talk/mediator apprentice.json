@@ -280,7 +280,7 @@
             "[You hear t_c quietly groan to {PRONOUN/t_c/self} from the other side of the clearing.]",
             "y_c, I can see you staring at me. If you want to say something, say it.",
             "... No, I'm not angry at you. I'm sorry for snapping. My training's just going a bit rough.",
-            "I got into an argument with another cat from o_cClan about their current plans. They refused to listen to me when I had a better solution to their problem.",
+            "I got into an argument with another cat from o_c_n about their current plans. They refused to listen to me when I had a better solution to their problem.",
             "Makes me almost regret being a mediator. I hate talking to other cats, they're just utterly full of problems they create for themselves, and they refuse to listen to obvious solutions.",
             "But, I suppose I became a mediator apprentice to help other cats with their problems too. I suppose I've caught my mouse and I need to eat it.",
             "Thank you for listening to me, y_c. I'll keep thinking of another solution they'll like."
@@ -357,8 +357,8 @@
         [
             "[t_c is pacing back and forth near the camp entrance.]",
             "... Huh? Oh hi there. Sorry, I'll get out of the way.",
-            "... No, no. I'm okay. Just preparing to go to o_cClan. My mentor asked me to go discuss with their mediator about an agreement we've been having about borders.",
-            "I know they sent me, because they know I'm completely capable, and o_cClan is mostly willing to cooperate in this manner, but I'm still worried about it.",
+            "... No, no. I'm okay. Just preparing to go to o_c_n. My mentor asked me to go discuss with their mediator about an agreement we've been having about borders.",
+            "I know they sent me, because they know I'm completely capable, and o_c_n is mostly willing to cooperate in this manner, but I'm still worried about it.",
             "I just need to do it. I need to go do my job as a mediator, and go solve this problem. Take the sparrow by the wings, so to speak.",
             "Standing here wearing my paws into the floor is only giving me sore paw pads and a future trip to the medicine den. I'll see you later, y_c."
         ]
@@ -391,7 +391,6 @@
             "assertive",
             "cool",
             "unlawful",
-            "silly",
             "they_blind",
             "you_blind"
         ],
@@ -611,7 +610,7 @@
             "you_blind"
         ],
         [
-            "Hey! I brought ya back a little gift from o_cClan's territory.",
+            "Hey! I brought ya back a little gift from o_c_n's territory.",
             "[t_c brandishes a colorful, exotic flower and lays it at your paws.]",
             "'Innit cool? I knew you'd like it!",
             "I saw this other cool plant, too, but didn't get the chance to snag it ... Next time, I'll make sure to bring it back!"
@@ -640,18 +639,17 @@
             "you_blind"
         ],
         [
-            "Hey, y_c! When do we get to visit o_cClan territory? Can we go right now?",
+            "Hey, y_c! When do we get to visit o_c_n territory? Can we go right now?",
             "Are we allowed to just cross the borders as we please or is there some sort of warning system involved?",
-            "Does the o_cClan mediator know about me yet?",
+            "Does the o_c_n mediator know about me yet?",
             "Ah, whatever. I'm sure I'll find out when I get there. Let's go!!!",
-            "[t_c takes off across camp. You aren't quite sure how to tell {PRONOUN/t_c/object} there wasn't even a o_cClan visit scheduled for today.]"
+            "[t_c takes off across camp. You aren't quite sure how to tell {PRONOUN/t_c/object} there wasn't even a o_c_n visit scheduled for today.]"
         ]
     ],
     "assertive_dislike1": [
         [
             "Any",
             "assertive",
-            "silly",
             "unlawful",
             "dislike",
             "they_blind",
@@ -836,7 +834,7 @@
             "you_blind"
         ],
         [
-            "Oh hey, y_c! I have a favor I'd like to ask of you. I need to go to o_cClan, can you come with me?",
+            "Oh hey, y_c! I have a favor I'd like to ask of you. I need to go to o_c_n, can you come with me?",
             "I'm gonna ask a few others too, so don't worry if you don't wanna go or you're busy! There was a situation at the border and I want to make sure no one's upset or anything."
         ]
     ],
@@ -853,7 +851,7 @@
         [
             "y_c...? Oh- I'm fine, don't worry about me! I was just doing a lot of thinking.",
             "I want to help everycat I can, but I... I don't know. I feel like I could be so much more useful out there, not just in c_nClan. Am I weird for that?",
-            "I adore c_nClan, but... I saw some o_cClan apprentices fighting, but when I tried to help they told me to keep my nose in my own Clan's business.",
+            "I adore c_nClan, but... I saw some o_c_n apprentices fighting, but when I tried to help they told me to keep my nose in my own Clan's business.",
             "... Thank you for listening to me. It really means a lot, you know? Ah- I'm sure you came to ask me for something, what is it you need?"
         ]
     ],
@@ -1064,7 +1062,7 @@
         ],
         [
             "[You see t_c expertly mediating a fight between two of your warriors.]",
-            "[{PRONOUN/t_c/subject}{VERB/t_c/'ve/'s} really blossomed into {PRONOUN/t_c/poss} new role, quickly ending what could've been a huge fight.]",
+            "[{PRONOUN/t_c/subject/CAP}{VERB/t_c/'ve/'s} really blossomed into {PRONOUN/t_c/poss} new role, quickly ending what could've been a huge fight.]",
             "Oh! y_c! I'll get to you in a moment! We were exchanging forgiveness flowers!"
         ]
     ],
@@ -1076,7 +1074,7 @@
             "you_blind"
         ],
         [
-            "[You, r_w and t_c are heading over to o_cClan for a meeting. You had some things to discuss with the leader, and the mediating app just-so-happened to be heading over there.]",
+            "[You, r_w and t_c are heading over to o_c_n for a meeting. You had some things to discuss with the leader, and the mediating app just-so-happened to be heading over there.]",
             "[This was pretty good for you, considering you hadn't been there in a while, and the territory seemed foreign to you, meanwhile the apprentice seemed to remember it quite well.]",
             "Be careful when you enter the camp! The kits are pretty feisty, they always love to run up to me and say hi.",
             "Speaking of, I should grab a toy to bring for them!"
@@ -1139,7 +1137,7 @@
             "Wuh - y_c? How long have you been standing there?",
             "Why was I talking to myself ...?",
             "*Sigh* It's, like, the dumbest thing ever. t_mn gave me this surprise assessment today, and I totally flunked it!",
-            "How could I have answered that the fastest way to o_cClan is by swimming up to the border? It doesn't even make any sense!",
+            "How could I have answered that the fastest way to o_c_n is by swimming up to the border? It doesn't even make any sense!",
             "I just know that t_mn is still laughing at me ... The whole Clan probably is.",
             "[You tell t_c not to be so hard on {PRONOUN/t_c/self}.]",
             "But, if I'm not hard on myself, then how will I ever become stronger?",
@@ -1294,7 +1292,7 @@
             "you_blind"
         ],
         [
-            "Hey! I brought ya back a little gift from o_cClan's territory.",
+            "Hey! I brought ya back a little gift from o_c_n's territory.",
             "[t_c brandishes a colorful, exotic flower and lays it at your paws.]",
             "'Innit cool? I knew you'd like it!",
             "I saw this other cool plant, too, but didn't get the chance to snag it ... Next time, I'll make sure to bring it back!"
@@ -1327,11 +1325,11 @@
             "you_blind"
         ],
         [
-            "Hey, y_c! When do we get to visit o_cClan territory? Can we go right now?",
+            "Hey, y_c! When do we get to visit o_c_n territory? Can we go right now?",
             "Are we allowed to just cross the borders as we please or is there some sort of warning system involved?",
-            "Does the o_cClan mediator know about me yet?",
+            "Does the o_c_n mediator know about me yet?",
             "Ah, whatever. I'm sure I'll find out when I get there. Let's go!!!",
-            "[t_c takes off across camp. You aren't quite sure how to tell {PRONOUN/t_c/object} there wasn't even a o_cClan visit scheduled for today.]"
+            "[t_c takes off across camp. You aren't quite sure how to tell {PRONOUN/t_c/object} there wasn't even a o_c_n visit scheduled for today.]"
         ]
     ],
     "assertivemediatorapp_AJ8": [
@@ -1424,11 +1422,11 @@
             "they_mediator_apprentice"
         ],
         [
-            "[The mediator apprentice has been walking around all day in some sort of disguise, decorating themself in leaves and twigs that seem to have at least some rhyme or reason. Intrigued, you come up to them to ask why they've decorated their pelt today.]",
-            "Oh! Well, y_c, r_c was feeling down, so I wanted to cheer them up by dressing myself up!",
-            "They told someone else about... uh...",
+            "[The mediator apprentice has been walking around all day in some sort of disguise, decorating {PRONOUN/t_c/self} in leaves and twigs that seem to have at least some rhyme or reason. Intrigued, you come up to {PRONOUN/t_c/object} to ask why {PRONOUN/t_c/subject}{VERB/t_c/'ve/'s} decorated {PRONOUN/t_c/poss} pelt today.]",
+            "Oh! Well, y_c, r_c was feeling down, so I wanted to cheer {PRONOUN/r_c/object} up by dressing myself up!",
+            "{PRONOUN/r_c/subject/CAP} told somecat else about... uh...",
             "...Nevermind, I can't say that! I refuse to admit that I'm nosy! Bye, y_c!",
-            "[t_c shimmies away in their leafy fire hazard.]"
+            "[t_c shimmies away in {PRONOUN/t_c/poss} leafy fire hazard.]"
         ]
     ],
     "silly_mediatorapp_plan": [
@@ -1440,7 +1438,7 @@
         [
             "y_c! You see r_c arguing with d_n over there about c_nClan's fresh-kill stock? Well, I wasn't sure how to help resolve the situation, but now I think I have the perfect plan!",
             "...Hey, don't \"oh no\" me! I'm not asking for your opinion, I just need you to watch me in case it all goes wrong!",
-            "[t_c struts over to the two bristling cats, not-so-quietly singing \"This is the greatest plaaan!\" to themself as they approach. Unsurprisingly, the apprentice's bubbly approach returns nothing... shouldn't someone know to stop them by now?]"
+            "[t_c struts over to the two bristling cats, not-so-quietly singing \"This is the greatest plaaan!\" to themself as they approach. Unsurprisingly, the apprentice's bubbly approach returns nothing... shouldn't somecat know to stop them by now?]"
         ]
     ],
     "silly_mediatorapp_ideas": [
@@ -1547,9 +1545,74 @@
             "... Okay. Have you tried talking to {PRONOUN/r_c/object} about it?",
             "[... You concede that you have yet to.]",
             "*Sigh*. Useless. Everycat in this Clan is so terrified of confrontation all of a sudden.",
-            "r_c is never going to change if {PRONOUN/r_c/subject}{VERB/r_c/don't/doesn't} know how you feel, y_c. You need to be direct. No cat has ever been killed by some brutal honesty.",
+            "r_c is never going to change if {PRONOUN/r_c/subject} {VERB/r_c/don't/doesn't} know how you feel, y_c. You need to be direct. No cat has ever been killed by some brutal honesty.",
             "If you spend your whole life worrying about trodding on the toes of others, you'll never get anything done.",
             "Now, do you want me to help you work out what you'll say?"
+        ]
+    ],
+    "neurotic_mediatorapp_SQ1": [
+        [
+            "they_mediator_apprentice",
+            "you_any",
+            "neutral",
+            "you_deaf",
+            "they_neurotic",
+            "they_deaf"
+        ],
+        [
+            "[tm_n is going to discuss diplomatic matters with o_c_n, and is bringing t_c along to observe the proceedings.]",
+            "[t_c fidgets by the camp entrance, clearly nervous about representing the entirety of c_nClan. When {PRONOUN/t_c/subject} {VERB/t_c/notice/notices} you looking, {PRONOUN/t_c/subject} awkwardly {VERB/t_c/duck/ducks} behind a rock.]"
+        ]
+    ],
+    "neurotic_skillstory_SQ8": [
+        [
+            "they_story",
+            "they_mediator",
+            "they_mediator_apprentice",
+            "they_deputy",
+            "they_neurotic",
+            "you_adult",
+            "min_platonic_20",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "A queen in o_c_n was telling their kits a story when I visited their camp with l_n last moon. I can't stop thinking about it.",
+            "It was so different from any story I'd heard before, with completely new cats. I really wanted to hear the end, but the queen took the kits inside when they realized we were there.",
+            "*sigh* It's silly, but it bothers me that I'll never know how it ends. And even if I see that queen again, I'd never be brave enough to ask."
+        ]
+    ],
+    "mediator_gen_youshunned_rad2": [
+        [
+            "they_mediator",
+            "they_mediator_apprentice",
+            "you_shunned",
+            "they_unabashed",
+            "they_assertive",
+            "neutral",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "y_c, if you needed conflict resolution skills, you could've just asked."
+        ]
+    ],
+    "mediatorapp_youshunned_gen_rad1": [
+        [
+            "they_mediator_apprentice",
+            "from_your_apprentice",
+            "you_mediator",
+            "you_shunned",
+            "murder_success",
+            "max_platonic_15",
+            "they_unabashed",
+            "they_assertive",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "Correct me if I'm wrong, but...",
+            "Aren't you supposed to be teaching me how to <i>prevent</i> stuff like this?"
         ]
     ]
 }

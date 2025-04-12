@@ -2434,5 +2434,468 @@
                 "weight": 20
             }
         ]
-    }
+    },
+    {
+        "patrol_id": "poly_date_J4",
+        "biome": [
+            "mountainous"
+        ],
+        "season": [
+            "leafbare"
+        ],
+        "types": [
+            "date"
+        ],
+        "tags": [],
+        "patrol_art": "poly_date_default",
+        "min_cats": 3,
+        "max_cats": 3,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "There's a beautiful sight in the sky this afternoon-- a shining ring seems to have formed around the sun! Two cats spring to mind immediately-- r_c and o_c1. They'll want to see this! You wonder if you'll be able to track them down in time to show them.",
+        "decline_text": "You decide to stay put and enjoy the moment alone. Wherever they are, you're sure they can see it for themselves.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You jump down quickly from your seat in a tree at the edge of camp. You duck your head into dens until you've located the two, gesturing for them to follow you. Soon, all three of you are side by side on a branch, pelts fluffed up together against the cold, enjoying the unique sight.",
+                "exp": 5,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
+                        "mutual": true,
+                        "values": [
+                            "romantic"
+                        ],
+                        "amount": 5
+                    }
+                ]
+            },
+            {
+                "text": "Turns out, you don't need to fetch them! r_c and o_c1's voices reach your ears, in awe of the phenomenon before them. The three of you lay in the snow and talk about all sorts of things to pass the time, wondering if the rings will ever dissipate. Before then, r_c yawns and claims {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} tired. It's time to travel back to camp.",
+                "exp": 0,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
+                        "mutual": true,
+                        "values": [
+                            "romantic"
+                        ],
+                        "amount": 5
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You race back into camp from where you'd seen the sight just outside of it. However, as much as you search, you're only to locate o_c1, and by the time you get back to your spot, the sun just looks normal again. o_c1 still appreciates the gesture.",
+                "exp": 0,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": [
+                            "p_l"
+                        ],
+                        "cats_from": [
+                            "o_c1"
+                        ],
+                        "mutual": false,
+                        "values": [
+                            "romantic"
+                        ],
+                        "amount": 3
+                    }
+                ]
+            },
+            {
+                "text": "You wander around looking for r_c and o_c1, but they're nowhere to be found! With some contemplation, you decide to enjoy the rings around the sun yourself. Hopefully r_c and o_c1 don't mind.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "Although the rings around the sun are extremely cool, you have to squint to not burn your eyes from the sheer brightness it reflects off the snow. You assume r_c and o_c1 may appreciate the experience, but you would hate to hurt their eyes and decide to continue whatever you were doing before instead of fetching them.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "poly_date_SQ1",
+        "biome": [
+            "mountainous"
+        ],
+        "season": [
+            "newleaf"
+        ],
+        "types": [
+            "date"
+        ],
+        "tags": [],
+        "patrol_art": "poly_date_default",
+        "min_cats": 3,
+        "max_cats": 3,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "After several days of rainfall, temporary waterfalls have sprung up all over the mountainside. You stumble across a particularly beautiful one while on a walk, and consider taking r_c and o_c1 to see it.",
+        "decline_text": "The waterfalls dry up as quickly as they appeared, and you miss the chance to show r_c and o_c1 any of them. Oh well. There'll be other chances.",
+        "chance_of_success": 70,
+        "success_outcomes": [
+            {
+                "text": "After a long day, you lead r_c and o_c1 to the waterfall. o_c1 gasps at the sight, especially after the sun breaks through the clouds and creates rainbows in the mist coming off of the water. The three of you find a rock to admire the view and you press against each other, purring, as the sun sets.",
+                "exp": 5,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
+                        "mutual": false,
+                        "values": [
+                            "romantic",
+                            "platonic"
+                        ],
+                        "amount": 5
+                    }
+                ]
+            },
+            {
+                "text": "You lead o_c1 and r_c to a rock with a great view of the waterfall and lie there together, admiring it. After a bit, o_c1 glimpses water collecting at the base of the waterfall, and the three of you decide to take a look. You climb down to find a perfectly clear pool, and have fun splashing each other and searching for insects. You return to camp soaked and happy. ",
+                "exp": 5,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": [
+                            "patrol"
+                        ],
+                        "cats_from": [
+                            "patrol"
+                        ],
+                        "mutual": false,
+                        "values": [
+                            "romantic",
+                            "platonic"
+                        ],
+                        "amount": 5
+                    }
+                ]
+            },
+            {
+                "text": "You... aren't really sure whether r_c and o_c1 will be interested. They've seen waterfalls before, after all! Still, you nervously lead them to the scene and are rewarded with their amazed gasps. The three of you relax on a nearby rock, watching water cascade from far above, and you feel warm when r_c and o_c1 agree that this is one of the most beautiful things they've ever seen.",
+                "exp": 5,
+                "weight": 20,
+                "stat_trait": [
+                    "careful",
+                    "nervous",
+                    "insecure",
+                    "meek",
+                    "cowardly",
+                    "reserved",
+                    "emotional",
+                    "lonesome"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ],
+            "relationships": [
+                {
+                    "cats_to": [
+                        "patrol"
+                    ],
+                    "cats_from": [
+                        "patrol"
+                    ],
+                    "mutual": false,
+                    "values": [
+                        "romantic",
+                        "platonic"
+                    ],
+                    "amount": 5
+                }
+            ]
+        },
+        {
+            "text": "You lead r_c and o_c1 to a rock with a great view of the waterfall and lounge in the sun together, sharing tongues. After a while, the three of you decide to venture closer. You carefully leap across the nearby boulders until you reach the veil of mist coming off of the waterfall, and you admire how the sun sparkles off of the droplets. The extra moisture means moss is growing on the surrounding stones, and r_c gently pulls off some flower-dappled pieces to give you and o_c1.",
+            "exp": 5,
+            "weight": 15,
+            "accessory": [
+                {
+                    "cats": [
+                        "y_c",
+                        "o_c1",
+                        "r_c"
+                    ],
+                    "accessory": [
+                        "FLOWER MOSS"
+                    ]
+                }
+            ],
+            "relationships": [
+                {
+                    "cats_to": [
+                        "patrol"
+                    ],
+                    "cats_from": [
+                        "patrol"
+                    ],
+                    "mutual": false,
+                    "values": [
+                        "romantic",
+                        "platonic"
+                    ],
+                    "amount": 5
+                }
+            ]
+        }
+    ],
+    "fail_outcomes": [
+        {
+            "text": "You lead r_c and o_c1 to the waterfall the day after you discover it, but find that it's already dried up. The three of you take a long walk through the territory instead, but you can't escape the feeling that you missed a chance to show r_c and o_c1 something special.",
+            "exp": 0,
+            "weight": 20,
+            "relationships": [
+                {
+                    "cats_to": [
+                        "patrol"
+                    ],
+                    "cats_from": [
+                        "patrol"
+                    ],
+                    "mutual": false,
+                    "values": [
+                        "platonic"
+                    ],
+                    "amount": 3
+                }
+            ]
+        },
+        {
+            "text": "You lead r_c and o_c1 to the waterfall but find that it's grown significantly since you first visited. Instead of a gentle mist around the falls, water sprays in all directions, and you can't find anywhere with a good view where you won't get soaked. You give up on the attempt, though r_c and o_c1 assure you that they appreciate the thought.",
+            "exp": 0,
+            "weight": 20,
+            "relationships": [
+                {
+                    "cats_to": [
+                        "patrol"
+                    ],
+                    "cats_from": [
+                        "patrol"
+                    ],
+                    "mutual": false,
+                    "values": [
+                        "platonic"
+                    ],
+                    "amount": 3
+                }
+            ]
+        }
+    ]
+},
+{
+    "patrol_id": "lifegen_general_SQ1",
+    "biome": [
+        "Any"
+    ],
+    "season": [
+        "Newleaf"
+    ],
+    "types": [
+        "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "life_warrior_og12",
+    "min_cats": 1,
+    "max_cats": 1,
+    "min_max_status": {},
+    "weight": 15,
+    "intro_text": "Now that newleaf is here, some cats have expressed how nice the camp would look with flower decorations. Do you want to look for some?",
+    "decline_text": "Flowers would be nice, but you already have a lot to do today. Maybe one of your less-busy Clanmates would be willing to take on the task instead.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+        {
+            "text": "The territory is full of flowers, and it's easy to locate some beautiful bunches along your usual patrol routes. You collect a variety and bring them back to camp, earning oohs from some of your Clanmates when they first see the colors. You even have enough to keep some for yourself!",
+            "exp": 10,
+            "weight": 15,
+            "accessory": [
+                {
+                    "cats": [
+                        "y_c"
+                    ],
+                    "accessory": [
+                        "FLOWER"
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "You find a few scattered flowers, but not enough to decorate the entire camp. You switch tactics and collect leaves from the trees that already have them, and trot back to camp with a bristling bundle of them! The bright green really livens up the den entrances. ",
+            "exp": 10,
+            "weight": 15
+        },
+        {
+            "text": "If you're going to be the one doing the work, then you're going to choose the flowers you like the best! You find a patch of your favorite blossoms just outside of camp, and venture a bit further to find other flowers with colors that match. The camp looks beautiful when you're done with it.",
+            "exp": 10,
+            "weight": 15
+        },
+        {
+            "text": "Of course you want to help out, but you don't want to overpick any plants! You spend a whole day combing the territory, carefully picking one or two blossoms at a time. You're exhausted by the end of the day, but you return to camp with a bouquet of dozens of types of flowers. Your Clanmates compliment your effort.",
+            "exp": 10,
+            "weight": 20,
+            "stat_trait": [
+                "careful",
+                "nervous",
+                "insecure",
+                "meek",
+                "cowardly",
+                "reserved",
+                "emotional",
+                "lonesome"
+            ],
+            "can_have_stat": [
+                "p_l"
+            ]
+        },
+        {
+            "text": "You've been waiting for this moment! You have a plan for the whole camp: what flowers and color schemes to use around the different dens, and how to blend them all together so they look cohesive. You excitedly get to work. The flower collecting and decorating takes several days, but by the end, the camp looks stunning. You're already planning what to do once greenleaf arrives...",
+            "exp": 0,
+            "weight": 20,
+            "stat_skill": [
+                "ARTISTAN,1",
+                "CAMP,1"
+            ],
+            "can_have_stat": [
+                "p_l"
+            ]
+        }
+    ],
+    "fail_outcomes": [
+        {
+            "text": "You scour the territory for flowers, but the only ones you can find are medicinal herbs. You collect a few to drop off at the medicine den, and are glad to have helped bolster the herb supply, but are disappointed that the camp still looks as drab as when you started.",
+            "exp": 0,
+            "weight": 15,
+            "herbs": [
+                "marigold"
+            ]
+        },
+        {
+            "text": "You remember seeing a small patch of flowers not far from camp, but when you find it again, it's been mowed down by a group of rabbits. You manage to catch a few rabbits to bring back to camp, though, and your Clanmates are excited to see the unexpected fresh-kill.",
+            "exp": 5,
+            "weight": 15
+        },
+        {
+            "text": "You collect some delicate blue flowers at the beginning of a patrol, thinking they would look great around the nursery. Unfortunately, over the course of the patrol they become more wilted and battered, and when you return to camp you're forced to admit they wouldn't make very good decorations anymore.",
+            "exp": 0,
+            "weight": 15
+        },
+        {
+            "text": "You're worried about choosing decorations that the rest of your Clan won't like, so you spend a while surveying everyone about their favorite flowers and colors. Unfortunately, everyone has such different preferences that you can't come to a conclusion about what flowers to gather, and you can't help but feel like you've wasted everyone's time.",
+            "exp": 0,
+            "weight": 20,
+            "stat_trait": [
+                "careful",
+                "nervous",
+                "insecure",
+                "meek",
+                "cowardly",
+                "reserved",
+                "emotional",
+                "lonesome"
+            ],
+            "can_have_stat": [
+                "p_l"
+            ]
+        },
+        {
+            "text": "You head out of camp to pick the most colorful flowers you can find, but you're unable to locate many. When you get back home, you're greeted by new den entrances covered in vibrant plants and shiny stones. Apparently, r_w got to the decorating before you!",
+            "exp": 0,
+            "weight": 20,
+            "can_have_stat": [
+                "r_w"
+            ],
+            "stat_skill": [
+                "ARTISTAN,1"
+            ]
+        }
+    ]
+},
+{
+    "patrol_id": "gen_life_J3",
+    "biome": [
+        "Any"
+    ],
+    "season": [
+        "leafbare"
+    ],
+    "types": [
+        "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_warrior_default",
+    "min_cats": 1,
+    "max_cats": 1,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You're enjoying a meal during a calm, snowy day in camp when suddenly, you receive a sharp and cold <i>thwap</i> to the back of your head. You turn to see plike_r_w_silly with a pawful of snow, snickering to {PRONOUN/plike_r_w_silly/self}.",
+    "decline_text": "You pick up your fresh-kill and head inside to finish it, ignoring your friend's disappointed face. {PRONOUN/plike_r_w_silly/subject/CAP} should know not to mess with a cat's mealtime!",
+    "chance_of_success": 60,
+    "success_outcomes": [
+        {
+            "text": "Challenge accepted! You jump to your paws, dodging your friend's second snowball attack, and manage to tackle {PRONOUN/plike_r_w_silly/object} into a snowbank with a triumphant laugh. You take turns shoving each other into the snow until you're too exhausted to continue.",
+            "exp": 15,
+            "weight": 20,
+            "relationships": [
+                {
+                    "cats_to": [
+                        "plike_r_w_silly"
+                    ],
+                    "cats_from": [
+                        "p_l"
+                    ],
+                    "mutual": true,
+                    "values": [
+                        "platonic"
+                    ],
+                    "amount": 10
+                }
+            ]
+        },
+        {
+            "text": "When you meet plike_r_w_silly's gaze, {PRONOUN/plike_r_w_silly/subject} instantly {VERB/plike_r_w_silly/drop/drops} {PRONOUN/plike_r_w_silly/poss} snowball and {VERB/plike_r_w_silly/dip/dips} {PRONOUN/plike_r_w_silly/poss} head with a polite laugh. Your friend knows you well enough not to continue messing with you during your meal. You'll make sure to get {PRONOUN/plike_r_w_silly/object} back later, though.",
+            "exp": 15,
+            "weight": 15,
+            "can_have_stat": [
+                "p_l"
+            ],
+            "stat_trait": [
+                "cold",
+                "gloomy",
+                "strict",
+                "vengeful",
+                "grumpy",
+                "aloof",
+                "stoic"
+            ]
+        }
+    ],
+    "fail_outcomes": [
+        {
+            "text": "You covertly scoop up a pawful of snow from next to you and turn around, launching it in plike_r_w_silly's direction. Your attack hits {PRONOUN/plike_r_w_silly/object} square in the face-- so hard that {PRONOUN/plike_r_w_silly/subject} {VERB/plike_r_w_silly/let/lets} out a yelp and {VERB/plike_r_w_silly/fall/falls} into the snowbank behind {PRONOUN/plike_r_w_silly/object}. When you rush to check on {PRONOUN/plike_r_w_silly/object}, there's no serious damage and {PRONOUN/plike_r_w_silly/subject} {VERB/plike_r_w_silly/laugh/laughs} it off, but you still feel bad.",
+            "exp": 0,
+            "weight": 20
+        }
+    ]
+}
 ]

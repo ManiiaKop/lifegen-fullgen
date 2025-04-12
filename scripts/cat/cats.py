@@ -8,12 +8,10 @@ import bisect
 import itertools
 import os.path
 import sys
-from random import choice, randint, sample, random, choices, getrandbits, randrange, shuffle
-from typing import Dict, List, Any
+from random import choice, randint, sample, random, getrandbits, randrange
+from typing import Dict, List, Any, Callable
 
 import ujson  # type: ignore
-
-import ujson
 
 from .names import Name
 from .pelts import Pelt
@@ -1926,7 +1924,7 @@ class Cat:
         """Create a leader ceremony and add it to the history"""
 
         # determine which dict we're pulling from
-        if game.clan.followingsc == False:
+        if not game.clan.followingsc:
             starclan = False
             ceremony_dict = LEAD_CEREMONY_DF
         else:
@@ -1979,17 +1977,19 @@ class Cat:
             kitty = self.fetch_cat(rel.cat_to)
             if kitty and kitty.dead and kitty.status != "newborn":
                 # check where they reside
+                # guides aren't allowed here
+                if kitty == game.clan.instructor or kitty == game.clan.demon:
+                    continue
+                else:
+                    dead_relations.append(rel)
+
                 if starclan:
                     if kitty.ID not in game.clan.starclan_cats:
                         continue
                 else:
                     if kitty.ID not in game.clan.darkforest_cats:
                         continue
-                # guides aren't allowed here
-                if kitty == game.clan.instructor or kitty == game.clan.demon:
-                    continue
-                else:
-                    dead_relations.append(rel)
+                
 
         # sort relations by the strength of their relationship
         dead_relations.sort(
@@ -2012,6 +2012,7 @@ class Cat:
                     continue
                 life_givers.append(rel.cat_to.ID)
                 i += 1
+
         # check amount of life givers, if we need more, then grab from the other dead cats
         if len(life_givers) < 8:
             amount = 8 - len(life_givers)
@@ -2119,7 +2120,7 @@ class Cat:
             if not giver_cat:
                 continue
             trait = giver_cat.personality.trait
-            cluster2, second_cluster2 = get_cluster(trait)
+
             life_list = []
             if game.clan.your_cat.ID == self.ID:
                 victim_in_lifegiver = False
@@ -2203,9 +2204,7 @@ class Cat:
                     i += 1
                 else:
                     print(
-                        f"WARNING: life list had no items for giver #{giver_cat.ID}. Using default life. "
-                        f"If you are a beta tester, please report and ping scribble along with "
-                        f"all the info you can about the giver cat mentioned in this warning."
+                        f"WARNING: life list had no items for giver #{giver_cat.ID}. Using default life."
                     )
                     chosen_life = ceremony_dict["default_life"]
                     break
@@ -2872,7 +2871,7 @@ class Cat:
                 "LUNARCHIMES", "SILVERLUNARCHIMES", "FLOWER MOSS", "SANVITALIAFLOWERS",
                 "STARFLOWERS", "SHELL PACK", "MOSS2", "MUSHROOMS", "CLOVERS", "MUD", "LADYBUGS",
                 "FIRBRANCHES", "CHERRYBLOSSOM", "MISTLETOE", "BROWNMOSSPELT", "BLEEDINGVINES",
-                "BLEEDINGHEART", "MOREFERN", "GRAYMOSSPELT", "FERN"
+                "BLEEDINGHEART", "MOREFERN", "GRAYMOSSPELT", "FERN", "YELLOWWISTERIA", "WATTLE", "SPRINGFLOWERCORSAGE"
                 ]:
                 if acc in self.pelt.accessories:
                     self.pelt.inventory.remove(acc)
@@ -4402,10 +4401,16 @@ class Cat:
                 "lock_faith": self.lock_faith if self.lock_faith else "flexible"
             }
 
-    def determine_next_and_previous_cats(self, status: List[str] = None, exclude_status: List[str] = None):
+    def determine_next_and_previous_cats(
+        self, filter_func: Callable[[Cat], bool] = None
+    ):
+
         """Determines where the next and previous buttons point to, relative to this cat.
 
         :param status: Allows you to constrain the list by status
+        :param filter_func: Allows you to constrain the list by any attribute of
+            the Cat object. Takes a function which takes in a Cat instance and
+            returns a boolean.
         """
         sorted_specific_list = [
             check_cat
@@ -4414,23 +4419,26 @@ class Cat:
             and check_cat.outside == self.outside
             and check_cat.df == self.df
             and not check_cat.faded
+            and check_cat.moons >= 0
         ]
+        if game.clan.demon in sorted_specific_list:
+            sorted_specific_list.remove(game.clan.demon)
+            sorted_specific_list.insert(0, game.clan.demon)
 
-        if status is not None:
+        if game.clan.instructor in sorted_specific_list:
+            sorted_specific_list.remove(game.clan.instructor)
+            sorted_specific_list.insert(0, game.clan.instructor)
+
+        if filter_func is not None:
             sorted_specific_list = [
                 check_cat
                 for check_cat in sorted_specific_list
-                if check_cat.status in status
+                if filter_func(check_cat)
             ]
-
-        if exclude_status is not None:
-            sorted_specific_list = [
-                check_cat
-                for check_cat in sorted_specific_list
-                if check_cat.status not in exclude_status
-            ]
-
-        idx = sorted_specific_list.index(self)
+        if self in sorted_specific_list:
+            idx = sorted_specific_list.index(self)
+        else:
+            return (0,0)
 
         return (
             (

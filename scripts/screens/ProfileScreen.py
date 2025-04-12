@@ -486,11 +486,16 @@ class ProfileScreen(Screens):
                                 pos_y += 120
                             i += 1
                 self.profile_elements["cat_image"].kill()
-                self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100, 200), (150, 150))),
-                                                                        pygame.transform.scale(
-                                                                            self.the_cat.sprite,
-                                                                            (150, 150)), manager=MANAGER)
+                
+                self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(
+                    ui_scale(pygame.Rect((100, 200), (150, 150))),
+                    pygame.transform.scale(
+                        self.the_cat.sprite, ui_scale_dimensions((150, 150))
+                    ),
+                    manager=MANAGER,
+                )
                 self.profile_elements["cat_image"].disable()
+
                 self.profile_elements["cat_info_column1"].kill()
                 self.profile_elements["cat_info_column1"] = UITextBoxTweaked(
                     self.generate_column1(self.the_cat),
@@ -915,11 +920,16 @@ class ProfileScreen(Screens):
                         except:
                             continue
                 self.profile_elements["cat_image"].kill()
-                self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100, 200), (150, 150))),
-                                                                        pygame.transform.scale(
-                                                                            self.the_cat.sprite,
-                                                                            (150, 150)), manager=MANAGER)
+
+                self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(
+                    ui_scale(pygame.Rect((100, 200), (150, 150))),
+                    pygame.transform.scale(
+                        self.the_cat.sprite, ui_scale_dimensions((150, 150))
+                    ),
+                    manager=MANAGER,
+                )
                 self.profile_elements["cat_image"].disable()
+
                 self.profile_elements["cat_info_column1"].kill()
                 self.profile_elements["cat_info_column1"] = UITextBoxTweaked(
                     self.generate_column1(self.the_cat),
@@ -2166,15 +2176,15 @@ class ProfileScreen(Screens):
                 text += f"<br>{self.the_cat.name} was wrongly placed in StarClan."
 
         text = process_text(text, cat_dict)
-        if "o_c" in text:
+        if "o_c_n" in text:
             if self.the_cat.backstory_str:
-                text = text.replace("o_c", self.the_cat.backstory_str)
+                text = text.replace("o_c_n", self.the_cat.backstory_str)
             else:
                 other_clan = "a different Clan"
                 if game.clan.all_clans:
-                    other_clan = str(choice(game.clan.all_clans).name)
+                    other_clan = str(choice(game.clan.all_clans).name) + "Clan"
                 self.the_cat.backstory_str = other_clan
-                text = text.replace("o_c", other_clan)
+                text = text.replace("o_c_n", other_clan)
         if "c_n" in text:
             text = text.replace("c_n", str(game.clan.name))
         if "r_c" in text:
@@ -3599,7 +3609,7 @@ class ProfileScreen(Screens):
                 self.delete_accessory.disable()
             else:
                 self.delete_accessory.enable()
-
+            
             self.open_accessories()
         elif self.open_tab == "faith":
             self.open_faith_tab()

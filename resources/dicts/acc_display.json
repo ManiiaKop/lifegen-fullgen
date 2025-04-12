@@ -1510,10 +1510,45 @@
     "plural": "sliver dust plants",
     "singular": "sliver dust plant"
   },
-  "RAINCOAT": {
-    "default": "raincoat",
-    "plural": "raincoat",
-    "singular": "raincoat"
+  "PURPLERAINCOAT": {
+    "default": "purple raincoat",
+    "plural": "purple raincoats",
+    "singular": "purple raincoat"
+  },
+  "BLUERAINCOAT": {
+    "default": "blue raincoat",
+    "plural": "blue raincoats",
+    "singular": "blue raincoat"
+  },
+  "GREENRAINCOAT": {
+    "default": "green raincoat",
+    "plural": "green raincoats",
+    "singular": "green raincoat"
+  },
+  "PINKRAINCOAT": {
+    "default": "pink raincoat",
+    "plural": "pink raincoats",
+    "singular": "pink raincoat"
+  },
+  "REDRAINCOAT":{
+    "default": "red raincoat",
+    "plural": "red raincoats",
+    "singular": "red raincoat"
+  },
+  "LIMERAINCOAT": {
+    "default": "lime raincoat",
+    "plural": "lime raincoats",
+    "singular": "lime raincoat"
+  },
+  "ORANGERAINCOAT": {
+    "default": "orange raincoat",
+    "plural": "orange raincoats",
+    "singular": "orange raincoat"
+  },
+  "YELLOWRAINCOAT": {
+    "default": "yellow raincoat",
+    "plural": "yellow raincoats",
+    "singular": "yellow raincoat"
   },
   "POPTABS": {
     "default": "poptab necklace",
@@ -1709,5 +1744,30 @@
     "default": "brown stoat",
     "plural": "brown stoats",
     "singular": "brown stoat"
+  },
+  "WATTLE": {
+    "default": "wattle",
+    "plural": "wattles",
+    "singular": "wattle"
+  },
+  "CORKHAT": {
+    "default": "cork hat",
+    "plural": "cork hats",
+    "singluar": "cork hat"
+  },
+  "RAINBOWLORIKEET": {
+    "default": "rainbow lorikeet",
+    "plural": "rainbow lorikeets",
+    "singular": "rainbow lorikeet"
+  },
+  "BILBY": {
+    "default": "bilby",
+    "plural": "bilbies",
+    "singluar": "bilby"
+  },
+  "ZOOKEEPER": {
+    "default": "zookeeper outfit",
+    "plural": "zookeeper outfits",
+    "singular": "zookeeper outfit"
   }
 }

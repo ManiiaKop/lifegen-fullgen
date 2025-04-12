@@ -112,7 +112,7 @@
         ],
         [
             "[Despite {PRONOUN/t_c/poss} obvious hunger, you can see t_c nudging what little {PRONOUN/t_c/subject} {VERB/t_c/have/has} to r_c.]",
-            "[{PRONOUN/t_c/subject} {VERB/t_c/look/looks} at you and {VERB/t_c/smile/smiles} tiredly. The pain means nothing to {PRONOUN/t_c/object} if it means {PRONOUN/t_c/subject} could help someone else.]"
+            "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/look/looks} at you and {VERB/t_c/smile/smiles} tiredly. The pain means nothing to {PRONOUN/t_c/object} if it means {PRONOUN/t_c/subject} could help someone else.]"
         ]
     ],
     "theystarving_sweet2": [
@@ -346,7 +346,7 @@
         ],
         [
             "Psst, y_c.",
-            "[You gather the strength to look at t_c, and notice that {PRONOUN/t_c/subject}  {VERB/t_c/have/has} somehow found a skinny vole.",
+            "[You gather the strength to look at t_c, and notice that {PRONOUN/t_c/subject} {VERB/t_c/have/has} somehow found a skinny vole.",
             "It was supposed to be l_n's... But you need it more."
         ]
     ],

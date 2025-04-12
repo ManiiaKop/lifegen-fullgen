@@ -60,7 +60,7 @@ jobs:
           IS_RELEASE: 1
       - name: Create archive (.tar.xz)
         run: tar -caf Lifegen_Linux64_glibc2.31+.tar.xz -C dist Lifegen
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Lifegen_Linux64_glibc2.31+.tar.xz
           path: Lifegen_Linux64_glibc2.31+.tar.xz
@@ -154,7 +154,7 @@ jobs:
           IS_RELEASE: 1
       - name: Create archive (.tar.xz)
         run: tar -caf Lifegen_Linux64_glibc2.35+.tar.xz -C dist Lifegen
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Lifegen_Linux64_glibc2.35+.tar.xz
           path: Lifegen_Linux64_glibc2.35+.tar.xz
@@ -271,7 +271,7 @@ jobs:
         run: |
           cp dist/Lifegen/_internal/.itch.toml dist/ 
           tar.exe -a -c -f Lifegen_Win32.zip -C dist Lifegen .itch.toml
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Lifegen_Win32
           path: Lifegen_Win32.zip
@@ -395,7 +395,7 @@ jobs:
         run: |
           cp dist/Lifegen/_internal/.itch.toml dist/ 
           tar.exe -a -c -f Lifegen_Win64.zip -C dist Lifegen .itch.toml
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Lifegen_Win64
           path: Lifegen_Win64.zip
@@ -519,7 +519,7 @@ jobs:
         run: |
           cp dist/Lifegen/_internal/.itch.toml dist/ 
           tar.exe -a -c -f Lifegen_Win64_Windows10+.zip -C dist Lifegen .itch.toml
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Lifegen_Win64_Windows10+
           path: Lifegen_Win64_Windows10+.zip
@@ -622,7 +622,7 @@ jobs:
         run: "npm install -g appdmg"
       - name: Generate .dmg
         run: "appdmg appdmg.json Lifegen_macOS64.dmg"
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Lifegen_macOS64.dmg
           path: Lifegen_macOS64.dmg

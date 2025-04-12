@@ -10,12 +10,12 @@
             "Newleaf"
         ],
         "tags": [],
-        "priority": "both",
+        "priority": "primary",
         "duration": 2,
         "rarity": "uncommon",
         "trigger_events": [
-            "lead_name looks over the vast blue of the horizon, the tide rising to their paws where it has not dared to pass before, and the pit of dread in their stomach disrupts their thoughts.",
-            "dep_name pulls lead_name aside to the edge of c_n's territory. They point out the approaching clouds within the cold air, and the ominous implication of a storm ahead compels tense whispers across c_n."
+            "lead_name looks over the vast blue of the horizon, the tide rising to {PRONOUN/lead_name/poss} paws where it has not dared to pass before, and the pit of dread in {PRONOUN/lead_name/poss} stomach disrupts {PRONOUN/lead_name/poss} thoughts.",
+            "dep_name pulls lead_name aside to the edge of c_n's territory. {PRONOUN/dep_name/subject/CAP} {VERB/dep_name/point/points} out the approaching clouds within the cold air, and the ominous implication of a storm ahead compels tense whispers across c_n."
         ],
         "progress_events": {
             "moon1": [
@@ -34,12 +34,72 @@
             ],
             "deaths": {
                 "death_text": [
-                    "The water crashed along the shorelines with a power that m_c wasn't expecting. One moment, they're standing safely on the sand -- the next, they're gone forever.",
+                    "The water crashed along the shorelines with a power that m_c wasn't expecting. One moment, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} standing safely on the sand -- the next, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} gone forever.",
                     "In the middle of the hurricane, no one noticed when m_c was swept away from camp by the crashing waves."
                 ],
                 "history_text": {
                     "reg_death": "m_c died in a hurricane."
                 }
+            }
+        }
+    },
+    "Oil Spill": {
+        "event": "Oil Spill",
+        "camp": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "tags": [],
+        "priority": "primary",
+        "duration": 4,
+        "rarity": "rare",
+        "trigger_events": [
+            "Cats gather around the shore as a black liquid seeps into the ocean far in the distance. Worried whispers of the Dark Forest attempting to plague the Clan fill the air, planting seeds of fear.",
+            "Fish, once a vital source of prey, are washing up ashore. r_c looks upon the sea line, devastated by the unnatural black substance leaking into what was once blue. {PRONOUN/r_c/subject/CAP} {VERB/r_c/rush/rushes} to tell c_n {PRONOUN/r_c/poss} discovery before it's too late."
+        ],
+        "progress_events": {
+            "moon1": [
+                "Plants and herbs around the shore are slowly withering away until they are unusable. The fish are making c_n sick, and the water is slowly turning into a mess of grey and black. The healers have a lot of work to do as the strange phenomena continues.",
+                "The healers learn quickly that the dreadfully black ocean is the source of many sudden sicknesses. Cats are instructed to stay out of the water and the goop that pollutes it. With the convenience of the ocean gone, c_n struggles to find solutions."
+            ],
+            "moon2": [
+                "Cats are becoming skinnier and quicker to tire due to the loss of a convenient source of fresh-kill. Rumors are spreading that the Dark Forest is punishing c_n for an unknown reason, and the resentment is growing to a concerning amount.",
+                "Thankfully, there is still some opportunities to hunt prey outside of fish, but the new sources of fresh-kill struggle to feed every cat in c_n.",
+                "As the black in the ocean touches the shore, vital herbs wither away with no warning. With the lack of both fresh-kill and herbs, there is slight panic in the Clan as cats wonder how they can survive."
+            ],
+            "moon3": [
+                "Twolegs' water-monsters have been spotted in the horizon far more recently lately. The braver cats watch the water-monsters from a safe distance, noticing the black goop in the water has been slowly depleting as the Twolegs come and go.",
+                "The distant cry of a twolegs' water-monster is heard early in dawn, waking c_n from their nests. dep_nameheads out to observe the cause while other cats search for hiding spaces, realizing the twolegs are doing something to the black ocean.Peculiar."
+            ]
+        },
+        "conclusion_events": [
+            "While the Twolegs efforts are controlling the black stain, c_n are still wary of their arrival and avoid going to the shore. Less fish wash up on sea and the water looks a little healthier now, at least."
+        ],
+        "collateral_damage": {
+            "injuries": [
+                "poisoned"
+            ],
+            "deaths": {
+                "death_text": [
+                    "Desperate and hungry, m_c eats a washed up fish despite being instructed not to. {PRONOUN/m_c/subject/CAP}{VERB/m_c/'re/'s} found deceased later.",
+                    "m_c decided to swim in the black goop. Unfortunately, that was {PRONOUN/m_c/poss} last swim."
+                ],
+                "history_text": {
+                    "lead_dead": "m_c died by consuming oil from an oil spill.",
+                    "reg_death": "died by consuming oil from an oil spill."
+                }
+            }
+        },
+        "secondary_disasters": {
+                "Famine": {
+                "disaster": "Famine",
+                "triggers_during": "end",
+                "chance": 1,
+                "trigger_events": [
+                    "With the fish washing up deceased on the shore, covered in a thick black liquid, c_n is forced to look elsewhere for prey. Fresh-kill is scarce and the opportunities to hunt further inland are few."
+                ]
             }
         }
     }

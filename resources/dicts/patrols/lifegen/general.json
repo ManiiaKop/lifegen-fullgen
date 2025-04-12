@@ -644,5 +644,82 @@
                 "weight": 20
             }
         ]
+    },
+    {
+        "patrol_id": "gen_life_J1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "other_clan"
+        ],
+        "patrol_art": "gen_happy_cat5",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {
+            "normal adult": [
+                1,
+                1
+            ]
+        },
+        "weight": 20,
+        "intro_text": "While on a lone hunting excursion near the o_c_n border, you hear someone call out your name. On the border sits a o_c_n cat you've been friendly with at Gatherings, and they want to say hello!",
+        "decline_text": "Feeding your Clan is most important, not conversing with enemy Clans. You leave without a word, leaving your o_c_n friend confused.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You race up to them with a smile, giving their shoulder a friendly head-butt. You sit across the border from each other, sharing news from your Clans, until a bird chirps loudly overhead and you're reminded of your task. Your friend points you in the direction of a full rabbit warren they spotted from across the border, and you thank them as you depart.",
+                "exp": 15,
+                "weight": 20,
+                "prey": [
+                    "small"
+                ]
+            },
+            {
+                "text": "It wouldn't hurt to say hello! You prance up to n_c:0 and start up a conversation, which quickly turns into juicy gossip about {PRONOUN/n_c:0/poss} life. {PRONOUN/n_c:0/subject/CAP} {VERB/n_c:0/admit/admits} that o_c_n hasn't been treating {PRONOUN/n_c:0/object} well as of late and {PRONOUN/n_c:0/subject}{VERB/n_c:0/'re/'s} thinking about leaving. Impulsively, you invite n_c:0 to c_n. With a breath of relief, {PRONOUN/n_c:0/subject} {VERB/n_c:0/accept/accepts} and {VERB/n_c:0/follow/follows} you back to camp.",
+                "exp": 10,
+                "weight": 1,
+                "new_cat": [
+                    [
+                        "age:adult",
+                        "backstory:otherclan1, otherclan2, otherclan7",
+                        "warrior",
+                        "new_name"
+                    ]
+                ],
+                "other_clan_rep": -1
+            },
+            {
+                "text": "You greet them from across the border, but before you're able to talk to them, you spot a rabbit from the corner of your eye. You pounce on the rabbit, but it slips out of your paws before you can inflict the killing blow. This happens a few times until you finally successfully catch it. Your friend's laughter is a welcoming sound to your ears.",
+                "exp": 10,
+                "weight": 20,
+                "prey": [
+                    "small"
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You trot up the border, giving the o_c_n cat a warm hello, but before you can get to them, their patrol leader emerges from behind a tree. They scold your friend for getting distracted on their hunt, and you give them a sympathetic nod as they're pulled away.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "Even though you would rather talk to your friend from o_c_n, you have to put your duty first. You quickly send them a friendly smile and race off in the other direction, hoping to find a rabbit or two. You have no such luck, and your friends disappointed face doesn't leave your mind.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "You invite your friend to walk with you along the border of their Clan, hoping the both of you can still do your duties while talking. It doesn't take long for your friend to find a bird or two for their Clan, but on your side of the border, you're out of luck. The o_c_n cat gives you a sympathetic nod, reluctant to share their prey.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
     }
 ]

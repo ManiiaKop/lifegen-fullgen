@@ -3794,5 +3794,39 @@
                 "path": "resources/images/buttons/tint_button_cooldilute_unavailable.png"
             }
         }
+    },
+    "#half_moon_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/halfmoon_meeting.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/halfmoon_meeting_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/halfmoon_meeting_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/halfmoon_meeting_unavaliable.png"
+            }
+        }
+    },
+    "#gift_clanmate_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/gift_accessory.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/gift_accessory_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/gift_accessory_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/gift_accessory_unavaliable.png"
+            }
+        }
     }
 }

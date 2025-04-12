@@ -104,12 +104,12 @@ class QueenScreen(Screens):
         if game.settings['dark mode']:
             if self.the_cat.did_activity:
                 self.heading2 = pygame_gui.elements.UITextBox("This queen already worked this moon.",
-                                                        ui_scale(pygame.Rect((150, 55), (500, 80))),
+                                                        ui_scale(pygame.Rect((265, 55), (500, 80))),
                                                         object_id=get_text_box_theme("#text_box_26"),
                                                         manager=MANAGER)
             else:
                 self.heading2 = pygame_gui.elements.UITextBox("Nursery activities can impact a kit's stats.\nStats may affect the kit's future role and personality.",
-                                                        ui_scale(pygame.Rect((150, 55), (500, 80))),
+                                                        ui_scale(pygame.Rect((265, 55), (500, 80))),
                                                         object_id=get_text_box_theme("#text_box_26"),
                                                         manager=MANAGER)
 
@@ -176,14 +176,12 @@ class QueenScreen(Screens):
             starting_height=0,
         )
 
-        self.confirm_mentor.disable()
-
         if self.the_cat.did_activity:
             self.confirm_mentor.disable()
 
         self.activity_box = pygame_gui.elements.UITextBox(
             "",
-            ui_scale(pygame.Rect((100, 210), (300, 200))),
+            ui_scale(pygame.Rect((100, 180), (300, 200))),
             object_id=get_text_box_theme("#text_box_26"),
             manager=MANAGER
             )
@@ -281,7 +279,7 @@ class QueenScreen(Screens):
             stat_change = choice(display_events["stat_change"])
         self.activity_box.kill()
         self.activity_box = pygame_gui.elements.UITextBox(self.adjust_txt(choice(display_events[stat_change])),
-                                                    ui_scale(pygame.Rect((100, 210), (300, 200))),
+                                                    ui_scale(pygame.Rect((100, 210), (300, 170))),
                                                     object_id=get_text_box_theme("#text_box_26"),
                                                     manager=MANAGER)
         if stat_change == "courage up":
@@ -304,9 +302,9 @@ class QueenScreen(Screens):
         if success:
             exp_gain = randint(5, 20)
             self.the_cat.experience += exp_gain
+        self.update_selected_cat()
         self.the_cat.did_activity = True
         self.confirm_mentor.disable()
-        self.update_selected_cat()
 
     def get_success(self):
         queen = self.the_cat
@@ -374,11 +372,12 @@ class QueenScreen(Screens):
         for ele in self.selected_details:
             self.selected_details[ele].kill()
         self.selected_details = {}
-        if self.selected_cat is None:
+        if self.selected_cat is None or self.the_cat.did_activity:
             self.confirm_mentor.disable()
         else:
             self.confirm_mentor.enable()
-
+        
+        if self.selected_cat:
             self.selected_details["selected_image"] = pygame_gui.elements.UIImage(
                 ui_scale(pygame.Rect((425, 150), (150, 150))),
                 pygame.transform.scale(
@@ -444,7 +443,7 @@ class QueenScreen(Screens):
         for cat in display_cats:
             if game.clan.clan_settings["show fav"] and cat.favourite != 0:
                 self.fav[str(i)] = pygame_gui.elements.UIImage(
-                    ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))),
+                    ui_scale(pygame.Rect((100 + pos_x, 350 + pos_y), (50, 50))),
                     pygame.transform.scale(
                         pygame.image.load(
                             f"resources/images/fav_marker_{cat.favourite}.png").convert_alpha(),
@@ -452,7 +451,7 @@ class QueenScreen(Screens):
                 )
                 self.fav[str(i)].disable()
             self.cat_list_buttons["cat" + str(i)] = UISpriteButton(
-                ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))),
+                ui_scale(pygame.Rect((100 + pos_x, 350 + pos_y), (50, 50))),
                 cat.sprite, cat_object=cat, manager=MANAGER)
             pos_x += 60
             if pos_x >= 262:

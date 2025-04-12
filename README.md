@@ -1,22 +1,20 @@
-# clangen (now with 100% more cat genetics)
+# LifeGen - A ClanGen Mod
 
-A mod of the Clan-gen fan edit featuring cat genetics that get passed down from cat to cat, among a few little bonuses here and there!
-### [Lifegen Discord Server](https://discord.gg/lifegen) || [Official website](https://mods.clangen.io/LifeGen/download) || [ClanGen Itch.io Page](https://sablesteel.itch.io/clan-gen-fan-edit) 
+### [Discord Server](https://discord.gg/lifegen) || [Official website](https://mods.clangen.io/LifeGen/download) || [ClanGen Itch.io Page](https://sablesteel.itch.io/clan-gen-fan-edit) 
 
 ## Description
-Fan-edit of the warrior cat clangen game built using Python and Pygame.
+A ClanGen mod where you control your own cat! Choose your path and live out your life as a warrior.
 
 ## Credits
 Original creator: just-some-cat.tumblr.com
 
 Fan-edit creator: SableSteel, and many others
 
-## Downloads
-Note: These are developer builds and are not guaranteed to work!
-- [Nightly Link](https://nightly.link/Chinch-Bug/clangen-genemod/workflows/build/modded)
+[LifeGen credits](https://docs.google.com/document/d/1XCm5Eo-y5VA6W9quDMbF3VNyKL7S8_9Tl4c2buuiA8g/edit?usp=sharing)
 
+## Downloads
 ### Stable
-Stable versions can be downloaded directly from the [official ClanGen website](https://mods.clangen.io/LifeGen/download)
+Stable versions can be downloaded directly from the [official LifeGen mod website](https://mods.clangen.io/LifeGen/download)
 
 ### Development
 **Note**: Development versions are automatic snapshots of current development efforts. They are _not_ stable, can crash and even corrupt your save files.
@@ -92,7 +90,4 @@ Finally, open the `main.py` file and click the play button in the top right corn
 
 
 ## Bug Reporting
-We have migrated to GitHub Issues for bug reporting and tracking. We no longer review bug reports from the retired Google Form.
-
-## Contributing
-If you'd like to contribute to Clangen, please read our [Contributing guide](https://github.com/ClanGenOfficial/clangen/blob/development/CONTRIBUTING.md).
+Please report any bugs on the LifeGen discord server.

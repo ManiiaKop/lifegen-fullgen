@@ -1,27 +1,4 @@
 {
-    "medi_11": [
-        [
-            "insult",
-            "Any",
-            "no_kit",
-            "you_blind",
-            "they_blind"
-        ],
-        [
-            "Is something the matter?"
-        ]
-    ],
-    "dep_132": [
-        [
-            "newborn",
-            "insult",
-            "you_blind",
-            "they_blind"
-        ],
-        [
-            "Wha.. What was that?"
-        ]
-    ],
     "unabashed mediator apprentice1": [
         [
             "unabashed",
@@ -166,32 +143,6 @@
             "[For a mediator, t_c sure doesn't seem to talk much.]"
         ]
     ],
-    "medi_11x": [
-        [
-            "insult",
-            "Any",
-            "no_kit",
-            "you_blind",
-            "they_blind"
-        ],
-        [
-            "Words can be like claws, they can leave marks. Be careful with yours."
-        ]
-    ],
-    "medi_12": [
-        [
-            "insult",
-            "kitten",
-            "you_blind",
-            "they_blind"
-        ],
-        [
-            "Hey! Wait... This is the perfect time to use my training!",
-            "What caused you to act this way?",
-            "How about you take a deep breath. Inhale, then exhale.",
-            "Now lets reflect on your actions... hey! Don't just walk away from me!"
-        ]
-    ],
     "assertive_jealous1": [
         [
             "Any",
@@ -304,7 +255,7 @@
             "they_blind"
         ],
         [
-            "Hey! I brought ya back a little gift from o_cClan's territory.",
+            "Hey! I brought ya back a little gift from o_c_n's territory.",
             "[t_c brandishes a colorful, exotic flower and lays it at your paws.]",
             "'Innit cool? I knew you'd like it!",
             "I saw this other cool plant, too, but didn't get the chance to snag it ... Next time, I'll make sure to bring it back!"
@@ -337,7 +288,7 @@
             "[You hear t_c quietly groan to {PRONOUN/t_c/self} from the other side of the clearing.]",
             "y_c, I can see you staring at me. If you want to say something, say it.",
             "... No, I'm not angry at you. I'm sorry for snapping. My training's just going a bit rough.",
-            "I got into an argument with another cat from o_cClan about their current plans. They refused to listen to me when I had a better solution to their problem.",
+            "I got into an argument with another cat from o_c_n about their current plans. They refused to listen to me when I had a better solution to their problem.",
             "Makes me almost regret being a mediator. I hate talking to other cats, they're just utterly full of problems they create for themselves, and they refuse to listen to obvious solutions.",
             "But, I suppose I became a mediator to help other cats with their problems too. I suppose I've caught my mouse and I need to eat it.",
             "Thank you for listening to me, y_c. I'll keep thinking of another solution they'll like."
@@ -414,7 +365,6 @@
             "assertive",
             "cool",
             "unlawful",
-            "silly",
             "you_blind",
             "they_blind"
         ],
@@ -565,7 +515,7 @@
             "they_blind"
         ],
         [
-            "Hey! I brought ya back a little gift from o_cClan's territory.",
+            "Hey! I brought ya back a little gift from o_c_n's territory.",
             "[t_c brandishes a colorful, exotic flower and lays it at your paws.]",
             "'Innit cool? I knew you'd like it!",
             "I saw this other cool plant, too, but didn't get the chance to snag it ... Next time, I'll make sure to bring it back!"
@@ -599,7 +549,6 @@
         [
             "Any",
             "assertive",
-            "silly",
             "unlawful",
             "dislike",
             "you_blind",
@@ -810,7 +759,7 @@
             "they_blind"
         ],
         [
-            "Oh hey, y_c! I have a favor I'd like to ask of you. I need to go to o_cClan, can you come with me?",
+            "Oh hey, y_c! I have a favor I'd like to ask of you. I need to go to o_c_n, can you come with me?",
             "I'm gonna ask a few others too, so don't worry if you don't wanna go or you're busy! There was a situation at the border and I want to make sure no one's upset or anything."
         ]
     ],
@@ -827,7 +776,7 @@
         [
             "y_c...? Oh- I'm fine, don't worry about me! I was just doing a lot of thinking.",
             "I want to help everycat I can, but I... I don't know. I feel like I could be so much more useful /out/ there, not just in c_nClan. Am I weird for that?",
-            "I adore c_nClan, but... I saw some o_cClan apprentices fighting, but when I tried to help they told me to keep my nose in my own Clan's business.",
+            "I adore c_nClan, but... I saw some o_c_n apprentices fighting, but when I tried to help they told me to keep my nose in my own Clan's business.",
             "... Thank you for listening to me. It really means a lot, you know? Ah- I'm sure you came to ask me for something, what is it you need?"
         ]
     ],
@@ -1039,7 +988,7 @@
         ],
         [
             "[You see t_c expertly mediating a fight between two of your warriors.]",
-            "[{PRONOUN/t_c/subject}{VERB/t_c/'ve/'s} really blossomed into {PRONOUN/t_c/poss} new role, quickly ending what could've been a huge fight.]",
+            "[{PRONOUN/t_c/subject/CAP}{VERB/t_c/'ve/'s} really blossomed into {PRONOUN/t_c/poss} new role, quickly ending what could've been a huge fight.]",
             "Oh! y_c! I'll get to you in a moment! We were exchanging forgiveness flowers!"
         ]
     ],
@@ -1051,7 +1000,7 @@
             "they_blind"
         ],
         [
-            "[You, r_w and t_c are heading over to o_cClan for a meeting. You had some things to discuss with the leader, and the mediating app just-so-happened to be heading over there.]",
+            "[You, r_w and t_c are heading over to o_c_n for a meeting. You had some things to discuss with the leader, and the mediating app just-so-happened to be heading over there.]",
             "[This was pretty good for you, considering you hadn't been there in a while, and the territory seemed foreign to you, meanwhile the apprentice seemed to remember it quite well.]",
             "Be careful when you enter the camp! The kits are pretty feisty, they always love to run up to me and say hi.",
             "Speaking of, I should grab a toy to bring for them!"
@@ -1149,7 +1098,7 @@
         [
             "y_c! Your humble Clan mediator, t_c, has a plan, and I need you to help me go through with it!",
             "We've been hunting too much recently, and the prey is starting to dwindle. This could spell the end if we don't let it repopulate - we don't want to worsen leaf-bare, after all.",
-            "Not to mention the rumors I overheard at the last Gathering. Two o_cClan apprentices were snickering to themselves saying that we must've been hunting outside of our territory because the prey inside of it was seemingly so scarce.",
+            "Not to mention the rumors I overheard at the last Gathering. Two o_c_n apprentices were snickering to themselves saying that we must've been hunting outside of our territory because the prey inside of it was seemingly so scarce.",
             "Of course, these problems could be fixed with a simple contribution to me so I can figure out what action we should take.",
             "What kind of contribution, you ask? Well, a tiny morsel of fresh-kill delivered right to my den, of course!",
             "[t_c puffs out their chest, satisfied with their hard work.]"
@@ -1414,6 +1363,268 @@
             "r_c is never going to change if {PRONOUN/r_c/subject}{VERB/r_c/don't/doesn't} know how you feel, y_c. You need to be direct. No cat has ever been killed by some brutal honesty.",
             "If you spend your whole life worrying about trodding on the toes of others, you'll never get anything done.",
             "Now, do you want me to help you work out what you'll say?"
+        ]
+    ],
+    "mentor_meditator_H1": [
+        [
+            "from_mentor",
+            "they_mediator",
+            "you_mediator_apprentice",
+            "you_apprentice",
+            "they_leader",
+            "you_neurotic",
+            "you_blind"
+        ],
+        [
+            "y_c, you must speak louder and enunciate your words.",
+            "Chin high, eyes straight ahead. Go again, you can do it!",
+            "Our voices matter just as much as the next cat. If you can't speak for yourself, then it'll be all for naught."
+        ]
+    ],
+    "general_they_shunned_mediator_CM1": [
+        [
+            "Any",
+            "they_shunned",
+            "they_mediator"
+        ],
+        [
+            "My job in this Clan is - <i>was</i> to solve problems.",
+            "[You watch as t_c presses {PRONOUN/t_c/poss} claws out, digging them into the ground below. Suddenly, {PRONOUN/t_c/subject} {VERB/t_c/swing/swings} {PRONOUN/t_c/poss} head around, glaring at you.]",
+            "I <i>solved</i> the problem.",
+            "Cats like you, y_c, would never understand."
+        ]
+    ],
+    "neurotic_tokit_SQ2": [
+        [
+            "you_kitten",
+            "they_neurotic",
+            "they_warrior",
+            "they_mediator",
+            "they_healer",
+            "they_deputy",
+            "they_leader",
+            "neutral",
+            "greenleaf"
+        ],
+        [
+            "Oh! Hey, y_c. Sorry, I don't really know how to deal with... uh...",
+            "[t_c's gaze lands on a clump of dandelion fuzz, caught on a patch of grass. {PRONOUN/t_c/subject/CAP} {VERB/t_c/bat/bats} it your way.]",
+            "Um... here! Play with that for a bit, maybe?"
+        ]
+    ],
+    "new_shunned_J7": [
+        [
+            "they_mediator",
+            "you_shunned",
+            "min_platonic_50",
+            "you_mediator",
+            "you_mediator_apprentice",
+            "cool",
+            "unabashed"
+        ],
+        [
+            "[t_c trots back into camp after a visit to o_c_n and runs right up to you.]",
+            "Okay, so, here's the update. A queen from o_c_n accused r_w_brooding of stealing prey, but there was no proof.",
+            "Turns out, the queen flirted with r_w_brooding at the last Gathering, and she was upset she got rejected!",
+            "My StarClan. Some cats are crazy!",
+            "[You appreciate t_c updating you on mediator secrets while you're confined to camp. You wish you could've been there to see this!]"
+        ]
+    ],
+    "mediator_gen_youshunned_rad2": [
+    	[
+        	"they_mediator",
+        	"they_mediator_apprentice",
+        	"you_shunned",
+        	"they_unabashed",
+        	"they_assertive",
+        	"neutral",
+        	"you_blind",
+        	"they_blind"
+    	],
+    	[
+        	"y_c, if you needed conflict resolution skills, you could've just asked."
+    	]
+    ],
+    "mediator_theyshunned_H1": [
+        [
+            "they_mediator",
+            "min_comfort_50",
+            "min_platonic_20",
+            "they_shunned",
+            "no_kit",
+            "they_cool",
+            "strange",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "Hahhh... Maybe murdering didn't have the effect I wanted.",
+            "Instead of lessening conflict, I <i>added</i> more conflict.",
+            "... Checking murder off my 'how to quickly end conflict' list."
+        ]
+    ],
+    "mediator_theyshunned_H2": [
+        [
+            "they_mediator",
+            "min_comfort_50",
+            "min_platonic_20",
+            "they_shunned",
+            "no_kit",
+            "they_introspective",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "...",
+            "Yes, okay, maybe I didn't follow my own advice.",
+            "'Walk away, breathe, deal with the issue when you're not furious.'",
+            "I'm realizing how unrealistic that is."
+        ]
+    ],
+    "mediator_theyshunned_H3": [
+        [
+            "they_mediator",
+            "min_comfort_50",
+            "min_platonic_20",
+            "they_shunned",
+            "no_kit",
+            "they_introspective",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "I thought I had a good head on my shoulders. That I wasn't easily influenced by impulse.",
+            "I guess I was wrong about that if my impulse is to kill another."
+        ]
+    ],
+    "mediator_theyshunned_H4": [
+        [
+            "they_mediator",
+            "min_comfort_50",
+            "min_platonic_20",
+            "they_shunned",
+            "no_kit",
+            "they_introspective",
+            "they_neurotic",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "Ugh, how can I call myself a mediator now?",
+            "I made such a stupid mistake, and now no cat is going to trust me with their problems anymore."
+        ]
+    ],
+    "mediator_youshunned_H1": [
+        [
+            "they_mediator",
+            "min_comfort_50",
+            "min_platonic_20",
+            "you_shunned",
+            "no_kit",
+            "they_introspective",
+            "they_cool",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "So...",
+            "Do you want to talk about your issues now? Or are you doing to allow it to consume you again?"
+        ]
+    ],
+    "mediator_youshunned_H2": [
+        [
+            "they_mediator",
+            "min_dislike_20",
+            "you_shunned",
+            "no_kit",
+            "they_cool",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "Now, what did you learn?",
+            "Killing doesn't solve your issues. In fact! It causes more!",
+            "Keep that in mind next time."
+        ]
+    ],
+    "neurotic_mediator_SQ2": [
+        [
+            "they_mediator",
+            "they_neurotic",
+            "you_adult",
+            "min_platonic_30",
+            "min_comfort_15"
+        ],
+        [
+            "I was trying to help dislike_r_c_brooding work through a disagreement this morning, but {PRONOUN/dislike_r_c_brooding/subject} {VERB/dislike_r_c_brooding/were/was} having none of it.",
+            "{PRONOUN/dislike_r_c_brooding/subject/CAP} said {PRONOUN/dislike_r_c_brooding/subject} can deal with {PRONOUN/dislike_r_c_brooding/poss} own problems, so I reminded {PRONOUN/dislike_r_c_brooding/object} that helping other cats with their relationships is my job.",
+            "[t_c's tail droops. {PRONOUN/t_c/poss/CAP} voice drops to a whisper.]",
+            "...And then {PRONOUN/dislike_r_c_brooding/subject} asked why {PRONOUN/dislike_r_c_brooding/subject}'d let me help {PRONOUN/dislike_r_c_brooding/object} with {PRONOUN/dislike_r_c_brooding/poss} issues, when I'm too cowardly to deal with my own. It... really hurt. And the worst part is, {PRONOUN/dislike_r_c_brooding/subject}{VERB/dislike_r_c_brooding/'re/'s} right.",
+            "[t_c sighs and leans against you. You sit in silence for a while, hoping your presence might reassure {PRONOUN/t_c/object}.]"
+        ]
+    ],
+    "neurotic_mediator_SQ3": [
+        [
+            "they_mediator",
+            "they_neurotic",
+            "you_adult",
+            "min_platonic_20",
+            "they_blind"
+        ],
+        [
+            "Being a mediator is hard, sometimes. I try my best to help, but I can't make everyone happy, and then I'm left worrying whether I'm actually doing a good job.",
+            "[t_c sits beside you for a while. Then, {PRONOUN/t_c/subject} {VERB/t_c/stand/stands} and {VERB/t_c/stretch/stretches}.]",
+            "Well... off I go. I'm trying to help neutral_r_w_brooding work through something. I just hope {PRONOUN/neutral_r_w_brooding/subject} {VERB/neutral_r_w_brooding/don't/doesn't} snap at me again."
+        ]
+    ],
+    "neurotic_mediator_SQ4": [
+        [
+            "they_mediator",
+            "they_neurotic",
+            "you_adult",
+            "min_platonic_30",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "It's hard to mediate cats like neutral_r_w_upstanding sometimes. I like {PRONOUN/neutral_r_w_upstanding/object} well enough, but {PRONOUN/neutral_r_w_upstanding/subject}{VERB/neutral_r_w_upstanding/'re/'s} so certain {PRONOUN/neutral_r_w_upstanding/subject}{VERB/neutral_r_w_upstanding/'re/'s} right all the time.",
+            "And I don't want to argue with {PRONOUN/neutral_r_w_upstanding/object}, but I kind of... have to? To resolve conflicts, it's important {PRONOUN/neutral_r_w_upstanding/subject} {VERB/neutral_r_w_upstanding/see/sees} the situation from other perspectives.",
+            "Anyways, I've had a long day. neutral_r_w_upstanding was being stubborn, or maybe I was being a pushover, so we've paused mediation until tomorrow.",
+            "I really don't want to think about it. How's your day been?"
+        ]
+    ],
+    "neurotic_skillstory_SQ7": [
+        [
+            "they_story",
+            "they_mediator",
+            "they_neurotic",
+            "you_adult",
+            "min_platonic_15",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "I've been wondering if I could use stories to help solve kits' arguments.",
+            "I know most grown cats would find the method demeaning, so I haven't thought much about it... but maybe it would help kits understand how to get along?",
+            "I'll ask r_q about it the next time {PRONOUN/r_q/subject}{VERB/r_q/'re/'s} free."
+        ]
+    ],
+    "neurotic_skillstory_SQ8": [
+        [
+            "they_story",
+            "they_mediator",
+            "they_mediator_apprentice",
+            "they_deputy",
+            "they_neurotic",
+            "you_adult",
+            "min_platonic_20",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "A queen in o_c_n was telling their kits a story when I visited their camp with l_n last moon. I can't stop thinking about it.",
+            "It was so different from any story I'd heard before, with completely new cats. I really wanted to hear the end, but the queen took the kits inside when they realized we were there.",
+            "*sigh* It's silly, but it bothers me that I'll never know how it ends. And even if I see that queen again, I'd never be brave enough to ask."
         ]
     ]
 }

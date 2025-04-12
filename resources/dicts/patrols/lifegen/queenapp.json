@@ -528,5 +528,71 @@
                 "weight": 20
             }
         ]
+    },
+    {
+        "patrol_id": "life_queenappmusical_PS1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "lg_queenapp_default.png",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You are working on some chores around the camp, when your mind goes back to a few days ago. Things had been gloomy, so why not throw on a little play for the kits to participate in? You'd love that if you were a kit, and surely it'd impress m_n! Today is the day you've decided to go for it, gathering supplies and having the kits of the Clan practice their lines.",
+        "decline_text": "This seems like a bit too much work just for one fun night, and so you decide to shelf the idea for now.",
+        "chance_of_success": 70,
+        "success_outcomes": [
+            {
+                "text": "The play is a success, and the kits have a great time! The camp is full of laughter and cheer, a thing that'd been missing for days now. You couldn't be prouder, and you express that to the Clan once the play concludes. The kits of c_nClan have such a bright future, and you're eager to see where it goes.",
+                "exp": 15,
+                "weight": 30
+            },
+            {
+                "text": "The kits mess up on their lines quite a few times, but they are so incredibly proud of the work they do. You're proud of them too, and you consider it a success seeing the endeared faces of your clanmates.",
+                "exp": 10,
+                "weight": 20
+    
+            },
+            {
+                "text": "You put in a ton of hard work throughout the day. You finish everything, and it runs smoothly! r_k approaches you after the fact, still beaming from {PRONOUN/r_k/poss} performance. {PRONOUN/r_k/subject/CAP} gives you a gift as a 'thank you'!",
+                "exp": 0,
+                "weight": 10,
+                "accessory": [
+                    {
+                        "cats": [
+                            "y_c"
+                        ],
+                        "accessory": [
+                            "STICK"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Caring for kittens is a difficult job, and sometimes they can be quite fussy. They refuse to participate or cooperate with anything you've planned to do, to the point where l_n requests that you scrap the idea at least for now.",
+                "exp": 0,
+                "weight": 30
+            },
+            {
+                "text": "The kittens work incredibly hard on remembering their lines and getting into character, but no one shows up to the play. You feel bitter about this, and are left comforting the upset kittens who feel as though their work was wasted.",
+                "exp": 0,
+                "weight": 10
+            },
+            {
+                "text": "When the play starts, the kittens get distracted and devolve into a big play fight. Although the adults are amused, your nest is torn to barely recognizable shreds and all of your hard work is destroyed along with it. You realize you have to rebuild your nest which'll surely take all night, and you have to ignore the looks of very sad and guilty kittens.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
     }
 ]

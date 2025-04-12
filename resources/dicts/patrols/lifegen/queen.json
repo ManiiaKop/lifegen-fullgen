@@ -118,7 +118,7 @@
                 "weight": 20
             },
             {
-                "text": "While everycat is frantically looking for the kitten, you smile knowingly as you hear muffled giggles from deep within the nursery. Though knowing exactly where they are, you call out for the kitten and sneak around their hiding place, pouncing the rascal with a playful roar. The kittens safety is top priority, but so is fun.",
+                "text": "While everycat is frantically looking for the kitten, you smile knowingly as you hear muffled giggles from deep within the nursery. Though knowing exactly where they are, you call out for the kitten and sneak around their hiding place, pouncing the rascal with a playful roar. The kittens' safety is top priority, but so is fun.",
                 "exp": 10,
                 "weight": 20,
                 "stat_trait": [
@@ -199,16 +199,16 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "One of the kits has developed a cough. You need to decide on the best course of action.",
-        "decline_text": "Unsure of the best approach, you seek advice from the senior queens. They suggest bringing the kit to the healer, ensuring its wellbeing.",
+        "decline_text": "Unsure of the best approach, you seek advice from the senior queens. They suggest bringing the kit to the medicine cat, ensuring its wellbeing.",
         "chance_of_success": 75,
         "success_outcomes": [
             {
-                "text": "Recognizing the symptoms, you immediately consult the healer. Under their care, the kit quickly recovers. Your prompt action is commended.",
+                "text": "Recognizing the symptoms, you immediately consult the medicine cat. Under their care, the kit quickly recovers. Your prompt action is commended.",
                 "exp": 10,
                 "weight": 20
             },
             {
-                "text": "You immediately recognize the symptoms and decide the cough is not bad enough to consult the healer. Instead, you search around the nursery for herbs and treat the kitten yourself with much success.",
+                "text": "You immediately recognize the symptoms and decide the cough is not bad enough to consult the medicine cat. Instead, you search around the nursery for herbs and treat the kitten yourself with much success.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": [
@@ -244,7 +244,7 @@
                 "weight": 20
             },
             {
-                "text": "The kitten coughs in your face one too many times for comfort, and although you were able to locate the issue and direct them to a healer, you find yourself feeling sick as well. Aww rats.",
+                "text": "The kitten coughs in your face one too many times for comfort, and although you were able to identify the issue and direct them to a medicine cat, you find yourself feeling sick as well. Aww rats.",
                 "exp": 0,
                 "weight": 5,
                 "injury": [
@@ -259,7 +259,7 @@
                 ]
             },
             {
-                "text": "You're not willing to become sick this time, nope! Nope, nope nope! You keep yourself a safe distance away and tell the kitten to find a healer for their cough, even though you can feel the judgemental eyes of other queen's upon you.",
+                "text": "You're not willing to become sick this time, nope! Nope, nope nope! You keep yourself a safe distance away and tell the kitten to find a medicine cat for their cough, even though you can feel the judgemental eyes of other queens upon you.",
                 "exp": 0,
                 "weight": 15
             }
@@ -292,7 +292,7 @@
                 "weight": 20
             },
             {
-                "text": "The kitten's curiosity gives you an idea, and you consult with the deputy about training the warriors in something else - perception and initiative! A game of hide and seek where warriors need to find kittens while also avoiding other warriors. The deputy is impressed with your idea and introduce it straight away!",
+                "text": "The kitten's curiosity gives you an idea, and you consult with the deputy about training the warriors in something else - perception and initiative! A game of hide and seek where warriors need to find kittens while also avoiding other warriors. The deputy is impressed with your idea and introduces it straight away!",
                 "exp": 10,
                 "weight": 15
             },
@@ -467,7 +467,7 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "The nursery is empty aside from you, but a queen approaches you anxiously, sitting down next to you. They ask for advice on what they should do when they eventually start giving birth.",
-        "decline_text": "You shake your head, advising them to ask the healer instead. The queen seems further unnerved by this, but takes your word for it, quickly retreating to the healer's den.",
+        "decline_text": "You shake your head, advising them to ask the medicine cat instead. The queen seems further unnerved by this, but takes your word for it, quickly retreating to the medicine cat's den.",
         "chance_of_success": 75,
         "success_outcomes": [
             {
@@ -476,7 +476,7 @@
                 "weight": 20
             },
             {
-                "text": "Noticing their anxious behavior, you give them advice relating to being calm while birthing. You comment on the importance of staying calm and focused, and to trust the queen's and healers that'll be helping them give birth when the time comes.",
+                "text": "Noticing their anxious behavior, you give them advice relating to being calm while birthing. You comment on the importance of staying calm and focused, and to trust the queen's and medicine cats that'll be helping them give birth when the time comes.",
                 "exp": 10,
                 "weight": 20
             }
@@ -633,7 +633,7 @@
                 ]
             },
             {
-                "text": "You wrack your brain for any knowledge about continuous crying, refusing to simply brush it off as the kitten being unconscionable. After a moment, you remember a healer mentioning a spread of ear mites and direct the parents to ask about it just in case.",
+                "text": "You wrack your brain for any knowledge about continuous crying, refusing to simply brush it off as the kitten being unconscionable. After a moment, you remember a medicine cat mentioning a spread of ear mites and direct the parents to ask about it just in case.",
                 "exp": 15,
                 "weight": 20,
                 "stat_skill": [
@@ -762,6 +762,186 @@
             },
             {
                 "text": "You quietly tell the kitten the other queens will not appreciate you talking to them. You suggest the kitten ask for help from another queen, even with the sight of teary eyes and a devastated face.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "IG_rarequeen_imaginaryfriend_H1",
+        "biome": [
+            "forest",
+            "mountainous"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "new_cat"
+        ],
+        "patrol_art": "lg_queen_default",
+        "min_cats": 1,
+        "max_cats": 6,
+        "min_max_status": {},
+        "weight": 5,
+        "intro_text": "r_k runs up to you in a frenzy, claiming there is a 'friend' in the woods and you need to follow {PRONOUN/r_k/object} now now now! r_k looks particularly anxious as {PRONOUN/r_k/subject} {VERB/r_k/attempt/attempts} to push you in the direct {PRONOUN/r_k/subject} {VERB/r_k/want/wants} to go.",
+        "decline_text": "You chalk it up as an imaginary friend and brush off r_k's sudden concerns.",
+        "chance_of_success": 20,
+        "success_outcomes": [
+            {
+                "text": "Though a bit spooked by r_k's sudden request, you follow {PRONOUN/r_k/object} to the border of camp. To your surprise, it is not an imaginary friend like you thought - instead you're met with a kitten stuck under a pile of fallen branches. You're able to pull the poor kitten out with a determined tug and rush them to the medicine cat.",
+                "exp": 10,
+                "weight": 5,
+                "new_cat": [
+                    [
+                        "age:kitten",
+                        "kittypet"
+                    ]
+                ],
+                "injury": [
+                    {
+                        "cats": [
+                            "n_c:0"
+                        ],
+                        "injuries": [
+                            "sickness"
+                        ],
+                        "no_results": true
+                    }
+                ]
+            },
+            {
+                "text": "r_k pushes you to the edge of camp and directs you to a clearing, in which a medicine cat from another clan sits. They're surrounded by kittens and as they catch sight of you, they plead to be allowed in the clan. Though a bit hesitant, you allow the medicine cat to follow you back.",
+                "exp": 10,
+                "weight": 5,
+                "new_cat": [
+                    [
+                        "age:has_kits",
+                        "background:medicine_cat"
+                    ],
+                    [
+                        "new_name",
+                        "parent:0",
+                        "backstory:outsider_roots2",
+                        "litter"
+                    ]
+                ]
+            },
+            {
+                "text": "r_k's urgency makes you curious. You wander with {PRONOUN/r_k/object} to a clearing filled with blooming flowers, yet there's no 'friend' in sight. r_k gives you a cheeky little smile, saying {PRONOUN/r_k/subject} just wanted to get out of the nursery for a while and make some flower crowns! {PRONOUN/r_k/subject/CAP} {VERB/r_k/dash/dashes} off before you're able to protest, but... what's the harm in a little fun?",
+                "exp": 10,
+                "weight": 20,
+                "accessory": [
+                    {
+                        "cats": [
+                            "p_l",
+                            "r_k"
+                        ],
+                        "accessory": [
+                            "FLOWERCROWN"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Begrudgingly, you follow r_k to the woods. There's nothing there. The kitten swears {PRONOUN/r_k/poss} friend was there underneath a pile of fallen branches, but you shake your head and coax r_k back to c_n. As you approach the treeline, you see a pair of eyes surrounded by black mist in the corner of your vision. With a turn of your head, there's nothing there... A shiver runs down your spine as you hurry out of there.",
+                "exp": 0,
+                "weight": 10,
+                "stat_skill": [
+                    "DARK,1"
+                ],
+	            "can_have_stat": [
+                    "p_l",
+                    "r_k"
+                ]
+            },
+            {
+                "text": "You sigh and ask r_k if this is a real friend or a make-believe friend. {PRONOUN/r_k/subject/CAP} {VERB/r_k/is/are} not happy with your reluctance and bursts into tears, running in the opposite direction. Realising you've upset the kitten greatly, you spend the rest of dusk trying to coax r_k back to the nursery before {PRONOUN/r_k/subject} {VERB/r_k/do/does} something rash.",
+                "exp": 0,
+                "weight": 10
+            },
+            {
+                "text": "You decide there is no harm in humouring r_k. You follow {PRONOUN/r_k/object} to the edge of camp, only to see a small dog just outside the territory and r_k calls out to {PRONOUN/r_k/poss} so-called-friend. The dog's wagging tail and pipsqueak of a bark is only a cover-up for their true personality, and you waste no time rushing r_k out of there. That's the last time you're following r_k anywhere!",
+                "exp": 0,
+                "weight": 10,
+                "stat_skill": [
+                    "LANGUAGE,1"
+                ],
+                "can_have_stat": [
+                    "r_k"
+                ]
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_queen_J1",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "lg_queen_default",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "r_k_neurotic is missing! Just as you leave the den to look for them, they barrel into you, crying so hard they can't get a word out.",
+        "decline_text": "You let the kit cry into your fur without a word until {PRONOUN/r_k_neurotic/subject} tucker {VERB/r_k_neurotic/self} out.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You know that if r_k_neurotic doesn't get regulated, {PRONOUN/r_k_neurotic/subject}{VERB/r_k_neurotic/'re/'s} not going to be able to breathe properly. Instead of asking what happened, you hug {PRONOUN/r_k_neurotic/object} close and begin to groom {PRONOUN/r_k_neurotic/poss} fur until {PRONOUN/r_k_neurotic/subject} {VERB/r_k_neurotic/fall/falls} asleep. Later, r_w comes in to check on {PRONOUN/r_k_neurotic/object} and tells you {PRONOUN/r_k_neurotic/subject} got startled by an angry squirrel. Poor little kit!",
+                "exp": 15,
+                "weight": 20
+            },
+            {
+                "text": "Though startled, you understand that r_k_neurotic is suffocating underneath {PRONOUN/r_k_neurotic/poss} panic and you need to act quickly. You curl around r_k_neurotic and start humming a rhythmic tune, hoping the vibrations will be a welcome distraction from {PRONOUN/r_k_neurotic/poss} fear. It takes a bit, but r_k_neurotic takes comfort in your humming and calms down enough to breathe properly again.",
+                "exp": 10,
+                "weight": 20,
+                "stat_skill": [
+                    "SONG,1"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
+            },
+            {
+                "text": "You coax r_k_neurotic to a secluded area within the nursery to give {PRONOUN/r_k_neurotic/poss} some privacy, and stay with {PRONOUN/r_k_neurotic/object} as a comforting presence until r_k_neurotic is able to catch {PRONOUN/r_k_neurotic/poss} breath. r_k_neurotic blubbers out that a bird of prey scared {PRONOUN/r_k_neurotic/object} and {PRONOUN/r_k_neurotic/subject}{VERB/r_k_neurotic/'re/'s} sorry, but you shush {PRONOUN/r_k_neurotic/object} gently before r_k_neurotic apologizes again. There's no need for apologies when seeking comfort.",
+                "exp": 10,
+                "weight": 20,
+                "stat_trait": [
+                    "thoughtful",
+                    "calm",
+                    "flexible",
+                    "wise",
+                    "righteous",
+                    "lonesome",
+                    "gloomy",
+                    "mellow"
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You try to guide the kit through some breathing exercises, but {PRONOUN/r_k_neurotic/subject} {VERB/r_k_neurotic/don't/doesn't} seem to hear you. Whatever happened must have scared {PRONOUN/r_k_neurotic/object} a lot.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "You try to ask what is wrong, but r_k_neurotic is unable to speak through {PRONOUN/r_k_neurotic/poss} tears and quickened breath. You make the mistake of allowing panic to appear in your expression and r_k_neurotic cries harder, not finding any comfort at all. In a last ditch effort, you call over another queen and they take care of the issue with hushed words and gentle snuggles.",
                 "exp": 0,
                 "weight": 20
             }

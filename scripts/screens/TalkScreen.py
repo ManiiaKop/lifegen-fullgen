@@ -27,17 +27,6 @@ from ..ui.generate_button import ButtonStyles, get_button_dict
 from ..ui.get_arrow import get_arrow
 from ..ui.icon import Icon
 
-class RelationType(Enum):
-    """An enum representing the possible age groups of a cat"""
-
-    BLOOD = ''                      # direct blood related - do not need a special print
-    ADOPTIVE = 'adoptive'       	# not blood related but close (parents, kits, siblings)
-    HALF_BLOOD = 'half sibling'   	# only one blood parent is the same (siblings only)
-    NOT_BLOOD = 'not blood related'	# not blood related for parent siblings
-    RELATED = 'blood related'   	# related by blood (different mates only)
-
-BLOOD_RELATIVE_TYPES = [RelationType.BLOOD, RelationType.HALF_BLOOD, RelationType.RELATED, RelationType.ADOPTIVE]
-
 class TalkScreen(Screens):
 
     def __init__(self, name=None):
@@ -75,6 +64,7 @@ class TalkScreen(Screens):
         self.testing = False
 
     def screen_switches(self):
+        super().screen_switches()
         self.the_cat = Cat.all_cats.get(game.switches['cat'])
         self.cat_dict.clear()
         self.other_dict.clear()
@@ -474,7 +464,7 @@ class TalkScreen(Screens):
 
             #the text for dialogue choices
             option = pygame_gui.elements.UITextBox(str(text),
-                                                            ui_scale(pygame.Rect((435, 430 + y_pos), (270, 30))),
+                                                            ui_scale(pygame.Rect((435, 428 + y_pos), (270, 35))),
                                                             object_id="#text_box_30_horizleft",
                                                             manager=MANAGER)
             self.text_choices[c] = option
@@ -670,7 +660,7 @@ class TalkScreen(Screens):
             if game.switches["talk_category"] == "talk" and ("insult" in tags or "reject" in tags or "accept" in tags):
                 continue
 
-            if game.switches["talk_category"] == "insult" and "insult" not in tags:
+            if game.switches["talk_category"] == "insult" and ("insult" not in tags or cat.status == "newborn" and "they_newborn" not in tags):
                 continue
 
             if game.switches["talk_category"] == "flirt" and ("insult" in tags or ("reject" not in tags and "accept" not in tags)):
@@ -720,8 +710,10 @@ class TalkScreen(Screens):
                 and "any" not in tags
                 and f"you_{your_status}" not in tags
                 and f"you_{(your_status).replace(' ', '_')}" not in tags
-                and "young elder" not in tags
+                and "they_young_elder" not in tags
+                and "you_young_elder" not in tags
                 and "no_kit" not in tags
+                and "no_newborn" not in tags
                 and "you_any" not in tags
                 and "they_app" not in tags
                 and "you_app" not in tags
@@ -730,11 +722,20 @@ class TalkScreen(Screens):
                 and "you_adult" not in tags
                 ):
                 continue
-            elif "young elder" in tags and cat.status == 'elder' and cat.moons >= 100:
+            elif "they_young_elder" in tags and cat.status == 'elder' and cat.moons >= 100:
+                continue
+            elif "you_young_elder" in tags and you.status == 'elder' and you.moons >= 100:
                 continue
             elif "no_kit" in tags and (you.status in ['kitten', 'newborn'] or cat.status in ['kitten', 'newborn']):
                 continue
+            elif "no_newborn" in tags and (you.status == "newborn" or cat.status == "newborn"):
+                continue
             elif "newborn" in tags and "kitten" not in tags and you.moons != 0:
+                continue
+
+            if f"they_not_{cat.status.replace(' ', '')}" in tags:
+                continue
+            if f"you_not_{game.clan.your_cat.status.replace(' ', '')}" in tags:
                 continue
 
             if "they_adult" in tags and cat.status in [
@@ -1206,15 +1207,17 @@ class TalkScreen(Screens):
                 if not fam:
                     continue
 
+            if "former_mate" in tags and cat.ID not in you.previous_mates:
+                continue
+
             # MURDER STUFF
-            if game.clan.murdered != {}:
+            if game.clan.murdered != {} and game.clan.age - game.clan.murdered["moon"] <= 5:
                 # accomplice
                 if cat.ID == game.clan.murdered["accomplice"][0]:
                     if "accomplice_agreed" in tags and game.clan.murdered["accomplice"][1] is False:
                         continue
-                    elif "accomplice_refused" in tags and game.clan.murdered["accomplice"][1] is True:
+                    if "accomplice_refused" in tags and game.clan.murdered["accomplice"][1] is True:
                         continue
-                
                     if "not_accomplice" in tags:
                         continue
                 else:
@@ -1234,6 +1237,13 @@ class TalkScreen(Screens):
                 if "murder_fail" in tags and game.clan.murdered["success"] is True:
                     continue
 
+                # discovered
+                if "murder_discovered" in tags and game.clan.murdered["discovered"] is False:
+                    continue
+                if "murder_not_discovered" in tags and game.clan.murdered["discovered"] is True:
+                    continue
+
+
                 if any(tag in tags for tag in [
                     "accomplice_agreed", "accomplice_refused",
                     "accomplice", "murder_victim",
@@ -1242,12 +1252,18 @@ class TalkScreen(Screens):
                     ]):
                     if game.clan.murdered["murderer"] != game.clan.your_cat.ID:
                         continue
-            
+            else:
+                if any(tag in tags for tag in [
+                    "accomplice_agreed", "accomplice_refused",
+                    "accomplice", "murder_victim",
+                    "not_murder_victim", "murder_success",
+                    "murder_fail"
+                    ]):
+                    continue
+
             # ---
-
-
             if "non-related" in tags:
-                if you.inheritance.get_exact_rel_type(cat.ID) in BLOOD_RELATIVE_TYPES:
+                if cat.ID in you.get_relatives():
                     continue
 
             if "war" in tags:

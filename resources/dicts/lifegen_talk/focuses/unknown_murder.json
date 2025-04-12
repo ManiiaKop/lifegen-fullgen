@@ -53,13 +53,13 @@
         ],
         "dislike_r_w1": [
             "[t_c's eyes widen.]",
-            "See, I was thinking the same thing... {PRONOUN/dislike_r_w1/subject}{VERB/dislike_r_w1/'re/'s} weird, right?",
+            "See, I was thinking the same thing... {PRONOUN/dislike_r_w1/subject/CAP}{VERB/dislike_r_w1/'re/'s} weird, right?",
             "Let's keep an eye on {PRONOUN/dislike_r_w1/object}, okay? It could be one of us next..."
         ],
         "r_w2_neurotic": [
             "[t_c almost laughs.]",
             "r_w2_neurotic? Why?",
-            "That cat jumps every time they hear a woodpecker. And you think {PRONOUN/r_w2_neurotic/subject} killed fc_c?",
+            "That cat jumps every time {PRONOUN/r_w2_neurotic/subject} {VERB/r_w2_neurotic/hear/hears} a woodpecker. And you think {PRONOUN/r_w2_neurotic/subject} killed fc_c?",
             "Hm... now that you think about it, maybe that anxiety is all just an act... Oh, maybe {PRONOUN/r_w2_neurotic/subject}{VERB/r_w2_neurotic/'ve/'s} had us fooled this whole time!",
             "[t_c seems to be having a bit too much fun with this...]"
         ],
@@ -126,7 +126,7 @@
             "focus"
         ],
         [
-            "fc_c's death was an accident, right? It had to be. Or else it was a rogue, or someone from o_cClan.",
+            "fc_c's death was an accident, right? It had to be. Or else it was a rogue, or someone from o_c_n.",
             "I just really, really can't deal with the thought that it was one of us."
         ]
     ],
@@ -935,13 +935,13 @@
         ],
         "dislike_r_w1": [
             "[t_c's eyes widen.]",
-            "See, I was thinking the same thing... {PRONOUN/dislike_r_w1/subject}{VERB/dislike_r_w1/'re/'s} weird, right?",
+            "See, I was thinking the same thing... {PRONOUN/dislike_r_w1/subject/CAP}{VERB/dislike_r_w1/'re/'s} weird, right?",
             "Let's keep an eye on {PRONOUN/dislike_r_w1/object}, okay? It could be one of us next..."
         ],
         "r_w2_neurotic": [
             "[t_c almost laughs.]",
             "r_w2_neurotic? Why?",
-            "That cat jumps every time they hear a woodpecker. And you think {PRONOUN/r_w2_neurotic/subject} killed fc_c?",
+            "That cat jumps every time {PRONOUN/r_w2_neurotic/subject} {VERB/r_w2_neurotic/hear/hears} a woodpecker. And you think {PRONOUN/r_w2_neurotic/subject} killed fc_c?",
             "Hm... now that you think about it, maybe that anxiety is all just an act... Oh, maybe {PRONOUN/r_w2_neurotic/subject}{VERB/r_w2_neurotic/'ve/'s} had us fooled this whole time!",
             "[t_c seems to be having a bit too much fun with this...]"
         ],
