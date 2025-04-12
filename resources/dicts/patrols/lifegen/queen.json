@@ -199,16 +199,16 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "One of the kits has developed a cough. You need to decide on the best course of action.",
-        "decline_text": "Unsure of the best approach, you seek advice from the senior queens. They suggest bringing the kit to the medicine cat, ensuring its wellbeing.",
+        "decline_text": "Unsure of the best approach, you seek advice from the senior queens. They suggest bringing the kit to the healer, ensuring its wellbeing.",
         "chance_of_success": 75,
         "success_outcomes": [
             {
-                "text": "Recognizing the symptoms, you immediately consult the medicine cat. Under their care, the kit quickly recovers. Your prompt action is commended.",
+                "text": "Recognizing the symptoms, you immediately consult the healer. Under their care, the kit quickly recovers. Your prompt action is commended.",
                 "exp": 10,
                 "weight": 20
             },
             {
-                "text": "You immediately recognize the symptoms and decide the cough is not bad enough to consult the medicine cat. Instead, you search around the nursery for herbs and treat the kitten yourself with much success.",
+                "text": "You immediately recognize the symptoms and decide the cough is not bad enough to consult the healer. Instead, you search around the nursery for herbs and treat the kitten yourself with much success.",
                 "exp": 10,
                 "weight": 20,
                 "stat_skill": [
@@ -244,7 +244,7 @@
                 "weight": 20
             },
             {
-                "text": "The kitten coughs in your face one too many times for comfort, and although you were able to identify the issue and direct them to a medicine cat, you find yourself feeling sick as well. Aww rats.",
+                "text": "The kitten coughs in your face one too many times for comfort, and although you were able to identify the issue and direct them to a healer, you find yourself feeling sick as well. Aww rats.",
                 "exp": 0,
                 "weight": 5,
                 "injury": [
@@ -259,7 +259,7 @@
                 ]
             },
             {
-                "text": "You're not willing to become sick this time, nope! Nope, nope nope! You keep yourself a safe distance away and tell the kitten to find a medicine cat for their cough, even though you can feel the judgemental eyes of other queens upon you.",
+                "text": "You're not willing to become sick this time, nope! Nope, nope nope! You keep yourself a safe distance away and tell the kitten to find a healer for their cough, even though you can feel the judgemental eyes of other queens upon you.",
                 "exp": 0,
                 "weight": 15
             }
@@ -467,7 +467,7 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "The nursery is empty aside from you, but a queen approaches you anxiously, sitting down next to you. They ask for advice on what they should do when they eventually start giving birth.",
-        "decline_text": "You shake your head, advising them to ask the medicine cat instead. The queen seems further unnerved by this, but takes your word for it, quickly retreating to the medicine cat's den.",
+        "decline_text": "You shake your head, advising them to ask the healer instead. The queen seems further unnerved by this, but takes your word for it, quickly retreating to the healer's den.",
         "chance_of_success": 75,
         "success_outcomes": [
             {
@@ -476,7 +476,7 @@
                 "weight": 20
             },
             {
-                "text": "Noticing their anxious behavior, you give them advice relating to being calm while birthing. You comment on the importance of staying calm and focused, and to trust the queen's and medicine cats that'll be helping them give birth when the time comes.",
+                "text": "Noticing their anxious behavior, you give them advice relating to being calm while birthing. You comment on the importance of staying calm and focused, and to trust the queen's and healers that'll be helping them give birth when the time comes.",
                 "exp": 10,
                 "weight": 20
             }
@@ -633,7 +633,7 @@
                 ]
             },
             {
-                "text": "You wrack your brain for any knowledge about continuous crying, refusing to simply brush it off as the kitten being unconscionable. After a moment, you remember a medicine cat mentioning a spread of ear mites and direct the parents to ask about it just in case.",
+                "text": "You wrack your brain for any knowledge about continuous crying, refusing to simply brush it off as the kitten being unconscionable. After a moment, you remember a healer mentioning a spread of ear mites and direct the parents to ask about it just in case.",
                 "exp": 15,
                 "weight": 20,
                 "stat_skill": [
@@ -792,7 +792,7 @@
         "chance_of_success": 20,
         "success_outcomes": [
             {
-                "text": "Though a bit spooked by r_k's sudden request, you follow {PRONOUN/r_k/object} to the border of camp. To your surprise, it is not an imaginary friend like you thought - instead you're met with a kitten stuck under a pile of fallen branches. You're able to pull the poor kitten out with a determined tug and rush them to the medicine cat.",
+                "text": "Though a bit spooked by r_k's sudden request, you follow {PRONOUN/r_k/object} to the border of camp. To your surprise, it is not an imaginary friend like you thought - instead you're met with a kitten stuck under a pile of fallen branches. You're able to pull the poor kitten out with a determined tug and rush them to the healer.",
                 "exp": 10,
                 "weight": 5,
                 "new_cat": [
@@ -814,13 +814,13 @@
                 ]
             },
             {
-                "text": "r_k pushes you to the edge of camp and directs you to a clearing, in which a medicine cat from another clan sits. They're surrounded by kittens and as they catch sight of you, they plead to be allowed in the clan. Though a bit hesitant, you allow the medicine cat to follow you back.",
+                "text": "r_k pushes you to the edge of camp and directs you to a clearing, in which a healer from another clan sits. They're surrounded by kittens and as they catch sight of you, they plead to be allowed in the clan. Though a bit hesitant, you allow the healer to follow you back.",
                 "exp": 10,
                 "weight": 5,
                 "new_cat": [
                     [
                         "age:has_kits",
-                        "background:medicine_cat"
+                        "background:healer"
                     ],
                     [
                         "new_name",

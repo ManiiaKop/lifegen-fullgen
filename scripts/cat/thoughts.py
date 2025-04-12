@@ -335,10 +335,6 @@ class Thoughts:
         status = main_cat.status
 
         status = status.replace(" ", "_")
-        if status == "healer_apprentice":
-            status = "healer_apprentice"
-        elif status == "healer":
-            status = "healer"
 
         if not main_cat.dead:
             life_dir = "alive"
@@ -366,16 +362,8 @@ class Thoughts:
                 with open(f"{base_path}{life_dir}{spec_dir}/shunned.json", 'r') as read_file:
                     loaded_thoughts = ujson.loads(read_file.read())
             else:
-                # life/fullgen change: i dont wanna rename the jsons
-                if main_cat.status == "healer":
-                    with open(f"{base_path}{life_dir}{spec_dir}/healer.json", 'r') as read_file:
-                        thoughts = ujson.loads(read_file.read())
-                elif main_cat.status == "healer apprentice":
-                    with open(f"{base_path}{life_dir}{spec_dir}/healer_apprentice.json", 'r') as read_file:
-                        thoughts = ujson.loads(read_file.read())
-                else:
-                    with open(f"{base_path}{life_dir}{spec_dir}/{status}.json", 'r') as read_file:
-                        thoughts = ujson.loads(read_file.read())
+                with open(f"{base_path}{life_dir}{spec_dir}/{status}.json", 'r') as read_file:
+                    thoughts = ujson.loads(read_file.read())
                 with open(f"{base_path}{life_dir}{spec_dir}/general.json", 'r') as read_file:
                     genthoughts = ujson.loads(read_file.read())
                 loaded_thoughts = thoughts + genthoughts
@@ -383,8 +371,9 @@ class Thoughts:
             final_thoughts = Thoughts.create_thoughts(loaded_thoughts, main_cat, other_cat, game_mode, biome,
                                                       season, camp)
             return final_thoughts
-        except IOError:
-            print("ERROR: loading thoughts")
+        except IOError as e:
+            print("ERROR: loading thoughts for", main_cat.name)
+            print(e)
 
     @staticmethod
     def get_chosen_thought(main_cat, other_cat, game_mode, biome, season, camp):
