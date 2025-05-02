@@ -18,7 +18,7 @@ jobs:
       - name: Install poetry
         uses: abatilo/actions-poetry@v2
         with:
-          poetry-version: 1.4.1
+          poetry-version: 1.5.1
       - name: Setup Python 3.11 x64
         uses: actions/setup-python@v5
         with:
@@ -112,7 +112,7 @@ jobs:
       - name: Install poetry
         uses: abatilo/actions-poetry@v2
         with:
-          poetry-version: 1.4.1
+          poetry-version: 1.5.1
       - name: Setup Python 3.11 x64
         uses: actions/setup-python@v5
         with:
@@ -211,7 +211,7 @@ jobs:
       - name: Install poetry
         uses: abatilo/actions-poetry@v3
         with:
-          poetry-version: 1.4.1
+          poetry-version: 1.5.1
       - name: Set up cargo cache
         uses: actions/cache@v4
         continue-on-error: false
@@ -324,7 +324,7 @@ jobs:
       - name: Install poetry
         uses: abatilo/actions-poetry@v3
         with:
-          poetry-version: 1.4.1
+          poetry-version: 1.5.1
       - name: Setup Python 3.8 x64
         uses: actions/setup-python@v5
         with:
@@ -448,7 +448,7 @@ jobs:
       - name: Install poetry
         uses: abatilo/actions-poetry@v2
         with:
-          poetry-version: 1.4.1
+          poetry-version: 1.5.1
       - name: Setup Python 3.11 x64
         uses: actions/setup-python@v5
         with:
