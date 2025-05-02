@@ -2,6 +2,7 @@ from random import choice, randrange
 from re import sub
 from typing import Optional
 import random
+import ujson
 
 import pygame
 import pygame_gui
@@ -92,6 +93,9 @@ class MakeClanScreen(Screens):
                          "With this, you can see into your neighbouring Clans almost as if they were your own!<br>" \
                          "They'll die, be born, age... all on their own, <br>" \
                          "or with a little push from you.<br>"
+    
+    with open(f"resources/dicts/acc_display.json", "r") as read_file:
+        ACC_DISPLAY = ujson.loads(read_file.read())
 
     # This section holds all the information needed
     game_mode = 'expanded'  # To save the users selection before conformation.
